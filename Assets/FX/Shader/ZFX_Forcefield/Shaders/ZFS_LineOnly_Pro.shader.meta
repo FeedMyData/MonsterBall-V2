@@ -1,0 +1,8 @@
+fileFormatVersion: 2
+guid: 14d293f39d1fd5146b56606e8db94ff4
+ShaderImporter:
+  defaultTextures:
+  - _Gradient_Color: {fileID: 2800000, guid: c32bfe28347a3ee44b8530b232c82a05, type: 3}
+  - _Gradient_Edge_Detection: {fileID: 2800000, guid: 3feadd92e54464347807408a77bf84d9,
+      type: 3}
+  userData: 
