@@ -237,7 +237,6 @@ public class PlayerControllerF : MonoBehaviour {
 
         if (Input.GetButtonUp(fire) && loading)
         {
-			Debug.Log ("test");
             loading = false;
 			if(GetComponentInChildren<Animator>())GetComponentInChildren<Animator>().SetTrigger("hit");
             if (bonus != null)

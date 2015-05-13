@@ -20,6 +20,7 @@ public class GoalScriptF : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
+        PlayerControllerF player = other.GetComponent<PlayerControllerF>();
 
         if (other.tag == "Monster")
         {
@@ -31,21 +32,22 @@ public class GoalScriptF : MonoBehaviour {
             }
         }
 
-        if (other.tag == "TeamBlu" || other.tag == "TeamRed")
+        if (player != null)
         {
-            if (other.GetComponent<PlayerControllerF>().IsProjectionInGoal())
+            if (player.IsProjectionInGoal())
             {
                 manager.AddScore(tag);
-                other.GetComponent<PlayerControllerF>().Respawn();
+                player.Respawn();
             }
             else
             {
+                player.callStun(player.stunGoal);
                 Vector3 dirImpact;
                 if (other.transform.position.x > transform.position.x)
                     dirImpact = new Vector3(-1, 0.1f, 0);
                 else
                     dirImpact = new Vector3(1, 0.1f, 0);
-                other.GetComponent<PlayerControllerF>().AddImpact(dirImpact * 200);
+                player.AddImpact(dirImpact * 200);
             }
         }
     }

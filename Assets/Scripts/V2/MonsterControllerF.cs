@@ -38,6 +38,9 @@ public class MonsterControllerF : MonoBehaviour {
     public float durationInvul = 2.0f;
     private bool touchable = true;
 
+    [Space(20)]
+    public float coefColliderMonster = 1.05f; 
+
 
 
     private bool seeACake = false;
@@ -52,7 +55,6 @@ public class MonsterControllerF : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update() {
-
         if (magnet == null)
         {
             if (!monsterForm)
@@ -78,7 +80,7 @@ public class MonsterControllerF : MonoBehaviour {
                
                     MoveMonster();
                     //if un joueur est à portée
-                    List<GameObject> proxiList = GameControllerF.NearTo(this.gameObject, this.transform.localScale.x * 1.05f);
+                    List<GameObject> proxiList = GameControllerF.NearTo(this.gameObject, this.transform.localScale.x * coefColliderMonster);
                     for (int i = 0; i < proxiList.Count; i++)
                     {
                         if (proxiList[i].GetComponent<PlayerControllerF>().IsTouchable())
@@ -151,13 +153,26 @@ public class MonsterControllerF : MonoBehaviour {
         //cherche le plus proche et addforce dessus
         try
         {
-            Vector3 positionReach = GameControllerF.NearestTouchableByMonster().transform.position;
+            body.velocity = Vector3.zero;
+
+            GameObject nearest = GameControllerF.NearestTouchableByMonster();
+
+            Debug.Log(nearest);
+
+            Vector3 positionReach = nearest.transform.position;
             positionReach -= transform.position;
 
-            positionReach.y = 0;
-            positionReach.Normalize();
-            positionReach *= speedMonster;
-            body.AddForce(positionReach, ForceMode.Acceleration);
+            positionReach.y = transform.localScale.y/2;
+            //positionReach.Normalize();
+
+            //positionReach *= speedMonster;
+
+            transform.LookAt(positionReach,Vector3.up);
+
+            Debug.DrawLine(transform.position, positionReach);
+
+           transform.Translate(transform.forward/4/*speedMonster*/);
+            //body.AddForce(positionReach, ForceMode.Acceleration);
         }
         catch (NullReferenceException e) { /*Si pas de plus proche on fait rien, dans le pire des cas à dure 3 secondes*/ }
         
@@ -184,23 +199,23 @@ public class MonsterControllerF : MonoBehaviour {
     {
         //taille + magnet + variable
         wrath = 0;
-        yield return new WaitForSeconds(summon);
-        monsterForm = true;
-        body.mass = (body.mass+1)* monsterMass;
-
-        transform.localScale *= monsterScale;
-
         if (magnet != null)
             callDisableMagnet();
 
+       // body.isKinematic = true;
+       // body.useGravity = false;
 
+        yield return new WaitForSeconds(summon);
+        monsterForm = true;
+        transform.localScale *= monsterScale;
 
         yield return new WaitForSeconds(revocation);
         wrath = 0;
 
+       // body.isKinematic = false;
+       // body.useGravity = true;
+
         transform.localScale /= monsterScale;
-        body.mass = body.mass/monsterMass;
-        body.mass--;
 
         monsterForm = false;
 
