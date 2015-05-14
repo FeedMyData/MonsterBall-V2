@@ -27,7 +27,7 @@ public class GoalScriptF : MonoBehaviour {
             if (!other.GetComponent<MonsterControllerF>().IsMonsterForm())
             {
                 //feedbacks
-                Camera.main.GetComponent<CameraShake>().shake(0, 0, 0);
+                Camera.main.GetComponent<CameraShake>().shake(1, 1, 1);
 
                 manager.AddScore(tag);
                 //tp au centre + invul de 3 secondes
@@ -40,7 +40,7 @@ public class GoalScriptF : MonoBehaviour {
             if (player.IsProjectionInGoal())
             {
                 //feedbacks
-                Camera.main.GetComponent<CameraShake>().shake(0, 0, 0);
+                Camera.main.GetComponent<CameraShake>().shake(1, 1, 1);
 
                 manager.AddScore(tag);
                 player.Respawn();

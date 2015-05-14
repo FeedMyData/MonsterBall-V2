@@ -50,15 +50,17 @@ public class CameraShake : MonoBehaviour {
 
 	}
 
-    public void shake(float duration, float power, float speed) {
+    public void shake(float durationFactor, float powerFactor, float speedFactor) {
 
         originalPos = transform.localPosition;
 
-        timeS = timeShaking;
+        timeS = timeShaking * durationFactor;
+        shakeAmount *= powerFactor;
+        decreaseFactor *= speedFactor;
 
-        timeS = (duration != 0) ? duration : timeShaking;
-        shakeAmount = (power != 0) ? power : shakeAmount;
-        decreaseFactor = (speed != 0) ? speed : decreaseFactor;
+        //timeS = (duration != 0) ? duration : timeShaking;
+        //shakeAmount = (power != 0) ? power : shakeAmount;
+        //decreaseFactor = (speed != 0) ? speed : decreaseFactor;
 
     }
 
