@@ -86,8 +86,10 @@ public class MonsterControllerF : MonoBehaviour {
                 GameObject proxiPlayer = GameControllerF.NearestTo(this.gameObject, this.transform.localScale.x * coefColliderMonster);
                 if (proxiPlayer != null)
                 {
+
                     if (proxiPlayer.GetComponent<PlayerControllerF>().IsTouchable() && !eatPlayer)
                     {
+                        Debug.Log(proxiPlayer.name+" "+proxiPlayer.GetComponent<PlayerControllerF>().IsTouchable());
                         StartCoroutine(EatingPlayer(proxiPlayer));
 
                         rotateToGoal = Time.time + durationEatingPlayer;
@@ -159,7 +161,9 @@ public class MonsterControllerF : MonoBehaviour {
         if(eatPlayer)
         {
             //Rotation progressive vers le but
-            positionReach = Vector3.Lerp(positionReach,goal.position,(rotateToGoal-Time.time)*(1/durationEatingPlayer));
+            //positionReach = Vector3.Lerp(positionReach,goal.position,(rotateToGoal-Time.time)*(1/durationEatingPlayer));
+
+            positionReach = goal.position;
         }
         else if(seeACake)
         {
@@ -182,9 +186,6 @@ public class MonsterControllerF : MonoBehaviour {
         //transform.Translate(transform.forward*Time.deltaTime/*speedMonster*/); //Marche pas
         if(!eatPlayer)
             transform.position += transform.forward * Time.deltaTime * speedMonster;
-        
-        
-
     }
 
     public void Respawn()
@@ -275,7 +276,7 @@ public class MonsterControllerF : MonoBehaviour {
         //faire disparaitre le joueur, jouer l'anim du monstre qui mache et téléporter le joueur dans le monstre et le stun
         player.transform.position = this.transform.position;
         player.GetComponent<Renderer>().enabled = false;
-        player.GetComponent<PlayerControllerF>().callStun(durationEatingPlayer);
+        //player.GetComponent<PlayerControllerF>().callStun(durationEatingPlayer);
 
         if (player.GetComponent<PlayerControllerF>().team == GameControllerF.Team.Blu)
             goal = GameControllerF.GetBluGoal().transform;
@@ -287,6 +288,8 @@ public class MonsterControllerF : MonoBehaviour {
         //Faire réapparaitre le joueur
         player.GetComponent<Renderer>().enabled = true;
         player.GetComponent<PlayerControllerF>().FlyAway();
+
+        yield return new WaitForSeconds(0.1f);
         eatPlayer = false;
     }
 

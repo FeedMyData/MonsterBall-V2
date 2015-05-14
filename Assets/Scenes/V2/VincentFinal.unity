@@ -1641,7 +1641,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movingMaxBall: 3
-  speedMonster: 30
+  speedMonster: 12.5
   speedMaxToChooseDirection: 3
   speedDivisionFactor: 8
   areaMagnet: 2
@@ -1656,6 +1656,7 @@ MonoBehaviour:
   safeTransform: .699999988
   durationInvul: 2
   coefColliderMonster: 1.04999995
+  durationEatingPlayer: 2
 --- !u!54 &2018052405
 Rigidbody:
   m_ObjectHideFlags: 0
