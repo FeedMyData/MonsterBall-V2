@@ -353,6 +353,7 @@ public class PlayerControllerF : MonoBehaviour {
                 if (monster.IsTouchable())
                 {
                     monster.callDisableMagnet();
+                    monster.PlayRandomSound(AbstractSound.Action.Hit);
 
                     if (GameControllerF.WhereIsMyAlly(this) != Vector3.zero)
                     {

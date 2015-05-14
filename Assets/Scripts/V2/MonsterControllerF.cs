@@ -38,6 +38,10 @@ public class MonsterControllerF : MonoBehaviour {
     public float durationInvul = 2.0f;
     private bool touchable = true;
 
+    [Header("Sound")]
+    private BallSound ballSound;
+    private MonsterSound monsterSound;
+
     [Space(20)]
     public float coefColliderMonster = 1.05f;
     [Space(20)]
@@ -55,6 +59,8 @@ public class MonsterControllerF : MonoBehaviour {
 	void Start () {
 	    body = GetComponent<Rigidbody>();
         colliderMagnet = GetComponent<Collider>();
+        monsterSound = GetComponent<MonsterSound>();
+        ballSound = GetComponent<BallSound>();
 	}
 	
 	// Update is called once per frame
@@ -161,7 +167,7 @@ public class MonsterControllerF : MonoBehaviour {
         if(eatPlayer)
         {
             //Rotation progressive vers le but
-            //positionReach = Vector3.Lerp(positionReach,goal.position,(rotateToGoal-Time.time)*(1/durationEatingPlayer));
+            positionReach = Vector3.Lerp(positionReach,goal.position,(rotateToGoal-Time.time)*(1/durationEatingPlayer));
 
             positionReach = goal.position;
         }
@@ -276,7 +282,7 @@ public class MonsterControllerF : MonoBehaviour {
         //faire disparaitre le joueur, jouer l'anim du monstre qui mache et téléporter le joueur dans le monstre et le stun
         player.transform.position = this.transform.position;
         player.GetComponent<Renderer>().enabled = false;
-        //player.GetComponent<PlayerControllerF>().callStun(durationEatingPlayer);
+        player.GetComponent<PlayerControllerF>().callStun(durationEatingPlayer);
 
         if (player.GetComponent<PlayerControllerF>().team == GameControllerF.Team.Blu)
             goal = GameControllerF.GetBluGoal().transform;
@@ -370,5 +376,17 @@ public class MonsterControllerF : MonoBehaviour {
     public void GoodCake()
     {
         seeACake = false;
+    }
+
+    public void PlayRandomSound(AbstractSound.Action action)
+    {
+        if (!monsterForm)
+        {
+            ballSound.PlayRandomSound(action);
+        }
+        else
+        {
+            monsterSound.PlayRandomSound(action);
+        }
     }
 }

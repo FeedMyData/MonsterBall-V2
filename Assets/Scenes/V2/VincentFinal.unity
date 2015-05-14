@@ -1567,6 +1567,8 @@ GameObject:
   - 23: {fileID: 2018052400}
   - 54: {fileID: 2018052405}
   - 114: {fileID: 2018052404}
+  - 114: {fileID: 2018052407}
+  - 114: {fileID: 2018052406}
   m_Layer: 0
   m_Name: Monster
   m_TagString: Monster
@@ -1646,7 +1648,7 @@ MonoBehaviour:
   speedDivisionFactor: 8
   areaMagnet: 2
   speedMagnet: 50000
-  wrathMax: 10
+  wrathMax: 100
   wrathDribblingValue: 1
   wrathDribblingEachTime: 1
   summon: 0
@@ -1672,6 +1674,45 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 32
   m_CollisionDetection: 2
+--- !u!114 &2018052406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2018052399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e56ae82e7d8e12c4ebb3c3da5bdf4d3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tabHit: []
+  mixerVoice: {fileID: 0}
+--- !u!114 &2018052407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2018052399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 440bd8dc06b2e3048bb585b0ffc31cf8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tabHit:
+  - {fileID: 8300000, guid: 28f2b937b5ef33c48b7964d14d89c3c5, type: 3}
+  - {fileID: 8300000, guid: 23c70fa095ca5b046a77f2ad774828f5, type: 3}
+  - {fileID: 8300000, guid: 86608fd91caa90c4baf33412fbd9edf5, type: 3}
+  - {fileID: 8300000, guid: db68d23e5ad7b52488a68bf882c778e8, type: 3}
+  - {fileID: 8300000, guid: 5507a69d783fdb64bb5bace106018f81, type: 3}
+  - {fileID: 8300000, guid: 2e3d8d320f2201e4dbf7191d895523a2, type: 3}
+  - {fileID: 8300000, guid: a1a20886ad900cf43b0355890abd7afb, type: 3}
+  - {fileID: 8300000, guid: 352aa7bda1639844d9ddd1cef359d24b, type: 3}
+  - {fileID: 8300000, guid: 9a3f766acf2fad94c8cec9a2b1c53f69, type: 3}
+  - {fileID: 8300000, guid: ca7c14ce44abc074ba3a047f7ad025e0, type: 3}
+  - {fileID: 8300000, guid: 008baf76537b3764aa13ed9dbc1ba33c, type: 3}
+  - {fileID: 8300000, guid: a29d28ca38a0b804bb2301fdd701d04c, type: 3}
+  - {fileID: 8300000, guid: 369c87c52717fd9439224f794bafb638, type: 3}
+  mixerVoice: {fileID: 24385740, guid: 3b5232be4ec122545b3f1ef5cda50c18, type: 2}
 --- !u!1 &2092088818 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100006, guid: 86845b1ca46740e419fa23551a7bd3da, type: 3}
