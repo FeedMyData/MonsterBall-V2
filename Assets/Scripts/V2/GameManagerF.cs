@@ -48,8 +48,8 @@ public class GameManagerF : MonoBehaviour {
             {
                 bonusCanPopUp = false;
                 StartCoroutine(RearmBonus());
-                //Debug.Log("CreateBonus");
-                CreateBonus();
+                Debug.Log("CreateBonus");
+                //CreateBonus();
                 //active un bonus
             }
             yield return new WaitForSeconds(1);
