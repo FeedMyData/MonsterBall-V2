@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -342,6 +342,8 @@ public class PlayerControllerF : MonoBehaviour {
                     ball.GetComponent<MonsterControllerF>().callDisableMagnet();
                     //ball.GetComponent<MonsterControllerF>().Jump(2.0f);
                 }
+				if(player.GetComponentInChildren<Animator>()) 
+					player.GetComponentInChildren<Animator>().SetTrigger("hurt");
                 return true;
             }
         }
@@ -397,6 +399,7 @@ public class PlayerControllerF : MonoBehaviour {
     public void callStun(float duration)
     {
         StartCoroutine(Stun(duration));
+
     }
 
     /**
@@ -497,4 +500,6 @@ public class PlayerControllerF : MonoBehaviour {
     {
         this.loading = loading;
     }
+
+
 }
