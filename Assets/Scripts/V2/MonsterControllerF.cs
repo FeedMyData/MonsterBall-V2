@@ -130,7 +130,12 @@ public class MonsterControllerF : MonoBehaviour {
         Vector3 positionReach = UnityEngine.Random.insideUnitSphere * movingMaxBall;
         positionReach.y = Mathf.Abs(positionReach.y) * 3;
 
+        
         body.AddForce(positionReach,ForceMode.Impulse);
+
+        if (UnityEngine.Random.value < 0.1f)
+            PlayRandomSound(AbstractSound.Action.Course);
+
         StartCoroutine(RestMoveBall(Vector3.SqrMagnitude(positionReach)/speedDivisionFactor));
 
     }
@@ -201,6 +206,8 @@ public class MonsterControllerF : MonoBehaviour {
         transform.rotation = Quaternion.identity;
         transform.position = new Vector3(0,5,0);
 
+        PlayRandomSound(AbstractSound.Action.RemiseEnJeu);
+
         Camera cam = Camera.allCameras[0];
         if(cam.GetComponent<CameraManagerF>() != null)
         {
@@ -220,9 +227,11 @@ public class MonsterControllerF : MonoBehaviour {
         yield return new WaitForSeconds(summon);
         monsterForm = true;
         transform.localScale *= monsterScale;
+        PlayRandomSound(AbstractSound.Action.TransformationBalleMonstre);
 
         yield return new WaitForSeconds(revocation);
         wrath = 0;
+        PlayRandomSound(AbstractSound.Action.TransformationMonstreBall);
 
         transform.localScale /= monsterScale;
 
@@ -388,5 +397,10 @@ public class MonsterControllerF : MonoBehaviour {
         {
             monsterSound.PlayRandomSound(action);
         }
+    }
+
+    public int GetWrath()
+    {
+        return wrath;
     }
 }
