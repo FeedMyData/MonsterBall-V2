@@ -12,6 +12,7 @@ GameObject:
   - 136: {fileID: 13648236}
   - 23: {fileID: 2399472}
   - 114: {fileID: 11470580}
+  - 114: {fileID: 11483520}
   - 143: {fileID: 14342434}
   m_Layer: 0
   m_Name: PlayerV2
@@ -83,7 +84,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100114}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.80000019, y: 2.0999999, z: -5.5999999}
+  m_LocalPosition: {x: 6, y: 2.0999999, z: 6}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children:
   - {fileID: 446384}
@@ -146,11 +147,32 @@ MonoBehaviour:
   rangeDash: 7
   angleHoming: 50
   stunKick: 1.29999995
-  stunGoal: 0
+  stunGoal: 10
   stunDash: .649999976
   jersey: 0
-  team: 0
+  team: 1
   durationInvul: 1.5
+  audio: {fileID: 0}
+--- !u!114 &11483520
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28e91a67c6b03354f872ebc62c5641a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tabCoupBalle: []
+  tabCoupRecu: []
+  tabEjectBut: []
+  tabMarqueBut: []
+  tabPoursuivi: []
+  tabVictoire: []
+  tabWilhemScream: []
+  tabYeah: []
+  mixerVoice: {fileID: 0}
 --- !u!136 &13648236
 CapsuleCollider:
   m_ObjectHideFlags: 1
