@@ -67,6 +67,7 @@ public class PlayerControllerF : MonoBehaviour
     public float durationInvul = 2.0f;
     private bool touchable = true;
     private SpriteRenderer spriteBonus;
+    private NivekSound nivekSound;
 
     public AudioSource audio;
 
@@ -83,7 +84,7 @@ public class PlayerControllerF : MonoBehaviour
 
         spriteBonus = GetComponentInChildren<SpriteRenderer>();
 
-        AudioSource audio = GetComponent<AudioSource>();
+        nivekSound = GetComponent<NivekSound>();
         //angleDash *= Mathf.Deg2Rad;
         //angleHoming *= Mathf.Deg2Rad;
         //angleShoot *= Mathf.Deg2Rad;
@@ -248,6 +249,8 @@ public class PlayerControllerF : MonoBehaviour
 
         if (Input.GetButtonUp(fire) && loading)
         {
+            PlayRandomSound(AbstractSound.Action.CoupBalle);
+
             if (GetComponentInChildren<Animator>() && GetComponentInChildren<Animator>().GetBool("isCharging") == true)
                 GetComponentInChildren<Animator>().SetBool("isCharging", false);
             loading = false;
@@ -336,6 +339,7 @@ public class PlayerControllerF : MonoBehaviour
                 player.AddImpact(directionImpact);
                 player.setLoading(false);
                 player.callStun(stunKick);
+                player.PlayRandomSound(AbstractSound.Action.CoupRecu);
 
                 if (player.GetMagnet())
                 {
@@ -504,5 +508,10 @@ public class PlayerControllerF : MonoBehaviour
     public void setLoading(bool loading)
     {
         this.loading = loading;
+    }
+
+    public void PlayRandomSound(AbstractSound.Action action)
+    {
+        nivekSound.PlayRandomSound(action);
     }
 }

@@ -202,6 +202,7 @@ GameObject:
   - 81: {fileID: 492220005}
   - 114: {fileID: 492220010}
   - 114: {fileID: 492220011}
+  - 114: {fileID: 492220012}
   m_Layer: 0
   m_Name: CameraFixe
   m_TagString: MainCamera
@@ -302,6 +303,20 @@ MonoBehaviour:
   shakeAmount: .699999988
   decreaseFactor: 2
   decreaseShakeWithTime: 1
+--- !u!114 &492220012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 492220004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 106bdb22009f01c459ec11ed29db1f4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  monster: {fileID: 2018052404}
+  manager: {fileID: 590084583}
+  player: {fileID: 961099430}
 --- !u!1001 &524444611
 Prefab:
   m_ObjectHideFlags: 0
@@ -436,6 +451,7 @@ GameObject:
   - 4: {fileID: 590084582}
   - 114: {fileID: 590084581}
   - 114: {fileID: 590084583}
+  - 114: {fileID: 590084584}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -490,6 +506,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   durationInSecond: 180
   timeBetweenTwoBonus: 0
+--- !u!114 &590084584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 590084580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df4ba9cfc8fb09c418e390493d4ae204, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tabTroisDeuxUn: []
+  tabBut: []
+  tabDebutMatch: []
+  tabDialogue: []
+  tabMatch: []
+  mixerVoice: {fileID: 0}
 --- !u!1001 &637301019
 Prefab:
   m_ObjectHideFlags: 0
@@ -884,6 +917,12 @@ MonoBehaviour:
 GameObject:
   m_PrefabParentObject: {fileID: 100114, guid: 693c2613868be7549ad86a725a7884fb, type: 2}
   m_PrefabInternal: {fileID: 524444611}
+--- !u!114 &961099430 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11470580, guid: 693c2613868be7549ad86a725a7884fb,
+    type: 2}
+  m_PrefabInternal: {fileID: 524444611}
+  m_Script: {fileID: 11500000, guid: 76c4e54c5ecfb2d48855eb3aa00f80be, type: 3}
 --- !u!1 &992666889 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100002, guid: 86845b1ca46740e419fa23551a7bd3da, type: 3}
@@ -1685,7 +1724,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e56ae82e7d8e12c4ebb3c3da5bdf4d3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tabHit: []
+  tabGrognement: []
+  tabImpact: []
+  tabRecracheJoueur: []
   mixerVoice: {fileID: 0}
 --- !u!114 &2018052407
 MonoBehaviour:
@@ -1698,20 +1739,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 440bd8dc06b2e3048bb585b0ffc31cf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tabHit:
-  - {fileID: 8300000, guid: 28f2b937b5ef33c48b7964d14d89c3c5, type: 3}
-  - {fileID: 8300000, guid: 23c70fa095ca5b046a77f2ad774828f5, type: 3}
-  - {fileID: 8300000, guid: 86608fd91caa90c4baf33412fbd9edf5, type: 3}
-  - {fileID: 8300000, guid: db68d23e5ad7b52488a68bf882c778e8, type: 3}
-  - {fileID: 8300000, guid: 5507a69d783fdb64bb5bace106018f81, type: 3}
-  - {fileID: 8300000, guid: 2e3d8d320f2201e4dbf7191d895523a2, type: 3}
-  - {fileID: 8300000, guid: a1a20886ad900cf43b0355890abd7afb, type: 3}
-  - {fileID: 8300000, guid: 352aa7bda1639844d9ddd1cef359d24b, type: 3}
-  - {fileID: 8300000, guid: 9a3f766acf2fad94c8cec9a2b1c53f69, type: 3}
-  - {fileID: 8300000, guid: ca7c14ce44abc074ba3a047f7ad025e0, type: 3}
-  - {fileID: 8300000, guid: 008baf76537b3764aa13ed9dbc1ba33c, type: 3}
-  - {fileID: 8300000, guid: a29d28ca38a0b804bb2301fdd701d04c, type: 3}
-  - {fileID: 8300000, guid: 369c87c52717fd9439224f794bafb638, type: 3}
+  tabBut: []
+  tabCourse: []
+  tabImpact: []
+  tabObjet: []
+  tabRemiseEnJeu: []
+  tabTransformationBalleMonstre: []
+  tabTransformationMonstreBall: []
   mixerVoice: {fileID: 24385740, guid: 3b5232be4ec122545b3f1ef5cda50c18, type: 2}
 --- !u!1 &2092088818 stripped
 GameObject:

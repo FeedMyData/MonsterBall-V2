@@ -51,6 +51,9 @@ public class GoalScriptF : MonoBehaviour {
             {
                 player.callStun(player.stunGoal);
                 Vector3 dirImpact;
+
+                player.PlayRandomSound(AbstractSound.Action.EjectBut);
+
                 if (other.transform.position.x > transform.position.x)
                     dirImpact = new Vector3(-1, 0.1f, 0);
                 else

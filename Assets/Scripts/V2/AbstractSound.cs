@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using System.Collections;
-using UnityEngine.Audio;
 
 public abstract class AbstractSound : MonoBehaviour
 {

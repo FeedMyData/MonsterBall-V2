@@ -303,6 +303,7 @@ public class MonsterControllerF : MonoBehaviour {
         //Faire réapparaitre le joueur
         player.GetComponent<Renderer>().enabled = true;
         player.GetComponent<PlayerControllerF>().FlyAway();
+        PlayRandomSound(AbstractSound.Action.RecracheJoueur);
 
         yield return new WaitForSeconds(0.1f);
         eatPlayer = false;
