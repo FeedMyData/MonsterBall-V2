@@ -49,6 +49,7 @@ public class MonsterControllerF : MonoBehaviour {
     private bool eatPlayer = false;
     private float rotateToGoal = 0.0f;
     private Transform goal;
+    private Vector3 searchPlayer = Vector3.zero;
 
 
     private bool seeACake = false;
@@ -96,9 +97,12 @@ public class MonsterControllerF : MonoBehaviour {
                     if (proxiPlayer.GetComponent<PlayerControllerF>().IsTouchable() && !eatPlayer)
                     {
                         Debug.Log(proxiPlayer.name+" "+proxiPlayer.GetComponent<PlayerControllerF>().IsTouchable());
-                        StartCoroutine(EatingPlayer(proxiPlayer));
-
                         rotateToGoal = Time.time + durationEatingPlayer;
+                        if (proxiPlayer.GetComponent<PlayerControllerF>().team == GameControllerF.Team.Blu)
+                            goal = GameControllerF.GetBluGoal().transform;
+                        else
+                            goal = GameControllerF.GetRedGoal().transform;
+                        StartCoroutine(EatingPlayer(proxiPlayer));
                     }
                 }
             }
@@ -159,35 +163,37 @@ public class MonsterControllerF : MonoBehaviour {
 
     void MoveMonster()
     {
-        Vector3 positionReach = Vector3.zero;
+        
         //cherche le plus proche
         
         body.velocity = Vector3.zero;
 
         if(eatPlayer)
         {
-            //Rotation progressive vers le but
-            positionReach = Vector3.Lerp(positionReach,goal.position,(rotateToGoal-Time.time)*(1/durationEatingPlayer));
+            //TODO: Rotation progressive vers le but
 
-            positionReach = goal.position;
+            Debug.Log(((Time.time+durationEatingPlayer)-rotateToGoal) / durationEatingPlayer);
+            searchPlayer = Vector3.Lerp(searchPlayer,goal.position,((Time.time+durationEatingPlayer)- rotateToGoal)/durationEatingPlayer);
+
+            //positionReach = goal.position;
         }
         else if(seeACake)
         {
-            positionReach = cakePos;
+            searchPlayer = cakePos;
         }
         else
         {
             try
             {
                 GameObject nearest = GameControllerF.NearestTouchableByMonster();
-                positionReach = nearest.transform.position;
+                searchPlayer = nearest.transform.position;
             }
             catch (NullReferenceException e) { /*Si pas de plus proche on fait rien, dans le pire des cas à dure 3 secondes*/ }
         }
 
-        transform.LookAt(positionReach,Vector3.up);
+        transform.LookAt(searchPlayer,Vector3.up);
 
-        Debug.DrawLine(transform.position, positionReach);
+        Debug.DrawLine(transform.position, searchPlayer);
 
         //transform.Translate(transform.forward*Time.deltaTime/*speedMonster*/); //Marche pas
         if(!eatPlayer)
@@ -280,14 +286,11 @@ public class MonsterControllerF : MonoBehaviour {
     {
         eatPlayer = true;
         //faire disparaitre le joueur, jouer l'anim du monstre qui mache et téléporter le joueur dans le monstre et le stun
+        player.GetComponent<Collider>().enabled = false;
+        player.GetComponent<CharacterController>().enabled = false;
         player.transform.position = this.transform.position;
         player.GetComponent<Renderer>().enabled = false;
         player.GetComponent<PlayerControllerF>().callStun(durationEatingPlayer);
-
-        if (player.GetComponent<PlayerControllerF>().team == GameControllerF.Team.Blu)
-            goal = GameControllerF.GetBluGoal().transform;
-        else
-            goal = GameControllerF.GetRedGoal().transform;
 
         yield return new WaitForSeconds(durationEatingPlayer);
         
@@ -295,7 +298,11 @@ public class MonsterControllerF : MonoBehaviour {
         player.GetComponent<Renderer>().enabled = true;
         player.GetComponent<PlayerControllerF>().FlyAway();
 
+        
         yield return new WaitForSeconds(0.1f);
+
+        player.GetComponent<CharacterController>().enabled = true;
+        player.GetComponent<Collider>().enabled = true;
         eatPlayer = false;
     }
 

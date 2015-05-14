@@ -18,11 +18,13 @@ public class MonsterSound : AbstractSound {
         sourceHit = gameObject.AddComponent<AudioSource>();
         sourceHit.outputAudioMixerGroup = mixerVoice;
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	    
-	}
 
-    //static void 
+    public void PlayRandomSound(Action action)
+    {
+        if (action == Action.Impact)
+        {
+            sourceHit.clip = tabHit[Random.Range(0, tabHit.Length)];
+            sourceHit.Play();
+        }
+    }
 }

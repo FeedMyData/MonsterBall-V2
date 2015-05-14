@@ -1648,7 +1648,7 @@ MonoBehaviour:
   speedDivisionFactor: 8
   areaMagnet: 2
   speedMagnet: 50000
-  wrathMax: 100
+  wrathMax: 10
   wrathDribblingValue: 1
   wrathDribblingEachTime: 1
   summon: 0
