@@ -626,7 +626,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -705,7 +705,7 @@ ModelImporter:
     - serializedVersion: 16
       name: HitRun
       takeName: nivek_anim
-      firstFrame: 175
+      firstFrame: 177
       lastFrame: 197
       wrapMode: 0
       orientationOffsetY: 0

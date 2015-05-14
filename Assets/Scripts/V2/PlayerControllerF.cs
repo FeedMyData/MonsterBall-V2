@@ -202,12 +202,14 @@ public class PlayerControllerF : MonoBehaviour {
             transform.LookAt(transform.position + directionMove);
             directionMove = transform.forward * actualSpeed;
             direction = transform.forward;
-			if(GetComponentInChildren<Animator>())GetComponentInChildren<Animator>().SetBool("isRunning", true);
-        }
+			if(GetComponentInChildren<Animator>() && GetComponentInChildren<Animator>().GetBool("isRunning") == false) 
+				GetComponentInChildren<Animator>().SetBool("isRunning", true);
+		}
         else
         {
             directionMove = Vector3.zero;
-			if(GetComponentInChildren<Animator>())GetComponentInChildren<Animator>().SetBool("isRunning", false);
+			if(GetComponentInChildren<Animator>() && GetComponentInChildren<Animator>().GetBool("isRunning") == true) 
+				GetComponentInChildren<Animator>().SetBool("isRunning", false);
         }
             
         directionMove.y -= gravity;
@@ -226,23 +228,28 @@ public class PlayerControllerF : MonoBehaviour {
             loading = true;
             power = powerMin;
             chargingShoot = 0;
+			if(GetComponentInChildren<Animator>() && GetComponentInChildren<Animator>().GetBool("isCharging") == false) 
+				GetComponentInChildren<Animator>().SetBool("isCharging", true);
         }
 
         if (chargingShoot < 1)
         {
             chargingShoot += Time.deltaTime / delayPowerMax;
+
         }
 
         if (Input.GetButton(fire))
         {
             power = Mathf.Lerp(power, powerMax, chargingShoot);
+
         }
 
         if (Input.GetButtonUp(fire) && loading)
         {
+			if(GetComponentInChildren<Animator>() && GetComponentInChildren<Animator>().GetBool("isCharging") == true) 
+				GetComponentInChildren<Animator>().SetBool("isCharging", false);
             loading = false;
-			if(GetComponentInChildren<Animator>())GetComponentInChildren<Animator>().SetTrigger("hit");
-            if (bonus != null)
+			if (bonus != null)
             {
                 bonus.Activated(transform.position);
                 bonus = null;
@@ -257,6 +264,9 @@ public class PlayerControllerF : MonoBehaviour {
                     {
                         Hit(tabProxi[i]);
                     }
+					if(GetComponentInChildren<Animator>()) 
+						GetComponentInChildren<Animator>().SetTrigger("hit");
+					return;
                 }
                 else
                 {
@@ -283,10 +293,15 @@ public class PlayerControllerF : MonoBehaviour {
                             posDash = nearest.transform.position;
                             dash = true;
                             StartCoroutine(Stun(stunDash));
+							if(GetComponentInChildren<Animator>()) 
+								GetComponentInChildren<Animator>().SetTrigger("dash");
+							return;
                         }
                     }
                 }
-
+				if(GetComponentInChildren<Animator>()) 
+					GetComponentInChildren<Animator>().SetTrigger("hit");
+				
             }
 
         }
