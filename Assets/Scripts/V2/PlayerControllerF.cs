@@ -353,7 +353,6 @@ public class PlayerControllerF : MonoBehaviour {
                 if (monster.IsTouchable())
                 {
                     monster.callDisableMagnet();
-                    monster.PlayRandomSound(AbstractSound.Action.Impact);
 
                     if (GameControllerF.WhereIsMyAlly(this) != Vector3.zero)
                     {
@@ -369,14 +368,20 @@ public class PlayerControllerF : MonoBehaviour {
 
                     monster.AddWrath((int)(power/coefPower));
 
+                    if (monster.GetWrath() < monster.wrathMax)
+                    {
+                        monster.PlayRandomSound(AbstractSound.Action.Impact);
+                    }
+
                     //feedbacks coup reçu par un joueur
                     if(power == powerMax) 
                     {
                         Camera.main.GetComponent<CameraShake>().shake(1, 1, 1);
                         //GetComponent<AudioSource>().clip = VOIX_Niveks_CoupRecu_02;
-                        audio.Play();
+                        //PlayRandomSound();
 
                     }
+                    
 
                     return true;
                 }
