@@ -67,6 +67,8 @@ public class PlayerControllerF : MonoBehaviour {
     private bool touchable = true;
     private SpriteRenderer spriteBonus;
 
+    public AudioSource audio;
+
 	// Use this for initialization
 	void Start () {
         controller = GetComponent<CharacterController>();
@@ -79,6 +81,7 @@ public class PlayerControllerF : MonoBehaviour {
 
         spriteBonus = GetComponentInChildren<SpriteRenderer>();
 
+        AudioSource audio = GetComponent<AudioSource>();
         //angleDash *= Mathf.Deg2Rad;
         //angleHoming *= Mathf.Deg2Rad;
         //angleShoot *= Mathf.Deg2Rad;
@@ -354,6 +357,9 @@ public class PlayerControllerF : MonoBehaviour {
                     if(power == powerMax) 
                     {
                         Camera.main.GetComponent<CameraShake>().shake(1, 1, 1);
+                        //GetComponent<AudioSource>().clip = VOIX_Niveks_CoupRecu_02;
+                        audio.Play();
+
                     }
 
                     return true;
