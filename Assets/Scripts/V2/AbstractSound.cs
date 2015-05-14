@@ -2,9 +2,11 @@
 using System.Collections;
 using UnityEngine.Audio;
 
-public abstract class AbstractSound : MonoBehaviour {
+public abstract class AbstractSound : MonoBehaviour
+{
 
-    public enum Action{
+    public enum Action
+    {
         But,
         Impact,
         Course,

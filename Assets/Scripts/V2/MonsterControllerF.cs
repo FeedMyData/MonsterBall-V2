@@ -49,7 +49,6 @@ public class MonsterControllerF : MonoBehaviour {
     private bool eatPlayer = false;
     private float rotateToGoal = 0.0f;
     private Transform goal;
-    private Vector3 searchPlayer = Vector3.zero;
 
 
     private bool seeACake = false;
@@ -97,12 +96,9 @@ public class MonsterControllerF : MonoBehaviour {
                     if (proxiPlayer.GetComponent<PlayerControllerF>().IsTouchable() && !eatPlayer)
                     {
                         Debug.Log(proxiPlayer.name+" "+proxiPlayer.GetComponent<PlayerControllerF>().IsTouchable());
-                        rotateToGoal = Time.time + durationEatingPlayer;
-                        if (proxiPlayer.GetComponent<PlayerControllerF>().team == GameControllerF.Team.Blu)
-                            goal = GameControllerF.GetBluGoal().transform;
-                        else
-                            goal = GameControllerF.GetRedGoal().transform;
                         StartCoroutine(EatingPlayer(proxiPlayer));
+
+                        rotateToGoal = Time.time + durationEatingPlayer;
                     }
                 }
             }
@@ -134,7 +130,12 @@ public class MonsterControllerF : MonoBehaviour {
         Vector3 positionReach = UnityEngine.Random.insideUnitSphere * movingMaxBall;
         positionReach.y = Mathf.Abs(positionReach.y) * 3;
 
+        
         body.AddForce(positionReach,ForceMode.Impulse);
+
+        if (UnityEngine.Random.value < 0.1f)
+            PlayRandomSound(AbstractSound.Action.Course);
+
         StartCoroutine(RestMoveBall(Vector3.SqrMagnitude(positionReach)/speedDivisionFactor));
 
     }
@@ -163,37 +164,35 @@ public class MonsterControllerF : MonoBehaviour {
 
     void MoveMonster()
     {
-        
+        Vector3 positionReach = Vector3.zero;
         //cherche le plus proche
         
         body.velocity = Vector3.zero;
 
         if(eatPlayer)
         {
-            //TODO: Rotation progressive vers le but
+            //Rotation progressive vers le but
+            positionReach = Vector3.Lerp(positionReach,goal.position,(rotateToGoal-Time.time)*(1/durationEatingPlayer));
 
-            Debug.Log(((Time.time+durationEatingPlayer)-rotateToGoal) / durationEatingPlayer);
-            searchPlayer = Vector3.Lerp(searchPlayer,goal.position,((Time.time+durationEatingPlayer)- rotateToGoal)/durationEatingPlayer);
-
-            //positionReach = goal.position;
+            positionReach = goal.position;
         }
         else if(seeACake)
         {
-            searchPlayer = cakePos;
+            positionReach = cakePos;
         }
         else
         {
             try
             {
                 GameObject nearest = GameControllerF.NearestTouchableByMonster();
-                searchPlayer = nearest.transform.position;
+                positionReach = nearest.transform.position;
             }
             catch (NullReferenceException e) { /*Si pas de plus proche on fait rien, dans le pire des cas à dure 3 secondes*/ }
         }
 
-        transform.LookAt(searchPlayer,Vector3.up);
+        transform.LookAt(positionReach,Vector3.up);
 
-        Debug.DrawLine(transform.position, searchPlayer);
+        Debug.DrawLine(transform.position, positionReach);
 
         //transform.Translate(transform.forward*Time.deltaTime/*speedMonster*/); //Marche pas
         if(!eatPlayer)
@@ -206,6 +205,8 @@ public class MonsterControllerF : MonoBehaviour {
         body.angularVelocity = Vector3.zero;
         transform.rotation = Quaternion.identity;
         transform.position = new Vector3(0,5,0);
+
+        PlayRandomSound(AbstractSound.Action.RemiseEnJeu);
 
         Camera cam = Camera.allCameras[0];
         if(cam.GetComponent<CameraManagerF>() != null)
@@ -226,9 +227,11 @@ public class MonsterControllerF : MonoBehaviour {
         yield return new WaitForSeconds(summon);
         monsterForm = true;
         transform.localScale *= monsterScale;
+        PlayRandomSound(AbstractSound.Action.TransformationBalleMonstre);
 
         yield return new WaitForSeconds(revocation);
         wrath = 0;
+        PlayRandomSound(AbstractSound.Action.TransformationMonstreBall);
 
         transform.localScale /= monsterScale;
 
@@ -286,11 +289,14 @@ public class MonsterControllerF : MonoBehaviour {
     {
         eatPlayer = true;
         //faire disparaitre le joueur, jouer l'anim du monstre qui mache et téléporter le joueur dans le monstre et le stun
-        player.GetComponent<Collider>().enabled = false;
-        player.GetComponent<CharacterController>().enabled = false;
         player.transform.position = this.transform.position;
         player.GetComponent<Renderer>().enabled = false;
         player.GetComponent<PlayerControllerF>().callStun(durationEatingPlayer);
+
+        if (player.GetComponent<PlayerControllerF>().team == GameControllerF.Team.Blu)
+            goal = GameControllerF.GetBluGoal().transform;
+        else
+            goal = GameControllerF.GetRedGoal().transform;
 
         yield return new WaitForSeconds(durationEatingPlayer);
         
@@ -298,11 +304,7 @@ public class MonsterControllerF : MonoBehaviour {
         player.GetComponent<Renderer>().enabled = true;
         player.GetComponent<PlayerControllerF>().FlyAway();
 
-        
         yield return new WaitForSeconds(0.1f);
-
-        player.GetComponent<CharacterController>().enabled = true;
-        player.GetComponent<Collider>().enabled = true;
         eatPlayer = false;
     }
 
@@ -395,5 +397,10 @@ public class MonsterControllerF : MonoBehaviour {
         {
             monsterSound.PlayRandomSound(action);
         }
+    }
+
+    public int GetWrath()
+    {
+        return wrath;
     }
 }

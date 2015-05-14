@@ -2,9 +2,10 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class PlayerControllerF : MonoBehaviour {
+public class PlayerControllerF : MonoBehaviour
+{
 
-    
+
 
 
     [Header("Moving")]
@@ -14,12 +15,12 @@ public class PlayerControllerF : MonoBehaviour {
     [Range(0.0f, 100.0f)]
     public float speedDribbling = 66.0f;
     [Range(0.0f, 100.0f)]
-    public float speedLoading = 50.0f ;
+    public float speedLoading = 50.0f;
     private float actualSpeed;
     private float gravity = 20.0f;
     private CharacterController controller;
     private Vector3 direction;
-    
+
 
     [Header("Shoot")]
     public float powerMin = 50.0f;
@@ -69,10 +70,11 @@ public class PlayerControllerF : MonoBehaviour {
 
     public AudioSource audio;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start()
+    {
         controller = GetComponent<CharacterController>();
-        
+
         initPlayer();
         if (team == GameControllerF.Team.Blu)
             goal = GameControllerF.GetBluGoal();
@@ -85,7 +87,7 @@ public class PlayerControllerF : MonoBehaviour {
         //angleDash *= Mathf.Deg2Rad;
         //angleHoming *= Mathf.Deg2Rad;
         //angleShoot *= Mathf.Deg2Rad;
-	}
+    }
 
     // Update is called once per frame
     void Update()
@@ -108,12 +110,12 @@ public class PlayerControllerF : MonoBehaviour {
      */
     float setSpeed()
     {
-        float newSpeed = speed * speedMax/100;
+        float newSpeed = speed * speedMax / 100;
         if (magnet)
             newSpeed = speed * speedDribbling / 100;
         if (loading)
-            newSpeed = speed * speedLoading / 100; 
-            
+            newSpeed = speed * speedLoading / 100;
+
 
         return newSpeed;
 
@@ -202,16 +204,16 @@ public class PlayerControllerF : MonoBehaviour {
             transform.LookAt(transform.position + directionMove);
             directionMove = transform.forward * actualSpeed;
             direction = transform.forward;
-			if(GetComponentInChildren<Animator>() && GetComponentInChildren<Animator>().GetBool("isRunning") == false) 
-				GetComponentInChildren<Animator>().SetBool("isRunning", true);
-		}
+            if (GetComponentInChildren<Animator>() && GetComponentInChildren<Animator>().GetBool("isRunning") == false)
+                GetComponentInChildren<Animator>().SetBool("isRunning", true);
+        }
         else
         {
             directionMove = Vector3.zero;
-			if(GetComponentInChildren<Animator>() && GetComponentInChildren<Animator>().GetBool("isRunning") == true) 
-				GetComponentInChildren<Animator>().SetBool("isRunning", false);
+            if (GetComponentInChildren<Animator>() && GetComponentInChildren<Animator>().GetBool("isRunning") == true)
+                GetComponentInChildren<Animator>().SetBool("isRunning", false);
         }
-            
+
         directionMove.y -= gravity;
         controller.Move(directionMove * Time.deltaTime);
 
@@ -228,8 +230,8 @@ public class PlayerControllerF : MonoBehaviour {
             loading = true;
             power = powerMin;
             chargingShoot = 0;
-			if(GetComponentInChildren<Animator>() && GetComponentInChildren<Animator>().GetBool("isCharging") == false) 
-				GetComponentInChildren<Animator>().SetBool("isCharging", true);
+            if (GetComponentInChildren<Animator>() && GetComponentInChildren<Animator>().GetBool("isCharging") == false)
+                GetComponentInChildren<Animator>().SetBool("isCharging", true);
         }
 
         if (chargingShoot < 1)
@@ -246,10 +248,10 @@ public class PlayerControllerF : MonoBehaviour {
 
         if (Input.GetButtonUp(fire) && loading)
         {
-			if(GetComponentInChildren<Animator>() && GetComponentInChildren<Animator>().GetBool("isCharging") == true) 
-				GetComponentInChildren<Animator>().SetBool("isCharging", false);
+            if (GetComponentInChildren<Animator>() && GetComponentInChildren<Animator>().GetBool("isCharging") == true)
+                GetComponentInChildren<Animator>().SetBool("isCharging", false);
             loading = false;
-			if (bonus != null)
+            if (bonus != null)
             {
                 bonus.Activated(transform.position);
                 bonus = null;
@@ -264,9 +266,9 @@ public class PlayerControllerF : MonoBehaviour {
                     {
                         Hit(tabProxi[i]);
                     }
-					if(GetComponentInChildren<Animator>()) 
-						GetComponentInChildren<Animator>().SetTrigger("hit");
-					return;
+                    if (GetComponentInChildren<Animator>())
+                        GetComponentInChildren<Animator>().SetTrigger("hit");
+                    return;
                 }
                 else
                 {
@@ -293,15 +295,15 @@ public class PlayerControllerF : MonoBehaviour {
                             posDash = nearest.transform.position;
                             dash = true;
                             StartCoroutine(Stun(stunDash));
-							if(GetComponentInChildren<Animator>()) 
-								GetComponentInChildren<Animator>().SetTrigger("dash");
-							return;
+                            if (GetComponentInChildren<Animator>())
+                                GetComponentInChildren<Animator>().SetTrigger("dash");
+                            return;
                         }
                     }
                 }
-				if(GetComponentInChildren<Animator>()) 
-					GetComponentInChildren<Animator>().SetTrigger("hit");
-				
+                if (GetComponentInChildren<Animator>())
+                    GetComponentInChildren<Animator>().SetTrigger("hit");
+
             }
 
         }
@@ -353,7 +355,6 @@ public class PlayerControllerF : MonoBehaviour {
                 if (monster.IsTouchable())
                 {
                     monster.callDisableMagnet();
-                    monster.PlayRandomSound(AbstractSound.Action.Impact);
 
                     if (GameControllerF.WhereIsMyAlly(this) != Vector3.zero)
                     {
@@ -367,16 +368,22 @@ public class PlayerControllerF : MonoBehaviour {
 
 
 
-                    monster.AddWrath((int)(power/coefPower));
+                    monster.AddWrath((int)(power / coefPower));
+
+                    if (monster.GetWrath() < monster.wrathMax)
+                    {
+                        monster.PlayRandomSound(AbstractSound.Action.Impact);
+                    }
 
                     //feedbacks coup reçu par un joueur
-                    if(power == powerMax) 
+                    if (power == powerMax)
                     {
                         Camera.main.GetComponent<CameraShake>().shake(1, 1, 1);
                         //GetComponent<AudioSource>().clip = VOIX_Niveks_CoupRecu_02;
-                        audio.Play();
+                        //PlayRandomSound();
 
                     }
+
 
                     return true;
                 }
@@ -421,15 +428,16 @@ public class PlayerControllerF : MonoBehaviour {
     {
         impact += force / mass;
     }
-	
+
     /**
      * @return      le vecteur direction normalisé
      */
-    public Vector3 GetDirectionNormalize(){
+    public Vector3 GetDirectionNormalize()
+    {
         Vector3 value = direction;
         value.y = 0;
         value.Normalize();
-        
+
         return value;
     }
 

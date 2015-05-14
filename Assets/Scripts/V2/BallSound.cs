@@ -2,7 +2,8 @@
 using System.Collections;
 using UnityEngine.Audio;
 
-public class BallSound : AbstractSound {
+public class BallSound : AbstractSound
+{
 
     public AudioClip[] tabBut;
     private AudioSource sourceBut;
@@ -27,8 +28,9 @@ public class BallSound : AbstractSound {
 
     public AudioMixerGroup mixerVoice;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start()
+    {
         sourceBut = gameObject.AddComponent<AudioSource>();
         sourceBut.outputAudioMixerGroup = mixerVoice;
 
@@ -49,12 +51,13 @@ public class BallSound : AbstractSound {
 
         sourceTransformationMonstreBall = gameObject.AddComponent<AudioSource>();
         sourceTransformationMonstreBall.outputAudioMixerGroup = mixerVoice;
-	}
+    }
 
     public void PlayRandomSound(Action action)
     {
 
-        switch (action){
+        switch (action)
+        {
             case AbstractSound.Action.But:
                 sourceBut.clip = tabBut[Random.Range(0, tabBut.Length)];
                 sourceBut.Play();
@@ -85,7 +88,7 @@ public class BallSound : AbstractSound {
                 break;
 
             default:
-                Debug.LogError("L'action "+action+"n'existe pas dans ce contexte.");
+                Debug.LogError("L'action " + action + "n'existe pas dans ce contexte.");
                 break;
         }
     }
