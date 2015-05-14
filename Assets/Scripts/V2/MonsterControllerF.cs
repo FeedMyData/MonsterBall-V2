@@ -157,12 +157,9 @@ public class MonsterControllerF : MonoBehaviour {
 
             GameObject nearest = GameControllerF.NearestTouchableByMonster();
 
-            Debug.Log(nearest);
 
             Vector3 positionReach = nearest.transform.position;
-            positionReach -= transform.position;
-
-            positionReach.y = transform.localScale.y/2;
+            //positionReach -= transform.position;
             //positionReach.Normalize();
 
             //positionReach *= speedMonster;
@@ -171,7 +168,8 @@ public class MonsterControllerF : MonoBehaviour {
 
             Debug.DrawLine(transform.position, positionReach);
 
-           transform.Translate(transform.forward/4/*speedMonster*/);
+            //transform.Translate(transform.forward*Time.deltaTime/*speedMonster*/);
+            transform.position += transform.forward * Time.deltaTime * speedMonster;
             //body.AddForce(positionReach, ForceMode.Acceleration);
         }
         catch (NullReferenceException e) { /*Si pas de plus proche on fait rien, dans le pire des cas à dure 3 secondes*/ }
