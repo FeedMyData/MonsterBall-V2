@@ -350,7 +350,7 @@ public class PlayerControllerF : MonoBehaviour {
 
                     monster.AddWrath((int)(power/coefPower));
 
-                    //feedbacks
+                    //feedbacks coup reçu par un joueur
                     if(power == powerMax) 
                     {
                         Camera.main.GetComponent<CameraShake>().shake(1, 1, 1);

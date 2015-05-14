@@ -26,8 +26,9 @@ public class GoalScriptF : MonoBehaviour {
         {
             if (!other.GetComponent<MonsterControllerF>().IsMonsterForm())
             {
-                //feedbacks
+                //feedbacks goal balle
                 Camera.main.GetComponent<CameraShake>().shake(1, 1, 1);
+
 
                 manager.AddScore(tag);
                 //tp au centre + invul de 3 secondes
@@ -39,7 +40,7 @@ public class GoalScriptF : MonoBehaviour {
         {
             if (player.IsProjectionInGoal())
             {
-                //feedbacks
+                //feedbacks goal joueur
                 Camera.main.GetComponent<CameraShake>().shake(1, 1, 1);
 
                 manager.AddScore(tag);
