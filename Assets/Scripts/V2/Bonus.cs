@@ -33,7 +33,7 @@ public class Bonus : MonoBehaviour {
                 gameObject.SetActive(true);
                 transform.rotation = Quaternion.identity;
                 this.transform.position = position;
-                Debug.Log(position);
+                //Debug.Log(position);
                 GameControllerF.GetMonster().GetComponent<MonsterControllerF>().ChargeOnCake(transform.position);
                 
                 break;
