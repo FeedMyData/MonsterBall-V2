@@ -2295,7 +2295,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1515749445}
-  m_RootOrder: 13
+  m_RootOrder: 15
 --- !u!23 &649490973
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2693,7 +2693,7 @@ Transform:
   m_LocalScale: {x: 9.94848061, y: 5.20812464, z: 5.20812464}
   m_Children: []
   m_Father: {fileID: 1515749445}
-  m_RootOrder: 9
+  m_RootOrder: 10
 --- !u!23 &802648611
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4491,7 +4491,7 @@ Transform:
   m_LocalScale: {x: 9.94848061, y: 5.20812464, z: 5.20812464}
   m_Children: []
   m_Father: {fileID: 1515749445}
-  m_RootOrder: 8
+  m_RootOrder: 9
 --- !u!23 &1039189483
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4651,6 +4651,33 @@ Transform:
   - {fileID: 1311771983}
   m_Father: {fileID: 1513599788}
   m_RootOrder: 0
+--- !u!1 &1106525565
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1106525566}
+  m_Layer: 0
+  m_Name: posRedGoal
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1106525566
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1106525565}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 11, y: 1.20000005, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1515749445}
+  m_RootOrder: 12
 --- !u!1 &1108100043
 GameObject:
   m_ObjectHideFlags: 0
@@ -7692,6 +7719,33 @@ Transform:
   - {fileID: 1843554648}
   m_Father: {fileID: 946470394}
   m_RootOrder: 0
+--- !u!1 &1360831724
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1360831725}
+  m_Layer: 0
+  m_Name: posBluGoal
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1360831725
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1360831724}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -11, y: 1.20000005, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1515749445}
+  m_RootOrder: 7
 --- !u!1 &1363593655
 GameObject:
   m_ObjectHideFlags: 0
@@ -8032,10 +8086,12 @@ Transform:
   - {fileID: 1995152293}
   - {fileID: 88229717}
   - {fileID: 1108100044}
+  - {fileID: 1360831725}
   - {fileID: 1658719590}
   - {fileID: 1039189482}
   - {fileID: 802648610}
   - {fileID: 1944375692}
+  - {fileID: 1106525566}
   - {fileID: 2053805786}
   - {fileID: 1540846538}
   - {fileID: 649490972}
@@ -9217,7 +9273,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1515749445}
-  m_RootOrder: 12
+  m_RootOrder: 14
 --- !u!23 &1540846539
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9630,7 +9686,7 @@ Transform:
   m_LocalScale: {x: 9.94848061, y: 5.20812464, z: 5.20812464}
   m_Children: []
   m_Father: {fileID: 1515749445}
-  m_RootOrder: 7
+  m_RootOrder: 8
 --- !u!1 &1673975504
 GameObject:
   m_ObjectHideFlags: 0
@@ -10967,7 +11023,7 @@ Transform:
   m_LocalScale: {x: 9.94848061, y: 5.20812464, z: 5.20812464}
   m_Children: []
   m_Father: {fileID: 1515749445}
-  m_RootOrder: 10
+  m_RootOrder: 11
 --- !u!23 &1944375693
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11656,7 +11712,9 @@ MonoBehaviour:
   monster: {fileID: 1773516879}
   field: {fileID: 2053805785}
   bluGoal: {fileID: 1108100043}
+  posBluGoal: {fileID: 1360831725}
   redGoal: {fileID: 802648609}
+  posRedGoal: {fileID: 1106525566}
   txtScore: {fileID: 2146855251}
   txtDuration: {fileID: 29892153}
   cake: {fileID: 139860, guid: 1a5d84e498ca5824499f9a30ce579333, type: 2}
@@ -11701,7 +11759,7 @@ Transform:
   m_LocalScale: {x: 9.94848061, y: 5.20812464, z: 5.20812464}
   m_Children: []
   m_Father: {fileID: 1515749445}
-  m_RootOrder: 11
+  m_RootOrder: 13
 --- !u!23 &2053805787
 MeshRenderer:
   m_ObjectHideFlags: 0

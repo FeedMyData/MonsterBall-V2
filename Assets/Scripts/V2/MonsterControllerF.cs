@@ -307,10 +307,14 @@ public class MonsterControllerF : MonoBehaviour {
         player.GetComponent<Renderer>().enabled = false;
         player.GetComponent<PlayerControllerF>().callStun(durationEatingPlayer);
 
+        Debug.Log(player.GetComponent<PlayerControllerF>().team);
+
         if (player.GetComponent<PlayerControllerF>().team == GameControllerF.Team.Blu)
-            goal = GameControllerF.GetBluGoal().transform;
+            goal = GameControllerF.GetPosBluGoal();
         else
-            goal = GameControllerF.GetRedGoal().transform;
+            goal = GameControllerF.GetPosRedGoal();
+
+        Debug.Log(goal.position);
 
         yield return new WaitForSeconds(durationEatingPlayer);
         

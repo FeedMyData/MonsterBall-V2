@@ -27,7 +27,9 @@ public class GameControllerF : MonoBehaviour {
     [Space(20)]
     public GameObject field;
     public GameObject bluGoal;
+    public Transform posBluGoal;
     public GameObject redGoal;
+    public Transform posRedGoal;
 
     [Header("UI")]
     public Text txtScore;
@@ -47,6 +49,9 @@ public class GameControllerF : MonoBehaviour {
     private static GameObject staticBluGoal;
     private static GameObject staticRedGoal;
 
+    private static Transform staticPosBluGoal;
+    private static Transform staticPosRedGoal;
+
 
 	// Use this for initialization
 	void Awake () {
@@ -62,6 +67,8 @@ public class GameControllerF : MonoBehaviour {
         staticTxtDuration = txtDuration;
         staticBluGoal = bluGoal;
         staticRedGoal = redGoal;
+        staticPosBluGoal = posBluGoal;
+        staticPosRedGoal = posRedGoal;
 
         staticCake = cake;
 
@@ -262,6 +269,16 @@ public class GameControllerF : MonoBehaviour {
     public static GameObject GetRedGoal()
     {
         return staticRedGoal;
+    }
+
+    public static Transform GetPosBluGoal()
+    {
+        return staticPosBluGoal;
+    }
+
+    public static Transform GetPosRedGoal()
+    {
+        return staticPosRedGoal;
     }
 
     public static GameObject GetPlayer(int i)

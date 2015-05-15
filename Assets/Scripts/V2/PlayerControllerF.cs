@@ -62,7 +62,7 @@ public class PlayerControllerF : MonoBehaviour
 
 
     private bool projectionInGoal;
-    private GameObject goal;
+    private Transform goal;
     [Space(20)]
     public float durationInvul = 2.0f;
     private bool touchable = true;
@@ -76,9 +76,9 @@ public class PlayerControllerF : MonoBehaviour
 
         initPlayer();
         if (team == GameControllerF.Team.Blu)
-            goal = GameControllerF.GetBluGoal();
+            goal = GameControllerF.GetPosBluGoal();
         else
-            goal = GameControllerF.GetRedGoal();
+            goal = GameControllerF.GetPosRedGoal();
 
         spriteBonus = GetComponentInChildren<SpriteRenderer>();
 
@@ -196,7 +196,7 @@ public class PlayerControllerF : MonoBehaviour
         }
         else if (projectionInGoal)
         {
-            transform.position = Vector3.MoveTowards(transform.position, goal.transform.position, Time.deltaTime * 120);
+            transform.position = Vector3.MoveTowards(transform.position, goal.position, Time.deltaTime * 120);
         }
         else if (directionMove.sqrMagnitude > 0.2f && !isStunned && !dash)
         {
