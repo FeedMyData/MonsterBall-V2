@@ -69,8 +69,6 @@ public class PlayerControllerF : MonoBehaviour
     private SpriteRenderer spriteBonus;
     private NivekSound nivekSound;
 
-    public AudioSource audio;
-
     // Use this for initialization
     void Start()
     {

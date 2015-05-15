@@ -49,6 +49,7 @@ public class MonsterControllerF : MonoBehaviour {
     private bool eatPlayer = false;
     private float rotateToGoal = 0.0f;
     private Transform goal;
+    private Vector3 DirectionMonster = Vector3.zero;
 
 
     private bool seeACake = false;
@@ -164,39 +165,50 @@ public class MonsterControllerF : MonoBehaviour {
 
     void MoveMonster()
     {
-        Vector3 positionReach = Vector3.zero;
-        //cherche le plus proche
-        
+        Vector3 rotationToGoal = Vector3.zero;
         body.velocity = Vector3.zero;
 
         if(eatPlayer)
         {
             //Rotation progressive vers le but
-            positionReach = Vector3.Lerp(positionReach,goal.position,(rotateToGoal-Time.time)*(1/durationEatingPlayer));
+            //Debug.Log(Mathf.Abs(((rotateToGoal - Time.time)/ durationEatingPlayer)-1)+ " "+DirectionMonster+" "+goal.position);
+            //DirectionMonster = Vector3.Lerp(DirectionMonster, goal.position, Mathf.Abs(((rotateToGoal - Time.time) / durationEatingPlayer) - 1));
+            DirectionMonster = goal.position - transform.position;
 
-            positionReach = goal.position;
+            rotationToGoal = Vector3.RotateTowards(transform.forward, DirectionMonster, Mathf.PI * Mathf.Abs(((rotateToGoal - Time.time) / durationEatingPlayer) - 1),0.0f);
+           // Debug.Log(Mathf.Lerp(0,1, Mathf.Abs(((rotateToGoal - Time.time) / durationEatingPlayer) - 1)));
+
+            //positionReach = goal.position;
         }
         else if(seeACake)
         {
-            positionReach = cakePos;
+            DirectionMonster = cakePos;
         }
         else
         {
             try
             {
                 GameObject nearest = GameControllerF.NearestTouchableByMonster();
-                positionReach = nearest.transform.position;
+                DirectionMonster = nearest.transform.position;
             }
             catch (NullReferenceException e) { /*Si pas de plus proche on fait rien, dans le pire des cas à dure 3 secondes*/ }
         }
 
-        transform.LookAt(positionReach,Vector3.up);
+        
 
-        Debug.DrawLine(transform.position, positionReach);
+        Debug.DrawLine(transform.position, DirectionMonster);
 
         //transform.Translate(transform.forward*Time.deltaTime/*speedMonster*/); //Marche pas
-        if(!eatPlayer)
+        if (!eatPlayer)
+        {
+            transform.LookAt(DirectionMonster, Vector3.up);
             transform.position += transform.forward * Time.deltaTime * speedMonster;
+        }
+        else
+        {
+            transform.rotation = Quaternion.LookRotation(rotationToGoal);
+        }
+            
     }
 
     public void Respawn()
@@ -288,6 +300,8 @@ public class MonsterControllerF : MonoBehaviour {
     IEnumerator EatingPlayer(GameObject player)
     {
         eatPlayer = true;
+        player.GetComponent<CharacterController>().enabled = false;
+        player.GetComponent<Collider>().enabled = false;
         //faire disparaitre le joueur, jouer l'anim du monstre qui mache et téléporter le joueur dans le monstre et le stun
         player.transform.position = this.transform.position;
         player.GetComponent<Renderer>().enabled = false;
@@ -303,10 +317,13 @@ public class MonsterControllerF : MonoBehaviour {
         //Faire réapparaitre le joueur
         player.GetComponent<Renderer>().enabled = true;
         player.GetComponent<PlayerControllerF>().FlyAway();
+        
         PlayRandomSound(AbstractSound.Action.RecracheJoueur);
 
         yield return new WaitForSeconds(0.1f);
         eatPlayer = false;
+        player.GetComponent<CharacterController>().enabled = true;
+        player.GetComponent<Collider>().enabled = true;
     }
 
     IEnumerator DisableMagnet()
