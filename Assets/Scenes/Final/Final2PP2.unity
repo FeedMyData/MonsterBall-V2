@@ -167,7 +167,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: 03:00
 --- !u!1 &43463677
 GameObject:
   m_ObjectHideFlags: 0
@@ -372,10 +372,10 @@ GameObject:
   - 4: {fileID: 99554766}
   - 33: {fileID: 99554772}
   - 136: {fileID: 99554771}
-  - 23: {fileID: 99554770}
   - 114: {fileID: 99554769}
   - 114: {fileID: 99554768}
   - 143: {fileID: 99554767}
+  - 23: {fileID: 99554770}
   m_Layer: 0
   m_Name: PlayerFromLudo 2
   m_TagString: Player
@@ -397,7 +397,7 @@ Transform:
   - {fileID: 1680736819}
   - {fileID: 275250415}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 3
 --- !u!143 &99554767
 CharacterController:
   m_ObjectHideFlags: 0
@@ -471,7 +471,7 @@ MonoBehaviour:
   rangeDash: 7
   angleHoming: 50
   stunKick: 1.29999995
-  stunGoal: 10
+  stunGoal: 0
   stunDash: .649999976
   jersey: 2
   team: 1
@@ -479,22 +479,21 @@ MonoBehaviour:
 --- !u!23 &99554770
 MeshRenderer:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 2382782, guid: b57655d704b35554c9d6eef6e9b6730a,
-    type: 2}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 99554765}
   m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
   m_ReflectionProbeUsage: 1
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
+  m_PreserveUVs: 0
   m_ImportantGI: 0
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
@@ -1747,7 +1746,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 9
 --- !u!114 &499457356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1862,10 +1861,10 @@ GameObject:
   - 4: {fileID: 530266178}
   - 33: {fileID: 530266184}
   - 136: {fileID: 530266183}
-  - 23: {fileID: 530266182}
   - 114: {fileID: 530266181}
   - 114: {fileID: 530266180}
   - 143: {fileID: 530266179}
+  - 23: {fileID: 530266182}
   m_Layer: 0
   m_Name: PlayerFromLudo 3
   m_TagString: Player
@@ -1887,7 +1886,7 @@ Transform:
   - {fileID: 1998758083}
   - {fileID: 480821635}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 2
 --- !u!143 &530266179
 CharacterController:
   m_ObjectHideFlags: 0
@@ -1961,7 +1960,7 @@ MonoBehaviour:
   rangeDash: 7
   angleHoming: 50
   stunKick: 1.29999995
-  stunGoal: 10
+  stunGoal: 0
   stunDash: .649999976
   jersey: 3
   team: 0
@@ -1969,22 +1968,21 @@ MonoBehaviour:
 --- !u!23 &530266182
 MeshRenderer:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 2382782, guid: b57655d704b35554c9d6eef6e9b6730a,
-    type: 2}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 530266177}
   m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
   m_ReflectionProbeUsage: 1
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
+  m_PreserveUVs: 0
   m_ImportantGI: 0
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
@@ -2267,6 +2265,92 @@ Transform:
   - {fileID: 239591227}
   m_Father: {fileID: 669021308}
   m_RootOrder: 0
+--- !u!1 &649490971
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 649490972}
+  - 33: {fileID: 649490975}
+  - 135: {fileID: 649490974}
+  - 23: {fileID: 649490973}
+  - 114: {fileID: 649490976}
+  m_Layer: 0
+  m_Name: RedBumpSphere
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &649490972
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 649490971}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 9.69999981, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1515749445}
+  m_RootOrder: 13
+--- !u!23 &649490973
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 649490971}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!135 &649490974
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 649490971}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: .800000012
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &649490975
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 649490971}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &649490976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 649490971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25ee6756f9008ae47bf6f2cd719a0eb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dashGoalPower: 300
 --- !u!1 &669021307
 GameObject:
   m_ObjectHideFlags: 0
@@ -2550,7 +2634,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 8
 --- !u!1 &800269683
 GameObject:
   m_ObjectHideFlags: 0
@@ -2667,7 +2751,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bf9abdf5d47a28409f2c536c214f468, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dashGoal: 400
 --- !u!1 &817335603
 GameObject:
   m_ObjectHideFlags: 0
@@ -4656,7 +4739,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bf9abdf5d47a28409f2c536c214f468, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dashGoal: 400
 --- !u!1 &1109858666
 GameObject:
   m_ObjectHideFlags: 0
@@ -4724,12 +4806,12 @@ GameObject:
   - 64: {fileID: 1119407522}
   - 114: {fileID: 1119407521}
   m_Layer: 0
-  m_Name: GoalBlu
+  m_Name: GoalMonsterBlu
   m_TagString: TeamBlu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1119407521
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4738,10 +4820,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1119407520}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2bf9abdf5d47a28409f2c536c214f468, type: 3}
+  m_Script: {fileID: 11500000, guid: c244260b746ac9e48acc710c6f135b6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dashGoal: 400
 --- !u!64 &1119407522
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4769,10 +4850,10 @@ Transform:
   m_GameObject: {fileID: 1119407520}
   m_LocalRotation: {x: 0, y: 0, z: -.793353438, w: .608761311}
   m_LocalPosition: {x: -37.7999992, y: 6.19999981, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: .68749994}
+  m_LocalScale: {x: 1.00312507, y: 1.00312483, z: .68749994}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 12
 --- !u!1 &1122147949
 GameObject:
   m_ObjectHideFlags: 0
@@ -6290,7 +6371,7 @@ RectTransform:
   - {fileID: 104051543}
   - {fileID: 1558002331}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 10
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: -33.5999985}
@@ -7956,8 +8037,10 @@ Transform:
   - {fileID: 802648610}
   - {fileID: 1944375692}
   - {fileID: 2053805786}
+  - {fileID: 1540846538}
+  - {fileID: 649490972}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!1 &1519344842
 GameObject:
   m_ObjectHideFlags: 0
@@ -9104,6 +9187,92 @@ Transform:
   - {fileID: 102926632}
   m_Father: {fileID: 1024260426}
   m_RootOrder: 0
+--- !u!1 &1540846537
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1540846538}
+  - 33: {fileID: 1540846541}
+  - 135: {fileID: 1540846540}
+  - 23: {fileID: 1540846539}
+  - 114: {fileID: 1540846542}
+  m_Layer: 0
+  m_Name: BlueBumpSphere
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1540846538
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1540846537}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -9.69999981, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1515749445}
+  m_RootOrder: 12
+--- !u!23 &1540846539
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1540846537}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!135 &1540846540
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1540846537}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: .800000012
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &1540846541
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1540846537}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1540846542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1540846537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25ee6756f9008ae47bf6f2cd719a0eb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dashGoalPower: 300
 --- !u!1 &1558002328
 GameObject:
   m_ObjectHideFlags: 0
@@ -9929,7 +10098,7 @@ RectTransform:
   m_Children:
   - {fileID: 1203440119}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 7
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: .200000003}
@@ -10018,7 +10187,7 @@ MonoBehaviour:
   speedDivisionFactor: 8
   areaMagnet: 3
   speedMagnet: 40
-  wrathMax: 100
+  wrathMax: 10
   wrathDribblingValue: 1
   wrathDribblingEachTime: 1
   summon: 0
@@ -10098,7 +10267,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 6
 --- !u!1 &1792388570
 GameObject:
   m_ObjectHideFlags: 0
@@ -10412,10 +10581,10 @@ GameObject:
   - 4: {fileID: 1895334757}
   - 33: {fileID: 1895334763}
   - 136: {fileID: 1895334762}
-  - 23: {fileID: 1895334761}
   - 114: {fileID: 1895334760}
   - 114: {fileID: 1895334759}
   - 143: {fileID: 1895334758}
+  - 23: {fileID: 1895334761}
   m_Layer: 0
   m_Name: PlayerFromLudo 0
   m_TagString: Player
@@ -10437,7 +10606,7 @@ Transform:
   - {fileID: 1134231507}
   - {fileID: 500802389}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 5
 --- !u!143 &1895334758
 CharacterController:
   m_ObjectHideFlags: 0
@@ -10511,7 +10680,7 @@ MonoBehaviour:
   rangeDash: 7
   angleHoming: 50
   stunKick: 1.29999995
-  stunGoal: 10
+  stunGoal: 0
   stunDash: .649999976
   jersey: 0
   team: 1
@@ -10519,22 +10688,21 @@ MonoBehaviour:
 --- !u!23 &1895334761
 MeshRenderer:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 2382782, guid: b57655d704b35554c9d6eef6e9b6730a,
-    type: 2}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1895334756}
   m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
   m_ReflectionProbeUsage: 1
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
+  m_PreserveUVs: 0
   m_ImportantGI: 0
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
@@ -10723,12 +10891,12 @@ GameObject:
   - 64: {fileID: 1939310396}
   - 114: {fileID: 1939310395}
   m_Layer: 0
-  m_Name: GoalRed
+  m_Name: GoalMonsterRed
   m_TagString: TeamRed
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1939310395
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10737,10 +10905,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1939310394}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2bf9abdf5d47a28409f2c536c214f468, type: 3}
+  m_Script: {fileID: 11500000, guid: c244260b746ac9e48acc710c6f135b6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dashGoal: 400
 --- !u!64 &1939310396
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -10767,11 +10934,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1939310394}
   m_LocalRotation: {x: -.793353438, y: .608761311, z: -5.98965215e-08, w: 4.59602028e-08}
-  m_LocalPosition: {x: 37.7999992, y: 5.0999999, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: .67500037}
+  m_LocalPosition: {x: 37.7999992, y: 6.19999981, z: 0}
+  m_LocalScale: {x: 1.00312507, y: 1.00312483, z: .687499881}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 11
 --- !u!1 &1944375691
 GameObject:
   m_ObjectHideFlags: 0
@@ -11115,10 +11282,10 @@ GameObject:
   - 4: {fileID: 2021973433}
   - 33: {fileID: 2021973439}
   - 136: {fileID: 2021973438}
-  - 23: {fileID: 2021973437}
   - 114: {fileID: 2021973436}
   - 114: {fileID: 2021973435}
   - 143: {fileID: 2021973434}
+  - 23: {fileID: 2021973437}
   m_Layer: 0
   m_Name: PlayerFromLudo 1
   m_TagString: Player
@@ -11140,7 +11307,7 @@ Transform:
   - {fileID: 392790972}
   - {fileID: 1925360608}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 4
 --- !u!143 &2021973434
 CharacterController:
   m_ObjectHideFlags: 0
@@ -11214,7 +11381,7 @@ MonoBehaviour:
   rangeDash: 7
   angleHoming: 50
   stunKick: 1.29999995
-  stunGoal: 10
+  stunGoal: 0
   stunDash: .649999976
   jersey: 1
   team: 0
@@ -11222,22 +11389,21 @@ MonoBehaviour:
 --- !u!23 &2021973437
 MeshRenderer:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 2382782, guid: b57655d704b35554c9d6eef6e9b6730a,
-    type: 2}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2021973432}
   m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
   m_ReflectionProbeUsage: 1
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
+  m_PreserveUVs: 0
   m_ImportantGI: 0
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
@@ -11488,9 +11654,9 @@ MonoBehaviour:
   player3: {fileID: 99554765}
   player4: {fileID: 530266177}
   monster: {fileID: 1773516879}
-  field: {fileID: 0}
-  bluGoal: {fileID: 0}
-  redGoal: {fileID: 0}
+  field: {fileID: 2053805785}
+  bluGoal: {fileID: 1108100043}
+  redGoal: {fileID: 802648609}
   txtScore: {fileID: 2146855251}
   txtDuration: {fileID: 29892153}
   cake: {fileID: 139860, guid: 1a5d84e498ca5824499f9a30ce579333, type: 2}
@@ -11505,7 +11671,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
 --- !u!1 &2053805785
 GameObject:
   m_ObjectHideFlags: 0
@@ -11550,7 +11716,7 @@ MeshRenderer:
   - {fileID: 2100000, guid: 58fbf4ffbd09d0d44b6c63c8270ddad9, type: 2}
   - {fileID: 2100000, guid: 1b38ab04f75ebe8468a48644ed101234, type: 2}
   - {fileID: 2100000, guid: 1b38ab04f75ebe8468a48644ed101234, type: 2}
-  - {fileID: 2100000, guid: 1b38ab04f75ebe8468a48644ed101234, type: 2}
+  - {fileID: 2100000, guid: 5147dc2675ac2e44faaf696da4d783b1, type: 2}
   - {fileID: 2100000, guid: 555bd2af4a2de2e49a1a8ee507c67fc7, type: 2}
   - {fileID: 2100000, guid: 1b38ab04f75ebe8468a48644ed101234, type: 2}
   - {fileID: 2100000, guid: 5147dc2675ac2e44faaf696da4d783b1, type: 2}
@@ -11944,4 +12110,4 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: Blu 0-0 Red

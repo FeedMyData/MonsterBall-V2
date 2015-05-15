@@ -19,15 +19,17 @@ public class GameManagerF : MonoBehaviour {
 
 	// Use this for initialization
 	void Awake () {
-        txtScore = GameControllerF.GetTxtScore();
-        txtDuration = GameControllerF.GetTxtDuration();
-        Debug.Log(txtScore);
+        //txtScore = GameControllerF.GetTxtScore();
+        //txtDuration = GameControllerF.GetTxtDuration();
 
         commentary = GetComponent<CommentarySound>();
 	}
 
     void Start()
     {
+        txtScore = GameControllerF.GetTxtScore();
+        txtDuration = GameControllerF.GetTxtDuration();
+
         RefreshDuration();
         RefreshScore();
         StartCoroutine(matchDuration());

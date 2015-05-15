@@ -4,8 +4,6 @@ using System.Collections;
 
 public class GoalScriptF : MonoBehaviour {
 
-	public float dashGoal = 400.0f;
-
     private GameManagerF manager;
 
 	// Use this for initialization
@@ -18,48 +16,47 @@ public class GoalScriptF : MonoBehaviour {
 	
 	}
 
-    void OnTriggerEnter(Collider other)
+    void OnCollisionEnter(Collision other) // old was ontriggerenter, changé pour détecter but d'une balle sur les mesh de buts du stade, par contre ça ne détecte pas les niveks, donc utilisation des anciens mesh colliders GoalMonsterRed et GoalMonsterBlue avec un nouveau script
     {
-        PlayerControllerF player = other.GetComponent<PlayerControllerF>();
+        //PlayerControllerF player = other.gameObject.GetComponent<PlayerControllerF>();
 
-        if (other.tag == "Monster")
+        if (other.gameObject.tag == "Monster")
         {
-            if (!other.GetComponent<MonsterControllerF>().IsMonsterForm())
+            if (!other.gameObject.GetComponent<MonsterControllerF>().IsMonsterForm())
             {
                 //feedbacks goal balle
                 Camera.main.GetComponent<CameraShake>().shake(1, 1, 1);
 
-                other.GetComponent<MonsterControllerF>().PlayRandomSound(AbstractSound.Action.But);
+                other.gameObject.GetComponent<MonsterControllerF>().PlayRandomSound(AbstractSound.Action.But);
                 manager.AddScore(tag);
                 //tp au centre + invul de 3 secondes
-                other.GetComponent<MonsterControllerF>().Respawn();
+                other.gameObject.GetComponent<MonsterControllerF>().Respawn();
             }
         }
 
-        if (player != null)
-        {
-            if (player.IsProjectionInGoal())
-            {
-                //feedbacks goal joueur
-                Camera.main.GetComponent<CameraShake>().shake(1, 1, 1);
+        //if (player != null)
+        //{
+        //    if (player.IsProjectionInGoal())
+        //    {
+        //        //feedbacks goal joueur
+        //        Camera.main.GetComponent<CameraShake>().shake(1, 1, 1);
+        //        manager.AddScore(tag);
+        //        player.Respawn();
 
-                manager.AddScore(tag);
-                player.Respawn();
+        //    }
+        //    else
+        //    {
+        //        player.callStun(player.stunGoal);
+        //        Vector3 dirImpact;
 
-            }
-            else
-            {
-                player.callStun(player.stunGoal);
-                Vector3 dirImpact;
+        //        player.PlayRandomSound(AbstractSound.Action.EjectBut);
 
-                player.PlayRandomSound(AbstractSound.Action.EjectBut);
-
-                if (other.transform.position.x > transform.position.x)
-                    dirImpact = new Vector3(-1, 0.1f, 0);
-                else
-                    dirImpact = new Vector3(1, 0.1f, 0);
-                player.AddImpact(dirImpact * 200);
-            }
-        }
+        //        if (other.transform.position.x > transform.position.x)
+        //            dirImpact = new Vector3(-1, 0.1f, 0);
+        //        else
+        //            dirImpact = new Vector3(1, 0.1f, 0);
+        //        player.AddImpact(dirImpact * 200);
+        //    }
+        //}
     }
 }

@@ -736,7 +736,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bf9abdf5d47a28409f2c536c214f468, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dashGoal: 400
 --- !u!64 &722367169
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1081,7 +1080,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bf9abdf5d47a28409f2c536c214f468, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dashGoal: 400
 --- !u!64 &1187255733
 MeshCollider:
   m_ObjectHideFlags: 0
