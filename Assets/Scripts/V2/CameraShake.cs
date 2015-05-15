@@ -11,6 +11,7 @@ public class CameraShake : MonoBehaviour {
     public bool decreaseShakeWithTime = true;
 
     private Vector3 originalPos;
+    private bool repositionned = false;
 
 	// Use this for initialization
 	void Start () {
@@ -41,11 +42,13 @@ public class CameraShake : MonoBehaviour {
             }
 
             timeS -= Time.deltaTime * decreaseFactor;
+            repositionned = false;
         }
-        else
+        else if (!repositionned)
         {
             timeS = 0f;
             transform.localPosition = originalPos;
+            repositionned = true;
         }
 
 	}

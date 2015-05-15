@@ -21,6 +21,7 @@ public class GameManagerF : MonoBehaviour {
 	void Awake () {
         txtScore = GameControllerF.GetTxtScore();
         txtDuration = GameControllerF.GetTxtDuration();
+        Debug.Log(txtScore);
 
         commentary = GetComponent<CommentarySound>();
 	}

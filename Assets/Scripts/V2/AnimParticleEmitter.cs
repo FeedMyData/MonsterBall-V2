@@ -14,6 +14,6 @@ public class AnimParticleEmitter : MonoBehaviour {
 	}
 	public void EmitParticle(){
 
-		//GetComponentInChildren<ParticleSystem> ().Play ();
+		GetComponentInChildren<ParticleSystem> ().Play ();
 	}
 }
