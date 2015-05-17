@@ -8,8 +8,8 @@ Material:
   m_PrefabInternal: {fileID: 0}
   m_Name: Blue_Arrow_Shader
   m_Shader: {fileID: 4800000, guid: c9e994a922c6d9b43bfe84b1c9c9593c, type: 3}
-  m_ShaderKeywords: _EDGE_DETECTION_FAKE_ON _EDGE_DETECTION_ON _FRESNEL_ON _GRADIENT_OR_SOLID_COLOR_ON
-    _MAKE_SAME_AS_FRESNEL_ON _SOFT_TEXTURE_ON
+  m_ShaderKeywords: _EDGE_DETECTION_FAKE_ON _EDGE_DETECTION_ON _FRESNEL_ON _MAKE_SAME_AS_FRESNEL_ON
+    _SOFT_TEXTURE_ON
   m_LightmapFlags: 5
   m_CustomRenderQueue: -1
   m_SavedProperties:
@@ -26,15 +26,15 @@ Material:
         first:
           name: _Gradient_Color
         second:
-          m_Texture: {fileID: 2800000, guid: d75202b96f120c143b1add1cdf2721b8, type: 3}
-          m_Scale: {x: 25, y: 50}
+          m_Texture: {fileID: 2800000, guid: 595df77cdf0a1b64a9da15f136642fb4, type: 3}
+          m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
         first:
           name: _Texture
         second:
           m_Texture: {fileID: 2800000, guid: 1ce79f62dae9edb4394920bd543a4edd, type: 3}
-          m_Scale: {x: 1, y: 1}
+          m_Scale: {x: .5, y: .5}
           m_Offset: {x: 0, y: 0}
       data:
         first:
@@ -45,18 +45,18 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _Gradient_Edge_Detection
-        second:
-          m_Texture: {fileID: 2800000, guid: 3feadd92e54464347807408a77bf84d9, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
           name: _Gradient_Edge_Fake
         second:
           m_Texture: {fileID: 2800000, guid: dd02884263250074096b0d1643f90f41, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: .649999976}
+      data:
+        first:
+          name: _Gradient_Edge_Detection
+        second:
+          m_Texture: {fileID: 2800000, guid: 3feadd92e54464347807408a77bf84d9, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
     m_Floats:
       data:
         first:
@@ -65,7 +65,7 @@ Material:
       data:
         first:
           name: _Brightness
-        second: 1
+        second: 1.20000005
       data:
         first:
           name: _Intensity
@@ -73,7 +73,7 @@ Material:
       data:
         first:
           name: _Gradient_Or_Solid_Color
-        second: 1
+        second: 0
       data:
         first:
           name: _Decay

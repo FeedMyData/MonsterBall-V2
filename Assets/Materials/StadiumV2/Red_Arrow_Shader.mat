@@ -26,15 +26,15 @@ Material:
         first:
           name: _Gradient_Color
         second:
-          m_Texture: {fileID: 2800000, guid: d75202b96f120c143b1add1cdf2721b8, type: 3}
-          m_Scale: {x: 25, y: 50}
+          m_Texture: {fileID: 2800000, guid: 595df77cdf0a1b64a9da15f136642fb4, type: 3}
+          m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
         first:
           name: _Texture
         second:
           m_Texture: {fileID: 2800000, guid: 1ce79f62dae9edb4394920bd543a4edd, type: 3}
-          m_Scale: {x: 1, y: 1}
+          m_Scale: {x: .5, y: .5}
           m_Offset: {x: 0, y: 0}
       data:
         first:
@@ -45,18 +45,18 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _Gradient_Edge_Detection
-        second:
-          m_Texture: {fileID: 2800000, guid: 3feadd92e54464347807408a77bf84d9, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
           name: _Gradient_Edge_Fake
         second:
           m_Texture: {fileID: 2800000, guid: dd02884263250074096b0d1643f90f41, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: .649999976}
+      data:
+        first:
+          name: _Gradient_Edge_Detection
+        second:
+          m_Texture: {fileID: 2800000, guid: 3feadd92e54464347807408a77bf84d9, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
     m_Floats:
       data:
         first:
@@ -65,7 +65,7 @@ Material:
       data:
         first:
           name: _Brightness
-        second: 3
+        second: 2
       data:
         first:
           name: _Intensity

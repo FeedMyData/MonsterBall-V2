@@ -11741,7 +11741,7 @@ GameObject:
   - 33: {fileID: 2053805788}
   - 23: {fileID: 2053805787}
   - 64: {fileID: 2053805789}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: socle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11979,7 +11979,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294966783
+    m_Bits: 4294964735
   m_Lightmapping: 4
   m_BounceIntensity: 3.5999999
   m_ShadowRadius: 0
