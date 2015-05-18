@@ -210,7 +210,7 @@ MeshRenderer:
   m_Materials:
   - {fileID: 2100000, guid: c65dd650f103f55409d5ae61545c9429, type: 2}
   - {fileID: 2100000, guid: 0b18c1c2430991447bf2fa75b2f1f3a6, type: 2}
-  - {fileID: 2100000, guid: 0c8895c09bce9a342b6955dc94baac70, type: 2}
+  - {fileID: 2100000, guid: 8f59cfecbdb5b8c419c870037c4e193b, type: 2}
   - {fileID: 2100000, guid: a546edaa2c69a56458ad6ef5a6c3f4f7, type: 2}
   - {fileID: 2100000, guid: cc1acd2033e9be64892bce4b64f12973, type: 2}
   m_SubsetIndices: 
@@ -1242,7 +1242,7 @@ MeshRenderer:
   m_Materials:
   - {fileID: 2100000, guid: c65dd650f103f55409d5ae61545c9429, type: 2}
   - {fileID: 2100000, guid: 0b18c1c2430991447bf2fa75b2f1f3a6, type: 2}
-  - {fileID: 2100000, guid: 0c8895c09bce9a342b6955dc94baac70, type: 2}
+  - {fileID: 2100000, guid: 8f59cfecbdb5b8c419c870037c4e193b, type: 2}
   - {fileID: 2100000, guid: a546edaa2c69a56458ad6ef5a6c3f4f7, type: 2}
   - {fileID: 2100000, guid: cc1acd2033e9be64892bce4b64f12973, type: 2}
   m_SubsetIndices: 
@@ -6506,7 +6506,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1279058672}
   m_LocalRotation: {x: -.144843355, y: 0, z: 0, w: .989454627}
-  m_LocalPosition: {x: 0, y: 0, z: 48.5}
+  m_LocalPosition: {x: 0, y: 0, z: 31}
   m_LocalScale: {x: .200121418, y: .200121418, z: .200121418}
   m_Children:
   - {fileID: 104051543}
@@ -6515,7 +6515,7 @@ RectTransform:
   m_RootOrder: 10
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: -33.5999985}
+  m_AnchoredPosition: {x: 0, y: -27.6000004}
   m_SizeDelta: {x: 833, y: 577}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1279058674
@@ -6531,7 +6531,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_depth: -1
-  m_angle: 119
+  m_angle: 133
   m_radius: 1
 --- !u!114 &1279058675
 MonoBehaviour:
