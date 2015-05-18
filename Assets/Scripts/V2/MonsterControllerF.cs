@@ -51,6 +51,8 @@ public class MonsterControllerF : MonoBehaviour {
     private Transform goal;
     private Vector3 DirectionMonster = Vector3.zero;
 
+    private GameObject playerAte;
+
 
     private bool seeACake = false;
     private Vector3 cakePos;
@@ -96,7 +98,7 @@ public class MonsterControllerF : MonoBehaviour {
 
                     if (proxiPlayer.GetComponent<PlayerControllerF>().IsTouchable() && !eatPlayer)
                     {
-                        Debug.Log(proxiPlayer.name+" "+proxiPlayer.GetComponent<PlayerControllerF>().IsTouchable());
+                        playerAte = proxiPlayer;
                         StartCoroutine(EatingPlayer(proxiPlayer));
 
                         rotateToGoal = Time.time + durationEatingPlayer;
@@ -244,6 +246,13 @@ public class MonsterControllerF : MonoBehaviour {
         yield return new WaitForSeconds(revocation);
         wrath = 0;
         PlayRandomSound(AbstractSound.Action.TransformationMonstreBall);
+
+        if(eatPlayer)
+        {
+            Vector3 expulsePos = UnityEngine.Random.insideUnitSphere;
+            expulsePos.y = Mathf.Abs(expulsePos.y);
+            playerAte.GetComponent<PlayerControllerF>().AddImpact(expulsePos*200);
+        }
 
         transform.localScale /= monsterScale;
 
