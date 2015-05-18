@@ -252,6 +252,8 @@ MonoBehaviour:
   durationInvul: 2
   coefColliderMonster: 1.04999995
   durationEatingPlayer: 1
+  skinBall: {fileID: 615020600}
+  skinMonster: {fileID: 1800922600}
 --- !u!54 &7400958
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2109,7 +2111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 106bdb22009f01c459ec11ed29db1f4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  monster: {fileID: 1773516882}
+  monster: {fileID: 0}
   manager: {fileID: 2052379256}
   player: {fileID: 1895334760}
 --- !u!82 &499457359
@@ -2621,6 +2623,10 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: b31c0239a25bbfa4bb4aed405c7f26c3, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: b31c0239a25bbfa4bb4aed405c7f26c3, type: 3}
+      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -10735,201 +10741,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: .200000003}
   m_SizeDelta: {x: 478, y: 252}
   m_Pivot: {x: .5, y: .5}
---- !u!1 &1773516879
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1773516887}
-  - 33: {fileID: 1773516886}
-  - 135: {fileID: 1773516885}
-  - 23: {fileID: 1773516884}
-  - 54: {fileID: 1773516883}
-  - 114: {fileID: 1773516882}
-  - 114: {fileID: 1773516881}
-  - 114: {fileID: 1773516880}
-  m_Layer: 0
-  m_Name: Monster
-  m_TagString: Monster
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &1773516880
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1773516879}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e56ae82e7d8e12c4ebb3c3da5bdf4d3b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tabGrognement:
-  - {fileID: 8300000, guid: abda45950e9060a4083ff9d010d4057e, type: 3}
-  - {fileID: 8300000, guid: 965ed2687b2d73f4b84c0d96767dc10e, type: 3}
-  - {fileID: 8300000, guid: 972699f94e564c24eb65f028adfd96aa, type: 3}
-  - {fileID: 8300000, guid: 6474eb440bce2874cb289eadd867309c, type: 3}
-  - {fileID: 8300000, guid: 4ad5d0de6f4e2a244961a7680fa7fff2, type: 3}
-  tabImpact:
-  - {fileID: 8300000, guid: bd45c34268aaa3c4e82ea9a7430553dc, type: 3}
-  - {fileID: 8300000, guid: 087c68113e598f64690f47e07363d8b7, type: 3}
-  - {fileID: 8300000, guid: 6f53f1d4bda23824e8c095b184bc0ee2, type: 3}
-  - {fileID: 8300000, guid: 6e83a956cf6d9374d855d199da81d520, type: 3}
-  - {fileID: 8300000, guid: 8296ea1917c3a9f47b564a6351950719, type: 3}
-  tabRecracheJoueur:
-  - {fileID: 8300000, guid: f58bff9510223ce4b96b81f2f081c66d, type: 3}
-  - {fileID: 8300000, guid: e9f53ce15e664794d9c83777d78490cf, type: 3}
-  - {fileID: 8300000, guid: bdacc8e61036e2f419a0f97f7561e8be, type: 3}
-  - {fileID: 8300000, guid: afe828d1c7a44694b8ea7a91a9829bb1, type: 3}
-  - {fileID: 8300000, guid: 542a1b1e41d48be4f93dca71e08bed17, type: 3}
-  mixerVoice: {fileID: 24387548, guid: 3b5232be4ec122545b3f1ef5cda50c18, type: 2}
---- !u!114 &1773516881
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1773516879}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 440bd8dc06b2e3048bb585b0ffc31cf8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tabBut:
-  - {fileID: 8300000, guid: ef6757027af2e1947b4ff5ae7f83bc81, type: 3}
-  - {fileID: 8300000, guid: 27789f323c3047641b31d61fb15bf3da, type: 3}
-  - {fileID: 8300000, guid: 21da0512565db2c428a04d889ccaac31, type: 3}
-  - {fileID: 8300000, guid: 3509ec428e56b134c9d84e68843b2ec9, type: 3}
-  - {fileID: 8300000, guid: 6f8be55c78773744d83dc1e0329a5db0, type: 3}
-  tabCourse:
-  - {fileID: 8300000, guid: 84c94186df91788468735069ace78bd8, type: 3}
-  - {fileID: 8300000, guid: 04b66eb5d23b6b44db8f4d698eebda5a, type: 3}
-  - {fileID: 8300000, guid: c9fcc6743ffee0046ac59a5412482d7d, type: 3}
-  - {fileID: 8300000, guid: 69af853cde4f30841a23c46528b9c153, type: 3}
-  - {fileID: 8300000, guid: a09bab08c1b1e144ea54d756f3d443d2, type: 3}
-  tabImpact:
-  - {fileID: 8300000, guid: 28f2b937b5ef33c48b7964d14d89c3c5, type: 3}
-  - {fileID: 8300000, guid: 86608fd91caa90c4baf33412fbd9edf5, type: 3}
-  - {fileID: 8300000, guid: db68d23e5ad7b52488a68bf882c778e8, type: 3}
-  - {fileID: 8300000, guid: 5507a69d783fdb64bb5bace106018f81, type: 3}
-  - {fileID: 8300000, guid: 2e3d8d320f2201e4dbf7191d895523a2, type: 3}
-  tabObjet:
-  - {fileID: 8300000, guid: 723e2176fbe66824e8772b83e886a812, type: 3}
-  - {fileID: 8300000, guid: d80ab082b6b757a4787015a2331113d2, type: 3}
-  - {fileID: 8300000, guid: b54e106570d03d445b4b7d75da166aba, type: 3}
-  tabRemiseEnJeu:
-  - {fileID: 8300000, guid: 31cc239af1fd64747bda9561932bb778, type: 3}
-  - {fileID: 8300000, guid: b1ea3405d09849b4288d104ea997c439, type: 3}
-  - {fileID: 8300000, guid: 8f0806c125c9c694aa134a292a490f21, type: 3}
-  - {fileID: 8300000, guid: bce1e7373b50a3544bc3ab3cbd387a6e, type: 3}
-  - {fileID: 8300000, guid: 0b197ffc204eb7c42bf29c907728e855, type: 3}
-  tabTransformationBalleMonstre:
-  - {fileID: 8300000, guid: aaa55e1058fa89f468208ca116d34531, type: 3}
-  - {fileID: 8300000, guid: aaa55e1058fa89f468208ca116d34531, type: 3}
-  tabTransformationMonstreBall:
-  - {fileID: 8300000, guid: 4ccf0196abd719348bceba45f9fba607, type: 3}
-  mixerBalle: {fileID: 0}
---- !u!114 &1773516882
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1773516879}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae920d4060c4b12418f78cba899ed6ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  movingMaxBall: 3
-  speedMonster: 15
-  speedMaxToChooseDirection: 3
-  speedDivisionFactor: 8
-  areaMagnet: 3
-  speedMagnet: 40
-  wrathMax: 10
-  wrathDribblingValue: 1
-  wrathDribblingEachTime: .5
-  summon: 0
-  revocation: 20
-  monsterScale: 6
-  monsterMass: 20
-  safeTransform: .699999988
-  durationInvul: 2
-  coefColliderMonster: 1.04999995
-  durationEatingPlayer: 1
---- !u!54 &1773516883
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1773516879}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 32
-  m_CollisionDetection: 2
---- !u!23 &1773516884
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1773516879}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
-  m_ProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
-  m_ImportantGI: 0
-  m_AutoUVMaxDistance: .5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
---- !u!135 &1773516885
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1773516879}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: .5
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!33 &1773516886
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1773516879}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &1773516887
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1773516879}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 11
 --- !u!1 &1792388570
 GameObject:
   m_ObjectHideFlags: 0
@@ -10957,6 +10768,10 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1341943372}
   m_RootOrder: 2
+--- !u!1 &1800922600 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100018, guid: aca9e1c84fab4f946a4007ad4035b283, type: 3}
+  m_PrefabInternal: {fileID: 1215151604}
 --- !u!1 &1822650889
 GameObject:
   m_ObjectHideFlags: 0
@@ -12316,7 +12131,7 @@ MonoBehaviour:
   player2: {fileID: 2021973432}
   player3: {fileID: 99554765}
   player4: {fileID: 530266177}
-  monster: {fileID: 1773516879}
+  monster: {fileID: 7400953}
   field: {fileID: 2053805785}
   bluGoal: {fileID: 1108100043}
   posBluGoal: {fileID: 1360831725}
