@@ -26,31 +26,31 @@ public class BallSound : AbstractSound
     public AudioClip[] tabTransformationMonstreBall;
     private AudioSource sourceTransformationMonstreBall;
 
-    public AudioMixerGroup mixerVoice;
+    public AudioMixerGroup mixerBalle;
 
     // Use this for initialization
     void Start()
     {
         sourceBut = gameObject.AddComponent<AudioSource>();
-        sourceBut.outputAudioMixerGroup = mixerVoice;
+        sourceBut.outputAudioMixerGroup = mixerBalle;
 
         sourceCourse = gameObject.AddComponent<AudioSource>();
-        sourceCourse.outputAudioMixerGroup = mixerVoice;
+        sourceCourse.outputAudioMixerGroup = mixerBalle;
 
         sourceImpact = gameObject.AddComponent<AudioSource>();
-        sourceImpact.outputAudioMixerGroup = mixerVoice;
+        sourceImpact.outputAudioMixerGroup = mixerBalle;
 
         sourceObjet = gameObject.AddComponent<AudioSource>();
-        sourceObjet.outputAudioMixerGroup = mixerVoice;
+        sourceObjet.outputAudioMixerGroup = mixerBalle;
 
         sourceRemiseEnJeu = gameObject.AddComponent<AudioSource>();
-        sourceRemiseEnJeu.outputAudioMixerGroup = mixerVoice;
+        sourceRemiseEnJeu.outputAudioMixerGroup = mixerBalle;
 
         sourceTransformationBalleMonstre = gameObject.AddComponent<AudioSource>();
-        sourceTransformationBalleMonstre.outputAudioMixerGroup = mixerVoice;
+        sourceTransformationBalleMonstre.outputAudioMixerGroup = mixerBalle;
 
         sourceTransformationMonstreBall = gameObject.AddComponent<AudioSource>();
-        sourceTransformationMonstreBall.outputAudioMixerGroup = mixerVoice;
+        sourceTransformationMonstreBall.outputAudioMixerGroup = mixerBalle;
     }
 
     public void PlayRandomSound(Action action)

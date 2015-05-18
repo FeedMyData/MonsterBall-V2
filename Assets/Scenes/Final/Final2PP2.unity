@@ -10689,7 +10689,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: aaa55e1058fa89f468208ca116d34531, type: 3}
   tabTransformationMonstreBall:
   - {fileID: 8300000, guid: 4ccf0196abd719348bceba45f9fba607, type: 3}
-  mixerVoice: {fileID: 24385740, guid: 3b5232be4ec122545b3f1ef5cda50c18, type: 2}
+  mixerBalle: {fileID: 0}
 --- !u!114 &1773516882
 MonoBehaviour:
   m_ObjectHideFlags: 0

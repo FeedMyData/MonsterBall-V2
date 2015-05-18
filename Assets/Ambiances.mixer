@@ -60,7 +60,6 @@ AudioMixerGroupController:
   - {fileID: 24472986}
   - {fileID: 24400774}
   - {fileID: 24422130}
-  - {fileID: 24404702}
   m_UserColorIndex: 8
   m_Mute: 0
   m_Solo: 0
@@ -142,29 +141,6 @@ AudioMixerEffectController:
   m_EffectName: Attenuation
   m_MixLevel: eaa3959e87e8d094faee8b2d83ec098b
   m_Parameters: []
-  m_SendTarget: {fileID: 0}
-  m_EnableWetMix: 0
-  m_Bypass: 0
---- !u!244 &24404702
-AudioMixerEffectController:
-  m_ObjectHideFlags: 3
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: 
-  m_EffectID: 7b73eda32fdfa994cb11466de5cf597a
-  m_EffectName: Echo
-  m_MixLevel: ee538b7ae7f2a23458ce51b57e26c722
-  m_Parameters:
-  - m_ParameterName: Delay
-    m_GUID: d154ba166bbd32f4ba437ec2052680ea
-  - m_ParameterName: Decay
-    m_GUID: 3c230c7cc7f12a64fa68634245897e8f
-  - m_ParameterName: Max channels
-    m_GUID: 10962ce04df385a42a9eb3bcaf21dd26
-  - m_ParameterName: Drymix
-    m_GUID: dc851d345070f2a48891b9ba62d54b71
-  - m_ParameterName: Wetmix
-    m_GUID: a99392ad0200605499b2500a6025e9b2
   m_SendTarget: {fileID: 0}
   m_EnableWetMix: 0
   m_Bypass: 0
@@ -304,20 +280,20 @@ AudioMixerSnapshotController:
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: 9698adeb40483ae4a9eca3d04a9cdc9b
   m_FloatValues:
-    06ab49c072b679945aa1a958e831435b: -3.26412249
-    c75c0ac0eac7cca478f653654f91bee1: -7191
+    06ab49c072b679945aa1a958e831435b: -1.57828164
+    c75c0ac0eac7cca478f653654f91bee1: -6268
     2b7fcf71ec920d74e9328689cc63e238: -2367
-    73798f91321881f4588d4e2fe4d73ef9: 0
+    73798f91321881f4588d4e2fe4d73ef9: -61.750061
     48c48342f7c02cb4bad02f683a619691: -7946
     8244a36257e373044bb3158346a2c197: 6.03000021
     a19b6ac24dca7dc46bfdd7a9f73442e4: 2.00252843
     5ac99103c34443049ab84e47d3de477b: 1
     d5721d23d42ba2948bf4ebcc3d4c237d: -10000
-    8f6c71d35450a594b8b162954b3c9c3d: -2375
-    d9d11814b09fafe48acb9cd333283bcd: 1.27999997
+    8f6c71d35450a594b8b162954b3c9c3d: -10000
+    d9d11814b09fafe48acb9cd333283bcd: 1
     dc851d345070f2a48891b9ba62d54b71: .975000024
-    d154ba166bbd32f4ba437ec2052680ea: 153
-    22bdab2698ce5d346b1b209cc25d2868: .463465214
+    d154ba166bbd32f4ba437ec2052680ea: 1
+    22bdab2698ce5d346b1b209cc25d2868: .149978191
     44a468d65e2b1764b94914597c8f0d8a: 0
     7a982fb99695e2647874bbb89c0970d5: 8.89999962
     ee1ba38c1883a674db8fbdb31b7f18de: -144
