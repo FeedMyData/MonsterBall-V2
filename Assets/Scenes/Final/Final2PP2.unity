@@ -348,7 +348,7 @@ Transform:
   - {fileID: 2069573952}
   - {fileID: 1382364309}
   m_Father: {fileID: 1515749445}
-  m_RootOrder: 5
+  m_RootOrder: 2
 --- !u!64 &88229718
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -483,8 +483,8 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 99554765}
   m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
   m_Materials:
   - {fileID: 0}
   m_SubsetIndices: 
@@ -893,7 +893,7 @@ Transform:
   - {fileID: 1992019867}
   - {fileID: 1736531126}
   m_Father: {fileID: 1515749445}
-  m_RootOrder: 1
+  m_RootOrder: 0
 --- !u!64 &177496193
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -966,6 +966,66 @@ Transform:
   - {fileID: 1890912586}
   m_Father: {fileID: 640113960}
   m_RootOrder: 0
+--- !u!1 &250429450
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 250429454}
+  - 33: {fileID: 250429453}
+  - 65: {fileID: 250429452}
+  - 114: {fileID: 250429451}
+  m_Layer: 0
+  m_Name: GoalMonsterRed
+  m_TagString: TeamRed
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &250429451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 250429450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c244260b746ac9e48acc710c6f135b6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &250429452
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 250429450}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &250429453
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 250429450}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &250429454
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 250429450}
+  m_LocalRotation: {x: -.793353438, y: .608761311, z: -5.98965215e-08, w: 4.59602028e-08}
+  m_LocalPosition: {x: 11.3125, y: 1.63999999, z: 0}
+  m_LocalScale: {x: 4.5956955, y: 4.09440041, z: 3.6624999}
+  m_Children: []
+  m_Father: {fileID: 1515749445}
+  m_RootOrder: 16
 --- !u!1 &275250414
 GameObject:
   m_ObjectHideFlags: 0
@@ -1972,8 +2032,8 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 530266177}
   m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
   m_Materials:
   - {fileID: 0}
   m_SubsetIndices: 
@@ -2693,7 +2753,7 @@ Transform:
   m_LocalScale: {x: 9.94848061, y: 5.20812464, z: 5.20812464}
   m_Children: []
   m_Father: {fileID: 1515749445}
-  m_RootOrder: 10
+  m_RootOrder: 6
 --- !u!23 &802648611
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4158,6 +4218,66 @@ Transform:
   - {fileID: 1358514411}
   m_Father: {fileID: 1214042435}
   m_RootOrder: 0
+--- !u!1 &947855372
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 947855376}
+  - 33: {fileID: 947855375}
+  - 65: {fileID: 947855374}
+  - 114: {fileID: 947855373}
+  m_Layer: 0
+  m_Name: GoalMonsterBlue
+  m_TagString: TeamBlu
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &947855373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 947855372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c244260b746ac9e48acc710c6f135b6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &947855374
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 947855372}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &947855375
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 947855372}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &947855376
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 947855372}
+  m_LocalRotation: {x: .608761489, y: -.793353319, z: 9.91798359e-08, w: -1.29253664e-07}
+  m_LocalPosition: {x: -11.3125, y: 1.63999999, z: 0}
+  m_LocalScale: {x: 4.59569597, y: 4.09440088, z: 3.6624999}
+  m_Children: []
+  m_Father: {fileID: 1515749445}
+  m_RootOrder: 17
 --- !u!1 &949526734
 GameObject:
   m_ObjectHideFlags: 0
@@ -4491,7 +4611,7 @@ Transform:
   m_LocalScale: {x: 9.94848061, y: 5.20812464, z: 5.20812464}
   m_Children: []
   m_Father: {fileID: 1515749445}
-  m_RootOrder: 9
+  m_RootOrder: 8
 --- !u!23 &1039189483
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4677,7 +4797,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1515749445}
-  m_RootOrder: 12
+  m_RootOrder: 13
 --- !u!1 &1108100043
 GameObject:
   m_ObjectHideFlags: 0
@@ -4708,7 +4828,7 @@ Transform:
   m_LocalScale: {x: 9.94848061, y: 5.20812464, z: 5.20812464}
   m_Children: []
   m_Father: {fileID: 1515749445}
-  m_RootOrder: 6
+  m_RootOrder: 5
 --- !u!23 &1108100045
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4821,66 +4941,6 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
---- !u!1 &1119407520
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1119407524}
-  - 33: {fileID: 1119407523}
-  - 64: {fileID: 1119407522}
-  - 114: {fileID: 1119407521}
-  m_Layer: 0
-  m_Name: GoalMonsterBlu
-  m_TagString: TeamBlu
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1119407521
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1119407520}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c244260b746ac9e48acc710c6f135b6b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!64 &1119407522
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1119407520}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Convex: 1
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!33 &1119407523
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1119407520}
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &1119407524
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1119407520}
-  m_LocalRotation: {x: 0, y: 0, z: -.793353438, w: .608761311}
-  m_LocalPosition: {x: -37.7999992, y: 6.19999981, z: 0}
-  m_LocalScale: {x: 1.00312507, y: 1.00312483, z: .68749994}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 12
 --- !u!1 &1122147949
 GameObject:
   m_ObjectHideFlags: 0
@@ -5024,7 +5084,7 @@ Transform:
   m_LocalScale: {x: .26562494, y: .276152879, z: .200000003}
   m_Children: []
   m_Father: {fileID: 1515749445}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!64 &1166794602
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -7745,7 +7805,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1515749445}
-  m_RootOrder: 7
+  m_RootOrder: 12
 --- !u!1 &1363593655
 GameObject:
   m_ObjectHideFlags: 0
@@ -8079,22 +8139,24 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 4, y: 5, z: 4}
   m_Children:
-  - {fileID: 1619435562}
   - {fileID: 177496192}
+  - {fileID: 1619435562}
+  - {fileID: 88229717}
   - {fileID: 1166794601}
   - {fileID: 2047535948}
-  - {fileID: 1995152293}
-  - {fileID: 88229717}
   - {fileID: 1108100044}
-  - {fileID: 1360831725}
-  - {fileID: 1658719590}
-  - {fileID: 1039189482}
   - {fileID: 802648610}
-  - {fileID: 1944375692}
-  - {fileID: 1106525566}
+  - {fileID: 1995152293}
+  - {fileID: 1039189482}
   - {fileID: 2053805786}
+  - {fileID: 1658719590}
+  - {fileID: 1944375692}
+  - {fileID: 1360831725}
+  - {fileID: 1106525566}
   - {fileID: 1540846538}
   - {fileID: 649490972}
+  - {fileID: 250429454}
+  - {fileID: 947855376}
   m_Father: {fileID: 0}
   m_RootOrder: 1
 --- !u!1 &1519344842
@@ -9526,7 +9588,7 @@ Transform:
   - {fileID: 1237399829}
   - {fileID: 1758185406}
   m_Father: {fileID: 1515749445}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!64 &1619435563
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -9686,7 +9748,7 @@ Transform:
   m_LocalScale: {x: 9.94848061, y: 5.20812464, z: 5.20812464}
   m_Children: []
   m_Father: {fileID: 1515749445}
-  m_RootOrder: 8
+  m_RootOrder: 10
 --- !u!1 &1673975504
 GameObject:
   m_ObjectHideFlags: 0
@@ -10245,7 +10307,7 @@ MonoBehaviour:
   speedMagnet: 40
   wrathMax: 10
   wrathDribblingValue: 1
-  wrathDribblingEachTime: 1
+  wrathDribblingEachTime: .5
   summon: 0
   revocation: 20
   monsterScale: 6
@@ -10253,7 +10315,7 @@ MonoBehaviour:
   safeTransform: .699999988
   durationInvul: 2
   coefColliderMonster: 1.04999995
-  durationEatingPlayer: 2
+  durationEatingPlayer: 1
 --- !u!54 &1773516883
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -10748,8 +10810,8 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1895334756}
   m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
   m_Materials:
   - {fileID: 0}
   m_SubsetIndices: 
@@ -10935,66 +10997,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 126440860}
   m_RootOrder: 0
---- !u!1 &1939310394
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1939310398}
-  - 33: {fileID: 1939310397}
-  - 64: {fileID: 1939310396}
-  - 114: {fileID: 1939310395}
-  m_Layer: 0
-  m_Name: GoalMonsterRed
-  m_TagString: TeamRed
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1939310395
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1939310394}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c244260b746ac9e48acc710c6f135b6b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!64 &1939310396
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1939310394}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Convex: 1
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!33 &1939310397
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1939310394}
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &1939310398
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1939310394}
-  m_LocalRotation: {x: -.793353438, y: .608761311, z: -5.98965215e-08, w: 4.59602028e-08}
-  m_LocalPosition: {x: 37.7999992, y: 6.19999981, z: 0}
-  m_LocalScale: {x: 1.00312507, y: 1.00312483, z: .687499881}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 11
 --- !u!1 &1944375691
 GameObject:
   m_ObjectHideFlags: 0
@@ -11173,7 +11175,7 @@ Transform:
   m_LocalScale: {x: .200000003, y: .200000003, z: .159999982}
   m_Children: []
   m_Father: {fileID: 1515749445}
-  m_RootOrder: 4
+  m_RootOrder: 7
 --- !u!64 &1995152294
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -11449,8 +11451,8 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2021973432}
   m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
   m_Materials:
   - {fileID: 0}
   m_SubsetIndices: 
@@ -11600,7 +11602,7 @@ Transform:
   m_LocalScale: {x: .26562494, y: .276152879, z: .200000003}
   m_Children: []
   m_Father: {fileID: 1515749445}
-  m_RootOrder: 3
+  m_RootOrder: 4
 --- !u!64 &2047535949
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -11759,7 +11761,7 @@ Transform:
   m_LocalScale: {x: 9.94848061, y: 5.20812464, z: 5.20812464}
   m_Children: []
   m_Father: {fileID: 1515749445}
-  m_RootOrder: 13
+  m_RootOrder: 9
 --- !u!23 &2053805787
 MeshRenderer:
   m_ObjectHideFlags: 0

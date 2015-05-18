@@ -304,7 +304,11 @@ public class MonsterControllerF : MonoBehaviour {
         player.GetComponent<Collider>().enabled = false;
         //faire disparaitre le joueur, jouer l'anim du monstre qui mache et téléporter le joueur dans le monstre et le stun
         player.transform.position = this.transform.position;
-        player.GetComponent<Renderer>().enabled = false;
+        //player.GetComponent<Renderer>().enabled = false;
+        //player.GetComponentInChildren<SkinnedMeshRenderer>().enabled = false;
+        foreach (Renderer renderer in player.GetComponentsInChildren<Renderer>()) {
+            if (renderer.name == "arme" || renderer.name == "Nivek") { renderer.enabled = false; }
+        }
         player.GetComponent<PlayerControllerF>().callStun(durationEatingPlayer);
 
         Debug.Log(player.GetComponent<PlayerControllerF>().team);
@@ -319,7 +323,12 @@ public class MonsterControllerF : MonoBehaviour {
         yield return new WaitForSeconds(durationEatingPlayer);
         
         //Faire réapparaitre le joueur
-        player.GetComponent<Renderer>().enabled = true;
+        //player.GetComponent<Renderer>().enabled = true;
+        //player.GetComponentInChildren<SkinnedMeshRenderer>().enabled = true;
+        foreach (Renderer renderer in player.GetComponentsInChildren<Renderer>())
+        {
+            if (renderer.name == "arme" || renderer.name == "Nivek") { renderer.enabled = true; }
+        }
         player.GetComponent<PlayerControllerF>().FlyAway();
         
         PlayRandomSound(AbstractSound.Action.RecracheJoueur);

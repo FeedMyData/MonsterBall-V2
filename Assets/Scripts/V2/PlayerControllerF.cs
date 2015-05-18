@@ -463,7 +463,6 @@ public class PlayerControllerF : MonoBehaviour
         //TODO : Rajouter une composante aléatoire en x et z
         projectionInGoal = false;
         transform.position = new Vector3(0, 5, 0);
-
         StartCoroutine(Intouchable());
     }
 
@@ -483,13 +482,21 @@ public class PlayerControllerF : MonoBehaviour
 
     IEnumerator Blink()
     {
-        MeshRenderer mr = GetComponent<MeshRenderer>();
+        //MeshRenderer mr = GetComponent<MeshRenderer>();
+        SkinnedMeshRenderer smr = GetComponentInChildren<SkinnedMeshRenderer>();
+        MeshRenderer arme = GetComponentInChildren<MeshRenderer>();
+        foreach (MeshRenderer renderer in GetComponentsInChildren<MeshRenderer>()) // permet de tout faire blink dans le foreach si besoin (sprite au sol...) à l'exception du mesh capsule
+        {
+            if (renderer.name == "arme") { arme = renderer; }
+        }
         while (!touchable)
         {
-            mr.enabled = !mr.enabled;
+            smr.enabled = !smr.enabled;
+            arme.enabled = !arme.enabled;
             yield return new WaitForSeconds(0.1f);
         }
-        mr.enabled = true;
+        smr.enabled = true;
+        arme.enabled = true;
     }
 
     public void SetBonus(Bonus bonus)
