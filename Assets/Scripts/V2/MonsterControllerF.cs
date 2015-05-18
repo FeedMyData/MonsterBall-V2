@@ -268,7 +268,7 @@ public class MonsterControllerF : MonoBehaviour {
         GameObject potentialMagnet = GameControllerF.NearestTo(this.gameObject, areaMagnet);
         if (GetActualSpeed() <= speedMagnet && potentialMagnet!=null)
         {
-            if (potentialMagnet != previousMagnet && potentialMagnet.GetComponent<PlayerControllerF>().getBonus() == null)
+            if (potentialMagnet != previousMagnet /*&& potentialMagnet.GetComponent<PlayerControllerF>().getBonus() == null*/)
             {
                 magnet = potentialMagnet;
                 StartCoroutine(WrathWhileDribbling());

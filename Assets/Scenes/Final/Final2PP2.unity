@@ -127,6 +127,7 @@ GameObject:
   - 114: {fileID: 7400957}
   - 114: {fileID: 7400956}
   - 114: {fileID: 7400955}
+  - 82: {fileID: 7400960}
   m_Layer: 0
   m_Name: MonsterAnimated
   m_TagString: Monster
@@ -172,11 +173,11 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 6e83a956cf6d9374d855d199da81d520, type: 3}
   - {fileID: 8300000, guid: 8296ea1917c3a9f47b564a6351950719, type: 3}
   tabRecracheJoueur:
-  - {fileID: 8300000, guid: f58bff9510223ce4b96b81f2f081c66d, type: 3}
-  - {fileID: 8300000, guid: e9f53ce15e664794d9c83777d78490cf, type: 3}
-  - {fileID: 8300000, guid: bdacc8e61036e2f419a0f97f7561e8be, type: 3}
-  - {fileID: 8300000, guid: afe828d1c7a44694b8ea7a91a9829bb1, type: 3}
-  - {fileID: 8300000, guid: 542a1b1e41d48be4f93dca71e08bed17, type: 3}
+  - {fileID: 8300000, guid: 1d947522059887a41a1ef2c23033f644, type: 3}
+  - {fileID: 8300000, guid: 8c36db05265fdae4eb38ed12ce6f9541, type: 3}
+  - {fileID: 8300000, guid: 385a1a74605cd354e82be085e972ce64, type: 3}
+  - {fileID: 8300000, guid: a1081366b6409724ea3a6fa3b7ec2382, type: 3}
+  - {fileID: 8300000, guid: 814d0b1060211504c8b2412c3e67ae94, type: 3}
   mixerVoice: {fileID: 24387548, guid: 3b5232be4ec122545b3f1ef5cda50c18, type: 2}
 --- !u!114 &7400956
 MonoBehaviour:
@@ -222,7 +223,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: aaa55e1058fa89f468208ca116d34531, type: 3}
   tabTransformationMonstreBall:
   - {fileID: 8300000, guid: 4ccf0196abd719348bceba45f9fba607, type: 3}
-  mixerVoice: {fileID: 24385740, guid: 3b5232be4ec122545b3f1ef5cda50c18, type: 2}
+  mixerBalle: {fileID: 24385740, guid: 3b5232be4ec122545b3f1ef5cda50c18, type: 2}
 --- !u!114 &7400957
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -278,6 +279,76 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: .5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!82 &7400960
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 7400953}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 24300001, guid: 3b5232be4ec122545b3f1ef5cda50c18,
+    type: 2}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: .910000026
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &21774801
 GameObject:
   m_ObjectHideFlags: 0
@@ -593,11 +664,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tabCoupBalle:
-  - {fileID: 8300000, guid: a8974b5452f7e764a9f70839e7d7c0af, type: 3}
-  - {fileID: 8300000, guid: b92419f875f0caa4295ee513a62ce041, type: 3}
-  - {fileID: 8300000, guid: 76820aa7acdc2fc4fadf44e2c3003d2e, type: 3}
-  - {fileID: 8300000, guid: 6b5d73d406749434b8967ff5efbb6f05, type: 3}
-  - {fileID: 8300000, guid: 15a07df8606e254458ee471fd4b127cf, type: 3}
+  - {fileID: 8300000, guid: af935644fbedce04a9b180fb6f000264, type: 3}
+  - {fileID: 8300000, guid: ca682899f6c0b0f42b2ce63e42064b42, type: 3}
+  - {fileID: 8300000, guid: f77ed57a9e654214daedbc5d70cb324e, type: 3}
+  - {fileID: 8300000, guid: 3b71369df2228d949b64127a470f3290, type: 3}
+  - {fileID: 8300000, guid: 9d7978031dfbbfe4782ca6d531d483e8, type: 3}
   tabCoupRecu:
   - {fileID: 8300000, guid: d1a116b8abe41244f827b15bd0e9a583, type: 3}
   - {fileID: 8300000, guid: bcd842854d50ff045a379a2d1250f118, type: 3}
@@ -1926,6 +1997,7 @@ GameObject:
   - 114: {fileID: 499457357}
   - 114: {fileID: 499457356}
   - 114: {fileID: 499457358}
+  - 82: {fileID: 499457359}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2040,6 +2112,76 @@ MonoBehaviour:
   monster: {fileID: 1773516882}
   manager: {fileID: 2052379256}
   player: {fileID: 1895334760}
+--- !u!82 &499457359
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 499457350}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 24310838, guid: 9261314e90f067c49a29e63b584cfad8,
+    type: 2}
+  m_audioClip: {fileID: 8300000, guid: 8fbd00a65157ca948bfb4a1659c4c317, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &500802388
 GameObject:
   m_ObjectHideFlags: 0
@@ -2169,11 +2311,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tabCoupBalle:
-  - {fileID: 8300000, guid: a8974b5452f7e764a9f70839e7d7c0af, type: 3}
-  - {fileID: 8300000, guid: b92419f875f0caa4295ee513a62ce041, type: 3}
-  - {fileID: 8300000, guid: 76820aa7acdc2fc4fadf44e2c3003d2e, type: 3}
-  - {fileID: 8300000, guid: 6b5d73d406749434b8967ff5efbb6f05, type: 3}
-  - {fileID: 8300000, guid: 15a07df8606e254458ee471fd4b127cf, type: 3}
+  - {fileID: 8300000, guid: af935644fbedce04a9b180fb6f000264, type: 3}
+  - {fileID: 8300000, guid: ca682899f6c0b0f42b2ce63e42064b42, type: 3}
+  - {fileID: 8300000, guid: f77ed57a9e654214daedbc5d70cb324e, type: 3}
+  - {fileID: 8300000, guid: 3b71369df2228d949b64127a470f3290, type: 3}
+  - {fileID: 8300000, guid: 9d7978031dfbbfe4782ca6d531d483e8, type: 3}
   tabCoupRecu:
   - {fileID: 8300000, guid: d1a116b8abe41244f827b15bd0e9a583, type: 3}
   - {fileID: 8300000, guid: bcd842854d50ff045a379a2d1250f118, type: 3}
@@ -11158,11 +11300,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tabCoupBalle:
-  - {fileID: 8300000, guid: a8974b5452f7e764a9f70839e7d7c0af, type: 3}
-  - {fileID: 8300000, guid: b92419f875f0caa4295ee513a62ce041, type: 3}
-  - {fileID: 8300000, guid: 76820aa7acdc2fc4fadf44e2c3003d2e, type: 3}
-  - {fileID: 8300000, guid: 6b5d73d406749434b8967ff5efbb6f05, type: 3}
-  - {fileID: 8300000, guid: 15a07df8606e254458ee471fd4b127cf, type: 3}
+  - {fileID: 8300000, guid: af935644fbedce04a9b180fb6f000264, type: 3}
+  - {fileID: 8300000, guid: ca682899f6c0b0f42b2ce63e42064b42, type: 3}
+  - {fileID: 8300000, guid: f77ed57a9e654214daedbc5d70cb324e, type: 3}
+  - {fileID: 8300000, guid: 3b71369df2228d949b64127a470f3290, type: 3}
+  - {fileID: 8300000, guid: 9d7978031dfbbfe4782ca6d531d483e8, type: 3}
   tabCoupRecu:
   - {fileID: 8300000, guid: d1a116b8abe41244f827b15bd0e9a583, type: 3}
   - {fileID: 8300000, guid: bcd842854d50ff045a379a2d1250f118, type: 3}
@@ -11826,11 +11968,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tabCoupBalle:
-  - {fileID: 8300000, guid: a8974b5452f7e764a9f70839e7d7c0af, type: 3}
-  - {fileID: 8300000, guid: b92419f875f0caa4295ee513a62ce041, type: 3}
-  - {fileID: 8300000, guid: 76820aa7acdc2fc4fadf44e2c3003d2e, type: 3}
-  - {fileID: 8300000, guid: 6b5d73d406749434b8967ff5efbb6f05, type: 3}
-  - {fileID: 8300000, guid: 15a07df8606e254458ee471fd4b127cf, type: 3}
+  - {fileID: 8300000, guid: af935644fbedce04a9b180fb6f000264, type: 3}
+  - {fileID: 8300000, guid: ca682899f6c0b0f42b2ce63e42064b42, type: 3}
+  - {fileID: 8300000, guid: f77ed57a9e654214daedbc5d70cb324e, type: 3}
+  - {fileID: 8300000, guid: 3b71369df2228d949b64127a470f3290, type: 3}
+  - {fileID: 8300000, guid: 9d7978031dfbbfe4782ca6d531d483e8, type: 3}
   tabCoupRecu:
   - {fileID: 8300000, guid: d1a116b8abe41244f827b15bd0e9a583, type: 3}
   - {fileID: 8300000, guid: bcd842854d50ff045a379a2d1250f118, type: 3}
