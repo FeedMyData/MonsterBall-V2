@@ -53,6 +53,9 @@ public class MonsterControllerF : MonoBehaviour {
 
     private GameObject playerAte;
 
+    [Header("Skin")]
+    public GameObject skinBall;
+    public GameObject skinMonster;
 
     private bool seeACake = false;
     private Vector3 cakePos;
@@ -239,11 +242,16 @@ public class MonsterControllerF : MonoBehaviour {
             callDisableMagnet();
 
         yield return new WaitForSeconds(summon);
+        skinBall.SetActive(false);
+        skinMonster.SetActive(true);
         monsterForm = true;
         transform.localScale *= monsterScale;
         PlayRandomSound(AbstractSound.Action.TransformationBalleMonstre);
 
         yield return new WaitForSeconds(revocation);
+
+        skinBall.SetActive(true);
+        skinMonster.SetActive(false);
         wrath = 0;
         PlayRandomSound(AbstractSound.Action.TransformationMonstreBall);
 
@@ -393,13 +401,22 @@ public class MonsterControllerF : MonoBehaviour {
 
     IEnumerator Blink()
     {
-        MeshRenderer mr = GetComponent<MeshRenderer>();
-        while (!touchable)
+        if (!monsterForm)
         {
-            mr.enabled = !mr.enabled;
-            yield return new WaitForSeconds(0.1f);
+            MeshRenderer[] mr = GetComponentsInChildren<MeshRenderer>();
+            for (int i = 0; i < mr.Length; i++)
+            {
+                if (mr[i].name == "ball_monster")
+                {
+                    while (!touchable)
+                    {
+                        mr[i].enabled = !mr[i].enabled;
+                        yield return new WaitForSeconds(0.1f);
+                    }
+                    mr[i].enabled = true;
+                }
+            }
         }
-        mr.enabled = true;
     }
 
     public bool IsTouchable()
