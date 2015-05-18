@@ -1,0 +1,360 @@
+fileFormatVersion: 2
+guid: aca9e1c84fab4f946a4007ad4035b283
+timeCreated: 1431943927
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Bone006
+    100002: Bone008
+    100004: Bone013
+    100006: Bone016
+    100008: Bone020
+    100010: Eyes
+    100012: Head
+    100014: LeftEar
+    100016: LeftEarBase
+    100018: //RootNode
+    100020: Monster
+    100022: Mouth
+    100024: MouthMeca0
+    100026: MouthMeca1
+    100028: Nose
+    100030: RightEar
+    100032: RightEarBase
+    100034: Teeth
+    400000: Bone006
+    400002: Bone008
+    400004: Bone013
+    400006: Bone016
+    400008: Bone020
+    400010: Eyes
+    400012: Head
+    400014: LeftEar
+    400016: LeftEarBase
+    400018: //RootNode
+    400020: Monster
+    400022: Mouth
+    400024: MouthMeca0
+    400026: MouthMeca1
+    400028: Nose
+    400030: RightEar
+    400032: RightEarBase
+    400034: Teeth
+    4300000: Eyes
+    4300002: Teeth
+    4300004: Monster
+    7400000: ChewPlayer
+    7400002: Run
+    7400004: Hurt
+    7400006: SpitPlayer
+    9500000: //RootNode
+    13700000: Eyes
+    13700002: Monster
+    13700004: Teeth
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: ChewPlayer
+      takeName: Chikmink
+      firstFrame: 45
+      lastFrame: 66
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Eyes
+        weight: 1
+      - path: Head
+        weight: 1
+      - path: Head/Bone016
+        weight: 1
+      - path: Head/LeftEarBase
+        weight: 1
+      - path: Head/LeftEarBase/LeftEar
+        weight: 1
+      - path: Head/LeftEarBase/LeftEar/Bone008
+        weight: 1
+      - path: Head/MouthMeca0
+        weight: 1
+      - path: Head/MouthMeca0/MouthMeca1
+        weight: 1
+      - path: Head/MouthMeca0/MouthMeca1/Mouth
+        weight: 1
+      - path: Head/MouthMeca0/MouthMeca1/Mouth/Bone020
+        weight: 1
+      - path: Head/Nose
+        weight: 1
+      - path: Head/Nose/Bone013
+        weight: 1
+      - path: Head/RightEarBase
+        weight: 1
+      - path: Head/RightEarBase/RightEar
+        weight: 1
+      - path: Head/RightEarBase/RightEar/Bone006
+        weight: 1
+      - path: Monster
+        weight: 1
+      - path: Teeth
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Run
+      takeName: Chikmink
+      firstFrame: 5
+      lastFrame: 25
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Eyes
+        weight: 1
+      - path: Head
+        weight: 1
+      - path: Head/Bone016
+        weight: 1
+      - path: Head/LeftEarBase
+        weight: 1
+      - path: Head/LeftEarBase/LeftEar
+        weight: 1
+      - path: Head/LeftEarBase/LeftEar/Bone008
+        weight: 1
+      - path: Head/MouthMeca0
+        weight: 1
+      - path: Head/MouthMeca0/MouthMeca1
+        weight: 1
+      - path: Head/MouthMeca0/MouthMeca1/Mouth
+        weight: 1
+      - path: Head/MouthMeca0/MouthMeca1/Mouth/Bone020
+        weight: 1
+      - path: Head/Nose
+        weight: 1
+      - path: Head/Nose/Bone013
+        weight: 1
+      - path: Head/RightEarBase
+        weight: 1
+      - path: Head/RightEarBase/RightEar
+        weight: 1
+      - path: Head/RightEarBase/RightEar/Bone006
+        weight: 1
+      - path: Monster
+        weight: 1
+      - path: Teeth
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Hurt
+      takeName: Chikmink
+      firstFrame: 30
+      lastFrame: 40
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Eyes
+        weight: 1
+      - path: Head
+        weight: 1
+      - path: Head/Bone016
+        weight: 1
+      - path: Head/LeftEarBase
+        weight: 1
+      - path: Head/LeftEarBase/LeftEar
+        weight: 1
+      - path: Head/LeftEarBase/LeftEar/Bone008
+        weight: 1
+      - path: Head/MouthMeca0
+        weight: 1
+      - path: Head/MouthMeca0/MouthMeca1
+        weight: 1
+      - path: Head/MouthMeca0/MouthMeca1/Mouth
+        weight: 1
+      - path: Head/MouthMeca0/MouthMeca1/Mouth/Bone020
+        weight: 1
+      - path: Head/Nose
+        weight: 1
+      - path: Head/Nose/Bone013
+        weight: 1
+      - path: Head/RightEarBase
+        weight: 1
+      - path: Head/RightEarBase/RightEar
+        weight: 1
+      - path: Head/RightEarBase/RightEar/Bone006
+        weight: 1
+      - path: Monster
+        weight: 1
+      - path: Teeth
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: SpitPlayer
+      takeName: Chikmink
+      firstFrame: 58
+      lastFrame: 103
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Eyes
+        weight: 1
+      - path: Head
+        weight: 1
+      - path: Head/Bone016
+        weight: 1
+      - path: Head/LeftEarBase
+        weight: 1
+      - path: Head/LeftEarBase/LeftEar
+        weight: 1
+      - path: Head/LeftEarBase/LeftEar/Bone008
+        weight: 1
+      - path: Head/MouthMeca0
+        weight: 1
+      - path: Head/MouthMeca0/MouthMeca1
+        weight: 1
+      - path: Head/MouthMeca0/MouthMeca1/Mouth
+        weight: 1
+      - path: Head/MouthMeca0/MouthMeca1/Mouth/Bone020
+        weight: 1
+      - path: Head/Nose
+        weight: 1
+      - path: Head/Nose/Bone013
+        weight: 1
+      - path: Head/RightEarBase
+        weight: 1
+      - path: Head/RightEarBase/RightEar
+        weight: 1
+      - path: Head/RightEarBase/RightEar/Bone006
+        weight: 1
+      - path: Monster
+        weight: 1
+      - path: Teeth
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
