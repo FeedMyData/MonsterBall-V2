@@ -123,8 +123,9 @@ public class MonsterControllerF : MonoBehaviour {
             }
         }
 
-        if (wrath >= wrathMax && GameControllerF.InCircle(this.gameObject)<safeTransform)
+        if (!monsterForm && wrath >= wrathMax && GameControllerF.InCircle(this.gameObject)<safeTransform)
         {
+            monsterForm = true;
             StartCoroutine(NotHappy());
         }
 	}
@@ -244,7 +245,6 @@ public class MonsterControllerF : MonoBehaviour {
         yield return new WaitForSeconds(summon);
         skinBall.SetActive(false);
         skinMonster.SetActive(true);
-        monsterForm = true;
         transform.localScale *= monsterScale;
         PlayRandomSound(AbstractSound.Action.TransformationBalleMonstre);
 
@@ -259,7 +259,8 @@ public class MonsterControllerF : MonoBehaviour {
         {
             Vector3 expulsePos = UnityEngine.Random.insideUnitSphere;
             expulsePos.y = Mathf.Abs(expulsePos.y);
-            playerAte.GetComponent<PlayerControllerF>().AddImpact(expulsePos*200);
+            playerAte.GetComponent<PlayerControllerF>().AddImpact(expulsePos*100);
+            playerAte = null;
         }
 
         transform.localScale /= monsterScale;
@@ -347,9 +348,12 @@ public class MonsterControllerF : MonoBehaviour {
         {
             if (renderer.name == "arme" || renderer.name == "Nivek") { renderer.enabled = true; }
         }
-        player.GetComponent<PlayerControllerF>().FlyAway();
-        
-        PlayRandomSound(AbstractSound.Action.RecracheJoueur);
+
+        if (player == playerAte)
+        {
+            player.GetComponent<PlayerControllerF>().FlyAway();
+            PlayRandomSound(AbstractSound.Action.RecracheJoueur);
+        }
 
         yield return new WaitForSeconds(0.1f);
         eatPlayer = false;

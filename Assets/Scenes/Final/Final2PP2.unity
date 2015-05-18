@@ -244,7 +244,7 @@ MonoBehaviour:
   wrathMax: 10
   wrathDribblingValue: 1
   wrathDribblingEachTime: .5
-  summon: 0
+  summon: .200000003
   revocation: 20
   monsterScale: 6
   monsterMass: 20
