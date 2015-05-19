@@ -31,6 +31,21 @@ public class bumpScript : MonoBehaviour {
 
                 Vector3 dirImpact = other.transform.position - transform.position;
 
+                dirImpact.y = 0;
+
+                if (Mathf.Abs(dirImpact.x) < 3.0f)
+                {
+                    dirImpact.x = 3.0f;
+                }
+
+                if(transform.localPosition.x < 0) {
+                    dirImpact.x = Mathf.Abs(dirImpact.x);
+                }
+                else
+                {
+                    dirImpact.x = - Mathf.Abs(dirImpact.x);
+                }
+
                 player.PlayRandomSound(AbstractSound.Action.EjectBut);
 
                 player.AddImpact(dirImpact.normalized * dashGoalPower);
