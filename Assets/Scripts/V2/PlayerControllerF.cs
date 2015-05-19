@@ -103,6 +103,9 @@ public class PlayerControllerF : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if (transform.position.y < -3.0f) Respawn();
+
         if (bonus != null)
             spriteBonus.enabled = true;
         else
