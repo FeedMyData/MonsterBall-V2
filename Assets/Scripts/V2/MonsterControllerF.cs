@@ -72,7 +72,7 @@ public class MonsterControllerF : MonoBehaviour {
         monsterSound = GetComponent<MonsterSound>();
         ballSound = GetComponent<BallSound>();
 
-        if (monsterForm)
+        if (!monsterForm)
         {
             ballSpotlight.SetActive(true);
             monsterSpotlight.SetActive(false);
