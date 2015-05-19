@@ -14,6 +14,9 @@ public class AnimParticleEmitter : MonoBehaviour {
 	}
 	public void EmitParticle(){
 
-		GetComponentInChildren<ParticleSystem> ().Play ();
+        foreach (ParticleSystem ps in GetComponentsInChildren<ParticleSystem>())
+        {
+            if (ps.name == "Course") ps.Play();
+        }
 	}
 }

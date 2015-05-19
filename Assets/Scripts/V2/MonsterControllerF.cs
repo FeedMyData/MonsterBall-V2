@@ -57,6 +57,10 @@ public class MonsterControllerF : MonoBehaviour {
     public GameObject skinBall;
     public GameObject skinMonster;
 
+    [Header("Spotlights")]
+    public GameObject ballSpotlight;
+    public GameObject monsterSpotlight;
+
     private bool seeACake = false;
     private Vector3 cakePos;
 
@@ -67,6 +71,17 @@ public class MonsterControllerF : MonoBehaviour {
         colliderMagnet = GetComponent<Collider>();
         monsterSound = GetComponent<MonsterSound>();
         ballSound = GetComponent<BallSound>();
+
+        if (monsterForm)
+        {
+            ballSpotlight.SetActive(true);
+            monsterSpotlight.SetActive(false);
+        }
+        else
+        {
+            ballSpotlight.SetActive(false);
+            monsterSpotlight.SetActive(true);
+        }
 	}
 	
 	// Update is called once per frame
@@ -237,6 +252,9 @@ public class MonsterControllerF : MonoBehaviour {
 
     IEnumerator NotHappy()
     {
+        ballSpotlight.SetActive(false);
+        monsterSpotlight.SetActive(true);
+
         //taille + magnet + variable
         wrath = 0;
         if (magnet != null)
@@ -266,6 +284,9 @@ public class MonsterControllerF : MonoBehaviour {
         transform.localScale /= monsterScale;
 
         monsterForm = false;
+
+        ballSpotlight.SetActive(true);
+        monsterSpotlight.SetActive(false);
 
     }
 
