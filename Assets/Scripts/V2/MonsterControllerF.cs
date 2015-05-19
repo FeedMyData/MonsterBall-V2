@@ -86,6 +86,9 @@ public class MonsterControllerF : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update() {
+
+        if (transform.position.y < -3.0f) Respawn();
+
         if (magnet == null)
         {
             if (!monsterForm)
