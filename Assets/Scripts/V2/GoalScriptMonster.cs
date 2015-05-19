@@ -40,7 +40,7 @@ public class GoalScriptMonster : MonoBehaviour {
             if (player.IsProjectionInGoal())
             {
                 //feedbacks goal joueur
-                Camera.main.GetComponent<CameraShake>().shake(1, 1, 1);
+                Camera.main.GetComponent<CameraShake>().shake(0.8f, 0.6f, 1);
                 manager.AddScore(tag);
                 player.Respawn();
 

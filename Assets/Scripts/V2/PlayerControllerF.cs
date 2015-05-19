@@ -351,6 +351,12 @@ public class PlayerControllerF : MonoBehaviour
                 player.callStun(stunKick);
                 player.PlayRandomSound(AbstractSound.Action.CoupRecu);
 
+                // feedbacks player frappe autre player
+                foreach (ParticleSystem ps in GetComponentsInChildren<ParticleSystem>())
+                {
+                    if (ps.name == "Choc") ps.Play();
+                }
+
                 if (player.GetMagnet())
                 {
                     //TODO: faire sauté la balle et la décrocher
@@ -389,10 +395,10 @@ public class PlayerControllerF : MonoBehaviour
                         monster.PlayRandomSound(AbstractSound.Action.Impact);
                     }
 
-                    //feedbacks coup reçu par un joueur
+                    //feedbacks balle coup reçu par un joueur
                     if (power == powerMax)
                     {
-                        Camera.main.GetComponent<CameraShake>().shake(1, 1, 1);
+                        Camera.main.GetComponent<CameraShake>().shake(0.6f, 0.4f, 1);
                         //GetComponent<AudioSource>().clip = VOIX_Niveks_CoupRecu_02;
                         //PlayRandomSound();
 
