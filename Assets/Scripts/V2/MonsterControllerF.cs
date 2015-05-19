@@ -338,6 +338,7 @@ public class MonsterControllerF : MonoBehaviour {
             goal = GameControllerF.GetPosRedGoal();
 
         Debug.Log(goal.position);
+		if(GetComponentInChildren<Animator>()) GetComponentInChildren<Animator>().SetTrigger("spit");
 
         yield return new WaitForSeconds(durationEatingPlayer);
         
@@ -353,6 +354,7 @@ public class MonsterControllerF : MonoBehaviour {
         {
             player.GetComponent<PlayerControllerF>().FlyAway();
             PlayRandomSound(AbstractSound.Action.RecracheJoueur);
+
         }
 
         yield return new WaitForSeconds(0.1f);
