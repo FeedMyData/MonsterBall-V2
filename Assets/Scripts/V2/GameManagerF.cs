@@ -85,7 +85,7 @@ public class GameManagerF : MonoBehaviour {
 
     void RefreshScore()
     {
-        txtScore.text = ("Blu "+bluScore+"-"+redScore+" Red");
+        txtScore.text = (bluScore+"-"+redScore);
     }
 
     void RefreshDuration()

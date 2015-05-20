@@ -6,7 +6,9 @@ public class CameraShake : MonoBehaviour {
     public float timeShaking = 5.0f;
     private float timeS = 0.0f;
     public float shakeAmount = 0.5f;
+    private float shakeA = 0.5f;
     public float decreaseFactor = 1.0f;
+    private float decreaseF = 1.0f;
 
     public bool decreaseShakeWithTime = true;
 
@@ -23,25 +25,18 @@ public class CameraShake : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-
-            shake(0,0,0);
-
-        }
-
         if (timeS > 0)
         {
             if (decreaseShakeWithTime)
             {
-                transform.localPosition = originalPos + Random.insideUnitSphere * shakeAmount * timeS;
+                transform.localPosition = originalPos + Random.insideUnitSphere * shakeA * timeS;
             }
             else
             {
-                transform.localPosition = originalPos + Random.insideUnitSphere * shakeAmount;
+                transform.localPosition = originalPos + Random.insideUnitSphere * shakeA;
             }
 
-            timeS -= Time.deltaTime * decreaseFactor;
+            timeS -= Time.deltaTime * decreaseF;
             repositionned = false;
         }
         else if (!repositionned)
@@ -58,8 +53,8 @@ public class CameraShake : MonoBehaviour {
         originalPos = transform.localPosition;
 
         timeS = timeShaking * durationFactor;
-        shakeAmount *= powerFactor;
-        decreaseFactor *= speedFactor;
+        shakeA = shakeAmount * powerFactor;
+        decreaseF = decreaseFactor * speedFactor;
 
         //timeS = (duration != 0) ? duration : timeShaking;
         //shakeAmount = (power != 0) ? power : shakeAmount;

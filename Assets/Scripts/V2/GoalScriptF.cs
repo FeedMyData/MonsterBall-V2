@@ -25,7 +25,7 @@ public class GoalScriptF : MonoBehaviour {
             if (!other.gameObject.GetComponent<MonsterControllerF>().IsMonsterForm())
             {
                 //feedbacks goal balle
-                Camera.main.GetComponent<CameraShake>().shake(1, 1, 1);
+                Camera.main.GetComponent<CameraShake>().shake(0.8f, 0.6f, 1.0f);
 
                 other.gameObject.GetComponent<MonsterControllerF>().PlayRandomSound(AbstractSound.Action.But);
                 manager.AddScore(tag);
