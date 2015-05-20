@@ -25,25 +25,30 @@ public class CameraShake : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        if (timeS > 0)
+        if (GetComponent<CamEffects>().GetRepositionned())
         {
-            if (decreaseShakeWithTime)
+
+            if (timeS > 0)
             {
-                transform.localPosition = originalPos + Random.insideUnitSphere * shakeA * timeS;
+                if (decreaseShakeWithTime)
+                {
+                    transform.localPosition = originalPos + Random.insideUnitSphere * shakeA * timeS;
+                }
+                else
+                {
+                    transform.localPosition = originalPos + Random.insideUnitSphere * shakeA;
+                }
+
+                timeS -= Time.deltaTime * decreaseF;
+                repositionned = false;
             }
-            else
+            else if (!repositionned)
             {
-                transform.localPosition = originalPos + Random.insideUnitSphere * shakeA;
+                timeS = 0f;
+                transform.localPosition = originalPos;
+                repositionned = true;
             }
 
-            timeS -= Time.deltaTime * decreaseF;
-            repositionned = false;
-        }
-        else if (!repositionned)
-        {
-            timeS = 0f;
-            transform.localPosition = originalPos;
-            repositionned = true;
         }
 
 	}

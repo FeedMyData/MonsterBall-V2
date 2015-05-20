@@ -41,6 +41,7 @@ public class GoalScriptMonster : MonoBehaviour {
             {
                 //feedbacks goal joueur
                 Camera.main.GetComponent<CameraShake>().shake(1.0f, 1.0f, 1.0f);
+
                 manager.AddScore(tag);
                 player.Respawn();
 
