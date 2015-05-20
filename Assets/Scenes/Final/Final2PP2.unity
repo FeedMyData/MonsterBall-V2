@@ -1318,7 +1318,7 @@ GameObject:
   - 114: {fileID: 250429451}
   m_Layer: 0
   m_Name: GoalMonsterRed
-  m_TagString: Untagged
+  m_TagString: TeamRed
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2863,7 +2863,7 @@ GameObject:
   - 114: {fileID: 649490976}
   m_Layer: 0
   m_Name: RedBumpSphere
-  m_TagString: TeamRed
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4755,7 +4755,7 @@ GameObject:
   - 114: {fileID: 947855373}
   m_Layer: 0
   m_Name: GoalMonsterBlue
-  m_TagString: Untagged
+  m_TagString: TeamBlu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9913,7 +9913,7 @@ GameObject:
   - 114: {fileID: 1540846542}
   m_Layer: 0
   m_Name: BlueBumpSphere
-  m_TagString: TeamBlu
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

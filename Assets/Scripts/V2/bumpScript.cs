@@ -49,8 +49,6 @@ public class bumpScript : MonoBehaviour {
                 player.PlayRandomSound(AbstractSound.Action.EjectBut);
 
                 player.AddImpact(dirImpact.normalized * dashGoalPower);
-
-				if(player.GetComponentInChildren<Animator>())player.GetComponentInChildren<Animator>().SetTrigger("bump");
             }
         }
     }
