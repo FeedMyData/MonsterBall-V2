@@ -25,7 +25,7 @@ public class CameraShake : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        if (GetComponent<CamEffects>().GetRepositionned())
+        if (GetComponent<CamEffects>() && GetComponent<CamEffects>().GetRepositionned())
         {
 
             if (timeS > 0)
