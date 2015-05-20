@@ -359,7 +359,10 @@ public class PlayerControllerF : MonoBehaviour
                 {
                     if (ps.name == "Choc") ps.Play();
                 }
-
+				if(player.GetComponentInChildren<Animator>()){
+					player.GetComponentInChildren<Animator>().SetTrigger("hurt");
+					player.GetComponentInChildren<Animator>().SetBool("isCharging", false);
+				}
                 if (player.GetMagnet())
                 {
                     //TODO: faire sauté la balle et la décrocher
