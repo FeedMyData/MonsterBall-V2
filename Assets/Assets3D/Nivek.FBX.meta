@@ -66,9 +66,12 @@ ModelImporter:
     400056: Spin1
     400058: Spin2
     2300000: Batte
+    2300002: Spin0
     3300000: Batte
+    3300002: Spin0
     4300000: Batte
     4300002: Nivek
+    4300004: Spin0
     7400000: Run
     7400002: Idle
     7400004: BeginCharge
@@ -83,6 +86,7 @@ ModelImporter:
     7400022: HitRun
     7400024: BeginChargeRun
     7400026: Hurt
+    7400028: bump
     9500000: //RootNode
     13700000: Nivek
   materials:
@@ -896,6 +900,92 @@ ModelImporter:
       takeName: nivek_anim
       firstFrame: 279
       lastFrame: 287
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Nivek
+        weight: 1
+      - path: Spin0
+        weight: 1
+      - path: Spin0/LeftLeg
+        weight: 1
+      - path: Spin0/LeftLeg/LeftShin
+        weight: 1
+      - path: Spin0/LeftLeg/LeftShin/LeftAnkle
+        weight: 1
+      - path: Spin0/LeftLeg/LeftShin/LeftAnkle/LeftFoot
+        weight: 1
+      - path: Spin0/LeftLeg/LeftShin/LeftAnkle/LeftFoot/LeftFootFingers
+        weight: 1
+      - path: Spin0/RightLeg
+        weight: 1
+      - path: Spin0/RightLeg/RightShin
+        weight: 1
+      - path: Spin0/RightLeg/RightShin/RightAnkle
+        weight: 1
+      - path: Spin0/RightLeg/RightShin/RightAnkle/RIghtFoot
+        weight: 1
+      - path: Spin0/RightLeg/RightShin/RightAnkle/RIghtFoot/RightFootFingers
+        weight: 1
+      - path: Spin0/Spin1
+        weight: 1
+      - path: Spin0/Spin1/Spin2
+        weight: 1
+      - path: Spin0/Spin1/Spin2/LeftShoulder
+        weight: 1
+      - path: Spin0/Spin1/Spin2/LeftShoulder/LeftArm
+        weight: 1
+      - path: Spin0/Spin1/Spin2/LeftShoulder/LeftArm/LeftForeArm
+        weight: 1
+      - path: Spin0/Spin1/Spin2/LeftShoulder/LeftArm/LeftForeArm/LeftHand
+        weight: 1
+      - path: Spin0/Spin1/Spin2/LeftShoulder/LeftArm/LeftForeArm/LeftHand/LeftForeFinger
+        weight: 1
+      - path: Spin0/Spin1/Spin2/LeftShoulder/LeftArm/LeftForeArm/LeftHand/LeftLittleFinger
+        weight: 1
+      - path: Spin0/Spin1/Spin2/LeftShoulder/LeftArm/LeftForeArm/LeftHand/LeftThumb
+        weight: 1
+      - path: Spin0/Spin1/Spin2/RightShoulders
+        weight: 1
+      - path: Spin0/Spin1/Spin2/RightShoulders/RightArm
+        weight: 1
+      - path: Spin0/Spin1/Spin2/RightShoulders/RightArm/RightForeArm
+        weight: 1
+      - path: Spin0/Spin1/Spin2/RightShoulders/RightArm/RightForeArm/RightHand
+        weight: 1
+      - path: Spin0/Spin1/Spin2/RightShoulders/RightArm/RightForeArm/RightHand/Batte
+        weight: 1
+      - path: Spin0/Spin1/Spin2/RightShoulders/RightArm/RightForeArm/RightHand/RightForeFinger
+        weight: 1
+      - path: Spin0/Spin1/Spin2/RightShoulders/RightArm/RightForeArm/RightHand/RightLittleFinger
+        weight: 1
+      - path: Spin0/Spin1/Spin2/RightShoulders/RightArm/RightForeArm/RightHand/RightThumb
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: bump
+      takeName: nivek_anim
+      firstFrame: 287
+      lastFrame: 295
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
