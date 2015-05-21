@@ -236,6 +236,10 @@ Material:
         second: 1
       data:
         first:
+          name: __ScrollSpeed
+        second: .397000015
+      data:
+        first:
           name: _Pan_SpeedY
         second: .100000001
       data:
@@ -246,10 +250,6 @@ Material:
         first:
           name: _Transparency
         second: 1
-      data:
-        first:
-          name: __ScrollSpeed
-        second: .397000015
     m_Colors:
       data:
         first:
