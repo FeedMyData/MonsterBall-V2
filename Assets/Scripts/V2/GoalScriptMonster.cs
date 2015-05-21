@@ -4,11 +4,15 @@ using System.Collections;
 public class GoalScriptMonster : MonoBehaviour {
 
     private GameManagerF manager;
+    
+    //feedbacks
+    private GuiEffects guiEffectsScript;
 
     // Use this for initialization
     void Start()
     {
         manager = GameControllerF.getManager();
+        guiEffectsScript = GameObject.Find("CanvasFeedbacks").GetComponent<GuiEffects>();
     }
 
     // Update is called once per frame
@@ -41,6 +45,7 @@ public class GoalScriptMonster : MonoBehaviour {
             {
                 //feedbacks goal joueur
                 Camera.main.GetComponent<CameraShake>().shake(1.0f, 1.0f, 1.0f);
+                guiEffectsScript.flashGoal(tag);
 
                 manager.AddScore(tag);
                 player.Respawn();

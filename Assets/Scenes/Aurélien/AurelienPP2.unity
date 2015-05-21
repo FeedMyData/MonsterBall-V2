@@ -241,7 +241,7 @@ MonoBehaviour:
   speedDivisionFactor: 8
   areaMagnet: 3
   speedMagnet: 40
-  wrathMax: 1
+  wrathMax: 30
   wrathDribblingValue: 1
   wrathDribblingEachTime: .5
   summon: .200000003
@@ -955,7 +955,7 @@ GameObject:
   - 222: {fileID: 121293664}
   - 114: {fileID: 121293663}
   m_Layer: 5
-  m_Name: RawImage
+  m_Name: RedFlash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5625,6 +5625,66 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 782489f91d9b20d469d07c7459adf7e2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &1143496514
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 1143496515}
+  - 222: {fileID: 1143496517}
+  - 114: {fileID: 1143496516}
+  m_Layer: 5
+  m_Name: BlueFlash
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1143496515
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1143496514}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1698650564}
+  m_RootOrder: 1
+  m_AnchorMin: {x: .5, y: .5}
+  m_AnchorMax: {x: .5, y: .5}
+  m_AnchoredPosition: {x: 3.05175781e-05, y: -7.62939453e-06}
+  m_SizeDelta: {x: 1920, y: 1080}
+  m_Pivot: {x: .5, y: .5}
+--- !u!114 &1143496516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1143496514}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -98529514, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Texture: {fileID: 2800000, guid: 8e1b00f86b38dc04ba62af59251b1e0a, type: 3}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+--- !u!222 &1143496517
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1143496514}
 --- !u!1 &1146964692
 GameObject:
   m_ObjectHideFlags: 0
@@ -10632,7 +10692,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   redTextureObject: {fileID: 121293663}
-  blueTextureObject: {fileID: 0}
+  blueTextureObject: {fileID: 1143496516}
   endAlpha: .300000012
   duration: .600000024
   timeProportionAppearing: .200000003
@@ -10701,6 +10761,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 121293662}
+  - {fileID: 1143496515}
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_AnchorMin: {x: 0, y: 0}

@@ -31,7 +31,14 @@ public class GuiEffects : MonoBehaviour {
         {
 
             //StartCoroutine(FlashWhenHit());
-            flashGoal("red");
+            flashGoal("TeamRed");
+
+        }
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+
+            //StartCoroutine(FlashWhenHit());
+            flashGoal("TeamBlue");
 
         }
 
@@ -104,7 +111,7 @@ public class GuiEffects : MonoBehaviour {
     
     //}
 
-    void flashGoal(string color)
+    public void flashGoal(string color)
     {
 
         if (color == "TeamBlu")

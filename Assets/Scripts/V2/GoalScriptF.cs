@@ -6,9 +6,13 @@ public class GoalScriptF : MonoBehaviour {
 
     private GameManagerF manager;
 
+    //feedbacks
+    private GuiEffects guiEffectsScript;
+
 	// Use this for initialization
 	void Start () {
 	    manager = GameControllerF.getManager();
+        guiEffectsScript = GameObject.Find("CanvasFeedbacks").GetComponent<GuiEffects>();
 	}
 	
 	// Update is called once per frame
@@ -26,6 +30,7 @@ public class GoalScriptF : MonoBehaviour {
             {
                 //feedbacks goal balle
                 Camera.main.GetComponent<CameraShake>().shake(0.8f, 0.6f, 1.0f);
+                guiEffectsScript.flashGoal(tag);
 
                 other.gameObject.GetComponent<MonsterControllerF>().PlayRandomSound(AbstractSound.Action.But);
                 manager.AddScore(tag);
