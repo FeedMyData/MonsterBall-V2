@@ -3,7 +3,27 @@
 	<Busses>
 		<WorkUnit Name="Default Work Unit" ID="{F2826676-125A-488D-B5BC-8666D671270D}" PersistMode="Standalone">
 			<ChildrenList>
-				<Bus Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"/>
+				<Bus Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}">
+					<ChildrenList>
+						<Bus Name="Voix" ID="{6F7CCEB0-4338-419F-A5F7-1BADCFA7CC6B}">
+							<ChildrenList>
+								<Bus Name="Niveks" ID="{61A147E8-AD36-479A-8A9B-0755B4FE6CC9}"/>
+								<Bus Name="Monstre" ID="{C8D2864F-52D6-4B60-8000-ED8571B1E251}"/>
+								<Bus Name="Balle" ID="{77C5DDAF-67F0-4DB5-AD22-3EACEEEFBA84}"/>
+							</ChildrenList>
+						</Bus>
+						<Bus Name="Ambiances" ID="{B9DD8753-6E85-4214-991C-F19471FEBA39}"/>
+						<Bus Name="SFX" ID="{98BA6610-4B70-4EFF-A353-4A61C6BE1A24}"/>
+						<Bus Name="Musiques" ID="{51DA5A6D-5764-451B-9A18-180342A5B0FE}"/>
+						<AuxBus Name="ReverbStade" ID="{D9AE1235-84F4-48BC-9E4F-FF2EDAFDD297}">
+							<ReferenceList>
+								<Reference Name="Effect0" CompanyID="4095" PluginID="65535" PluginType="15">
+									<ObjectRef Name="Auditorium" ID="{FD6C692A-56DE-4AB5-BD21-11FF4CB13068}" WorkUnitID="{33EB1407-1601-4B0D-A620-9099C0353115}"/>
+								</Reference>
+							</ReferenceList>
+						</AuxBus>
+					</ChildrenList>
+				</Bus>
 				<Bus Name="Master Secondary Bus" ID="{D2E0BC7E-7B3F-4FFE-A670-FAE02761B631}"/>
 				<MotionBus Name="Master Motion Bus" ID="{20A630BA-3398-4676-B927-1004DFE41FD8}"/>
 			</ChildrenList>

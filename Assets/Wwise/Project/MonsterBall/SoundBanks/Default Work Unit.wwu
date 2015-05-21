@@ -5,7 +5,7 @@
 			<ChildrenList>
 				<SoundBank Name="MainSoundBank" ID="{DF1C3A93-50B0-44C3-A9B1-BEAE92E6DE56}">
 					<ObjectInclusionList>
-						<ObjectRef Name="AMB_Public_Normal" ID="{51F24495-953D-43F8-B9CE-000C3412ECD4}" WorkUnitID="{D899008C-EE7F-4475-814E-BB3DC86CD141}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Public_Normal" ID="{51F24495-953D-43F8-B9CE-000C3412ECD4}" WorkUnitID="{D899008C-EE7F-4475-814E-BB3DC86CD141}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

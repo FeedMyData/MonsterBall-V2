@@ -1,4 +1,17 @@
 Audio Bus	ID	Name			Wwise Object Path	Notes
+	393239870	SFX			\Default Work Unit\Master Audio Bus\SFX	
+	426462839	Niveks			\Default Work Unit\Master Audio Bus\Voix\Niveks	
+	701539273	Musiques			\Default Work Unit\Master Audio Bus\Musiques	
 	805203703	Master Secondary Bus			\Default Work Unit\Master Secondary Bus	
+	1404066300	Ambiances			\Default Work Unit\Master Audio Bus\Ambiances	
+	2594437235	Monstre			\Default Work Unit\Master Audio Bus\Voix\Monstre	
+	3370469991	Voix			\Default Work Unit\Master Audio Bus\Voix	
+	3395410983	Balle			\Default Work Unit\Master Audio Bus\Voix\Balle	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+
+Auxiliary Bus	ID	Name			Wwise Object Path	Notes
+	3256896080	ReverbStade			\Default Work Unit\Master Audio Bus\ReverbStade	
+
+Effect plug-ins	ID	Name	Type				Notes
+	81972052	Auditorium	iZotope Hybrid Reverb			
 

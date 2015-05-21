@@ -12,7 +12,7 @@
 			<ShortName>MainSoundBank</ShortName>
 			<Path>MainSoundBank.bnk</Path>
 			<IncludedEvents>
-				<Event Id="2948236873" Name="AMB_Public_Normal"/>
+				<Event Id="3019773176" Name="Public_Normal"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="1007659156" Language="SFX">

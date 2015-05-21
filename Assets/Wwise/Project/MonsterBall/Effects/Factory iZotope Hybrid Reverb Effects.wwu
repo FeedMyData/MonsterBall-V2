@@ -10,7 +10,9 @@
 						<Property Name="DecayLowFrequency" Type="Real32" Value="800"/>
 						<Property Name="DecayLowRatio" Type="Real32" Value="1.153108"/>
 						<Property Name="DecayMidRatio" Type="Real32" Value="0.9116192"/>
-						<Property Name="DecayTime" Type="Real32" Value="0.3421163"/>
+						<Property Name="DecayTime" Type="Real32" Value="0.425"/>
+						<Property Name="FrontDry" Type="Real32" Value="-96"/>
+						<Property Name="RearDry" Type="Real32" Value="-19.2"/>
 					</PropertyList>
 					<ChildrenList>
 						<PluginMediaSource Name="Auditorium" ID="{D4846814-C3F4-4F40-9A76-8B0025FDEED2}" ShortID="103650773">

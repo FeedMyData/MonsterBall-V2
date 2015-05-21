@@ -14,7 +14,7 @@
 			<ShortName>MainSoundBank</ShortName>
 			<Path>MainSoundBank.bnk</Path>
 			<IncludedEvents>
-				<Event Id="2948236873" Name="AMB_Public_Normal"/>
+				<Event Id="3019773176" Name="Public_Normal"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="1007659156" Language="SFX">
@@ -26,6 +26,13 @@
 		<SoundBank Id="1355168291" Language="SFX">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
+			<ExcludedMemoryFiles>
+				<File Id="103650773" Language="SFX">
+					<ShortName>Auditorium.wav</ShortName>
+					<Path>Plugins\iZotope Hybrid Reverb\Auditorium_DDC08386.wem</Path>
+					<PrefetchSize>0</PrefetchSize>
+				</File>
+			</ExcludedMemoryFiles>
 		</SoundBank>
 	</SoundBanks>
 </SoundBanksInfo>
