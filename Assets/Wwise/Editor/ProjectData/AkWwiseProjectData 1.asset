@@ -9,66 +9,29 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 64e666e89aeccd84bac5d95a4d1f9d0e, type: 3}
-  m_Name: AkWwiseProjectData
+  m_Name: AkWwiseProjectData 1
   m_EditorClassIdentifier: 
-  CurrentPluginConfig: Release
+  CurrentPluginConfig: Profile
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{D899008C-EE7F-4475-814E-BB3DC86CD141}'
     List:
-    - Name: Public_Fin
-      Path: Default Work Unit\Public\Public_Fin
+    - Name: AMB_Public_Normal
+      Path: Default Work Unit\AMB_Public_Normal
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: Public
-        ObjectType: 4
-      - ElementName: Public_Fin
+      - ElementName: AMB_Public_Normal
         ObjectType: 3
-      ID: -899186152
-      Guid: 40a45ab8e65aaa47a4c4d64c351a1cde
-      maxAttenuation: 0
-    - Name: Public_Intensification
-      Path: Default Work Unit\Public\Public_Intensification
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: Public
-        ObjectType: 4
-      - ElementName: Public_Intensification
-        ObjectType: 3
-      ID: -994660560
-      Guid: 5934b7a6bbd8b4499183797cc5e46245
-      maxAttenuation: 0
-    - Name: Public_Normal
-      Path: Default Work Unit\Public\Public_Normal
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: Public
-        ObjectType: 4
-      - ElementName: Public_Normal
-        ObjectType: 3
-      ID: -1275194120
+      ID: -1346730423
       Guid: 9544f2513d95f843b9ce000c3412ecd4
       maxAttenuation: 0
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{F2826676-125A-488D-B5BC-8666D671270D}'
-    List:
-    - Name: ReverbStade
-      Path: Default Work Unit\Master Audio Bus\ReverbStade
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: Master Audio Bus
-        ObjectType: 2
-      - ElementName: ReverbStade
-        ObjectType: 1
-      ID: -1038071216
-      Guid: 3512aed9f484bc489e4fff2edafdd297
+    List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPhysicalPath: 
@@ -95,16 +58,10 @@ MonoBehaviour:
       Guid: 933a1cdfb050c344a9b1beae92e6de56
   ExpandedItems:
   - /MonsterBall
-  - /MonsterBall/Events
-  - /MonsterBall/Events/Default Work Unit
-<<<<<<< HEAD
-  - /MonsterBall/Events/Default Work Unit/Public
-  m_lastPopulateTimePsrt1: -1792528921
-  m_lastPopulateTimePart2: -1999478291
-=======
-  m_lastPopulateTimePsrt1: 1422976958
+  - /MonsterBall/Banks
+  - /MonsterBall/Banks/Default Work Unit
+  m_lastPopulateTimePsrt1: 1312947252
   m_lastPopulateTimePart2: -1999478299
->>>>>>> origin/master
   autoPopulateEnabled: 1
   basePath: Audio\GeneratedSoundBanks
   language: English(US)
