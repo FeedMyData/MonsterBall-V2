@@ -125,9 +125,6 @@ GameObject:
   - 135: {fileID: 7400959}
   - 54: {fileID: 7400958}
   - 114: {fileID: 7400957}
-  - 114: {fileID: 7400956}
-  - 114: {fileID: 7400955}
-  - 82: {fileID: 7400960}
   m_Layer: 0
   m_Name: MonsterAnimated
   m_TagString: Monster
@@ -149,81 +146,6 @@ Transform:
   - {fileID: 1215151605}
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!114 &7400955
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 7400953}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e56ae82e7d8e12c4ebb3c3da5bdf4d3b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tabGrognement:
-  - {fileID: 8300000, guid: abda45950e9060a4083ff9d010d4057e, type: 3}
-  - {fileID: 8300000, guid: 965ed2687b2d73f4b84c0d96767dc10e, type: 3}
-  - {fileID: 8300000, guid: 972699f94e564c24eb65f028adfd96aa, type: 3}
-  - {fileID: 8300000, guid: 6474eb440bce2874cb289eadd867309c, type: 3}
-  - {fileID: 8300000, guid: 4ad5d0de6f4e2a244961a7680fa7fff2, type: 3}
-  tabImpact:
-  - {fileID: 8300000, guid: bd45c34268aaa3c4e82ea9a7430553dc, type: 3}
-  - {fileID: 8300000, guid: 087c68113e598f64690f47e07363d8b7, type: 3}
-  - {fileID: 8300000, guid: 6f53f1d4bda23824e8c095b184bc0ee2, type: 3}
-  - {fileID: 8300000, guid: 6e83a956cf6d9374d855d199da81d520, type: 3}
-  - {fileID: 8300000, guid: 8296ea1917c3a9f47b564a6351950719, type: 3}
-  tabRecracheJoueur:
-  - {fileID: 8300000, guid: 1d947522059887a41a1ef2c23033f644, type: 3}
-  - {fileID: 8300000, guid: 8c36db05265fdae4eb38ed12ce6f9541, type: 3}
-  - {fileID: 8300000, guid: 385a1a74605cd354e82be085e972ce64, type: 3}
-  - {fileID: 8300000, guid: a1081366b6409724ea3a6fa3b7ec2382, type: 3}
-  - {fileID: 8300000, guid: 814d0b1060211504c8b2412c3e67ae94, type: 3}
-  mixerVoice: {fileID: 24387548, guid: 3b5232be4ec122545b3f1ef5cda50c18, type: 2}
---- !u!114 &7400956
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 7400953}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 440bd8dc06b2e3048bb585b0ffc31cf8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tabBut:
-  - {fileID: 8300000, guid: ef6757027af2e1947b4ff5ae7f83bc81, type: 3}
-  - {fileID: 8300000, guid: 27789f323c3047641b31d61fb15bf3da, type: 3}
-  - {fileID: 8300000, guid: 21da0512565db2c428a04d889ccaac31, type: 3}
-  - {fileID: 8300000, guid: 3509ec428e56b134c9d84e68843b2ec9, type: 3}
-  - {fileID: 8300000, guid: 6f8be55c78773744d83dc1e0329a5db0, type: 3}
-  tabCourse:
-  - {fileID: 8300000, guid: 84c94186df91788468735069ace78bd8, type: 3}
-  - {fileID: 8300000, guid: 04b66eb5d23b6b44db8f4d698eebda5a, type: 3}
-  - {fileID: 8300000, guid: c9fcc6743ffee0046ac59a5412482d7d, type: 3}
-  - {fileID: 8300000, guid: 69af853cde4f30841a23c46528b9c153, type: 3}
-  - {fileID: 8300000, guid: a09bab08c1b1e144ea54d756f3d443d2, type: 3}
-  tabImpact:
-  - {fileID: 8300000, guid: 28f2b937b5ef33c48b7964d14d89c3c5, type: 3}
-  - {fileID: 8300000, guid: 86608fd91caa90c4baf33412fbd9edf5, type: 3}
-  - {fileID: 8300000, guid: db68d23e5ad7b52488a68bf882c778e8, type: 3}
-  - {fileID: 8300000, guid: 5507a69d783fdb64bb5bace106018f81, type: 3}
-  - {fileID: 8300000, guid: 2e3d8d320f2201e4dbf7191d895523a2, type: 3}
-  tabObjet:
-  - {fileID: 8300000, guid: 723e2176fbe66824e8772b83e886a812, type: 3}
-  - {fileID: 8300000, guid: d80ab082b6b757a4787015a2331113d2, type: 3}
-  - {fileID: 8300000, guid: b54e106570d03d445b4b7d75da166aba, type: 3}
-  tabRemiseEnJeu:
-  - {fileID: 8300000, guid: 31cc239af1fd64747bda9561932bb778, type: 3}
-  - {fileID: 8300000, guid: b1ea3405d09849b4288d104ea997c439, type: 3}
-  - {fileID: 8300000, guid: 8f0806c125c9c694aa134a292a490f21, type: 3}
-  - {fileID: 8300000, guid: bce1e7373b50a3544bc3ab3cbd387a6e, type: 3}
-  - {fileID: 8300000, guid: 0b197ffc204eb7c42bf29c907728e855, type: 3}
-  tabTransformationBalleMonstre:
-  - {fileID: 8300000, guid: aaa55e1058fa89f468208ca116d34531, type: 3}
-  - {fileID: 8300000, guid: aaa55e1058fa89f468208ca116d34531, type: 3}
-  tabTransformationMonstreBall:
-  - {fileID: 8300000, guid: 4ccf0196abd719348bceba45f9fba607, type: 3}
-  mixerBalle: {fileID: 24385740, guid: 3b5232be4ec122545b3f1ef5cda50c18, type: 2}
 --- !u!114 &7400957
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -283,76 +205,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: .5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!82 &7400960
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 7400953}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24300001, guid: 3b5232be4ec122545b3f1ef5cda50c18,
-    type: 2}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: .910000026
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
 --- !u!1 &21774801
 GameObject:
   m_ObjectHideFlags: 0
@@ -685,7 +537,6 @@ GameObject:
   - 33: {fileID: 99554772}
   - 136: {fileID: 99554771}
   - 114: {fileID: 99554769}
-  - 114: {fileID: 99554768}
   - 143: {fileID: 99554767}
   - 23: {fileID: 99554770}
   m_Layer: 0
@@ -728,62 +579,6 @@ CharacterController:
   m_SkinWidth: .0799999982
   m_MinMoveDistance: .00100000005
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &99554768
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11469372, guid: b57655d704b35554c9d6eef6e9b6730a,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 99554765}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28e91a67c6b03354f872ebc62c5641a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tabCoupBalle:
-  - {fileID: 8300000, guid: af935644fbedce04a9b180fb6f000264, type: 3}
-  - {fileID: 8300000, guid: ca682899f6c0b0f42b2ce63e42064b42, type: 3}
-  - {fileID: 8300000, guid: f77ed57a9e654214daedbc5d70cb324e, type: 3}
-  - {fileID: 8300000, guid: 3b71369df2228d949b64127a470f3290, type: 3}
-  - {fileID: 8300000, guid: 9d7978031dfbbfe4782ca6d531d483e8, type: 3}
-  tabCoupRecu:
-  - {fileID: 8300000, guid: d1a116b8abe41244f827b15bd0e9a583, type: 3}
-  - {fileID: 8300000, guid: bcd842854d50ff045a379a2d1250f118, type: 3}
-  - {fileID: 8300000, guid: 201d17af090f61949b6716a5369912ff, type: 3}
-  - {fileID: 8300000, guid: 81b4ab003a66f6d48ac14ea8ef673245, type: 3}
-  - {fileID: 8300000, guid: ec5cc4d129f05324db049841568c74af, type: 3}
-  tabEjectBut:
-  - {fileID: 8300000, guid: aa6dbcde1d295d84ab0c8f556c66edec, type: 3}
-  - {fileID: 8300000, guid: 22efac3ebc0d4604697db51cf85c19c6, type: 3}
-  - {fileID: 8300000, guid: ed796dc29a2295943b659d64d47e6ad0, type: 3}
-  - {fileID: 8300000, guid: dec7509a978b046449763a7eb0a08ee3, type: 3}
-  - {fileID: 8300000, guid: 5149ebf72332f904d97a5cf9581372e4, type: 3}
-  tabMarqueBut:
-  - {fileID: 8300000, guid: ff8e8e8187883114ca3f1016e186fae0, type: 3}
-  tabPoursuivi:
-  - {fileID: 8300000, guid: 1d82af5745e98df4d81c6719d719cdae, type: 3}
-  - {fileID: 8300000, guid: 5cd857fdf13594e4f9f07e907a930294, type: 3}
-  - {fileID: 8300000, guid: 050158886e8de7b4f9fb598efb84bdfc, type: 3}
-  - {fileID: 8300000, guid: c0b9d9f213d64144fab76e62f2593125, type: 3}
-  - {fileID: 8300000, guid: 9e7fd736e7ddd4c4f9ec6e0286b46e2b, type: 3}
-  tabVictoire:
-  - {fileID: 8300000, guid: 717c1e7c103c7cb4a82ae57ad4cfe6aa, type: 3}
-  - {fileID: 8300000, guid: bd8bb320b626158499f7586079a97993, type: 3}
-  - {fileID: 8300000, guid: 028de44d5855dab40bc406852b2d7422, type: 3}
-  - {fileID: 8300000, guid: 354f864d465bc984a81fc95f49fc4e10, type: 3}
-  tabWilhemScream:
-  - {fileID: 8300000, guid: 17234cf4a59c97045952aa355f0bf705, type: 3}
-  - {fileID: 8300000, guid: b1eb5c2e46c762d48a18980777a05d08, type: 3}
-  - {fileID: 8300000, guid: 77fd92ffe7b584e45a500a995c53bd06, type: 3}
-  - {fileID: 8300000, guid: 5e72a3f09898dff48a8b2b54a93f1804, type: 3}
-  - {fileID: 8300000, guid: 10723569e4be0fa46900829b31a0680d, type: 3}
-  tabYeah:
-  - {fileID: 8300000, guid: 90bd5537ab52fc44c8e6ae2096801e65, type: 3}
-  - {fileID: 8300000, guid: 98d129c0586a81c4c96cacc7d301f94d, type: 3}
-  - {fileID: 8300000, guid: 02e6391459c8a4e44911ece9d2c85bfb, type: 3}
-  - {fileID: 8300000, guid: 69bbf978db2e35040857155cdc7ebb33, type: 3}
-  - {fileID: 8300000, guid: 1e453ca72861fb44e91c59de7af03660, type: 3}
-  mixerVoice: {fileID: 24355090, guid: 3b5232be4ec122545b3f1ef5cda50c18, type: 2}
 --- !u!114 &99554769
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2070,11 +1865,10 @@ GameObject:
   - 20: {fileID: 499457354}
   - 92: {fileID: 499457353}
   - 124: {fileID: 499457352}
-  - 81: {fileID: 499457351}
   - 114: {fileID: 499457357}
   - 114: {fileID: 499457356}
+  - 114: {fileID: 499457351}
   - 114: {fileID: 499457358}
-  - 82: {fileID: 499457359}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2082,13 +1876,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &499457351
-AudioListener:
+--- !u!114 &499457351
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 499457350}
   m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e57937b1128b8764e8ece1cb28d3de4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  listenerId: 0
 --- !u!124 &499457352
 Behaviour:
   m_ObjectHideFlags: 0
@@ -2183,82 +1982,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 499457350}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 106bdb22009f01c459ec11ed29db1f4a, type: 3}
+  m_Script: {fileID: 11500000, guid: 704553ab0af34f544bca18cd2ee785f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  monster: {fileID: 0}
-  manager: {fileID: 2052379256}
-  player: {fileID: 1895334760}
---- !u!82 &499457359
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 499457350}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24310838, guid: 9261314e90f067c49a29e63b584cfad8,
-    type: 2}
-  m_audioClip: {fileID: 8300000, guid: 8fbd00a65157ca948bfb4a1659c4c317, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 1
-  Mute: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
+  triggerList: f7e1664c
+  useOtherObject: 0
+  valueGuid: 9544f2513d95f843b9ce000c3412ecd4
+  eventID: -1346730423
+  soundEmitterObject: {fileID: 0}
+  enableActionOnEvent: 0
+  actionOnEventType: 0
+  curveInterpolation: 4
+  transitionDuration: 0
+  m_callbackData: {fileID: 0}
 --- !u!1 &500802388
 GameObject:
   m_ObjectHideFlags: 0
@@ -2332,7 +2068,6 @@ GameObject:
   - 33: {fileID: 530266184}
   - 136: {fileID: 530266183}
   - 114: {fileID: 530266181}
-  - 114: {fileID: 530266180}
   - 143: {fileID: 530266179}
   - 23: {fileID: 530266182}
   m_Layer: 0
@@ -2375,62 +2110,6 @@ CharacterController:
   m_SkinWidth: .0799999982
   m_MinMoveDistance: .00100000005
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &530266180
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11469372, guid: b57655d704b35554c9d6eef6e9b6730a,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 530266177}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28e91a67c6b03354f872ebc62c5641a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tabCoupBalle:
-  - {fileID: 8300000, guid: af935644fbedce04a9b180fb6f000264, type: 3}
-  - {fileID: 8300000, guid: ca682899f6c0b0f42b2ce63e42064b42, type: 3}
-  - {fileID: 8300000, guid: f77ed57a9e654214daedbc5d70cb324e, type: 3}
-  - {fileID: 8300000, guid: 3b71369df2228d949b64127a470f3290, type: 3}
-  - {fileID: 8300000, guid: 9d7978031dfbbfe4782ca6d531d483e8, type: 3}
-  tabCoupRecu:
-  - {fileID: 8300000, guid: d1a116b8abe41244f827b15bd0e9a583, type: 3}
-  - {fileID: 8300000, guid: bcd842854d50ff045a379a2d1250f118, type: 3}
-  - {fileID: 8300000, guid: 201d17af090f61949b6716a5369912ff, type: 3}
-  - {fileID: 8300000, guid: 81b4ab003a66f6d48ac14ea8ef673245, type: 3}
-  - {fileID: 8300000, guid: ec5cc4d129f05324db049841568c74af, type: 3}
-  tabEjectBut:
-  - {fileID: 8300000, guid: aa6dbcde1d295d84ab0c8f556c66edec, type: 3}
-  - {fileID: 8300000, guid: 22efac3ebc0d4604697db51cf85c19c6, type: 3}
-  - {fileID: 8300000, guid: ed796dc29a2295943b659d64d47e6ad0, type: 3}
-  - {fileID: 8300000, guid: dec7509a978b046449763a7eb0a08ee3, type: 3}
-  - {fileID: 8300000, guid: 5149ebf72332f904d97a5cf9581372e4, type: 3}
-  tabMarqueBut:
-  - {fileID: 8300000, guid: ff8e8e8187883114ca3f1016e186fae0, type: 3}
-  tabPoursuivi:
-  - {fileID: 8300000, guid: 1d82af5745e98df4d81c6719d719cdae, type: 3}
-  - {fileID: 8300000, guid: 5cd857fdf13594e4f9f07e907a930294, type: 3}
-  - {fileID: 8300000, guid: 050158886e8de7b4f9fb598efb84bdfc, type: 3}
-  - {fileID: 8300000, guid: c0b9d9f213d64144fab76e62f2593125, type: 3}
-  - {fileID: 8300000, guid: 9e7fd736e7ddd4c4f9ec6e0286b46e2b, type: 3}
-  tabVictoire:
-  - {fileID: 8300000, guid: 717c1e7c103c7cb4a82ae57ad4cfe6aa, type: 3}
-  - {fileID: 8300000, guid: bd8bb320b626158499f7586079a97993, type: 3}
-  - {fileID: 8300000, guid: 028de44d5855dab40bc406852b2d7422, type: 3}
-  - {fileID: 8300000, guid: 354f864d465bc984a81fc95f49fc4e10, type: 3}
-  tabWilhemScream:
-  - {fileID: 8300000, guid: 17234cf4a59c97045952aa355f0bf705, type: 3}
-  - {fileID: 8300000, guid: b1eb5c2e46c762d48a18980777a05d08, type: 3}
-  - {fileID: 8300000, guid: 77fd92ffe7b584e45a500a995c53bd06, type: 3}
-  - {fileID: 8300000, guid: 5e72a3f09898dff48a8b2b54a93f1804, type: 3}
-  - {fileID: 8300000, guid: 10723569e4be0fa46900829b31a0680d, type: 3}
-  tabYeah:
-  - {fileID: 8300000, guid: 90bd5537ab52fc44c8e6ae2096801e65, type: 3}
-  - {fileID: 8300000, guid: 98d129c0586a81c4c96cacc7d301f94d, type: 3}
-  - {fileID: 8300000, guid: 02e6391459c8a4e44911ece9d2c85bfb, type: 3}
-  - {fileID: 8300000, guid: 69bbf978db2e35040857155cdc7ebb33, type: 3}
-  - {fileID: 8300000, guid: 1e453ca72861fb44e91c59de7af03660, type: 3}
-  mixerVoice: {fileID: 24355090, guid: 3b5232be4ec122545b3f1ef5cda50c18, type: 2}
 --- !u!114 &530266181
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3219,6 +2898,64 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
+--- !u!1 &789522282
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 789522285}
+  - 114: {fileID: 789522284}
+  - 114: {fileID: 789522283}
+  m_Layer: 0
+  m_Name: WwiseGlobal
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &789522283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 789522282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ad29b7f3531e5f4e960a214505812f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  basePath: Audio\GeneratedSoundBanks
+  language: English(US)
+  defaultPoolSize: 4096
+  lowerPoolSize: 2048
+  streamingPoolSize: 1024
+  memoryCutoffThreshold: .949999988
+--- !u!114 &789522284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 789522282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9182befcb94d78043a5a2a47d1c0efd3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &789522285
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 789522282}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1424417809}
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
 --- !u!1 &800269683
 GameObject:
   m_ObjectHideFlags: 0
@@ -8566,6 +8303,51 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 5879cfa50df950a4d9bd397685f308b6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &1424417807
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1424417809}
+  - 114: {fileID: 1424417808}
+  m_Layer: 0
+  m_Name: SoundBank
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1424417808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1424417807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86049344e2d581b4282d3e3a0d8fa99c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  valueGuid: 933a1cdfb050c344a9b1beae92e6de56
+  bankName: MainSoundBank
+  loadAsynchronous: 0
+  unloadTriggerList: 958ca0ea
+--- !u!4 &1424417809
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1424417807}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 789522285}
+  m_RootOrder: 0
 --- !u!1 &1471370140
 GameObject:
   m_ObjectHideFlags: 0
@@ -11134,7 +10916,6 @@ GameObject:
   - 33: {fileID: 1895334763}
   - 136: {fileID: 1895334762}
   - 114: {fileID: 1895334760}
-  - 114: {fileID: 1895334759}
   - 143: {fileID: 1895334758}
   - 23: {fileID: 1895334761}
   m_Layer: 0
@@ -11177,62 +10958,6 @@ CharacterController:
   m_SkinWidth: .0799999982
   m_MinMoveDistance: .00100000005
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1895334759
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11469372, guid: b57655d704b35554c9d6eef6e9b6730a,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1895334756}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28e91a67c6b03354f872ebc62c5641a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tabCoupBalle:
-  - {fileID: 8300000, guid: af935644fbedce04a9b180fb6f000264, type: 3}
-  - {fileID: 8300000, guid: ca682899f6c0b0f42b2ce63e42064b42, type: 3}
-  - {fileID: 8300000, guid: f77ed57a9e654214daedbc5d70cb324e, type: 3}
-  - {fileID: 8300000, guid: 3b71369df2228d949b64127a470f3290, type: 3}
-  - {fileID: 8300000, guid: 9d7978031dfbbfe4782ca6d531d483e8, type: 3}
-  tabCoupRecu:
-  - {fileID: 8300000, guid: d1a116b8abe41244f827b15bd0e9a583, type: 3}
-  - {fileID: 8300000, guid: bcd842854d50ff045a379a2d1250f118, type: 3}
-  - {fileID: 8300000, guid: 201d17af090f61949b6716a5369912ff, type: 3}
-  - {fileID: 8300000, guid: 81b4ab003a66f6d48ac14ea8ef673245, type: 3}
-  - {fileID: 8300000, guid: ec5cc4d129f05324db049841568c74af, type: 3}
-  tabEjectBut:
-  - {fileID: 8300000, guid: aa6dbcde1d295d84ab0c8f556c66edec, type: 3}
-  - {fileID: 8300000, guid: 22efac3ebc0d4604697db51cf85c19c6, type: 3}
-  - {fileID: 8300000, guid: ed796dc29a2295943b659d64d47e6ad0, type: 3}
-  - {fileID: 8300000, guid: dec7509a978b046449763a7eb0a08ee3, type: 3}
-  - {fileID: 8300000, guid: 5149ebf72332f904d97a5cf9581372e4, type: 3}
-  tabMarqueBut:
-  - {fileID: 8300000, guid: ff8e8e8187883114ca3f1016e186fae0, type: 3}
-  tabPoursuivi:
-  - {fileID: 8300000, guid: 1d82af5745e98df4d81c6719d719cdae, type: 3}
-  - {fileID: 8300000, guid: 5cd857fdf13594e4f9f07e907a930294, type: 3}
-  - {fileID: 8300000, guid: 050158886e8de7b4f9fb598efb84bdfc, type: 3}
-  - {fileID: 8300000, guid: c0b9d9f213d64144fab76e62f2593125, type: 3}
-  - {fileID: 8300000, guid: 9e7fd736e7ddd4c4f9ec6e0286b46e2b, type: 3}
-  tabVictoire:
-  - {fileID: 8300000, guid: 717c1e7c103c7cb4a82ae57ad4cfe6aa, type: 3}
-  - {fileID: 8300000, guid: bd8bb320b626158499f7586079a97993, type: 3}
-  - {fileID: 8300000, guid: 028de44d5855dab40bc406852b2d7422, type: 3}
-  - {fileID: 8300000, guid: 354f864d465bc984a81fc95f49fc4e10, type: 3}
-  tabWilhemScream:
-  - {fileID: 8300000, guid: 17234cf4a59c97045952aa355f0bf705, type: 3}
-  - {fileID: 8300000, guid: b1eb5c2e46c762d48a18980777a05d08, type: 3}
-  - {fileID: 8300000, guid: 77fd92ffe7b584e45a500a995c53bd06, type: 3}
-  - {fileID: 8300000, guid: 5e72a3f09898dff48a8b2b54a93f1804, type: 3}
-  - {fileID: 8300000, guid: 10723569e4be0fa46900829b31a0680d, type: 3}
-  tabYeah:
-  - {fileID: 8300000, guid: 90bd5537ab52fc44c8e6ae2096801e65, type: 3}
-  - {fileID: 8300000, guid: 98d129c0586a81c4c96cacc7d301f94d, type: 3}
-  - {fileID: 8300000, guid: 02e6391459c8a4e44911ece9d2c85bfb, type: 3}
-  - {fileID: 8300000, guid: 69bbf978db2e35040857155cdc7ebb33, type: 3}
-  - {fileID: 8300000, guid: 1e453ca72861fb44e91c59de7af03660, type: 3}
-  mixerVoice: {fileID: 24355090, guid: 3b5232be4ec122545b3f1ef5cda50c18, type: 2}
 --- !u!114 &1895334760
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11875,7 +11600,6 @@ GameObject:
   - 33: {fileID: 2021973439}
   - 136: {fileID: 2021973438}
   - 114: {fileID: 2021973436}
-  - 114: {fileID: 2021973435}
   - 143: {fileID: 2021973434}
   - 23: {fileID: 2021973437}
   m_Layer: 0
@@ -11918,62 +11642,6 @@ CharacterController:
   m_SkinWidth: .0799999982
   m_MinMoveDistance: .00100000005
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2021973435
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11469372, guid: b57655d704b35554c9d6eef6e9b6730a,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2021973432}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28e91a67c6b03354f872ebc62c5641a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tabCoupBalle:
-  - {fileID: 8300000, guid: af935644fbedce04a9b180fb6f000264, type: 3}
-  - {fileID: 8300000, guid: ca682899f6c0b0f42b2ce63e42064b42, type: 3}
-  - {fileID: 8300000, guid: f77ed57a9e654214daedbc5d70cb324e, type: 3}
-  - {fileID: 8300000, guid: 3b71369df2228d949b64127a470f3290, type: 3}
-  - {fileID: 8300000, guid: 9d7978031dfbbfe4782ca6d531d483e8, type: 3}
-  tabCoupRecu:
-  - {fileID: 8300000, guid: d1a116b8abe41244f827b15bd0e9a583, type: 3}
-  - {fileID: 8300000, guid: bcd842854d50ff045a379a2d1250f118, type: 3}
-  - {fileID: 8300000, guid: 201d17af090f61949b6716a5369912ff, type: 3}
-  - {fileID: 8300000, guid: 81b4ab003a66f6d48ac14ea8ef673245, type: 3}
-  - {fileID: 8300000, guid: ec5cc4d129f05324db049841568c74af, type: 3}
-  tabEjectBut:
-  - {fileID: 8300000, guid: aa6dbcde1d295d84ab0c8f556c66edec, type: 3}
-  - {fileID: 8300000, guid: 22efac3ebc0d4604697db51cf85c19c6, type: 3}
-  - {fileID: 8300000, guid: ed796dc29a2295943b659d64d47e6ad0, type: 3}
-  - {fileID: 8300000, guid: dec7509a978b046449763a7eb0a08ee3, type: 3}
-  - {fileID: 8300000, guid: 5149ebf72332f904d97a5cf9581372e4, type: 3}
-  tabMarqueBut:
-  - {fileID: 8300000, guid: ff8e8e8187883114ca3f1016e186fae0, type: 3}
-  tabPoursuivi:
-  - {fileID: 8300000, guid: 1d82af5745e98df4d81c6719d719cdae, type: 3}
-  - {fileID: 8300000, guid: 5cd857fdf13594e4f9f07e907a930294, type: 3}
-  - {fileID: 8300000, guid: 050158886e8de7b4f9fb598efb84bdfc, type: 3}
-  - {fileID: 8300000, guid: c0b9d9f213d64144fab76e62f2593125, type: 3}
-  - {fileID: 8300000, guid: 9e7fd736e7ddd4c4f9ec6e0286b46e2b, type: 3}
-  tabVictoire:
-  - {fileID: 8300000, guid: 717c1e7c103c7cb4a82ae57ad4cfe6aa, type: 3}
-  - {fileID: 8300000, guid: bd8bb320b626158499f7586079a97993, type: 3}
-  - {fileID: 8300000, guid: 028de44d5855dab40bc406852b2d7422, type: 3}
-  - {fileID: 8300000, guid: 354f864d465bc984a81fc95f49fc4e10, type: 3}
-  tabWilhemScream:
-  - {fileID: 8300000, guid: 17234cf4a59c97045952aa355f0bf705, type: 3}
-  - {fileID: 8300000, guid: b1eb5c2e46c762d48a18980777a05d08, type: 3}
-  - {fileID: 8300000, guid: 77fd92ffe7b584e45a500a995c53bd06, type: 3}
-  - {fileID: 8300000, guid: 5e72a3f09898dff48a8b2b54a93f1804, type: 3}
-  - {fileID: 8300000, guid: 10723569e4be0fa46900829b31a0680d, type: 3}
-  tabYeah:
-  - {fileID: 8300000, guid: 90bd5537ab52fc44c8e6ae2096801e65, type: 3}
-  - {fileID: 8300000, guid: 98d129c0586a81c4c96cacc7d301f94d, type: 3}
-  - {fileID: 8300000, guid: 02e6391459c8a4e44911ece9d2c85bfb, type: 3}
-  - {fileID: 8300000, guid: 69bbf978db2e35040857155cdc7ebb33, type: 3}
-  - {fileID: 8300000, guid: 1e453ca72861fb44e91c59de7af03660, type: 3}
-  mixerVoice: {fileID: 24355090, guid: 3b5232be4ec122545b3f1ef5cda50c18, type: 2}
 --- !u!114 &2021973436
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12234,22 +11902,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tabTroisDeuxUn:
-  - {fileID: 8300000, guid: 7c6008dfd7085c441b421f39e729aa84, type: 3}
+  - {fileID: 0}
   tabBut:
-  - {fileID: 8300000, guid: ad0bfd553484171429709150bac0e41d, type: 3}
-  - {fileID: 8300000, guid: 6451c9dc4ad3caa489c7935def988603, type: 3}
-  - {fileID: 8300000, guid: 50585a2671096aa40bab4c6be3df6520, type: 3}
-  - {fileID: 8300000, guid: f41f3e1aefa44874eb2c85049b951367, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   tabDebutMatch:
-  - {fileID: 8300000, guid: fcafb1fd5bfa46e4db2e9bf7749bc862, type: 3}
+  - {fileID: 0}
   tabDialogue:
-  - {fileID: 8300000, guid: 3f4fca6750f7a8a4681f8503adcdb927, type: 3}
+  - {fileID: 0}
   tabMatch:
-  - {fileID: 8300000, guid: 9c44ce0fac211704f8178f210740bcbb, type: 3}
-  - {fileID: 8300000, guid: 9b377fcc33303344690aef0921faf6c9, type: 3}
-  - {fileID: 8300000, guid: 6a52ed9c2d23d1e4f96147f11cfda8b2, type: 3}
-  - {fileID: 8300000, guid: 35069eceb7f42e840a7bf02c3697c9fc, type: 3}
-  - {fileID: 8300000, guid: c35dbb63e2b6dcb4883459e1ef7a59c6, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   mixerVoice: {fileID: 24300001, guid: 3b5232be4ec122545b3f1ef5cda50c18, type: 2}
 --- !u!114 &2052379256
 MonoBehaviour:

@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2948236873	AMB_Public_Normal			\Default Work Unit\AMB_Public_Normal	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	1007659156	AMB_Public_Normal	C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\.cache\Windows\SFX\AMB_Public_Normal_8BD76F1E.wem		\Actor-Mixer Hierarchy\Ambiances\AMB_Public_Normal		17985424
+
