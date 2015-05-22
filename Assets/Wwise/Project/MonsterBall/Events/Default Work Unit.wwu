@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{D899008C-EE7F-4475-814E-BB3DC86CD141}" SchemaVersion="69">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{D899008C-EE7F-4475-814E-BB3DC86CD141}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="Public" ID="{74954EBF-3E51-43AD-BE21-279165A376B4}" ShortID="190174969">
+					<ChildrenList>
+						<Event Name="Public_Normal" ID="{51F24495-953D-43F8-B9CE-000C3412ECD4}">
+							<ChildrenList>
+								<Action Name="Play" ID="{F4C2E4E7-7A45-4A4E-A143-A38F14220C74}" ShortID="822453316" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{AFA4D49F-95CD-46A5-B215-C184A155A569}" Global="false">
+											<ObjectRef Name="AMB_Public_Normal" ID="{C0D3115C-8B4C-4E28-ABDF-5544C5F971D3}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+										</Element>
+									</ElementList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Public_Intensification" ID="{A6B73459-D8BB-49B4-9183-797CC5E46245}">
+							<ChildrenList>
+								<Action Name="Play" ID="{E0B0BB4C-BE41-4AB3-AF49-01F5089F6CFF}" ShortID="587070971" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{05B5F35B-E3F8-4F77-9276-2310F15836E3}" Global="false">
+											<ObjectRef Name="Intensification" ID="{3B830137-394A-4A85-B243-F8DA0510D1BB}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+										</Element>
+									</ElementList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Public_Fin" ID="{B85AA440-5AE6-47AA-A4C4-D64C351A1CDE}">
+							<ChildrenList>
+								<Action Name="Play" ID="{0CACF977-C16A-43C3-8E4B-4975D272AD1B}" ShortID="333265529" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{6EBBB2F1-BC5E-4B3F-B35F-1764F909CB7A}" Global="false">
+											<ObjectRef Name="Fin" ID="{65A62B4B-6555-46DB-BF3D-95B5C1A00058}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+										</Element>
+									</ElementList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Voix" ID="{DA714EC0-B4FE-45E8-BA86-C6BCB5DE6DE7}" ShortID="793375017">
+					<ChildrenList>
+						<Folder Name="Niveks" ID="{F4171C40-F72B-4290-BB99-B5927208B236}" ShortID="39795413"/>
+						<Folder Name="Balle" ID="{C44FF999-3A0B-4106-9D06-DC8E6F73AB9E}" ShortID="147926892"/>
+						<Folder Name="Monstre" ID="{9B1F4F36-E1FB-4FA7-A3D9-B4DEC83362C3}" ShortID="982315659"/>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="SFX" ID="{74A0AF9E-7803-48C8-AAE5-C7494C676471}" ShortID="288675139"/>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>
