@@ -67,8 +67,9 @@ public class PlayerControllerF : MonoBehaviour
     public float durationInvul = 2.0f;
     private bool touchable = true;
     private SpriteRenderer spriteBonus;
-    private NivekSound nivekSound;
     private SpriteRenderer spriteGround;
+
+    private SoundManager sound;
 
     // Use this for initialization
     void Start()
@@ -92,9 +93,11 @@ public class PlayerControllerF : MonoBehaviour
         else
             goal = GameControllerF.GetPosRedGoal();
 
-       
 
-        nivekSound = GetComponent<NivekSound>();
+        sound = GetComponent<SoundManager>();
+        sound.LoadBank();
+
+        //nivekSound = GetComponent<NivekSound>();
         //angleDash *= Mathf.Deg2Rad;
         //angleHoming *= Mathf.Deg2Rad;
         //angleShoot *= Mathf.Deg2Rad;
@@ -262,7 +265,8 @@ public class PlayerControllerF : MonoBehaviour
 
         if (Input.GetButtonUp(fire) && loading)
         {
-            PlayRandomSound(AbstractSound.Action.CoupBalle);
+            //PlayRandomSound(AbstractSound.Action.CoupBalle);
+            sound.PlayEvent("SFX_Niveks_Frappe", gameObject);
 
             if (GetComponentInChildren<Animator>() && GetComponentInChildren<Animator>().GetBool("isCharging") == true)
                 GetComponentInChildren<Animator>().SetBool("isCharging", false);
@@ -339,6 +343,8 @@ public class PlayerControllerF : MonoBehaviour
      */
     bool Hit(GameObject obj)
     {
+        //OnClickHitEvent();
+
         Vector3 directionImpact = GetDirectionNormalize() * power;
         directionImpact.y = 0.1f;
 
@@ -352,7 +358,6 @@ public class PlayerControllerF : MonoBehaviour
                 player.AddImpact(directionImpact);
                 player.setLoading(false);
                 player.callStun(stunKick);
-                player.PlayRandomSound(AbstractSound.Action.CoupRecu);
 
                 // feedbacks player frappe autre player
                 foreach (ParticleSystem ps in GetComponentsInChildren<ParticleSystem>())
@@ -380,6 +385,7 @@ public class PlayerControllerF : MonoBehaviour
             {
                 if (monster.IsTouchable())
                 {
+                   // monster.OnClickHitEvent += ;
                     monster.callDisableMagnet();
 
                     if (GameControllerF.WhereIsMyAlly(this) != Vector3.zero)
@@ -398,15 +404,13 @@ public class PlayerControllerF : MonoBehaviour
 
                     if (monster.GetWrath() < monster.wrathMax)
                     {
-                        monster.PlayRandomSound(AbstractSound.Action.Impact);
+
                     }
 
                     //feedbacks balle coup reçu par un joueur
                     if (power == powerMax)
                     {
                         Camera.main.GetComponent<CameraShake>().shake(0.6f, 0.4f, 1);
-                        //GetComponent<AudioSource>().clip = VOIX_Niveks_CoupRecu_02;
-                        //PlayRandomSound();
 
                     }
 
@@ -537,10 +541,5 @@ public class PlayerControllerF : MonoBehaviour
     public void setLoading(bool loading)
     {
         this.loading = loading;
-    }
-
-    public void PlayRandomSound(AbstractSound.Action action)
-    {
-        //nivekSound.PlayRandomSound(action);
     }
 }
