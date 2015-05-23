@@ -15,14 +15,11 @@ public class GameManagerF : MonoBehaviour {
     private float rngBonus = 0.1f;
     private bool bonusCanPopUp = true;
 
-    private CommentarySound commentary;
 
 	// Use this for initialization
 	void Awake () {
         //txtScore = GameControllerF.GetTxtScore();
         //txtDuration = GameControllerF.GetTxtDuration();
-
-        commentary = GetComponent<CommentarySound>();
 	}
 
     void Start()
@@ -106,10 +103,5 @@ public class GameManagerF : MonoBehaviour {
         Vector3 rngPop = Random.insideUnitSphere*5;
         rngPop.y = 1.0f;
         Instantiate(GameControllerF.GetCake(),rngPop,Quaternion.identity);
-    }
-
-    public void PlayRandomSound(AbstractSound.Action action)
-    {
-        commentary.PlayRandomSound(action);
     }
 }

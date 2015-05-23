@@ -38,10 +38,6 @@ public class MonsterControllerF : MonoBehaviour {
     public float durationInvul = 2.0f;
     private bool touchable = true;
 
-    [Header("Sound")]
-    private BallSound ballSound;
-    private MonsterSound monsterSound;
-
     [Space(20)]
     public float coefColliderMonster = 1.05f;
     [Space(20)]
@@ -63,14 +59,16 @@ public class MonsterControllerF : MonoBehaviour {
 
     private bool seeACake = false;
     private Vector3 cakePos;
+    
+
+    //public delegate void OnClickHit();
+    //public event OnClickHit OnClickHitEvent;
 
 
 	// Use this for initialization
 	void Start () {
 	    body = GetComponent<Rigidbody>();
         colliderMagnet = GetComponent<Collider>();
-        monsterSound = GetComponent<MonsterSound>();
-        ballSound = GetComponent<BallSound>();
 
         if (!monsterForm)
         {
@@ -158,8 +156,6 @@ public class MonsterControllerF : MonoBehaviour {
         
         body.AddForce(positionReach,ForceMode.Impulse);
 
-        if (UnityEngine.Random.value < 0.1f)
-            PlayRandomSound(AbstractSound.Action.Course);
 
         StartCoroutine(RestMoveBall(Vector3.SqrMagnitude(positionReach)/speedDivisionFactor));
 
@@ -242,8 +238,6 @@ public class MonsterControllerF : MonoBehaviour {
         transform.rotation = Quaternion.identity;
         transform.position = new Vector3(0,5,0);
 
-        PlayRandomSound(AbstractSound.Action.RemiseEnJeu);
-
         Camera cam = Camera.allCameras[0];
         if(cam.GetComponent<CameraManagerF>() != null)
         {
@@ -267,14 +261,12 @@ public class MonsterControllerF : MonoBehaviour {
         skinBall.SetActive(false);
         skinMonster.SetActive(true);
         transform.localScale *= monsterScale;
-        PlayRandomSound(AbstractSound.Action.TransformationBalleMonstre);
 
         yield return new WaitForSeconds(revocation);
 
         skinBall.SetActive(true);
         skinMonster.SetActive(false);
         wrath = 0;
-        PlayRandomSound(AbstractSound.Action.TransformationMonstreBall);
 
         if(eatPlayer)
         {
@@ -377,7 +369,6 @@ public class MonsterControllerF : MonoBehaviour {
         if (player == playerAte)
         {
             player.GetComponent<PlayerControllerF>().FlyAway();
-            PlayRandomSound(AbstractSound.Action.RecracheJoueur);
 
         }
 
@@ -473,18 +464,6 @@ public class MonsterControllerF : MonoBehaviour {
     public void GoodCake()
     {
         seeACake = false;
-    }
-
-    public void PlayRandomSound(AbstractSound.Action action)
-    {
-        if (!monsterForm)
-        {
-            //ballSound.PlayRandomSound(action);
-        }
-        else
-        {
-            //monsterSound.PlayRandomSound(action);
-        }
     }
 
     public int GetWrath()

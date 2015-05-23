@@ -1,0 +1,521 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64e666e89aeccd84bac5d95a4d1f9d0e, type: 3}
+  m_Name: AkWwiseProjectData 95
+  m_EditorClassIdentifier: 
+  CurrentPluginConfig: Profile
+  EventWwu:
+  - PhysicalPath: Events\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    Guid: '{D899008C-EE7F-4475-814E-BB3DC86CD141}'
+    List:
+    - Name: Menu_Move
+      Path: Default Work Unit\Menu\Menu_Move
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Menu
+        ObjectType: 4
+      - ElementName: Menu_Move
+        ObjectType: 3
+      ID: 1927068452
+      Guid: 33b9c2f2b4e23a4fb2248da6f4fd218b
+      maxAttenuation: 0
+    - Name: Menu_Valid
+      Path: Default Work Unit\Menu\Menu_Valid
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Menu
+        ObjectType: 4
+      - ElementName: Menu_Valid
+        ObjectType: 3
+      ID: 1988127715
+      Guid: 57c5c627ea6fea4dba260fa8ee8d3fce
+      maxAttenuation: 0
+    - Name: Public_But
+      Path: Default Work Unit\Public\Public_But
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Public
+        ObjectType: 4
+      - ElementName: Public_But
+        ObjectType: 3
+      ID: -1234150110
+      Guid: 6e188d06646af44daf0a772ac4142926
+      maxAttenuation: 0
+    - Name: Public_Fin
+      Path: Default Work Unit\Public\Public_Fin
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Public
+        ObjectType: 4
+      - ElementName: Public_Fin
+        ObjectType: 3
+      ID: -899186152
+      Guid: 40a45ab8e65aaa47a4c4d64c351a1cde
+      maxAttenuation: 0
+    - Name: Public_Intensification
+      Path: Default Work Unit\Public\Public_Intensification
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Public
+        ObjectType: 4
+      - ElementName: Public_Intensification
+        ObjectType: 3
+      ID: -994660560
+      Guid: 5934b7a6bbd8b4499183797cc5e46245
+      maxAttenuation: 0
+    - Name: Public_Normal
+      Path: Default Work Unit\Public\Public_Normal
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Public
+        ObjectType: 4
+      - ElementName: Public_Normal
+        ObjectType: 3
+      ID: -1275194120
+      Guid: 9544f2513d95f843b9ce000c3412ecd4
+      maxAttenuation: 0
+    - Name: SFX_But_Flash
+      Path: Default Work Unit\SFX\SFX_But_Flash
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: SFX_But_Flash
+        ObjectType: 3
+      ID: -498643151
+      Guid: e80b06608048d8469497e296e70750f5
+      maxAttenuation: 0
+    - Name: SFX_Monstre_Course
+      Path: Default Work Unit\SFX\SFX_Monstre_Course
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: SFX_Monstre_Course
+        ObjectType: 3
+      ID: -1254432667
+      Guid: b784b9dc286d4743bddb3960b62dcbda
+      maxAttenuation: 0
+    - Name: SFX_Niveks_ChargeCoup
+      Path: Default Work Unit\SFX\SFX_Niveks_ChargeCoup
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: SFX_Niveks_ChargeCoup
+        ObjectType: 3
+      ID: -760026745
+      Guid: 38d95c2727157e49ad43890cdfac8929
+      maxAttenuation: 0
+    - Name: SFX_Niveks_Coup
+      Path: Default Work Unit\SFX\SFX_Niveks_Coup
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: SFX_Niveks_Coup
+        ObjectType: 3
+      ID: 218682343
+      Guid: 569fbba21ce3234c9c9a5c9364e13726
+      maxAttenuation: 0
+    - Name: SFX_Niveks_Course
+      Path: Default Work Unit\SFX\SFX_Niveks_Course
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: SFX_Niveks_Course
+        ObjectType: 3
+      ID: -1067231871
+      Guid: 44c6697f41d0a9478fcc8a7a312cfc1c
+      maxAttenuation: 0
+    - Name: SFX_Niveks_Frappe
+      Path: Default Work Unit\SFX\SFX_Niveks_Frappe
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: SFX_Niveks_Frappe
+        ObjectType: 3
+      ID: 343276576
+      Guid: 308100a5f405ba4e91c323e1b9df9272
+      maxAttenuation: 0
+    - Name: Transfo_BalleMonstre
+      Path: Default Work Unit\Voix\Transformation\Transfo_BalleMonstre
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Voix
+        ObjectType: 4
+      - ElementName: Transformation
+        ObjectType: 4
+      - ElementName: Transfo_BalleMonstre
+        ObjectType: 3
+      ID: -193303401
+      Guid: a685e6c4bc7ff34aa69ee6ff1f3fd07e
+      maxAttenuation: 0
+    - Name: Transfo_MonstreBalle
+      Path: Default Work Unit\Voix\Transformation\Transfo_MonstreBalle
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Voix
+        ObjectType: 4
+      - ElementName: Transformation
+        ObjectType: 4
+      - ElementName: Transfo_MonstreBalle
+        ObjectType: 3
+      ID: -1088958781
+      Guid: bf322a449018ce48b451234fcd168687
+      maxAttenuation: 0
+    - Name: VX_Balle_But
+      Path: Default Work Unit\Voix\Balle\VX_Balle_But
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Voix
+        ObjectType: 4
+      - ElementName: Balle
+        ObjectType: 4
+      - ElementName: VX_Balle_But
+        ObjectType: 3
+      ID: -2015247734
+      Guid: f2ae2e14bf59d346996e4462915ea747
+      maxAttenuation: 0
+    - Name: VX_Balle_Cloison
+      Path: Default Work Unit\Voix\Balle\VX_Balle_Cloison
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Voix
+        ObjectType: 4
+      - ElementName: Balle
+        ObjectType: 4
+      - ElementName: VX_Balle_Cloison
+        ObjectType: 3
+      ID: -24072296
+      Guid: 748358c309e0414aa3797893e45a61cf
+      maxAttenuation: 0
+    - Name: VX_Balle_Coup
+      Path: Default Work Unit\Voix\Balle\VX_Balle_Coup
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Voix
+        ObjectType: 4
+      - ElementName: Balle
+        ObjectType: 4
+      - ElementName: VX_Balle_Coup
+        ObjectType: 3
+      ID: 43799444
+      Guid: 45953fa5d9906d4f9bb76cc107e8cf70
+      maxAttenuation: 0
+    - Name: VX_Balle_Course
+      Path: Default Work Unit\Voix\Balle\VX_Balle_Course
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Voix
+        ObjectType: 4
+      - ElementName: Balle
+        ObjectType: 4
+      - ElementName: VX_Balle_Course
+        ObjectType: 3
+      ID: -1407185178
+      Guid: 8a9ee678176b014e8e22cd08ce6bc6fc
+      maxAttenuation: 0
+    - Name: VX_Balle_RemiseEnJeu
+      Path: Default Work Unit\Voix\Balle\VX_Balle_RemiseEnJeu
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Voix
+        ObjectType: 4
+      - ElementName: Balle
+        ObjectType: 4
+      - ElementName: VX_Balle_RemiseEnJeu
+        ObjectType: 3
+      ID: -1618686365
+      Guid: 2f2217fcce109b4a97d1c88aff8eaaf1
+      maxAttenuation: 0
+    - Name: VX_Comment_DebutMatch
+      Path: Default Work Unit\Voix\Commentaire\VX_Comment_DebutMatch
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Voix
+        ObjectType: 4
+      - ElementName: Commentaire
+        ObjectType: 4
+      - ElementName: VX_Comment_DebutMatch
+        ObjectType: 3
+      ID: -1631377767
+      Guid: 4ebf4d884723914e8713026797d48536
+      maxAttenuation: 0
+    - Name: VX_Comment_FinMatch
+      Path: Default Work Unit\Voix\Commentaire\VX_Comment_FinMatch
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Voix
+        ObjectType: 4
+      - ElementName: Commentaire
+        ObjectType: 4
+      - ElementName: VX_Comment_FinMatch
+        ObjectType: 3
+      ID: 682388778
+      Guid: 568bd5767eec6349895162a8b4bf9fc7
+      maxAttenuation: 0
+    - Name: VX_Monstre_Course
+      Path: Default Work Unit\Voix\Monstre\VX_Monstre_Course
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Voix
+        ObjectType: 4
+      - ElementName: Monstre
+        ObjectType: 4
+      - ElementName: VX_Monstre_Course
+        ObjectType: 3
+      ID: -650653302
+      Guid: f5e698be68d8f74fb2cafdbf3a1416bf
+      maxAttenuation: 0
+    - Name: VX_Monstre_Crache
+      Path: Default Work Unit\Voix\Monstre\VX_Monstre_Crache
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Voix
+        ObjectType: 4
+      - ElementName: Monstre
+        ObjectType: 4
+      - ElementName: VX_Monstre_Crache
+        ObjectType: 3
+      ID: -1290604909
+      Guid: fe1a280c0d3f9845a8018abf4ee23c72
+      maxAttenuation: 0
+    - Name: VX_Niveks_ButGagnant
+      Path: Default Work Unit\Voix\Niveks\VX_Niveks_ButGagnant
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Voix
+        ObjectType: 4
+      - ElementName: Niveks
+        ObjectType: 4
+      - ElementName: VX_Niveks_ButGagnant
+        ObjectType: 3
+      ID: -153889010
+      Guid: 4245e5100f38854db59726fd5f7cb8fa
+      maxAttenuation: 0
+    - Name: VX_Niveks_ButPerdant
+      Path: Default Work Unit\Voix\Niveks\VX_Niveks_ButPerdant
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Voix
+        ObjectType: 4
+      - ElementName: Niveks
+        ObjectType: 4
+      - ElementName: VX_Niveks_ButPerdant
+        ObjectType: 3
+      ID: -1082884894
+      Guid: 6cd452316417a1419d36ce1da62bd0d3
+      maxAttenuation: 0
+    - Name: VX_Niveks_Coup
+      Path: Default Work Unit\Voix\Niveks\VX_Niveks_Coup
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Voix
+        ObjectType: 4
+      - ElementName: Niveks
+        ObjectType: 4
+      - ElementName: VX_Niveks_Coup
+        ObjectType: 3
+      ID: 2143267510
+      Guid: 69a35d4ecce88345b9c5d7bdf0403ee2
+      maxAttenuation: 0
+    - Name: VX_Niveks_DebutMatch
+      Path: Default Work Unit\Voix\Niveks\VX_Niveks_DebutMatch
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Voix
+        ObjectType: 4
+      - ElementName: Niveks
+        ObjectType: 4
+      - ElementName: VX_Niveks_DebutMatch
+        ObjectType: 3
+      ID: -1645847122
+      Guid: dd7bda85ca418c40abb1d2f706102b52
+      maxAttenuation: 0
+    - Name: VX_Niveks_FinMatchGagnant
+      Path: Default Work Unit\Voix\Niveks\VX_Niveks_FinMatchGagnant
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Voix
+        ObjectType: 4
+      - ElementName: Niveks
+        ObjectType: 4
+      - ElementName: VX_Niveks_FinMatchGagnant
+        ObjectType: 3
+      ID: 1123955361
+      Guid: df91d945c93ac2458889d8895d97ad70
+      maxAttenuation: 0
+    - Name: VX_Niveks_FinMatchPerdant
+      Path: Default Work Unit\Voix\Niveks\VX_Niveks_FinMatchPerdant
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Voix
+        ObjectType: 4
+      - ElementName: Niveks
+        ObjectType: 4
+      - ElementName: VX_Niveks_FinMatchPerdant
+        ObjectType: 3
+      ID: -504375943
+      Guid: a6acab08338ed342ac3e029f3685182c
+      maxAttenuation: 0
+    - Name: VX_Niveks_Frappe
+      Path: Default Work Unit\Voix\Niveks\VX_Niveks_Frappe
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Voix
+        ObjectType: 4
+      - ElementName: Niveks
+        ObjectType: 4
+      - ElementName: VX_Niveks_Frappe
+        ObjectType: 3
+      ID: -339702651
+      Guid: 7eec02eb6d8c3046bcc61fcf78070f34
+      maxAttenuation: 0
+    - Name: VX_Niveks_ImpactBut
+      Path: Default Work Unit\Voix\Niveks\VX_Niveks_ImpactBut
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Voix
+        ObjectType: 4
+      - ElementName: Niveks
+        ObjectType: 4
+      - ElementName: VX_Niveks_ImpactBut
+        ObjectType: 3
+      ID: -59341270
+      Guid: 7adf6855c341ed4d8e1e7e0d4bbc92a5
+      maxAttenuation: 0
+    - Name: Vx_Niveks_ImpactCloison
+      Path: Default Work Unit\Voix\Niveks\Vx_Niveks_ImpactCloison
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Voix
+        ObjectType: 4
+      - ElementName: Niveks
+        ObjectType: 4
+      - ElementName: Vx_Niveks_ImpactCloison
+        ObjectType: 3
+      ID: 1918913592
+      Guid: e59028be2791e943963659b1b62c8f0a
+      maxAttenuation: 0
+    - Name: Vx_Niveks_Poursuivi
+      Path: Default Work Unit\Voix\Niveks\Vx_Niveks_Poursuivi
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Voix
+        ObjectType: 4
+      - ElementName: Niveks
+        ObjectType: 4
+      - ElementName: Vx_Niveks_Poursuivi
+        ObjectType: 3
+      ID: -1042972055
+      Guid: 009ce89d9f5a0b4986093d0f5bbaaba1
+      maxAttenuation: 0
+    - Name: Vx_Niveks_Wilhem
+      Path: Default Work Unit\Voix\Niveks\Vx_Niveks_Wilhem
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Voix
+        ObjectType: 4
+      - ElementName: Niveks
+        ObjectType: 4
+      - ElementName: Vx_Niveks_Wilhem
+        ObjectType: 3
+      ID: -510529391
+      Guid: 1def8cfb4fbe0e4c996d9934cd9d5b5d
+      maxAttenuation: 0
+  AuxBusWwu:
+  - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    Guid: '{F2826676-125A-488D-B5BC-8666D671270D}'
+    List:
+    - Name: ReverbStade
+      Path: Default Work Unit\Master Audio Bus\ReverbStade
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+      - ElementName: ReverbStade
+        ObjectType: 1
+      ID: -1038071216
+      Guid: 3512aed9f484bc489e4fff2edafdd297
+  StateWwu:
+  - PhysicalPath: States\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    Guid: '{E063E93F-18FE-4D07-BA73-FCEF164EB134}'
+    List: []
+  SwitchWwu:
+  - PhysicalPath: Switches\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    Guid: '{038B2B74-A44F-451E-A570-029867F4EC79}'
+    List: []
+  BankWwu:
+  - PhysicalPath: SoundBanks\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    Guid: '{1B524699-2227-4E79-80C0-073E81FEE8BA}'
+    List:
+    - Name: MainSoundBank
+      Path: Default Work Unit\MainSoundBank
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: MainSoundBank
+        ObjectType: 7
+      ID: 534561221
+      Guid: 933a1cdfb050c344a9b1beae92e6de56
+  ExpandedItems: []
+  m_lastPopulateTimePsrt1: -1274587556
+  m_lastPopulateTimePart2: -1999477887
+  autoPopulateEnabled: 1
+  basePath: Audio\GeneratedSoundBanks
+  language: English(US)
+  defaultPoolSize: 4096
+  lowerPoolSize: 2048
+  streamingPoolSize: 1024
+  memoryCutoffThreshold: .949999988

@@ -194,6 +194,7 @@ GameObject:
   - 135: {fileID: 7400959}
   - 54: {fileID: 7400958}
   - 114: {fileID: 7400957}
+  - 114: {fileID: 7400955}
   m_Layer: 0
   m_Name: MonsterAnimated
   m_TagString: Monster
@@ -215,6 +216,27 @@ Transform:
   - {fileID: 1215151605}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &7400955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 7400953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 704553ab0af34f544bca18cd2ee785f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: 
+  useOtherObject: 0
+  valueGuid: 45953fa5d9906d4f9bb76cc107e8cf70
+  eventID: 43799444
+  soundEmitterObject: {fileID: 0}
+  enableActionOnEvent: 0
+  actionOnEventType: 0
+  curveInterpolation: 4
+  transitionDuration: 0
+  m_callbackData: {fileID: 0}
 --- !u!114 &7400957
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -708,7 +730,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 86739958}
   m_LocalRotation: {x: .707106829, y: 0, z: 0, w: .707106709}
-  m_LocalPosition: {x: 0, y: .200000003, z: 0}
+  m_LocalPosition: {x: 0, y: .00100000005, z: 0}
   m_LocalScale: {x: .349999994, y: .349999994, z: 1}
   m_Children: []
   m_Father: {fileID: 1351621366}
@@ -869,6 +891,7 @@ GameObject:
   - 114: {fileID: 99554769}
   - 143: {fileID: 99554767}
   - 23: {fileID: 99554770}
+  - 114: {fileID: 99554768}
   m_Layer: 0
   m_Name: PlayerFromLudo 2
   m_TagString: Player
@@ -909,6 +932,17 @@ CharacterController:
   m_SkinWidth: .0799999982
   m_MinMoveDistance: .00100000005
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &99554768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 99554765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1e132045d8422c42b9cfb9b87726111, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &99554769
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3292,6 +3326,7 @@ GameObject:
   - 114: {fileID: 530266181}
   - 143: {fileID: 530266179}
   - 23: {fileID: 530266182}
+  - 114: {fileID: 530266180}
   m_Layer: 0
   m_Name: PlayerFromLudo 3
   m_TagString: Player
@@ -3332,6 +3367,17 @@ CharacterController:
   m_SkinWidth: .0799999982
   m_MinMoveDistance: .00100000005
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &530266180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 530266177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1e132045d8422c42b9cfb9b87726111, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &530266181
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4436,6 +4482,7 @@ GameObject:
   - 23: {fileID: 802648611}
   - 64: {fileID: 802648613}
   - 114: {fileID: 802648614}
+  - 114: {fileID: 802648615}
   m_Layer: 0
   m_Name: redGoal
   m_TagString: TeamRed
@@ -4512,6 +4559,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bf9abdf5d47a28409f2c536c214f468, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &802648615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 802648609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 704553ab0af34f544bca18cd2ee785f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: d1bbb3b5
+  useOtherObject: 0
+  valueGuid: 6e188d06646af44daf0a772ac4142926
+  eventID: -1234150110
+  soundEmitterObject: {fileID: 0}
+  enableActionOnEvent: 0
+  actionOnEventType: 0
+  curveInterpolation: 4
+  transitionDuration: 0
+  m_callbackData: {fileID: 0}
 --- !u!1 &817335603
 GameObject:
   m_ObjectHideFlags: 0
@@ -7021,7 +7089,6 @@ GameObject:
   - 23: {fileID: 1108100045}
   - 64: {fileID: 1108100047}
   - 114: {fileID: 1108100048}
-  - 114: {fileID: 1108100049}
   - 114: {fileID: 1108100050}
   m_Layer: 0
   m_Name: blueGoal
@@ -7099,17 +7166,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bf9abdf5d47a28409f2c536c214f468, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1108100049
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1108100043}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 264c2cab72acede40a6b2793a7ffc784, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1108100050
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7121,7 +7177,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 704553ab0af34f544bca18cd2ee785f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerList: 7d2b47b6
+  triggerList: d1bbb3b5
   useOtherObject: 0
   valueGuid: 6e188d06646af44daf0a772ac4142926
   eventID: -1234150110
@@ -14440,6 +14496,7 @@ GameObject:
   - 114: {fileID: 1895334760}
   - 143: {fileID: 1895334758}
   - 23: {fileID: 1895334761}
+  - 114: {fileID: 1895334759}
   m_Layer: 0
   m_Name: PlayerFromLudo 0
   m_TagString: Player
@@ -14480,6 +14537,17 @@ CharacterController:
   m_SkinWidth: .0799999982
   m_MinMoveDistance: .00100000005
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1895334759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1895334756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1e132045d8422c42b9cfb9b87726111, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1895334760
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15244,6 +15312,7 @@ GameObject:
   - 114: {fileID: 2021973436}
   - 143: {fileID: 2021973434}
   - 23: {fileID: 2021973437}
+  - 114: {fileID: 2021973435}
   m_Layer: 0
   m_Name: PlayerFromLudo 1
   m_TagString: Player
@@ -15284,6 +15353,17 @@ CharacterController:
   m_SkinWidth: .0799999982
   m_MinMoveDistance: .00100000005
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2021973435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2021973432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1e132045d8422c42b9cfb9b87726111, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &2021973436
 MonoBehaviour:
   m_ObjectHideFlags: 0

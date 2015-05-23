@@ -10,9 +10,6 @@ public class GoalScriptF : MonoBehaviour {
     private GuiEffects guiEffectsScript;
 
 
-    public delegate void OnActivation();
-    public event OnActivation OnActivationEvent;
-
 	// Use this for initialization
 	void Start () {
 	    manager = GameControllerF.getManager();
@@ -32,14 +29,12 @@ public class GoalScriptF : MonoBehaviour {
 
         if (other.gameObject.tag == "Monster")
         {
-            OnActivationEvent();
             if (!other.gameObject.GetComponent<MonsterControllerF>().IsMonsterForm())
             {
                 //feedbacks goal balle
                 Camera.main.GetComponent<CameraShake>().shake(0.8f, 0.6f, 1.0f);
                 guiEffectsScript.flashGoal(tag);
 
-                other.gameObject.GetComponent<MonsterControllerF>().PlayRandomSound(AbstractSound.Action.But);
                 manager.AddScore(tag);
                 //tp au centre + invul de 3 secondes
                 other.gameObject.GetComponent<MonsterControllerF>().Respawn();
