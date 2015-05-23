@@ -9,10 +9,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 64e666e89aeccd84bac5d95a4d1f9d0e, type: 3}
-  m_Name: AkWwiseProjectData 27
+  m_Name: AkWwiseProjectData 31
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
-  CurrentPluginConfig: Profile
+  CurrentPluginConfig: 
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
@@ -94,21 +93,10 @@ MonoBehaviour:
         ObjectType: 7
       ID: 534561221
       Guid: 933a1cdfb050c344a9b1beae92e6de56
-=======
-<<<<<<< HEAD
-  CurrentPluginConfig: Profile
-=======
-  CurrentPluginConfig: 
->>>>>>> origin/master
-  EventWwu: []
-  AuxBusWwu: []
-  StateWwu: []
-  SwitchWwu: []
-  BankWwu: []
->>>>>>> origin/master
-  ExpandedItems: []
-  m_lastPopulateTimePsrt1: -220835434
-  m_lastPopulateTimePart2: -1999477944
+  ExpandedItems:
+  - /MonsterBall
+  m_lastPopulateTimePsrt1: 382856242
+  m_lastPopulateTimePart2: -1999477945
   autoPopulateEnabled: 1
   basePath: Audio\GeneratedSoundBanks
   language: English(US)

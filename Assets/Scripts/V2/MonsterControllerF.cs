@@ -479,11 +479,11 @@ public class MonsterControllerF : MonoBehaviour {
     {
         if (!monsterForm)
         {
-            ballSound.PlayRandomSound(action);
+            //ballSound.PlayRandomSound(action);
         }
         else
         {
-            monsterSound.PlayRandomSound(action);
+            //monsterSound.PlayRandomSound(action);
         }
     }
 
