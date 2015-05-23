@@ -541,6 +541,6 @@ public class PlayerControllerF : MonoBehaviour
 
     public void PlayRandomSound(AbstractSound.Action action)
     {
-        nivekSound.PlayRandomSound(action);
+        //nivekSound.PlayRandomSound(action);
     }
 }
