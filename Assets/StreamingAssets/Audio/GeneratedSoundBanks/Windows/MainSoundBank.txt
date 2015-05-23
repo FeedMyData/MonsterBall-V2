@@ -1,6 +1,34 @@
 Event	ID	Name			Wwise Object Path	Notes
+	43799444	VX_Balle_Coup			\Default Work Unit\Voix\Balle\VX_Balle_Coup	
+	218682343	SFX_Niveks_Coup			\Default Work Unit\SFX\SFX_Niveks_Coup	
+	343276576	SFX_Niveks_Frappe			\Default Work Unit\SFX\SFX_Niveks_Frappe	
+	2075985603	Vx_Niveks_Impact_Cloison			\Default Work Unit\Voix\Niveks\Vx_Niveks_Impact_Cloison	
+	2143267510	VX_Niveks_Coup			\Default Work Unit\Voix\Niveks\VX_Niveks_Coup	
+	2279719562	VX_Balle_But			\Default Work Unit\Voix\Balle\VX_Balle_But	
+	2676280931	VX_Balle_RemiseEnJeu			\Default Work Unit\Voix\Balle\VX_Balle_RemiseEnJeu	
+	2887782118	VX_Balle_Course			\Default Work Unit\Voix\Balle\VX_Balle_Course	
+	3004362387	VX_Monstre_Crache			\Default Work Unit\Voix\Monstre\VX_Monstre_Crache	
 	3019773176	Public_Normal			\Default Work Unit\Public\Public_Normal	
+	3060817186	Public_But			\Default Work Unit\Public\Public_But	
+	3206008515	Transfo_MonstreBalle			\Default Work Unit\Voix\Transformation\Transfo_MonstreBalle	
+	3300306736	Public_Intensification			\Default Work Unit\Public\Public_Intensification	
+	3360566071	VX_Niveks_But_Perdant			\Default Work Unit\Voix\Niveks\VX_Niveks_But_Perdant	
+	3395781144	Public_Fin			\Default Work Unit\Public\Public_Fin	
+	3644313994	VX_Monstre_Course			\Default Work Unit\Voix\Monstre\VX_Monstre_Course	
+	3674007655	VX_Niveks_But_Gagnant			\Default Work Unit\Voix\Niveks\VX_Niveks_But_Gagnant	
+	3955264645	VX_Niveks_Frappe			\Default Work Unit\Voix\Niveks\VX_Niveks_Frappe	
+	4101663895	Transfo_BalleMonstre			\Default Work Unit\Voix\Transformation\Transfo_BalleMonstre	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	131947360	FX_Public_But_03	C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\.cache\Windows\SFX\FX_Public_But_03_DDC98EF4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambiances\But\FX_Public_But_03		642864
+	236322355	FX_Public_Fin_01	C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\.cache\Windows\SFX\FX_Public_Fin_01_DDC98EF4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambiances\Fin\FX_Public_Fin_01		1075588
+	294783796	FX_Public_But_01	C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\.cache\Windows\SFX\FX_Public_But_01_DDC98EF4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambiances\But\FX_Public_But_01		606036
+	458354361	FX_Public_But_02	C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\.cache\Windows\SFX\FX_Public_But_02_DDC98EF4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambiances\But\FX_Public_But_02		612732
+	557670751	FX_Public_But_04	C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\.cache\Windows\SFX\FX_Public_But_04_DDC98EF4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambiances\But\FX_Public_But_04		870524
+	741232199	FX_Public_Intensification_03	C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\.cache\Windows\SFX\FX_Public_Intensification_03_DDC98EF4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambiances\Intensification\FX_Public_Intensification_03		1016736
+	743327687	FX_Public_Fin_02	C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\.cache\Windows\SFX\FX_Public_Fin_02_DDC98EF4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambiances\Fin\FX_Public_Fin_02		1074752
+	744256700	FX_Public_Intensification_02	C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\.cache\Windows\SFX\FX_Public_Intensification_02_DDC98EF4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambiances\Intensification\FX_Public_Intensification_02		737548
+	924722495	FX_Public_Intensification_04	C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\.cache\Windows\SFX\FX_Public_Intensification_04_DDC98EF4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambiances\Intensification\FX_Public_Intensification_04		817380
 	1007659156	AMB_Public_Normal	C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\.cache\Windows\SFX\AMB_Public_Normal_8BD76F1E.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambiances\AMB_Public_Normal		17985424
+	1045976381	FX_Public_Intensification_01	C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\.cache\Windows\SFX\FX_Public_Intensification_01_DDC98EF4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambiances\Intensification\FX_Public_Intensification_01		698956
 

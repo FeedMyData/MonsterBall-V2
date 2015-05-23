@@ -12,12 +12,70 @@
 			<ShortName>MainSoundBank</ShortName>
 			<Path>MainSoundBank.bnk</Path>
 			<IncludedEvents>
+				<Event Id="3060817186" Name="Public_But"/>
+				<Event Id="3395781144" Name="Public_Fin"/>
+				<Event Id="3300306736" Name="Public_Intensification"/>
 				<Event Id="3019773176" Name="Public_Normal"/>
+				<Event Id="218682343" Name="SFX_Niveks_Coup"/>
+				<Event Id="343276576" Name="SFX_Niveks_Frappe"/>
+				<Event Id="4101663895" Name="Transfo_BalleMonstre"/>
+				<Event Id="3206008515" Name="Transfo_MonstreBalle"/>
+				<Event Id="2279719562" Name="VX_Balle_But"/>
+				<Event Id="43799444" Name="VX_Balle_Coup"/>
+				<Event Id="2887782118" Name="VX_Balle_Course"/>
+				<Event Id="2676280931" Name="VX_Balle_RemiseEnJeu"/>
+				<Event Id="3644313994" Name="VX_Monstre_Course"/>
+				<Event Id="3004362387" Name="VX_Monstre_Crache"/>
+				<Event Id="3674007655" Name="VX_Niveks_But_Gagnant"/>
+				<Event Id="3360566071" Name="VX_Niveks_But_Perdant"/>
+				<Event Id="2143267510" Name="VX_Niveks_Coup"/>
+				<Event Id="3955264645" Name="VX_Niveks_Frappe"/>
+				<Event Id="2075985603" Name="Vx_Niveks_Impact_Cloison"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
+				<File Id="131947360" Language="SFX">
+					<ShortName>FX_Public_But_03.wav</ShortName>
+					<Path>SFX\FX_Public_But_03_DDC98EF4.wem</Path>
+				</File>
+				<File Id="236322355" Language="SFX">
+					<ShortName>FX_Public_Fin_01.wav</ShortName>
+					<Path>SFX\FX_Public_Fin_01_DDC98EF4.wem</Path>
+				</File>
+				<File Id="294783796" Language="SFX">
+					<ShortName>FX_Public_But_01.wav</ShortName>
+					<Path>SFX\FX_Public_But_01_DDC98EF4.wem</Path>
+				</File>
+				<File Id="458354361" Language="SFX">
+					<ShortName>FX_Public_But_02.wav</ShortName>
+					<Path>SFX\FX_Public_But_02_DDC98EF4.wem</Path>
+				</File>
+				<File Id="557670751" Language="SFX">
+					<ShortName>FX_Public_But_04.wav</ShortName>
+					<Path>SFX\FX_Public_But_04_DDC98EF4.wem</Path>
+				</File>
+				<File Id="741232199" Language="SFX">
+					<ShortName>FX_Public_Intensification_03.wav</ShortName>
+					<Path>SFX\FX_Public_Intensification_03_DDC98EF4.wem</Path>
+				</File>
+				<File Id="743327687" Language="SFX">
+					<ShortName>FX_Public_Fin_02.wav</ShortName>
+					<Path>SFX\FX_Public_Fin_02_DDC98EF4.wem</Path>
+				</File>
+				<File Id="744256700" Language="SFX">
+					<ShortName>FX_Public_Intensification_02.wav</ShortName>
+					<Path>SFX\FX_Public_Intensification_02_DDC98EF4.wem</Path>
+				</File>
+				<File Id="924722495" Language="SFX">
+					<ShortName>FX_Public_Intensification_04.wav</ShortName>
+					<Path>SFX\FX_Public_Intensification_04_DDC98EF4.wem</Path>
+				</File>
 				<File Id="1007659156" Language="SFX">
 					<ShortName>AMB_Public_Normal.wav</ShortName>
 					<Path>SFX\AMB_Public_Normal_8BD76F1E.wem</Path>
+				</File>
+				<File Id="1045976381" Language="SFX">
+					<ShortName>FX_Public_Intensification_01.wav</ShortName>
+					<Path>SFX\FX_Public_Intensification_01_DDC98EF4.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>

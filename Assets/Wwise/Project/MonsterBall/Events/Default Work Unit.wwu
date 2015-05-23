@@ -53,16 +53,43 @@
 				</Folder>
 				<Folder Name="Voix" ID="{DA714EC0-B4FE-45E8-BA86-C6BCB5DE6DE7}" ShortID="793375017">
 					<ChildrenList>
-						<Folder Name="Niveks" ID="{F4171C40-F72B-4290-BB99-B5927208B236}" ShortID="39795413"/>
-						<Folder Name="Balle" ID="{C44FF999-3A0B-4106-9D06-DC8E6F73AB9E}" ShortID="147926892">
+						<Folder Name="Niveks" ID="{F4171C40-F72B-4290-BB99-B5927208B236}" ShortID="39795413">
 							<ChildrenList>
-								<Event Name="Balle_But" ID="{142EAEF2-59BF-46D3-996E-4462915EA747}"/>
+								<Event Name="VX_Niveks_But_Gagnant" ID="{10E54542-380F-4D85-B597-26FD5F7CB8FA}"/>
+								<Event Name="VX_Niveks_But_Perdant" ID="{3152D46C-1764-41A1-9D36-CE1DA62BD0D3}"/>
+								<Event Name="Vx_Niveks_Impact_Cloison" ID="{BE2890E5-9127-43E9-9636-59B1B62C8F0A}"/>
+								<Event Name="VX_Niveks_Coup" ID="{4E5DA369-E8CC-4583-B9C5-D7BDF0403EE2}"/>
+								<Event Name="VX_Niveks_Frappe" ID="{EB02EC7E-8C6D-4630-BCC6-1FCF78070F34}"/>
 							</ChildrenList>
 						</Folder>
-						<Folder Name="Monstre" ID="{9B1F4F36-E1FB-4FA7-A3D9-B4DEC83362C3}" ShortID="982315659"/>
+						<Folder Name="Balle" ID="{C44FF999-3A0B-4106-9D06-DC8E6F73AB9E}" ShortID="147926892">
+							<ChildrenList>
+								<Event Name="VX_Balle_But" ID="{142EAEF2-59BF-46D3-996E-4462915EA747}"/>
+								<Event Name="VX_Balle_RemiseEnJeu" ID="{FC17222F-10CE-4A9B-97D1-C88AFF8EAAF1}"/>
+								<Event Name="VX_Balle_Coup" ID="{A53F9545-90D9-4F6D-9BB7-6CC107E8CF70}"/>
+								<Event Name="VX_Balle_Course" ID="{78E69E8A-6B17-4E01-8E22-CD08CE6BC6FC}"/>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="Monstre" ID="{9B1F4F36-E1FB-4FA7-A3D9-B4DEC83362C3}" ShortID="982315659">
+							<ChildrenList>
+								<Event Name="VX_Monstre_Course" ID="{BE98E6F5-D868-4FF7-B2CA-FDBF3A1416BF}"/>
+								<Event Name="VX_Monstre_Crache" ID="{0C281AFE-3F0D-4598-A801-8ABF4EE23C72}"/>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="Transformation" ID="{4094CD55-8DC4-4BDB-A810-533DAE16B8FE}" ShortID="729642533">
+							<ChildrenList>
+								<Event Name="Transfo_BalleMonstre" ID="{C4E685A6-7FBC-4AF3-A69E-E6FF1F3FD07E}"/>
+								<Event Name="Transfo_MonstreBalle" ID="{442A32BF-1890-48CE-B451-234FCD168687}"/>
+							</ChildrenList>
+						</Folder>
 					</ChildrenList>
 				</Folder>
-				<Folder Name="SFX" ID="{74A0AF9E-7803-48C8-AAE5-C7494C676471}" ShortID="288675139"/>
+				<Folder Name="SFX" ID="{159EEB0F-FC3A-4B15-8095-9F318657AF9A}" ShortID="448448679">
+					<ChildrenList>
+						<Event Name="SFX_Niveks_Frappe" ID="{A5008130-05F4-4EBA-91C3-23E1B9DF9272}"/>
+						<Event Name="SFX_Niveks_Coup" ID="{A2BB9F56-E31C-4C23-9C9A-5C9364E13726}"/>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
