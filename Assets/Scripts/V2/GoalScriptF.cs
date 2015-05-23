@@ -9,6 +9,10 @@ public class GoalScriptF : MonoBehaviour {
     //feedbacks
     private GuiEffects guiEffectsScript;
 
+
+    public delegate void OnActivation();
+    public event OnActivation OnActivationEvent;
+
 	// Use this for initialization
 	void Start () {
 	    manager = GameControllerF.getManager();
@@ -24,8 +28,11 @@ public class GoalScriptF : MonoBehaviour {
     {
         //PlayerControllerF player = other.gameObject.GetComponent<PlayerControllerF>();
 
+        
+
         if (other.gameObject.tag == "Monster")
         {
+            OnActivationEvent();
             if (!other.gameObject.GetComponent<MonsterControllerF>().IsMonsterForm())
             {
                 //feedbacks goal balle

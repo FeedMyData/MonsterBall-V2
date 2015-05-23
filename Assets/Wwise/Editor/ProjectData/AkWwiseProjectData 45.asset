@@ -1,0 +1,131 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64e666e89aeccd84bac5d95a4d1f9d0e, type: 3}
+  m_Name: AkWwiseProjectData 45
+  m_EditorClassIdentifier: 
+  CurrentPluginConfig: Profile
+  EventWwu:
+  - PhysicalPath: Events\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    Guid: '{D899008C-EE7F-4475-814E-BB3DC86CD141}'
+    List:
+    - Name: Balle_But
+      Path: Default Work Unit\Voix\Balle\Balle_But
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Voix
+        ObjectType: 4
+      - ElementName: Balle
+        ObjectType: 4
+      - ElementName: Balle_But
+        ObjectType: 3
+      ID: -598951337
+      Guid: f2ae2e14bf59d346996e4462915ea747
+      maxAttenuation: 0
+    - Name: Public_But
+      Path: Default Work Unit\Public\Public_But
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Public
+        ObjectType: 4
+      - ElementName: Public_But
+        ObjectType: 3
+      ID: -1234150110
+      Guid: 6e188d06646af44daf0a772ac4142926
+      maxAttenuation: 0
+    - Name: Public_Fin
+      Path: Default Work Unit\Public\Public_Fin
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Public
+        ObjectType: 4
+      - ElementName: Public_Fin
+        ObjectType: 3
+      ID: -899186152
+      Guid: 40a45ab8e65aaa47a4c4d64c351a1cde
+      maxAttenuation: 0
+    - Name: Public_Intensification
+      Path: Default Work Unit\Public\Public_Intensification
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Public
+        ObjectType: 4
+      - ElementName: Public_Intensification
+        ObjectType: 3
+      ID: -994660560
+      Guid: 5934b7a6bbd8b4499183797cc5e46245
+      maxAttenuation: 0
+    - Name: Public_Normal
+      Path: Default Work Unit\Public\Public_Normal
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Public
+        ObjectType: 4
+      - ElementName: Public_Normal
+        ObjectType: 3
+      ID: -1275194120
+      Guid: 9544f2513d95f843b9ce000c3412ecd4
+      maxAttenuation: 0
+  AuxBusWwu:
+  - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    Guid: '{F2826676-125A-488D-B5BC-8666D671270D}'
+    List:
+    - Name: ReverbStade
+      Path: Default Work Unit\Master Audio Bus\ReverbStade
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+      - ElementName: ReverbStade
+        ObjectType: 1
+      ID: -1038071216
+      Guid: 3512aed9f484bc489e4fff2edafdd297
+  StateWwu:
+  - PhysicalPath: States\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    Guid: '{E063E93F-18FE-4D07-BA73-FCEF164EB134}'
+    List: []
+  SwitchWwu:
+  - PhysicalPath: Switches\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    Guid: '{038B2B74-A44F-451E-A570-029867F4EC79}'
+    List: []
+  BankWwu:
+  - PhysicalPath: SoundBanks\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    Guid: '{1B524699-2227-4E79-80C0-073E81FEE8BA}'
+    List:
+    - Name: MainSoundBank
+      Path: Default Work Unit\MainSoundBank
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: MainSoundBank
+        ObjectType: 7
+      ID: 534561221
+      Guid: 933a1cdfb050c344a9b1beae92e6de56
+  ExpandedItems: []
+  m_lastPopulateTimePsrt1: -1295192102
+  m_lastPopulateTimePart2: -1999477940
+  autoPopulateEnabled: 1
+  basePath: Audio\GeneratedSoundBanks
+  language: English(US)
+  defaultPoolSize: 4096
+  lowerPoolSize: 2048
+  streamingPoolSize: 1024
+  memoryCutoffThreshold: .949999988

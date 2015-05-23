@@ -310,7 +310,7 @@ public class MonsterControllerF : MonoBehaviour {
         GameObject potentialMagnet = GameControllerF.NearestTo(this.gameObject, areaMagnet);
         if (GetActualSpeed() <= speedMagnet && potentialMagnet!=null)
         {
-            Debug.Log(potentialMagnet);
+            //Debug.Log(potentialMagnet);
             if (potentialMagnet != previousMagnet && potentialMagnet.GetComponent<PlayerControllerF>().getBonus() == null)
             {
                 magnet = potentialMagnet;

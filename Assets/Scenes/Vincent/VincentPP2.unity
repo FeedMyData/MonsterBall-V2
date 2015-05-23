@@ -3117,7 +3117,7 @@ MonoBehaviour:
   triggerList: f7e1664c
   useOtherObject: 0
   valueGuid: 9544f2513d95f843b9ce000c3412ecd4
-  eventID: -1346730423
+  eventID: -1275194120
   soundEmitterObject: {fileID: 0}
   enableActionOnEvent: 0
   actionOnEventType: 0
@@ -3873,6 +3873,7 @@ GameObject:
   - 4: {fileID: 631020834}
   - 114: {fileID: 631020833}
   - 114: {fileID: 631020832}
+  - 114: {fileID: 631020835}
   m_Layer: 0
   m_Name: WwiseGlobal
   m_TagString: Untagged
@@ -3917,10 +3918,26 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1860417035}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 15
+--- !u!114 &631020835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 631020831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86049344e2d581b4282d3e3a0d8fa99c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  valueGuid: 933a1cdfb050c344a9b1beae92e6de56
+  bankName: MainSoundBank
+  loadAsynchronous: 0
+  unloadTriggerList: 958ca0ea
 --- !u!4 &632721746
 Transform:
   m_ObjectHideFlags: 0
@@ -7004,6 +7021,8 @@ GameObject:
   - 23: {fileID: 1108100045}
   - 64: {fileID: 1108100047}
   - 114: {fileID: 1108100048}
+  - 114: {fileID: 1108100049}
+  - 114: {fileID: 1108100050}
   m_Layer: 0
   m_Name: blueGoal
   m_TagString: TeamBlu
@@ -7080,6 +7099,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bf9abdf5d47a28409f2c536c214f468, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1108100049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1108100043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 264c2cab72acede40a6b2793a7ffc784, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1108100050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1108100043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 704553ab0af34f544bca18cd2ee785f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: 7d2b47b6
+  useOtherObject: 0
+  valueGuid: 6e188d06646af44daf0a772ac4142926
+  eventID: -1234150110
+  soundEmitterObject: {fileID: 0}
+  enableActionOnEvent: 0
+  actionOnEventType: 0
+  curveInterpolation: 4
+  transitionDuration: 0
+  m_callbackData: {fileID: 0}
 --- !u!1 &1109858666
 GameObject:
   m_ObjectHideFlags: 0
@@ -14115,51 +14166,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1182362423}
   m_RootOrder: 18
---- !u!1 &1860417034
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1860417035}
-  - 114: {fileID: 1860417036}
-  m_Layer: 0
-  m_Name: SoundBank
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1860417035
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1860417034}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.15626431, y: -79.8847351, z: 117.293091}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 631020834}
-  m_RootOrder: 0
---- !u!114 &1860417036
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1860417034}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86049344e2d581b4282d3e3a0d8fa99c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerList: f7e1664c
-  useOtherObject: 0
-  valueGuid: 933a1cdfb050c344a9b1beae92e6de56
-  bankName: MainSoundBank
-  loadAsynchronous: 0
-  unloadTriggerList: 958ca0ea
 --- !u!1 &1860620046
 GameObject:
   m_ObjectHideFlags: 0
