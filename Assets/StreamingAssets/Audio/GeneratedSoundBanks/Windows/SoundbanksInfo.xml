@@ -14,25 +14,40 @@
 			<ShortName>MainSoundBank</ShortName>
 			<Path>MainSoundBank.bnk</Path>
 			<IncludedEvents>
+				<Event Id="1927068452" Name="Menu_Move"/>
+				<Event Id="1988127715" Name="Menu_Valid"/>
 				<Event Id="3060817186" Name="Public_But"/>
 				<Event Id="3395781144" Name="Public_Fin"/>
 				<Event Id="3300306736" Name="Public_Intensification"/>
 				<Event Id="3019773176" Name="Public_Normal"/>
+				<Event Id="3796324145" Name="SFX_But_Flash"/>
+				<Event Id="3040534629" Name="SFX_Monstre_Course"/>
+				<Event Id="3534940551" Name="SFX_Niveks_ChargeCoup"/>
 				<Event Id="218682343" Name="SFX_Niveks_Coup"/>
+				<Event Id="3227735425" Name="SFX_Niveks_Course"/>
 				<Event Id="343276576" Name="SFX_Niveks_Frappe"/>
 				<Event Id="4101663895" Name="Transfo_BalleMonstre"/>
 				<Event Id="3206008515" Name="Transfo_MonstreBalle"/>
 				<Event Id="2279719562" Name="VX_Balle_But"/>
+				<Event Id="4270895000" Name="VX_Balle_Cloison"/>
 				<Event Id="43799444" Name="VX_Balle_Coup"/>
 				<Event Id="2887782118" Name="VX_Balle_Course"/>
 				<Event Id="2676280931" Name="VX_Balle_RemiseEnJeu"/>
+				<Event Id="2663589529" Name="VX_Comment_DebutMatch"/>
+				<Event Id="682388778" Name="VX_Comment_FinMatch"/>
 				<Event Id="3644313994" Name="VX_Monstre_Course"/>
 				<Event Id="3004362387" Name="VX_Monstre_Crache"/>
-				<Event Id="3674007655" Name="VX_Niveks_But_Gagnant"/>
-				<Event Id="3360566071" Name="VX_Niveks_But_Perdant"/>
+				<Event Id="4141078286" Name="VX_Niveks_ButGagnant"/>
+				<Event Id="3212082402" Name="VX_Niveks_ButPerdant"/>
 				<Event Id="2143267510" Name="VX_Niveks_Coup"/>
+				<Event Id="2649120174" Name="VX_Niveks_DebutMatch"/>
+				<Event Id="1123955361" Name="VX_Niveks_FinMatchGagnant"/>
+				<Event Id="3790591353" Name="VX_Niveks_FinMatchPerdant"/>
 				<Event Id="3955264645" Name="VX_Niveks_Frappe"/>
-				<Event Id="2075985603" Name="Vx_Niveks_Impact_Cloison"/>
+				<Event Id="4235626026" Name="VX_Niveks_ImpactBut"/>
+				<Event Id="1918913592" Name="Vx_Niveks_ImpactCloison"/>
+				<Event Id="3251995241" Name="Vx_Niveks_Poursuivi"/>
+				<Event Id="3784437905" Name="Vx_Niveks_Wilhem"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="131947360" Language="SFX">

@@ -2,22 +2,37 @@ Event	ID	Name			Wwise Object Path	Notes
 	43799444	VX_Balle_Coup			\Default Work Unit\Voix\Balle\VX_Balle_Coup	
 	218682343	SFX_Niveks_Coup			\Default Work Unit\SFX\SFX_Niveks_Coup	
 	343276576	SFX_Niveks_Frappe			\Default Work Unit\SFX\SFX_Niveks_Frappe	
-	2075985603	Vx_Niveks_Impact_Cloison			\Default Work Unit\Voix\Niveks\Vx_Niveks_Impact_Cloison	
+	682388778	VX_Comment_FinMatch			\Default Work Unit\Voix\Commentaire\VX_Comment_FinMatch	
+	1123955361	VX_Niveks_FinMatchGagnant			\Default Work Unit\Voix\Niveks\VX_Niveks_FinMatchGagnant	
+	1918913592	Vx_Niveks_ImpactCloison			\Default Work Unit\Voix\Niveks\Vx_Niveks_ImpactCloison	
+	1927068452	Menu_Move			\Default Work Unit\Menu\Menu_Move	
+	1988127715	Menu_Valid			\Default Work Unit\Menu\Menu_Valid	
 	2143267510	VX_Niveks_Coup			\Default Work Unit\Voix\Niveks\VX_Niveks_Coup	
 	2279719562	VX_Balle_But			\Default Work Unit\Voix\Balle\VX_Balle_But	
+	2649120174	VX_Niveks_DebutMatch			\Default Work Unit\Voix\Niveks\VX_Niveks_DebutMatch	
+	2663589529	VX_Comment_DebutMatch			\Default Work Unit\Voix\Commentaire\VX_Comment_DebutMatch	
 	2676280931	VX_Balle_RemiseEnJeu			\Default Work Unit\Voix\Balle\VX_Balle_RemiseEnJeu	
 	2887782118	VX_Balle_Course			\Default Work Unit\Voix\Balle\VX_Balle_Course	
 	3004362387	VX_Monstre_Crache			\Default Work Unit\Voix\Monstre\VX_Monstre_Crache	
 	3019773176	Public_Normal			\Default Work Unit\Public\Public_Normal	
+	3040534629	SFX_Monstre_Course			\Default Work Unit\SFX\SFX_Monstre_Course	
 	3060817186	Public_But			\Default Work Unit\Public\Public_But	
 	3206008515	Transfo_MonstreBalle			\Default Work Unit\Voix\Transformation\Transfo_MonstreBalle	
+	3212082402	VX_Niveks_ButPerdant			\Default Work Unit\Voix\Niveks\VX_Niveks_ButPerdant	
+	3227735425	SFX_Niveks_Course			\Default Work Unit\SFX\SFX_Niveks_Course	
+	3251995241	Vx_Niveks_Poursuivi			\Default Work Unit\Voix\Niveks\Vx_Niveks_Poursuivi	
 	3300306736	Public_Intensification			\Default Work Unit\Public\Public_Intensification	
-	3360566071	VX_Niveks_But_Perdant			\Default Work Unit\Voix\Niveks\VX_Niveks_But_Perdant	
 	3395781144	Public_Fin			\Default Work Unit\Public\Public_Fin	
+	3534940551	SFX_Niveks_ChargeCoup			\Default Work Unit\SFX\SFX_Niveks_ChargeCoup	
 	3644313994	VX_Monstre_Course			\Default Work Unit\Voix\Monstre\VX_Monstre_Course	
-	3674007655	VX_Niveks_But_Gagnant			\Default Work Unit\Voix\Niveks\VX_Niveks_But_Gagnant	
+	3784437905	Vx_Niveks_Wilhem			\Default Work Unit\Voix\Niveks\Vx_Niveks_Wilhem	
+	3790591353	VX_Niveks_FinMatchPerdant			\Default Work Unit\Voix\Niveks\VX_Niveks_FinMatchPerdant	
+	3796324145	SFX_But_Flash			\Default Work Unit\SFX\SFX_But_Flash	
 	3955264645	VX_Niveks_Frappe			\Default Work Unit\Voix\Niveks\VX_Niveks_Frappe	
 	4101663895	Transfo_BalleMonstre			\Default Work Unit\Voix\Transformation\Transfo_BalleMonstre	
+	4141078286	VX_Niveks_ButGagnant			\Default Work Unit\Voix\Niveks\VX_Niveks_ButGagnant	
+	4235626026	VX_Niveks_ImpactBut			\Default Work Unit\Voix\Niveks\VX_Niveks_ImpactBut	
+	4270895000	VX_Balle_Cloison			\Default Work Unit\Voix\Balle\VX_Balle_Cloison	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	131947360	FX_Public_But_03	C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\.cache\Windows\SFX\FX_Public_But_03_DDC98EF4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambiances\But\FX_Public_But_03		642864
