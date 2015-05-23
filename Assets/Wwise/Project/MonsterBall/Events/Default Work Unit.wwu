@@ -38,12 +38,27 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Public_But" ID="{068D186E-6A64-4DF4-AF0A-772AC4142926}">
+							<ChildrenList>
+								<Action Name="Play" ID="{274B892C-C523-42D1-B8EC-89E11F601AA1}" ShortID="402816239" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{4DCB546A-8810-483D-A3B5-CEB16F065476}" Global="false">
+											<ObjectRef Name="But" ID="{B96DE30D-FF5F-47B0-9B54-1C4BA488B784}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+										</Element>
+									</ElementList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Voix" ID="{DA714EC0-B4FE-45E8-BA86-C6BCB5DE6DE7}" ShortID="793375017">
 					<ChildrenList>
 						<Folder Name="Niveks" ID="{F4171C40-F72B-4290-BB99-B5927208B236}" ShortID="39795413"/>
-						<Folder Name="Balle" ID="{C44FF999-3A0B-4106-9D06-DC8E6F73AB9E}" ShortID="147926892"/>
+						<Folder Name="Balle" ID="{C44FF999-3A0B-4106-9D06-DC8E6F73AB9E}" ShortID="147926892">
+							<ChildrenList>
+								<Event Name="Balle_But" ID="{142EAEF2-59BF-46D3-996E-4462915EA747}"/>
+							</ChildrenList>
+						</Folder>
 						<Folder Name="Monstre" ID="{9B1F4F36-E1FB-4FA7-A3D9-B4DEC83362C3}" ShortID="982315659"/>
 					</ChildrenList>
 				</Folder>
