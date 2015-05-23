@@ -1,17 +1,19 @@
 Event	ID	Name			Wwise Object Path	Notes
 	43799444	VX_Balle_Coup			\Default Work Unit\Voix\Balle\VX_Balle_Coup	
-	218682343	SFX_Niveks_Coup			\Default Work Unit\SFX\SFX_Niveks_Coup	
-	343276576	SFX_Niveks_Frappe			\Default Work Unit\SFX\SFX_Niveks_Frappe	
+	213475906	SFX_But			\Default Work Unit\SFX\SFX_But	
 	682388778	VX_Comment_FinMatch			\Default Work Unit\Voix\Commentaire\VX_Comment_FinMatch	
 	1123955361	VX_Niveks_FinMatchGagnant			\Default Work Unit\Voix\Niveks\VX_Niveks_FinMatchGagnant	
 	1918913592	Vx_Niveks_ImpactCloison			\Default Work Unit\Voix\Niveks\Vx_Niveks_ImpactCloison	
 	1927068452	Menu_Move			\Default Work Unit\Menu\Menu_Move	
 	1988127715	Menu_Valid			\Default Work Unit\Menu\Menu_Valid	
+	2097335990	SFX_Niveks_Woosh			\Default Work Unit\SFX\SFX_Niveks_Woosh	
+	2139348868	SFX_Niveks_CoupFort			\Default Work Unit\SFX\SFX_Niveks_CoupFort	
 	2143267510	VX_Niveks_Coup			\Default Work Unit\Voix\Niveks\VX_Niveks_Coup	
 	2279719562	VX_Balle_But			\Default Work Unit\Voix\Balle\VX_Balle_But	
 	2649120174	VX_Niveks_DebutMatch			\Default Work Unit\Voix\Niveks\VX_Niveks_DebutMatch	
 	2663589529	VX_Comment_DebutMatch			\Default Work Unit\Voix\Commentaire\VX_Comment_DebutMatch	
 	2676280931	VX_Balle_RemiseEnJeu			\Default Work Unit\Voix\Balle\VX_Balle_RemiseEnJeu	
+	2725983128	SFX_Niveks_CoupFaible			\Default Work Unit\SFX\SFX_Niveks_CoupFaible	
 	2887782118	VX_Balle_Course			\Default Work Unit\Voix\Balle\VX_Balle_Course	
 	3004362387	VX_Monstre_Crache			\Default Work Unit\Voix\Monstre\VX_Monstre_Crache	
 	3019773176	Public_Normal			\Default Work Unit\Public\Public_Normal	
@@ -27,7 +29,6 @@ Event	ID	Name			Wwise Object Path	Notes
 	3644313994	VX_Monstre_Course			\Default Work Unit\Voix\Monstre\VX_Monstre_Course	
 	3784437905	Vx_Niveks_Wilhem			\Default Work Unit\Voix\Niveks\Vx_Niveks_Wilhem	
 	3790591353	VX_Niveks_FinMatchPerdant			\Default Work Unit\Voix\Niveks\VX_Niveks_FinMatchPerdant	
-	3796324145	SFX_But_Flash			\Default Work Unit\SFX\SFX_But_Flash	
 	3955264645	VX_Niveks_Frappe			\Default Work Unit\Voix\Niveks\VX_Niveks_Frappe	
 	4101663895	Transfo_BalleMonstre			\Default Work Unit\Voix\Transformation\Transfo_BalleMonstre	
 	4141078286	VX_Niveks_ButGagnant			\Default Work Unit\Voix\Niveks\VX_Niveks_ButGagnant	
@@ -35,15 +36,44 @@ Event	ID	Name			Wwise Object Path	Notes
 	4270895000	VX_Balle_Cloison			\Default Work Unit\Voix\Balle\VX_Balle_Cloison	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	49112111	SFX_Balle_pop1_02	C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\.cache\Windows\SFX\SFX_Balle_pop1_02_DDC98EF4.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Balle_Pop\SFX_Balle_Pop1\SFX_Balle_pop1_02		107606
+	104051743	SFX_Niveks_CoupBatte_Fort	C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\.cache\Windows\SFX\SFX_Niveks_CoupBatte_Fort_2F371451.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\CoupBatte\SFX_Niveks_CoupBatte_Fort		12604
 	131947360	FX_Public_But_03	C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\.cache\Windows\SFX\FX_Public_But_03_DDC98EF4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambiances\But\FX_Public_But_03		642864
+	138982408	SFX_Electric_Spark-04	C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\.cache\Windows\SFX\SFX_Electric_Spark-04_102DAD95.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Electric_Spark_Wall\SFX_Electric_Spark-04		57612
 	236322355	FX_Public_Fin_01	C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\.cache\Windows\SFX\FX_Public_Fin_01_DDC98EF4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambiances\Fin\FX_Public_Fin_01		1075588
+	249786872	SFX_Electric_Spark-07	C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\.cache\Windows\SFX\SFX_Electric_Spark-07_6E76AA20.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Electric_Spark_Wall\SFX_Electric_Spark-07		50566
+	265700849	SFX_Balle_pop1_05	C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\.cache\Windows\SFX\SFX_Balle_pop1_05_DDC98EF4.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Balle_Pop\SFX_Balle_Pop1\SFX_Balle_pop1_05		122138
 	294783796	FX_Public_But_01	C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\.cache\Windows\SFX\FX_Public_But_01_DDC98EF4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambiances\But\FX_Public_But_01		606036
+	357905263	SFX_Niveks_ImpactsBut	C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\.cache\Windows\SFX\SFX_Niveks_ImpactsBut_DDC98EF4.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Niveks_Impact\SFX_Niveks_ImpactsBut		35210
 	458354361	FX_Public_But_02	C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\.cache\Windows\SFX\FX_Public_But_02_DDC98EF4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambiances\But\FX_Public_But_02		612732
+	464313749	SFX_Balle_pop1_04	C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\.cache\Windows\SFX\SFX_Balle_pop1_04_DDC98EF4.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Balle_Pop\SFX_Balle_Pop1\SFX_Balle_pop1_04		93298
+	518138878	SFX_Electric_Spark-01	C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\.cache\Windows\SFX\SFX_Electric_Spark-01_6F93AD33.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Electric_Spark_Wall\SFX_Electric_Spark-01		41520
+	525342413	SFX_Electric_Spark-03	C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\.cache\Windows\SFX\SFX_Electric_Spark-03_F40172C1.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Electric_Spark_Wall\SFX_Electric_Spark-03		40238
+	547465474	SFX_Niveks_Woosh_01	C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\.cache\Windows\SFX\SFX_Niveks_Woosh_01_DDC98EF4.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Niveks_Woosh\SFX_Niveks_Woosh_01		32160
 	557670751	FX_Public_But_04	C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\.cache\Windows\SFX\FX_Public_But_04_DDC98EF4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambiances\But\FX_Public_But_04		870524
+	602141891	SFX_Niveks_Woosh_03	C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\.cache\Windows\SFX\SFX_Niveks_Woosh_03_DDC98EF4.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Niveks_Woosh\SFX_Niveks_Woosh_03		37828
+	620691899	SFX_Niveks_Woosh_02	C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\.cache\Windows\SFX\SFX_Niveks_Woosh_02_DDC98EF4.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Niveks_Woosh\SFX_Niveks_Woosh_02		31172
+	629518519	SFX_Coup_Charge_02	C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\.cache\Windows\SFX\SFX_Coup_Charge_02_DDC98EF4.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Batte_Charge\SFX_Coup_Charge_02		60064
+	637446399	SFX_Niveks_Woosh_04	C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\.cache\Windows\SFX\SFX_Niveks_Woosh_04_DDC98EF4.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Niveks_Woosh\SFX_Niveks_Woosh_04		28612
+	647903469	SFX_Coup_Charge_04	C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\.cache\Windows\SFX\SFX_Coup_Charge_04_DDC98EF4.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Batte_Charge\SFX_Coup_Charge_04		50864
+	649114621	SFX_Balle_pop2_03	C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\.cache\Windows\SFX\SFX_Balle_pop2_03_DDC98EF4.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Balle_Pop\SFX_Balle_Pop2\SFX_Balle_pop2_03		148934
+	699946924	SFX_Niveks_CoupBatte_Faible	C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\.cache\Windows\SFX\SFX_Niveks_CoupBatte_Fort_FBD56E4E.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\CoupBatte\SFX_Niveks_CoupBatte_Faible		5392
+	707440032	SFX_Electric_Spark-08	C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\.cache\Windows\SFX\SFX_Electric_Spark-01_D6980A05.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Electric_Spark_Wall\SFX_Electric_Spark-08		54348
+	735054049	SFX_Electric_Spark-02	C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\.cache\Windows\SFX\SFX_Electric_Spark-02_59B68F55.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Electric_Spark_Wall\SFX_Electric_Spark-02		62288
 	741232199	FX_Public_Intensification_03	C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\.cache\Windows\SFX\FX_Public_Intensification_03_DDC98EF4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambiances\Intensification\FX_Public_Intensification_03		1016736
 	743327687	FX_Public_Fin_02	C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\.cache\Windows\SFX\FX_Public_Fin_02_DDC98EF4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambiances\Fin\FX_Public_Fin_02		1074752
 	744256700	FX_Public_Intensification_02	C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\.cache\Windows\SFX\FX_Public_Intensification_02_DDC98EF4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambiances\Intensification\FX_Public_Intensification_02		737548
+	772119019	SFX_Coup_Charge_03	C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\.cache\Windows\SFX\SFX_Coup_Charge_03_DDC98EF4.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Batte_Charge\SFX_Coup_Charge_03		79264
+	796496479	SFX_Balle_pop2_01	C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\.cache\Windows\SFX\SFX_Balle_pop2_01_DDC98EF4.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Balle_Pop\SFX_Balle_Pop2\SFX_Balle_pop2_01		139718
+	810834730	SFX_Electric_Spark-05	C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\.cache\Windows\SFX\SFX_Electric_Spark-05_7A8FFC86.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Electric_Spark_Wall\SFX_Electric_Spark-05		35614
+	819132964	SFX_Balle_pop1_03	C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\.cache\Windows\SFX\SFX_Balle_pop1_03_DDC98EF4.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Balle_Pop\SFX_Balle_Pop1\SFX_Balle_pop1_03		106596
+	824756831	SFX_Balle_pop1_01	C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\.cache\Windows\SFX\SFX_Balle_pop1_01_DDC98EF4.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Balle_Pop\SFX_Balle_Pop1\SFX_Balle_pop1_01		102060
+	853254698	SFX_Electric_Spark-06	C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\.cache\Windows\SFX\SFX_Electric_Spark-06_FF3C5075.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Electric_Spark_Wall\SFX_Electric_Spark-06		58296
+	854012293	SFX_Electric_Spark-09	C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\.cache\Windows\SFX\SFX_Electric_Spark-09_B054BE73.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Electric_Spark_Wall\SFX_Electric_Spark-09		42528
 	924722495	FX_Public_Intensification_04	C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\.cache\Windows\SFX\FX_Public_Intensification_04_DDC98EF4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambiances\Intensification\FX_Public_Intensification_04		817380
+	937831110	SFX_Coup_Charge_01	C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\.cache\Windows\SFX\SFX_Coup_Charge_01_DDC98EF4.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Batte_Charge\SFX_Coup_Charge_01		92064
+	970194719	SFX_Balle_pop2_02	C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\.cache\Windows\SFX\SFX_Balle_pop2_02_DDC98EF4.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Balle_Pop\SFX_Balle_Pop2\SFX_Balle_pop2_02		160198
 	1007659156	AMB_Public_Normal	C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\.cache\Windows\SFX\AMB_Public_Normal_8BD76F1E.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambiances\AMB_Public_Normal		17985424
 	1045976381	FX_Public_Intensification_01	C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\.cache\Windows\SFX\FX_Public_Intensification_01_DDC98EF4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambiances\Intensification\FX_Public_Intensification_01		698956
+	1058969542	SFX_But_ShakeCamera	C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\.cache\Windows\SFX\SFX_But_ShakeCamera_DDC98EF4.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_But_ShakeCamera		163264
 

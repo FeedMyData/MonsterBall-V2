@@ -20,12 +20,13 @@
 				<Event Id="3395781144" Name="Public_Fin"/>
 				<Event Id="3300306736" Name="Public_Intensification"/>
 				<Event Id="3019773176" Name="Public_Normal"/>
-				<Event Id="3796324145" Name="SFX_But_Flash"/>
+				<Event Id="213475906" Name="SFX_But"/>
 				<Event Id="3040534629" Name="SFX_Monstre_Course"/>
 				<Event Id="3534940551" Name="SFX_Niveks_ChargeCoup"/>
-				<Event Id="218682343" Name="SFX_Niveks_Coup"/>
+				<Event Id="2725983128" Name="SFX_Niveks_CoupFaible"/>
+				<Event Id="2139348868" Name="SFX_Niveks_CoupFort"/>
 				<Event Id="3227735425" Name="SFX_Niveks_Course"/>
-				<Event Id="343276576" Name="SFX_Niveks_Frappe"/>
+				<Event Id="2097335990" Name="SFX_Niveks_Woosh"/>
 				<Event Id="4101663895" Name="Transfo_BalleMonstre"/>
 				<Event Id="3206008515" Name="Transfo_MonstreBalle"/>
 				<Event Id="2279719562" Name="VX_Balle_But"/>
@@ -50,25 +51,101 @@
 				<Event Id="3784437905" Name="Vx_Niveks_Wilhem"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
+				<File Id="49112111" Language="SFX">
+					<ShortName>SFX_Balle_pop1_02.wav</ShortName>
+					<Path>SFX\SFX_Balle_pop1_02_DDC98EF4.wem</Path>
+				</File>
+				<File Id="104051743" Language="SFX">
+					<ShortName>SFX_Niveks_CoupBatte_Fort.wav</ShortName>
+					<Path>SFX\SFX_Niveks_CoupBatte_Fort_2F371451.wem</Path>
+				</File>
 				<File Id="131947360" Language="SFX">
 					<ShortName>FX_Public_But_03.wav</ShortName>
 					<Path>SFX\FX_Public_But_03_DDC98EF4.wem</Path>
+				</File>
+				<File Id="138982408" Language="SFX">
+					<ShortName>SFX_Electric_Spark-04.wav</ShortName>
+					<Path>SFX\SFX_Electric_Spark-04_102DAD95.wem</Path>
 				</File>
 				<File Id="236322355" Language="SFX">
 					<ShortName>FX_Public_Fin_01.wav</ShortName>
 					<Path>SFX\FX_Public_Fin_01_DDC98EF4.wem</Path>
 				</File>
+				<File Id="249786872" Language="SFX">
+					<ShortName>SFX_Electric_Spark-07.wav</ShortName>
+					<Path>SFX\SFX_Electric_Spark-07_6E76AA20.wem</Path>
+				</File>
+				<File Id="265700849" Language="SFX">
+					<ShortName>SFX_Balle_pop1_05.wav</ShortName>
+					<Path>SFX\SFX_Balle_pop1_05_DDC98EF4.wem</Path>
+				</File>
 				<File Id="294783796" Language="SFX">
 					<ShortName>FX_Public_But_01.wav</ShortName>
 					<Path>SFX\FX_Public_But_01_DDC98EF4.wem</Path>
+				</File>
+				<File Id="357905263" Language="SFX">
+					<ShortName>SFX_Niveks_ImpactsBut.wav</ShortName>
+					<Path>SFX\SFX_Niveks_ImpactsBut_DDC98EF4.wem</Path>
 				</File>
 				<File Id="458354361" Language="SFX">
 					<ShortName>FX_Public_But_02.wav</ShortName>
 					<Path>SFX\FX_Public_But_02_DDC98EF4.wem</Path>
 				</File>
+				<File Id="464313749" Language="SFX">
+					<ShortName>SFX_Balle_pop1_04.wav</ShortName>
+					<Path>SFX\SFX_Balle_pop1_04_DDC98EF4.wem</Path>
+				</File>
+				<File Id="518138878" Language="SFX">
+					<ShortName>SFX_Electric_Spark-01.wav</ShortName>
+					<Path>SFX\SFX_Electric_Spark-01_6F93AD33.wem</Path>
+				</File>
+				<File Id="525342413" Language="SFX">
+					<ShortName>SFX_Electric_Spark-03.wav</ShortName>
+					<Path>SFX\SFX_Electric_Spark-03_F40172C1.wem</Path>
+				</File>
+				<File Id="547465474" Language="SFX">
+					<ShortName>SFX_Niveks_Woosh_01.wav</ShortName>
+					<Path>SFX\SFX_Niveks_Woosh_01_DDC98EF4.wem</Path>
+				</File>
 				<File Id="557670751" Language="SFX">
 					<ShortName>FX_Public_But_04.wav</ShortName>
 					<Path>SFX\FX_Public_But_04_DDC98EF4.wem</Path>
+				</File>
+				<File Id="602141891" Language="SFX">
+					<ShortName>SFX_Niveks_Woosh_03.wav</ShortName>
+					<Path>SFX\SFX_Niveks_Woosh_03_DDC98EF4.wem</Path>
+				</File>
+				<File Id="620691899" Language="SFX">
+					<ShortName>SFX_Niveks_Woosh_02.wav</ShortName>
+					<Path>SFX\SFX_Niveks_Woosh_02_DDC98EF4.wem</Path>
+				</File>
+				<File Id="629518519" Language="SFX">
+					<ShortName>SFX_Coup_Charge_02.wav</ShortName>
+					<Path>SFX\SFX_Coup_Charge_02_DDC98EF4.wem</Path>
+				</File>
+				<File Id="637446399" Language="SFX">
+					<ShortName>SFX_Niveks_Woosh_04.wav</ShortName>
+					<Path>SFX\SFX_Niveks_Woosh_04_DDC98EF4.wem</Path>
+				</File>
+				<File Id="647903469" Language="SFX">
+					<ShortName>SFX_Coup_Charge_04.wav</ShortName>
+					<Path>SFX\SFX_Coup_Charge_04_DDC98EF4.wem</Path>
+				</File>
+				<File Id="649114621" Language="SFX">
+					<ShortName>SFX_Balle_pop2_03.wav</ShortName>
+					<Path>SFX\SFX_Balle_pop2_03_DDC98EF4.wem</Path>
+				</File>
+				<File Id="699946924" Language="SFX">
+					<ShortName>SFX_Niveks_CoupBatte_Fort.wav</ShortName>
+					<Path>SFX\SFX_Niveks_CoupBatte_Fort_FBD56E4E.wem</Path>
+				</File>
+				<File Id="707440032" Language="SFX">
+					<ShortName>SFX_Electric_Spark-01.wav</ShortName>
+					<Path>SFX\SFX_Electric_Spark-01_D6980A05.wem</Path>
+				</File>
+				<File Id="735054049" Language="SFX">
+					<ShortName>SFX_Electric_Spark-02.wav</ShortName>
+					<Path>SFX\SFX_Electric_Spark-02_59B68F55.wem</Path>
 				</File>
 				<File Id="741232199" Language="SFX">
 					<ShortName>FX_Public_Intensification_03.wav</ShortName>
@@ -82,9 +159,45 @@
 					<ShortName>FX_Public_Intensification_02.wav</ShortName>
 					<Path>SFX\FX_Public_Intensification_02_DDC98EF4.wem</Path>
 				</File>
+				<File Id="772119019" Language="SFX">
+					<ShortName>SFX_Coup_Charge_03.wav</ShortName>
+					<Path>SFX\SFX_Coup_Charge_03_DDC98EF4.wem</Path>
+				</File>
+				<File Id="796496479" Language="SFX">
+					<ShortName>SFX_Balle_pop2_01.wav</ShortName>
+					<Path>SFX\SFX_Balle_pop2_01_DDC98EF4.wem</Path>
+				</File>
+				<File Id="810834730" Language="SFX">
+					<ShortName>SFX_Electric_Spark-05.wav</ShortName>
+					<Path>SFX\SFX_Electric_Spark-05_7A8FFC86.wem</Path>
+				</File>
+				<File Id="819132964" Language="SFX">
+					<ShortName>SFX_Balle_pop1_03.wav</ShortName>
+					<Path>SFX\SFX_Balle_pop1_03_DDC98EF4.wem</Path>
+				</File>
+				<File Id="824756831" Language="SFX">
+					<ShortName>SFX_Balle_pop1_01.wav</ShortName>
+					<Path>SFX\SFX_Balle_pop1_01_DDC98EF4.wem</Path>
+				</File>
+				<File Id="853254698" Language="SFX">
+					<ShortName>SFX_Electric_Spark-06.wav</ShortName>
+					<Path>SFX\SFX_Electric_Spark-06_FF3C5075.wem</Path>
+				</File>
+				<File Id="854012293" Language="SFX">
+					<ShortName>SFX_Electric_Spark-09.wav</ShortName>
+					<Path>SFX\SFX_Electric_Spark-09_B054BE73.wem</Path>
+				</File>
 				<File Id="924722495" Language="SFX">
 					<ShortName>FX_Public_Intensification_04.wav</ShortName>
 					<Path>SFX\FX_Public_Intensification_04_DDC98EF4.wem</Path>
+				</File>
+				<File Id="937831110" Language="SFX">
+					<ShortName>SFX_Coup_Charge_01.wav</ShortName>
+					<Path>SFX\SFX_Coup_Charge_01_DDC98EF4.wem</Path>
+				</File>
+				<File Id="970194719" Language="SFX">
+					<ShortName>SFX_Balle_pop2_02.wav</ShortName>
+					<Path>SFX\SFX_Balle_pop2_02_DDC98EF4.wem</Path>
 				</File>
 				<File Id="1007659156" Language="SFX">
 					<ShortName>AMB_Public_Normal.wav</ShortName>
@@ -93,6 +206,10 @@
 				<File Id="1045976381" Language="SFX">
 					<ShortName>FX_Public_Intensification_01.wav</ShortName>
 					<Path>SFX\FX_Public_Intensification_01_DDC98EF4.wem</Path>
+				</File>
+				<File Id="1058969542" Language="SFX">
+					<ShortName>SFX_But_ShakeCamera.wav</ShortName>
+					<Path>SFX\SFX_But_ShakeCamera_DDC98EF4.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>

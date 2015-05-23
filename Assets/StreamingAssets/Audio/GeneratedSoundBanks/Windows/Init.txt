@@ -10,8 +10,10 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
 
 Auxiliary Bus	ID	Name			Wwise Object Path	Notes
+	1802970371	FX			\Default Work Unit\Master Audio Bus\FX	
 	3256896080	ReverbStade			\Default Work Unit\Master Audio Bus\ReverbStade	
 
 Effect plug-ins	ID	Name	Type				Notes
 	81972052	Auditorium	iZotope Hybrid Reverb			
+	2805769450	Special_Effect_1	Wwise Flanger			
 

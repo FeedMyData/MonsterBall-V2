@@ -4,6 +4,7 @@
 		<WorkUnit Name="Default Work Unit" ID="{F2826676-125A-488D-B5BC-8666D671270D}" PersistMode="Standalone">
 			<ChildrenList>
 				<Bus Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}">
+					<ReferenceList/>
 					<ChildrenList>
 						<Bus Name="Voix" ID="{6F7CCEB0-4338-419F-A5F7-1BADCFA7CC6B}">
 							<ChildrenList>
@@ -14,13 +15,18 @@
 						</Bus>
 						<Bus Name="Ambiances" ID="{B9DD8753-6E85-4214-991C-F19471FEBA39}"/>
 						<Bus Name="SFX" ID="{98BA6610-4B70-4EFF-A353-4A61C6BE1A24}"/>
-						<Bus Name="Musiques" ID="{51DA5A6D-5764-451B-9A18-180342A5B0FE}">
-							<ReferenceList/>
-						</Bus>
+						<Bus Name="Musiques" ID="{51DA5A6D-5764-451B-9A18-180342A5B0FE}"/>
 						<AuxBus Name="ReverbStade" ID="{D9AE1235-84F4-48BC-9E4F-FF2EDAFDD297}">
 							<ReferenceList>
 								<Reference Name="Effect0" CompanyID="4095" PluginID="65535" PluginType="15">
 									<ObjectRef Name="Auditorium" ID="{FD6C692A-56DE-4AB5-BD21-11FF4CB13068}" WorkUnitID="{33EB1407-1601-4B0D-A620-9099C0353115}"/>
+								</Reference>
+							</ReferenceList>
+						</AuxBus>
+						<AuxBus Name="FX" ID="{AE17BDD2-F728-4C96-A483-B4560EE81FA8}">
+							<ReferenceList>
+								<Reference Name="Effect0" PluginName="Wwise Flanger" CompanyID="0" PluginID="125" PluginType="3">
+									<ObjectRef Name="Special_Effect_1" ID="{83317D8A-9D4C-438E-BE8C-BC7D27CAD1B0}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
 								</Reference>
 							</ReferenceList>
 						</AuxBus>

@@ -1607,11 +1607,15 @@
 						</Effect>
 						<Effect Name="Special_Effect_1" ID="{83317D8A-9D4C-438E-BE8C-BC7D27CAD1B0}" PluginName="Wwise Flanger" CompanyID="0" PluginID="125" PluginType="3">
 							<PropertyList>
-								<Property Name="DelayTime" Type="Real32" Value="10"/>
-								<Property Name="DryLevel" Type="Real32" Value="0"/>
-								<Property Name="ModDepth" Type="Real32" Value="80"/>
-								<Property Name="ModFrequency" Type="Real32" Value="2"/>
+								<Property Name="DelayTime" Type="Real32" Value="37.5"/>
+								<Property Name="DryLevel" Type="Real32" Value="0.74"/>
+								<Property Name="FeedBackLevel" Type="Real32" Value="0.2"/>
+								<Property Name="FeedForwardLevel" Type="Real32" Value="0.4"/>
+								<Property Name="ModDepth" Type="Real32" Value="68.9"/>
+								<Property Name="ModFrequency" Type="Real32" Value="4.08"/>
 								<Property Name="ModPWM" Type="Real32" Value="0"/>
+								<Property Name="ModPhaseOffset" Type="Real32" Value="72"/>
+								<Property Name="ModPhaseSpread" Type="Real32" Value="56"/>
 							</PropertyList>
 						</Effect>
 						<Folder Name="Static Comb Filtering" ID="{6044FF31-2237-4EC5-B94F-9C0C25CFAC44}" ShortID="504290141">
