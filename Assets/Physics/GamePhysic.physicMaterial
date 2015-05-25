@@ -8,7 +8,7 @@ PhysicMaterial:
   m_Name: GamePhysic
   dynamicFriction: .600000024
   staticFriction: .600000024
-  bounciness: .5
+  bounciness: .200000003
   frictionCombine: 0
   bounceCombine: 0
   frictionDirection2: {x: 0, y: 0, z: 0}
