@@ -13,6 +13,7 @@ public class MonsterControllerF : MonoBehaviour {
     private bool restMoving = false;
     public float speedMaxToChooseDirection = 5.0f;
     public float speedDivisionFactor = 8.0f;
+    public float spaceBetweenBallPlayer = 2.0f;
     
     [Header("Magnet")]
     public float areaMagnet = 1.0f;
@@ -291,9 +292,9 @@ public class MonsterControllerF : MonoBehaviour {
         body.useGravity = false;
 
         Vector3 reposition = magnet.transform.position;
-        reposition.x += magnet.transform.forward.x;
+        reposition.x += magnet.transform.forward.x * spaceBetweenBallPlayer;
         reposition.y = magnet.transform.position.y - transform.localScale.y;
-        reposition.z += magnet.transform.forward.z;
+        reposition.z += magnet.transform.forward.z * spaceBetweenBallPlayer;
         transform.position = reposition;
     }
 
@@ -312,6 +313,11 @@ public class MonsterControllerF : MonoBehaviour {
                 body.velocity = Vector3.zero;
             }        
         }
+    }
+
+    public GameObject GetMagnet()
+    {
+        return magnet;
     }
 
     public void callDisableMagnet()

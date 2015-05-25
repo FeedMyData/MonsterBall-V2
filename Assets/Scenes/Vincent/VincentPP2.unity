@@ -252,6 +252,7 @@ MonoBehaviour:
   speedMonster: 15
   speedMaxToChooseDirection: 3
   speedDivisionFactor: 8
+  spaceBetweenBallPlayer: 2
   areaMagnet: 3
   speedMagnet: 40
   wrathMax: 100
@@ -965,12 +966,10 @@ MonoBehaviour:
   delayPowerMax: 2
   angleShoot: 180
   rangeShoot: 3
-  angleDash: 60
-  rangeDash: 7
   angleHoming: 50
+  multiImpact: 3
   stunKick: 1.29999995
   stunGoal: 0
-  stunDash: .649999976
   jersey: 2
   team: 1
   durationInvul: 1.5
@@ -3400,12 +3399,10 @@ MonoBehaviour:
   delayPowerMax: 2
   angleShoot: 180
   rangeShoot: 3
-  angleDash: 60
-  rangeDash: 7
   angleHoming: 50
+  multiImpact: 3
   stunKick: 1.29999995
   stunGoal: 0
-  stunDash: .649999976
   jersey: 3
   team: 0
   durationInvul: 1.5
@@ -14570,12 +14567,10 @@ MonoBehaviour:
   delayPowerMax: 2
   angleShoot: 180
   rangeShoot: 3
-  angleDash: 60
-  rangeDash: 7
   angleHoming: 50
+  multiImpact: 3
   stunKick: 1.29999995
   stunGoal: 0
-  stunDash: .649999976
   jersey: 0
   team: 1
   durationInvul: 1.5
@@ -15386,12 +15381,10 @@ MonoBehaviour:
   delayPowerMax: 2
   angleShoot: 180
   rangeShoot: 3
-  angleDash: 60
-  rangeDash: 7
   angleHoming: 50
+  multiImpact: 3
   stunKick: 1.29999995
   stunGoal: 0
-  stunDash: .649999976
   jersey: 1
   team: 0
   durationInvul: 1.5
@@ -15554,24 +15547,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df4ba9cfc8fb09c418e390493d4ae204, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tabTroisDeuxUn:
-  - {fileID: 0}
-  tabBut:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  tabDebutMatch:
-  - {fileID: 0}
-  tabDialogue:
-  - {fileID: 0}
-  tabMatch:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  mixerVoice: {fileID: 24300001, guid: 3b5232be4ec122545b3f1ef5cda50c18, type: 2}
 --- !u!114 &2052379256
 MonoBehaviour:
   m_ObjectHideFlags: 0

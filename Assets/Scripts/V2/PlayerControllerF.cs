@@ -34,22 +34,23 @@ public class PlayerControllerF : MonoBehaviour
     [Range(0.0f, 360.0f)]
     public float angleShoot = 180.0f;
     public float rangeShoot = 2.0f;
-    [Range(0.0f, 360.0f)]
-    public float angleDash = 35.0f;
-    public float rangeDash = 3.0f;
+    //[Range(0.0f, 360.0f)]
+    //public float angleDash = 35.0f;
+    //public float rangeDash = 3.0f;
     [Range(0.0f, 360.0f)]
     public float angleHoming = 30.0f;
 
-    private Vector3 posDash = Vector3.zero;
-    private bool dash = false;
+    public float multiImpact = 3.0f;
+
+    //private Vector3 posDash = Vector3.zero;
+    //private bool dash = false;
 
     [Header("Stun")]
     public float stunKick = 0.5f;
     public float stunGoal = 0.5f;
-    private float mass = 3.0f;
     private bool isStunned = false;
     private Vector3 impact = Vector3.zero;
-    public float stunDash = 0.5f;
+    //public float stunDash = 0.5f;
 
     private bool magnet = false;
 
@@ -205,18 +206,18 @@ public class PlayerControllerF : MonoBehaviour
 
         if (impact.sqrMagnitude > 0.2f)
             directionMove = impact;
-        else if (dash)
+        /*else if (dash)
         {
             transform.position = Vector3.MoveTowards(transform.position, posDash, Time.deltaTime * 80);
 
             if (Vector3.Distance(transform.position, posDash) < 0.3f)
                 dash = false;
-        }
+        }*/
         else if (projectionInGoal)
         {
             transform.position = Vector3.MoveTowards(transform.position, goal.position, Time.deltaTime * 120);
         }
-        else if (directionMove.sqrMagnitude > 0.2f && !isStunned && !dash)
+        else if (directionMove.sqrMagnitude > 0.2f && !isStunned /*&& !dash*/)
         {
             transform.LookAt(transform.position + directionMove);
             directionMove = transform.forward * actualSpeed;
@@ -265,9 +266,6 @@ public class PlayerControllerF : MonoBehaviour
 
         if (Input.GetButtonUp(fire) && loading)
         {
-            //PlayRandomSound(AbstractSound.Action.CoupBalle);
-            sound.PlayEvent("SFX_Niveks_Frappe", gameObject);
-
             if (GetComponentInChildren<Animator>() && GetComponentInChildren<Animator>().GetBool("isCharging") == true)
                 GetComponentInChildren<Animator>().SetBool("isCharging", false);
             loading = false;
@@ -282,15 +280,28 @@ public class PlayerControllerF : MonoBehaviour
 
                 if (tabProxi.Count > 0)
                 {
+                    if (power > (powerMax - powerMax * 0.1f))
+                    {
+                        sound.PlayEvent("SFX_Niveks_CoupFort", gameObject);
+                    }
+                    else
+                    {
+                        sound.PlayEvent("SFX_Niveks_CoupFaible", gameObject);
+                    }
+                    
                     for (int i = 0; i < tabProxi.Count; i++)
                     {
                         Hit(tabProxi[i]);
                     }
-                    if (GetComponentInChildren<Animator>())
+                    /*if (GetComponentInChildren<Animator>())
                         GetComponentInChildren<Animator>().SetTrigger("hit");
-                    return;
+                    return;*/
                 }
                 else
+                {
+                    sound.PlayEvent("SFX_Niveks_Woosh", gameObject);
+                }
+                /*else
                 {
                     List<GameObject> tabProxiDash = GameControllerF.PlayerView(this, rangeDash, angleDash);
 
@@ -320,12 +331,10 @@ public class PlayerControllerF : MonoBehaviour
                             return;
                         }
                     }
-                }
+                }*/
                 if (GetComponentInChildren<Animator>())
                     GetComponentInChildren<Animator>().SetTrigger("hit");
-
             }
-
         }
     }
 
@@ -355,7 +364,8 @@ public class PlayerControllerF : MonoBehaviour
         {
             if (player.IsTouchable())
             {
-                player.AddImpact(directionImpact);
+                sound.PlayEvent("VX_Niveks_Coup", player.gameObject);
+                player.AddImpact(directionImpact * multiImpact);
                 player.setLoading(false);
                 player.callStun(stunKick);
 
@@ -386,36 +396,39 @@ public class PlayerControllerF : MonoBehaviour
                 if (monster.IsTouchable())
                 {
                    // monster.OnClickHitEvent += ;
-                    monster.callDisableMagnet();
-
-                    if (GameControllerF.WhereIsMyAlly(this) != Vector3.zero)
+                    if (monster.GetMagnet().GetComponent<PlayerControllerF>().team != team || monster.GetMagnet() == this.gameObject)
                     {
-                        directionImpact = GameControllerF.WhereIsMyAlly(this) - transform.position;
-                        directionImpact.y = 0;
-                        directionImpact.Normalize();
-                        directionImpact *= power;
+                        monster.callDisableMagnet();
+                        sound.PlayEvent("VX_Balle_Coup", monster.gameObject);
+
+                        if (GameControllerF.WhereIsMyAlly(this) != Vector3.zero)
+                        {
+                            directionImpact = GameControllerF.WhereIsMyAlly(this) - transform.position;
+                            directionImpact.y = 0;
+                            directionImpact.Normalize();
+                            directionImpact *= power;
+                        }
+                        monster.GetComponent<Rigidbody>().AddForce(directionImpact, ForceMode.Impulse);
+                        //TODO: changer pour une valeur proportionnelle
+
+
+
+                        monster.AddWrath((int)(power / coefPower));
+
+                        if (monster.GetWrath() < monster.wrathMax)
+                        {
+
+                        }
+
+                        //feedbacks balle coup reçu par un joueur
+                        if (power == powerMax)
+                        {
+                            Camera.main.GetComponent<CameraShake>().shake(0.6f, 0.4f, 1);
+
+                        }
+
+                        return true;
                     }
-                    monster.GetComponent<Rigidbody>().AddForce(directionImpact, ForceMode.Impulse);
-                    //TODO: changer pour une valeur proportionnelle
-
-
-
-                    monster.AddWrath((int)(power / coefPower));
-
-                    if (monster.GetWrath() < monster.wrathMax)
-                    {
-
-                    }
-
-                    //feedbacks balle coup reçu par un joueur
-                    if (power == powerMax)
-                    {
-                        Camera.main.GetComponent<CameraShake>().shake(0.6f, 0.4f, 1);
-
-                    }
-
-
-                    return true;
                 }
             }
             else
@@ -456,7 +469,7 @@ public class PlayerControllerF : MonoBehaviour
      */
     public void AddImpact(Vector3 force)
     {
-        impact += force / mass;
+        impact += force;
     }
 
     /**
