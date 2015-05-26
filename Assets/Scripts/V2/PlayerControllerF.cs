@@ -331,14 +331,10 @@ public class PlayerControllerF : MonoBehaviour
                         sound.PlayEvent("SFX_Niveks_Woosh", gameObject);
                         coupsVide++;
                     }
-<<<<<<< HEAD
 
                     /*if (GetComponentInChildren<Animator>())
                         GetComponentInChildren<Animator>().SetTrigger("hit");
                     return;*/
-=======
-                    
->>>>>>> origin/master
                 }
                 else
                 {
