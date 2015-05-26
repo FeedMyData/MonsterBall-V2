@@ -343,6 +343,7 @@ public class MonsterControllerF : MonoBehaviour {
         eatPlayer = true;
         player.GetComponent<CharacterController>().enabled = false;
         player.GetComponent<Collider>().enabled = false;
+        player.GetComponent<PlayerControllerF>().joueurMange++;
         //faire disparaitre le joueur, jouer l'anim du monstre qui mache et téléporter le joueur dans le monstre et le stun
         player.transform.position = this.transform.position;
         //player.GetComponent<Renderer>().enabled = false;

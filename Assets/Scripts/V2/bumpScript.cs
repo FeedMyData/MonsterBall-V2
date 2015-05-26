@@ -28,6 +28,7 @@ public class bumpScript : MonoBehaviour {
             if (!player.IsProjectionInGoal())
             {
                 player.callStun(player.stunGoal);
+                player.sautBut++;
 
                 Vector3 dirImpact = other.transform.position - transform.position;
 

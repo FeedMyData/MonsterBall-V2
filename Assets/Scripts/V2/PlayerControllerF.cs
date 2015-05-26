@@ -72,6 +72,20 @@ public class PlayerControllerF : MonoBehaviour
 
     private SoundManager sound;
 
+    /* Statistiques */
+    [HideInInspector]
+    public int coupsDonnes = 0;
+    [HideInInspector]
+    public int coupsRecus = 0;
+    [HideInInspector]
+    public int coupsCharges = 0;
+    [HideInInspector]
+    public int joueurMange = 0;
+    [HideInInspector]
+    public int sautBut = 0;
+    [HideInInspector]
+    public int coupsVide = 0;
+
     // Use this for initialization
     void Start()
     {
@@ -280,19 +294,35 @@ public class PlayerControllerF : MonoBehaviour
 
                 if (tabProxi.Count > 0)
                 {
-                    if (power > (powerMax - powerMax * 0.1f))
+                    bool onePunch = false;
+                    for (int i = 0; i < tabProxi.Count; i++)
                     {
-                        sound.PlayEvent("SFX_Niveks_CoupFort", gameObject);
+                        if (Hit(tabProxi[i]))
+                        {
+                            onePunch = true;
+                        }
+                    }
+
+                    if (onePunch)
+                    {
+                        if (power > (powerMax - powerMax * 0.1f))
+                        {
+                            sound.PlayEvent("SFX_Niveks_CoupFort", gameObject);
+                            coupsCharges++;
+                            coupsDonnes++;
+                        }
+                        else
+                        {
+                            sound.PlayEvent("SFX_Niveks_CoupFaible", gameObject);
+                            coupsDonnes++;
+                        }
                     }
                     else
                     {
-                        sound.PlayEvent("SFX_Niveks_CoupFaible", gameObject);
+                        sound.PlayEvent("SFX_Niveks_Woosh", gameObject);
+                        coupsVide++;
                     }
-                    
-                    for (int i = 0; i < tabProxi.Count; i++)
-                    {
-                        Hit(tabProxi[i]);
-                    }
+
                     /*if (GetComponentInChildren<Animator>())
                         GetComponentInChildren<Animator>().SetTrigger("hit");
                     return;*/
@@ -300,7 +330,9 @@ public class PlayerControllerF : MonoBehaviour
                 else
                 {
                     sound.PlayEvent("SFX_Niveks_Woosh", gameObject);
+                    coupsVide++;
                 }
+                
                 /*else
                 {
                     List<GameObject> tabProxiDash = GameControllerF.PlayerView(this, rangeDash, angleDash);
@@ -365,6 +397,7 @@ public class PlayerControllerF : MonoBehaviour
             if (player.IsTouchable())
             {
                 sound.PlayEvent("VX_Niveks_Coup", player.gameObject);
+                player.coupsRecus++;
                 player.AddImpact(directionImpact * multiImpact);
                 player.setLoading(false);
                 player.callStun(stunKick);

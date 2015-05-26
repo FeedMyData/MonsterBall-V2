@@ -11,9 +11,13 @@ public class GameManagerF : MonoBehaviour {
 
     public int durationInSecond;
 
+    public GameObject ecranFin;
+
     public float timeBetweenTwoBonus = 45f;
     private float rngBonus = 0.1f;
     private bool bonusCanPopUp = true;
+
+    private bool displayEnd = false;
 
 
 	// Use this for initialization
@@ -38,6 +42,16 @@ public class GameManagerF : MonoBehaviour {
         if (durationInSecond <= 0)
         {
             Time.timeScale = 0;
+
+            if (!displayEnd)
+            {
+                ecranFin.SetActive(true);
+                ecranFin.GetComponent<MenuFin>().InitMenu();
+                ecranFin.GetComponent<MenuFin>().WhoWin(bluScore, redScore);
+                ecranFin.GetComponent<MenuFin>().RewardPlayer();
+                displayEnd = true;
+            }
+            
         }
 
         

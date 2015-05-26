@@ -13,12 +13,12 @@ public class MenuStart : MonoBehaviour {
             EventSystem.current.SetSelectedGameObject(defaultButton);
     }
 
-    public static void Play()
+    public void Play()
     {
         Application.LoadLevel(1);
     }
 
-    public static void Quit()
+    public void Quit()
     {
         Application.Quit();
     }
