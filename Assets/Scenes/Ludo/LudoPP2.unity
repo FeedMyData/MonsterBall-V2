@@ -6373,7 +6373,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab8b6c647c1849443bbee364c06a5a6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: {x: .200000003, y: 0, z: 0}
+  speed: {x: .0199999996, y: 0, z: 0}
   leftLimit: -100
   rightLimit: 100
 --- !u!1 &944120937
@@ -7555,7 +7555,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab8b6c647c1849443bbee364c06a5a6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: {x: .0299999993, y: 0, z: 0}
+  speed: {x: .00499999989, y: 0, z: 0}
   leftLimit: -150
   rightLimit: 150
 --- !u!1 &1166794600
@@ -7949,7 +7949,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1239062228
 Transform:
   m_ObjectHideFlags: 0
@@ -15006,7 +15006,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab8b6c647c1849443bbee364c06a5a6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: {x: .0199999996, y: 0, z: 0}
+  speed: {x: .00999999978, y: 0, z: 0}
   leftLimit: -200
   rightLimit: 200
 --- !u!1 &1988871598
@@ -15210,7 +15210,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab8b6c647c1849443bbee364c06a5a6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: {x: .100000001, y: 0, z: 0}
+  speed: {x: .00999999978, y: 0, z: 0}
   leftLimit: -90
   rightLimit: 90
 --- !u!1 &1998758082
