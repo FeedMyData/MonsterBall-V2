@@ -217,7 +217,9 @@ public class PlayerControllerF : MonoBehaviour
     {
         actualSpeed = setSpeed();
         Vector3 directionMove = new Vector3(Input.GetAxis(horizontal), 0, Input.GetAxis(vertical));
-
+		/*if (Input.GetKeyDown (KeyCode.A))
+		if (GetComponentInChildren<Animator> ())
+			GetComponentInChildren<Animator> ().SetTrigger ("fly");*/
         if (impact.sqrMagnitude > 0.2f)
             directionMove = impact;
         /*else if (dash)
@@ -262,8 +264,11 @@ public class PlayerControllerF : MonoBehaviour
             loading = true;
             power = powerMin;
             chargingShoot = 0;
-            if (GetComponentInChildren<Animator>() && GetComponentInChildren<Animator>().GetBool("isCharging") == false)
+            if (GetComponentInChildren<Animator>() && GetComponentInChildren<Animator>().GetBool("isCharging") == false){
+
                 GetComponentInChildren<Animator>().SetBool("isCharging", true);
+				Debug.Log("startCharge");
+			}
         }
 
         if (chargingShoot < 1)
@@ -280,8 +285,12 @@ public class PlayerControllerF : MonoBehaviour
 
         if (Input.GetButtonUp(fire) && loading)
         {
-            if (GetComponentInChildren<Animator>() && GetComponentInChildren<Animator>().GetBool("isCharging") == true)
+            if (GetComponentInChildren<Animator>() && GetComponentInChildren<Animator>().GetBool("isCharging") == true){
+
                 GetComponentInChildren<Animator>().SetBool("isCharging", false);
+				Debug.Log("endCharge");
+
+			}
             loading = false;
             if (bonus != null)
             {
@@ -322,10 +331,14 @@ public class PlayerControllerF : MonoBehaviour
                         sound.PlayEvent("SFX_Niveks_Woosh", gameObject);
                         coupsVide++;
                     }
+<<<<<<< HEAD
 
                     /*if (GetComponentInChildren<Animator>())
                         GetComponentInChildren<Animator>().SetTrigger("hit");
                     return;*/
+=======
+                    
+>>>>>>> origin/master
                 }
                 else
                 {
@@ -364,8 +377,11 @@ public class PlayerControllerF : MonoBehaviour
                         }
                     }
                 }*/
-                if (GetComponentInChildren<Animator>())
+                if (GetComponentInChildren<Animator>()){
+
                     GetComponentInChildren<Animator>().SetTrigger("hit");
+					Debug.Log("hit");
+				}
             }
         }
     }
@@ -373,6 +389,15 @@ public class PlayerControllerF : MonoBehaviour
     public void FlyAway()
     {
         projectionInGoal = true;
+		if (GetComponentInChildren<Animator> ()) {
+			if (GetComponentInChildren<Animator>().GetBool("isCharging") == true)
+				GetComponentInChildren<Animator>().SetBool("isCharging", false);
+			if (GetComponentInChildren<Animator>().GetBool("isRunning") == true)
+				GetComponentInChildren<Animator>().SetBool("isRunning", false);
+			GetComponentInChildren<Animator> ().SetTrigger ("fly");
+		}
+
+
     }
 
     /**
