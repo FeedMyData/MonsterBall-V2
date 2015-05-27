@@ -1926,7 +1926,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_Texture: {fileID: 2800000, guid: 8e1b00f86b38dc04ba62af59251b1e0a, type: 3}
+  m_Texture: {fileID: 2800000, guid: f625664c6ce62c742a9ce7f976babbbc, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -2748,6 +2748,7 @@ GameObject:
   - 114: {fileID: 499457356}
   - 114: {fileID: 499457351}
   - 114: {fileID: 499457358}
+  - 114: {fileID: 499457359}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2874,6 +2875,20 @@ MonoBehaviour:
   curveInterpolation: 4
   transitionDuration: 0
   m_callbackData: {fileID: 0}
+--- !u!114 &499457359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 499457350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1877d2121a5c46548956bcaf903bdb11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  monster: {fileID: 1800922600}
+  boneToFollowWhenChewing: {fileID: 1215151606}
+  camMoveFactor: .5
 --- !u!1 &500802388
 GameObject:
   m_ObjectHideFlags: 0
@@ -3901,7 +3916,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25ee6756f9008ae47bf6f2cd719a0eb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dashGoalPower: 300
+  dashGoalPower: 100
 --- !u!1 &656183276
 GameObject:
   m_ObjectHideFlags: 0
@@ -4148,9 +4163,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57b094ed038d3704187c92fcde74ec19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: {x: .0149999997, y: 0, z: 0}
-  leftLimit: -80
-  rightLimit: 80
 --- !u!1 &710931140
 GameObject:
   m_ObjectHideFlags: 0
@@ -6684,9 +6696,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57b094ed038d3704187c92fcde74ec19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: {x: .0500000007, y: 0, z: 0}
-  leftLimit: -85
-  rightLimit: 85
 --- !u!1 &956950062
 GameObject:
   m_ObjectHideFlags: 0
@@ -6978,9 +6987,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57b094ed038d3704187c92fcde74ec19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: {x: .00999999978, y: 0, z: 0}
-  leftLimit: -125
-  rightLimit: 125
 --- !u!1 &1026307693
 GameObject:
   m_ObjectHideFlags: 0
@@ -8627,6 +8633,10 @@ Prefab:
 --- !u!4 &1215151605 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400018, guid: aca9e1c84fab4f946a4007ad4035b283, type: 3}
+  m_PrefabInternal: {fileID: 1215151604}
+--- !u!4 &1215151606 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 400006, guid: aca9e1c84fab4f946a4007ad4035b283, type: 3}
   m_PrefabInternal: {fileID: 1215151604}
 --- !u!1 &1230171918
 GameObject:
@@ -11425,7 +11435,7 @@ Transform:
   - {fileID: 86739959}
   - {fileID: 1604878392}
   m_Father: {fileID: 1515749445}
-  m_RootOrder: 12
+  m_RootOrder: 13
 --- !u!1 &1356557980
 GameObject:
   m_ObjectHideFlags: 0
@@ -12596,7 +12606,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_Texture: {fileID: 2800000, guid: 071802c0417a1224796ebe7765040912, type: 3}
+  m_Texture: {fileID: 2800000, guid: e6bfd76a270a28c4eb667f6b4eed473f, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -12831,8 +12841,8 @@ Transform:
   - {fileID: 649490972}
   - {fileID: 250429454}
   - {fileID: 947855376}
-  - {fileID: 1351621366}
   - {fileID: 2084194956}
+  - {fileID: 1351621366}
   m_Father: {fileID: 0}
   m_RootOrder: 3
 --- !u!1 &1519344842
@@ -14000,9 +14010,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57b094ed038d3704187c92fcde74ec19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: {x: .0399999991, y: 0, z: 0}
-  leftLimit: -150
-  rightLimit: 150
 --- !u!1 &1536132167
 GameObject:
   m_ObjectHideFlags: 0
@@ -14182,7 +14189,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25ee6756f9008ae47bf6f2cd719a0eb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dashGoalPower: 300
+  dashGoalPower: 100
 --- !u!1 &1558002328
 GameObject:
   m_ObjectHideFlags: 0
@@ -16847,7 +16854,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be088c83819d83046a99eb9fc4edf5ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  durationInSecond: 100
+  durationInSecond: 180
   ecranFin: {fileID: 1105067374}
   timeBetweenTwoBonus: 0
 --- !u!114 &2052379257
@@ -17188,7 +17195,7 @@ Transform:
   m_LocalScale: {x: .241108283, y: .239006773, z: .219884887}
   m_Children: []
   m_Father: {fileID: 1515749445}
-  m_RootOrder: 13
+  m_RootOrder: 12
 --- !u!108 &2084194957
 Light:
   m_ObjectHideFlags: 0

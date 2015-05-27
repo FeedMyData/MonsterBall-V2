@@ -480,7 +480,7 @@ public class PlayerControllerF : MonoBehaviour
                         //feedbacks balle coup reçu par un joueur
                         if (power == powerMax)
                         {
-                            Camera.main.GetComponent<CameraShake>().shake(0.6f, 0.4f, 1);
+                            Camera.main.GetComponent<CameraShake>().shake(0.6f, 0.4f, 1.0f);
 
                         }
 
