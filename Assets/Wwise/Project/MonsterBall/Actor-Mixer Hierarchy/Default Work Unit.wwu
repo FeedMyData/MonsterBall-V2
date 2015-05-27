@@ -3902,151 +3902,6 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<RandomSequenceContainer Name="Autre prise" ID="{BF38611A-52FD-43AC-A67B-EA1C095809A8}" ShortID="134581248">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<Sound Name="VOIX_Monstre_CracheJoueur_09" ID="{DC7867C0-789F-4FA5-BB3B-172D28F092BF}" ShortID="567875111" Type="SoundFX">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="VOIX_Monstre_CracheJoueur_09" ID="{DDB7339E-3400-433B-B15D-AA17675B02E3}" ShortID="776513529">
-															<Language>SFX</Language>
-															<AudioFile>RecracheJoueur\Autre prise\VOIX_Monstre_CracheJoueur_09.wav</AudioFile>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="VOIX_Monstre_CracheJoueur_09" ID="{DDB7339E-3400-433B-B15D-AA17675B02E3}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="VOIX_Monstre_CracheJoueur_10" ID="{774F5B8A-199F-4024-A904-A8B0A39AC62E}" ShortID="612635964" Type="SoundFX">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="VOIX_Monstre_CracheJoueur_10" ID="{B4E6B492-53A3-406B-9487-A06611849281}" ShortID="533372483">
-															<Language>SFX</Language>
-															<AudioFile>RecracheJoueur\Autre prise\VOIX_Monstre_CracheJoueur_10.wav</AudioFile>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="VOIX_Monstre_CracheJoueur_10" ID="{B4E6B492-53A3-406B-9487-A06611849281}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="VOIX_Monstre_CracheJoueur_11" ID="{AD457A92-8A3D-4767-884D-332D78424F58}" ShortID="189190674" Type="SoundFX">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="VOIX_Monstre_CracheJoueur_11" ID="{07550FF5-D5C8-4273-8020-728951156E3B}" ShortID="963726580">
-															<Language>SFX</Language>
-															<AudioFile>RecracheJoueur\Autre prise\VOIX_Monstre_CracheJoueur_11.wav</AudioFile>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="VOIX_Monstre_CracheJoueur_11" ID="{07550FF5-D5C8-4273-8020-728951156E3B}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="VOIX_Monstre_CracheJoueur_12" ID="{AADCCB67-6F5B-47D4-A906-21D01F33FC72}" ShortID="286165868" Type="SoundFX">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="VOIX_Monstre_CracheJoueur_12" ID="{910F3C9A-F027-402D-AB45-DFB7A7742B01}" ShortID="696268165">
-															<Language>SFX</Language>
-															<AudioFile>RecracheJoueur\Autre prise\VOIX_Monstre_CracheJoueur_12.wav</AudioFile>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="VOIX_Monstre_CracheJoueur_12" ID="{910F3C9A-F027-402D-AB45-DFB7A7742B01}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="VOIX_Monstre_CracheJoueur_13" ID="{F839A52F-0C5C-4064-9513-3CCB94C45260}" ShortID="108050331" Type="SoundFX">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="VOIX_Monstre_CracheJoueur_13" ID="{136BF398-D269-4719-A93E-431C61C6ECF8}" ShortID="345201960">
-															<Language>SFX</Language>
-															<AudioFile>RecracheJoueur\Autre prise\VOIX_Monstre_CracheJoueur_13.wav</AudioFile>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="VOIX_Monstre_CracheJoueur_13" ID="{136BF398-D269-4719-A93E-431C61C6ECF8}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="VOIX_Monstre_CracheJoueur_14" ID="{2030119E-AC6C-407B-8BD1-A824196100C4}" ShortID="458032161" Type="SoundFX">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="VOIX_Monstre_CracheJoueur_14" ID="{27CE8D57-7B27-4A95-B1CD-17907847B521}" ShortID="15872360">
-															<Language>SFX</Language>
-															<AudioFile>RecracheJoueur\Autre prise\VOIX_Monstre_CracheJoueur_14.wav</AudioFile>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="VOIX_Monstre_CracheJoueur_14" ID="{27CE8D57-7B27-4A95-B1CD-17907847B521}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="VOIX_Monstre_CracheJoueur_15" ID="{F583A512-593C-4C6D-83F0-C2555955544A}" ShortID="597824814" Type="SoundFX">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="VOIX_Monstre_CracheJoueur_15" ID="{13C47333-FEE1-4DCE-BC82-E3A7D8EEEA1D}" ShortID="869479090">
-															<Language>SFX</Language>
-															<AudioFile>RecracheJoueur\Autre prise\VOIX_Monstre_CracheJoueur_15.wav</AudioFile>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="VOIX_Monstre_CracheJoueur_15" ID="{13C47333-FEE1-4DCE-BC82-E3A7D8EEEA1D}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-											</ChildrenList>
-										</RandomSequenceContainer>
 										<Sound Name="VOIX_Monstre_CracheJoueur_01" ID="{7DC6F88E-F402-4DEE-A698-79E06D9A6986}" ShortID="180268229" Type="SoundFX">
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -5189,6 +5044,11 @@
 								<Sound Name="VOIX_Commentateur_MonsterBall" ID="{154EE251-C2AE-454C-8D60-7A9BBC16ADCF}" ShortID="248501670" Type="SoundFX">
 									<PropertyList>
 										<Property Name="OverrideEffect" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>7</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -5227,6 +5087,34 @@
 							<ObjectRef Name="Musiques" ID="{51DA5A6D-5764-451B-9A18-180342A5B0FE}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
 						</Reference>
 					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Monster Ball Music Test" ID="{814021AA-6BA9-4C22-A014-A745571C77FD}" ShortID="135082212" Type="SoundFX">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-9</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Monster Ball Music Test" ID="{EE1F4BFC-2703-40F0-9115-E9DBF4D2E33A}" ShortID="926728707">
+									<Language>SFX</Language>
+									<AudioFile>Monster Ball Music Test.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Monster Ball Music Test" ID="{EE1F4BFC-2703-40F0-9115-E9DBF4D2E33A}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
 				</ActorMixer>
 			</ChildrenList>
 		</WorkUnit>

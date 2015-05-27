@@ -21,6 +21,7 @@
 						<ObjectRef Name="SFX_Niveks_CoupFaible" ID="{A2BB9F56-E31C-4C23-9C9A-5C9364E13726}" WorkUnitID="{D899008C-EE7F-4475-814E-BB3DC86CD141}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Menu_Valid" ID="{27C6C557-6FEA-4DEA-BA26-0FA8EE8D3FCE}" WorkUnitID="{D899008C-EE7F-4475-814E-BB3DC86CD141}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Public_Intensification" ID="{A6B73459-D8BB-49B4-9183-797CC5E46245}" WorkUnitID="{D899008C-EE7F-4475-814E-BB3DC86CD141}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Music_DebutMatch" ID="{CF6C4B60-167B-47DE-B567-E8CA62DC3777}" WorkUnitID="{D899008C-EE7F-4475-814E-BB3DC86CD141}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="VX_Niveks_Coup" ID="{4E5DA369-E8CC-4583-B9C5-D7BDF0403EE2}" WorkUnitID="{D899008C-EE7F-4475-814E-BB3DC86CD141}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="VX_Niveks_ButPerdant" ID="{3152D46C-1764-41A1-9D36-CE1DA62BD0D3}" WorkUnitID="{D899008C-EE7F-4475-814E-BB3DC86CD141}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Public_But" ID="{068D186E-6A64-4DF4-AF0A-772AC4142926}" WorkUnitID="{D899008C-EE7F-4475-814E-BB3DC86CD141}" Filter="7" Origin="Manual"/>

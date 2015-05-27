@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ValidationCache Version="1" SchemaVersion="69">
 	<ValidationCacheItem File="C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\Actor-Mixer Hierarchy\Ambiances.wwu" DateLow="1338908786" DateHigh="30446539"/>
-	<ValidationCacheItem File="C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="4227891484" DateHigh="30447799"/>
+	<ValidationCacheItem File="C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="847561278" DateHigh="30447830"/>
 	<ValidationCacheItem File="C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\Actor-Mixer Hierarchy\Factory SoundSeed Air Objects.wwu" DateLow="1478604800" DateHigh="30419325"/>
 	<ValidationCacheItem File="C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\Actor-Mixer Hierarchy\Factory Synth One.wwu" DateLow="1478604800" DateHigh="30419325"/>
 	<ValidationCacheItem File="C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\Attenuations\Default Work Unit.wwu" DateLow="3491015155" DateHigh="30446537"/>
@@ -11,28 +11,28 @@
 	<ValidationCacheItem File="C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\Dynamic Dialogue\Default Work Unit.wwu" DateLow="3491035157" DateHigh="30446537"/>
 	<ValidationCacheItem File="C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\Effects\Default Work Unit.wwu" DateLow="3490895149" DateHigh="30446537"/>
 	<ValidationCacheItem File="C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\Effects\Factory Convolution Reverb Effects.wwu" DateLow="1478604800" DateHigh="30419325"/>
-	<ValidationCacheItem File="C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\Effects\Factory Effects.wwu" DateLow="4228001491" DateHigh="30447799"/>
+	<ValidationCacheItem File="C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\Effects\Factory Effects.wwu" DateLow="3753556164" DateHigh="30447804"/>
 	<ValidationCacheItem File="C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\Effects\Factory iZotope Box Modeler.wwu" DateLow="1998604800" DateHigh="30419325"/>
 	<ValidationCacheItem File="C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\Effects\Factory iZotope Delay.wwu" DateLow="1998604800" DateHigh="30419325"/>
 	<ValidationCacheItem File="C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\Effects\Factory iZotope Dynamics.wwu" DateLow="1998604800" DateHigh="30419325"/>
 	<ValidationCacheItem File="C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\Effects\Factory iZotope Filters.wwu" DateLow="1998604800" DateHigh="30419325"/>
-	<ValidationCacheItem File="C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\Effects\Factory iZotope Hybrid Reverb Effects.wwu" DateLow="4228031492" DateHigh="30447799"/>
+	<ValidationCacheItem File="C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\Effects\Factory iZotope Hybrid Reverb Effects.wwu" DateLow="3753566165" DateHigh="30447804"/>
 	<ValidationCacheItem File="C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\Effects\Factory iZotope Multiband Distortion.wwu" DateLow="1998604800" DateHigh="30419325"/>
 	<ValidationCacheItem File="C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\Effects\Factory iZotope Singleband Distortion.wwu" DateLow="1998604800" DateHigh="30419325"/>
 	<ValidationCacheItem File="C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\Effects\Factory McDSP Effects.wwu" DateLow="1478604800" DateHigh="30419325"/>
-	<ValidationCacheItem File="C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\Events\Default Work Unit.wwu" DateLow="4227921486" DateHigh="30447799"/>
+	<ValidationCacheItem File="C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\Events\Default Work Unit.wwu" DateLow="1304307402" DateHigh="30447830"/>
 	<ValidationCacheItem File="C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\Game Parameters\Default Work Unit.wwu" DateLow="3491255169" DateHigh="30446537"/>
 	<ValidationCacheItem File="C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\Game Parameters\Factory SoundSeed Air Game Syncs.wwu" DateLow="1478604800" DateHigh="30419325"/>
 	<ValidationCacheItem File="C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\Interactive Music Hierarchy\Default Work Unit.wwu" DateLow="3490985154" DateHigh="30446537"/>
-	<ValidationCacheItem File="C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\Master-Mixer Hierarchy\Default Work Unit.wwu" DateLow="4227801479" DateHigh="30447799"/>
+	<ValidationCacheItem File="C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\Master-Mixer Hierarchy\Default Work Unit.wwu" DateLow="3753586166" DateHigh="30447804"/>
 	<ValidationCacheItem File="C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\Mixing Sessions\Default Work Unit.wwu" DateLow="3491065158" DateHigh="30446537"/>
 	<ValidationCacheItem File="C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\Modulators\Default Work Unit.wwu" DateLow="3491105161" DateHigh="30446537"/>
-	<ValidationCacheItem File="C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\MonsterBall.LaMouette.wsettings" DateLow="2319280680" DateHigh="30447800"/>
+	<ValidationCacheItem File="C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\MonsterBall.LaMouette.wsettings" DateLow="1395262604" DateHigh="30447830"/>
 	<ValidationCacheItem File="C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\MonsterBall.wproj" DateLow="3134871854" DateHigh="30446551"/>
 	<ValidationCacheItem File="C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\Presets\Default Work Unit.wwu" DateLow="3490915150" DateHigh="30446537"/>
 	<ValidationCacheItem File="C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\Queries\Default Work Unit.wwu" DateLow="3490965153" DateHigh="30446537"/>
 	<ValidationCacheItem File="C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\Queries\Factory Queries.wwu" DateLow="2018604800" DateHigh="30419325"/>
-	<ValidationCacheItem File="C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\SoundBanks\Default Work Unit.wwu" DateLow="2150469228" DateHigh="30446959"/>
+	<ValidationCacheItem File="C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\SoundBanks\Default Work Unit.wwu" DateLow="1304347404" DateHigh="30447830"/>
 	<ValidationCacheItem File="C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\Soundcaster Sessions\Default Work Unit.wwu" DateLow="3490945151" DateHigh="30446537"/>
 	<ValidationCacheItem File="C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\States\Default Work Unit.wwu" DateLow="3491215167" DateHigh="30446537"/>
 	<ValidationCacheItem File="C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\Switches\Default Work Unit.wwu" DateLow="3491195166" DateHigh="30446537"/>

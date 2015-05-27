@@ -232,8 +232,31 @@
 						</Folder>
 						<Folder Name="Monstre" ID="{9B1F4F36-E1FB-4FA7-A3D9-B4DEC83362C3}" ShortID="982315659">
 							<ChildrenList>
-								<Event Name="VX_Monstre_Course" ID="{BE98E6F5-D868-4FF7-B2CA-FDBF3A1416BF}"/>
-								<Event Name="VX_Monstre_Crache" ID="{0C281AFE-3F0D-4598-A801-8ABF4EE23C72}"/>
+								<Event Name="VX_Monstre_Course" ID="{BE98E6F5-D868-4FF7-B2CA-FDBF3A1416BF}">
+									<ChildrenList>
+										<Action Name="Play" ID="{BFE60334-3218-4EDD-BD1D-66A9C13D9D7D}" ShortID="197973720" Type="Play" Scope="One" Global="false">
+											<ElementList>
+												<Element ID="{4691F63F-5E7E-4F87-B873-58728C5F51E3}" Global="false">
+													<ObjectRef Name="Grognements" ID="{DA313CEB-548A-4DC0-9E3E-F79794B4C644}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+												</Element>
+											</ElementList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="VX_Monstre_Crache" ID="{0C281AFE-3F0D-4598-A801-8ABF4EE23C72}">
+									<ChildrenList>
+										<Action Name="Play" ID="{BF63DDE7-024E-4BFA-BB73-32B5BB6442D1}" ShortID="689968543" Type="Play" Scope="One" Global="false">
+											<PropertyList>
+												<Property Name="Delay" Type="Real64" Value="0.1"/>
+											</PropertyList>
+											<ElementList>
+												<Element ID="{DDC8F612-F21C-4E2B-9B94-ABAE7E4C849F}" Global="false">
+													<ObjectRef Name="RecracheJoueur" ID="{29D235F3-0301-428A-8094-A8ECCBA89E0A}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+												</Element>
+											</ElementList>
+										</Action>
+									</ChildrenList>
+								</Event>
 							</ChildrenList>
 						</Folder>
 						<Folder Name="Transformation" ID="{4094CD55-8DC4-4BDB-A810-533DAE16B8FE}" ShortID="729642533">
@@ -347,6 +370,21 @@
 					<ChildrenList>
 						<Event Name="Menu_Move" ID="{F2C2B933-E2B4-4F3A-B224-8DA6F4FD218B}"/>
 						<Event Name="Menu_Valid" ID="{27C6C557-6FEA-4DEA-BA26-0FA8EE8D3FCE}"/>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Music" ID="{34C33023-FC46-45EC-9E0D-7378FBEBF868}" ShortID="804047239">
+					<ChildrenList>
+						<Event Name="Music_DebutMatch" ID="{CF6C4B60-167B-47DE-B567-E8CA62DC3777}">
+							<ChildrenList>
+								<Action Name="Play" ID="{A589291B-22FE-4629-B80B-D3C9BC83A4E7}" ShortID="710159379" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{8D802B08-7DE7-4CF1-BF68-76E8E549704E}" Global="false">
+											<ObjectRef Name="Monster Ball Music Test" ID="{814021AA-6BA9-4C22-A014-A745571C77FD}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+										</Element>
+									</ElementList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>
