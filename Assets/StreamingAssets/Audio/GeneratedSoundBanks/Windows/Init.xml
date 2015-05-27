@@ -17,6 +17,11 @@
 					<Path>Plugins\iZotope Hybrid Reverb\Auditorium_DDC08386.wem</Path>
 					<PrefetchSize>0</PrefetchSize>
 				</File>
+				<File Id="875305838" Language="SFX">
+					<ShortName>City Center.wav</ShortName>
+					<Path>Plugins\iZotope Hybrid Reverb\City Center_98215797.wem</Path>
+					<PrefetchSize>0</PrefetchSize>
+				</File>
 			</ExcludedMemoryFiles>
 		</SoundBank>
 	</SoundBanks>
