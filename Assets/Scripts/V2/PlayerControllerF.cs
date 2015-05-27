@@ -267,7 +267,8 @@ public class PlayerControllerF : MonoBehaviour
             if (GetComponentInChildren<Animator>() && GetComponentInChildren<Animator>().GetBool("isCharging") == false){
 
                 GetComponentInChildren<Animator>().SetBool("isCharging", true);
-				Debug.Log("startCharge");
+				foreach(Animator animator in GetComponentsInChildren<Animator>())
+					animator.SetTrigger("grow");	
 			}
         }
 
@@ -288,7 +289,7 @@ public class PlayerControllerF : MonoBehaviour
             if (GetComponentInChildren<Animator>() && GetComponentInChildren<Animator>().GetBool("isCharging") == true){
 
                 GetComponentInChildren<Animator>().SetBool("isCharging", false);
-				Debug.Log("endCharge");
+
 
 			}
             loading = false;
@@ -377,6 +378,8 @@ public class PlayerControllerF : MonoBehaviour
 
                     GetComponentInChildren<Animator>().SetTrigger("hit");
 					Debug.Log("hit");
+					foreach(Animator animator in GetComponentsInChildren<Animator>())
+						animator.SetTrigger("shrink");
 				}
             }
         }
