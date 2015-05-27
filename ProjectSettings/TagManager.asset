@@ -6,6 +6,7 @@ TagManager:
   tags:
   - TeamBlu
   - TeamRed
+  - Monster
   layers:
   - Default
   - TransparentFX
@@ -21,7 +22,7 @@ TagManager:
   - Ambiant Light Ignore
   - SpotLight Ignore
   - Monster No Reflection
-  - 
+  - Twitter
   - 
   - 
   - 

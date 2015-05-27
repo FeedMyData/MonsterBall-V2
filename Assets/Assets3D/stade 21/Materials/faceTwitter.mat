@@ -6,10 +6,9 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Ground_Twitter
+  m_Name: faceTwitter
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: _EDGE_FAKE_ON _GRADIENT_OR_SOLID_COLOR_ON _MAKE_SAME_AS_MASK_ON
-    _MASK_ON _SOFT_TEXTURE_ON
+  m_ShaderKeywords: 
   m_LightmapFlags: 5
   m_CustomRenderQueue: -1
   m_SavedProperties:
@@ -20,7 +19,7 @@ Material:
           name: _MainTex
         second:
           m_Texture: {fileID: 0}
-          m_Scale: {x: 10, y: 10}
+          m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
         first:
@@ -78,55 +77,6 @@ Material:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _Gradient_Color
-        second:
-          m_Texture: {fileID: 2800000, guid: c81452341e0df574bb2c1678aa1eaab8, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _Texture
-        second:
-          m_Texture: {fileID: 2800000, guid: 56a889b4a69c0494ab9343c98495c310, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _Gradient_Texture_Decay
-        second:
-          m_Texture: {fileID: 2800000, guid: 5e5f7fdec6ba5a24dbd26d977985f37c, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _Gradient_Edge_Fake
-        second:
-          m_Texture: {fileID: 2800000, guid: 90dd325f1880d4c4dbf7511cdec5fd07, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _Gradient_Edge_Detection
-        second:
-          m_Texture: {fileID: 2800000, guid: a95cd61354f0f794ab21bc0e7e905dbc, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _Mask_Texture
-        second:
-          m_Texture: {fileID: 2800000, guid: 595df77cdf0a1b64a9da15f136642fb4, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _SpecGlossMap
-        second:
-          m_Texture: {fileID: 0}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
     m_Floats:
       data:
         first:
@@ -151,7 +101,7 @@ Material:
       data:
         first:
           name: _Glossiness
-        second: .407999992
+        second: .5
       data:
         first:
           name: _BumpScale
@@ -180,68 +130,16 @@ Material:
         first:
           name: _Metallic
         second: 0
-      data:
-        first:
-          name: _Brightness
-        second: 1
-      data:
-        first:
-          name: _Intensity
-        second: 1
-      data:
-        first:
-          name: _Gradient_Or_Solid_Color
-        second: 1
-      data:
-        first:
-          name: _Decay
-        second: .300000012
-      data:
-        first:
-          name: _Soft_Texture
-        second: 1
-      data:
-        first:
-          name: _Edge_Detection
-        second: 0
-      data:
-        first:
-          name: _Edge_Detection_Distance
-        second: 5
-      data:
-        first:
-          name: _Pan_Speed
-        second: -1
-      data:
-        first:
-          name: _Mask
-        second: 1
-      data:
-        first:
-          name: _Make_Same_As_Mask
-        second: 1
-      data:
-        first:
-          name: _Edge_Fake
-        second: 1
     m_Colors:
       data:
         first:
           name: _EmissionColor
-        second: {r: 0, g: 0, b: 0, a: 0}
+        second: {r: 0, g: 0, b: 0, a: 1}
       data:
         first:
           name: _Color
-        second: {r: .0514705777, g: .0514705777, b: .0514705777, a: 1}
-      data:
-        first:
-          name: _SpecColor
-        second: {r: .200000003, g: .200000003, b: .200000003, a: 1}
+        second: {r: .00755558163, g: 0, b: .800000072, a: 1}
       data:
         first:
           name: _EmissionColorUI
         second: {r: 1, g: 1, b: 1, a: 1}
-      data:
-        first:
-          name: _Solid_Color
-        second: {r: .731601536, g: .156024218, b: .867647052, a: .709803939}

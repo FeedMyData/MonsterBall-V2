@@ -8,6 +8,12 @@ using UnityEngine.UI;
 
 public class TwitterFeed : MonoBehaviour {
 
+    public float marginBetweenTweets = 50.0f;
+    public float speedScrolling = 16.0f;
+    public float positionToSearchForNewTweet = 0.0f;
+    public Transform endScrollingPosition;
+    public Text prefabTextTweet;
+
     private string URL_TO_ENCODE_KEY_AND_SECRET = "4ylCpeQw4NK2fg2WPfEgY0j53:425RIsoJwCCH2yC2PKc7iDM8KLMjctb2z3goxuazZ9YffEO8DZ"; // consumerKey : consumerSecret
  
     private string accessToken;
@@ -16,11 +22,20 @@ public class TwitterFeed : MonoBehaviour {
     private JSONNode searchResponse;
     private bool newResponse = false;
 
+    private List<Text> displayedTweets = new List<Text>();
+    private bool searchingNewTweet = false;
+
     // Use this for initialization
     void Start()
     {
 
         StartCoroutine(GetTwitterAccessToken());
+
+        Text newTweet = Instantiate(prefabTextTweet);
+        newTweet.transform.SetParent(transform, false);
+        newTweet.transform.position = transform.position;
+        newTweet.text = "Tweet your reactions to @MBL_GAME !";
+        displayedTweets.Add(newTweet);
 
     }
 
@@ -28,20 +43,92 @@ public class TwitterFeed : MonoBehaviour {
     void Update()
     {
 
-        if (authFinished) 
-        {
-            authFinished = false;
-            StartCoroutine(SearchForTweets());
-        }
-            
-
         if (newResponse)
         {
             newResponse = false;
-            Debug.Log(searchResponse["statuses"][0]["user"]["name"] + " (@" + searchResponse["statuses"][0]["user"]["screen_name"] + ") : " + searchResponse["statuses"][0]["text"]);
 
-            GetComponent<Text>().text = searchResponse["statuses"][0]["user"]["name"] + " (@" + searchResponse["statuses"][0]["user"]["screen_name"] + ") : " + searchResponse["statuses"][0]["text"];
+            string textOnOneLine = MakeAllOnOneLine(searchResponse["statuses"][0]["text"]);
+            string finalText = "<color=#FF0033>" + searchResponse["statuses"][0]["user"]["name"] + "</color> <size=40>@" + searchResponse["statuses"][0]["user"]["screen_name"] + "</size> : " + textOnOneLine;
+
+            Debug.Log(finalText);
+
+            bool hasRecycled = false;
+
+            foreach(Text tweet in displayedTweets) {
+
+                if (!tweet.gameObject.activeSelf)
+                {
+                    tweet.gameObject.SetActive(true);
+
+                    tweet.transform.SetParent(transform, false);
+                    tweet.transform.position = transform.position;
+                    tweet.transform.Translate(-marginBetweenTweets, 0, 0);
+
+                    tweet.text = finalText;
+
+                    hasRecycled = true;
+                    Debug.Log("recycle");
+                    break;
+                }
+
+            }
+
+            if(!hasRecycled)
+            {
+                Text newTweet = Instantiate(prefabTextTweet);
+
+                newTweet.transform.SetParent(transform, false);
+                newTweet.transform.position = transform.position;
+                newTweet.transform.Translate(-marginBetweenTweets, 0, 0);
+
+                newTweet.text = finalText;
+
+                displayedTweets.Add(newTweet);
+                Debug.Log("instantiate");
+
+            }
+
         }
+
+        float lastPixelPositionDisplayed = positionToSearchForNewTweet - 0.01f;
+
+        foreach(Text tweet in displayedTweets) {
+
+            if (tweet.gameObject.activeSelf)
+            {
+
+                // move if displayed
+                if (transform.localPosition.x + tweet.transform.localPosition.x + tweet.preferredWidth * tweet.rectTransform.localScale.x < endScrollingPosition.localPosition.x)
+                {
+                    tweet.gameObject.SetActive(false);
+                }
+                else
+                {
+                    tweet.transform.Translate(Time.deltaTime * speedScrolling, 0, 0);
+                }
+
+                // search last displaying tweet
+                if (tweet.transform.localPosition.x + tweet.preferredWidth > lastPixelPositionDisplayed)
+                {
+                    lastPixelPositionDisplayed = tweet.transform.localPosition.x + tweet.preferredWidth * tweet.rectTransform.localScale.x;
+                }
+                
+            }
+            
+        }
+
+        if (lastPixelPositionDisplayed < positionToSearchForNewTweet && authFinished && !searchingNewTweet)
+        {
+            StartCoroutine(SearchForTweets());
+            searchingNewTweet = true;
+        }
+
+    }
+
+    private string MakeAllOnOneLine(string oldText) {
+
+        string textOnOneLine = oldText.Replace("\n", " ; ");
+        return textOnOneLine;
 
     }
 
@@ -66,7 +153,7 @@ public class TwitterFeed : MonoBehaviour {
 
         while (!web.isDone)
         {
-            Debug.Log("Waiting for authentification...");
+            //Debug.Log("Waiting for authentification...");
             elapsedTimeAuth += Time.deltaTime;
             if (elapsedTimeAuth >= 10.0f) break;
             yield return null;
@@ -96,7 +183,7 @@ public class TwitterFeed : MonoBehaviour {
 
         Dictionary<string, string> parameters = new Dictionary<string, string>();
 
-        parameters["q="] = "@MBL_GAME -enculé -pd -putain -pute -salope -fuck";
+        parameters["q="] = "to:MBL_GAME -enculé -pd -putain -pute -salope -fuck";
         parameters["result_type="] = "recent";
         parameters["count"] = "1";
         //parameters["geocode="] = "45.6537200,0.1486590,10km";
@@ -117,7 +204,7 @@ public class TwitterFeed : MonoBehaviour {
 
         while (!web.isDone)
         {
-            Debug.Log("Waiting for request...");
+            //Debug.Log("Waiting for request...");
             elapsedTime += Time.deltaTime;
             if (elapsedTime >= 4.0f) break;
             yield return null;
@@ -130,6 +217,7 @@ public class TwitterFeed : MonoBehaviour {
         }
 
         searchResponse = JSON.Parse(web.text);
+        searchingNewTweet = false;
         newResponse = true;
         
     }
