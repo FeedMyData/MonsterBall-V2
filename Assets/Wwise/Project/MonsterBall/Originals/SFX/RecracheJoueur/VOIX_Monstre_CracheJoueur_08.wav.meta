@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: d156e78e240b7394396580f908c63bea
 timeCreated: 1432759238
+=======
+guid: 30029014a9cdf8f48a2a54f1490d5cc1
+timeCreated: 1432764861
+>>>>>>> origin/master
 licenseType: Free
 AudioImporter:
   serializedVersion: 6

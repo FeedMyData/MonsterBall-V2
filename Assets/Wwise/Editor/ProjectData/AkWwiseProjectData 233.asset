@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Name: AkWwiseProjectData 233
   m_EditorClassIdentifier: 
   CurrentPluginConfig: Profile
+<<<<<<< HEAD
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
@@ -552,6 +553,16 @@ MonoBehaviour:
   - /MonsterBall/Events/Default Work Unit/Voix/Commentaire
   m_lastPopulateTimePsrt1: -1721376240
   m_lastPopulateTimePart2: -1999477011
+=======
+  EventWwu: []
+  AuxBusWwu: []
+  StateWwu: []
+  SwitchWwu: []
+  BankWwu: []
+  ExpandedItems: []
+  m_lastPopulateTimePsrt1: 0
+  m_lastPopulateTimePart2: 0
+>>>>>>> origin/master
   autoPopulateEnabled: 1
   basePath: Audio\GeneratedSoundBanks
   language: English(US)
