@@ -918,14 +918,14 @@ MonoBehaviour:
   speedMax: 100
   speedDribbling: 100
   speedLoading: 60
-  powerMin: 15
+  powerMin: 50
   powerMax: 80
   coefPower: 10
   delayPowerMax: 2
   angleShoot: 180
   rangeShoot: 6
   angleHoming: 50
-  multiImpact: 3
+  multiImpact: 1
   stunKick: 1.29999995
   stunGoal: 0
   jersey: 2
@@ -3032,14 +3032,14 @@ MonoBehaviour:
   speedMax: 100
   speedDribbling: 100
   speedLoading: 60
-  powerMin: 15
+  powerMin: 50
   powerMax: 80
   coefPower: 10
   delayPowerMax: 2
   angleShoot: 180
   rangeShoot: 6
   angleHoming: 50
-  multiImpact: 3
+  multiImpact: 1
   stunKick: 1.29999995
   stunGoal: 0
   jersey: 3
@@ -15776,14 +15776,14 @@ MonoBehaviour:
   speedMax: 100
   speedDribbling: 100
   speedLoading: 60
-  powerMin: 15
+  powerMin: 50
   powerMax: 80
   coefPower: 10
   delayPowerMax: 2
   angleShoot: 180
   rangeShoot: 6
   angleHoming: 50
-  multiImpact: 3
+  multiImpact: 1
   stunKick: 1.29999995
   stunGoal: 0
   jersey: 0
@@ -16584,14 +16584,14 @@ MonoBehaviour:
   speedMax: 100
   speedDribbling: 100
   speedLoading: 60
-  powerMin: 15
+  powerMin: 50
   powerMax: 80
   coefPower: 10
   delayPowerMax: 2
   angleShoot: 180
   rangeShoot: 6
   angleHoming: 50
-  multiImpact: 3
+  multiImpact: 1
   stunKick: 1.29999995
   stunGoal: 0
   jersey: 1
