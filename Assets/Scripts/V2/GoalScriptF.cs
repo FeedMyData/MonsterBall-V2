@@ -35,6 +35,8 @@ public class GoalScriptF : MonoBehaviour {
                 Camera.main.GetComponent<CameraShake>().shake(0.8f, 0.6f, 1.0f);
                 guiEffectsScript.flashGoal(tag);
 
+                other.gameObject.GetComponent<SoundManager>().PlayEvent("VX_Balle_But",other.gameObject);
+
                 manager.AddScore(tag);
                 //tp au centre + invul de 3 secondes
                 other.gameObject.GetComponent<MonsterControllerF>().Respawn();

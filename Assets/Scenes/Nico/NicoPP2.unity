@@ -161,6 +161,7 @@ MonoBehaviour:
   speedMonster: 15
   speedMaxToChooseDirection: 3
   speedDivisionFactor: 8
+  spaceBetweenBallPlayer: 2
   areaMagnet: 3
   speedMagnet: 40
   wrathMax: 100
@@ -601,15 +602,19 @@ MonoBehaviour:
   delayPowerMax: 2
   angleShoot: 180
   rangeShoot: 3
-  angleDash: 60
-  rangeDash: 7
   angleHoming: 50
+  multiImpact: 3
   stunKick: 1.29999995
   stunGoal: 0
-  stunDash: .649999976
   jersey: 2
   team: 1
   durationInvul: 1.5
+  coupsDonnes: 0
+  coupsRecus: 0
+  coupsCharges: 0
+  joueurMange: 0
+  sautBut: 0
+  coupsVide: 0
 --- !u!23 &99554770
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1871,6 +1876,8 @@ GameObject:
   - 114: {fileID: 499457358}
   - 114: {fileID: 499457360}
   - 54: {fileID: 499457359}
+  - 114: {fileID: 499457362}
+  - 114: {fileID: 499457361}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2026,6 +2033,48 @@ MonoBehaviour:
   m_posOffsetData: {fileID: 0}
   isEnvironmentAware: 1
   isStaticObject: 0
+--- !u!114 &499457361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 499457350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 704553ab0af34f544bca18cd2ee785f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  valueGuid: 2c3b8697abf0d0429bc6f99f690a5d38
+  eventID: -592846755
+  soundEmitterObject: {fileID: 0}
+  enableActionOnEvent: 0
+  actionOnEventType: 0
+  curveInterpolation: 4
+  transitionDuration: 0
+  m_callbackData: {fileID: 0}
+--- !u!114 &499457362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 499457350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 704553ab0af34f544bca18cd2ee785f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  valueGuid: 604b6ccf7b16de47b567e8ca62dc3777
+  eventID: -1674728084
+  soundEmitterObject: {fileID: 0}
+  enableActionOnEvent: 0
+  actionOnEventType: 0
+  curveInterpolation: 4
+  transitionDuration: 0
+  m_callbackData: {fileID: 0}
 --- !u!1 &500802388
 GameObject:
   m_ObjectHideFlags: 0
@@ -2163,15 +2212,19 @@ MonoBehaviour:
   delayPowerMax: 2
   angleShoot: 180
   rangeShoot: 3
-  angleDash: 60
-  rangeDash: 7
   angleHoming: 50
+  multiImpact: 3
   stunKick: 1.29999995
   stunGoal: 0
-  stunDash: .649999976
   jersey: 3
   team: 0
   durationInvul: 1.5
+  coupsDonnes: 0
+  coupsRecus: 0
+  coupsCharges: 0
+  joueurMange: 0
+  sautBut: 0
+  coupsVide: 0
 --- !u!23 &530266182
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11011,15 +11064,19 @@ MonoBehaviour:
   delayPowerMax: 2
   angleShoot: 180
   rangeShoot: 3
-  angleDash: 60
-  rangeDash: 7
   angleHoming: 50
+  multiImpact: 3
   stunKick: 1.29999995
   stunGoal: 0
-  stunDash: .649999976
   jersey: 0
   team: 1
   durationInvul: 1.5
+  coupsDonnes: 0
+  coupsRecus: 0
+  coupsCharges: 0
+  joueurMange: 0
+  sautBut: 0
+  coupsVide: 0
 --- !u!23 &1895334761
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11695,15 +11752,19 @@ MonoBehaviour:
   delayPowerMax: 2
   angleShoot: 180
   rangeShoot: 3
-  angleDash: 60
-  rangeDash: 7
   angleHoming: 50
+  multiImpact: 3
   stunKick: 1.29999995
   stunGoal: 0
-  stunDash: .649999976
   jersey: 1
   team: 0
   durationInvul: 1.5
+  coupsDonnes: 0
+  coupsRecus: 0
+  coupsCharges: 0
+  joueurMange: 0
+  sautBut: 0
+  coupsVide: 0
 --- !u!23 &2021973437
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11932,24 +11993,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df4ba9cfc8fb09c418e390493d4ae204, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tabTroisDeuxUn:
-  - {fileID: 0}
-  tabBut:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  tabDebutMatch:
-  - {fileID: 0}
-  tabDialogue:
-  - {fileID: 0}
-  tabMatch:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  mixerVoice: {fileID: 24300001, guid: 3b5232be4ec122545b3f1ef5cda50c18, type: 2}
 --- !u!114 &2052379256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11962,6 +12005,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   durationInSecond: 180
+  ecranFin: {fileID: 0}
   timeBetweenTwoBonus: 0
 --- !u!114 &2052379257
 MonoBehaviour:

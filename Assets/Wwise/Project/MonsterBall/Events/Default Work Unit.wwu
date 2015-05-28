@@ -55,15 +55,64 @@
 					<ChildrenList>
 						<Folder Name="Niveks" ID="{F4171C40-F72B-4290-BB99-B5927208B236}" ShortID="39795413">
 							<ChildrenList>
-								<Event Name="VX_Niveks_ButGagnant" ID="{10E54542-380F-4D85-B597-26FD5F7CB8FA}"/>
+								<Event Name="VX_Niveks_ButGagnant" ID="{10E54542-380F-4D85-B597-26FD5F7CB8FA}">
+									<ChildrenList>
+										<Action Name="Play" ID="{DB91C1F2-D278-4F5E-83E4-D480882618EB}" ShortID="1034233001" Type="Play" Scope="One" Global="false">
+											<ElementList>
+												<Element ID="{DF32755E-9600-4FBA-8B4C-9AD4D5EC51DA}" Global="false">
+													<ObjectRef Name="MarqueBut" ID="{2C7450A3-ECC1-4D33-9002-FE129BB2621A}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+												</Element>
+											</ElementList>
+										</Action>
+									</ChildrenList>
+								</Event>
 								<Event Name="VX_Niveks_ButPerdant" ID="{3152D46C-1764-41A1-9D36-CE1DA62BD0D3}"/>
-								<Event Name="Vx_Niveks_ImpactCloison" ID="{BE2890E5-9127-43E9-9636-59B1B62C8F0A}"/>
-								<Event Name="VX_Niveks_Coup" ID="{4E5DA369-E8CC-4583-B9C5-D7BDF0403EE2}"/>
-								<Event Name="VX_Niveks_Frappe" ID="{EB02EC7E-8C6D-4630-BCC6-1FCF78070F34}"/>
-								<Event Name="Vx_Niveks_Wilhem" ID="{FB8CEF1D-BE4F-4C0E-996D-9934CD9D5B5D}"/>
+								<Event Name="VX_Niveks_Coup" ID="{4E5DA369-E8CC-4583-B9C5-D7BDF0403EE2}">
+									<ChildrenList>
+										<Action Name="Play" ID="{B2641B99-2710-4F67-A49B-53B6E27AD580}" ShortID="774579334" Type="Play" Scope="One" Global="false">
+											<ElementList>
+												<Element ID="{3A0DC2E5-CADB-4CCD-ADF1-990CF1D57CFD}" Global="false">
+													<ObjectRef Name="CoupRecu" ID="{6A2724C3-5957-4C8D-B1A4-46CC9C9BCB62}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+												</Element>
+											</ElementList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="VX_Niveks_Frappe" ID="{EB02EC7E-8C6D-4630-BCC6-1FCF78070F34}">
+									<ChildrenList>
+										<Action Name="Play" ID="{E76B2F87-1719-4606-A126-4D0602E7AAD1}" ShortID="715744068" Type="Play" Scope="One" Global="false">
+											<ElementList>
+												<Element ID="{395614E0-A993-4DE4-B4F3-0087CA7E3167}" Global="false">
+													<ObjectRef Name="CoupBalle" ID="{22D30912-AFF2-40A2-B5A3-EE219D81F36D}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+												</Element>
+											</ElementList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Vx_Niveks_Wilhem" ID="{FB8CEF1D-BE4F-4C0E-996D-9934CD9D5B5D}">
+									<ChildrenList>
+										<Action Name="Play" ID="{9D489980-4311-46B8-B29F-E68E02BE9E2E}" ShortID="1036951119" Type="Play" Scope="One" Global="false">
+											<ElementList>
+												<Element ID="{3A39C180-1E20-476A-B8AD-CD624068E413}" Global="false">
+													<ObjectRef Name="WilhemScream" ID="{EF06BAEE-71D0-4D91-B1A0-A42AEFEF1F86}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+												</Element>
+											</ElementList>
+										</Action>
+									</ChildrenList>
+								</Event>
 								<Event Name="VX_Niveks_FinMatchGagnant" ID="{45D991DF-3AC9-45C2-8889-D8895D97AD70}"/>
 								<Event Name="VX_Niveks_FinMatchPerdant" ID="{08ABACA6-8E33-42D3-AC3E-029F3685182C}"/>
-								<Event Name="Vx_Niveks_Poursuivi" ID="{9DE89C00-5A9F-490B-8609-3D0F5BBAABA1}"/>
+								<Event Name="Vx_Niveks_Poursuivi" ID="{9DE89C00-5A9F-490B-8609-3D0F5BBAABA1}">
+									<ChildrenList>
+										<Action Name="Play" ID="{909DE2D2-B16B-4AB7-A370-22B4DD4A3B83}" ShortID="260087246" Type="Play" Scope="One" Global="false">
+											<ElementList>
+												<Element ID="{68008EFA-2060-4B16-9F92-55F94F1157BA}" Global="false">
+													<ObjectRef Name="Poursuivi" ID="{E9D500CC-C142-4BF7-A635-407336ADC850}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+												</Element>
+											</ElementList>
+										</Action>
+									</ChildrenList>
+								</Event>
 								<Event Name="VX_Niveks_ImpactBut" ID="{5568DF7A-41C3-4DED-8E1E-7E0D4BBC92A5}">
 									<ChildrenList>
 										<Action Name="Play" ID="{7089B01B-AB60-4681-BF7D-5096661C9873}" ShortID="987430821" Type="Play" Scope="One" Global="false">
@@ -80,44 +129,134 @@
 												</Element>
 											</ElementList>
 										</Action>
-									</ChildrenList>
-								</Event>
-								<Event Name="VX_Niveks_DebutMatch" ID="{85DA7BDD-41CA-408C-ABB1-D2F706102B52}"/>
-							</ChildrenList>
-						</Folder>
-						<Folder Name="Balle" ID="{C44FF999-3A0B-4106-9D06-DC8E6F73AB9E}" ShortID="147926892">
-							<ChildrenList>
-								<Event Name="VX_Balle_But" ID="{142EAEF2-59BF-46D3-996E-4462915EA747}"/>
-								<Event Name="VX_Balle_RemiseEnJeu" ID="{FC17222F-10CE-4A9B-97D1-C88AFF8EAAF1}">
-									<ChildrenList>
-										<Action Name="Play" ID="{0E8CAA64-D722-46ED-B5AC-4E8ECA671DC8}" ShortID="521449793" Type="Play" Scope="One" Global="false">
-											<ElementList>
-												<Element ID="{23A2D804-C19B-421C-BE08-8DDF228F41C8}" Global="false">
-													<ObjectRef Name="SFX_Balle_Pop1" ID="{9A5F758B-E781-4529-BE2B-7BECB315C592}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
-												</Element>
-											</ElementList>
-										</Action>
-										<Action Name="Play" ID="{40CFCE43-7ED5-4396-A2B6-75B75E40C92D}" ShortID="848060728" Type="Play" Scope="One" Global="false">
+										<Action Name="Play" ID="{6B536866-5F5F-47AA-B546-842FDC286D80}" ShortID="439899310" Type="Play" Scope="One" Global="false">
 											<PropertyList>
 												<Property Name="Delay" Type="Real64" Value="0.1"/>
 											</PropertyList>
 											<ElementList>
-												<Element ID="{20123F09-A3BF-40B1-AAAD-9CE9E41F2B75}" Global="false">
-													<ObjectRef Name="SFX_Balle_Pop2" ID="{3EF97393-8E7C-4929-83F4-390CEAF7BAE1}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+												<Element ID="{FCFADFFC-76C7-4D0F-9BAF-4C9A8CD82095}" Global="false">
+													<ObjectRef Name="EjectBut" ID="{488D8205-70EB-4FDD-87AB-BE876AF690C8}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
 												</Element>
 											</ElementList>
 										</Action>
 									</ChildrenList>
 								</Event>
-								<Event Name="VX_Balle_Coup" ID="{A53F9545-90D9-4F6D-9BB7-6CC107E8CF70}"/>
-								<Event Name="VX_Balle_Course" ID="{78E69E8A-6B17-4E01-8E22-CD08CE6BC6FC}"/>
-								<Event Name="VX_Balle_Cloison" ID="{C3588374-E009-4A41-A379-7893E45A61CF}"/>
+								<Event Name="VX_Niveks_DebutMatch" ID="{85DA7BDD-41CA-408C-ABB1-D2F706102B52}">
+									<ChildrenList>
+										<Action Name="Play" ID="{E2B7CB2D-A423-4CE7-BFE7-F5EB27AC5833}" ShortID="825483222" Type="Play" Scope="One" Global="false">
+											<ElementList>
+												<Element ID="{0FA95721-2450-4A78-B1C9-E8EA6E1A9591}" Global="false">
+													<ObjectRef Name="Yeah" ID="{9E36AE02-ECDF-4C27-AD41-87B1805FB9AB}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+												</Element>
+											</ElementList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="Balle" ID="{C44FF999-3A0B-4106-9D06-DC8E6F73AB9E}" ShortID="147926892">
+							<ChildrenList>
+								<Event Name="VX_Balle_But" ID="{142EAEF2-59BF-46D3-996E-4462915EA747}">
+									<ChildrenList>
+										<Action Name="Play" ID="{7680FDED-4132-4681-893E-C18E47B00696}" ShortID="953280934" Type="Play" Scope="One" Global="false">
+											<ElementList>
+												<Element ID="{84EC5B83-E569-4ADB-AA08-0DDB97EAB8C0}" Global="false">
+													<ObjectRef Name="But" ID="{43AAABAC-D29B-42CC-8325-810D4A949037}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+												</Element>
+											</ElementList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="VX_Balle_RemiseEnJeu" ID="{FC17222F-10CE-4A9B-97D1-C88AFF8EAAF1}">
+									<ChildrenList>
+										<Action Name="Play" ID="{6532D7C4-5B64-46D5-8302-22AE3991201D}" ShortID="849606572" Type="Play" Scope="One" Global="false">
+											<ElementList>
+												<Element ID="{55FEBADA-BCA8-4658-91F0-B767D7AD80D6}" Global="false">
+													<ObjectRef Name="Remise en jeu" ID="{9F7645EE-48B5-4FBE-A074-338E9D2B1B8E}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+												</Element>
+											</ElementList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="VX_Balle_Coup" ID="{A53F9545-90D9-4F6D-9BB7-6CC107E8CF70}">
+									<ChildrenList>
+										<Action Name="Play" ID="{D173E21E-7A48-455C-9E03-B5A859B431E8}" ShortID="36005338" Type="Play" Scope="One" Global="false">
+											<ElementList>
+												<Element ID="{B3122B13-3E00-4614-9D9F-84148E36D313}" Global="false">
+													<ObjectRef Name="Impact" ID="{0F12D014-D3DF-468F-AA60-2C1DB2BD44CA}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+												</Element>
+											</ElementList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="VX_Balle_Course" ID="{78E69E8A-6B17-4E01-8E22-CD08CE6BC6FC}">
+									<ChildrenList>
+										<Action Name="Play" ID="{A774EFF2-2EE6-4E11-AF08-FE805EE724A9}" ShortID="1028067212" Type="Play" Scope="One" Global="false">
+											<ElementList>
+												<Element ID="{CEC14E29-02EA-4FC4-A7EC-A3F638F3171E}" Global="false">
+													<ObjectRef Name="Course" ID="{718A781C-EBB5-4B50-8F37-C5B1016506CF}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+												</Element>
+											</ElementList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="VX_Balle_Cloison" ID="{C3588374-E009-4A41-A379-7893E45A61CF}">
+									<ChildrenList>
+										<Action Name="Play" ID="{7A0F5C43-789D-44E3-A049-6257BDF1F7C3}" ShortID="754557599" Type="Play" Scope="One" Global="false">
+											<PropertyList>
+												<Property Name="Probability" Type="Real64" Value="39"/>
+											</PropertyList>
+											<ElementList>
+												<Element ID="{223DCAE1-E279-4296-8C6A-9421CCB1928D}" Global="false">
+													<ObjectRef Name="Impact" ID="{0F12D014-D3DF-468F-AA60-2C1DB2BD44CA}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+												</Element>
+											</ElementList>
+										</Action>
+										<Action Name="Play" ID="{7C3F32EB-ACCC-40CE-AC28-CC6B00AC6DB8}" ShortID="324782721" Type="Play" Scope="One" Global="false">
+											<ElementList>
+												<Element ID="{3F6D6520-05BE-4C96-9CEE-6767EA0F9C3D}" Global="false">
+													<ObjectRef Name="Electric_Spark_Wall" ID="{A8B4F66E-1865-4F67-8DD6-FCD468CD1F31}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+												</Element>
+											</ElementList>
+										</Action>
+										<Action Name="Play" ID="{604AC911-043C-4271-810E-EBD028B4134C}" ShortID="484970120" Type="Play" Scope="One" Global="false">
+											<ElementList>
+												<Element ID="{BE572603-FB6C-45E4-8689-12F0500ADE52}" Global="false">
+													<ObjectRef Name="SFX_Balle_ImpactMur" ID="{7503FA3B-796B-4864-8725-CEC2442392CB}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+												</Element>
+											</ElementList>
+										</Action>
+									</ChildrenList>
+								</Event>
 							</ChildrenList>
 						</Folder>
 						<Folder Name="Monstre" ID="{9B1F4F36-E1FB-4FA7-A3D9-B4DEC83362C3}" ShortID="982315659">
 							<ChildrenList>
-								<Event Name="VX_Monstre_Course" ID="{BE98E6F5-D868-4FF7-B2CA-FDBF3A1416BF}"/>
-								<Event Name="VX_Monstre_Crache" ID="{0C281AFE-3F0D-4598-A801-8ABF4EE23C72}"/>
+								<Event Name="VX_Monstre_Course" ID="{BE98E6F5-D868-4FF7-B2CA-FDBF3A1416BF}">
+									<ChildrenList>
+										<Action Name="Play" ID="{BFE60334-3218-4EDD-BD1D-66A9C13D9D7D}" ShortID="197973720" Type="Play" Scope="One" Global="false">
+											<ElementList>
+												<Element ID="{4691F63F-5E7E-4F87-B873-58728C5F51E3}" Global="false">
+													<ObjectRef Name="Grognements" ID="{DA313CEB-548A-4DC0-9E3E-F79794B4C644}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+												</Element>
+											</ElementList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="VX_Monstre_Crache" ID="{0C281AFE-3F0D-4598-A801-8ABF4EE23C72}">
+									<ChildrenList>
+										<Action Name="Play" ID="{BF63DDE7-024E-4BFA-BB73-32B5BB6442D1}" ShortID="689968543" Type="Play" Scope="One" Global="false">
+											<PropertyList>
+												<Property Name="Delay" Type="Real64" Value="0.1"/>
+											</PropertyList>
+											<ElementList>
+												<Element ID="{DDC8F612-F21C-4E2B-9B94-ABAE7E4C849F}" Global="false">
+													<ObjectRef Name="RecracheJoueur" ID="{29D235F3-0301-428A-8094-A8ECCBA89E0A}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+												</Element>
+											</ElementList>
+										</Action>
+									</ChildrenList>
+								</Event>
 							</ChildrenList>
 						</Folder>
 						<Folder Name="Transformation" ID="{4094CD55-8DC4-4BDB-A810-533DAE16B8FE}" ShortID="729642533">
@@ -130,6 +269,17 @@
 							<ChildrenList>
 								<Event Name="VX_Comment_DebutMatch" ID="{884DBF4E-2347-4E91-8713-026797D48536}"/>
 								<Event Name="VX_Comment_FinMatch" ID="{76D58B56-EC7E-4963-8951-62A8B4BF9FC7}"/>
+								<Event Name="VX_Comment_MONSTERBALL" ID="{97863B2C-F0AB-42D0-9BC6-F99F690A5D38}">
+									<ChildrenList>
+										<Action Name="Play" ID="{D5CA7D4B-7285-4D54-87DB-DE3ABF1B7BC9}" ShortID="1016091764" Type="Play" Scope="One" Global="false">
+											<ElementList>
+												<Element ID="{812A8B18-9172-4DE8-A716-289408398820}" Global="false">
+													<ObjectRef Name="VOIX_Commentateur_MonsterBall" ID="{154EE251-C2AE-454C-8D60-7A9BBC16ADCF}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+												</Element>
+											</ElementList>
+										</Action>
+									</ChildrenList>
+								</Event>
 							</ChildrenList>
 						</Folder>
 					</ChildrenList>
@@ -170,7 +320,14 @@
 								<Action Name="Play" ID="{338E05CE-E3D0-4FC3-AF85-F913DC1D47D6}" ShortID="905113340" Type="Play" Scope="One" Global="false">
 									<ElementList>
 										<Element ID="{84A1E39D-37CF-436C-8957-D7BCDF66589B}" Global="false">
-											<ObjectRef Name="SFX_But_ShakeCamera" ID="{2AB34BFD-F9D7-40E0-A750-5BB481B43FE0}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+											<ObjectRef Name="SFX_But_ShakeCamera_01" ID="{2AB34BFD-F9D7-40E0-A750-5BB481B43FE0}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+										</Element>
+									</ElementList>
+								</Action>
+								<Action Name="Play" ID="{C613E64A-8CF8-482F-B692-17306B7E1D48}" ShortID="695710031" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{08F70C80-B02C-40ED-AC93-A9249D45FD18}" Global="false">
+											<ObjectRef Name="SFX_But_ShakeCamera_02" ID="{5EEDC6C8-116E-44A7-85BB-A20AC08BAD13}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
 										</Element>
 									</ElementList>
 								</Action>
@@ -213,6 +370,21 @@
 					<ChildrenList>
 						<Event Name="Menu_Move" ID="{F2C2B933-E2B4-4F3A-B224-8DA6F4FD218B}"/>
 						<Event Name="Menu_Valid" ID="{27C6C557-6FEA-4DEA-BA26-0FA8EE8D3FCE}"/>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Music" ID="{34C33023-FC46-45EC-9E0D-7378FBEBF868}" ShortID="804047239">
+					<ChildrenList>
+						<Event Name="Music_DebutMatch" ID="{CF6C4B60-167B-47DE-B567-E8CA62DC3777}">
+							<ChildrenList>
+								<Action Name="Play" ID="{A589291B-22FE-4629-B80B-D3C9BC83A4E7}" ShortID="710159379" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{8D802B08-7DE7-4CF1-BF68-76E8E549704E}" Global="false">
+											<ObjectRef Name="Monster Ball Music Test" ID="{814021AA-6BA9-4C22-A014-A745571C77FD}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+										</Element>
+									</ElementList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>

@@ -60,6 +60,11 @@ public class MonsterControllerF : MonoBehaviour {
 
     private bool seeACake = false;
     private Vector3 cakePos;
+
+    private SoundManager sound;
+    public float distanceSoundChase = 5.0f;
+    [Range(0, 100)]
+    public float rngSoundChase = 1.0f;
     
 
     //public delegate void OnClickHit();
@@ -70,6 +75,7 @@ public class MonsterControllerF : MonoBehaviour {
 	void Start () {
 	    body = GetComponent<Rigidbody>();
         colliderMagnet = GetComponent<Collider>();
+        sound = GetComponent<SoundManager>();
 
         if (!monsterForm)
         {
@@ -211,6 +217,20 @@ public class MonsterControllerF : MonoBehaviour {
             {
                 GameObject nearest = GameControllerF.NearestTouchableByMonster();
                 DirectionMonster = nearest.transform.position;
+
+                if (Vector3.Distance(nearest.transform.position, transform.position) < distanceSoundChase /*&& canCry*/)
+                {
+                    float rng = UnityEngine.Random.value;
+
+                    if (rng <= rngSoundChase/100){
+                        sound.PlayEvent("VX_Monstre_Course", gameObject);
+                        //StartCoroutine())
+                    }
+                        
+                    else if (rng > rngSoundChase/100 && rng <= (rngSoundChase/100*2))
+                        nearest.GetComponent<SoundManager>().PlayEvent("VX_Niveks_Poursuivi", nearest);
+                }
+
             }
             catch (NullReferenceException e) { /*Si pas de plus proche on fait rien, dans le pire des cas à dure 3 secondes*/ }
         }
@@ -232,12 +252,18 @@ public class MonsterControllerF : MonoBehaviour {
             
     }
 
+    /*private IEnumerator(){
+
+    }*/
+
     public void Respawn()
     {
         body.velocity = Vector3.zero;
         body.angularVelocity = Vector3.zero;
         transform.rotation = Quaternion.identity;
         transform.position = new Vector3(0,5,0);
+
+        sound.PlayEvent("VX_Balle_RemiseEnJeu", gameObject);
 
         Camera cam = Camera.allCameras[0];
         if(cam.GetComponent<CameraManagerF>() != null)
@@ -258,6 +284,8 @@ public class MonsterControllerF : MonoBehaviour {
         if (magnet != null)
             callDisableMagnet();
 
+        sound.PlayEvent("Tranfo_BalleMonstre",gameObject);
+
         yield return new WaitForSeconds(summon);
         skinBall.SetActive(false);
         skinMonster.SetActive(true);
@@ -265,6 +293,7 @@ public class MonsterControllerF : MonoBehaviour {
 
         yield return new WaitForSeconds(revocation);
 
+        sound.PlayEvent("Tranfo_MonstreBalle", gameObject);
         skinBall.SetActive(true);
         skinMonster.SetActive(false);
         wrath = 0;
@@ -375,6 +404,7 @@ public class MonsterControllerF : MonoBehaviour {
 
         if (player == playerAte)
         {
+            sound.PlayEvent("VX_Monstre_Crache", gameObject);
             player.GetComponent<PlayerControllerF>().FlyAway();
 
         }

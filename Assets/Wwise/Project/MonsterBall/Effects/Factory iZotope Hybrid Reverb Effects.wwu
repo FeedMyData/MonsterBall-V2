@@ -84,7 +84,10 @@
 						<Property Name="DecayLowFrequency" Type="Real32" Value="800"/>
 						<Property Name="DecayLowRatio" Type="Real32" Value="0.487843"/>
 						<Property Name="DecayMidRatio" Type="Real32" Value="1.633194"/>
-						<Property Name="DecayTime" Type="Real32" Value="0.5061578"/>
+						<Property Name="DecayTime" Type="Real32" Value="0.325"/>
+						<Property Name="FrontDry" Type="Real32" Value="2.2"/>
+						<Property Name="FrontWet" Type="Real32" Value="-11.8"/>
+						<Property Name="RearWet" Type="Real32" Value="-96"/>
 					</PropertyList>
 					<ChildrenList>
 						<PluginMediaSource Name="City Center" ID="{63F73444-446A-492A-9DE5-A5743D61554B}" ShortID="875305838">
