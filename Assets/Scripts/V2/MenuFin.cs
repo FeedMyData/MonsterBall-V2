@@ -117,7 +117,7 @@ public class MenuFin : MonoBehaviour {
         tabPlayer[2] = GameControllerF.GetPlayer(3).GetComponent<PlayerControllerF>();
         tabPlayer[3] = GameControllerF.GetPlayer(4).GetComponent<PlayerControllerF>();
 
-        int coupDonne = -1, coupRecu = -1, coupFort = -1, mangeJoueur = -1, sautBut = -1, coupVide = -1;
+        int coupDonne = -1, coupRecu = -1, coupFort = -1, mangeJoueur = -1, sautBut = -1, coupVide = -1, marqueBut = -1;
 
         //Coups donnés
         int maxCoupsDonnes = 0;
@@ -289,6 +289,34 @@ public class MenuFin : MonoBehaviour {
         else if (coupVide == 3)
         {
             rewardJ4.text += "Je tape dans le vide\n";
+        }
+
+
+        int maxMarqueBut = 0;
+        for (int i = 0; i < tabPlayer.Length; i++)
+        {
+            if (tabPlayer[i].marqueBut > maxMarqueBut)
+            {
+                maxMarqueBut = tabPlayer[i].marqueBut;
+                marqueBut = i;
+            }
+        }
+
+        if (marqueBut == 0)
+        {
+            rewardJ1.text += "Je marque comme un dieu\n";
+        }
+        else if (marqueBut == 1)
+        {
+            rewardJ2.text += "Je marque comme un dieu\n";
+        }
+        else if (marqueBut == 2)
+        {
+            rewardJ3.text += "Je marque comme un dieu\n";
+        }
+        else if (marqueBut == 3)
+        {
+            rewardJ4.text += "JJe marque comme un dieu\n";
         }
 
     }

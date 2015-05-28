@@ -47,6 +47,8 @@ public class bumpScript : MonoBehaviour {
                     dirImpact.x = - Mathf.Abs(dirImpact.x);
                 }
 
+                player.GetComponent<SoundManager>().PlayEvent("VX_Nivek_ImpactBut", player.gameObject);
+
                 player.AddImpact(dirImpact.normalized * dashGoalPower);
 
 				if(player.GetComponentInChildren<Animator>())player.GetComponentInChildren<Animator>().SetTrigger("bump");
