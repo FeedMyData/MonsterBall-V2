@@ -170,13 +170,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movingMaxBall: 3
-  speedMonster: 15
+  speedMonster: 13
   speedMaxToChooseDirection: 3
   speedDivisionFactor: 8
   spaceBetweenBallPlayer: 2
   areaMagnet: 3
   speedMagnet: 40
-  wrathMax: 1
+  wrathMax: 100
   wrathDribblingValue: 1
   wrathDribblingEachTime: .5
   summon: .200000003
