@@ -176,7 +176,7 @@ MonoBehaviour:
   spaceBetweenBallPlayer: 2
   areaMagnet: 3
   speedMagnet: 40
-  wrathMax: 100
+  wrathMax: 1
   wrathDribblingValue: 1
   wrathDribblingEachTime: .5
   summon: .200000003
@@ -185,7 +185,7 @@ MonoBehaviour:
   monsterMass: 20
   safeTransform: .699999988
   durationInvul: 2
-  coefColliderMonster: 1.04999995
+  coefColliderMonster: .800000012
   durationEatingPlayer: 1
   skinBall: {fileID: 615020600}
   skinMonster: {fileID: 1800922600}
@@ -918,7 +918,7 @@ MonoBehaviour:
   rangeShoot: 6
   angleHoming: 50
   multiImpact: 1
-  stunKick: 1.29999995
+  stunKick: 0
   stunGoal: 0
   jersey: 2
   team: 1
@@ -4036,7 +4036,7 @@ MonoBehaviour:
   rangeShoot: 6
   angleHoming: 50
   multiImpact: 1
-  stunKick: 1.29999995
+  stunKick: 0
   stunGoal: 0
   jersey: 3
   team: 0
@@ -4755,9 +4755,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   basePath: Audio\GeneratedSoundBanks
   language: English(US)
-  defaultPoolSize: 8192
-  lowerPoolSize: 4096
-  streamingPoolSize: 2048
+  defaultPoolSize: 4096
+  lowerPoolSize: 2048
+  streamingPoolSize: 1024
   memoryCutoffThreshold: .949999988
 --- !u!114 &631020833
 MonoBehaviour:
@@ -19147,7 +19147,7 @@ MonoBehaviour:
   rangeShoot: 6
   angleHoming: 50
   multiImpact: 1
-  stunKick: 1.29999995
+  stunKick: 0
   stunGoal: 0
   jersey: 0
   team: 1
@@ -20117,7 +20117,7 @@ MonoBehaviour:
   rangeShoot: 6
   angleHoming: 50
   multiImpact: 1
-  stunKick: 1.29999995
+  stunKick: 0
   stunGoal: 0
   jersey: 1
   team: 0
