@@ -5013,34 +5013,6 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<Sound Name="VOIX_Commentateur_MonsterBall_01" ID="{56F9FFF9-AFC3-4387-8DC7-5CD40D7C68B3}" ShortID="469048241" Type="SoundFX">
-									<PropertyList>
-										<Property Name="OverrideEffect" Type="bool" Value="True"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
-										</Reference>
-										<Reference Name="Effect0" CompanyID="4095" PluginID="65535" PluginType="15">
-											<ObjectRef Name="Hall_Medium" ID="{50286348-176A-4235-9E4C-CA5F73D87818}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="VOIX_Commentateur_MonsterBall" ID="{70D4995E-E821-49C5-B3C9-6E3F8EB93425}" ShortID="516135045">
-											<Language>SFX</Language>
-											<AudioFile>VOIX_Commentateur_MonsterBall.wav</AudioFile>
-											<ConvertedFileIDList>
-												<File ID="850496961"/>
-											</ConvertedFileIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="VOIX_Commentateur_MonsterBall" ID="{70D4995E-E821-49C5-B3C9-6E3F8EB93425}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
 								<Sound Name="VOIX_Commentateur_MonsterBall" ID="{154EE251-C2AE-454C-8D60-7A9BBC16ADCF}" ShortID="248501670" Type="SoundFX">
 									<PropertyList>
 										<Property Name="OverrideEffect" Type="bool" Value="True"/>
