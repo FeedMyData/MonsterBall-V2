@@ -65,6 +65,12 @@ public class MonsterControllerF : MonoBehaviour {
     public float distanceSoundChase = 5.0f;
     [Range(0, 100)]
     public float rngSoundChase = 1.0f;
+    public float timeBetweenTwoChaseSound = 5.0f;
+
+    private bool canYell;
+
+    private PlayerControllerF striker;
+    public float durationBeforeLoseStriker = 3.0f;
     
 
     //public delegate void OnClickHit();
@@ -74,8 +80,10 @@ public class MonsterControllerF : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 	    body = GetComponent<Rigidbody>();
+
         colliderMagnet = GetComponent<Collider>();
         sound = GetComponent<SoundManager>();
+        sound.LoadBank();
 
         if (!monsterForm)
         {
@@ -200,9 +208,9 @@ public class MonsterControllerF : MonoBehaviour {
             //Rotation progressive vers le but
             //Debug.Log(Mathf.Abs(((rotateToGoal - Time.time)/ durationEatingPlayer)-1)+ " "+DirectionMonster+" "+goal.position);
             //DirectionMonster = Vector3.Lerp(DirectionMonster, goal.position, Mathf.Abs(((rotateToGoal - Time.time) / durationEatingPlayer) - 1));
-            DirectionMonster = Camera.main.transform.position - transform.position; // avant : goal.position
-
-            rotationToGoal = Vector3.RotateTowards(transform.forward, DirectionMonster, Mathf.PI * Mathf.Abs(((rotateToGoal - Time.time) / durationEatingPlayer) - 1),0.0f);
+            //DirectionMonster = Camera.main.transform.position - transform.position; // avant : goal.position
+			DirectionMonster = goal.position;
+			rotationToGoal = Vector3.RotateTowards(transform.forward, DirectionMonster, Mathf.PI * Mathf.Abs(((rotateToGoal - Time.time) / durationEatingPlayer) - 1),0.0f);
            // Debug.Log(Mathf.Lerp(0,1, Mathf.Abs(((rotateToGoal - Time.time) / durationEatingPlayer) - 1)));
 
             //positionReach = goal.position;
@@ -218,17 +226,23 @@ public class MonsterControllerF : MonoBehaviour {
                 GameObject nearest = GameControllerF.NearestTouchableByMonster();
                 DirectionMonster = nearest.transform.position;
 
-                if (Vector3.Distance(nearest.transform.position, transform.position) < distanceSoundChase /*&& canCry*/)
+                if (Vector3.Distance(nearest.transform.position, transform.position) < distanceSoundChase && canYell)
                 {
                     float rng = UnityEngine.Random.value;
 
                     if (rng <= rngSoundChase/100){
                         sound.PlayEvent("VX_Monstre_Course", gameObject);
-                        //StartCoroutine())
+                        canYell = false;
+                        StartCoroutine(Yelling());
+                    }
+
+                    else if (rng > rngSoundChase / 100 && rng <= (rngSoundChase / 100 * 2))
+                    {
+                        nearest.GetComponent<SoundManager>().PlayEvent("VX_Niveks_Poursuivi", nearest);
+                        canYell = false;
+                        StartCoroutine(Yelling());
                     }
                         
-                    else if (rng > rngSoundChase/100 && rng <= (rngSoundChase/100*2))
-                        nearest.GetComponent<SoundManager>().PlayEvent("VX_Niveks_Poursuivi", nearest);
                 }
 
             }
@@ -252,9 +266,10 @@ public class MonsterControllerF : MonoBehaviour {
             
     }
 
-    /*private IEnumerator(){
-
-    }*/
+    private IEnumerator Yelling(){
+        yield return new WaitForSeconds(timeBetweenTwoChaseSound);
+        canYell = true;
+    }
 
     public void Respawn()
     {
@@ -285,6 +300,7 @@ public class MonsterControllerF : MonoBehaviour {
             callDisableMagnet();
 
         sound.PlayEvent("Tranfo_BalleMonstre",gameObject);
+        striker = null;
 
         yield return new WaitForSeconds(summon);
         skinBall.SetActive(false);
@@ -405,6 +421,7 @@ public class MonsterControllerF : MonoBehaviour {
         if (player == playerAte)
         {
             sound.PlayEvent("VX_Monstre_Crache", gameObject);
+            sound.PlayEvent("VX_Niveks_Wilhem", player);
             player.GetComponent<PlayerControllerF>().FlyAway();
 
         }
@@ -506,5 +523,15 @@ public class MonsterControllerF : MonoBehaviour {
     public int GetWrath()
     {
         return wrath;
+    }
+
+    public void SetStriker(PlayerControllerF striker)
+    {
+        this.striker = striker;
+    }
+
+    public PlayerControllerF GetStriker()
+    {
+        return striker;
     }
 }

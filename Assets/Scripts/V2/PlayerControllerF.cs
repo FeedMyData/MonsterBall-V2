@@ -85,6 +85,8 @@ public class PlayerControllerF : MonoBehaviour
     public int sautBut = 0;
     [HideInInspector]
     public int coupsVide = 0;
+    [HideInInspector]
+    public int marqueBut = 0;
 
     // Use this for initialization
     void Start()
@@ -261,6 +263,8 @@ public class PlayerControllerF : MonoBehaviour
     {
         if (Input.GetButtonDown(fire))
         {
+
+            sound.PlayEvent("SFX_Niveks_ChargeCoup",gameObject);
             loading = true;
             power = powerMin;
             chargingShoot = 0;
@@ -282,6 +286,11 @@ public class PlayerControllerF : MonoBehaviour
         {
             power = Mathf.Lerp(power, powerMax, chargingShoot);
 
+            if (power >= powerMax)
+            {
+                //sound.PlayEvent("SFX_Niveks_ChargeAttente",gameObject);
+                sound.StopEvent("SFX_Niveks_ChargeCoup", gameObject,0);
+            }
         }
 
         if (Input.GetButtonUp(fire) && loading)
@@ -290,7 +299,7 @@ public class PlayerControllerF : MonoBehaviour
 
                 GetComponentInChildren<Animator>().SetBool("isCharging", false);
 
-
+                //sound.StopEvent("SFX_Niveks_ChargeAttente", gameObject,50);
 			}
             loading = false;
             if (bonus != null)
@@ -456,6 +465,7 @@ public class PlayerControllerF : MonoBehaviour
                     if (monster.GetMagnet().GetComponent<PlayerControllerF>().team != team || monster.GetMagnet() == this.gameObject)
                     {
                         monster.callDisableMagnet();
+                        monster.SetStriker(this);
                         sound.PlayEvent("VX_Balle_Coup", monster.gameObject);
 
                         if (GameControllerF.WhereIsMyAlly(this) != Vector3.zero)

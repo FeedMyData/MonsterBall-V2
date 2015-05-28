@@ -170,7 +170,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movingMaxBall: 3
-  speedMonster: 15
+  speedMonster: 13
   speedMaxToChooseDirection: 3
   speedDivisionFactor: 8
   spaceBetweenBallPlayer: 2
@@ -185,7 +185,7 @@ MonoBehaviour:
   monsterMass: 20
   safeTransform: .699999988
   durationInvul: 2
-  coefColliderMonster: 1.04999995
+  coefColliderMonster: .800000012
   durationEatingPlayer: 1
   skinBall: {fileID: 615020600}
   skinMonster: {fileID: 1800922600}
@@ -918,7 +918,7 @@ MonoBehaviour:
   rangeShoot: 6
   angleHoming: 50
   multiImpact: 1
-  stunKick: 1.29999995
+  stunKick: 0
   stunGoal: 0
   jersey: 2
   team: 1
@@ -4036,7 +4036,7 @@ MonoBehaviour:
   rangeShoot: 6
   angleHoming: 50
   multiImpact: 1
-  stunKick: 1.29999995
+  stunKick: 0
   stunGoal: 0
   jersey: 3
   team: 0
@@ -4755,9 +4755,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   basePath: Audio\GeneratedSoundBanks
   language: English(US)
-  defaultPoolSize: 8192
-  lowerPoolSize: 4096
-  streamingPoolSize: 2048
+  defaultPoolSize: 4096
+  lowerPoolSize: 2048
+  streamingPoolSize: 1024
   memoryCutoffThreshold: .949999988
 --- !u!114 &631020833
 MonoBehaviour:
@@ -5844,6 +5844,7 @@ GameObject:
   - 64: {fileID: 802648613}
   - 114: {fileID: 802648614}
   - 114: {fileID: 802648615}
+  - 114: {fileID: 802648616}
   m_Layer: 0
   m_Name: redGoal
   m_TagString: TeamRed
@@ -5935,6 +5936,27 @@ MonoBehaviour:
   useOtherObject: 0
   valueGuid: 6e188d06646af44daf0a772ac4142926
   eventID: -1234150110
+  soundEmitterObject: {fileID: 0}
+  enableActionOnEvent: 0
+  actionOnEventType: 0
+  curveInterpolation: 4
+  transitionDuration: 0
+  m_callbackData: {fileID: 0}
+--- !u!114 &802648616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 802648609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 704553ab0af34f544bca18cd2ee785f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: d1bbb3b5
+  useOtherObject: 0
+  valueGuid: e80b06608048d8469497e296e70750f5
+  eventID: 213475906
   soundEmitterObject: {fileID: 0}
   enableActionOnEvent: 0
   actionOnEventType: 0
@@ -9573,6 +9595,7 @@ GameObject:
   - 64: {fileID: 1108100047}
   - 114: {fileID: 1108100048}
   - 114: {fileID: 1108100050}
+  - 114: {fileID: 1108100049}
   m_Layer: 0
   m_Name: blueGoal
   m_TagString: TeamBlu
@@ -9649,6 +9672,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bf9abdf5d47a28409f2c536c214f468, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1108100049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1108100043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 704553ab0af34f544bca18cd2ee785f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: d1bbb3b5
+  useOtherObject: 0
+  valueGuid: e80b06608048d8469497e296e70750f5
+  eventID: 213475906
+  soundEmitterObject: {fileID: 0}
+  enableActionOnEvent: 0
+  actionOnEventType: 0
+  curveInterpolation: 4
+  transitionDuration: 0
+  m_callbackData: {fileID: 0}
 --- !u!114 &1108100050
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19147,7 +19191,7 @@ MonoBehaviour:
   rangeShoot: 6
   angleHoming: 50
   multiImpact: 1
-  stunKick: 1.29999995
+  stunKick: 0
   stunGoal: 0
   jersey: 0
   team: 1
@@ -20117,7 +20161,7 @@ MonoBehaviour:
   rangeShoot: 6
   angleHoming: 50
   multiImpact: 1
-  stunKick: 1.29999995
+  stunKick: 0
   stunGoal: 0
   jersey: 1
   team: 0

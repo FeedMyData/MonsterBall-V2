@@ -37,6 +37,23 @@ public class GoalScriptF : MonoBehaviour {
 
                 other.gameObject.GetComponent<SoundManager>().PlayEvent("VX_Balle_But",other.gameObject);
 
+                PlayerControllerF striker = other.gameObject.GetComponent<MonsterControllerF>().GetStriker();
+
+                if (striker != null)
+                {
+                    if ((other.gameObject.GetComponent<MonsterControllerF>().GetStriker().team == GameControllerF.Team.Blu && tag == "TeamBlu") || (other.gameObject.GetComponent<MonsterControllerF>().GetStriker().team == GameControllerF.Team.Red && tag == "TeamRed"))
+                    {
+                        other.gameObject.GetComponent<SoundManager>().PlayEvent("VX_Niveks_ButGagnant", striker.gameObject);
+                      
+                    }
+                    else
+                    {
+                        other.gameObject.GetComponent<SoundManager>().PlayEvent("VX_Niveks_ButPerdant", striker.gameObject);
+                    }
+
+                    striker.marqueBut++;
+                }
+
                 manager.AddScore(tag);
                 //tp au centre + invul de 3 secondes
                 other.gameObject.GetComponent<MonsterControllerF>().Respawn();
