@@ -386,7 +386,7 @@ public class PlayerControllerF : MonoBehaviour
                 if (GetComponentInChildren<Animator>()){
 
                     GetComponentInChildren<Animator>().SetTrigger("hit");
-					Debug.Log("hit");
+					//Debug.Log("hit");
 					foreach(Animator animator in GetComponentsInChildren<Animator>())
 						animator.SetTrigger("shrink");
 				}

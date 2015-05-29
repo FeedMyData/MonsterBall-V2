@@ -27,9 +27,11 @@ public class MonsterControllerF : MonoBehaviour {
     public int wrathDribblingValue = 1;
     public float wrathDribblingEachTime = 1.0f;
     public float summon = 0.3f;
-    public float revocation = 20.0f;
+    public float durationFirstPart = 15.0f;
+    public float durationSecondPart = 5.0f;
     private int wrath = 0;
     private bool monsterForm = false;
+    private bool monsterModeCharge = false;
     public float monsterScale = 3.0f;
     public float monsterMass = 20.0f;
     [Range(0.0f,1.0f)]
@@ -157,7 +159,6 @@ public class MonsterControllerF : MonoBehaviour {
 
         if (!monsterForm && wrath >= wrathMax && GameControllerF.InCircle(this.gameObject)<safeTransform)
         {
-            monsterForm = true;
             StartCoroutine(NotHappy());
         }
 	}
@@ -219,6 +220,10 @@ public class MonsterControllerF : MonoBehaviour {
         else if(seeACake)
         {
             DirectionMonster = cakePos;
+        }
+        else if (monsterModeCharge)
+        {
+
         }
         else
         {
@@ -300,17 +305,26 @@ public class MonsterControllerF : MonoBehaviour {
         if (magnet != null)
             callDisableMagnet();
 
-        sound.PlayEvent("Tranfo_BalleMonstre",gameObject);
+        sound.PlayEvent("Tranfo_BalleMonstre", gameObject);
         sound.PlayEvent("Music_Monstre", gameObject);
         striker = null;
 
         yield return new WaitForSeconds(summon);
+
+        monsterForm = true;
+
         skinBall.SetActive(false);
         skinMonster.SetActive(true);
         transform.localScale *= monsterScale;
 
-        yield return new WaitForSeconds(revocation);
+        yield return new WaitForSeconds(durationFirstPart);
 
+        monsterModeCharge = true;
+        //Passer en mode charge
+
+        yield return new WaitForSeconds(durationSecondPart);
+
+        monsterModeCharge = false;
         sound.PlayEvent("Tranfo_MonstreBalle", gameObject);
         sound.StopEvent("Music_Monstre", gameObject,1000);
         skinBall.SetActive(true);

@@ -180,7 +180,8 @@ MonoBehaviour:
   wrathDribblingValue: 1
   wrathDribblingEachTime: .5
   summon: .200000003
-  revocation: 20
+  durationFirstPart: 15
+  durationSecondPart: 5
   monsterScale: 6
   monsterMass: 20
   safeTransform: .699999988
@@ -2900,6 +2901,8 @@ GameObject:
   - 33: {fileID: 389545904}
   - 23: {fileID: 389545903}
   - 64: {fileID: 389545902}
+  - 114: {fileID: 389545905}
+  - 54: {fileID: 389545906}
   m_Layer: 0
   m_Name: dome
   m_TagString: Untagged
@@ -2966,6 +2969,32 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 389545900}
   m_Mesh: {fileID: 4300002, guid: 526ac7ac13adf9648a4cf10fe7ab13f5, type: 3}
+--- !u!114 &389545905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 389545900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 104ab0de1f4942343822725642217a00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!54 &389545906
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 389545900}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &392685104
 GameObject:
   m_ObjectHideFlags: 0
