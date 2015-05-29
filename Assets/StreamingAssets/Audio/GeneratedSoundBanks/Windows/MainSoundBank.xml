@@ -14,7 +14,9 @@
 			<IncludedEvents>
 				<Event Id="1927068452" Name="Menu_Move"/>
 				<Event Id="1988127715" Name="Menu_Valid"/>
-				<Event Id="2620239212" Name="Music_DebutMatch"/>
+				<Event Id="1598298728" Name="Music_Menu"/>
+				<Event Id="49016843" Name="Music_Monstre"/>
+				<Event Id="1834583677" Name="Music_Tableau"/>
 				<Event Id="3060817186" Name="Public_But"/>
 				<Event Id="3395781144" Name="Public_Fin"/>
 				<Event Id="3300306736" Name="Public_Intensification"/>

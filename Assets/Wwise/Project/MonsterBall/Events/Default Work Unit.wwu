@@ -374,7 +374,7 @@
 				</Folder>
 				<Folder Name="Music" ID="{34C33023-FC46-45EC-9E0D-7378FBEBF868}" ShortID="804047239">
 					<ChildrenList>
-						<Event Name="Music_DebutMatch" ID="{CF6C4B60-167B-47DE-B567-E8CA62DC3777}">
+						<Event Name="Music_Menu" ID="{CF6C4B60-167B-47DE-B567-E8CA62DC3777}">
 							<ChildrenList>
 								<Action Name="Play" ID="{A589291B-22FE-4629-B80B-D3C9BC83A4E7}" ShortID="710159379" Type="Play" Scope="One" Global="false">
 									<ElementList>
@@ -385,6 +385,8 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Music_Monstre" ID="{F88A1249-59AA-4491-95A9-9E5EA2010529}"/>
+						<Event Name="Music_Tableau" ID="{0F470E75-820C-470C-B9CD-28EA691D3C08}"/>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>

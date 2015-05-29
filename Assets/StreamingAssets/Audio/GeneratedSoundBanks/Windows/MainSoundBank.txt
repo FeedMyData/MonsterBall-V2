@@ -1,15 +1,17 @@
 Event	ID	Name			Wwise Object Path	Notes
 	43799444	VX_Balle_Coup			\Default Work Unit\Voix\Balle\VX_Balle_Coup	
+	49016843	Music_Monstre			\Default Work Unit\Music\Music_Monstre	
 	213475906	SFX_But			\Default Work Unit\SFX\SFX_But	
 	682388778	VX_Comment_FinMatch			\Default Work Unit\Voix\Commentaire\VX_Comment_FinMatch	
 	1123955361	VX_Niveks_FinMatchGagnant			\Default Work Unit\Voix\Niveks\VX_Niveks_FinMatchGagnant	
+	1598298728	Music_Menu			\Default Work Unit\Music\Music_Menu	
+	1834583677	Music_Tableau			\Default Work Unit\Music\Music_Tableau	
 	1927068452	Menu_Move			\Default Work Unit\Menu\Menu_Move	
 	1988127715	Menu_Valid			\Default Work Unit\Menu\Menu_Valid	
 	2097335990	SFX_Niveks_Woosh			\Default Work Unit\SFX\SFX_Niveks_Woosh	
 	2139348868	SFX_Niveks_CoupFort			\Default Work Unit\SFX\SFX_Niveks_CoupFort	
 	2143267510	VX_Niveks_Coup			\Default Work Unit\Voix\Niveks\VX_Niveks_Coup	
 	2279719562	VX_Balle_But			\Default Work Unit\Voix\Balle\VX_Balle_But	
-	2620239212	Music_DebutMatch			\Default Work Unit\Music\Music_DebutMatch	
 	2649120174	VX_Niveks_DebutMatch			\Default Work Unit\Voix\Niveks\VX_Niveks_DebutMatch	
 	2663589529	VX_Comment_DebutMatch			\Default Work Unit\Voix\Commentaire\VX_Comment_DebutMatch	
 	2676280931	VX_Balle_RemiseEnJeu			\Default Work Unit\Voix\Balle\VX_Balle_RemiseEnJeu	
