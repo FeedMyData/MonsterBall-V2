@@ -301,6 +301,7 @@ public class MonsterControllerF : MonoBehaviour {
             callDisableMagnet();
 
         sound.PlayEvent("Tranfo_BalleMonstre",gameObject);
+        sound.PlayEvent("Music_Monstre", gameObject);
         striker = null;
 
         yield return new WaitForSeconds(summon);
@@ -311,6 +312,7 @@ public class MonsterControllerF : MonoBehaviour {
         yield return new WaitForSeconds(revocation);
 
         sound.PlayEvent("Tranfo_MonstreBalle", gameObject);
+        sound.StopEvent("Music_Monstre", gameObject,1000);
         skinBall.SetActive(true);
         skinMonster.SetActive(false);
         wrath = 0;
