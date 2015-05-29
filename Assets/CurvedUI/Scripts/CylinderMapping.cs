@@ -115,7 +115,7 @@ public class CylinderMapping : CanvasMapping
 
 	[SerializeField]
 	[Range(0.0f, 360.0f)]
-	float m_angle = 180.0f;
+	public float m_angle = 180.0f;
 
 	[SerializeField]
 	[Range(0.0f, 10.0f)]

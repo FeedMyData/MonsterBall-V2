@@ -4,6 +4,9 @@ using System.Collections;
 
 public class GameManagerF : MonoBehaviour {
 
+    private string blue = "#68C5EE";
+    private string red = "#AB0101";
+
     private int bluScore = 0;
     private int redScore = 0;
     private Text txtScore;
@@ -96,7 +99,7 @@ public class GameManagerF : MonoBehaviour {
 
     void RefreshScore()
     {
-        txtScore.text = (bluScore+"-"+redScore);
+        txtScore.text = ("<color="+blue+">"+bluScore+"</color> <color="+red+">"+redScore+"</color>");
     }
 
     void RefreshDuration()

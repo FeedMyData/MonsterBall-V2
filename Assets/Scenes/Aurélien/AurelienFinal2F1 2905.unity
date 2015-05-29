@@ -356,7 +356,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 03:00
+  m_Text: 00:00
 --- !u!1 &43463677
 GameObject:
   m_ObjectHideFlags: 0
@@ -1768,7 +1768,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -12825,6 +12825,7 @@ GameObject:
   - 224: {fileID: 1279058673}
   - 223: {fileID: 1279058676}
   - 114: {fileID: 1279058675}
+  - 114: {fileID: 1279058677}
   - 114: {fileID: 1279058674}
   m_Layer: 5
   m_Name: CnvScore
@@ -12842,7 +12843,7 @@ RectTransform:
   m_GameObject: {fileID: 1279058672}
   m_LocalRotation: {x: -.144843355, y: 0, z: 0, w: .989454627}
   m_LocalPosition: {x: 0, y: 0, z: 31}
-  m_LocalScale: {x: .200121418, y: .200121418, z: .200121418}
+  m_LocalScale: {x: .150000006, y: .200121418, z: .200121418}
   m_Children:
   - {fileID: 104051543}
   - {fileID: 1558002331}
@@ -12867,7 +12868,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_depth: -1
-  m_angle: 133
+  m_angle: 160
   m_radius: 1
 --- !u!114 &1279058675
 MonoBehaviour:
@@ -12909,6 +12910,17 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
+--- !u!114 &1279058677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1279058672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e07b85b6a1f3f94fa5c08cd1d841112, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1290406491
 GameObject:
   m_ObjectHideFlags: 0
@@ -14841,6 +14853,7 @@ GameObject:
   - 224: {fileID: 1384976015}
   - 222: {fileID: 1384976017}
   - 114: {fileID: 1384976016}
+  - 114: {fileID: 1384976018}
   m_Layer: 5
   m_Name: RedComment
   m_TagString: Untagged
@@ -14859,7 +14872,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1418121897}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
   m_AnchoredPosition: {x: 114, y: 182}
@@ -14880,7 +14893,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FontData:
     m_Font: {fileID: 12800000, guid: 81d2bd44b44664248aa1ff313c7807ff, type: 3}
-    m_FontSize: 10
+    m_FontSize: 12
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -14889,14 +14902,25 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
-    m_LineSpacing: 1
-  m_Text: New Text
+    m_LineSpacing: 1.5
+  m_Text: Kick goals !
 --- !u!222 &1384976017
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1384976014}
+--- !u!114 &1384976018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1384976014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dffa04cde93d524aab75370f833889d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1385986965
 GameObject:
   m_ObjectHideFlags: 0
@@ -15313,8 +15337,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1709295103}
   - {fileID: 1384976015}
+  - {fileID: 1709295103}
   m_Father: {fileID: 1279058673}
   m_RootOrder: 2
   m_AnchorMin: {x: .5, y: .5}
@@ -15330,9 +15354,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 1418121896}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3254d382368f9ed46bd93f6e683160f5, type: 3}
+  m_Script: {fileID: 11500000, guid: f0c7b21c7b8ec444f92566d7578de930, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  redText: {fileID: 1384976016}
+  blueText: {fileID: 1709295104}
+  commentsForGoalsByPlayers:
+  - Awesome
+  - Nice
+  - Great
+  commentsForGoalsByMonster:
+  - Tasty
+  - Delicious
+  instructionWhenBall: Kick goals !
+  instructionWhenMonster: RUN !!!
 --- !u!1 &1422211986
 GameObject:
   m_ObjectHideFlags: 0
@@ -18484,7 +18519,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1418121897}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
   m_AnchoredPosition: {x: -114, y: 182}
@@ -18505,7 +18540,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FontData:
     m_Font: {fileID: 12800000, guid: 81d2bd44b44664248aa1ff313c7807ff, type: 3}
-    m_FontSize: 10
+    m_FontSize: 12
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -18514,8 +18549,8 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
-    m_LineSpacing: 1
-  m_Text: New Text
+    m_LineSpacing: 1.5
+  m_Text: Kick goals !
 --- !u!222 &1709295105
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -22037,4 +22072,4 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 0-0
+  m_Text: 0 0
