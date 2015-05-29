@@ -3,14 +3,12 @@ using System.Collections;
 
 public class bumpScript : MonoBehaviour {
     
-    public float dashGoalPower = 200.0f;
-
-    private GameManagerF manager;
+    public float dashGoalPower = 100.0f;
 
     // Use this for initialization
     void Start()
     {
-        manager = GameControllerF.getManager();
+
     }
 
     // Update is called once per frame

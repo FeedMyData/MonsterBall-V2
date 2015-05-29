@@ -169,7 +169,7 @@ public class TwitterFeed : MonoBehaviour {
 
         Dictionary<string, string> parameters = new Dictionary<string, string>();
 
-        parameters["q="] = "@MBL_GAME -enculé -pd -putain -pute -salope -fuck"; // or to:MBL_GAME
+        parameters["q="] = "#gamdev -enculé -pd -putain -pute -salope -fuck"; // or to:MBL_GAME or @MBL_GAME or a special # for the occasion
         parameters["result_type="] = "recent";
         parameters["count"] = "1";
         //parameters["geocode="] = "45.6537200,0.1486590,10km";

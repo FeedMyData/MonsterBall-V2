@@ -61,6 +61,7 @@ public class MonsterControllerF : MonoBehaviour {
     private bool seeACake = false;
     private Vector3 cakePos;
 
+    [Header("Sound")]
     private SoundManager sound;
     public float distanceSoundChase = 5.0f;
     [Range(0, 100)]
