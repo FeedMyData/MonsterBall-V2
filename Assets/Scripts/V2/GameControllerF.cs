@@ -156,11 +156,19 @@ public class GameControllerF : MonoBehaviour {
                 }
         }
 
-        for (int i = 0; i < nearObj.Count; i++)
+       
+        for (int i = 0; i < nearObj.Count ; i++)
         {
-            //tri du plus proche au plus loin ?
+            for (int j = nearObj.Count - 1; j > i; j++)
+            {
+                if (Distance(obj, nearObj[j]) < Distance(obj, nearObj[j - 1]))
+                {
+                    GameObject tempNear = nearObj[j];
+                    nearObj[j] = nearObj[j - 1];
+                    nearObj[j - 1] = tempNear;
+                }
+            }
         }
-
         return nearObj;
     }
 
