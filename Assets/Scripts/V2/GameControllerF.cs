@@ -144,6 +144,26 @@ public class GameControllerF : MonoBehaviour {
         return nearObj;
     }
 
+    public static List<GameObject> FieldOfView(GameObject obj, float distance, float angle)
+    {
+        List<GameObject> nearObj = new List<GameObject>();
+        for (int i = 0; i < tabObj.Length; i++)
+        {
+            if (obj != tabObj[i])
+                if (Distance(obj.gameObject, tabObj[i]) < distance && Vector3.Angle(obj.transform.forward, tabObj[i].transform.position - obj.transform.position) <= angle / 2)
+                {
+                    nearObj.Add(tabObj[i]);
+                }
+        }
+
+        for (int i = 0; i < nearObj.Count; i++)
+        {
+            //tri du plus proche au plus loin ?
+        }
+
+        return nearObj;
+    }
+
     /**
      * Regarde si le joueur à un allié dans sa zone d'auto-guidage
      * 

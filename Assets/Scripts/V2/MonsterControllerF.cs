@@ -13,9 +13,11 @@ public class MonsterControllerF : MonoBehaviour {
     public float speedRotationBall = 10f;
     public float speedMonster = 12.0f;
     //private bool restMoving = false;
+    public float angleChangeDirection = 45f;
     public float speedMaxToChooseDirection = 5.0f;
     public float speedDivisionFactor = 8.0f;
     public float spaceBetweenBallPlayer = 2.0f;
+    public float fovBall = 110f;
     
     [Header("Magnet")]
     public float areaMagnet = 1.0f;
@@ -38,6 +40,8 @@ public class MonsterControllerF : MonoBehaviour {
     public float monsterMass = 20.0f;
     [Range(0.0f,1.0f)]
     public float safeTransform = 0.7f;
+    private bool transforming = false;
+    private float timeTransforming;
 
     [Header("Respawn")]
     public float durationInvul = 2.0f;
@@ -104,7 +108,7 @@ public class MonsterControllerF : MonoBehaviour {
         }
 
 
-        tp.SetTeleportation(true);
+       // tp.SetTeleportation(true);
 	}
 	
 	// Update is called once per frame
@@ -122,8 +126,8 @@ public class MonsterControllerF : MonoBehaviour {
                 }
                 else
                 {
-                    if (GetActualSpeed() < speedMaxToChooseDirection && isGround())
-                        MoveBall();
+                    
+                    MoveBall();
 
                     if (touchable)
                     {
@@ -183,28 +187,48 @@ public class MonsterControllerF : MonoBehaviour {
 
         StartCoroutine(RestMoveBall(Vector3.SqrMagnitude(positionReach)/speedDivisionFactor));*/
 
-        Vector3 rotationToGoal = Vector3.zero;
-        body.velocity = Vector3.zero;
-
-        transform.position += transform.forward * Time.deltaTime * speedBall;
-
-        try
-        {
-            if (GameControllerF.InCircle(gameObject) > 0.80f)
-            {
-                transform.Rotate(Vector3.right * speedRotationBall * Time.deltaTime);
-            }
-            /*
-            GameObject player = GameControllerF.NearestTo(gameObject, 20);
-
-            if (Vector3.Angle(player.transform.position - transform.position, transform.forward) < fovBall)
-            {
-
-            }*/
-        }
-        catch (Exception e) { }
         
 
+        
+
+        if (transforming)
+        {
+            float delayTransforming = Mathf.Abs(((timeTransforming - Time.time) / (summon / 2)) - 1);
+            body.velocity = Vector3.Lerp(body.velocity,Vector3.zero,delayTransforming);
+            body.angularVelocity = Vector3.Lerp(body.angularVelocity, Vector3.zero, delayTransforming);
+
+        }
+        else
+        {
+            if (GetActualSpeed() < speedMaxToChooseDirection && isGround())
+            {
+                body.velocity = Vector3.zero;
+                transform.eulerAngles = new Vector3(0, transform.eulerAngles.y, 0);
+
+                transform.position += transform.forward * Time.deltaTime * speedBall;
+
+
+                if (GameControllerF.InCircle(gameObject) > 0.80f)
+                {
+
+                    float newDirection = transform.eulerAngles.y;// +180;//(+-angle)
+                    if(UnityEngine.Random.value<0.5f){
+                        newDirection -= UnityEngine.Random.Range(30,45+angleChangeDirection);
+                    }
+                    else{
+                        newDirection += UnityEngine.Random.Range(30,45+angleChangeDirection);
+
+                    }
+
+                    transform.eulerAngles = new Vector3(0,newDirection,0);
+                }
+                else
+                {
+                    //regarde s'il y a un joueur devant lui et se décale pour l'éviter
+                    GameControllerF.
+                }
+            }
+        }
     }
 
     public IEnumerator WrathWhileDribbling()
@@ -323,13 +347,16 @@ public class MonsterControllerF : MonoBehaviour {
 
     IEnumerator NotHappy()
     {
-        ballSpotlight.SetActive(false);
-        monsterSpotlight.SetActive(true);
 
+        transforming = true;
+        timeTransforming = Time.time + (summon / 2);
         //taille + magnet + variable
         wrath = 0;
         if (magnet != null)
             callDisableMagnet();
+
+        GameObject smokeFury = Instantiate(Resources.Load("Fumee", typeof(GameObject)),transform.position,Quaternion.identity) as GameObject;
+        GameObject transfoFury = Instantiate(Resources.Load("Transformation_particules", typeof(GameObject)), transform.position, Quaternion.identity) as GameObject;
 
         sound.PlayEvent("Tranfo_BalleMonstre", gameObject);
         sound.PlayEvent("Music_Monstre", gameObject);
@@ -337,11 +364,19 @@ public class MonsterControllerF : MonoBehaviour {
 
         yield return new WaitForSeconds(summon);
 
+        transforming = false;
+
+        ballSpotlight.SetActive(false);
+        monsterSpotlight.SetActive(true);
+
         monsterForm = true;
 
         skinBall.SetActive(false);
         skinMonster.SetActive(true);
         transform.localScale *= monsterScale;
+
+        Destroy(smokeFury);
+        Destroy(transfoFury);
 
         yield return new WaitForSeconds(durationFirstPart);
 
@@ -389,7 +424,7 @@ public class MonsterControllerF : MonoBehaviour {
     void SetMagnet()
     {
         GameObject potentialMagnet = GameControllerF.NearestTo(this.gameObject, areaMagnet);
-        if (GetActualSpeed() <= speedMagnet && potentialMagnet!=null)
+        if (GetActualSpeed() <= speedMagnet && potentialMagnet!=null && !transforming)
         {
             //Debug.Log(potentialMagnet);
             if (potentialMagnet != previousMagnet && potentialMagnet.GetComponent<PlayerControllerF>().getBonus() == null)

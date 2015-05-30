@@ -170,17 +170,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speedBall: 12
-  speedRotationBall: 10
+  speedRotationBall: 30
   speedMonster: 13
+  angleChangeDirection: 45
   speedMaxToChooseDirection: 15
   speedDivisionFactor: 8
   spaceBetweenBallPlayer: 2
+  fovBall: 110
   areaMagnet: 3
   speedMagnet: 40
   wrathMax: 100
   wrathDribblingValue: 1
   wrathDribblingEachTime: .5
-  summon: .200000003
+  summon: 2
   durationFirstPart: 15
   durationSecondPart: 5
   monsterScale: 6

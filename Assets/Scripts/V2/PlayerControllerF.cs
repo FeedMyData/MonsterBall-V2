@@ -122,7 +122,7 @@ public class PlayerControllerF : MonoBehaviour
         //angleHoming *= Mathf.Deg2Rad;
         //angleShoot *= Mathf.Deg2Rad;
 
-        tp.SetTeleportation(true);
+        //tp.SetTeleportation(true);
 
     }
 
