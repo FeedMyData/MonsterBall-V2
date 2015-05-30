@@ -225,16 +225,13 @@ public class MonsterControllerF : MonoBehaviour {
                 else
                 {
                     //regarde s'il y a un joueur devant lui et se décale pour l'éviter
-<<<<<<< HEAD
                     try
                     {
                        // GameControllerF.FieldOfView(gameObject,20,90)[0];
                     }
                     catch(Exception e){ }
                     
-=======
                     //GameControllerF.
->>>>>>> origin/master
                 }
             }
         }
