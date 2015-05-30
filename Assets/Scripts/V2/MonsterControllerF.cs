@@ -225,7 +225,7 @@ public class MonsterControllerF : MonoBehaviour {
                 else
                 {
                     //regarde s'il y a un joueur devant lui et se décale pour l'éviter
-                    GameControllerF.
+                    //GameControllerF.
                 }
             }
         }
