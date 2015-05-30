@@ -7,12 +7,14 @@ public class GoalScriptMonster : MonoBehaviour {
     
     //feedbacks
     private GuiEffects guiEffectsScript;
+    private TextCommentaries commentariesScript;
 
     // Use this for initialization
     void Start()
     {
         manager = GameControllerF.getManager();
         guiEffectsScript = GameObject.Find("CanvasFeedbacks").GetComponent<GuiEffects>();
+        commentariesScript = GameObject.Find("Commentaries").GetComponent<TextCommentaries>();
     }
 
     // Update is called once per frame
@@ -46,6 +48,7 @@ public class GoalScriptMonster : MonoBehaviour {
                 //feedbacks goal joueur
                 Camera.main.GetComponent<CameraShake>().shake(1.0f, 1.0f, 1.0f);
                 guiEffectsScript.flashGoal(tag);
+                commentariesScript.WriteCommentary(tag, "monsterG");
 
                 manager.AddScore(tag);
                 player.Respawn();

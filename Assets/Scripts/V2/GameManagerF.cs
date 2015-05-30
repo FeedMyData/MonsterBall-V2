@@ -9,7 +9,8 @@ public class GameManagerF : MonoBehaviour {
 
     private int bluScore = 0;
     private int redScore = 0;
-    private Text txtScore;
+    private Text blueScoreTxt;
+    private Text redScoreTxt;
     private Text txtDuration;
 
     public int durationInSecond;
@@ -24,14 +25,11 @@ public class GameManagerF : MonoBehaviour {
 
 
 	// Use this for initialization
-	void Awake () {
-        //txtScore = GameControllerF.GetTxtScore();
-        //txtDuration = GameControllerF.GetTxtDuration();
-	}
 
     void Start()
     {
-        txtScore = GameControllerF.GetTxtScore();
+        blueScoreTxt = GameControllerF.GetBlueScoreTxt();
+        redScoreTxt = GameControllerF.GetRedScoreTxt();
         txtDuration = GameControllerF.GetTxtDuration();
 
         RefreshDuration();
@@ -99,7 +97,9 @@ public class GameManagerF : MonoBehaviour {
 
     void RefreshScore()
     {
-        txtScore.text = ("<color="+blue+">"+bluScore+"</color> <color="+red+">"+redScore+"</color>");
+        //txtScore.text = ("<color="+blue+">"+bluScore+"</color> <color="+red+">"+redScore+"</color>");
+        blueScoreTxt.text = bluScore.ToString();
+        redScoreTxt.text = redScore.ToString();
     }
 
     void RefreshDuration()

@@ -32,8 +32,12 @@ public class GameControllerF : MonoBehaviour {
     public Transform posRedGoal;
 
     [Header("UI")]
-    public Text txtScore;
-    private static Text staticTxtScore;
+    //public Text txtScore;
+    //private static Text staticTxtScore;
+    public Text blueScoreTxt;
+    private static Text staticBlueScoreTxt;
+    public Text redScoreTxt;
+    private static Text staticRedScoreTxt;
     public Text txtDuration;
     private static Text staticTxtDuration;
 
@@ -63,7 +67,9 @@ public class GameControllerF : MonoBehaviour {
         tabObj[4] = player4;
 
         staticField = field;
-        staticTxtScore = txtScore;
+        //staticTxtScore = txtScore;
+        staticBlueScoreTxt = blueScoreTxt;
+        staticRedScoreTxt = redScoreTxt;
         staticTxtDuration = txtDuration;
         staticBluGoal = bluGoal;
         staticRedGoal = redGoal;
@@ -279,9 +285,19 @@ public class GameControllerF : MonoBehaviour {
         return ((Mathf.Pow(objVec.x, 2) / Mathf.Pow(fs.x/2, 2)) + (Mathf.Pow(objVec.z, 2) / Mathf.Pow(fs.z/2, 2)));
     }
 
-    public static Text GetTxtScore()
+    //public static Text GetTxtScore()
+    //{
+    //    return staticTxtScore;
+    //}
+
+    public static Text GetBlueScoreTxt()
     {
-        return staticTxtScore;
+        return staticBlueScoreTxt;
+    }
+
+    public static Text GetRedScoreTxt()
+    {
+        return staticRedScoreTxt;
     }
 
     public static Text GetTxtDuration()

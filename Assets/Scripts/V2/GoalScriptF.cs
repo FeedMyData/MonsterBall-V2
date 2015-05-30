@@ -8,6 +8,7 @@ public class GoalScriptF : MonoBehaviour {
 
     //feedbacks
     private GuiEffects guiEffectsScript;
+    private TextCommentaries commentariesScript;
 
     public float durationSwitch = 2.0f;
     public float durationReturnSwitch = 1.0f;
@@ -19,6 +20,7 @@ public class GoalScriptF : MonoBehaviour {
 	void Start () {
 	    manager = GameControllerF.getManager();
         guiEffectsScript = GameObject.Find("CanvasFeedbacks").GetComponent<GuiEffects>();
+        commentariesScript = GameObject.Find("Commentaries").GetComponent<TextCommentaries>();
 	}
 	
 	// Update is called once per frame
@@ -46,6 +48,7 @@ public class GoalScriptF : MonoBehaviour {
                 //feedbacks goal balle
                 Camera.main.GetComponent<CameraShake>().shake(0.8f, 0.6f, 1.0f);
                 guiEffectsScript.flashGoal(tag);
+                commentariesScript.WriteCommentary(tag, "playerG");
 
                 GetComponent<Renderer>().material.SetFloat("_Switch_goal", 1);
                 StartCoroutine(StopSwitchGoal());
