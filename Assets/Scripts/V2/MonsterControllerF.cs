@@ -8,9 +8,11 @@ public class MonsterControllerF : MonoBehaviour {
     private Rigidbody body;
 
     [Header("Move")]
-    public float movingMaxBall = 3.0f;
+    //public float movingMaxBall = 3.0f;
+    public float speedBall = 12f;
+    public float speedRotationBall = 10f;
     public float speedMonster = 12.0f;
-    private bool restMoving = false;
+    //private bool restMoving = false;
     public float speedMaxToChooseDirection = 5.0f;
     public float speedDivisionFactor = 8.0f;
     public float spaceBetweenBallPlayer = 2.0f;
@@ -74,6 +76,8 @@ public class MonsterControllerF : MonoBehaviour {
 
     private PlayerControllerF striker;
     public float durationBeforeLoseStriker = 3.0f;
+
+    private TeleportationF tp;
     
 
     //public delegate void OnClickHit();
@@ -83,7 +87,7 @@ public class MonsterControllerF : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 	    body = GetComponent<Rigidbody>();
-
+        tp = GetComponentInChildren<TeleportationF>();
         colliderMagnet = GetComponent<Collider>();
         sound = GetComponent<SoundManager>();
         sound.LoadBank();
@@ -98,6 +102,9 @@ public class MonsterControllerF : MonoBehaviour {
             ballSpotlight.SetActive(false);
             monsterSpotlight.SetActive(true);
         }
+
+
+        tp.SetTeleportation(true);
 	}
 	
 	// Update is called once per frame
@@ -115,7 +122,7 @@ public class MonsterControllerF : MonoBehaviour {
                 }
                 else
                 {
-                    if (!restMoving && GetActualSpeed() < speedMaxToChooseDirection && isGround())
+                    if (GetActualSpeed() < speedMaxToChooseDirection && isGround())
                         MoveBall();
 
                     if (touchable)
@@ -167,14 +174,36 @@ public class MonsterControllerF : MonoBehaviour {
     {
         //choisis aléatoirement un vector et s'y déplace avec une impulsion. Plus il va loin plus il attends pour choisir une nouvelle position
 
-        Vector3 positionReach = UnityEngine.Random.insideUnitSphere * movingMaxBall;
+        /*Vector3 positionReach = UnityEngine.Random.insideUnitSphere * movingMaxBall;
         positionReach.y = Mathf.Abs(positionReach.y) * 3;
 
         
         body.AddForce(positionReach,ForceMode.Impulse);
 
 
-        StartCoroutine(RestMoveBall(Vector3.SqrMagnitude(positionReach)/speedDivisionFactor));
+        StartCoroutine(RestMoveBall(Vector3.SqrMagnitude(positionReach)/speedDivisionFactor));*/
+
+        Vector3 rotationToGoal = Vector3.zero;
+        body.velocity = Vector3.zero;
+
+        transform.position += transform.forward * Time.deltaTime * speedBall;
+
+        try
+        {
+            if (GameControllerF.InCircle(gameObject) > 0.80f)
+            {
+                transform.Rotate(Vector3.right * speedRotationBall * Time.deltaTime);
+            }
+            /*
+            GameObject player = GameControllerF.NearestTo(gameObject, 20);
+
+            if (Vector3.Angle(player.transform.position - transform.position, transform.forward) < fovBall)
+            {
+
+            }*/
+        }
+        catch (Exception e) { }
+        
 
     }
 
@@ -188,12 +217,12 @@ public class MonsterControllerF : MonoBehaviour {
         
     }
 
-    IEnumerator RestMoveBall(float duration)
+    /*IEnumerator RestMoveBall(float duration)
     {
         restMoving = true;
         yield return new WaitForSeconds(duration);
         restMoving = false;
-    }
+    }*/
 
     bool isGround()
     {
@@ -255,9 +284,6 @@ public class MonsterControllerF : MonoBehaviour {
             catch (NullReferenceException e) { /*Si pas de plus proche on fait rien, dans le pire des cas à dure 3 secondes*/ }
         }
 
-        
-
-        Debug.DrawLine(transform.position, DirectionMonster);
 
         //transform.Translate(transform.forward*Time.deltaTime/*speedMonster*/); //Marche pas
         if (!eatPlayer)

@@ -70,6 +70,8 @@ public class PlayerControllerF : MonoBehaviour
     private SpriteRenderer spriteBonus;
     private SpriteRenderer spriteGround;
 
+    private TeleportationF tp;
+
     private SoundManager sound;
 
     /* Statistiques */
@@ -92,6 +94,7 @@ public class PlayerControllerF : MonoBehaviour
     void Start()
     {
         controller = GetComponent<CharacterController>();
+        tp = GetComponentInChildren<TeleportationF>();
 
         SpriteRenderer[] tabSprite = GetComponentsInChildren<SpriteRenderer>();
 
@@ -118,6 +121,9 @@ public class PlayerControllerF : MonoBehaviour
         //angleDash *= Mathf.Deg2Rad;
         //angleHoming *= Mathf.Deg2Rad;
         //angleShoot *= Mathf.Deg2Rad;
+
+        tp.SetTeleportation(true);
+
     }
 
     // Update is called once per frame
