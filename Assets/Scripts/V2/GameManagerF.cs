@@ -4,9 +4,13 @@ using System.Collections;
 
 public class GameManagerF : MonoBehaviour {
 
+    private string blue = "#68C5EE";
+    private string red = "#AB0101";
+
     private int bluScore = 0;
     private int redScore = 0;
-    private Text txtScore;
+    private Text blueScoreTxt;
+    private Text redScoreTxt;
     private Text txtDuration;
 
     public int durationInSecond;
@@ -19,17 +23,18 @@ public class GameManagerF : MonoBehaviour {
 
     private bool displayEnd = false;
 
+    private TextCommentaries commentariesScript;
+    public int whenToBeginEndTimer = 5;
 
 	// Use this for initialization
-	void Awake () {
-        //txtScore = GameControllerF.GetTxtScore();
-        //txtDuration = GameControllerF.GetTxtDuration();
-	}
 
     void Start()
     {
-        txtScore = GameControllerF.GetTxtScore();
+        blueScoreTxt = GameControllerF.GetBlueScoreTxt();
+        redScoreTxt = GameControllerF.GetRedScoreTxt();
         txtDuration = GameControllerF.GetTxtDuration();
+
+        commentariesScript = GameObject.Find("Commentaries").GetComponent<TextCommentaries>();
 
         RefreshDuration();
         RefreshScore();
@@ -51,9 +56,8 @@ public class GameManagerF : MonoBehaviour {
                 ecranFin.GetComponent<MenuFin>().RewardPlayer();
                 displayEnd = true;
             }
-            
-        }
 
+        }
         
 	}
 
@@ -61,17 +65,27 @@ public class GameManagerF : MonoBehaviour {
     {
         while (durationInSecond > 0)
         {
-            if (bonusCanPopUp && Random.value <= rngBonus)
-            {
-                bonusCanPopUp = false;
-                StartCoroutine(RearmBonus());
-                Debug.Log("CreateBonus");
+            //if (bonusCanPopUp && Random.value <= rngBonus)
+            //{
+                //bonusCanPopUp = false;
+                //StartCoroutine(RearmBonus());
+                //Debug.Log("CreateBonus");
                 //CreateBonus();
                 //active un bonus
-            }
+            //}
             yield return new WaitForSeconds(1);
             durationInSecond--;
             RefreshDuration();
+
+            //feedbacks end timer
+            if (durationInSecond == 0)
+            {
+                commentariesScript.WriteCommentary("both", "matchE");
+            }
+            else if(durationInSecond <= whenToBeginEndTimer)
+            {
+                commentariesScript.WriteCustom("both", durationInSecond.ToString(), 1.0f, "countdownIN");
+            }
         }
     }
 
@@ -86,17 +100,31 @@ public class GameManagerF : MonoBehaviour {
         if (team == "TeamBlu")
         {
             redScore++;
+            AnimateRedScore();
         }
         else
         {
             bluScore++;
+            AnimateBlueScore();
         }
-        RefreshScore();
+        //RefreshScore();
     }
 
-    void RefreshScore()
+    public void RefreshScore()
     {
-        txtScore.text = (bluScore+"-"+redScore);
+        //txtScore.text = ("<color="+blue+">"+bluScore+"</color> <color="+red+">"+redScore+"</color>");
+        blueScoreTxt.text = bluScore.ToString();
+        redScoreTxt.text = redScore.ToString();
+    }
+
+    void AnimateBlueScore()
+    {
+        blueScoreTxt.GetComponent<Animator>().SetTrigger("newScore");
+    }
+
+    void AnimateRedScore()
+    {
+        redScoreTxt.GetComponent<Animator>().SetTrigger("newScore");
     }
 
     void RefreshDuration()

@@ -32,8 +32,12 @@ public class GameControllerF : MonoBehaviour {
     public Transform posRedGoal;
 
     [Header("UI")]
-    public Text txtScore;
-    private static Text staticTxtScore;
+    //public Text txtScore;
+    //private static Text staticTxtScore;
+    public Text blueScoreTxt;
+    private static Text staticBlueScoreTxt;
+    public Text redScoreTxt;
+    private static Text staticRedScoreTxt;
     public Text txtDuration;
     private static Text staticTxtDuration;
 
@@ -63,7 +67,9 @@ public class GameControllerF : MonoBehaviour {
         tabObj[4] = player4;
 
         staticField = field;
-        staticTxtScore = txtScore;
+        //staticTxtScore = txtScore;
+        staticBlueScoreTxt = blueScoreTxt;
+        staticRedScoreTxt = redScoreTxt;
         staticTxtDuration = txtDuration;
         staticBluGoal = bluGoal;
         staticRedGoal = redGoal;
@@ -140,6 +146,34 @@ public class GameControllerF : MonoBehaviour {
                 {
                     nearObj.Add(tabObj[i]);
                 }
+        }
+        return nearObj;
+    }
+
+    public static List<GameObject> FieldOfView(GameObject obj, float distance, float angle)
+    {
+        List<GameObject> nearObj = new List<GameObject>();
+        for (int i = 0; i < tabObj.Length; i++)
+        {
+            if (obj != tabObj[i])
+                if (Distance(obj.gameObject, tabObj[i]) < distance && Vector3.Angle(obj.transform.forward, tabObj[i].transform.position - obj.transform.position) <= angle / 2)
+                {
+                    nearObj.Add(tabObj[i]);
+                }
+        }
+
+       
+        for (int i = 0; i < nearObj.Count ; i++)
+        {
+            for (int j = nearObj.Count - 1; j > i; j++)
+            {
+                if (Distance(obj, nearObj[j]) < Distance(obj, nearObj[j - 1]))
+                {
+                    GameObject tempNear = nearObj[j];
+                    nearObj[j] = nearObj[j - 1];
+                    nearObj[j - 1] = tempNear;
+                }
+            }
         }
         return nearObj;
     }
@@ -251,9 +285,19 @@ public class GameControllerF : MonoBehaviour {
         return ((Mathf.Pow(objVec.x, 2) / Mathf.Pow(fs.x/2, 2)) + (Mathf.Pow(objVec.z, 2) / Mathf.Pow(fs.z/2, 2)));
     }
 
-    public static Text GetTxtScore()
+    //public static Text GetTxtScore()
+    //{
+    //    return staticTxtScore;
+    //}
+
+    public static Text GetBlueScoreTxt()
     {
-        return staticTxtScore;
+        return staticBlueScoreTxt;
+    }
+
+    public static Text GetRedScoreTxt()
+    {
+        return staticRedScoreTxt;
     }
 
     public static Text GetTxtDuration()

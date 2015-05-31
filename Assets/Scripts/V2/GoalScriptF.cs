@@ -8,17 +8,31 @@ public class GoalScriptF : MonoBehaviour {
 
     //feedbacks
     private GuiEffects guiEffectsScript;
+    private TextCommentaries commentariesScript;
+
+    public float durationSwitch = 2.0f;
+    public float durationReturnSwitch = 1.0f;
+    private float timeSwitch;
+    private bool returnSwitch = false;
 
 
 	// Use this for initialization
 	void Start () {
 	    manager = GameControllerF.getManager();
         guiEffectsScript = GameObject.Find("CanvasFeedbacks").GetComponent<GuiEffects>();
+        commentariesScript = GameObject.Find("Commentaries").GetComponent<TextCommentaries>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	
+        if (returnSwitch)
+        {
+            float delayReturnSwitch = Mathf.Abs(((timeSwitch - Time.time) / durationSwitch) - 1); ;
+            GetComponent<Renderer>().material.SetFloat("_Switch_goal", Mathf.Lerp(1,0,delayReturnSwitch));
+
+            if (delayReturnSwitch >= 1)
+                returnSwitch = false;
+        }
 	}
 
     void OnCollisionEnter(Collision other) // old was ontriggerenter, changé pour détecter but d'une balle sur les mesh de buts du stade, par contre ça ne détecte pas les niveks, donc utilisation des anciens mesh colliders GoalMonsterRed et GoalMonsterBlue avec un nouveau script
@@ -34,6 +48,10 @@ public class GoalScriptF : MonoBehaviour {
                 //feedbacks goal balle
                 Camera.main.GetComponent<CameraShake>().shake(0.8f, 0.6f, 1.0f);
                 guiEffectsScript.flashGoal(tag);
+                commentariesScript.WriteCommentary(tag, "playerG");
+
+                GetComponent<Renderer>().material.SetFloat("_Switch_goal", 1);
+                StartCoroutine(StopSwitchGoal());
 
                 other.gameObject.GetComponent<SoundManager>().PlayEvent("VX_Balle_But",other.gameObject);
 
@@ -84,5 +102,13 @@ public class GoalScriptF : MonoBehaviour {
         //        player.AddImpact(dirImpact * 200);
         //    }
         //}
+    }
+
+    IEnumerator StopSwitchGoal(){
+
+        yield return new WaitForSeconds(durationSwitch);
+
+        timeSwitch = Time.time + durationReturnSwitch;
+        returnSwitch = true;
     }
 }

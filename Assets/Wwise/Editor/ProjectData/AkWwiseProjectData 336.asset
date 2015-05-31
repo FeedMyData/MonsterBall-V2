@@ -11,7 +11,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64e666e89aeccd84bac5d95a4d1f9d0e, type: 3}
   m_Name: AkWwiseProjectData 336
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   CurrentPluginConfig: 
+=======
+  CurrentPluginConfig: Profile
+>>>>>>> origin/master
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
@@ -533,6 +537,20 @@ MonoBehaviour:
         ObjectType: 1
       ID: 1802970371
       Guid: d2bd17ae28f7964ca483b4560ee81fa8
+<<<<<<< HEAD
+=======
+    - Name: ReverbStade
+      Path: Default Work Unit\Master Audio Bus\ReverbStade
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+      - ElementName: ReverbStade
+        ObjectType: 1
+      ID: -1038071216
+      Guid: 3512aed9f484bc489e4fff2edafdd297
+>>>>>>> origin/master
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPhysicalPath: 
@@ -557,6 +575,7 @@ MonoBehaviour:
         ObjectType: 7
       ID: 534561221
       Guid: 933a1cdfb050c344a9b1beae92e6de56
+<<<<<<< HEAD
   ExpandedItems:
   - /MonsterBall
   - /MonsterBall/Events
@@ -565,6 +584,11 @@ MonoBehaviour:
   - /MonsterBall/Events/Default Work Unit/Voix/Commentaire
   m_lastPopulateTimePsrt1: -537610359
   m_lastPopulateTimePart2: -1999476680
+=======
+  ExpandedItems: []
+  m_lastPopulateTimePsrt1: -1835156885
+  m_lastPopulateTimePart2: -1999476531
+>>>>>>> origin/master
   autoPopulateEnabled: 1
   basePath: Audio\GeneratedSoundBanks
   language: English(US)

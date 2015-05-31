@@ -569,6 +569,7 @@ MonoBehaviour:
       ID: 534561221
       Guid: 933a1cdfb050c344a9b1beae92e6de56
   ExpandedItems: []
+<<<<<<< HEAD
   m_lastPopulateTimePsrt1: 51813182
   m_lastPopulateTimePart2: -1999476685
   autoPopulateEnabled: 1
@@ -577,4 +578,14 @@ MonoBehaviour:
   defaultPoolSize: 10000
   lowerPoolSize: 8192
   streamingPoolSize: 2048
+=======
+  m_lastPopulateTimePsrt1: 1759379788
+  m_lastPopulateTimePart2: -1999476536
+  autoPopulateEnabled: 1
+  basePath: Audio\GeneratedSoundBanks
+  language: English(US)
+  defaultPoolSize: 4096
+  lowerPoolSize: 2048
+  streamingPoolSize: 1024
+>>>>>>> origin/master
   memoryCutoffThreshold: .949999988

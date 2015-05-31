@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Name: AkWwiseProjectData 305
   m_EditorClassIdentifier: 
   CurrentPluginConfig: Profile
+<<<<<<< HEAD
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
@@ -571,6 +572,16 @@ MonoBehaviour:
   ExpandedItems: []
   m_lastPopulateTimePsrt1: 1937600870
   m_lastPopulateTimePart2: -1999476691
+=======
+  EventWwu: []
+  AuxBusWwu: []
+  StateWwu: []
+  SwitchWwu: []
+  BankWwu: []
+  ExpandedItems: []
+  m_lastPopulateTimePsrt1: 0
+  m_lastPopulateTimePart2: 0
+>>>>>>> origin/master
   autoPopulateEnabled: 1
   basePath: Audio\GeneratedSoundBanks
   language: English(US)

@@ -59,7 +59,7 @@ public class TwitterFeed : MonoBehaviour {
             string textOnOneLine = MakeAllOnOneLine(searchResponse["statuses"][0]["text"]);
             string finalText = "<color=#FF0033>" + searchResponse["statuses"][0]["user"]["name"] + "</color> <size=40>@" + searchResponse["statuses"][0]["user"]["screen_name"] + "</size> : " + textOnOneLine;
 
-            Debug.Log(finalText);
+            //Debug.Log(finalText);
 
             if (lastTweetDisplayed != finalText)
             {

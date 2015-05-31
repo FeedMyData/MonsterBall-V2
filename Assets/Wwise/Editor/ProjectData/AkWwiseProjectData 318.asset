@@ -569,8 +569,13 @@ MonoBehaviour:
       ID: 534561221
       Guid: 933a1cdfb050c344a9b1beae92e6de56
   ExpandedItems: []
+<<<<<<< HEAD
   m_lastPopulateTimePsrt1: 2014337070
   m_lastPopulateTimePart2: -1999476686
+=======
+  m_lastPopulateTimePsrt1: 1574454998
+  m_lastPopulateTimePart2: -1999476540
+>>>>>>> origin/master
   autoPopulateEnabled: 1
   basePath: Audio\GeneratedSoundBanks
   language: English(US)

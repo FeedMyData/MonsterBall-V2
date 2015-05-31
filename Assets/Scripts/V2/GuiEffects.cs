@@ -27,20 +27,20 @@ public class GuiEffects : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        if (Input.GetKeyDown(KeyCode.W))
-        {
+        //if (Input.GetKeyDown(KeyCode.W))
+        //{
 
             //StartCoroutine(FlashWhenHit());
-            flashGoal("TeamRed");
+            //flashGoal("TeamRed");
 
-        }
-        if (Input.GetKeyDown(KeyCode.X))
-        {
+        //}
+        //if (Input.GetKeyDown(KeyCode.X))
+        //{
 
             //StartCoroutine(FlashWhenHit());
-            flashGoal("TeamBlue");
+        //    flashGoal("TeamBlue");
 
-        }
+        //}
 
         if (isFlashing)
         {

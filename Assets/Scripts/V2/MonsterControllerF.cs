@@ -8,12 +8,16 @@ public class MonsterControllerF : MonoBehaviour {
     private Rigidbody body;
 
     [Header("Move")]
-    public float movingMaxBall = 3.0f;
+    //public float movingMaxBall = 3.0f;
+    public float speedBall = 12f;
+    public float speedRotationBall = 10f;
     public float speedMonster = 12.0f;
-    private bool restMoving = false;
+    //private bool restMoving = false;
+    public float angleChangeDirection = 45f;
     public float speedMaxToChooseDirection = 5.0f;
     public float speedDivisionFactor = 8.0f;
     public float spaceBetweenBallPlayer = 2.0f;
+    public float fovBall = 110f;
     
     [Header("Magnet")]
     public float areaMagnet = 1.0f;
@@ -27,13 +31,17 @@ public class MonsterControllerF : MonoBehaviour {
     public int wrathDribblingValue = 1;
     public float wrathDribblingEachTime = 1.0f;
     public float summon = 0.3f;
-    public float revocation = 20.0f;
+    public float durationFirstPart = 15.0f;
+    public float durationSecondPart = 5.0f;
     private int wrath = 0;
     private bool monsterForm = false;
+    private bool monsterModeCharge = false;
     public float monsterScale = 3.0f;
     public float monsterMass = 20.0f;
     [Range(0.0f,1.0f)]
     public float safeTransform = 0.7f;
+    private bool transforming = false;
+    private float timeTransforming;
 
     [Header("Respawn")]
     public float durationInvul = 2.0f;
@@ -58,11 +66,16 @@ public class MonsterControllerF : MonoBehaviour {
     public GameObject ballSpotlight;
     public GameObject monsterSpotlight;
 
+    [Header("Ambiant light")]
+    public Light ambiantLight;
+    public float intensityWhenBall = 1.2f;
+    public float intensityWhenMonster = 0.8f;
+
     private bool seeACake = false;
     private Vector3 cakePos;
 
-    [Header("Sound")]
     private SoundManager sound;
+    [Header("Sound")]
     public float distanceSoundChase = 5.0f;
     [Range(0, 100)]
     public float rngSoundChase = 1.0f;
@@ -72,6 +85,10 @@ public class MonsterControllerF : MonoBehaviour {
 
     private PlayerControllerF striker;
     public float durationBeforeLoseStriker = 3.0f;
+
+    private TeleportationF tp;
+
+    private TextCommentaries commentariesScript;
     
 
     //public delegate void OnClickHit();
@@ -81,21 +98,28 @@ public class MonsterControllerF : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 	    body = GetComponent<Rigidbody>();
-
+        tp = GetComponentInChildren<TeleportationF>();
         colliderMagnet = GetComponent<Collider>();
         sound = GetComponent<SoundManager>();
         sound.LoadBank();
+
+        commentariesScript = GameObject.Find("Commentaries").GetComponent<TextCommentaries>();
 
         if (!monsterForm)
         {
             ballSpotlight.SetActive(true);
             monsterSpotlight.SetActive(false);
+            ambiantLight.intensity = intensityWhenBall;
         }
         else
         {
             ballSpotlight.SetActive(false);
             monsterSpotlight.SetActive(true);
+            ambiantLight.intensity = intensityWhenMonster;
         }
+
+
+       // tp.SetTeleportation(true);
 	}
 	
 	// Update is called once per frame
@@ -113,8 +137,8 @@ public class MonsterControllerF : MonoBehaviour {
                 }
                 else
                 {
-                    if (!restMoving && GetActualSpeed() < speedMaxToChooseDirection && isGround())
-                        MoveBall();
+                    
+                    MoveBall();
 
                     if (touchable)
                     {
@@ -157,7 +181,6 @@ public class MonsterControllerF : MonoBehaviour {
 
         if (!monsterForm && wrath >= wrathMax && GameControllerF.InCircle(this.gameObject)<safeTransform)
         {
-            monsterForm = true;
             StartCoroutine(NotHappy());
         }
 	}
@@ -166,15 +189,63 @@ public class MonsterControllerF : MonoBehaviour {
     {
         //choisis aléatoirement un vector et s'y déplace avec une impulsion. Plus il va loin plus il attends pour choisir une nouvelle position
 
-        Vector3 positionReach = UnityEngine.Random.insideUnitSphere * movingMaxBall;
+        /*Vector3 positionReach = UnityEngine.Random.insideUnitSphere * movingMaxBall;
         positionReach.y = Mathf.Abs(positionReach.y) * 3;
 
         
         body.AddForce(positionReach,ForceMode.Impulse);
 
 
-        StartCoroutine(RestMoveBall(Vector3.SqrMagnitude(positionReach)/speedDivisionFactor));
+        StartCoroutine(RestMoveBall(Vector3.SqrMagnitude(positionReach)/speedDivisionFactor));*/
 
+        
+
+        
+
+        if (transforming)
+        {
+            float delayTransforming = Mathf.Abs(((timeTransforming - Time.time) / (summon / 2)) - 1);
+            body.velocity = Vector3.Lerp(body.velocity,Vector3.zero,delayTransforming);
+            body.angularVelocity = Vector3.Lerp(body.angularVelocity, Vector3.zero, delayTransforming);
+
+        }
+        else
+        {
+            if (GetActualSpeed() < speedMaxToChooseDirection && isGround())
+            {
+                body.velocity = Vector3.zero;
+                transform.eulerAngles = new Vector3(0, transform.eulerAngles.y, 0);
+
+                transform.position += transform.forward * Time.deltaTime * speedBall;
+
+
+                if (GameControllerF.InCircle(gameObject) > 0.80f)
+                {
+
+                    float newDirection = transform.eulerAngles.y;// +180;//(+-angle)
+                    if(UnityEngine.Random.value<0.5f){
+                        newDirection -= UnityEngine.Random.Range(30,45+angleChangeDirection);
+                    }
+                    else{
+                        newDirection += UnityEngine.Random.Range(30,45+angleChangeDirection);
+
+                    }
+
+                    transform.eulerAngles = new Vector3(0,newDirection,0);
+                }
+                else
+                {
+                    //regarde s'il y a un joueur devant lui et se décale pour l'éviter
+                    try
+                    {
+                       // GameControllerF.FieldOfView(gameObject,20,90)[0];
+                    }
+                    catch(Exception e){ }
+                    
+                    //GameControllerF.
+                }
+            }
+        }
     }
 
     public IEnumerator WrathWhileDribbling()
@@ -187,12 +258,12 @@ public class MonsterControllerF : MonoBehaviour {
         
     }
 
-    IEnumerator RestMoveBall(float duration)
+    /*IEnumerator RestMoveBall(float duration)
     {
         restMoving = true;
         yield return new WaitForSeconds(duration);
         restMoving = false;
-    }
+    }*/
 
     bool isGround()
     {
@@ -219,6 +290,10 @@ public class MonsterControllerF : MonoBehaviour {
         else if(seeACake)
         {
             DirectionMonster = cakePos;
+        }
+        else if (monsterModeCharge)
+        {
+
         }
         else
         {
@@ -250,9 +325,6 @@ public class MonsterControllerF : MonoBehaviour {
             catch (NullReferenceException e) { /*Si pas de plus proche on fait rien, dans le pire des cas à dure 3 secondes*/ }
         }
 
-        
-
-        Debug.DrawLine(transform.position, DirectionMonster);
 
         //transform.Translate(transform.forward*Time.deltaTime/*speedMonster*/); //Marche pas
         if (!eatPlayer)
@@ -292,25 +364,53 @@ public class MonsterControllerF : MonoBehaviour {
 
     IEnumerator NotHappy()
     {
-        ballSpotlight.SetActive(false);
-        monsterSpotlight.SetActive(true);
 
+        // feedbacks pré-transformation
+        Camera.main.GetComponent<CameraShake>().shake(2.0f, 0.15f, 0.01f);
+        commentariesScript.WriteCommentary("both", "monsterP");
+
+        transforming = true;
+        timeTransforming = Time.time + (summon / 2);
         //taille + magnet + variable
         wrath = 0;
         if (magnet != null)
             callDisableMagnet();
 
-        sound.PlayEvent("Tranfo_BalleMonstre",gameObject);
+        GameObject smokeFury = Instantiate(Resources.Load("Fumee", typeof(GameObject)),transform.position,Quaternion.identity) as GameObject;
+        GameObject transfoFury = Instantiate(Resources.Load("Transformation_particules", typeof(GameObject)), transform.position, Quaternion.identity) as GameObject;
+
+        sound.PlayEvent("Tranfo_BalleMonstre", gameObject);
         sound.PlayEvent("Music_Monstre", gameObject);
         striker = null;
 
         yield return new WaitForSeconds(summon);
+
+        //feedbacks post-transformation
+        Camera.main.GetComponent<CameraShake>().shake(0.8f, 3.0f, 1.5f);
+
+        transforming = false;
+
+        ballSpotlight.SetActive(false);
+        monsterSpotlight.SetActive(true);
+        ambiantLight.intensity = intensityWhenMonster;
+
+        monsterForm = true;
+
         skinBall.SetActive(false);
         skinMonster.SetActive(true);
         transform.localScale *= monsterScale;
 
-        yield return new WaitForSeconds(revocation);
+        Destroy(smokeFury);
+        Destroy(transfoFury);
 
+        yield return new WaitForSeconds(durationFirstPart);
+
+        monsterModeCharge = true;
+        //Passer en mode charge
+
+        yield return new WaitForSeconds(durationSecondPart);
+
+        monsterModeCharge = false;
         sound.PlayEvent("Tranfo_MonstreBalle", gameObject);
         sound.StopEvent("Music_Monstre", gameObject,1000);
         skinBall.SetActive(true);
@@ -329,8 +429,11 @@ public class MonsterControllerF : MonoBehaviour {
 
         monsterForm = false;
 
+        //feedbacks fin monstre
         ballSpotlight.SetActive(true);
         monsterSpotlight.SetActive(false);
+        ambiantLight.intensity = intensityWhenBall;
+        commentariesScript.WriteCommentary("both", "ballP");
 
     }
 
@@ -349,7 +452,7 @@ public class MonsterControllerF : MonoBehaviour {
     void SetMagnet()
     {
         GameObject potentialMagnet = GameControllerF.NearestTo(this.gameObject, areaMagnet);
-        if (GetActualSpeed() <= speedMagnet && potentialMagnet!=null)
+        if (GetActualSpeed() <= speedMagnet && potentialMagnet!=null && !transforming)
         {
             //Debug.Log(potentialMagnet);
             if (potentialMagnet != previousMagnet && potentialMagnet.GetComponent<PlayerControllerF>().getBonus() == null)
