@@ -5,7 +5,7 @@ AnimationClip:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: commentaryPlayerIn
+  m_Name: scoreInOut2
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -18,19 +18,19 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: {x: 0, y: 0, z: 1}
-        inSlope: {x: 1.12, y: 1.12, z: 0}
-        outSlope: {x: 1.12, y: 1.12, z: 0}
+        value: {x: .374772489, y: .50000006, z: 1}
+        inSlope: {x: -1.40539682, y: 0, z: 0}
+        outSlope: {x: -1.40539682, y: 0, z: 0}
         tangentMode: 0
-      - time: .25
-        value: {x: .280000001, y: .280000001, z: 1}
-        inSlope: {x: .5, y: .5, z: 0}
-        outSlope: {x: .5, y: .5, z: 0}
+      - time: .266666681
+        value: {x: 0, y: .50000006, z: 1}
+        inSlope: {x: .546543419, y: 0, z: 0}
+        outSlope: {x: .546543419, y: 0, z: 0}
         tangentMode: 0
-      - time: .5
-        value: {x: .25, y: .25, z: 1}
-        inSlope: {x: -.120000005, y: -.120000005, z: 0}
-        outSlope: {x: -.120000005, y: -.120000005, z: 0}
+      - time: .416666657
+        value: {x: .374772489, y: .50000006, z: 1}
+        inSlope: {x: 2.49848366, y: 0, z: 0}
+        outSlope: {x: 2.49848366, y: 0, z: 0}
         tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
@@ -54,7 +54,7 @@ AnimationClip:
   m_AnimationClipSettings:
     serializedVersion: 2
     m_StartTime: 0
-    m_StopTime: .5
+    m_StopTime: .416666657
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -73,19 +73,19 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
+        value: .374772489
+        inSlope: -1.40539682
+        outSlope: -1.40539682
+        tangentMode: 10
+      - time: .266666681
         value: 0
-        inSlope: 1.12
-        outSlope: 1.12
+        inSlope: .546543419
+        outSlope: .546543419
         tangentMode: 10
-      - time: .25
-        value: .280000001
-        inSlope: .5
-        outSlope: .5
-        tangentMode: 10
-      - time: .5
-        value: .25
-        inSlope: -.120000005
-        outSlope: -.120000005
+      - time: .416666657
+        value: .374772489
+        inSlope: 2.49848366
+        outSlope: 2.49848366
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
@@ -97,19 +97,19 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: 0
-        inSlope: 1.12
-        outSlope: 1.12
+        value: .50000006
+        inSlope: 0
+        outSlope: 0
         tangentMode: 10
-      - time: .25
-        value: .280000001
-        inSlope: .5
-        outSlope: .5
+      - time: .266666681
+        value: .50000006
+        inSlope: 0
+        outSlope: 0
         tangentMode: 10
-      - time: .5
-        value: .25
-        inSlope: -.120000005
-        outSlope: -.120000005
+      - time: .416666657
+        value: .50000006
+        inSlope: 0
+        outSlope: 0
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
@@ -125,6 +125,16 @@ AnimationClip:
         inSlope: 0
         outSlope: 0
         tangentMode: 10
+      - time: .266666681
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .416666657
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
     attribute: m_LocalScale.z
@@ -135,4 +145,11 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_GenerateMotionCurves: 0
-  m_Events: []
+  m_Events:
+  - time: .266666681
+    functionName: changeScore
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0

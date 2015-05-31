@@ -66,11 +66,16 @@ public class MonsterControllerF : MonoBehaviour {
     public GameObject ballSpotlight;
     public GameObject monsterSpotlight;
 
+    [Header("Ambiant light")]
+    public Light ambiantLight;
+    public float intensityWhenBall = 1.2f;
+    public float intensityWhenMonster = 0.8f;
+
     private bool seeACake = false;
     private Vector3 cakePos;
 
-    [Header("Sound")]
     private SoundManager sound;
+    [Header("Sound")]
     public float distanceSoundChase = 5.0f;
     [Range(0, 100)]
     public float rngSoundChase = 1.0f;
@@ -82,6 +87,8 @@ public class MonsterControllerF : MonoBehaviour {
     public float durationBeforeLoseStriker = 3.0f;
 
     private TeleportationF tp;
+
+    private TextCommentaries commentariesScript;
     
 
     //public delegate void OnClickHit();
@@ -96,15 +103,19 @@ public class MonsterControllerF : MonoBehaviour {
         sound = GetComponent<SoundManager>();
         sound.LoadBank();
 
+        commentariesScript = GameObject.Find("Commentaries").GetComponent<TextCommentaries>();
+
         if (!monsterForm)
         {
             ballSpotlight.SetActive(true);
             monsterSpotlight.SetActive(false);
+            ambiantLight.intensity = intensityWhenBall;
         }
         else
         {
             ballSpotlight.SetActive(false);
             monsterSpotlight.SetActive(true);
+            ambiantLight.intensity = intensityWhenMonster;
         }
 
 
@@ -354,6 +365,10 @@ public class MonsterControllerF : MonoBehaviour {
     IEnumerator NotHappy()
     {
 
+        // feedbacks pré-transformation
+        Camera.main.GetComponent<CameraShake>().shake(2.0f, 0.15f, 0.01f);
+        commentariesScript.WriteCommentary("both", "monsterP");
+
         transforming = true;
         timeTransforming = Time.time + (summon / 2);
         //taille + magnet + variable
@@ -370,10 +385,14 @@ public class MonsterControllerF : MonoBehaviour {
 
         yield return new WaitForSeconds(summon);
 
+        //feedbacks post-transformation
+        Camera.main.GetComponent<CameraShake>().shake(0.8f, 3.0f, 1.5f);
+
         transforming = false;
 
         ballSpotlight.SetActive(false);
         monsterSpotlight.SetActive(true);
+        ambiantLight.intensity = intensityWhenMonster;
 
         monsterForm = true;
 
@@ -410,8 +429,11 @@ public class MonsterControllerF : MonoBehaviour {
 
         monsterForm = false;
 
+        //feedbacks fin monstre
         ballSpotlight.SetActive(true);
         monsterSpotlight.SetActive(false);
+        ambiantLight.intensity = intensityWhenBall;
+        commentariesScript.WriteCommentary("both", "ballP");
 
     }
 

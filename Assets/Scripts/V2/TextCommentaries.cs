@@ -11,9 +11,12 @@ public class TextCommentaries : MonoBehaviour {
     private string blue = "#68C5EE";
     private string red = "#AB0101";
 
-    public string[] commentsForGoalsByPlayers;
     public float timeBeforeOutGoal = 1.5f;
+
+    public string[] commentsForGoalsByPlayers;
     public string[] commentsForGoalsByMonster;
+
+    public float timerBeforeOutInformations = 3.0f;
 
     public string instructionWhenBall = "Kick goals !";
     public string instructionWhenMonster = "RUN !!!";
@@ -74,9 +77,13 @@ public class TextCommentaries : MonoBehaviour {
         }
         else
         {
-            textToWriteOn = redText;
-            timerBlueCom = timeBeforeOutGoal;
-            timerRedCom = timeBeforeOutGoal;
+            textToWriteOn = redText; // just to pass the condition below
+
+            timerBlueCom = timerBeforeOutInformations;
+            timerRedCom = timerBeforeOutInformations;
+
+            blueText.GetComponent<Animator>().SetBool("doOUT", false);
+            redText.GetComponent<Animator>().SetBool("doOUT", false);
         }
 
         if (textToWriteOn != null)
@@ -150,9 +157,45 @@ public class TextCommentaries : MonoBehaviour {
     void MatchEnds()
     {
         blueText.text = endingMessage;
-        blueText.GetComponent<Animator>().SetTrigger("playerIN");
+        //blueText.GetComponent<Animator>().SetTrigger("playerIN");
         redText.text = endingMessage;
-        redText.GetComponent<Animator>().SetTrigger("playerIN");
+        //redText.GetComponent<Animator>().SetTrigger("playerIN");
+    }
+
+    public void WriteCustom(string side, string text, float duration, string easeIN)
+    {
+
+        if (side == "TeamBlu")
+        {
+            timerBlueCom = duration;
+            blueText.GetComponent<Animator>().SetBool("doOUT", false);
+
+            blueText.text = text;
+            blueText.GetComponent<Animator>().SetTrigger(easeIN);
+        }
+        else if (side == "TeamRed")
+        {
+            timerRedCom = duration;
+            redText.GetComponent<Animator>().SetBool("doOUT", false);
+
+            redText.text = text;
+            redText.GetComponent<Animator>().SetTrigger(easeIN);
+        }
+        else
+        {
+            timerBlueCom = duration;
+            timerRedCom = duration;
+
+            blueText.GetComponent<Animator>().SetBool("doOUT", false);
+            redText.GetComponent<Animator>().SetBool("doOUT", false);
+
+            blueText.text = text;
+            blueText.GetComponent<Animator>().SetTrigger(easeIN);
+
+            redText.text = text;
+            redText.GetComponent<Animator>().SetTrigger(easeIN);
+        }
+
     }
 
 }
