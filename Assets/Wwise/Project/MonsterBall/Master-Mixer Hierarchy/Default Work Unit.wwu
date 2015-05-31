@@ -4,13 +4,30 @@
 		<WorkUnit Name="Default Work Unit" ID="{F2826676-125A-488D-B5BC-8666D671270D}" PersistMode="Standalone">
 			<ChildrenList>
 				<Bus Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}">
+					<PropertyList>
+						<Property Name="BypassEffect1" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Effect0" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+							<ObjectRef Name="Hall_Small" ID="{D65B5F04-B83B-412C-9434-34A13A477E24}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+						</Reference>
+						<Reference Name="Effect1" CompanyID="4095" PluginID="65535" PluginType="15">
+							<ObjectRef Name="Buss_Dynamic" ID="{0094617E-BE05-48D2-931A-EDD3DEC652FF}" WorkUnitID="{C495E5B0-5DF1-4961-BC6A-4C9887E70704}"/>
+						</Reference>
+					</ReferenceList>
 					<ChildrenList>
 						<Bus Name="Voix" ID="{6F7CCEB0-4338-419F-A5F7-1BADCFA7CC6B}">
-							<ReferenceList>
-								<Reference Name="Effect0" PluginName="iZotope Hybrid Reverb" CompanyID="259" PluginID="2" PluginType="3">
-									<ObjectRef Name="City_Center" ID="{C0BCFD9D-288E-4551-A9AA-651BD535AFE7}" WorkUnitID="{33EB1407-1601-4B0D-A620-9099C0353115}"/>
-								</Reference>
-							</ReferenceList>
+							<PropertyList>
+								<Property Name="BusVolume" Type="Real64">
+									<ValueList>
+										<Value>8</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ChildrenList>
 								<Bus Name="Niveks" ID="{61A147E8-AD36-479A-8A9B-0755B4FE6CC9}"/>
 								<Bus Name="Monstre" ID="{C8D2864F-52D6-4B60-8000-ED8571B1E251}"/>
@@ -18,15 +35,30 @@
 							</ChildrenList>
 						</Bus>
 						<Bus Name="Ambiances" ID="{B9DD8753-6E85-4214-991C-F19471FEBA39}"/>
-						<Bus Name="SFX" ID="{98BA6610-4B70-4EFF-A353-4A61C6BE1A24}"/>
-						<Bus Name="Musiques" ID="{51DA5A6D-5764-451B-9A18-180342A5B0FE}"/>
-						<AuxBus Name="ReverbStade" ID="{D9AE1235-84F4-48BC-9E4F-FF2EDAFDD297}">
+						<Bus Name="SFX" ID="{98BA6610-4B70-4EFF-A353-4A61C6BE1A24}">
+							<PropertyList>
+								<Property Name="BusVolume" Type="Real64">
+									<ValueList>
+										<Value>-2</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
-								<Reference Name="Effect0" CompanyID="4095" PluginID="65535" PluginType="15">
-									<ObjectRef Name="Auditorium" ID="{FD6C692A-56DE-4AB5-BD21-11FF4CB13068}" WorkUnitID="{33EB1407-1601-4B0D-A620-9099C0353115}"/>
+								<Reference Name="Effect0">
+									<Custom CreatedFrom="{1F96B68C-A26B-48BE-83C8-CDB05F7A81EF}">
+										<Effect Name="Master_Dynamic (Custom)" ID="{01E31CCA-153B-4226-9C29-44D72F6E898C}" ShortID="45998541" PluginName="McDSP ML1" CompanyID="256" PluginID="103" PluginType="3">
+											<PropertyList>
+												<Property Name="Ceiling" Type="Real32" Value="-0.1"/>
+												<Property Name="Knee" Type="Real32" Value="30"/>
+												<Property Name="Mode" Type="int32" Value="3"/>
+												<Property Name="Threshold" Type="Real32" Value="-6"/>
+											</PropertyList>
+										</Effect>
+									</Custom>
 								</Reference>
 							</ReferenceList>
-						</AuxBus>
+						</Bus>
+						<Bus Name="Musiques" ID="{51DA5A6D-5764-451B-9A18-180342A5B0FE}"/>
 						<AuxBus Name="FX" ID="{AE17BDD2-F728-4C96-A483-B4560EE81FA8}">
 							<ReferenceList>
 								<Reference Name="Effect0" PluginName="Wwise Flanger" CompanyID="0" PluginID="125" PluginType="3">

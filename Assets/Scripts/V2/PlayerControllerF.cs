@@ -288,7 +288,7 @@ public class PlayerControllerF : MonoBehaviour
 
             if (power >= powerMax)
             {
-                //sound.PlayEvent("SFX_Niveks_ChargeAttente",gameObject);
+                sound.PlayEvent("SFX_Niveks_ChargeAttente",gameObject);
                 sound.StopEvent("SFX_Niveks_ChargeCoup", gameObject,0);
             }
         }
@@ -299,7 +299,8 @@ public class PlayerControllerF : MonoBehaviour
 
                 GetComponentInChildren<Animator>().SetBool("isCharging", false);
 
-                //sound.StopEvent("SFX_Niveks_ChargeAttente", gameObject,50);
+                sound.StopEvent("SFX_Niveks_ChargeAttente", gameObject,50);
+                sound.StopEvent("SFX_Niveks_ChargeCoup", gameObject, 50);
 			}
             loading = false;
             if (bonus != null)

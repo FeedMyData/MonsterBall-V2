@@ -1830,6 +1830,7 @@
 										<Property Name="Ceiling" Type="Real32" Value="-3"/>
 										<Property Name="Knee" Type="Real32" Value="50"/>
 										<Property Name="Mode" Type="int32" Value="3"/>
+										<Property Name="Release" Type="Real32" Value="711"/>
 										<Property Name="Threshold" Type="Real32" Value="-15"/>
 									</PropertyList>
 								</Effect>

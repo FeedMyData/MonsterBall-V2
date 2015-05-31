@@ -9,7 +9,7 @@
 						<ObjectRef Name="Vx_Niveks_Wilhem" ID="{FB8CEF1D-BE4F-4C0E-996D-9934CD9D5B5D}" WorkUnitID="{D899008C-EE7F-4475-814E-BB3DC86CD141}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="VX_Comment_MONSTERBALL" ID="{97863B2C-F0AB-42D0-9BC6-F99F690A5D38}" WorkUnitID="{D899008C-EE7F-4475-814E-BB3DC86CD141}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="VX_Balle_RemiseEnJeu" ID="{FC17222F-10CE-4A9B-97D1-C88AFF8EAAF1}" WorkUnitID="{D899008C-EE7F-4475-814E-BB3DC86CD141}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="SFX_Niveks_Woosh" ID="{A5008130-05F4-4EBA-91C3-23E1B9DF9272}" WorkUnitID="{D899008C-EE7F-4475-814E-BB3DC86CD141}" Filter="5" Origin="Manual"/>
+						<ObjectRef Name="SFX_Niveks_Woosh" ID="{A5008130-05F4-4EBA-91C3-23E1B9DF9272}" WorkUnitID="{D899008C-EE7F-4475-814E-BB3DC86CD141}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Menu_Move" ID="{F2C2B933-E2B4-4F3A-B224-8DA6F4FD218B}" WorkUnitID="{D899008C-EE7F-4475-814E-BB3DC86CD141}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="SFX_Niveks_ChargeCoup" ID="{275CD938-1527-497E-AD43-890CDFAC8929}" WorkUnitID="{D899008C-EE7F-4475-814E-BB3DC86CD141}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Public_Fin" ID="{B85AA440-5AE6-47AA-A4C4-D64C351A1CDE}" WorkUnitID="{D899008C-EE7F-4475-814E-BB3DC86CD141}" Filter="7" Origin="Manual"/>

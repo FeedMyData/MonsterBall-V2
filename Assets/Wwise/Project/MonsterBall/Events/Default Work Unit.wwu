@@ -125,13 +125,13 @@
 										<Action Name="Play" ID="{20CCCFA1-DBD3-4DA8-80D7-FF56E6F5E0BC}" ShortID="49173274" Type="Play" Scope="One" Global="false">
 											<ElementList>
 												<Element ID="{CCC9DDAE-F501-4BEB-B06E-FF218E5912C2}" Global="false">
-													<ObjectRef Name="Electric_Spark_Wall" ID="{A8B4F66E-1865-4F67-8DD6-FCD468CD1F31}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+													<ObjectRef Name="Electric_Spark_Light" ID="{A8B4F66E-1865-4F67-8DD6-FCD468CD1F31}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
 												</Element>
 											</ElementList>
 										</Action>
 										<Action Name="Play" ID="{6B536866-5F5F-47AA-B546-842FDC286D80}" ShortID="439899310" Type="Play" Scope="One" Global="false">
 											<PropertyList>
-												<Property Name="Delay" Type="Real64" Value="0.1"/>
+												<Property Name="Delay" Type="Real64" Value="0.2"/>
 											</PropertyList>
 											<ElementList>
 												<Element ID="{FCFADFFC-76C7-4D0F-9BAF-4C9A8CD82095}" Global="false">
@@ -215,7 +215,7 @@
 										<Action Name="Play" ID="{7C3F32EB-ACCC-40CE-AC28-CC6B00AC6DB8}" ShortID="324782721" Type="Play" Scope="One" Global="false">
 											<ElementList>
 												<Element ID="{3F6D6520-05BE-4C96-9CEE-6767EA0F9C3D}" Global="false">
-													<ObjectRef Name="Electric_Spark_Wall" ID="{A8B4F66E-1865-4F67-8DD6-FCD468CD1F31}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+													<ObjectRef Name="Electric_Spark_Light" ID="{A8B4F66E-1865-4F67-8DD6-FCD468CD1F31}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
 												</Element>
 											</ElementList>
 										</Action>
@@ -300,6 +300,9 @@
 						<Event Name="SFX_Niveks_CoupFaible" ID="{A2BB9F56-E31C-4C23-9C9A-5C9364E13726}">
 							<ChildrenList>
 								<Action Name="Play" ID="{8BA49754-F518-4929-AC33-040C5D3AD55E}" ShortID="655045163" Type="Play" Scope="One" Global="false">
+									<ExcludedPlatformList>
+										<Platform>Windows</Platform>
+									</ExcludedPlatformList>
 									<ElementList>
 										<Element ID="{6B5F378B-0AF2-4CE4-9ED8-31D422AAF0B5}" Global="false">
 											<ObjectRef Name="SFX_Niveks_CoupBatte_Faible" ID="{664E4325-E631-462C-A57E-5BF1654FA4B4}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
@@ -309,7 +312,14 @@
 								<Action Name="Play" ID="{45B715D9-4D0C-48C6-9241-CD2CD09BC20C}" ShortID="747857147" Type="Play" Scope="One" Global="false">
 									<ElementList>
 										<Element ID="{73CB8942-5899-46B2-A172-77D52F603D40}" Global="false">
-											<ObjectRef Name="Electric_Spark_Wall" ID="{A8B4F66E-1865-4F67-8DD6-FCD468CD1F31}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+											<ObjectRef Name="Electric_Spark_Light" ID="{A8B4F66E-1865-4F67-8DD6-FCD468CD1F31}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+										</Element>
+									</ElementList>
+								</Action>
+								<Action Name="Play" ID="{AD3B9EB7-CD46-4AB3-ABC9-178C4F184DB6}" ShortID="950555180" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{7542782F-AAB8-46AB-B1AC-F9B84C39E355}" Global="false">
+											<ObjectRef Name="SFX_Impact_Light" ID="{DB4A960C-B9F5-4BC5-B634-0626581B6FD4}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
 										</Element>
 									</ElementList>
 								</Action>
@@ -337,6 +347,9 @@
 						<Event Name="SFX_Niveks_ChargeCoup" ID="{275CD938-1527-497E-AD43-890CDFAC8929}">
 							<ChildrenList>
 								<Action Name="Play" ID="{FBAAA748-DC98-4A4B-9F2A-D726504E2210}" ShortID="254948468" Type="Play" Scope="One" Global="false">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="0.15"/>
+									</PropertyList>
 									<ElementList>
 										<Element ID="{E408137E-F2B0-4624-9930-EFE9909CF644}" Global="false">
 											<ObjectRef Name="SFX_Batte_Charge" ID="{1E8F8982-6462-44AD-B7CB-82CF61843427}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
@@ -355,10 +368,17 @@
 										</Element>
 									</ElementList>
 								</Action>
-								<Action Name="Play" ID="{66A94AAA-D101-4EC7-8742-F0D4116CACDB}" ShortID="183270439" Type="Play" Scope="One" Global="false">
+								<Action Name="Play" ID="{80793B21-6436-4A2F-B08D-0F93A6B48696}" ShortID="434548947" Type="Play" Scope="One" Global="false">
 									<ElementList>
-										<Element ID="{FE1CC298-3DAC-4B91-97C7-91B94BD84F57}" Global="false">
-											<ObjectRef Name="Electric_Spark_Wall" ID="{A8B4F66E-1865-4F67-8DD6-FCD468CD1F31}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+										<Element ID="{F61402DB-909D-4AB3-A2B9-BEDE0830F571}" Global="false">
+											<ObjectRef Name="Electric_Spark_Heavy" ID="{9194631B-E5CC-4F3F-B201-D1F2F5503C60}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+										</Element>
+									</ElementList>
+								</Action>
+								<Action Name="Play" ID="{013A8811-2788-4EF4-942C-840F4BAD7459}" ShortID="87175311" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{8FB8F993-BDB6-4836-96B6-40F0F4C25C55}" Global="false">
+											<ObjectRef Name="Body_Impact_Heavy" ID="{A96871D2-BCEB-41EB-B760-85D298339C68}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
 										</Element>
 									</ElementList>
 								</Action>
@@ -385,7 +405,17 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="Music_Monstre" ID="{F88A1249-59AA-4491-95A9-9E5EA2010529}"/>
+						<Event Name="Music_Monstre" ID="{F88A1249-59AA-4491-95A9-9E5EA2010529}">
+							<ChildrenList>
+								<Action Name="Play" ID="{9ADAFBF2-FA80-474D-BAC8-EA137883DC4E}" ShortID="349733924" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{F9A2E43C-4745-4690-9C2A-5CA66C5D12E0}" Global="false">
+											<ObjectRef Name="Music_Monstre" ID="{60DE5FB5-A558-4190-B053-D6D64FCA048E}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+										</Element>
+									</ElementList>
+								</Action>
+							</ChildrenList>
+						</Event>
 						<Event Name="Music_Tableau" ID="{0F470E75-820C-470C-B9CD-28EA691D3C08}"/>
 					</ChildrenList>
 				</Folder>

@@ -5,13 +5,14 @@
 			<ChildrenList>
 				<Effect Name="Auditorium" ID="{FD6C692A-56DE-4AB5-BD21-11FF4CB13068}" PluginName="iZotope Hybrid Reverb" CompanyID="259" PluginID="2" PluginType="3">
 					<PropertyList>
-						<Property Name="DecayHighFrequency" Type="Real32" Value="8000"/>
+						<Property Name="DecayHighFrequency" Type="Real32" Value="4800"/>
 						<Property Name="DecayHighRatio" Type="Real32" Value="0.9352735"/>
 						<Property Name="DecayLowFrequency" Type="Real32" Value="800"/>
 						<Property Name="DecayLowRatio" Type="Real32" Value="1.153108"/>
 						<Property Name="DecayMidRatio" Type="Real32" Value="0.9116192"/>
 						<Property Name="DecayTime" Type="Real32" Value="0.425"/>
-						<Property Name="FrontDry" Type="Real32" Value="-96"/>
+						<Property Name="FrontDry" Type="Real32" Value="-2.6"/>
+						<Property Name="FrontWet" Type="Real32" Value="-13.8"/>
 						<Property Name="RearDry" Type="Real32" Value="-19.2"/>
 					</PropertyList>
 					<ChildrenList>
@@ -84,9 +85,9 @@
 						<Property Name="DecayLowFrequency" Type="Real32" Value="800"/>
 						<Property Name="DecayLowRatio" Type="Real32" Value="0.487843"/>
 						<Property Name="DecayMidRatio" Type="Real32" Value="1.633194"/>
-						<Property Name="DecayTime" Type="Real32" Value="0.325"/>
-						<Property Name="FrontDry" Type="Real32" Value="2.2"/>
-						<Property Name="FrontWet" Type="Real32" Value="-11.8"/>
+						<Property Name="DecayTime" Type="Real32" Value="1.025"/>
+						<Property Name="FrontDry" Type="Real32" Value="4.4"/>
+						<Property Name="FrontWet" Type="Real32" Value="-7.4"/>
 						<Property Name="RearWet" Type="Real32" Value="-96"/>
 					</PropertyList>
 					<ChildrenList>

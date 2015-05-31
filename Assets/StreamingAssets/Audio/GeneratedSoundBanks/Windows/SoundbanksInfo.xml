@@ -64,7 +64,7 @@
 				</File>
 				<File Id="11049249" Language="SFX">
 					<ShortName>Impact\VOIX_Balle_Impact_08.wav</ShortName>
-					<Path>SFX\Impact\VOIX_Balle_Impact_08_DDC98EF4.wem</Path>
+					<Path>SFX\Impact\VOIX_Balle_Impact_08_F71B67B5.wem</Path>
 				</File>
 				<File Id="14358238" Language="SFX">
 					<ShortName>CoupBalle\VOIX_Niveks_CoupBalle_13.wav</ShortName>
@@ -76,7 +76,7 @@
 				</File>
 				<File Id="67887004" Language="SFX">
 					<ShortName>Impact\VOIX_Balle_Impact_05.wav</ShortName>
-					<Path>SFX\Impact\VOIX_Balle_Impact_05_DDC98EF4.wem</Path>
+					<Path>SFX\Impact\VOIX_Balle_Impact_05_A3369CC9.wem</Path>
 				</File>
 				<File Id="71544008" Language="SFX">
 					<ShortName>CoupRecu\VOIX_Niveks_CoupRecu_03.wav</ShortName>
@@ -94,10 +94,6 @@
 					<ShortName>Grognements\VOIX_Monstre_Grogne_09.wav</ShortName>
 					<Path>SFX\Grognements\VOIX_Monstre_Grogne_09_DDC98EF4.wem</Path>
 				</File>
-				<File Id="87283720" Language="SFX">
-					<ShortName>But\VOIX_Balle_But_03.wav</ShortName>
-					<Path>SFX\But\VOIX_Balle_But_03_DDC98EF4.wem</Path>
-				</File>
 				<File Id="90760917" Language="SFX">
 					<ShortName>Yeah\VOIX_Niveks_Yeah_05.wav</ShortName>
 					<Path>SFX\Yeah\VOIX_Niveks_Yeah_05_DDC98EF4.wem</Path>
@@ -108,7 +104,7 @@
 				</File>
 				<File Id="117717347" Language="SFX">
 					<ShortName>Impact\VOIX_Balle_Impact_03.wav</ShortName>
-					<Path>SFX\Impact\VOIX_Balle_Impact_03_DDC98EF4.wem</Path>
+					<Path>SFX\Impact\VOIX_Balle_Impact_03_68EF7051.wem</Path>
 				</File>
 				<File Id="131947360" Language="SFX">
 					<ShortName>FX_Public_But_03.wav</ShortName>
@@ -136,7 +132,7 @@
 				</File>
 				<File Id="173624706" Language="SFX">
 					<ShortName>Impact\VOIX_Balle_Impact_01.wav</ShortName>
-					<Path>SFX\Impact\VOIX_Balle_Impact_01_DDC98EF4.wem</Path>
+					<Path>SFX\Impact\VOIX_Balle_Impact_01_BA55EE95.wem</Path>
 				</File>
 				<File Id="182481853" Language="SFX">
 					<ShortName>Grognements\VOIX_Monstre_Grogne_07.wav</ShortName>
@@ -148,11 +144,7 @@
 				</File>
 				<File Id="190620213" Language="SFX">
 					<ShortName>Impact\VOIX_Balle_Impact_07.wav</ShortName>
-					<Path>SFX\Impact\VOIX_Balle_Impact_07_DDC98EF4.wem</Path>
-				</File>
-				<File Id="192988937" Language="SFX">
-					<ShortName>But\VOIX_Balle_But_01.wav</ShortName>
-					<Path>SFX\But\VOIX_Balle_But_01_DDC98EF4.wem</Path>
+					<Path>SFX\Impact\VOIX_Balle_Impact_07_3EC325CF.wem</Path>
 				</File>
 				<File Id="204840794" Language="SFX">
 					<ShortName>Grognements\VOIX_Monstre_Grogne_10.wav</ShortName>
@@ -166,9 +158,17 @@
 					<ShortName>Remise en jeu\VOIX_Balle_RemiseEnJeu_05.wav</ShortName>
 					<Path>SFX\Remise en jeu\VOIX_Balle_RemiseEnJeu_05_DDC98EF4.wem</Path>
 				</File>
+				<File Id="232677423" Language="SFX">
+					<ShortName>4-66 Light body impact (3).wav</ShortName>
+					<Path>SFX\4-66 Light body impact (3)_5BBA9129.wem</Path>
+				</File>
 				<File Id="236322355" Language="SFX">
 					<ShortName>FX_Public_Fin_01.wav</ShortName>
 					<Path>SFX\FX_Public_Fin_01_DDC98EF4.wem</Path>
+				</File>
+				<File Id="245629822" Language="SFX">
+					<ShortName>4-66 Light body impact (3).wav</ShortName>
+					<Path>SFX\4-66 Light body impact (3)_0C3B92F3.wem</Path>
 				</File>
 				<File Id="246759114" Language="SFX">
 					<ShortName>Remise en jeu\VOIX_Balle_RemiseEnJeu_04.wav</ShortName>
@@ -181,10 +181,6 @@
 				<File Id="263672041" Language="SFX">
 					<ShortName>Course\VOIX_Balle_Court_02.wav</ShortName>
 					<Path>SFX\Course\VOIX_Balle_Court_02_DDC98EF4.wem</Path>
-				</File>
-				<File Id="291728502" Language="SFX">
-					<ShortName>But\VOIX_Balle_But_11.wav</ShortName>
-					<Path>SFX\But\VOIX_Balle_But_11_DDC98EF4.wem</Path>
 				</File>
 				<File Id="293180452" Language="SFX">
 					<ShortName>CoupRecu\VOIX_Niveks_CoupRecu_04.wav</ShortName>
@@ -218,13 +214,9 @@
 					<ShortName>EjectBut\VOIX_Niveks_EjectBut_04.wav</ShortName>
 					<Path>SFX\EjectBut\VOIX_Niveks_EjectBut_04_DDC98EF4.wem</Path>
 				</File>
-				<File Id="335949869" Language="SFX">
-					<ShortName>But\VOIX_Balle_But_13.wav</ShortName>
-					<Path>SFX\But\VOIX_Balle_But_13_DDC98EF4.wem</Path>
-				</File>
 				<File Id="348060390" Language="SFX">
 					<ShortName>Impact\VOIX_Balle_Impact_04.wav</ShortName>
-					<Path>SFX\Impact\VOIX_Balle_Impact_04_DDC98EF4.wem</Path>
+					<Path>SFX\Impact\VOIX_Balle_Impact_04_1FAB01A7.wem</Path>
 				</File>
 				<File Id="357905263" Language="SFX">
 					<ShortName>SFX_Niveks_ImpactsBut.wav</ShortName>
@@ -234,9 +226,9 @@
 					<ShortName>RecracheJoueur\VOIX_Monstre_CracheJoueur_01.wav</ShortName>
 					<Path>SFX\RecracheJoueur\VOIX_Monstre_CracheJoueur_01_DDC98EF4.wem</Path>
 				</File>
-				<File Id="369037192" Language="SFX">
-					<ShortName>4-61 Large explosion, burn _ ...debris _ heavy explosive impact forming crater (3).wav</ShortName>
-					<Path>SFX\4-61 Large explosion, burn _ ...debris _ heavy explosive impact forming crater (3)_DDC98EF4.wem</Path>
+				<File Id="366020153" Language="SFX">
+					<ShortName>3-08 Hit, Body Body Punch Impact, Human.wav</ShortName>
+					<Path>SFX\3-08 Hit, Body Body Punch Impact, Human_6129B062.wem</Path>
 				</File>
 				<File Id="370122088" Language="SFX">
 					<ShortName>Grognements\VOIX_Monstre_Grogne_02.wav</ShortName>
@@ -246,17 +238,9 @@
 					<ShortName>CoupBalle\VOIX_Niveks_CoupBalle_04.wav</ShortName>
 					<Path>SFX\CoupBalle\VOIX_Niveks_CoupBalle_04_DDC98EF4.wem</Path>
 				</File>
-				<File Id="409285469" Language="SFX">
-					<ShortName>But\VOIX_Balle_But_02.wav</ShortName>
-					<Path>SFX\But\VOIX_Balle_But_02_DDC98EF4.wem</Path>
-				</File>
 				<File Id="430858391" Language="SFX">
 					<ShortName>Grognements\VOIX_Monstre_Grogne_14.wav</ShortName>
 					<Path>SFX\Grognements\VOIX_Monstre_Grogne_14_DDC98EF4.wem</Path>
-				</File>
-				<File Id="437213809" Language="SFX">
-					<ShortName>But\VOIX_Balle_But_09.wav</ShortName>
-					<Path>SFX\But\VOIX_Balle_But_09_DDC98EF4.wem</Path>
 				</File>
 				<File Id="437707189" Language="SFX">
 					<ShortName>CoupBalle\VOIX_Niveks_CoupBalle_08.wav</ShortName>
@@ -294,13 +278,9 @@
 					<ShortName>RecracheJoueur\VOIX_Monstre_CracheJoueur_05.wav</ShortName>
 					<Path>SFX\RecracheJoueur\VOIX_Monstre_CracheJoueur_05_DDC98EF4.wem</Path>
 				</File>
-				<File Id="479171199" Language="SFX">
-					<ShortName>But\VOIX_Balle_But_04.wav</ShortName>
-					<Path>SFX\But\VOIX_Balle_But_04_DDC98EF4.wem</Path>
-				</File>
 				<File Id="483333117" Language="SFX">
 					<ShortName>Impact\VOIX_Balle_Impact_11.wav</ShortName>
-					<Path>SFX\Impact\VOIX_Balle_Impact_11_DDC98EF4.wem</Path>
+					<Path>SFX\Impact\VOIX_Balle_Impact_11_AA77D5BD.wem</Path>
 				</File>
 				<File Id="490197325" Language="SFX">
 					<ShortName>CoupBalle\VOIX_Niveks_CoupBalle_19.wav</ShortName>
@@ -314,9 +294,13 @@
 					<ShortName>RecracheJoueur\VOIX_Monstre_CracheJoueur_08.wav</ShortName>
 					<Path>SFX\RecracheJoueur\VOIX_Monstre_CracheJoueur_08_DDC98EF4.wem</Path>
 				</File>
+				<File Id="505531461" Language="SFX">
+					<ShortName>4-61 Large explosion, burn _ ...debris _ heavy explosive impact forming crater (3).wav</ShortName>
+					<Path>SFX\4-61 Large explosion, burn _ ...debris _ heavy explosive impact forming crater (3)_F82EE36C.wem</Path>
+				</File>
 				<File Id="506069587" Language="SFX">
 					<ShortName>Impact\VOIX_Balle_Impact_13.wav</ShortName>
-					<Path>SFX\Impact\VOIX_Balle_Impact_13_DDC98EF4.wem</Path>
+					<Path>SFX\Impact\VOIX_Balle_Impact_13_6FDF55B8.wem</Path>
 				</File>
 				<File Id="514639656" Language="SFX">
 					<ShortName>CoupBalle\VOIX_Niveks_CoupBalle_18.wav</ShortName>
@@ -390,10 +374,6 @@
 					<ShortName>SFX_Niveks_Woosh_03.wav</ShortName>
 					<Path>SFX\SFX_Niveks_Woosh_03_DDC98EF4.wem</Path>
 				</File>
-				<File Id="603361104" Language="SFX">
-					<ShortName>But\VOIX_Balle_But_14.wav</ShortName>
-					<Path>SFX\But\VOIX_Balle_But_14_DDC98EF4.wem</Path>
-				</File>
 				<File Id="604113109" Language="SFX">
 					<ShortName>CoupBalle\VOIX_Niveks_CoupBalle_01.wav</ShortName>
 					<Path>SFX\CoupBalle\VOIX_Niveks_CoupBalle_01_DDC98EF4.wem</Path>
@@ -412,15 +392,11 @@
 				</File>
 				<File Id="629518519" Language="SFX">
 					<ShortName>SFX_Coup_Charge_02.wav</ShortName>
-					<Path>SFX\SFX_Coup_Charge_02_DDC98EF4.wem</Path>
+					<Path>SFX\SFX_Coup_Charge_02_E769FBAE.wem</Path>
 				</File>
 				<File Id="632971419" Language="SFX">
 					<ShortName>Impact\VOIX_Balle_Impact_14.wav</ShortName>
-					<Path>SFX\Impact\VOIX_Balle_Impact_14_DDC98EF4.wem</Path>
-				</File>
-				<File Id="633544018" Language="SFX">
-					<ShortName>But\VOIX_Balle_But_12.wav</ShortName>
-					<Path>SFX\But\VOIX_Balle_But_12_DDC98EF4.wem</Path>
+					<Path>SFX\Impact\VOIX_Balle_Impact_14_A5326928.wem</Path>
 				</File>
 				<File Id="637446399" Language="SFX">
 					<ShortName>SFX_Niveks_Woosh_04.wav</ShortName>
@@ -430,25 +406,13 @@
 					<ShortName>Grognements\VOIX_Monstre_Grogne_06.wav</ShortName>
 					<Path>SFX\Grognements\VOIX_Monstre_Grogne_06_DDC98EF4.wem</Path>
 				</File>
-				<File Id="651423358" Language="SFX">
-					<ShortName>Impact\VOIX_Balle_Impact_10.wav</ShortName>
-					<Path>SFX\Impact\VOIX_Balle_Impact_10_DDC98EF4.wem</Path>
-				</File>
 				<File Id="681498641" Language="SFX">
 					<ShortName>Remise en jeu\VOIX_Balle_RemiseEnJeu_02.wav</ShortName>
 					<Path>SFX\Remise en jeu\VOIX_Balle_RemiseEnJeu_02_DDC98EF4.wem</Path>
 				</File>
-				<File Id="684567994" Language="SFX">
-					<ShortName>But\VOIX_Balle_But_07.wav</ShortName>
-					<Path>SFX\But\VOIX_Balle_But_07_DDC98EF4.wem</Path>
-				</File>
 				<File Id="695073198" Language="SFX">
 					<ShortName>WilhemScream\VOIX_Niveks_Wilhem_03.wav</ShortName>
 					<Path>SFX\WilhemScream\VOIX_Niveks_Wilhem_03_DDC98EF4.wem</Path>
-				</File>
-				<File Id="699946924" Language="SFX">
-					<ShortName>SFX_Niveks_CoupBatte_Fort.wav</ShortName>
-					<Path>SFX\SFX_Niveks_CoupBatte_Fort_2A31C1A8.wem</Path>
 				</File>
 				<File Id="700327063" Language="SFX">
 					<ShortName>Course\VOIX_Balle_Court_03.wav</ShortName>
@@ -522,10 +486,6 @@
 					<ShortName>Course\VOIX_Balle_Court_04.wav</ShortName>
 					<Path>SFX\Course\VOIX_Balle_Court_04_DDC98EF4.wem</Path>
 				</File>
-				<File Id="795445618" Language="SFX">
-					<ShortName>But\VOIX_Balle_But_05.wav</ShortName>
-					<Path>SFX\But\VOIX_Balle_But_05_DDC98EF4.wem</Path>
-				</File>
 				<File Id="796588181" Language="SFX">
 					<ShortName>Poursuivi\VOIX_Niveks_Poursuivi_08.wav</ShortName>
 					<Path>SFX\Poursuivi\VOIX_Niveks_Poursuivi_08_DDC98EF4.wem</Path>
@@ -566,13 +526,13 @@
 					<ShortName>EjectBut\VOIX_Niveks_EjectBut_01.wav</ShortName>
 					<Path>SFX\EjectBut\VOIX_Niveks_EjectBut_01_DDC98EF4.wem</Path>
 				</File>
-				<File Id="865376660" Language="SFX">
-					<ShortName>But\VOIX_Balle_But_10.wav</ShortName>
-					<Path>SFX\But\VOIX_Balle_But_10_DDC98EF4.wem</Path>
-				</File>
 				<File Id="877656492" Language="SFX">
 					<ShortName>MarqueBut\VOIX_Niveks_But_01.wav</ShortName>
 					<Path>SFX\MarqueBut\VOIX_Niveks_But_01_DDC98EF4.wem</Path>
+				</File>
+				<File Id="878363899" Language="SFX">
+					<ShortName>Music_Monstre.wav</ShortName>
+					<Path>SFX\Music_Monstre_8BD76F1E.wem</Path>
 				</File>
 				<File Id="887027585" Language="SFX">
 					<ShortName>RecracheJoueur\VOIX_Monstre_CracheJoueur_07.wav</ShortName>
@@ -592,7 +552,11 @@
 				</File>
 				<File Id="901383993" Language="SFX">
 					<ShortName>Impact\VOIX_Balle_Impact_12.wav</ShortName>
-					<Path>SFX\Impact\VOIX_Balle_Impact_12_DDC98EF4.wem</Path>
+					<Path>SFX\Impact\VOIX_Balle_Impact_12_48AB58B9.wem</Path>
+				</File>
+				<File Id="901619924" Language="SFX">
+					<ShortName>4-66 Light body impact (3).wav</ShortName>
+					<Path>SFX\4-66 Light body impact (3)_36E4C247.wem</Path>
 				</File>
 				<File Id="905327798" Language="SFX">
 					<ShortName>CoupBalle\VOIX_Niveks_CoupBalle_02.wav</ShortName>
@@ -618,13 +582,9 @@
 					<ShortName>Monster Ball Music Test.wav</ShortName>
 					<Path>SFX\Monster Ball Music Test_DDC98EF4.wem</Path>
 				</File>
-				<File Id="937055937" Language="SFX">
-					<ShortName>But\VOIX_Balle_But_06.wav</ShortName>
-					<Path>SFX\But\VOIX_Balle_But_06_DDC98EF4.wem</Path>
-				</File>
 				<File Id="937831110" Language="SFX">
 					<ShortName>SFX_Coup_Charge_01.wav</ShortName>
-					<Path>SFX\SFX_Coup_Charge_01_3493F55D.wem</Path>
+					<Path>SFX\SFX_Coup_Charge_01_0D77B0A7.wem</Path>
 				</File>
 				<File Id="951785897" Language="SFX">
 					<ShortName>CoupBalle\VOIX_Niveks_CoupBalle_07.wav</ShortName>
@@ -672,7 +632,7 @@
 				</File>
 				<File Id="1009920399" Language="SFX">
 					<ShortName>Impact\VOIX_Balle_Impact_02.wav</ShortName>
-					<Path>SFX\Impact\VOIX_Balle_Impact_02_DDC98EF4.wem</Path>
+					<Path>SFX\Impact\VOIX_Balle_Impact_02_CBE7FD1A.wem</Path>
 				</File>
 				<File Id="1020036671" Language="SFX">
 					<ShortName>Grognements\VOIX_Monstre_Grogne_08.wav</ShortName>
@@ -680,7 +640,7 @@
 				</File>
 				<File Id="1020075026" Language="SFX">
 					<ShortName>Impact\VOIX_Balle_Impact_09.wav</ShortName>
-					<Path>SFX\Impact\VOIX_Balle_Impact_09_DDC98EF4.wem</Path>
+					<Path>SFX\Impact\VOIX_Balle_Impact_09_D46630B3.wem</Path>
 				</File>
 				<File Id="1042651519" Language="SFX">
 					<ShortName>MarqueBut\VOIX_Niveks_But_06.wav</ShortName>
@@ -692,11 +652,7 @@
 				</File>
 				<File Id="1055221764" Language="SFX">
 					<ShortName>Impact\VOIX_Balle_Impact_06.wav</ShortName>
-					<Path>SFX\Impact\VOIX_Balle_Impact_06_DDC98EF4.wem</Path>
-				</File>
-				<File Id="1055246491" Language="SFX">
-					<ShortName>But\VOIX_Balle_But_08.wav</ShortName>
-					<Path>SFX\But\VOIX_Balle_But_08_DDC98EF4.wem</Path>
+					<Path>SFX\Impact\VOIX_Balle_Impact_06_3D6CF276.wem</Path>
 				</File>
 				<File Id="1058969542" Language="SFX">
 					<ShortName>SFX_But_ShakeCamera.wav</ShortName>
@@ -711,18 +667,6 @@
 		<SoundBank Id="1355168291" Language="SFX">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
-			<ExcludedMemoryFiles>
-				<File Id="103650773" Language="SFX">
-					<ShortName>Auditorium.wav</ShortName>
-					<Path>Plugins\iZotope Hybrid Reverb\Auditorium_DDC08386.wem</Path>
-					<PrefetchSize>0</PrefetchSize>
-				</File>
-				<File Id="875305838" Language="SFX">
-					<ShortName>City Center.wav</ShortName>
-					<Path>Plugins\iZotope Hybrid Reverb\City Center_98215797.wem</Path>
-					<PrefetchSize>0</PrefetchSize>
-				</File>
-			</ExcludedMemoryFiles>
 		</SoundBank>
 	</SoundBanks>
 </SoundBanksInfo>

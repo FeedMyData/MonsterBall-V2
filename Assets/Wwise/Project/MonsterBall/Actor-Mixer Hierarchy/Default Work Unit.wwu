@@ -324,9 +324,6 @@
 						<Reference Name="OutputBus">
 							<ObjectRef Name="SFX" ID="{98BA6610-4B70-4EFF-A353-4A61C6BE1A24}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
 						</Reference>
-						<Reference Name="UserAuxSend0">
-							<ObjectRef Name="ReverbStade" ID="{D9AE1235-84F4-48BC-9E4F-FF2EDAFDD297}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
-						</Reference>
 					</ReferenceList>
 					<ChildrenList>
 						<RandomSequenceContainer Name="Niveks_Woosh" ID="{61B6A00F-5544-45E6-A889-589A77993D70}" ShortID="999006119">
@@ -443,93 +440,394 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<Sound Name="SFX_Niveks_CoupBatte_Fort" ID="{1C066C97-8E85-4276-AB34-7CE4C99BF83F}" ShortID="89854418" Type="SoundFX">
+								<ActorMixer Name="Faible" ID="{443DFC2C-AC69-4F7E-92C0-3ADC696F0383}" ShortID="758087793">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="SFX_Niveks_CoupBatte_Faible" ID="{664E4325-E631-462C-A57E-5BF1654FA4B4}" ShortID="371625990" Type="SoundFX">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{FB880FFB-61DE-4660-81FE-9C7E451208A7}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="100"/>
+																	<Property Name="Min" Type="Real64" Value="-100"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="PositioningType" Type="int16" Value="1"/>
+												<Property Name="UserAuxSendVolume0" Type="Real64">
+													<ValueList>
+														<Value>-3</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-15</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{98BA6610-4B70-4EFF-A353-4A61C6BE1A24}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Niveks_CoupBatte_Fort" ID="{49E7561B-6E47-4792-B1FA-A62E70C69E86}" ShortID="104051743">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="1.67897861156426E-02"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="2.21133768352365E-02"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.017404046583288"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.105230238256886"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>SFX_Niveks_CoupBatte_Fort.wav</AudioFile>
+													<ConvertedFileIDList>
+														<File ID="699946924"/>
+													</ConvertedFileIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Niveks_CoupBatte_Fort" ID="{49E7561B-6E47-4792-B1FA-A62E70C69E86}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<RandomSequenceContainer Name="SFX_Impact_Light" ID="{DB4A960C-B9F5-4BC5-B634-0626581B6FD4}" ShortID="671882074">
+											<PropertyList>
+												<Property Name="PositioningType" Type="int16" Value="1"/>
+												<Property Name="UserAuxSendVolume0" Type="Real64">
+													<ValueList>
+														<Value>-3</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-9</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{98BA6610-4B70-4EFF-A353-4A61C6BE1A24}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="SFX_Impact_Light" ID="{534DACE3-1DDA-4AB6-BDF4-D77D6D373CBF}" ShortID="813115160" Type="SoundFX">
+													<PropertyList>
+														<Property Name="PositioningType" Type="int16" Value="1"/>
+														<Property Name="UserAuxSendVolume0" Type="Real64">
+															<ValueList>
+																<Value>-3</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="SFX" ID="{98BA6610-4B70-4EFF-A353-4A61C6BE1A24}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="4-66 Light body impact (3)" ID="{F3CC000B-9736-4C25-9331-7F29300260E5}" ShortID="245629822">
+															<PropertyList>
+																<Property Name="TrimBegin" Type="Real64" Value="0.310787247885491"/>
+																<Property Name="TrimEnd" Type="Real64" Value="0.621574495770981"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>4-66 Light body impact (3).wav</AudioFile>
+															<ConvertedFileIDList>
+																<File ID="232677423"/>
+															</ConvertedFileIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="4-66 Light body impact (3)" ID="{F3CC000B-9736-4C25-9331-7F29300260E5}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_Impact_Light_01" ID="{0E41A4A7-DC63-4787-B210-FF854C72E73B}" ShortID="522304501" Type="SoundFX">
+													<PropertyList>
+														<Property Name="PositioningType" Type="int16" Value="1"/>
+														<Property Name="UserAuxSendVolume0" Type="Real64">
+															<ValueList>
+																<Value>-3</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="SFX" ID="{98BA6610-4B70-4EFF-A353-4A61C6BE1A24}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="4-66 Light body impact (3)" ID="{3072F8C9-99AE-4C40-AF35-A1E717DB5728}" ShortID="901619924">
+															<PropertyList>
+																<Property Name="TrimBegin" Type="Real64" Value="4.05503361526784"/>
+																<Property Name="TrimEnd" Type="Real64" Value="4.42501843417914"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>4-66 Light body impact (3).wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="4-66 Light body impact (3)" ID="{3072F8C9-99AE-4C40-AF35-A1E717DB5728}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFX_Impact_Light_02" ID="{390CD05A-8C2A-456D-8CDE-0F05FDA17768}" ShortID="598097278" Type="SoundFX">
+													<PropertyList>
+														<Property Name="PositioningType" Type="int16" Value="1"/>
+														<Property Name="UserAuxSendVolume0" Type="Real64">
+															<ValueList>
+																<Value>-3</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="SFX" ID="{98BA6610-4B70-4EFF-A353-4A61C6BE1A24}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="4-66 Light body impact (3)" ID="{F91FFF57-EB1C-4D2D-8499-31209E7B8696}" ShortID="232677423">
+															<PropertyList>
+																<Property Name="TrimBegin" Type="Real64" Value="7.858477553676"/>
+																<Property Name="TrimEnd" Type="Real64" Value="8.05086965950987"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>4-66 Light body impact (3).wav</AudioFile>
+															<ConvertedFileIDList>
+																<File ID="245629822"/>
+															</ConvertedFileIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="4-66 Light body impact (3)" ID="{F91FFF57-EB1C-4D2D-8499-31209E7B8696}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</RandomSequenceContainer>
+									</ChildrenList>
+								</ActorMixer>
+								<ActorMixer Name="Fort" ID="{A72C1398-4220-40AC-8D7B-839253C90973}" ShortID="931613747">
 									<PropertyList>
-										<Property Name="Pitch" Type="int32">
-											<ModifierList>
-												<ModifierInfo>
-													<Modifier Name="" ID="{6BEAE5BB-8F7F-4081-8BCF-26EC4605B238}">
-														<PropertyList>
-															<Property Name="Enabled" Type="bool" Value="True"/>
-															<Property Name="Max" Type="Real64" Value="100"/>
-															<Property Name="Min" Type="Real64" Value="-100"/>
-														</PropertyList>
-													</Modifier>
-												</ModifierInfo>
-											</ModifierList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>4</Value>
+											</ValueList>
 										</Property>
-										<Property Name="PositioningType" Type="int16" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="SFX" ID="{98BA6610-4B70-4EFF-A353-4A61C6BE1A24}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="SFX_Niveks_CoupBatte_Fort" ID="{68E6B3BD-70C5-4115-86EC-BBCE24F0C63E}" ShortID="699946924">
+										<RandomSequenceContainer Name="SFX_Impact_Heavy" ID="{62AD9A76-E015-4B0C-A784-F391910B502F}" ShortID="365071339">
 											<PropertyList>
-												<Property Name="FadeOutDuration" Type="Real64" Value="6.34735816566975E-02"/>
-												<Property Name="TrimBegin" Type="Real64" Value="1.94515814754395E-02"/>
-												<Property Name="TrimEnd" Type="Real64" Value="0.150084307594707"/>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{437DF4FF-DD09-4FD7-8CD6-AD32FF92FCD0}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="150"/>
+																	<Property Name="Min" Type="Real64" Value="-150"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="PositioningType" Type="int16" Value="1"/>
+												<Property Name="UserAuxSendVolume0" Type="Real64">
+													<ValueList>
+														<Value>-3</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
-											<Language>SFX</Language>
-											<AudioFile>SFX_Niveks_CoupBatte_Fort.wav</AudioFile>
-											<ConvertedFileIDList>
-												<File ID="104051743"/>
-											</ConvertedFileIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="SFX_Niveks_CoupBatte_Fort" ID="{68E6B3BD-70C5-4115-86EC-BBCE24F0C63E}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="SFX_Niveks_CoupBatte_Faible" ID="{664E4325-E631-462C-A57E-5BF1654FA4B4}" ShortID="371625990" Type="SoundFX">
-									<PropertyList>
-										<Property Name="Pitch" Type="int32">
-											<ModifierList>
-												<ModifierInfo>
-													<Modifier Name="" ID="{FB880FFB-61DE-4660-81FE-9C7E451208A7}">
-														<PropertyList>
-															<Property Name="Enabled" Type="bool" Value="True"/>
-															<Property Name="Max" Type="Real64" Value="100"/>
-															<Property Name="Min" Type="Real64" Value="-100"/>
-														</PropertyList>
-													</Modifier>
-												</ModifierInfo>
-											</ModifierList>
-										</Property>
-										<Property Name="PositioningType" Type="int16" Value="1"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="SFX" ID="{98BA6610-4B70-4EFF-A353-4A61C6BE1A24}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="SFX_Niveks_CoupBatte_Fort" ID="{49E7561B-6E47-4792-B1FA-A62E70C69E86}" ShortID="104051743">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{98BA6610-4B70-4EFF-A353-4A61C6BE1A24}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="Body_Impact_Heavy" ID="{A96871D2-BCEB-41EB-B760-85D298339C68}" ShortID="935771251" Type="SoundFX">
+													<PropertyList>
+														<Property Name="PositioningType" Type="int16" Value="1"/>
+														<Property Name="UserAuxSendVolume0" Type="Real64">
+															<ValueList>
+																<Value>-3</Value>
+															</ValueList>
+														</Property>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>5</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="SFX" ID="{98BA6610-4B70-4EFF-A353-4A61C6BE1A24}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="3-08 Hit, Body Body Punch Impact, Human" ID="{FC26A0FF-A186-435A-9155-F3FE217C7ED3}" ShortID="366020153">
+															<PropertyList>
+																<Property Name="TrimBegin" Type="Real64" Value="0.32639340707005"/>
+																<Property Name="TrimEnd" Type="Real64" Value="0.667967902841032"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>3-08 Hit, Body Body Punch Impact, Human.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="3-08 Hit, Body Body Punch Impact, Human" ID="{FC26A0FF-A186-435A-9155-F3FE217C7ED3}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Body_Impact_Heavy_01" ID="{E06401F6-8DC3-40BF-B583-29738640C7C0}" ShortID="842452208" Type="SoundFX">
+													<PropertyList>
+														<Property Name="PositioningType" Type="int16" Value="1"/>
+														<Property Name="UserAuxSendVolume0" Type="Real64">
+															<ValueList>
+																<Value>-3</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="SFX" ID="{98BA6610-4B70-4EFF-A353-4A61C6BE1A24}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="3-08 Hit, Body Body Punch Impact, Human" ID="{C74F27AD-59EC-4520-A31E-7F3272DC9880}" ShortID="954132081">
+															<PropertyList>
+																<Property Name="TrimBegin" Type="Real64" Value="3.92431142919107"/>
+																<Property Name="TrimEnd" Type="Real64" Value="4.14443721535459"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>3-08 Hit, Body Body Punch Impact, Human.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="3-08 Hit, Body Body Punch Impact, Human" ID="{C74F27AD-59EC-4520-A31E-7F3272DC9880}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Body_Impact_Heavy_02" ID="{52743A1F-2CCB-4F64-B836-023B74C45BED}" ShortID="844326935" Type="SoundFX">
+													<PropertyList>
+														<Property Name="PositioningType" Type="int16" Value="1"/>
+														<Property Name="UserAuxSendVolume0" Type="Real64">
+															<ValueList>
+																<Value>-3</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="SFX" ID="{98BA6610-4B70-4EFF-A353-4A61C6BE1A24}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="3-08 Hit, Body Body Punch Impact, Human" ID="{C05CCECF-543A-4616-B6F1-3CED9ACB88E4}" ShortID="563445758">
+															<PropertyList>
+																<Property Name="TrimBegin" Type="Real64" Value="7.6740403383214"/>
+																<Property Name="TrimEnd" Type="Real64" Value="7.95489047928865"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>3-08 Hit, Body Body Punch Impact, Human.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="3-08 Hit, Body Body Punch Impact, Human" ID="{C05CCECF-543A-4616-B6F1-3CED9ACB88E4}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</RandomSequenceContainer>
+										<Sound Name="SFX_Niveks_CoupBatte_Fort" ID="{1C066C97-8E85-4276-AB34-7CE4C99BF83F}" ShortID="89854418" Type="SoundFX">
 											<PropertyList>
-												<Property Name="FadeInDuration" Type="Real64" Value="1.67897861156426E-02"/>
-												<Property Name="FadeOutDuration" Type="Real64" Value="2.21133768352365E-02"/>
-												<Property Name="TrimBegin" Type="Real64" Value="0.017404046583288"/>
-												<Property Name="TrimEnd" Type="Real64" Value="7.28922421605945E-02"/>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{6BEAE5BB-8F7F-4081-8BCF-26EC4605B238}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="100"/>
+																	<Property Name="Min" Type="Real64" Value="-100"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="PositioningType" Type="int16" Value="1"/>
+												<Property Name="UserAuxSendVolume0" Type="Real64">
+													<ValueList>
+														<Value>-3</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
-											<Language>SFX</Language>
-											<AudioFile>SFX_Niveks_CoupBatte_Fort.wav</AudioFile>
-											<ConvertedFileIDList>
-												<File ID="699946924"/>
-											</ConvertedFileIDList>
-										</AudioFileSource>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{98BA6610-4B70-4EFF-A353-4A61C6BE1A24}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Niveks_CoupBatte_Fort" ID="{68E6B3BD-70C5-4115-86EC-BBCE24F0C63E}" ShortID="699946924">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="6.34735816566975E-02"/>
+														<Property Name="TrimBegin" Type="Real64" Value="1.94515814754395E-02"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.150084307594707"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>SFX_Niveks_CoupBatte_Fort.wav</AudioFile>
+													<ConvertedFileIDList>
+														<File ID="104051743"/>
+													</ConvertedFileIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Niveks_CoupBatte_Fort" ID="{68E6B3BD-70C5-4115-86EC-BBCE24F0C63E}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
 									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="SFX_Niveks_CoupBatte_Fort" ID="{49E7561B-6E47-4792-B1FA-A62E70C69E86}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
+								</ActorMixer>
 							</ChildrenList>
 						</ActorMixer>
 						<ActorMixer Name="Niveks_Impact" ID="{C22DF4DD-EB3D-466A-82E6-F723EF944998}" ShortID="163848831">
@@ -552,9 +850,6 @@
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
-								</Reference>
-								<Reference Name="UserAuxSend0">
-									<ObjectRef Name="ReverbStade" ID="{D9AE1235-84F4-48BC-9E4F-FF2EDAFDD297}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
 								</Reference>
 								<Reference Name="UserAuxSend1">
 									<ObjectRef Name="FX" ID="{AE17BDD2-F728-4C96-A483-B4560EE81FA8}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
@@ -603,7 +898,7 @@
 								</Sound>
 							</ChildrenList>
 						</ActorMixer>
-						<RandomSequenceContainer Name="Electric_Spark_Wall" ID="{A8B4F66E-1865-4F67-8DD6-FCD468CD1F31}" ShortID="568396917">
+						<RandomSequenceContainer Name="Electric_Spark_Light" ID="{A8B4F66E-1865-4F67-8DD6-FCD468CD1F31}" ShortID="568396917">
 							<PropertyList>
 								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
 								<Property Name="Pitch" Type="int32">
@@ -620,6 +915,11 @@
 									</ModifierList>
 								</Property>
 								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="6"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-19</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -1513,9 +1813,6 @@
 								<Reference Name="UserAuxSend1">
 									<ObjectRef Name="FX" ID="{AE17BDD2-F728-4C96-A483-B4560EE81FA8}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
 								</Reference>
-								<Reference Name="UserAuxSend2">
-									<ObjectRef Name="ReverbStade" ID="{D9AE1235-84F4-48BC-9E4F-FF2EDAFDD297}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
-								</Reference>
 							</ReferenceList>
 							<ChildrenList>
 								<RandomSequenceContainer Name="SFX_Balle_Pop1" ID="{9A5F758B-E781-4529-BE2B-7BECB315C592}" ShortID="522105890">
@@ -1559,9 +1856,6 @@
 												<Reference Name="OutputBus">
 													<ObjectRef Name="SFX" ID="{98BA6610-4B70-4EFF-A353-4A61C6BE1A24}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
 												</Reference>
-												<Reference Name="UserAuxSend0">
-													<ObjectRef Name="ReverbStade" ID="{D9AE1235-84F4-48BC-9E4F-FF2EDAFDD297}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
-												</Reference>
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="SFX_Balle_pop1_01" ID="{2A1A399C-9BFD-4F5E-9599-EEC0286AC046}" ShortID="824756831">
@@ -1583,9 +1877,6 @@
 												</Reference>
 												<Reference Name="OutputBus">
 													<ObjectRef Name="SFX" ID="{98BA6610-4B70-4EFF-A353-4A61C6BE1A24}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
-												</Reference>
-												<Reference Name="UserAuxSend0">
-													<ObjectRef Name="ReverbStade" ID="{D9AE1235-84F4-48BC-9E4F-FF2EDAFDD297}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
@@ -1609,9 +1900,6 @@
 												<Reference Name="OutputBus">
 													<ObjectRef Name="SFX" ID="{98BA6610-4B70-4EFF-A353-4A61C6BE1A24}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
 												</Reference>
-												<Reference Name="UserAuxSend0">
-													<ObjectRef Name="ReverbStade" ID="{D9AE1235-84F4-48BC-9E4F-FF2EDAFDD297}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
-												</Reference>
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="SFX_Balle_pop1_03" ID="{FB013F54-4CB1-4CC3-9FDF-0A6685BB17B2}" ShortID="819132964">
@@ -1634,9 +1922,6 @@
 												<Reference Name="OutputBus">
 													<ObjectRef Name="SFX" ID="{98BA6610-4B70-4EFF-A353-4A61C6BE1A24}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
 												</Reference>
-												<Reference Name="UserAuxSend0">
-													<ObjectRef Name="ReverbStade" ID="{D9AE1235-84F4-48BC-9E4F-FF2EDAFDD297}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
-												</Reference>
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="SFX_Balle_pop1_04" ID="{FF67092E-F723-440A-885C-3C91EABFB3E1}" ShortID="464313749">
@@ -1658,9 +1943,6 @@
 												</Reference>
 												<Reference Name="OutputBus">
 													<ObjectRef Name="SFX" ID="{98BA6610-4B70-4EFF-A353-4A61C6BE1A24}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
-												</Reference>
-												<Reference Name="UserAuxSend0">
-													<ObjectRef Name="ReverbStade" ID="{D9AE1235-84F4-48BC-9E4F-FF2EDAFDD297}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
@@ -1716,9 +1998,6 @@
 												<Reference Name="OutputBus">
 													<ObjectRef Name="SFX" ID="{98BA6610-4B70-4EFF-A353-4A61C6BE1A24}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
 												</Reference>
-												<Reference Name="UserAuxSend0">
-													<ObjectRef Name="ReverbStade" ID="{D9AE1235-84F4-48BC-9E4F-FF2EDAFDD297}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
-												</Reference>
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="SFX_Balle_pop2_01" ID="{F8484924-9EBD-4A00-9FE9-5692439514DF}" ShortID="796496479">
@@ -1741,9 +2020,6 @@
 												<Reference Name="OutputBus">
 													<ObjectRef Name="SFX" ID="{98BA6610-4B70-4EFF-A353-4A61C6BE1A24}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
 												</Reference>
-												<Reference Name="UserAuxSend0">
-													<ObjectRef Name="ReverbStade" ID="{D9AE1235-84F4-48BC-9E4F-FF2EDAFDD297}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
-												</Reference>
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="SFX_Balle_pop2_02" ID="{45C43D87-4DEF-482A-A6F4-58E65804C1AD}" ShortID="970194719">
@@ -1765,9 +2041,6 @@
 												</Reference>
 												<Reference Name="OutputBus">
 													<ObjectRef Name="SFX" ID="{98BA6610-4B70-4EFF-A353-4A61C6BE1A24}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
-												</Reference>
-												<Reference Name="UserAuxSend0">
-													<ObjectRef Name="ReverbStade" ID="{D9AE1235-84F4-48BC-9E4F-FF2EDAFDD297}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
@@ -1881,7 +2154,7 @@
 										<AudioFileSource Name="SFX_Coup_Charge_01" ID="{A9BAA27F-4AE0-4540-88DF-749701E15AF1}" ShortID="937831110">
 											<PropertyList>
 												<Property Name="FadeInDuration" Type="Real64" Value="0.117219692040772"/>
-												<Property Name="TrimBegin" Type="Real64" Value="0.415256994144437"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.538711776187378"/>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>SFX_Coup_Charge_01.wav</AudioFile>
@@ -1902,6 +2175,10 @@
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="SFX_Coup_Charge_02" ID="{D7B79C72-8089-436A-90E9-F3B8AC2E3DB5}" ShortID="629518519">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="8.21405335068315E-02"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.25455432661028"/>
+											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>SFX_Coup_Charge_02.wav</AudioFile>
 										</AudioFileSource>
@@ -1913,6 +2190,13 @@
 							</ChildrenList>
 						</RandomSequenceContainer>
 						<ActorMixer Name="SFX_But_ShakeCamera" ID="{B7EBEDDD-7E5F-4FD6-BADE-C3D14506AEA4}" ShortID="108764610">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
@@ -1951,7 +2235,7 @@
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-6</Value>
+												<Value>-2</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -1965,17 +2249,15 @@
 										<Reference Name="OutputBus">
 											<ObjectRef Name="SFX" ID="{98BA6610-4B70-4EFF-A353-4A61C6BE1A24}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
 										</Reference>
-										<Reference Name="UserAuxSend0">
-											<ObjectRef Name="ReverbStade" ID="{D9AE1235-84F4-48BC-9E4F-FF2EDAFDD297}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
-										</Reference>
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="4-61 Large explosion, burn _ ___debris _ heavy explosive impact forming crater (3)" ID="{210AC977-0635-481C-8CF0-6959851DF5C2}" ShortID="505531461">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.698120689655172"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.11631034482759"/>
+											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>4-61 Large explosion, burn _ ...debris _ heavy explosive impact forming crater (3).wav</AudioFile>
-											<ConvertedFileIDList>
-												<File ID="369037192"/>
-											</ConvertedFileIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
@@ -2010,9 +2292,6 @@
 										</Reference>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="SFX" ID="{98BA6610-4B70-4EFF-A353-4A61C6BE1A24}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
-										</Reference>
-										<Reference Name="UserAuxSend0">
-											<ObjectRef Name="ReverbStade" ID="{D9AE1235-84F4-48BC-9E4F-FF2EDAFDD297}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -2080,11 +2359,303 @@
 								</Sound>
 							</ChildrenList>
 						</ActorMixer>
+						<RandomSequenceContainer Name="Electric_Spark_Heavy" ID="{9194631B-E5CC-4F3F-B201-D1F2F5503C60}" ShortID="542125009">
+							<PropertyList>
+								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{8C996570-D670-4E92-AB09-1B74F619C403}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="150"/>
+													<Property Name="Min" Type="Real64" Value="-150"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="PositioningType" Type="int16" Value="1"/>
+								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="6"/>
+								<Property Name="UserAuxSendVolume0" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-5</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{98BA6610-4B70-4EFF-A353-4A61C6BE1A24}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="SFX_Electric_Spark-01" ID="{F9FA515B-69FC-4D38-A81A-43285D664446}" ShortID="410900440" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Electric_Spark-01" ID="{4306ABC3-4406-42FE-8DA4-DC0264D216CF}" ShortID="1001749535">
+											<PropertyList>
+												<Property Name="TrimBegin" Type="Real64" Value="1.13866818477554"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.57051003036218"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>SFX_Electric_Spark-01.wav</AudioFile>
+											<ConvertedFileIDList>
+												<File ID="518138878"/>
+											</ConvertedFileIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Electric_Spark-01" ID="{4306ABC3-4406-42FE-8DA4-DC0264D216CF}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Electric_Spark-02" ID="{3FC3D6E2-1F2B-42C3-9865-39989E257A88}" ShortID="528520613" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Electric_Spark-02" ID="{FAB5B12A-0B01-4E41-9FEC-F039EB091578}" ShortID="1046467459">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.018387768379961"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.239040988939493"/>
+												<Property Name="TrimBegin" Type="Real64" Value="6.32079538061158E-02"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.71137678919974"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>SFX_Electric_Spark-02.wav</AudioFile>
+											<ConvertedFileIDList>
+												<File ID="735054049"/>
+											</ConvertedFileIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Electric_Spark-02" ID="{FAB5B12A-0B01-4E41-9FEC-F039EB091578}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Electric_Spark-03" ID="{642B46B2-760E-481B-AB8C-1B6B25FD29D9}" ShortID="195886435" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Electric_Spark-03" ID="{DC9E4CE9-7F9B-43A1-B3DB-2D36D6678335}" ShortID="702267520">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="1.15749972890913E-02"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.080134596616786"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.178967265777489"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.597447936998482"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>SFX_Electric_Spark-03.wav</AudioFile>
+											<ConvertedFileIDList>
+												<File ID="525342413"/>
+											</ConvertedFileIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Electric_Spark-03" ID="{DC9E4CE9-7F9B-43A1-B3DB-2D36D6678335}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Electric_Spark-04" ID="{2A538D29-BA63-4AD8-A7C3-281072332BED}" ShortID="1040621316" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Electric_Spark-04" ID="{CC0440D2-B5CC-4648-9962-1F67FA812F0F}" ShortID="723743817">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="2.71715463023205E-02"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.075570863153329"/>
+												<Property Name="TrimBegin" Type="Real64" Value="1.86804380828454E-02"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.618152678377792"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>SFX_Electric_Spark-04.wav</AudioFile>
+											<ConvertedFileIDList>
+												<File ID="138982408"/>
+											</ConvertedFileIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Electric_Spark-04" ID="{CC0440D2-B5CC-4648-9962-1F67FA812F0F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Electric_Spark-05" ID="{32A5D62E-104D-4947-AD43-C75AE53AA89A}" ShortID="829542801" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Electric_Spark-05" ID="{B7273C20-2B3D-4FF5-BBAC-20834453E16D}" ShortID="448370008">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="7.30273019757114E-02"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.142029477070872"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.512341150081566"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>SFX_Electric_Spark-05.wav</AudioFile>
+											<ConvertedFileIDList>
+												<File ID="810834730"/>
+											</ConvertedFileIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Electric_Spark-05" ID="{B7273C20-2B3D-4FF5-BBAC-20834453E16D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Electric_Spark-06" ID="{7F413633-94FF-4C27-8B59-901D5B54C2B4}" ShortID="845976578" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Electric_Spark-06" ID="{91CC4D95-4C53-40F9-B9AE-A2899F8C110F}" ShortID="513730619">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="6.49081248867139E-03"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.168761124705456"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.213016664400943"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.819612595160413"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>SFX_Electric_Spark-06.wav</AudioFile>
+											<ConvertedFileIDList>
+												<File ID="853254698"/>
+											</ConvertedFileIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Electric_Spark-06" ID="{91CC4D95-4C53-40F9-B9AE-A2899F8C110F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Electric_Spark-07" ID="{0761E279-DDA5-4A9B-88E5-29E6BDCC889A}" ShortID="586200028" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Electric_Spark-07" ID="{23182BEA-6ABA-4934-BEC3-3B026382E9A1}" ShortID="769913669">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="1.39838227297444E-02"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.143833605220228"/>
+												<Property Name="TrimBegin" Type="Real64" Value="8.78983143012507E-02"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.613956407467827"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>SFX_Electric_Spark-07.wav</AudioFile>
+											<ConvertedFileIDList>
+												<File ID="249786872"/>
+											</ConvertedFileIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Electric_Spark-07" ID="{23182BEA-6ABA-4934-BEC3-3B026382E9A1}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Electric_Spark-09" ID="{75508334-9A2E-40C6-8CB4-39983FE102A4}" ShortID="25805395" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Electric_Spark-09" ID="{C3031AF4-B76C-4D71-904F-D2DF2178B082}" ShortID="760724947">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="6.62901033170199E-03"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="6.44821914083741E-02"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.210320418705818"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.652656199021208"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>SFX_Electric_Spark-09.wav</AudioFile>
+											<ConvertedFileIDList>
+												<File ID="854012293"/>
+											</ConvertedFileIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Electric_Spark-09" ID="{C3031AF4-B76C-4D71-904F-D2DF2178B082}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Electric_Spark-08" ID="{C6EEA548-80F3-44E4-B728-0CFF7724639B}" ShortID="541845067" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Electric_Spark-01" ID="{125C1C48-DA5D-485D-814F-78DFEFE52BD5}" ShortID="252295787">
+											<PropertyList>
+												<Property Name="TrimBegin" Type="Real64" Value="1.57825607243548"/>
+												<Property Name="TrimEnd" Type="Real64" Value="2.1437171437866"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>SFX_Electric_Spark-01.wav</AudioFile>
+											<ConvertedFileIDList>
+												<File ID="707440032"/>
+											</ConvertedFileIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Electric_Spark-01" ID="{125C1C48-DA5D-485D-814F-78DFEFE52BD5}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
 					</ChildrenList>
 				</ActorMixer>
 				<ActorMixer Name="Voix" ID="{F502A3E4-B6F3-45C2-B677-F625DAFE42CA}" ShortID="345599444">
 					<PropertyList>
 						<Property Name="PositioningType" Type="int16" Value="1"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>4</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
@@ -2109,6 +2680,9 @@
 							</ReferenceList>
 							<ChildrenList>
 								<RandomSequenceContainer Name="CoupBalle" ID="{22D30912-AFF2-40A2-B5A3-EE219D81F36D}" ShortID="421472226">
+									<PropertyList>
+										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="12"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
@@ -2482,6 +3056,9 @@
 									</ChildrenList>
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="CoupRecu" ID="{6A2724C3-5957-4C8D-B1A4-46CC9C9BCB62}" ShortID="893949498">
+									<PropertyList>
+										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="6"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
@@ -2608,6 +3185,9 @@
 									</ChildrenList>
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="EjectBut" ID="{488D8205-70EB-4FDD-87AB-BE876AF690C8}" ShortID="402925737">
+									<PropertyList>
+										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="5"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
@@ -2715,6 +3295,9 @@
 									</ChildrenList>
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="MarqueBut" ID="{2C7450A3-ECC1-4D33-9002-FE129BB2621A}" ShortID="316783666">
+									<PropertyList>
+										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="6"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
@@ -2860,6 +3443,9 @@
 									</ChildrenList>
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="Poursuivi" ID="{E9D500CC-C142-4BF7-A635-407336ADC850}" ShortID="491438455">
+									<PropertyList>
+										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="10"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
@@ -3169,6 +3755,9 @@
 									</ChildrenList>
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="Victoire" ID="{A93D5F3B-FCA0-4FA7-B376-C153E1B5F133}" ShortID="364156290">
+									<PropertyList>
+										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="3"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
@@ -3288,6 +3877,22 @@
 									</ChildrenList>
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="WilhemScream" ID="{EF06BAEE-71D0-4D91-B1A0-A42AEFEF1F86}" ShortID="830095768">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{47F28680-C6F2-427C-A2B4-E4F49BF3917A}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="150"/>
+															<Property Name="Min" Type="Real64" Value="-150"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="6"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
@@ -3415,7 +4020,7 @@
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="Yeah" ID="{9E36AE02-ECDF-4C27-AD41-87B1805FB9AB}" ShortID="433292301">
 									<PropertyList>
-										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="5"/>
+										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="6"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -3893,6 +4498,9 @@
 									</ChildrenList>
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="RecracheJoueur" ID="{29D235F3-0301-428A-8094-A8ECCBA89E0A}" ShortID="712909472">
+									<PropertyList>
+										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="7"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
@@ -4066,6 +4674,11 @@
 									</ValueList>
 								</Property>
 								<Property Name="OverrideOutput" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>8</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -4077,6 +4690,9 @@
 							</ReferenceList>
 							<ChildrenList>
 								<RandomSequenceContainer Name="But" ID="{43AAABAC-D29B-42CC-8325-810D4A949037}" ShortID="889378536">
+									<ExcludedPlatformList>
+										<Platform>Windows</Platform>
+									</ExcludedPlatformList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
@@ -4361,6 +4977,7 @@
 												<Value>19</Value>
 											</ValueList>
 										</Property>
+										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="5"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -4469,6 +5086,9 @@
 									</ChildrenList>
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="Impact" ID="{0F12D014-D3DF-468F-AA60-2C1DB2BD44CA}" ShortID="951000194">
+									<PropertyList>
+										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="10"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
@@ -4489,6 +5109,9 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="VOIX_Balle_Impact_01" ID="{6D634307-3E6D-4EEC-9A79-7A6AF14BE1C7}" ShortID="173624706">
+													<PropertyList>
+														<Property Name="TrimBegin" Type="Real64" Value="0.021010328562134"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>Impact\VOIX_Balle_Impact_01.wav</AudioFile>
 												</AudioFileSource>
@@ -4508,6 +5131,9 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="VOIX_Balle_Impact_02" ID="{12056B23-1665-4095-8F0D-62886AB3F7A5}" ShortID="1009920399">
+													<PropertyList>
+														<Property Name="TrimBegin" Type="Real64" Value="1.57987963565387E-02"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>Impact\VOIX_Balle_Impact_02.wav</AudioFile>
 												</AudioFileSource>
@@ -4527,6 +5153,9 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="VOIX_Balle_Impact_03" ID="{3D3892F4-0008-46DB-9AB6-3177424FAAD9}" ShortID="117717347">
+													<PropertyList>
+														<Property Name="TrimBegin" Type="Real64" Value="1.69407937540664E-02"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>Impact\VOIX_Balle_Impact_03.wav</AudioFile>
 												</AudioFileSource>
@@ -4546,6 +5175,9 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="VOIX_Balle_Impact_04" ID="{07DF6098-1846-4348-B275-FAF3B9E4F1C0}" ShortID="348060390">
+													<PropertyList>
+														<Property Name="TrimBegin" Type="Real64" Value="2.08092062459336E-02"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>Impact\VOIX_Balle_Impact_04.wav</AudioFile>
 												</AudioFileSource>
@@ -4565,6 +5197,9 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="VOIX_Balle_Impact_05" ID="{9BF03AC0-E57F-47B8-B7FF-C1306A3DF22F}" ShortID="67887004">
+													<PropertyList>
+														<Property Name="TrimBegin" Type="Real64" Value="0.023673552374756"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>Impact\VOIX_Balle_Impact_05.wav</AudioFile>
 												</AudioFileSource>
@@ -4584,6 +5219,9 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="VOIX_Balle_Impact_06" ID="{FFCE8F71-7766-4065-9A76-704722923BB8}" ShortID="1055221764">
+													<PropertyList>
+														<Property Name="TrimBegin" Type="Real64" Value="0.021746801127738"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>Impact\VOIX_Balle_Impact_06.wav</AudioFile>
 												</AudioFileSource>
@@ -4603,6 +5241,9 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="VOIX_Balle_Impact_07" ID="{92608503-AABF-4D2A-B361-16EECA31E7B5}" ShortID="190620213">
+													<PropertyList>
+														<Property Name="TrimBegin" Type="Real64" Value="2.11001545217957E-02"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>Impact\VOIX_Balle_Impact_07.wav</AudioFile>
 												</AudioFileSource>
@@ -4622,6 +5263,9 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="VOIX_Balle_Impact_08" ID="{AAE7278B-A133-4FD2-A787-BAEE9BE60D7A}" ShortID="11049249">
+													<PropertyList>
+														<Property Name="TrimBegin" Type="Real64" Value="2.10603719366732E-02"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>Impact\VOIX_Balle_Impact_08.wav</AudioFile>
 												</AudioFileSource>
@@ -4641,31 +5285,15 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="VOIX_Balle_Impact_09" ID="{024DA972-24F6-4B5F-A326-8CCC63B945DF}" ShortID="1020075026">
+													<PropertyList>
+														<Property Name="TrimBegin" Type="Real64" Value="2.76499268054652E-02"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>Impact\VOIX_Balle_Impact_09.wav</AudioFile>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
 												<ActiveSource Name="VOIX_Balle_Impact_09" ID="{024DA972-24F6-4B5F-A326-8CCC63B945DF}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="VOIX_Balle_Impact_10" ID="{242E6F7E-D12B-405C-83BD-98F70FF63C2C}" ShortID="509001230" Type="SoundFX">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="VOIX_Balle_Impact_10" ID="{6329C53A-184C-446C-BAA8-CE686DDE1EA3}" ShortID="651423358">
-													<Language>SFX</Language>
-													<AudioFile>Impact\VOIX_Balle_Impact_10.wav</AudioFile>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="VOIX_Balle_Impact_10" ID="{6329C53A-184C-446C-BAA8-CE686DDE1EA3}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
 										<Sound Name="VOIX_Balle_Impact_11" ID="{E090902A-DF4A-4A7D-984C-451D44394E29}" ShortID="787312320" Type="SoundFX">
@@ -4679,6 +5307,9 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="VOIX_Balle_Impact_11" ID="{DD277300-D7BA-4197-B66C-59F4200AE08D}" ShortID="483333117">
+													<PropertyList>
+														<Property Name="TrimBegin" Type="Real64" Value="1.94476387985253E-02"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>Impact\VOIX_Balle_Impact_11.wav</AudioFile>
 												</AudioFileSource>
@@ -4698,6 +5329,9 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="VOIX_Balle_Impact_12" ID="{A4FCEF50-1112-43C2-BA5C-76B9EDEDBE0D}" ShortID="901383993">
+													<PropertyList>
+														<Property Name="TrimBegin" Type="Real64" Value="1.62418672739102E-02"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>Impact\VOIX_Balle_Impact_12.wav</AudioFile>
 												</AudioFileSource>
@@ -4717,6 +5351,9 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="VOIX_Balle_Impact_13" ID="{0B6D0C2B-8FE5-4A4C-A0E5-97463D70B628}" ShortID="506069587">
+													<PropertyList>
+														<Property Name="TrimBegin" Type="Real64" Value="4.32997180654955E-02"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>Impact\VOIX_Balle_Impact_13.wav</AudioFile>
 												</AudioFileSource>
@@ -4736,6 +5373,9 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="VOIX_Balle_Impact_14" ID="{05989158-5CC8-4BA2-8FAF-D2FD282D97D5}" ShortID="632971419">
+													<PropertyList>
+														<Property Name="TrimBegin" Type="Real64" Value="1.79939275645196E-02"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>Impact\VOIX_Balle_Impact_14.wav</AudioFile>
 												</AudioFileSource>
@@ -4816,6 +5456,9 @@
 									</ChildrenList>
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="Remise en jeu" ID="{9F7645EE-48B5-4FBE-A074-338E9D2B1B8E}" ShortID="29661170">
+									<PropertyList>
+										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="8"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
@@ -5061,13 +5704,6 @@
 					</ReferenceList>
 					<ChildrenList>
 						<Sound Name="Monster Ball Music Test" ID="{814021AA-6BA9-4C22-A014-A745571C77FD}" ShortID="135082212" Type="SoundFX">
-							<PropertyList>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>-9</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
@@ -5084,6 +5720,33 @@
 							</ChildrenList>
 							<ActiveSourceList>
 								<ActiveSource Name="Monster Ball Music Test" ID="{EE1F4BFC-2703-40F0-9115-E9DBF4D2E33A}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Music_Monstre" ID="{60DE5FB5-A558-4190-B053-D6D64FCA048E}" ShortID="839311491" Type="SoundFX">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-10</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Music_Monstre" ID="{4C101C8D-D2B9-4D09-A487-D7FE555397AC}" ShortID="878363899">
+									<Language>SFX</Language>
+									<AudioFile>Music_Monstre.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Music_Monstre" ID="{4C101C8D-D2B9-4D09-A487-D7FE555397AC}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
