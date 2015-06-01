@@ -179,7 +179,7 @@ public class MonsterControllerF : MonoBehaviour {
             }
         }
 
-        if (!monsterForm && wrath >= wrathMax && GameControllerF.InCircle(this.gameObject)<safeTransform)
+        if (!transforming && !monsterForm && wrath >= wrathMax && GameControllerF.InCircle(this.gameObject)<safeTransform)
         {
             StartCoroutine(NotHappy());
         }

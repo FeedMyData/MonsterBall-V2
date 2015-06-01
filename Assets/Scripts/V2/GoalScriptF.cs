@@ -27,7 +27,7 @@ public class GoalScriptF : MonoBehaviour {
 	void Update () {
         if (returnSwitch)
         {
-            float delayReturnSwitch = Mathf.Abs(((timeSwitch - Time.time) / durationSwitch) - 1); ;
+            float delayReturnSwitch = Mathf.Abs(((timeSwitch - Time.time) / durationReturnSwitch) - 1); ;
             GetComponent<Renderer>().material.SetFloat("_Switch_goal", Mathf.Lerp(1,0,delayReturnSwitch));
 
             if (delayReturnSwitch >= 1)

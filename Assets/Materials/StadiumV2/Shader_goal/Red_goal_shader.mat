@@ -234,4 +234,4 @@ Material:
       data:
         first:
           name: _Goal
-        second: {r: .760784388, g: .760784388, b: .760784388, a: 1}
+        second: {r: 1, g: 0, b: 0, a: 1}
