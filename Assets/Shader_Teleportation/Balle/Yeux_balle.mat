@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Yeux_balle
-  m_Shader: {fileID: 4800000, guid: 398050785f10f434c9891e816db63afa, type: 3}
+  m_Shader: {fileID: 4800000, guid: 9545f78a671dcbf4380219aa8cbbbb75, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
   m_CustomRenderQueue: -1
@@ -119,6 +119,13 @@ Material:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Yeux
+        second:
+          m_Texture: {fileID: 2800000, guid: d0430f2fe2a4e7e4a89aebf7c2bcbf63, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
     m_Floats:
       data:
         first:
@@ -210,10 +217,6 @@ Material:
         second: 80
       data:
         first:
-          name: _Out
-        second: .0500000007
-      data:
-        first:
           name: _node_5367
         second: 1
       data:
@@ -224,6 +227,10 @@ Material:
         first:
           name: _node_1300
         second: 80
+      data:
+        first:
+          name: _Out
+        second: .0500000007
     m_Colors:
       data:
         first:

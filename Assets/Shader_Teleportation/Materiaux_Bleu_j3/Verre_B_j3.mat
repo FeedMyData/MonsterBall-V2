@@ -214,7 +214,7 @@ Material:
       data:
         first:
           name: _Color_base
-        second: {r: .588235319, g: .588235319, b: .588235319, a: 1}
+        second: {r: .882352948, g: .882352948, b: .882352948, a: 1}
       data:
         first:
           name: _Color_tp
