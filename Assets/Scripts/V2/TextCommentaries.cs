@@ -8,9 +8,6 @@ public class TextCommentaries : MonoBehaviour {
     public Text blueText;
     public Text redText;
 
-    private string blue = "#68C5EE";
-    private string red = "#AB0101";
-
     public float timeBeforeOutGoal = 1.5f;
 
     public string[] commentsForGoalsByPlayers;
@@ -65,15 +62,15 @@ public class TextCommentaries : MonoBehaviour {
 
         if (side == "TeamBlu")
         {
-            textToWriteOn = blueText;
-            timerBlueCom = timeBeforeOutGoal;
-            blueText.GetComponent<Animator>().SetBool("doOUT", false);
-        }
-        else if (side == "TeamRed")
-        {
             textToWriteOn = redText;
             timerRedCom = timeBeforeOutGoal;
             redText.GetComponent<Animator>().SetBool("doOUT", false);
+        }
+        else if (side == "TeamRed")
+        {
+            textToWriteOn = blueText;
+            timerBlueCom = timeBeforeOutGoal;
+            blueText.GetComponent<Animator>().SetBool("doOUT", false);
         }
         else
         {
