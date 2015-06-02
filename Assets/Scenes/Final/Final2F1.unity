@@ -177,6 +177,7 @@ MonoBehaviour:
   speedDivisionFactor: 8
   spaceBetweenBallPlayer: 3
   fovBall: 110
+  angleAvoidPlayer: 45
   areaMagnet: 3
   speedMagnet: 40
   wrathMax: 100
@@ -188,6 +189,8 @@ MonoBehaviour:
   monsterScale: 6
   monsterMass: 20
   safeTransform: .699999988
+  nbCycleMonster: 3
+  durationLoadingCharge: 2
   durationInvul: 2
   coefColliderMonster: .699999988
   durationEatingPlayer: 1
@@ -201,7 +204,6 @@ MonoBehaviour:
   distanceSoundChase: 5
   rngSoundChase: 1
   timeBetweenTwoChaseSound: 5
-  durationBeforeLoseStriker: 3
 --- !u!54 &7400958
 Rigidbody:
   m_ObjectHideFlags: 0
