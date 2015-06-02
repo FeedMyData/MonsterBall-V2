@@ -728,4 +728,17 @@ public class MonsterControllerF : MonoBehaviour {
     {
         return striker;
     }
+
+    void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.name == "socle")
+        {
+            Debug.Log("collision socle");
+        }
+
+        if (other.gameObject.tag == "TeamBlu" || other.gameObject.tag == "TeamRed")
+        {
+            Debug.Log("collision player");
+        }
+    }
 }

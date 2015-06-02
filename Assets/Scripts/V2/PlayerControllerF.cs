@@ -278,7 +278,10 @@ public class PlayerControllerF : MonoBehaviour
 
                 GetComponentInChildren<Animator>().SetBool("isCharging", true);
 				foreach(Animator animator in GetComponentsInChildren<Animator>())
-					animator.SetTrigger("grow");	
+                {
+                    if(animator.name == "arme")
+                        animator.SetTrigger("grow");
+                }
 			}
         }
 
@@ -395,7 +398,8 @@ public class PlayerControllerF : MonoBehaviour
                     GetComponentInChildren<Animator>().SetTrigger("hit");
 					//Debug.Log("hit");
 					foreach(Animator animator in GetComponentsInChildren<Animator>())
-						animator.SetTrigger("shrink");
+                        if (animator.name == "arme")
+						    animator.SetTrigger("shrink");
 				}
             }
         }
@@ -469,7 +473,8 @@ public class PlayerControllerF : MonoBehaviour
                 if (monster.IsTouchable())
                 {
                    // monster.OnClickHitEvent += ;
-                    if (monster.GetMagnet().GetComponent<PlayerControllerF>().team != team || monster.GetMagnet() == this.gameObject)
+
+                    if (monster.GetMagnet() == null || monster.GetMagnet() == this.gameObject || (monster.GetMagnet() != null && monster.GetMagnet().GetComponent<PlayerControllerF>().team != team))
                     {
                         monster.callDisableMagnet();
                         monster.SetStriker(this);
