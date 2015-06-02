@@ -8,6 +8,7 @@ public class TextCommentaries : MonoBehaviour {
     public Text blueText;
     public Text redText;
 
+
     public float timeBeforeOutGoal = 1.5f;
 
     public string[] commentsForGoalsByPlayers;
