@@ -302,49 +302,64 @@ public class PlayerControllerF : MonoBehaviour
             }
         }
 
-        if (Input.GetButtonUp(fire) && loading)
+        if (Input.GetButtonUp(fire))
         {
-            if (GetComponentInChildren<Animator>() && GetComponentInChildren<Animator>().GetBool("isCharging") == true){
+            float valueCirclePlayer = GameControllerF.InCircle(gameObject);
 
-                GetComponentInChildren<Animator>().SetBool("isCharging", false);
-
-                sound.StopEvent("SFX_Niveks_ChargeAttente", gameObject,50);
-                sound.StopEvent("SFX_Niveks_ChargeCoup", gameObject, 50);
-			}
-            loading = false;
-            if (bonus != null)
+            if (loading && valueCirclePlayer<0.70f)
             {
-                bonus.Activated(transform.position);
-                bonus = null;
-            }
-            else
-            {
-                List<GameObject> tabProxi = GameControllerF.PlayerView(this, rangeShoot, angleShoot);
-
-                if (tabProxi.Count > 0)
+                if (GetComponentInChildren<Animator>() && GetComponentInChildren<Animator>().GetBool("isCharging") == true)
                 {
-                    bool onePunch = false;
-                    for (int i = 0; i < tabProxi.Count; i++)
-                    {
-                        if (Hit(tabProxi[i]))
-                        {
-                            onePunch = true;
-                        }
-                    }
 
-                    if (onePunch)
+                    GetComponentInChildren<Animator>().SetBool("isCharging", false);
+
+                    sound.StopEvent("SFX_Niveks_ChargeAttente", gameObject, 50);
+                    sound.StopEvent("SFX_Niveks_ChargeCoup", gameObject, 50);
+                }
+                loading = false;
+                if (bonus != null)
+                {
+                    bonus.Activated(transform.position);
+                    bonus = null;
+                }
+                else
+                {
+                    List<GameObject> tabProxi = GameControllerF.PlayerView(this, rangeShoot, angleShoot);
+
+                    if (tabProxi.Count > 0)
                     {
-                        if (power > (powerMax - powerMax * 0.1f))
+                        bool onePunch = false;
+                        for (int i = 0; i < tabProxi.Count; i++)
                         {
-                            sound.PlayEvent("SFX_Niveks_CoupFort", gameObject);
-                            coupsCharges++;
-                            coupsDonnes++;
+                            if (Hit(tabProxi[i]))
+                            {
+                                onePunch = true;
+                            }
+                        }
+
+                        if (onePunch)
+                        {
+                            if (power > (powerMax - powerMax * 0.1f))
+                            {
+                                sound.PlayEvent("SFX_Niveks_CoupFort", gameObject);
+                                coupsCharges++;
+                                coupsDonnes++;
+                            }
+                            else
+                            {
+                                sound.PlayEvent("SFX_Niveks_CoupFaible", gameObject);
+                                coupsDonnes++;
+                            }
                         }
                         else
                         {
-                            sound.PlayEvent("SFX_Niveks_CoupFaible", gameObject);
-                            coupsDonnes++;
+                            sound.PlayEvent("SFX_Niveks_Woosh", gameObject);
+                            coupsVide++;
                         }
+
+                        /*if (GetComponentInChildren<Animator>())
+                            GetComponentInChildren<Animator>().SetTrigger("hit");
+                        return;*/
                     }
                     else
                     {
@@ -352,55 +367,65 @@ public class PlayerControllerF : MonoBehaviour
                         coupsVide++;
                     }
 
-                    /*if (GetComponentInChildren<Animator>())
+                    /*else
+                    {
+                        List<GameObject> tabProxiDash = GameControllerF.PlayerView(this, rangeDash, angleDash);
+
+                        float distanceNearest = float.PositiveInfinity;
+                        GameObject nearest = null;
+
+                        for (int i = 0; i < tabProxiDash.Count; i++)
+                        {
+                            //Pikachu sert juste de stockage
+                            float pikachu = GameControllerF.Distance(this.gameObject, tabProxiDash[i]);
+                            if (tabProxiDash[i].tag != this.tag && pikachu < distanceNearest)
+                            {
+                                distanceNearest = pikachu;
+                                nearest = tabProxiDash[i];
+                            }
+                        }
+
+                        if (nearest != null)
+                        {
+                            if (Hit(nearest))
+                            {
+                                posDash = nearest.transform.position;
+                                dash = true;
+                                StartCoroutine(Stun(stunDash));
+                                if (GetComponentInChildren<Animator>())
+                                    GetComponentInChildren<Animator>().SetTrigger("dash");
+                                return;
+                            }
+                        }
+                    }*/
+                    if (GetComponentInChildren<Animator>())
+                    {
+
                         GetComponentInChildren<Animator>().SetTrigger("hit");
-                    return;*/
+                        //Debug.Log("hit");
+                        foreach (Animator animator in GetComponentsInChildren<Animator>())
+                            if (animator.name == "arme")
+                                animator.SetTrigger("shrink");
+                    }
                 }
-                else
+            }
+            else
+            {
+                loading = false;
+                if (GetComponentInChildren<Animator>() && GetComponentInChildren<Animator>().GetBool("isCharging") == true)
+                {
+
+                    GetComponentInChildren<Animator>().SetBool("isCharging", false);
+
+                    sound.StopEvent("SFX_Niveks_ChargeAttente", gameObject, 50);
+                    sound.StopEvent("SFX_Niveks_ChargeCoup", gameObject, 50);
+                }
+
+                if (valueCirclePlayer >= 0.7f)
                 {
                     sound.PlayEvent("SFX_Niveks_Woosh", gameObject);
-                    coupsVide++;
                 }
-                
-                /*else
-                {
-                    List<GameObject> tabProxiDash = GameControllerF.PlayerView(this, rangeDash, angleDash);
-
-                    float distanceNearest = float.PositiveInfinity;
-                    GameObject nearest = null;
-
-                    for (int i = 0; i < tabProxiDash.Count; i++)
-                    {
-                        //Pikachu sert juste de stockage
-                        float pikachu = GameControllerF.Distance(this.gameObject, tabProxiDash[i]);
-                        if (tabProxiDash[i].tag != this.tag && pikachu < distanceNearest)
-                        {
-                            distanceNearest = pikachu;
-                            nearest = tabProxiDash[i];
-                        }
-                    }
-
-                    if (nearest != null)
-                    {
-                        if (Hit(nearest))
-                        {
-                            posDash = nearest.transform.position;
-                            dash = true;
-                            StartCoroutine(Stun(stunDash));
-                            if (GetComponentInChildren<Animator>())
-                                GetComponentInChildren<Animator>().SetTrigger("dash");
-                            return;
-                        }
-                    }
-                }*/
-                if (GetComponentInChildren<Animator>()){
-
-                    GetComponentInChildren<Animator>().SetTrigger("hit");
-					//Debug.Log("hit");
-					foreach(Animator animator in GetComponentsInChildren<Animator>())
-                        if (animator.name == "arme")
-						    animator.SetTrigger("shrink");
-				}
+                //relache la pression et casse l'anim
             }
         }
     }
