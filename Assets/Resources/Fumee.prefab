@@ -10,7 +10,6 @@ GameObject:
   - 4: {fileID: 427786}
   - 198: {fileID: 19821370}
   - 199: {fileID: 19950310}
-  - 114: {fileID: 11492704}
   m_Layer: 0
   m_Name: Fumee
   m_TagString: Untagged
@@ -30,17 +29,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!114 &11492704
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 151284}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64be9ef18fdb80143981045f45d457a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!198 &19821370
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -53,7 +41,7 @@ ParticleSystem:
   randomSeed: 0
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   moveWithTransform: 1
   InitialModule:
     enabled: 1
