@@ -235,15 +235,9 @@ public class MonsterControllerF : MonoBehaviour {
 
                 if (GameControllerF.InCircle(gameObject) > 0.80f)
                 {
+                    float newDirection = transform.eulerAngles.y +180;
 
-                    float newDirection = transform.eulerAngles.y+180;//(+-angle)
-                    if(UnityEngine.Random.value<0.5f){
-                        newDirection -= UnityEngine.Random.Range(30,45+angleChangeDirection);
-                    }
-                    else{
-                        newDirection += UnityEngine.Random.Range(30,45+angleChangeDirection);
-
-                    }
+                    newDirection += GetAngleBounce(transform.position);
 
                     transform.eulerAngles = new Vector3(0,newDirection,0);
                 }
@@ -673,6 +667,25 @@ public class MonsterControllerF : MonoBehaviour {
                 }
             }
         }
+    }
+
+    float GetAngleBounce(Vector3 position)
+    {
+        float angle = Vector3.Angle(transform.forward, position - Vector3.zero);
+
+        Vector3 perp = Vector3.Cross(transform.forward, position - Vector3.zero);
+        float dir = Vector3.Dot(perp, Vector3.up);
+
+        if (dir >= 0f)
+        {
+            angle *= 1;
+        }
+        else if (dir < 0f)
+        {
+            angle *= -1;
+        }
+
+        return angle;
     }
 
     public bool IsTouchable()
