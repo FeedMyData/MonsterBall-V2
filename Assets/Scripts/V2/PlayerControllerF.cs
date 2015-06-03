@@ -105,7 +105,7 @@ public class PlayerControllerF : MonoBehaviour
         for (int i = 0; i < tabSprite.Length; i++)
         {
 
-            if (tabSprite[i].name == "Circle2")
+            if (tabSprite[i].name == "Circle")
                 spriteGround = tabSprite[i];
             else if (tabSprite[i].name == "SpriteBonus")
                 spriteBonus = tabSprite[i];
@@ -176,37 +176,37 @@ public class PlayerControllerF : MonoBehaviour
                 horizontal = "Horizontal1";
                 vertical = "Vertical1";
                 fire = "Fire1";
-                if (team == GameControllerF.Team.Blu)
-                    spriteGround.GetComponent<Renderer>().material.color = new Color32(0, 0, 255, 255);
-                else
-                    spriteGround.GetComponent<Renderer>().material.color = new Color32(255, 0, 0, 255);
+                //if (team == GameControllerF.Team.Blu)
+                //    spriteGround.GetComponent<Renderer>().material.color = new Color32(0, 0, 255, 255);
+                //else
+                //    spriteGround.GetComponent<Renderer>().material.color = new Color32(255, 0, 0, 255);
                 break;
             case GameControllerF.Jersey.player2:
                 horizontal = "Horizontal2";
                 vertical = "Vertical2";
                 fire = "Fire2";
-                if (team == GameControllerF.Team.Blu)
-                    spriteGround.GetComponent<Renderer>().material.color = new Color32(0, 128, 255, 255);
-                else
-                    spriteGround.GetComponent<Renderer>().material.color = new Color32(255, 128, 0, 255);
+                //if (team == GameControllerF.Team.Blu)
+                //    spriteGround.GetComponent<Renderer>().material.color = new Color32(0, 128, 255, 255);
+                //else
+                //    spriteGround.GetComponent<Renderer>().material.color = new Color32(255, 128, 0, 255);
                 break;
             case GameControllerF.Jersey.player3:
                 horizontal = "Horizontal3";
                 vertical = "Vertical3";
                 fire = "Fire3";
-                if (team == GameControllerF.Team.Blu)
-                    spriteGround.GetComponent<Renderer>().material.color = new Color32(0, 255, 255, 255);
-                else
-                    spriteGround.GetComponent<Renderer>().material.color = new Color32(255, 115, 200, 255);
+                //if (team == GameControllerF.Team.Blu)
+                //    spriteGround.GetComponent<Renderer>().material.color = new Color32(0, 255, 255, 255);
+                //else
+                //    spriteGround.GetComponent<Renderer>().material.color = new Color32(255, 115, 200, 255);
                 break;
             case GameControllerF.Jersey.player4:
                 horizontal = "Horizontal4";
                 vertical = "Vertical4";
                 fire = "Fire4";
-                if (team == GameControllerF.Team.Blu)
-                    spriteGround.GetComponent<Renderer>().material.color = new Color32(0, 0, 128, 255);
-                else
-                    spriteGround.GetComponent<Renderer>().material.color = new Color32(128, 0, 0, 255);
+                //if (team == GameControllerF.Team.Blu)
+                //    spriteGround.GetComponent<Renderer>().material.color = new Color32(0, 0, 128, 255);
+                //else
+                //    spriteGround.GetComponent<Renderer>().material.color = new Color32(128, 0, 0, 255);
                 break;
             default:
                 Debug.LogError("L'objet " + name + " n'est attibué à aucun joueur ! Veuillez remplir le champ 'Jersey' !");
