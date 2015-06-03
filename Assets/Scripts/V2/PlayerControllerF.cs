@@ -90,11 +90,15 @@ public class PlayerControllerF : MonoBehaviour
     [HideInInspector]
     public int marqueBut = 0;
 
+    private GameManagerF manager;
+
     // Use this for initialization
     void Start()
     {
         controller = GetComponent<CharacterController>();
         tp = GetComponentInChildren<TeleportationF>();
+        manager = GameControllerF.getManager();
+
 
         SpriteRenderer[] tabSprite = GetComponentsInChildren<SpriteRenderer>();
 
@@ -530,6 +534,8 @@ public class PlayerControllerF : MonoBehaviour
                             Camera.main.GetComponent<CameraShake>().shake(0.6f, 0.4f, 1.0f);
 
                         }
+
+                        manager.SetLastPlayerHitting(gameObject);
 
                         return true;
                     }

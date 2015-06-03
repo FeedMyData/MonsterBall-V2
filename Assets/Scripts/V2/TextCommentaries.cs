@@ -8,12 +8,14 @@ public class TextCommentaries : MonoBehaviour {
     public Text blueText;
     public Text redText;
 
-
+    [Header("Goals")]
     public float timeBeforeOutGoal = 1.5f;
 
     public string[] commentsForGoalsByPlayers;
     public string[] commentsForGoalsByMonster;
+    public string[] commentsForSelfGoals;
 
+    [Header("Informations")]
     public float timerBeforeOutInformations = 3.0f;
 
     public string instructionWhenBall = "Kick goals !";
@@ -96,6 +98,10 @@ public class TextCommentaries : MonoBehaviour {
                     GoalByMonster();
                     break;
 
+                case "playerOG":
+                    GoalByOwnTeam();
+                    break;
+
                 case "ballP":
                     BallPhase();
                     break;
@@ -126,6 +132,12 @@ public class TextCommentaries : MonoBehaviour {
     {
         textToWriteOn.text = commentsForGoalsByMonster[Random.Range(0, commentsForGoalsByMonster.Length)];
         textToWriteOn.GetComponent<Animator>().SetTrigger("playerIN");
+    }
+
+    void GoalByOwnTeam()
+    {
+        textToWriteOn.text = commentsForSelfGoals[Random.Range(0, commentsForSelfGoals.Length)];
+        textToWriteOn.GetComponent<Animator>().SetTrigger("monsterIN");
     }
 
     void BallPhase()

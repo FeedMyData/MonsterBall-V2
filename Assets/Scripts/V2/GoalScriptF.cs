@@ -45,10 +45,31 @@ public class GoalScriptF : MonoBehaviour {
         {
             if (!other.gameObject.GetComponent<MonsterControllerF>().IsMonsterForm())
             {
+                bool goalInHisTeam = false;
+
+                if (manager.GetLastPlayerHitting() != null)
+                {
+                    if (tag == manager.GetLastPlayerHitting().tag)
+                    {
+                        goalInHisTeam = true;
+                    }
+                }
+
                 //feedbacks goal balle
                 Camera.main.GetComponent<CameraShake>().shake(0.8f, 0.6f, 1.0f);
                 guiEffectsScript.flashGoal(tag);
-                commentariesScript.WriteCommentary(tag, "playerG");
+
+                
+                if (goalInHisTeam)
+                {
+                    string tagCommentary = tag;
+                    tagCommentary = (tagCommentary == "TeamBlu") ? "TeamRed" : "TeamBlu";
+                    commentariesScript.WriteCommentary(tagCommentary, "playerOG");
+                }
+                else
+                {
+                    commentariesScript.WriteCommentary(tag, "playerG");
+                }
 
                 GetComponent<Renderer>().material.SetFloat("_Switch_goal", 1);
                 StartCoroutine(StopSwitchGoal());

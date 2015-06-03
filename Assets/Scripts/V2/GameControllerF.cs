@@ -56,6 +56,7 @@ public class GameControllerF : MonoBehaviour {
     private static Transform staticPosBluGoal;
     private static Transform staticPosRedGoal;
 
+    //private GameObject lastPlayerHitting;
 
 	// Use this for initialization
 	void Awake () {
@@ -342,4 +343,5 @@ public class GameControllerF : MonoBehaviour {
     {
         return staticCake;
     }
+
 }
