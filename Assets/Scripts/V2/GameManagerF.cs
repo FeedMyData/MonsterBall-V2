@@ -80,14 +80,14 @@ public class GameManagerF : MonoBehaviour {
             RefreshDuration();
 
             //feedbacks end timer
-            if (durationInSecond == 0)
-            {
-                commentariesScript.WriteCommentary("both", "matchE");
-            }
-            else if(durationInSecond <= whenToBeginEndTimer)
-            {
-                commentariesScript.WriteCustom("both", durationInSecond.ToString(), 1.0f, "countdownIN");
-            }
+            //if (durationInSecond == 0)
+            //{
+            //    commentariesScript.WriteCommentary("both", "matchE");
+            //}
+            //else if(durationInSecond <= whenToBeginEndTimer)
+            //{
+            //    commentariesScript.WriteCustom("both", durationInSecond.ToString(), 1.0f, "countdownIN");
+            //}
         }
     }
 

@@ -38,7 +38,7 @@ public class CollisionTerrain : MonoBehaviour {
             if (light.gameObject.activeSelf)
             {
                 light.GetComponent<Light>().intensity -= Time.deltaTime * speedFadingFactor;
-                if (light.GetComponent<Light>().intensity < 0)
+                if (light.GetComponent<Light>().intensity <= 0.1f)
                 {
                     light.GetComponent<Light>().intensity = 0;
                     light.gameObject.SetActive(false);
