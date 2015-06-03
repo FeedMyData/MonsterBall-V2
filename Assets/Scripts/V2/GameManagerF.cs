@@ -26,6 +26,8 @@ public class GameManagerF : MonoBehaviour {
     private TextCommentaries commentariesScript;
     public int whenToBeginEndTimer = 5;
 
+    private GameObject lastPlayerHitting;
+
 	// Use this for initialization
 
     void Start()
@@ -78,14 +80,14 @@ public class GameManagerF : MonoBehaviour {
             RefreshDuration();
 
             //feedbacks end timer
-            if (durationInSecond == 0)
-            {
-                commentariesScript.WriteCommentary("both", "matchE");
-            }
-            else if(durationInSecond <= whenToBeginEndTimer)
-            {
-                commentariesScript.WriteCustom("both", durationInSecond.ToString(), 1.0f, "countdownIN");
-            }
+            //if (durationInSecond == 0)
+            //{
+            //    commentariesScript.WriteCommentary("both", "matchE");
+            //}
+            //else if(durationInSecond <= whenToBeginEndTimer)
+            //{
+            //    commentariesScript.WriteCustom("both", durationInSecond.ToString(), 1.0f, "countdownIN");
+            //}
         }
     }
 
@@ -145,5 +147,15 @@ public class GameManagerF : MonoBehaviour {
         Vector3 rngPop = Random.insideUnitSphere*5;
         rngPop.y = 1.0f;
         Instantiate(GameControllerF.GetCake(),rngPop,Quaternion.identity);
+    }
+
+    public GameObject GetLastPlayerHitting()
+    {
+        return lastPlayerHitting;
+    }
+
+    public void SetLastPlayerHitting(GameObject player)
+    {
+        lastPlayerHitting = player;
     }
 }

@@ -90,11 +90,15 @@ public class PlayerControllerF : MonoBehaviour
     [HideInInspector]
     public int marqueBut = 0;
 
+    private GameManagerF manager;
+
     // Use this for initialization
     void Start()
     {
         controller = GetComponent<CharacterController>();
         tp = GetComponentInChildren<TeleportationF>();
+        manager = GameControllerF.getManager();
+
 
         SpriteRenderer[] tabSprite = GetComponentsInChildren<SpriteRenderer>();
 
@@ -278,7 +282,10 @@ public class PlayerControllerF : MonoBehaviour
 
                 GetComponentInChildren<Animator>().SetBool("isCharging", true);
 				foreach(Animator animator in GetComponentsInChildren<Animator>())
-					animator.SetTrigger("grow");	
+                {
+                    if(animator.name == "arme")
+                        animator.SetTrigger("grow");
+                }
 			}
         }
 
@@ -299,49 +306,64 @@ public class PlayerControllerF : MonoBehaviour
             }
         }
 
-        if (Input.GetButtonUp(fire) && loading)
+        if (Input.GetButtonUp(fire))
         {
-            if (GetComponentInChildren<Animator>() && GetComponentInChildren<Animator>().GetBool("isCharging") == true){
+            //float valueCirclePlayer = GameControllerF.InCircle(gameObject);
 
-                GetComponentInChildren<Animator>().SetBool("isCharging", false);
-
-                sound.StopEvent("SFX_Niveks_ChargeAttente", gameObject,50);
-                sound.StopEvent("SFX_Niveks_ChargeCoup", gameObject, 50);
-			}
-            loading = false;
-            if (bonus != null)
+            if (loading) // && valueCirclePlayer<0.70f
             {
-                bonus.Activated(transform.position);
-                bonus = null;
-            }
-            else
-            {
-                List<GameObject> tabProxi = GameControllerF.PlayerView(this, rangeShoot, angleShoot);
-
-                if (tabProxi.Count > 0)
+                if (GetComponentInChildren<Animator>() && GetComponentInChildren<Animator>().GetBool("isCharging") == true)
                 {
-                    bool onePunch = false;
-                    for (int i = 0; i < tabProxi.Count; i++)
-                    {
-                        if (Hit(tabProxi[i]))
-                        {
-                            onePunch = true;
-                        }
-                    }
 
-                    if (onePunch)
+                    GetComponentInChildren<Animator>().SetBool("isCharging", false);
+
+                    sound.StopEvent("SFX_Niveks_ChargeAttente", gameObject, 50);
+                    sound.StopEvent("SFX_Niveks_ChargeCoup", gameObject, 50);
+                }
+                loading = false;
+                if (bonus != null)
+                {
+                    bonus.Activated(transform.position);
+                    bonus = null;
+                }
+                else
+                {
+                    List<GameObject> tabProxi = GameControllerF.PlayerView(this, rangeShoot, angleShoot);
+
+                    if (tabProxi.Count > 0)
                     {
-                        if (power > (powerMax - powerMax * 0.1f))
+                        bool onePunch = false;
+                        for (int i = 0; i < tabProxi.Count; i++)
                         {
-                            sound.PlayEvent("SFX_Niveks_CoupFort", gameObject);
-                            coupsCharges++;
-                            coupsDonnes++;
+                            if (Hit(tabProxi[i]))
+                            {
+                                onePunch = true;
+                            }
+                        }
+
+                        if (onePunch)
+                        {
+                            if (power > (powerMax - powerMax * 0.1f))
+                            {
+                                sound.PlayEvent("SFX_Niveks_CoupFort", gameObject);
+                                coupsCharges++;
+                                coupsDonnes++;
+                            }
+                            else
+                            {
+                                sound.PlayEvent("SFX_Niveks_CoupFaible", gameObject);
+                                coupsDonnes++;
+                            }
                         }
                         else
                         {
-                            sound.PlayEvent("SFX_Niveks_CoupFaible", gameObject);
-                            coupsDonnes++;
+                            sound.PlayEvent("SFX_Niveks_Woosh", gameObject);
+                            coupsVide++;
                         }
+
+                        /*if (GetComponentInChildren<Animator>())
+                            GetComponentInChildren<Animator>().SetTrigger("hit");
+                        return;*/
                     }
                     else
                     {
@@ -349,54 +371,65 @@ public class PlayerControllerF : MonoBehaviour
                         coupsVide++;
                     }
 
-                    /*if (GetComponentInChildren<Animator>())
+                    /*else
+                    {
+                        List<GameObject> tabProxiDash = GameControllerF.PlayerView(this, rangeDash, angleDash);
+
+                        float distanceNearest = float.PositiveInfinity;
+                        GameObject nearest = null;
+
+                        for (int i = 0; i < tabProxiDash.Count; i++)
+                        {
+                            //Pikachu sert juste de stockage
+                            float pikachu = GameControllerF.Distance(this.gameObject, tabProxiDash[i]);
+                            if (tabProxiDash[i].tag != this.tag && pikachu < distanceNearest)
+                            {
+                                distanceNearest = pikachu;
+                                nearest = tabProxiDash[i];
+                            }
+                        }
+
+                        if (nearest != null)
+                        {
+                            if (Hit(nearest))
+                            {
+                                posDash = nearest.transform.position;
+                                dash = true;
+                                StartCoroutine(Stun(stunDash));
+                                if (GetComponentInChildren<Animator>())
+                                    GetComponentInChildren<Animator>().SetTrigger("dash");
+                                return;
+                            }
+                        }
+                    }*/
+                    if (GetComponentInChildren<Animator>())
+                    {
+
                         GetComponentInChildren<Animator>().SetTrigger("hit");
-                    return;*/
-                }
-                else
-                {
-                    sound.PlayEvent("SFX_Niveks_Woosh", gameObject);
-                    coupsVide++;
-                }
-                
-                /*else
-                {
-                    List<GameObject> tabProxiDash = GameControllerF.PlayerView(this, rangeDash, angleDash);
-
-                    float distanceNearest = float.PositiveInfinity;
-                    GameObject nearest = null;
-
-                    for (int i = 0; i < tabProxiDash.Count; i++)
-                    {
-                        //Pikachu sert juste de stockage
-                        float pikachu = GameControllerF.Distance(this.gameObject, tabProxiDash[i]);
-                        if (tabProxiDash[i].tag != this.tag && pikachu < distanceNearest)
-                        {
-                            distanceNearest = pikachu;
-                            nearest = tabProxiDash[i];
-                        }
+                        //Debug.Log("hit");
+                        foreach (Animator animator in GetComponentsInChildren<Animator>())
+                            if (animator.name == "arme")
+                                animator.SetTrigger("shrink");
                     }
+                }
+            }
+            else
+            {
+                loading = false;
+                if (GetComponentInChildren<Animator>() && GetComponentInChildren<Animator>().GetBool("isCharging") == true)
+                {
 
-                    if (nearest != null)
-                    {
-                        if (Hit(nearest))
-                        {
-                            posDash = nearest.transform.position;
-                            dash = true;
-                            StartCoroutine(Stun(stunDash));
-                            if (GetComponentInChildren<Animator>())
-                                GetComponentInChildren<Animator>().SetTrigger("dash");
-                            return;
-                        }
-                    }
-                }*/
-                if (GetComponentInChildren<Animator>()){
+                    GetComponentInChildren<Animator>().SetBool("isCharging", false);
 
-                    GetComponentInChildren<Animator>().SetTrigger("hit");
-					//Debug.Log("hit");
-					foreach(Animator animator in GetComponentsInChildren<Animator>())
-						animator.SetTrigger("shrink");
-				}
+                    sound.StopEvent("SFX_Niveks_ChargeAttente", gameObject, 50);
+                    sound.StopEvent("SFX_Niveks_ChargeCoup", gameObject, 50);
+                }
+
+                //if (valueCirclePlayer >= 0.7f)
+                //{
+                //    sound.PlayEvent("SFX_Niveks_Woosh", gameObject);
+                //}
+                //relache la pression et casse l'anim
             }
         }
     }
@@ -469,7 +502,8 @@ public class PlayerControllerF : MonoBehaviour
                 if (monster.IsTouchable())
                 {
                    // monster.OnClickHitEvent += ;
-                    if (monster.GetMagnet().GetComponent<PlayerControllerF>().team != team || monster.GetMagnet() == this.gameObject)
+
+                    if (monster.GetMagnet() == null || monster.GetMagnet() == this.gameObject || (monster.GetMagnet() != null && monster.GetMagnet().GetComponent<PlayerControllerF>().team != team))
                     {
                         monster.callDisableMagnet();
                         monster.SetStriker(this);
@@ -500,6 +534,8 @@ public class PlayerControllerF : MonoBehaviour
                             Camera.main.GetComponent<CameraShake>().shake(0.6f, 0.4f, 1.0f);
 
                         }
+
+                        manager.SetLastPlayerHitting(gameObject);
 
                         return true;
                     }

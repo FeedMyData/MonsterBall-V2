@@ -4,10 +4,17 @@ using System.Collections;
 public class GoalScriptMonster : MonoBehaviour {
 
     private GameManagerF manager;
-    
+
+    private Renderer goalRendererToFlash;
+
     //feedbacks
     private GuiEffects guiEffectsScript;
     private TextCommentaries commentariesScript;
+
+    public float durationSwitch = 2.0f;
+    public float durationReturnSwitch = 1.0f;
+    private float timeSwitch;
+    private bool returnSwitch = false;
 
     // Use this for initialization
     void Start()
@@ -15,12 +22,29 @@ public class GoalScriptMonster : MonoBehaviour {
         manager = GameControllerF.getManager();
         guiEffectsScript = GameObject.Find("CanvasFeedbacks").GetComponent<GuiEffects>();
         commentariesScript = GameObject.Find("Commentaries").GetComponent<TextCommentaries>();
+
+        if (tag == "TeamRed")
+        {
+            goalRendererToFlash = GameObject.Find("redGoal").GetComponent<Renderer>();
+        }
+        else
+        {
+            goalRendererToFlash = GameObject.Find("blueGoal").GetComponent<Renderer>();
+        }
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (returnSwitch)
+        {
+            float delayReturnSwitch = Mathf.Abs(((timeSwitch - Time.time) / durationReturnSwitch) - 1); ;
+            goalRendererToFlash.material.SetFloat("_Switch_goal", Mathf.Lerp(1, 0, delayReturnSwitch));
 
+            if (delayReturnSwitch >= 1)
+                returnSwitch = false;
+        }
     }
 
     void OnTriggerEnter(Collider other)
@@ -50,6 +74,9 @@ public class GoalScriptMonster : MonoBehaviour {
                 guiEffectsScript.flashGoal(tag);
                 commentariesScript.WriteCommentary(tag, "monsterG");
 
+                goalRendererToFlash.material.SetFloat("_Switch_goal", 1);
+                StartCoroutine(StopSwitchGoal());
+
                 manager.AddScore(tag);
                 player.Respawn();
 
@@ -68,5 +95,14 @@ public class GoalScriptMonster : MonoBehaviour {
             //    player.AddImpact(dirImpact * 200);
             //}
         }
+    }
+
+    IEnumerator StopSwitchGoal()
+    {
+
+        yield return new WaitForSeconds(durationSwitch);
+
+        timeSwitch = Time.time + durationReturnSwitch;
+        returnSwitch = true;
     }
 }

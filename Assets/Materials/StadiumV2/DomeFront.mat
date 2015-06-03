@@ -26,7 +26,7 @@ Material:
         first:
           name: _Gradient_Color
         second:
-          m_Texture: {fileID: 2800000, guid: 571fcc38fa07d134fac762c1112e1810, type: 3}
+          m_Texture: {fileID: 2800000, guid: 48ab23ec06109254aba51ecbcd4a168c, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
@@ -34,14 +34,14 @@ Material:
           name: _Texture
         second:
           m_Texture: {fileID: 2800000, guid: d75202b96f120c143b1add1cdf2721b8, type: 3}
-          m_Scale: {x: 4, y: 4}
+          m_Scale: {x: 3, y: 3}
           m_Offset: {x: 0, y: 0}
       data:
         first:
           name: _Gradient_Texture_Decay
         second:
-          m_Texture: {fileID: 2800000, guid: aa1c74d7fd0f4464fbbe9312162d2d43, type: 3}
-          m_Scale: {x: 1, y: 1}
+          m_Texture: {fileID: 2800000, guid: f75c9018c32b54142a234f7a281a6215, type: 3}
+          m_Scale: {x: 4, y: 4}
           m_Offset: {x: 0, y: 0}
       data:
         first:
@@ -58,11 +58,11 @@ Material:
       data:
         first:
           name: _Brightness
-        second: 1.39999998
+        second: .400000006
       data:
         first:
           name: _Intensity
-        second: 1.20000005
+        second: .800000012
       data:
         first:
           name: _Gradient_Or_Solid_Color
@@ -70,7 +70,7 @@ Material:
       data:
         first:
           name: _Decay
-        second: .591000021
+        second: .400000006
       data:
         first:
           name: _Soft_Texture
@@ -94,7 +94,7 @@ Material:
       data:
         first:
           name: _Fresnel_Exponent
-        second: 1
+        second: 1.70000005
       data:
         first:
           name: _Pan_Speed

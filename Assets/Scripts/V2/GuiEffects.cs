@@ -4,8 +4,8 @@ using System.Collections;
 
 public class GuiEffects : MonoBehaviour {
 
-    public RawImage redTextureObject;
-    public RawImage blueTextureObject;
+    public RawImage[] redTextureObject;
+    public RawImage[] blueTextureObject;
     private RawImage textureToFlash;
 
     private bool newFlash = false;
@@ -116,11 +116,11 @@ public class GuiEffects : MonoBehaviour {
 
         if (color == "TeamBlu")
         {
-            textureToFlash = blueTextureObject;
+            textureToFlash = blueTextureObject[Random.Range(0, blueTextureObject.Length)];
         }
         else
         {
-            textureToFlash = redTextureObject;
+            textureToFlash = redTextureObject[Random.Range(0, redTextureObject.Length)];
         }
 
         newFlash = true;

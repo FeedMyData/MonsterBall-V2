@@ -8,14 +8,14 @@ public class TextCommentaries : MonoBehaviour {
     public Text blueText;
     public Text redText;
 
-    private string blue = "#68C5EE";
-    private string red = "#AB0101";
-
+    [Header("Goals")]
     public float timeBeforeOutGoal = 1.5f;
 
     public string[] commentsForGoalsByPlayers;
     public string[] commentsForGoalsByMonster;
+    public string[] commentsForSelfGoals;
 
+    [Header("Informations")]
     public float timerBeforeOutInformations = 3.0f;
 
     public string instructionWhenBall = "Kick goals !";
@@ -65,15 +65,15 @@ public class TextCommentaries : MonoBehaviour {
 
         if (side == "TeamBlu")
         {
-            textToWriteOn = blueText;
-            timerBlueCom = timeBeforeOutGoal;
-            blueText.GetComponent<Animator>().SetBool("doOUT", false);
-        }
-        else if (side == "TeamRed")
-        {
             textToWriteOn = redText;
             timerRedCom = timeBeforeOutGoal;
             redText.GetComponent<Animator>().SetBool("doOUT", false);
+        }
+        else if (side == "TeamRed")
+        {
+            textToWriteOn = blueText;
+            timerBlueCom = timeBeforeOutGoal;
+            blueText.GetComponent<Animator>().SetBool("doOUT", false);
         }
         else
         {
@@ -96,6 +96,10 @@ public class TextCommentaries : MonoBehaviour {
 
                 case "monsterG":
                     GoalByMonster();
+                    break;
+
+                case "playerOG":
+                    GoalByOwnTeam();
                     break;
 
                 case "ballP":
@@ -127,6 +131,12 @@ public class TextCommentaries : MonoBehaviour {
     void GoalByMonster()
     {
         textToWriteOn.text = commentsForGoalsByMonster[Random.Range(0, commentsForGoalsByMonster.Length)];
+        textToWriteOn.GetComponent<Animator>().SetTrigger("playerIN");
+    }
+
+    void GoalByOwnTeam()
+    {
+        textToWriteOn.text = commentsForSelfGoals[Random.Range(0, commentsForSelfGoals.Length)];
         textToWriteOn.GetComponent<Animator>().SetTrigger("monsterIN");
     }
 

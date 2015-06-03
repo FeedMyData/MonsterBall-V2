@@ -56,6 +56,7 @@ public class GameControllerF : MonoBehaviour {
     private static Transform staticPosBluGoal;
     private static Transform staticPosRedGoal;
 
+    //private GameObject lastPlayerHitting;
 
 	// Use this for initialization
 	void Awake () {
@@ -285,6 +286,14 @@ public class GameControllerF : MonoBehaviour {
         return ((Mathf.Pow(objVec.x, 2) / Mathf.Pow(fs.x/2, 2)) + (Mathf.Pow(objVec.z, 2) / Mathf.Pow(fs.z/2, 2)));
     }
 
+    public static float InCircle(Vector3 position)
+    {
+        Vector3 fs = FieldSize();
+        Vector3 objVec = position;
+
+        return ((Mathf.Pow(objVec.x, 2) / Mathf.Pow(fs.x / 2, 2)) + (Mathf.Pow(objVec.z, 2) / Mathf.Pow(fs.z / 2, 2)));
+    }
+
     //public static Text GetTxtScore()
     //{
     //    return staticTxtScore;
@@ -334,4 +343,5 @@ public class GameControllerF : MonoBehaviour {
     {
         return staticCake;
     }
+
 }
