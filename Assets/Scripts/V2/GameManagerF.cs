@@ -23,7 +23,6 @@ public class GameManagerF : MonoBehaviour {
 
     private bool displayEnd = false;
 
-    private TextCommentaries commentariesScript;
     public int whenToBeginEndTimer = 5;
 
     private GameObject lastPlayerHitting;
@@ -35,8 +34,6 @@ public class GameManagerF : MonoBehaviour {
         blueScoreTxt = GameControllerF.GetBlueScoreTxt();
         redScoreTxt = GameControllerF.GetRedScoreTxt();
         txtDuration = GameControllerF.GetTxtDuration();
-
-        commentariesScript = GameObject.Find("Commentaries").GetComponent<TextCommentaries>();
 
         RefreshDuration();
         RefreshScore();
@@ -84,10 +81,16 @@ public class GameManagerF : MonoBehaviour {
             //{
             //    commentariesScript.WriteCommentary("both", "matchE");
             //}
-            //else if(durationInSecond <= whenToBeginEndTimer)
+            //else if (durationInSecond <= whenToBeginEndTimer)
             //{
             //    commentariesScript.WriteCustom("both", durationInSecond.ToString(), 1.0f, "countdownIN");
             //}
+            if (durationInSecond <= whenToBeginEndTimer)
+            {
+                Debug.Log(txtDuration.GetComponent<Animator>());
+                txtDuration.GetComponent<Animator>().SetTrigger("countdownIN");
+            }
+
         }
     }
 
