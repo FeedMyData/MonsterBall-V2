@@ -181,7 +181,7 @@ MonoBehaviour:
   angleAvoidPlayer: 45
   areaMagnet: 3
   speedMagnet: 40
-  wrathMax: 10
+  wrathMax: 100
   wrathDribblingValue: 1
   wrathDribblingEachTime: .5
   summon: 2
@@ -1173,7 +1173,7 @@ MonoBehaviour:
   m_Color: {r: .407843143, g: .772549033, b: .933333337, a: 1}
   m_FontData:
     m_Font: {fileID: 12800000, guid: 94b2132946fb55845aa3f03a3275d6f8, type: 3}
-    m_FontSize: 80
+    m_FontSize: 75
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -15950,7 +15950,7 @@ MonoBehaviour:
   m_Color: {r: .670588255, g: .00392156886, b: .00392156886, a: 1}
   m_FontData:
     m_Font: {fileID: 12800000, guid: 94b2132946fb55845aa3f03a3275d6f8, type: 3}
-    m_FontSize: 80
+    m_FontSize: 75
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -17691,7 +17691,7 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -120, y: 182}
+  m_AnchoredPosition: {x: -130, y: 182}
   m_SizeDelta: {x: 600, y: 30}
   m_Pivot: {x: .5, y: .5}
 --- !u!95 &1618995844
@@ -18068,7 +18068,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 120, y: 182}
+  m_AnchoredPosition: {x: 130, y: 182}
   m_SizeDelta: {x: 600, y: 30}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1692075454
