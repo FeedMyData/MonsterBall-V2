@@ -125,7 +125,7 @@ public class TextCommentaries : MonoBehaviour {
     void GoalByMonster()
     {
         textToWriteOn.text = commentsForGoalsByMonster[Random.Range(0, commentsForGoalsByMonster.Length)];
-        textToWriteOn.GetComponent<Animator>().SetTrigger("monsterIN");
+        textToWriteOn.GetComponent<Animator>().SetTrigger("playerIN");
     }
 
     void BallPhase()

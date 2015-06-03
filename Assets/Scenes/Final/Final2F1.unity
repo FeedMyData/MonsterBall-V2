@@ -181,7 +181,7 @@ MonoBehaviour:
   angleAvoidPlayer: 45
   areaMagnet: 3
   speedMagnet: 40
-  wrathMax: 100
+  wrathMax: 10
   wrathDribblingValue: 1
   wrathDribblingEachTime: .5
   summon: 2
@@ -1172,8 +1172,8 @@ MonoBehaviour:
   m_Material: {fileID: 2100000, guid: b81413a37d8cae24e8dbb29b7940fdf7, type: 2}
   m_Color: {r: .407843143, g: .772549033, b: .933333337, a: 1}
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 81d2bd44b44664248aa1ff313c7807ff, type: 3}
-    m_FontSize: 40
+    m_Font: {fileID: 12800000, guid: 94b2132946fb55845aa3f03a3275d6f8, type: 3}
+    m_FontSize: 80
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -5890,8 +5890,8 @@ MonoBehaviour:
   m_Material: {fileID: 2100000, guid: b81413a37d8cae24e8dbb29b7940fdf7, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 81d2bd44b44664248aa1ff313c7807ff, type: 3}
-    m_FontSize: 32
+    m_Font: {fileID: 12800000, guid: 94b2132946fb55845aa3f03a3275d6f8, type: 3}
+    m_FontSize: 60
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -15949,8 +15949,8 @@ MonoBehaviour:
   m_Material: {fileID: 2100000, guid: b81413a37d8cae24e8dbb29b7940fdf7, type: 2}
   m_Color: {r: .670588255, g: .00392156886, b: .00392156886, a: 1}
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 81d2bd44b44664248aa1ff313c7807ff, type: 3}
-    m_FontSize: 40
+    m_Font: {fileID: 12800000, guid: 94b2132946fb55845aa3f03a3275d6f8, type: 3}
+    m_FontSize: 80
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -17692,7 +17692,7 @@ RectTransform:
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
   m_AnchoredPosition: {x: -120, y: 182}
-  m_SizeDelta: {x: 540, y: 30}
+  m_SizeDelta: {x: 600, y: 30}
   m_Pivot: {x: .5, y: .5}
 --- !u!95 &1618995844
 Animator:
@@ -17734,19 +17734,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 2100000, guid: b81413a37d8cae24e8dbb29b7940fdf7, type: 2}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: .407843143, g: .772549033, b: .933333337, a: 1}
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 81d2bd44b44664248aa1ff313c7807ff, type: 3}
-    m_FontSize: 32
+    m_Font: {fileID: 12800000, guid: 94b2132946fb55845aa3f03a3275d6f8, type: 3}
+    m_FontSize: 80
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 4
+    m_Alignment: 5
     m_RichText: 0
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
-    m_LineSpacing: 1.5
+    m_LineSpacing: 1
   m_Text: Kick goals !
 --- !u!222 &1618995847
 CanvasRenderer:
@@ -18069,7 +18069,7 @@ RectTransform:
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
   m_AnchoredPosition: {x: 120, y: 182}
-  m_SizeDelta: {x: 540, y: 30}
+  m_SizeDelta: {x: 600, y: 30}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1692075454
 MonoBehaviour:
@@ -18083,19 +18083,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 2100000, guid: b81413a37d8cae24e8dbb29b7940fdf7, type: 2}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: .670588255, g: .00392156886, b: .00392156886, a: 1}
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 81d2bd44b44664248aa1ff313c7807ff, type: 3}
-    m_FontSize: 32
+    m_Font: {fileID: 12800000, guid: 94b2132946fb55845aa3f03a3275d6f8, type: 3}
+    m_FontSize: 80
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 4
+    m_Alignment: 3
     m_RichText: 0
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
-    m_LineSpacing: 1.5
+    m_LineSpacing: 1
   m_Text: Kick goals !
 --- !u!95 &1692075455
 Animator:
@@ -20296,9 +20296,19 @@ MonoBehaviour:
   - Awesome
   - Nice
   - Great
+  - Excellent
+  - Amazing
+  - Terrific
+  - Impressive
+  - Incredible
+  - Fabulous
   commentsForGoalsByMonster:
   - Tasty
+  - Sweet
   - Delicious
+  - Savoury
+  - Luscious
+  - Dainty
   timerBeforeOutInformations: 3
   instructionWhenBall: Kick goals !
   instructionWhenMonster: RUN !!!
