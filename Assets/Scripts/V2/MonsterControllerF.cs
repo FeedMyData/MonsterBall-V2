@@ -407,7 +407,8 @@ public class MonsterControllerF : MonoBehaviour {
     {
         body.velocity = Vector3.zero;
         body.angularVelocity = Vector3.zero;
-        transform.rotation = Quaternion.identity;
+        //transform.rotation = Quaternion.identity;
+        transform.eulerAngles = new Vector3(0,UnityEngine.Random.Range(0,360),0);
         transform.position = new Vector3(0,5,0);
 
         sound.PlayEvent("VX_Balle_RemiseEnJeu", gameObject);
