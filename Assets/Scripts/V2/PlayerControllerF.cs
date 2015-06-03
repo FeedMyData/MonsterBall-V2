@@ -304,9 +304,9 @@ public class PlayerControllerF : MonoBehaviour
 
         if (Input.GetButtonUp(fire))
         {
-            float valueCirclePlayer = GameControllerF.InCircle(gameObject);
+            //float valueCirclePlayer = GameControllerF.InCircle(gameObject);
 
-            if (loading && valueCirclePlayer<0.70f)
+            if (loading) // && valueCirclePlayer<0.70f
             {
                 if (GetComponentInChildren<Animator>() && GetComponentInChildren<Animator>().GetBool("isCharging") == true)
                 {
@@ -421,10 +421,10 @@ public class PlayerControllerF : MonoBehaviour
                     sound.StopEvent("SFX_Niveks_ChargeCoup", gameObject, 50);
                 }
 
-                if (valueCirclePlayer >= 0.7f)
-                {
-                    sound.PlayEvent("SFX_Niveks_Woosh", gameObject);
-                }
+                //if (valueCirclePlayer >= 0.7f)
+                //{
+                //    sound.PlayEvent("SFX_Niveks_Woosh", gameObject);
+                //}
                 //relache la pression et casse l'anim
             }
         }
