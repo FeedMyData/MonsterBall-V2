@@ -36,7 +36,7 @@ public class MonsterControllerF : MonoBehaviour {
     public float durationSecondPart = 5.0f;
     private int wrath = 0;
     private bool monsterForm = false;
-    private bool monsterModeCharge = false;
+    //private bool monsterModeCharge = false;
     public float monsterScale = 3.0f;
     public float monsterMass = 20.0f;
     [Range(0.0f,1.0f)]
@@ -44,7 +44,15 @@ public class MonsterControllerF : MonoBehaviour {
     private bool transforming = false;
     private float timeTransforming;
     public int nbCycleMonster = 3;
+
+    [Header("Charge_Phase2")]
     public float durationLoadingCharge = 2.0f;
+    public float durationUpSpeedCharge = 8.0f;
+    public float minSpeedCharge = 2.0f;
+    public float maxSpeedCharge = 25.0f;
+    private float speedMonsterCharge;
+    private float timeCharge;
+    private bool monsterModeCharge = false;
 
     [Header("Respawn")]
     public float durationInvul = 2.0f;
@@ -218,10 +226,6 @@ public class MonsterControllerF : MonoBehaviour {
 
         StartCoroutine(RestMoveBall(Vector3.SqrMagnitude(positionReach)/speedDivisionFactor));*/
 
-        
-
-        
-
         if (transforming)
         {
             //float delayTransforming = Mathf.Abs(((timeTransforming - Time.time) / (summon / 2)) - 1);
@@ -323,12 +327,13 @@ public class MonsterControllerF : MonoBehaviour {
         }
         else if (monsterModeCharge)
         {
+
             if (!moveCharge)
             {
+                Debug.Log("vise");
                 canEat = false;
-                Debug.Log("zizi");
                 //s'il se déplace pas, il vise un joueur
-                DirectionMonster = targetCharge.transform.position - transform.position;
+                DirectionMonster = targetCharge.transform.position;// -transform.position;
                 //Vector3 rotationToTarget = Vector3.RotateTowards(transform.forward, targetDir, 100 * Time.deltaTime, 0.0f);
                 //transform.rotation = Quaternion.LookRotation(rotationToTarget);
 
@@ -340,13 +345,20 @@ public class MonsterControllerF : MonoBehaviour {
             }
             else
             {
-                
-            }
 
-            if (eatPlayer)
-            {
-                monsterModeCharge = false;
-                loadingChargeEnd = false;
+                body.angularVelocity = Vector3.zero;
+                Debug.Log("charge");
+                //avance tout droit et change de direction dans les coins
+                if (GameControllerF.InCircle(gameObject) > 0.50f)
+                {
+                    float newDirection = transform.eulerAngles.y + 180;
+                    newDirection += GetAngleBounce(transform.position);
+                    transform.eulerAngles = new Vector3(0, newDirection, 0);
+                }
+
+                float delayCharge = Mathf.Abs((timeCharge - Time.time) / durationUpSpeedCharge - 1);
+                speedMonsterCharge = Mathf.Lerp(minSpeedCharge, maxSpeedCharge, delayCharge);
+
             }
             
         }
@@ -386,10 +398,13 @@ public class MonsterControllerF : MonoBehaviour {
         {
             transform.rotation = Quaternion.LookRotation(rotationToGoal);
         }
-        else if(!moveCharge && monsterModeCharge)
+        else if(monsterModeCharge)
         {
-            Debug.Log("caca");
-            transform.LookAt(DirectionMonster, Vector3.up);
+            Debug.Log("charge");
+            if (!moveCharge)
+                transform.LookAt(DirectionMonster, Vector3.up);
+            else
+                transform.position += transform.forward * Time.deltaTime * speedMonsterCharge;
         }
         else
         {
@@ -427,6 +442,7 @@ public class MonsterControllerF : MonoBehaviour {
     {
         yield return new WaitForSeconds(durationLoadingCharge);
         //regarde la cible
+        timeCharge = Time.time + durationUpSpeedCharge;
         canEat = true;
         moveCharge = true;
     }
@@ -529,8 +545,6 @@ public class MonsterControllerF : MonoBehaviour {
             }
        // }
 
-        if(!monsterModeCharge)
-            TransformationMonstreBall();
     }
 
     void MagnetManager()
@@ -589,6 +603,7 @@ public class MonsterControllerF : MonoBehaviour {
 
     IEnumerator EatingPlayer(GameObject player)
     {
+
         eatPlayer = true;
         player.GetComponent<PlayerControllerF>().isEaten = true;
         //player.GetComponent<CharacterController>().enabled = false;
@@ -630,6 +645,15 @@ public class MonsterControllerF : MonoBehaviour {
         }
 
         yield return new WaitForSeconds(0.1f);
+
+        if (monsterModeCharge)
+        {
+            monsterModeCharge = false;
+            loadingChargeEnd = false;
+            moveCharge = false;
+            TransformationMonstreBall();
+        }
+
         eatPlayer = false;
         player.GetComponent<PlayerControllerF>().isEaten = false;
         //player.GetComponent<CharacterController>().enabled = true;

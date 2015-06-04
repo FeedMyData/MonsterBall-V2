@@ -53,7 +53,7 @@ public class CollisionTerrain : MonoBehaviour {
     {
         if (other.gameObject.tag == "Monster")
         {
-            Debug.Log("testCollision");
+            Debug.Log("testCollisionDome");
 
 
             // display sprite on dome
