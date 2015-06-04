@@ -297,6 +297,13 @@
 												</Element>
 											</ElementList>
 										</Action>
+										<Action Name="Play" ID="{501BDA24-EC69-440E-A2C3-4989D9621C22}" ShortID="103087567" Type="Play" Scope="One" Global="false">
+											<ElementList>
+												<Element ID="{7253D836-8E80-4A6B-AD66-36DF78D7352B}" Global="false">
+													<ObjectRef Name="Grognements" ID="{DA313CEB-548A-4DC0-9E3E-F79794B4C644}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+												</Element>
+											</ElementList>
+										</Action>
 									</ChildrenList>
 								</Event>
 							</ChildrenList>
@@ -359,9 +366,6 @@
 						<Event Name="SFX_Niveks_CoupFaible" ID="{A2BB9F56-E31C-4C23-9C9A-5C9364E13726}">
 							<ChildrenList>
 								<Action Name="Play" ID="{8BA49754-F518-4929-AC33-040C5D3AD55E}" ShortID="655045163" Type="Play" Scope="One" Global="false">
-									<ExcludedPlatformList>
-										<Platform>Windows</Platform>
-									</ExcludedPlatformList>
 									<ElementList>
 										<Element ID="{6B5F378B-0AF2-4CE4-9ED8-31D422AAF0B5}" Global="false">
 											<ObjectRef Name="SFX_Niveks_CoupBatte_Faible" ID="{664E4325-E631-462C-A57E-5BF1654FA4B4}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
@@ -417,7 +421,17 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="SFX_Niveks_Course" ID="{7F69C644-D041-47A9-8FCC-8A7A312CFC1C}"/>
+						<Event Name="SFX_Niveks_Footsteps" ID="{7F69C644-D041-47A9-8FCC-8A7A312CFC1C}">
+							<ChildrenList>
+								<Action Name="Play" ID="{1BB3724F-6776-43CD-AD32-B87DADCD70EE}" ShortID="890474583" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{1F5FB0D4-42E7-4782-A771-E30853A5618C}" Global="false">
+											<ObjectRef Name="Niveks_Footsteps" ID="{C2596DA6-61C0-47E4-B677-F1843296E3AC}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+										</Element>
+									</ElementList>
+								</Action>
+							</ChildrenList>
+						</Event>
 						<Event Name="SFX_Niveks_CoupFort" ID="{54F550B1-1B00-498E-B5A4-48D17A9D3876}">
 							<ChildrenList>
 								<Action Name="Play" ID="{C21C77FA-A444-4D25-A6F1-5CBFCBC0DF4B}" ShortID="813296908" Type="Play" Scope="One" Global="false">
@@ -438,6 +452,17 @@
 									<ElementList>
 										<Element ID="{8FB8F993-BDB6-4836-96B6-40F0F4C25C55}" Global="false">
 											<ObjectRef Name="Body_Impact_Heavy" ID="{A96871D2-BCEB-41EB-B760-85D298339C68}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+										</Element>
+									</ElementList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="SFX_Niveks_Chaussure" ID="{2C230708-F681-4B17-B483-8000BD75CBAF}">
+							<ChildrenList>
+								<Action Name="Play" ID="{77B764B2-4924-4CD5-9BAC-97713260348B}" ShortID="757597232" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{8DA18703-832F-4081-B42F-19C98FB90889}" Global="false">
+											<ObjectRef Name="SFX_Niveks_Chaussure_01" ID="{3E466572-CBA0-422F-94AF-5A9F3975050F}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
 										</Element>
 									</ElementList>
 								</Action>
