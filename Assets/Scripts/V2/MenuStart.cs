@@ -5,17 +5,37 @@ using System.Collections;
 
 public class MenuStart : MonoBehaviour {
 
-    public GameObject defaultButton;
+    public GameObject defaultButtonMain;
+    public GameObject defaultButtonCredits;
+
+    public GameObject pnlMain;
+    public GameObject pnlCredits;
 
     public void Start()
     {
-        if (defaultButton != null)
-            EventSystem.current.SetSelectedGameObject(defaultButton);
+        if (defaultButtonMain != null)
+            EventSystem.current.SetSelectedGameObject(defaultButtonMain);
     }
 
     public void Play()
     {
         Application.LoadLevel(1);
+    }
+
+    public void ToCredits()
+    {
+        pnlMain.SetActive(false);
+        pnlCredits.SetActive(true);
+        if (defaultButtonCredits != null)
+            EventSystem.current.SetSelectedGameObject(defaultButtonCredits);
+    }
+
+    public void ToMain()
+    {
+        pnlCredits.SetActive(false);
+        pnlMain.SetActive(true);
+        if (defaultButtonMain != null)
+            EventSystem.current.SetSelectedGameObject(defaultButtonMain);
     }
 
     public void Quit()
