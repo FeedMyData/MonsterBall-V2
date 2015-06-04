@@ -35,7 +35,10 @@ public class CamEffects : MonoBehaviour {
         }
 
 	}
-
+	public void StopAnimation(){
+		if (GetComponent<Animator> ())
+			GetComponent<Animator> ().enabled = false;
+	}
     public bool GetRepositionned()
     {
         return repositionned;
