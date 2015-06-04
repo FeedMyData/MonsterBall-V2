@@ -45,21 +45,39 @@ public class GoalScriptF : MonoBehaviour {
         {
             if (!other.gameObject.GetComponent<MonsterControllerF>().IsMonsterForm())
             {
-                bool goalInHisTeam = false;
-
-                if (manager.GetLastPlayerHitting() != null)
-                {
-                    if (tag == manager.GetLastPlayerHitting().tag)
-                    {
-                        goalInHisTeam = true;
-                    }
-                }
 
                 //feedbacks goal balle
                 Camera.main.GetComponent<CameraShake>().shake(0.8f, 0.6f, 1.0f);
                 guiEffectsScript.flashGoal(tag);
 
-                
+                GetComponent<Renderer>().material.SetFloat("_Switch_goal", 1);
+                StartCoroutine(StopSwitchGoal());
+
+                other.gameObject.GetComponent<SoundManager>().PlayEvent("VX_Balle_But",other.gameObject);
+
+
+
+                PlayerControllerF striker = other.gameObject.GetComponent<MonsterControllerF>().GetStriker();
+
+                bool goalInHisTeam = false;
+
+                if (striker != null)
+                {
+                    if ((other.gameObject.GetComponent<MonsterControllerF>().GetStriker().team == GameControllerF.Team.Blu && tag == "TeamBlu") || (other.gameObject.GetComponent<MonsterControllerF>().GetStriker().team == GameControllerF.Team.Red && tag == "TeamRed"))
+                    {
+                        other.gameObject.GetComponent<SoundManager>().PlayEvent("VX_Niveks_ButGagnant", striker.gameObject);
+
+                        goalInHisTeam = true;
+
+                    }
+                    else
+                    {
+                        other.gameObject.GetComponent<SoundManager>().PlayEvent("VX_Niveks_ButPerdant", striker.gameObject);
+                    }
+
+                    striker.marqueBut++;
+                }
+
                 if (goalInHisTeam)
                 {
                     string tagCommentary = tag;
@@ -69,28 +87,6 @@ public class GoalScriptF : MonoBehaviour {
                 else
                 {
                     commentariesScript.WriteCommentary(tag, "playerG");
-                }
-
-                GetComponent<Renderer>().material.SetFloat("_Switch_goal", 1);
-                StartCoroutine(StopSwitchGoal());
-
-                other.gameObject.GetComponent<SoundManager>().PlayEvent("VX_Balle_But",other.gameObject);
-
-                PlayerControllerF striker = other.gameObject.GetComponent<MonsterControllerF>().GetStriker();
-
-                if (striker != null)
-                {
-                    if ((other.gameObject.GetComponent<MonsterControllerF>().GetStriker().team == GameControllerF.Team.Blu && tag == "TeamBlu") || (other.gameObject.GetComponent<MonsterControllerF>().GetStriker().team == GameControllerF.Team.Red && tag == "TeamRed"))
-                    {
-                        other.gameObject.GetComponent<SoundManager>().PlayEvent("VX_Niveks_ButGagnant", striker.gameObject);
-                      
-                    }
-                    else
-                    {
-                        other.gameObject.GetComponent<SoundManager>().PlayEvent("VX_Niveks_ButPerdant", striker.gameObject);
-                    }
-
-                    striker.marqueBut++;
                 }
 
                 manager.AddScore(tag);

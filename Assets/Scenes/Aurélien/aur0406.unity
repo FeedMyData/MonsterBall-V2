@@ -171,10 +171,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speedBall: 12
-  speedRotationBall: 30
+  speedRotationBall: 10
   speedMonster: 13
   angleChangeDirection: 45
-  speedMaxToChooseDirection: 15
+  speedMaxToChooseDirection: 5
   speedDivisionFactor: 8
   spaceBetweenBallPlayer: 3
   fovBall: 110
@@ -192,6 +192,9 @@ MonoBehaviour:
   safeTransform: .699999988
   nbCycleMonster: 3
   durationLoadingCharge: 2
+  durationUpSpeedCharge: 8
+  minSpeedCharge: 2
+  maxSpeedCharge: 25
   durationInvul: 2
   coefColliderMonster: .699999988
   durationEatingPlayer: 1

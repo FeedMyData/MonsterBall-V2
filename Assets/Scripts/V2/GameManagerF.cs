@@ -25,8 +25,6 @@ public class GameManagerF : MonoBehaviour {
 
     public int whenToBeginEndTimer = 5;
 
-    private GameObject lastPlayerHitting;
-
 	// Use this for initialization
 
     void Start()
@@ -152,13 +150,4 @@ public class GameManagerF : MonoBehaviour {
         Instantiate(GameControllerF.GetCake(),rngPop,Quaternion.identity);
     }
 
-    public GameObject GetLastPlayerHitting()
-    {
-        return lastPlayerHitting;
-    }
-
-    public void SetLastPlayerHitting(GameObject player)
-    {
-        lastPlayerHitting = player;
-    }
 }

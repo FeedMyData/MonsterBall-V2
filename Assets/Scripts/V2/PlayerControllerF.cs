@@ -531,6 +531,7 @@ public class PlayerControllerF : MonoBehaviour
                             directionImpact.Normalize();
                             directionImpact *= power;
                         }
+                        
                         monster.GetComponent<Rigidbody>().AddForce(directionImpact, ForceMode.Impulse);
                         //TODO: changer pour une valeur proportionnelle
 
@@ -549,8 +550,6 @@ public class PlayerControllerF : MonoBehaviour
                             Camera.main.GetComponent<CameraShake>().shake(0.6f, 0.4f, 1.0f);
 
                         }
-
-                        manager.SetLastPlayerHitting(gameObject);
 
                         return true;
                     }
