@@ -43,6 +43,7 @@
 						<ObjectRef Name="VX_Balle_But" ID="{142EAEF2-59BF-46D3-996E-4462915EA747}" WorkUnitID="{D899008C-EE7F-4475-814E-BB3DC86CD141}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="VX_Monstre_Course" ID="{BE98E6F5-D868-4FF7-B2CA-FDBF3A1416BF}" WorkUnitID="{D899008C-EE7F-4475-814E-BB3DC86CD141}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="VX_Monstre_Crache" ID="{0C281AFE-3F0D-4598-A801-8ABF4EE23C72}" WorkUnitID="{D899008C-EE7F-4475-814E-BB3DC86CD141}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Public_Bouh" ID="{126A55FE-4CE1-449E-8F28-60F069DBFA4E}" WorkUnitID="{D899008C-EE7F-4475-814E-BB3DC86CD141}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

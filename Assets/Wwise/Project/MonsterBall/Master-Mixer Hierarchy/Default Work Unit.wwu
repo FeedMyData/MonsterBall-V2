@@ -21,13 +21,6 @@
 					</ReferenceList>
 					<ChildrenList>
 						<Bus Name="Voix" ID="{6F7CCEB0-4338-419F-A5F7-1BADCFA7CC6B}">
-							<PropertyList>
-								<Property Name="BusVolume" Type="Real64">
-									<ValueList>
-										<Value>8</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
 							<ChildrenList>
 								<Bus Name="Niveks" ID="{61A147E8-AD36-479A-8A9B-0755B4FE6CC9}"/>
 								<Bus Name="Monstre" ID="{C8D2864F-52D6-4B60-8000-ED8571B1E251}"/>
@@ -36,27 +29,7 @@
 						</Bus>
 						<Bus Name="Ambiances" ID="{B9DD8753-6E85-4214-991C-F19471FEBA39}"/>
 						<Bus Name="SFX" ID="{98BA6610-4B70-4EFF-A353-4A61C6BE1A24}">
-							<PropertyList>
-								<Property Name="BusVolume" Type="Real64">
-									<ValueList>
-										<Value>-2</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Effect0">
-									<Custom CreatedFrom="{1F96B68C-A26B-48BE-83C8-CDB05F7A81EF}">
-										<Effect Name="Master_Dynamic (Custom)" ID="{01E31CCA-153B-4226-9C29-44D72F6E898C}" ShortID="45998541" PluginName="McDSP ML1" CompanyID="256" PluginID="103" PluginType="3">
-											<PropertyList>
-												<Property Name="Ceiling" Type="Real32" Value="-0.1"/>
-												<Property Name="Knee" Type="Real32" Value="30"/>
-												<Property Name="Mode" Type="int32" Value="3"/>
-												<Property Name="Threshold" Type="Real32" Value="-6"/>
-											</PropertyList>
-										</Effect>
-									</Custom>
-								</Reference>
-							</ReferenceList>
+							<ReferenceList/>
 						</Bus>
 						<Bus Name="Musiques" ID="{51DA5A6D-5764-451B-9A18-180342A5B0FE}"/>
 						<AuxBus Name="FX" ID="{AE17BDD2-F728-4C96-A483-B4560EE81FA8}">

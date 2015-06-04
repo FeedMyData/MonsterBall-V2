@@ -930,7 +930,7 @@
 								<Effect Name="Hall_Small" ID="{D65B5F04-B83B-412C-9434-34A13A477E24}" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
 									<PropertyList>
 										<Property Name="Density" Type="Real32" Value="24"/>
-										<Property Name="ERLevel" Type="Real32" Value="-23"/>
+										<Property Name="ERLevel" Type="Real32" Value="-16"/>
 										<Property Name="ERPattern" Type="int32" Value="13"/>
 										<Property Name="Filter1Freq" Type="Real32" Value="590"/>
 										<Property Name="Filter1Gain" Type="Real32" Value="2"/>
@@ -940,7 +940,7 @@
 										<Property Name="HFDamping" Type="Real32" Value="2.05"/>
 										<Property Name="PreDelay" Type="Real32" Value="32"/>
 										<Property Name="Quality" Type="int32" Value="16"/>
-										<Property Name="ReverbLevel" Type="Real32" Value="-23"/>
+										<Property Name="ReverbLevel" Type="Real32" Value="-46"/>
 										<Property Name="RoomShape" Type="Real32" Value="20"/>
 										<Property Name="RoomSize" Type="Real32" Value="22"/>
 										<Property Name="StereoWidth" Type="Real32" Value="155"/>

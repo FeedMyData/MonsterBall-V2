@@ -14,7 +14,6 @@ Auxiliary Bus	ID	Name			Wwise Object Path	Notes
 	1802970371	FX			\Default Work Unit\Master Audio Bus\FX	
 
 Effect plug-ins	ID	Name	Type				Notes
-	45998541	Master_Dynamic (Custom)	McDSP ML1			
 	2791153688	Hall_Small	Wwise RoomVerb			
 	2805769450	Special_Effect_1	Wwise Flanger			
 	4279410238	Buss_Dynamic	McDSP ML1			

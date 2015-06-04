@@ -75,6 +75,11 @@
 						</Sound>
 						<RandomSequenceContainer Name="But" ID="{B96DE30D-FF5F-47B0-9B54-1C4BA488B784}" ShortID="1071931550">
 							<PropertyList>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>4</Value>
+									</ValueList>
+								</Property>
 								<Property Name="OverridePositioning" Type="bool" Value="True"/>
 								<Property Name="PositioningType" Type="int16" Value="1"/>
 							</PropertyList>
@@ -306,6 +311,25 @@
 								</Sound>
 							</ChildrenList>
 						</RandomSequenceContainer>
+						<Sound Name="AMB_Public_Disapoint" ID="{9E7E27C7-020F-4EA1-97D2-8B72DFA8F8FA}" ShortID="211834431" Type="SoundFX">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="AMB_Public_Disapoint" ID="{052FD9C9-8E01-433E-945A-DFFCADFCB189}" ShortID="815145533">
+									<Language>SFX</Language>
+									<AudioFile>AMB_Public_Disapoint.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="AMB_Public_Disapoint" ID="{052FD9C9-8E01-433E-945A-DFFCADFCB189}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</ActorMixer>
 				<ActorMixer Name="SFX" ID="{54F7DD21-3CD5-4BC4-9843-AB6C2B54603D}" ShortID="635284039">
@@ -314,6 +338,11 @@
 						<Property Name="UserAuxSendVolume0" Type="Real64">
 							<ValueList>
 								<Value>-3</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-6</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
@@ -1799,7 +1828,7 @@
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-12</Value>
+										<Value>-7</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -1828,7 +1857,7 @@
 													<Modifier Name="" ID="{D6341E8B-E917-43A1-BA39-425D7FAB7B0C}">
 														<PropertyList>
 															<Property Name="Enabled" Type="bool" Value="True"/>
-															<Property Name="Max" Type="Real64" Value="100"/>
+															<Property Name="Max" Type="Real64" Value="50"/>
 															<Property Name="Min" Type="Real64" Value="-50"/>
 														</PropertyList>
 													</Modifier>
@@ -1859,6 +1888,9 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="SFX_Balle_pop1_01" ID="{2A1A399C-9BFD-4F5E-9599-EEC0286AC046}" ShortID="824756831">
+													<PropertyList>
+														<Property Name="TrimBegin" Type="Real64" Value="9.68386501736111E-02"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>SFX_Balle_pop1_01.wav</AudioFile>
 												</AudioFileSource>
@@ -1881,6 +1913,10 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="SFX_Balle_pop1_02" ID="{D4C2A011-D11F-4FDA-ACBD-FDE0A6EDCED7}" ShortID="49112111">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="3.57364773220486E-02"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.345695719401041"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>SFX_Balle_pop1_02.wav</AudioFile>
 												</AudioFileSource>
@@ -1903,6 +1939,10 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="SFX_Balle_pop1_03" ID="{FB013F54-4CB1-4CC3-9FDF-0A6685BB17B2}" ShortID="819132964">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="9.39206271701393E-03"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.293321343315972"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>SFX_Balle_pop1_03.wav</AudioFile>
 												</AudioFileSource>
@@ -1925,6 +1965,10 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="SFX_Balle_pop1_04" ID="{FF67092E-F723-440A-885C-3C91EABFB3E1}" ShortID="464313749">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.018968505859375"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.38695751953125"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>SFX_Balle_pop1_04.wav</AudioFile>
 												</AudioFileSource>
@@ -1947,6 +1991,10 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="SFX_Balle_pop1_05" ID="{7AD48144-2510-4A82-B580-2ED9ACF0B367}" ShortID="265700849">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="2.64917534722222E-02"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.377507486979167"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>SFX_Balle_pop1_05.wav</AudioFile>
 												</AudioFileSource>
@@ -2235,7 +2283,7 @@
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-2</Value>
+												<Value>-7</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -2285,6 +2333,11 @@
 												<Value>-3</Value>
 											</ValueList>
 										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-2</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -2315,6 +2368,78 @@
 										<ActiveSource Name="SFX_But_ShakeCamera" ID="{D7DF8371-DC77-4384-9960-E1E1E8522AB3}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
+								<Sound Name="SFX_But_Gong" ID="{5B9D9A92-D62E-4CAE-91B3-5EB926561943}" ShortID="684079541" Type="SoundFX">
+									<PropertyList>
+										<Property Name="Lowpass" Type="int16">
+											<ValueList>
+												<Value>32</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>-480</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-11</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="65 Boxen - Gong" ID="{E6237784-9271-4414-AA86-099EAA6CA41D}" ShortID="173668112">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="7.01519097222225E-03"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.688365614149305"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.362159233940972"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.19696695963542"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>65 Boxen - Gong.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="65 Boxen - Gong" ID="{E6237784-9271-4414-AA86-099EAA6CA41D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_But_Gong_02" ID="{93CE2225-15DB-41F3-A07A-39B12C5696BF}" ShortID="217137144" Type="SoundFX">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-4</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Electronic Gong 6" ID="{1445FB67-4DF7-4F79-8056-D6108006AE9B}" ShortID="152866582">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.622362955729166"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.700013454861111"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Electronic Gong 6.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Electronic Gong 6" ID="{1445FB67-4DF7-4F79-8056-D6108006AE9B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
 							</ChildrenList>
 						</ActorMixer>
 						<ActorMixer Name="Balle_impact" ID="{B79F16AA-760A-429C-ABAA-C043C7012FE9}" ShortID="526532760">
@@ -2327,7 +2452,7 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<Sound Name="SFX_Niveks_ImpactMur" ID="{989FAB59-77CB-4F22-83B3-68EF23961F8D}" ShortID="466109121" Type="SoundFX">
+								<Sound Name="SFX_Balle_ImpactMur" ID="{989FAB59-77CB-4F22-83B3-68EF23961F8D}" ShortID="466109121" Type="SoundFX">
 									<PropertyList>
 										<Property Name="PositioningType" Type="int16" Value="1"/>
 										<Property Name="Volume" Type="Real64">
@@ -2355,6 +2480,53 @@
 									</ChildrenList>
 									<ActiveSourceList>
 										<ActiveSource Name="SFX_Niveks_ImpactMur" ID="{C0AE8D51-A1AD-4B01-BC81-F39497074EE8}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Impact_Metal" ID="{30087A8D-4AC4-4609-81D0-8CC3F1EB767B}" ShortID="759391410" Type="SoundFX">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>-530</Value>
+											</ValueList>
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{3B173C4C-9F81-47F0-9B47-36AD23FD2792}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="150"/>
+															<Property Name="Min" Type="Real64" Value="-150"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-19</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="4-83 Dull metal impact (3) _ light metal impact" ID="{8C62C9D4-2409-4D24-B47B-0F2D700D73A3}" ShortID="210585394">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.187843993971109"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.360116545157413"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.642049584878662"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>4-83 Dull metal impact (3) _ light metal impact.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="4-83 Dull metal impact (3) _ light metal impact" ID="{8C62C9D4-2409-4D24-B47B-0F2D700D73A3}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
@@ -2651,11 +2823,6 @@
 				<ActorMixer Name="Voix" ID="{F502A3E4-B6F3-45C2-B677-F625DAFE42CA}" ShortID="345599444">
 					<PropertyList>
 						<Property Name="PositioningType" Type="int16" Value="1"/>
-						<Property Name="Volume" Type="Real64">
-							<ValueList>
-								<Value>4</Value>
-							</ValueList>
-						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
@@ -4521,6 +4688,11 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="VOIX_Monstre_CracheJoueur_01" ID="{192B4BAB-019A-43D5-85B6-CAFED085E057}" ShortID="359829587">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.168202623155382"/>
+														<Property Name="TrimBegin" Type="Real64" Value="9.67284206814236E-02"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.447905002170139"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>RecracheJoueur\VOIX_Monstre_CracheJoueur_01.wav</AudioFile>
 												</AudioFileSource>
@@ -4540,6 +4712,11 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="VOIX_Monstre_CracheJoueur_02" ID="{3281E9B1-92D1-421D-9C4D-02FE972404D0}" ShortID="133538925">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.217504896375868"/>
+														<Property Name="TrimBegin" Type="Real64" Value="1.37109103732639E-02"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.466794175889757"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>RecracheJoueur\VOIX_Monstre_CracheJoueur_02.wav</AudioFile>
 												</AudioFileSource>
@@ -4559,6 +4736,11 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="VOIX_Monstre_CracheJoueur_03" ID="{720C1D08-80B2-4731-A896-42F4E8284F0C}" ShortID="721632200">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="2.84229736328125E-02"/>
+														<Property Name="TrimBegin" Type="Real64" Value="4.22503662109375E-02"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.551559326171875"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>RecracheJoueur\VOIX_Monstre_CracheJoueur_03.wav</AudioFile>
 												</AudioFileSource>
@@ -4578,6 +4760,11 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="VOIX_Monstre_CracheJoueur_04" ID="{075A94A8-FB2F-4F35-B82F-08BE3EAF44E1}" ShortID="6697481">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="5.69305419921875E-02"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.042811767578125"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.4262958984375"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>RecracheJoueur\VOIX_Monstre_CracheJoueur_04.wav</AudioFile>
 												</AudioFileSource>
@@ -4597,6 +4784,11 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="VOIX_Monstre_CracheJoueur_05" ID="{6F938927-F4AF-4344-AE6C-607DCCE38696}" ShortID="477423821">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.235146620008681"/>
+														<Property Name="TrimBegin" Type="Real64" Value="8.20511610243055E-02"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.472794799804688"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>RecracheJoueur\VOIX_Monstre_CracheJoueur_05.wav</AudioFile>
 												</AudioFileSource>
@@ -4616,6 +4808,11 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="VOIX_Monstre_CracheJoueur_06" ID="{142679B0-0267-4FF7-9681-D26669CA9B16}" ShortID="153690963">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.155102864583333"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.017896484375"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.448406358506944"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>RecracheJoueur\VOIX_Monstre_CracheJoueur_06.wav</AudioFile>
 												</AudioFileSource>
@@ -4635,6 +4832,12 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="VOIX_Monstre_CracheJoueur_07" ID="{179484E0-2303-41AA-B1B2-A663B2A55E1E}" ShortID="887027585">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="2.96659071180556E-02"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.103830674913194"/>
+														<Property Name="TrimBegin" Type="Real64" Value="5.61072591145833E-02"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.552043836805556"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>RecracheJoueur\VOIX_Monstre_CracheJoueur_07.wav</AudioFile>
 												</AudioFileSource>
@@ -4654,6 +4857,12 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="VOIX_Monstre_CracheJoueur_08" ID="{BE99A009-E249-41F6-9BEF-4FAA7E5DAA09}" ShortID="505005529">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="2.17816297743056E-02"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.103043863932292"/>
+														<Property Name="TrimBegin" Type="Real64" Value="5.69673394097223E-02"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.609885633680556"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>RecracheJoueur\VOIX_Monstre_CracheJoueur_08.wav</AudioFile>
 												</AudioFileSource>
@@ -4674,11 +4883,6 @@
 									</ValueList>
 								</Property>
 								<Property Name="OverrideOutput" Type="bool" Value="True"/>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>8</Value>
-									</ValueList>
-								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -4690,9 +4894,6 @@
 							</ReferenceList>
 							<ChildrenList>
 								<RandomSequenceContainer Name="But" ID="{43AAABAC-D29B-42CC-8325-810D4A949037}" ShortID="889378536">
-									<ExcludedPlatformList>
-										<Platform>Windows</Platform>
-									</ExcludedPlatformList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
@@ -5088,6 +5289,11 @@
 								<RandomSequenceContainer Name="Impact" ID="{0F12D014-D3DF-468F-AA60-2C1DB2BD44CA}" ShortID="951000194">
 									<PropertyList>
 										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="10"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-14</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -5659,11 +5865,6 @@
 								<Sound Name="VOIX_Commentateur_MonsterBall" ID="{154EE251-C2AE-454C-8D60-7A9BBC16ADCF}" ShortID="248501670" Type="SoundFX">
 									<PropertyList>
 										<Property Name="OverrideEffect" Type="bool" Value="True"/>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>7</Value>
-											</ValueList>
-										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
