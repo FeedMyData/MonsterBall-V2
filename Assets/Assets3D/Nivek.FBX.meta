@@ -684,7 +684,23 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: .0802350864
+        functionName: PlayRun
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 1688b88a82922d749b9283ca90118fb8,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: .579968035
+        functionName: PlayRun
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 1688b88a82922d749b9283ca90118fb8,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask:
       - path: 
         weight: 1

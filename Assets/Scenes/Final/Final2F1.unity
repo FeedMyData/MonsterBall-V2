@@ -3059,6 +3059,7 @@ GameObject:
   - 4: {fileID: 275250415}
   - 95: {fileID: 275250417}
   - 114: {fileID: 275250416}
+  - 114: {fileID: 275250418}
   m_Layer: 0
   m_Name: Nivek
   m_TagString: Untagged
@@ -3073,7 +3074,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 275250414}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .146666527, y: -.860000014, z: -.0333334617}
+  m_LocalPosition: {x: .146666527, y: -1, z: -.0333334617}
   m_LocalScale: {x: .666666687, y: .666666687, z: .666666687}
   m_Children:
   - {fileID: 175363495}
@@ -3111,6 +3112,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &275250418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 275250414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1688b88a82922d749b9283ca90118fb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &281415427
 GameObject:
   m_ObjectHideFlags: 0
@@ -4417,6 +4429,7 @@ GameObject:
   - 4: {fileID: 480821635}
   - 95: {fileID: 480821637}
   - 114: {fileID: 480821636}
+  - 114: {fileID: 480821638}
   m_Layer: 0
   m_Name: Nivek
   m_TagString: Untagged
@@ -4431,7 +4444,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 480821634}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .146666527, y: -.860000014, z: -.0333334617}
+  m_LocalPosition: {x: .146666527, y: -1, z: -.0333334617}
   m_LocalScale: {x: .666666687, y: .666666687, z: .666666687}
   m_Children:
   - {fileID: 732124679}
@@ -4469,6 +4482,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &480821638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 480821634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1688b88a82922d749b9283ca90118fb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &498865590
 GameObject:
   m_ObjectHideFlags: 0
@@ -4665,6 +4689,7 @@ GameObject:
   - 4: {fileID: 500802389}
   - 95: {fileID: 500802391}
   - 114: {fileID: 500802390}
+  - 114: {fileID: 500802392}
   m_Layer: 0
   m_Name: Nivek
   m_TagString: Untagged
@@ -4679,7 +4704,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 500802388}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .146666527, y: -.860000014, z: -.0333334617}
+  m_LocalPosition: {x: .146666527, y: -1, z: -.0333334617}
   m_LocalScale: {x: .666666687, y: .666666687, z: .666666687}
   m_Children:
   - {fileID: 1686672457}
@@ -4717,6 +4742,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &500802392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 500802388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1688b88a82922d749b9283ca90118fb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &506199788
 GameObject:
   m_ObjectHideFlags: 0
@@ -5475,11 +5511,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b31c0239a25bbfa4bb4aed405c7f26c3, type: 3}
   m_IsPrefabParent: 0
---- !u!4 &615020599
+--- !u!4 &615020599 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: b31c0239a25bbfa4bb4aed405c7f26c3, type: 3}
   m_PrefabInternal: {fileID: 615020598}
---- !u!1 &615020600
+--- !u!1 &615020600 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: b31c0239a25bbfa4bb4aed405c7f26c3, type: 3}
   m_PrefabInternal: {fileID: 615020598}
@@ -12246,11 +12282,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aca9e1c84fab4f946a4007ad4035b283, type: 3}
   m_IsPrefabParent: 0
---- !u!4 &1215151605
+--- !u!4 &1215151605 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400018, guid: aca9e1c84fab4f946a4007ad4035b283, type: 3}
   m_PrefabInternal: {fileID: 1215151604}
---- !u!4 &1215151606
+--- !u!4 &1215151606 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400006, guid: aca9e1c84fab4f946a4007ad4035b283, type: 3}
   m_PrefabInternal: {fileID: 1215151604}
@@ -19466,7 +19502,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1341943372}
   m_RootOrder: 2
---- !u!1 &1800922600
+--- !u!1 &1800922600 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100018, guid: aca9e1c84fab4f946a4007ad4035b283, type: 3}
   m_PrefabInternal: {fileID: 1215151604}
@@ -20208,6 +20244,7 @@ GameObject:
   - 4: {fileID: 1925360608}
   - 95: {fileID: 1925360610}
   - 114: {fileID: 1925360609}
+  - 114: {fileID: 1925360611}
   m_Layer: 0
   m_Name: Nivek
   m_TagString: Untagged
@@ -20222,7 +20259,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1925360607}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .146666527, y: -.860000014, z: -.0333334617}
+  m_LocalPosition: {x: .146666527, y: -1, z: -.0333334617}
   m_LocalScale: {x: .666666687, y: .666666687, z: .666666687}
   m_Children:
   - {fileID: 2141273378}
@@ -20260,6 +20297,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1925360611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1925360607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1688b88a82922d749b9283ca90118fb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1930511116
 GameObject:
   m_ObjectHideFlags: 0
@@ -21214,9 +21262,9 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2052379254}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df4ba9cfc8fb09c418e390493d4ae204, type: 3}
+  m_Script: {fileID: 11500000, guid: e1e132045d8422c42b9cfb9b87726111, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &2052379256
