@@ -8,6 +8,12 @@ public class TextCommentaries : MonoBehaviour {
     public Text blueText;
     public Text redText;
 
+    private Font fontMonster;
+    private Font fontOther;
+    private int sizeFontMonster = 110;
+    private int sizeFontOther = 80;
+    
+
     [Header("Goals")]
     public float timeBeforeOutGoal = 1.5f;
 
@@ -34,6 +40,9 @@ public class TextCommentaries : MonoBehaviour {
 
         blueText.text = "";
         redText.text = "";
+
+        fontMonster = Resources.Load("CANDY 1") as Font;
+        fontOther = Resources.Load("stormfaze 1") as Font;
 
 	}
 	
@@ -84,6 +93,25 @@ public class TextCommentaries : MonoBehaviour {
 
             blueText.GetComponent<Animator>().SetBool("doOUT", false);
             redText.GetComponent<Animator>().SetBool("doOUT", false);
+        }
+
+        if (type == "monsterG" && textToWriteOn.font != fontMonster)
+        {
+            if (fontMonster != null)
+            {
+                textToWriteOn.font = fontMonster;
+                textToWriteOn.fontSize = sizeFontMonster;
+            }
+        }
+        else if (type != "monsterG" && (blueText.font == fontMonster || redText.font == fontMonster))
+        {
+            if (fontOther != null)
+            {
+                blueText.font = fontOther;
+                redText.font = fontOther;
+                blueText.fontSize = sizeFontOther;
+                redText.fontSize = sizeFontOther;
+            }
         }
 
         if (textToWriteOn != null)

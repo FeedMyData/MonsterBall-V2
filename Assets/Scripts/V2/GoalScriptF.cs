@@ -91,7 +91,7 @@ public class GoalScriptF : MonoBehaviour {
 
                 manager.AddScore(tag);
                 //tp au centre + invul de 3 secondes
-                other.gameObject.GetComponent<MonsterControllerF>().Respawn();
+                other.gameObject.GetComponent<MonsterControllerF>().RespawnBall();
             }
         }
 

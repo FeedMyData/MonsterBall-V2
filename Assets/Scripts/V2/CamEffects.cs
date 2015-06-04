@@ -3,8 +3,8 @@ using System.Collections;
 
 public class CamEffects : MonoBehaviour {
 
-    public GameObject monster;
-    public Transform boneToFollowWhenChewing;
+    public GameObject monster; //monster1
+    public Transform boneToFollowWhenChewing; //bone16
     public float camMoveFactor = 0.5f;
 
     private Vector3 originalCamPos;

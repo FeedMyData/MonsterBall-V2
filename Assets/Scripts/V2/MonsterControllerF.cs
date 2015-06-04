@@ -40,19 +40,21 @@ public class MonsterControllerF : MonoBehaviour {
     public float monsterScale = 3.0f;
     public float monsterMass = 20.0f;
     [Range(0.0f,1.0f)]
-    public float safeTransform = 0.7f;
+    public float safeTransform = 0.6f;
     private bool transforming = false;
     private float timeTransforming;
     public int nbCycleMonster = 3;
 
     [Header("Charge_Phase2")]
     public float durationLoadingCharge = 2.0f;
-    public float durationUpSpeedCharge = 8.0f;
-    public float minSpeedCharge = 2.0f;
+    //public float durationUpSpeedCharge = 8.0f;
+    public int numberOfReboundsToMaxSpeed = 10;
+    public float minSpeedCharge = 8.0f;
     public float maxSpeedCharge = 25.0f;
     private float speedMonsterCharge;
-    private float timeCharge;
+    //private float timeCharge;
     private bool monsterModeCharge = false;
+    private int currentNumberOfRebounds = 0;
 
     [Header("Respawn")]
     public float durationInvul = 2.0f;
@@ -149,7 +151,21 @@ public class MonsterControllerF : MonoBehaviour {
 	// Update is called once per frame
 	void Update() {
 
-        if (transform.position.y < -3.0f) Respawn();
+        if (transform.position.y < -3.0f && !monsterForm && !transforming) RespawnBall();
+
+        if (
+            (monsterForm || transforming) && ( 
+            transform.position.y > 26.0f || 
+            transform.position.y < -2.0f ||
+            transform.position.z > 21.0f ||
+            transform.position.z < -21.0f ||
+            transform.position.x > 39.0f ||
+            transform.position.x < -39.0f)
+            )
+        {
+            SafeRespawn();
+            Debug.Log("saferespawn by position");
+        }
 
         if (magnet == null)
         {
@@ -354,10 +370,12 @@ public class MonsterControllerF : MonoBehaviour {
                     float newDirection = transform.eulerAngles.y + 180;
                     newDirection += GetAngleBounce(transform.position);
                     transform.eulerAngles = new Vector3(0, newDirection, 0);
+                    if (currentNumberOfRebounds < numberOfReboundsToMaxSpeed) currentNumberOfRebounds++;
                 }
 
-                float delayCharge = Mathf.Abs((timeCharge - Time.time) / durationUpSpeedCharge - 1);
-                speedMonsterCharge = Mathf.Lerp(minSpeedCharge, maxSpeedCharge, delayCharge);
+                //float delayCharge = Mathf.Abs((timeCharge - Time.time) / durationUpSpeedCharge - 1);
+                float percentageLSpeed = currentNumberOfRebounds / numberOfReboundsToMaxSpeed;
+                speedMonsterCharge = Mathf.Lerp(minSpeedCharge, maxSpeedCharge, percentageLSpeed);
 
             }
             
@@ -419,7 +437,7 @@ public class MonsterControllerF : MonoBehaviour {
         canYell = true;
     }
 
-    public void Respawn()
+    public void RespawnBall()
     {
         body.velocity = Vector3.zero;
         body.angularVelocity = Vector3.zero;
@@ -429,20 +447,25 @@ public class MonsterControllerF : MonoBehaviour {
 
         sound.PlayEvent("VX_Balle_RemiseEnJeu", gameObject);
 
-        Camera cam = Camera.allCameras[0];
-        if(cam.GetComponent<CameraManagerF>() != null)
-        {
-            cam.GetComponent<CameraManagerF>().Respawn();
-        }
+        //Camera cam = Camera.allCameras[0];
+        //if(cam.GetComponent<CameraManagerF>() != null)
+        //{
+        //    cam.GetComponent<CameraManagerF>().Respawn();
+        //}
 
         StartCoroutine(Intouchable());
+    }
+
+    public void SafeRespawn()
+    {
+        transform.position = respawnPositionBall;
     }
 
     IEnumerator LoadingCharge()
     {
         yield return new WaitForSeconds(durationLoadingCharge);
         //regarde la cible
-        timeCharge = Time.time + durationUpSpeedCharge;
+        //timeCharge = Time.time + durationUpSpeedCharge;
         canEat = true;
         moveCharge = true;
     }
@@ -490,6 +513,7 @@ public class MonsterControllerF : MonoBehaviour {
         ballSpotlight.SetActive(true);
         monsterSpotlight.SetActive(false);
         ambiantLight.intensity = intensityWhenBall;
+
         commentariesScript.WriteCommentary("both", "ballP");
     }
 
@@ -797,6 +821,33 @@ public class MonsterControllerF : MonoBehaviour {
         if (other.gameObject.tag == "TeamBlu" || other.gameObject.tag == "TeamRed")
         {
             Debug.Log("collision player");
+        }
+
+        if (monsterForm && transforming && other.gameObject.transform.parent.name == "stadium 21")
+        {
+            Vector3 averageContactPoint = Vector3.zero;
+            Vector3 averageContactNormal = Vector3.zero;
+
+            foreach (ContactPoint contact in other.contacts)
+            {
+                averageContactPoint += contact.point;
+                averageContactNormal += contact.normal;
+            }
+
+            averageContactPoint = averageContactPoint / other.contacts.Length;
+            averageContactNormal = averageContactNormal / other.contacts.Length;
+            averageContactNormal.Normalize();
+
+            if (
+                    (averageContactPoint.x > 0 && averageContactNormal.x > 0) ||
+                    (averageContactPoint.x < 0 && averageContactNormal.x < 0) ||
+                    (averageContactPoint.z > 0 && averageContactNormal.z > 0) ||
+                    (averageContactPoint.z < 0 && averageContactNormal.z < 0)
+                )
+            {
+                SafeRespawn();
+                Debug.Log("saferespawn by collision");
+            }
         }
     }
 }

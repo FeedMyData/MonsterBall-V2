@@ -174,14 +174,14 @@ MonoBehaviour:
   speedRotationBall: 30
   speedMonster: 13
   angleChangeDirection: 45
-  speedMaxToChooseDirection: 5
+  speedMaxToChooseDirection: 15
   speedDivisionFactor: 8
   spaceBetweenBallPlayer: 3
   fovBall: 110
   angleAvoidPlayer: 45
   areaMagnet: 3
   speedMagnet: 40
-  wrathMax: 100
+  wrathMax: 20
   wrathDribblingValue: 1
   wrathDribblingEachTime: .5
   summon: 2
@@ -18432,7 +18432,7 @@ MonoBehaviour:
   m_Material: {fileID: 2100000, guid: b81413a37d8cae24e8dbb29b7940fdf7, type: 2}
   m_Color: {r: .407843143, g: .772549033, b: .933333337, a: 1}
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 94b2132946fb55845aa3f03a3275d6f8, type: 3}
+    m_Font: {fileID: 12800000, guid: 2da79d8905c44b444881687cb32e5edd, type: 3}
     m_FontSize: 80
     m_FontStyle: 0
     m_BestFit: 0
@@ -18844,7 +18844,7 @@ MonoBehaviour:
   m_Material: {fileID: 2100000, guid: b81413a37d8cae24e8dbb29b7940fdf7, type: 2}
   m_Color: {r: .670588255, g: .00392156886, b: .00392156886, a: 1}
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 94b2132946fb55845aa3f03a3275d6f8, type: 3}
+    m_Font: {fileID: 12800000, guid: 2da79d8905c44b444881687cb32e5edd, type: 3}
     m_FontSize: 80
     m_FontStyle: 0
     m_BestFit: 0
@@ -21200,6 +21200,7 @@ GameObject:
   - 4: {fileID: 2052379258}
   - 114: {fileID: 2052379257}
   - 114: {fileID: 2052379256}
+  - 114: {fileID: 2052379255}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -21207,6 +21208,17 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &2052379255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2052379254}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df4ba9cfc8fb09c418e390493d4ae204, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &2052379256
 MonoBehaviour:
   m_ObjectHideFlags: 0
