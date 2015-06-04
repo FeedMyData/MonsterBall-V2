@@ -4,6 +4,15 @@ using System.Collections;
 
 public class GameManagerF : MonoBehaviour {
 
+	public enum Step
+	{
+		opening,
+		choosePlayer,
+		playerPlacement,
+		inGame
+	};
+
+	public Step state = Step.opening;
     private string blue = "#68C5EE";
     private string red = "#AB0101";
 
@@ -41,20 +50,39 @@ public class GameManagerF : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
        // Debug.Log("Blu "+bluScore+" - "+redScore+" Red");
-        if (durationInSecond <= 0)
-        {
-            Time.timeScale = 0;
 
-            if (!displayEnd)
-            {
-                ecranFin.SetActive(true);
-                ecranFin.GetComponent<MenuFin>().InitMenu();
-                ecranFin.GetComponent<MenuFin>().WhoWin(bluScore, redScore);
-                ecranFin.GetComponent<MenuFin>().RewardPlayer();
-                displayEnd = true;
-            }
 
-        }
+		switch (state) {
+
+		case Step.opening :
+			break;
+		case Step.choosePlayer :
+			break;
+		case Step.playerPlacement :
+			break;
+
+		default : 
+			if (durationInSecond <= 0)
+			{
+				Time.timeScale = 0;
+				
+				if (!displayEnd)
+				{
+					ecranFin.SetActive(true);
+					ecranFin.GetComponent<MenuFin>().InitMenu();
+					ecranFin.GetComponent<MenuFin>().WhoWin(bluScore, redScore);
+					ecranFin.GetComponent<MenuFin>().RewardPlayer();
+					displayEnd = true;
+				}
+				
+			}
+
+			break;
+
+
+
+		}
+        
         
 	}
 

@@ -56,6 +56,8 @@ public class GameControllerF : MonoBehaviour {
     private static Transform staticPosBluGoal;
     private static Transform staticPosRedGoal;
 
+    private static SoundManager sound;
+
 	// Use this for initialization
 	void Awake () {
         tabObj = new GameObject[5];
@@ -76,9 +78,15 @@ public class GameControllerF : MonoBehaviour {
         staticPosRedGoal = posRedGoal;
 
         staticCake = cake;
+        sound = GetComponent<SoundManager>();
 
         manager = GetComponent<GameManagerF>();
 	}
+
+    public static SoundManager GetSound()
+    {
+        return sound;
+    }
 
     public static GameManagerF getManager()
     {
@@ -341,5 +349,4 @@ public class GameControllerF : MonoBehaviour {
     {
         return staticCake;
     }
-
 }
