@@ -96,6 +96,7 @@ public class MonsterControllerF : MonoBehaviour {
     private bool moveCharge = false;
     private bool canEat = true;
     
+    public Vector3 respawnPositionBall;
 
     private GameObject smokeFury;
     private GameObject transfoFury; 
@@ -409,7 +410,7 @@ public class MonsterControllerF : MonoBehaviour {
         body.angularVelocity = Vector3.zero;
         //transform.rotation = Quaternion.identity;
         transform.eulerAngles = new Vector3(0,UnityEngine.Random.Range(0,360),0);
-        transform.position = new Vector3(0,5,0);
+        transform.position = respawnPositionBall;
 
         sound.PlayEvent("VX_Balle_RemiseEnJeu", gameObject);
 
@@ -589,7 +590,8 @@ public class MonsterControllerF : MonoBehaviour {
     IEnumerator EatingPlayer(GameObject player)
     {
         eatPlayer = true;
-        player.GetComponent<CharacterController>().enabled = false;
+        player.GetComponent<PlayerControllerF>().isEaten = true;
+        //player.GetComponent<CharacterController>().enabled = false;
         player.GetComponent<Collider>().enabled = false;
         player.GetComponent<PlayerControllerF>().joueurMange++;
         //faire disparaitre le joueur, jouer l'anim du monstre qui mache et téléporter le joueur dans le monstre et le stun
@@ -597,7 +599,7 @@ public class MonsterControllerF : MonoBehaviour {
         //player.GetComponent<Renderer>().enabled = false;
         //player.GetComponentInChildren<SkinnedMeshRenderer>().enabled = false;
         foreach (Renderer renderer in player.GetComponentsInChildren<Renderer>()) {
-            if (renderer.name == "arme" || renderer.name == "Nivek") { renderer.enabled = false; }
+            if (renderer.name == "arme" || renderer.name == "Nivek" || renderer.name == "Circle") { renderer.enabled = false; }
         }
         player.GetComponent<PlayerControllerF>().callStun(durationEatingPlayer);
 
@@ -616,7 +618,7 @@ public class MonsterControllerF : MonoBehaviour {
         //player.GetComponentInChildren<SkinnedMeshRenderer>().enabled = true;
         foreach (Renderer renderer in player.GetComponentsInChildren<Renderer>())
         {
-            if (renderer.name == "arme" || renderer.name == "Nivek") { renderer.enabled = true; }
+            if (renderer.name == "arme" || renderer.name == "Nivek" || renderer.name == "Circle") { renderer.enabled = true; }
         }
 
         if (player == playerAte)
@@ -629,7 +631,8 @@ public class MonsterControllerF : MonoBehaviour {
 
         yield return new WaitForSeconds(0.1f);
         eatPlayer = false;
-        player.GetComponent<CharacterController>().enabled = true;
+        player.GetComponent<PlayerControllerF>().isEaten = false;
+        //player.GetComponent<CharacterController>().enabled = true;
         player.GetComponent<Collider>().enabled = true;
     }
 
@@ -664,6 +667,11 @@ public class MonsterControllerF : MonoBehaviour {
     public bool IsMonsterForm()
     {
         return monsterForm;
+    }
+
+    public bool IsTransforming()
+    {
+        return transforming;
     }
 
     IEnumerator Intouchable()

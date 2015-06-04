@@ -92,13 +92,17 @@ public class PlayerControllerF : MonoBehaviour
 
     private GameManagerF manager;
 
+    private Vector3 respawnPosition = new Vector3(0,5,0);
+
+    [HideInInspector]
+    public bool isEaten = false;
+
     // Use this for initialization
     void Start()
     {
         controller = GetComponent<CharacterController>();
         tp = GetComponentInChildren<TeleportationF>();
         manager = GameControllerF.getManager();
-
 
         SpriteRenderer[] tabSprite = GetComponentsInChildren<SpriteRenderer>();
 
@@ -176,6 +180,8 @@ public class PlayerControllerF : MonoBehaviour
                 horizontal = "Horizontal1";
                 vertical = "Vertical1";
                 fire = "Fire1";
+                respawnPosition = GameObject.Find("respawn player 1").transform.position;
+
                 //if (team == GameControllerF.Team.Blu)
                 //    spriteGround.GetComponent<Renderer>().material.color = new Color32(0, 0, 255, 255);
                 //else
@@ -185,6 +191,8 @@ public class PlayerControllerF : MonoBehaviour
                 horizontal = "Horizontal2";
                 vertical = "Vertical2";
                 fire = "Fire2";
+                respawnPosition = GameObject.Find("respawn player 2").transform.position;
+
                 //if (team == GameControllerF.Team.Blu)
                 //    spriteGround.GetComponent<Renderer>().material.color = new Color32(0, 128, 255, 255);
                 //else
@@ -194,6 +202,8 @@ public class PlayerControllerF : MonoBehaviour
                 horizontal = "Horizontal3";
                 vertical = "Vertical3";
                 fire = "Fire3";
+                respawnPosition = GameObject.Find("respawn player 3").transform.position;
+
                 //if (team == GameControllerF.Team.Blu)
                 //    spriteGround.GetComponent<Renderer>().material.color = new Color32(0, 255, 255, 255);
                 //else
@@ -203,6 +213,8 @@ public class PlayerControllerF : MonoBehaviour
                 horizontal = "Horizontal4";
                 vertical = "Vertical4";
                 fire = "Fire4";
+                respawnPosition = GameObject.Find("respawn player 4").transform.position;
+
                 //if (team == GameControllerF.Team.Blu)
                 //    spriteGround.GetComponent<Renderer>().material.color = new Color32(0, 0, 128, 255);
                 //else
@@ -261,7 +273,10 @@ public class PlayerControllerF : MonoBehaviour
         }
 
         directionMove.y -= gravity;
-        controller.Move(directionMove * Time.deltaTime);
+        if (!isEaten)
+        {
+            controller.Move(directionMove * Time.deltaTime);
+        }
 
         impact = Vector3.Lerp(impact, Vector3.zero, 5 * Time.deltaTime);
     }
@@ -497,7 +512,7 @@ public class PlayerControllerF : MonoBehaviour
 
         if (monster != null)
         {
-            if (!monster.IsMonsterForm())
+            if (!monster.IsMonsterForm() && !monster.IsTransforming())
             {
                 if (monster.IsTouchable())
                 {
@@ -613,7 +628,7 @@ public class PlayerControllerF : MonoBehaviour
     {
         //TODO : Rajouter une composante aléatoire en x et z
         projectionInGoal = false;
-        transform.position = new Vector3(0, 5, 0);
+        transform.position = respawnPosition;
         StartCoroutine(Intouchable());
     }
 
@@ -634,20 +649,27 @@ public class PlayerControllerF : MonoBehaviour
     IEnumerator Blink()
     {
         //MeshRenderer mr = GetComponent<MeshRenderer>();
-        SkinnedMeshRenderer smr = GetComponentInChildren<SkinnedMeshRenderer>();
-        MeshRenderer arme = GetComponentInChildren<MeshRenderer>();
-        foreach (MeshRenderer renderer in GetComponentsInChildren<MeshRenderer>()) // permet de tout faire blink dans le foreach si besoin (sprite au sol...) à l'exception du mesh capsule
+        Renderer smr = GetComponentInChildren<Renderer>();
+        Renderer arme = GetComponentInChildren<Renderer>();
+        Renderer circle = GetComponentInChildren<Renderer>();
+
+        foreach (Renderer renderer in GetComponentsInChildren<Renderer>()) // permet de tout faire blink dans le foreach si besoin (sprite au sol...) à l'exception du mesh capsule
         {
+            if (renderer.name == "Nivek") { smr = renderer; }
             if (renderer.name == "arme") { arme = renderer; }
+            if (renderer.name == "Circle") { circle = renderer; }
         }
+
         while (!touchable)
         {
             smr.enabled = !smr.enabled;
             arme.enabled = !arme.enabled;
+            circle.enabled = !circle.enabled;
             yield return new WaitForSeconds(0.1f);
         }
         smr.enabled = true;
         arme.enabled = true;
+        circle.enabled = true;
     }
 
     public void SetBonus(Bonus bonus)

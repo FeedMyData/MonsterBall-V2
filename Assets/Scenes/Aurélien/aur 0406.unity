@@ -181,7 +181,7 @@ MonoBehaviour:
   angleAvoidPlayer: 45
   areaMagnet: 3
   speedMagnet: 40
-  wrathMax: 10
+  wrathMax: 100
   wrathDribblingValue: 1
   wrathDribblingEachTime: .5
   summon: 2
@@ -205,7 +205,6 @@ MonoBehaviour:
   distanceSoundChase: 5
   rngSoundChase: 1
   timeBetweenTwoChaseSound: 5
-  respawnPositionBall: {x: 0, y: 5, z: 0}
 --- !u!54 &7400958
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -949,7 +948,7 @@ MonoBehaviour:
   stunGoal: 0
   jersey: 2
   team: 1
-  durationInvul: 3
+  durationInvul: 1.5
   coupsDonnes: 0
   coupsRecus: 0
   coupsCharges: 0
@@ -957,7 +956,6 @@ MonoBehaviour:
   sautBut: 0
   coupsVide: 0
   marqueBut: 0
-  isEaten: 0
 --- !u!23 &99554770
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3551,33 +3549,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 319266653}
   m_Mesh: {fileID: 4300000, guid: 338757517445b6a4f91542da55d7c357, type: 3}
---- !u!1 &325498357
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 325498358}
-  m_Layer: 0
-  m_Name: respawn player 4
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &325498358
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 325498357}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -27, y: 2, z: -5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1094668862}
-  m_RootOrder: 3
 --- !u!1 &336816486
 GameObject:
   m_ObjectHideFlags: 0
@@ -3789,33 +3760,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 385303265}
---- !u!1 &389309548
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 389309549}
-  m_Layer: 0
-  m_Name: respawn player 3
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &389309549
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 389309548}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 27, y: 2, z: -5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1094668862}
-  m_RootOrder: 2
 --- !u!1 &389545900
 GameObject:
   m_ObjectHideFlags: 0
@@ -4862,7 +4806,7 @@ MonoBehaviour:
   stunGoal: 0
   jersey: 3
   team: 0
-  durationInvul: 3
+  durationInvul: 1.5
   coupsDonnes: 0
   coupsRecus: 0
   coupsCharges: 0
@@ -4870,7 +4814,6 @@ MonoBehaviour:
   sautBut: 0
   coupsVide: 0
   marqueBut: 0
-  isEaten: 0
 --- !u!23 &530266182
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10780,37 +10723,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: .0219999999
---- !u!1 &1094668861
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1094668862}
-  m_Layer: 0
-  m_Name: Respawns
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1094668862
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1094668861}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1733332723}
-  - {fileID: 1124850478}
-  - {fileID: 389309549}
-  - {fileID: 325498358}
-  m_Father: {fileID: 0}
-  m_RootOrder: 16
 --- !u!1 &1100537764
 GameObject:
   m_ObjectHideFlags: 0
@@ -11227,33 +11139,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1123659802}
   m_Mesh: {fileID: 4300000, guid: 338757517445b6a4f91542da55d7c357, type: 3}
---- !u!1 &1124850477
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1124850478}
-  m_Layer: 0
-  m_Name: respawn player 2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1124850478
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1124850477}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -27, y: 2, z: 5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1094668862}
-  m_RootOrder: 1
 --- !u!1 &1124999053
 GameObject:
   m_ObjectHideFlags: 0
@@ -19134,33 +19019,6 @@ Transform:
   - {fileID: 1471370141}
   m_Father: {fileID: 903980102}
   m_RootOrder: 2
---- !u!1 &1733332722
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1733332723}
-  m_Layer: 0
-  m_Name: respawn player 1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1733332723
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1733332722}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 27, y: 2, z: 5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1094668862}
-  m_RootOrder: 0
 --- !u!1 &1747368448
 GameObject:
   m_ObjectHideFlags: 0
@@ -20081,7 +19939,7 @@ MonoBehaviour:
   stunGoal: 0
   jersey: 0
   team: 1
-  durationInvul: 3
+  durationInvul: 1.5
   coupsDonnes: 0
   coupsRecus: 0
   coupsCharges: 0
@@ -20089,7 +19947,6 @@ MonoBehaviour:
   sautBut: 0
   coupsVide: 0
   marqueBut: 0
-  isEaten: 0
 --- !u!23 &1895334761
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -20830,7 +20687,7 @@ MonoBehaviour:
   stunGoal: 0
   jersey: 1
   team: 0
-  durationInvul: 3
+  durationInvul: 1.5
   coupsDonnes: 0
   coupsRecus: 0
   coupsCharges: 0
@@ -20838,7 +20695,6 @@ MonoBehaviour:
   sautBut: 0
   coupsVide: 0
   marqueBut: 0
-  isEaten: 0
 --- !u!23 &2021973437
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -21227,7 +21083,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be088c83819d83046a99eb9fc4edf5ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  durationInSecond: 180
+  durationInSecond: 8
   ecranFin: {fileID: 1105067374}
   timeBetweenTwoBonus: 0
   whenToBeginEndTimer: 5
