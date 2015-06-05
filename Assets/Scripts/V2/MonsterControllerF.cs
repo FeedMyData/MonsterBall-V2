@@ -48,7 +48,7 @@ public class MonsterControllerF : MonoBehaviour {
     [Header("Charge_Phase2")]
     public float durationLoadingCharge = 2.0f;
     //public float durationUpSpeedCharge = 8.0f;
-    public int numberOfReboundsToMaxSpeed = 10;
+    public float numberOfReboundsToMaxSpeed = 10.0f;
     public float minSpeedCharge = 8.0f;
     public float maxSpeedCharge = 25.0f;
     private float speedMonsterCharge;
@@ -351,7 +351,7 @@ public class MonsterControllerF : MonoBehaviour {
 
             if (!moveCharge)
             {
-                Debug.Log("vise");
+                //Debug.Log("vise");
                 canEat = false;
                 //s'il se déplace pas, il vise un joueur
                 DirectionMonster = targetCharge.transform.position;// -transform.position;
@@ -380,7 +380,6 @@ public class MonsterControllerF : MonoBehaviour {
 
                 //float delayCharge = Mathf.Abs((timeCharge - Time.time) / durationUpSpeedCharge - 1);
                 float percentageLSpeed = currentNumberOfRebounds / numberOfReboundsToMaxSpeed;
-                Debug.Log(percentageLSpeed);
                 speedMonsterCharge = Mathf.Lerp(minSpeedCharge, maxSpeedCharge, percentageLSpeed);
 
             }
