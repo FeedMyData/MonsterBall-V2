@@ -13,8 +13,8 @@ public class GameManagerF : MonoBehaviour {
 	};
 
 	public Step state = Step.opening;
-    private string blue = "#68C5EE";
-    private string red = "#AB0101";
+    //private string blue = "#68C5EE";
+    //private string red = "#AB0101";
 
     private int bluScore = 0;
     private int redScore = 0;

@@ -542,8 +542,6 @@ public class PlayerControllerF : MonoBehaviour
                         monster.GetComponent<Rigidbody>().AddForce(directionImpact, ForceMode.Impulse);
                         //TODO: changer pour une valeur proportionnelle
 
-
-
                         monster.AddWrath((int)(power / coefPower));
 
                         if (monster.GetWrath() < monster.wrathMax)
