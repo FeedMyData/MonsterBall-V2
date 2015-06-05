@@ -137,8 +137,7 @@ public class GoalScriptF : MonoBehaviour {
         monsterController.canCount = false;
         monster.GetComponent<Rigidbody>().velocity = Vector3.zero;
         TeleportationF telMonster = monster.GetComponentInChildren<TeleportationF>();
-        telMonster.SetTeleportation(true);
-        yield return new WaitForSeconds(telMonster.durationTP);
+        telMonster.InstantTP(true);
         telMonster.SetTeleportation(false);
         monsterController.RespawnBall();
         yield return new WaitForSeconds(telMonster.durationTP);

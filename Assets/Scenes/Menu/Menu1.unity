@@ -163,7 +163,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &121000173
 RectTransform:
   m_ObjectHideFlags: 0
@@ -889,9 +889,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 2
+    m_Mode: 4
     m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
+    m_SelectOnDown: {fileID: 1908318645}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
   m_Transition: 3
@@ -915,7 +915,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1215496966}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1658808848}
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1215496966
@@ -1005,7 +1017,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1232665385
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1208,8 +1220,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 2
-    m_SelectOnUp: {fileID: 0}
+    m_Mode: 4
+    m_SelectOnUp: {fileID: 1908318645}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
@@ -1514,10 +1526,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cd720d2465c81c4fa7bff886f136145, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultButtonMain: {fileID: 0}
-  defaultButtonCredits: {fileID: 0}
-  pnlMain: {fileID: 0}
-  pnlCredits: {fileID: 0}
+  defaultButtonMain: {fileID: 1215496964}
+  defaultButtonCreditsFromMain: {fileID: 1908318643}
+  defaultButtonCredits: {fileID: 1711207138}
+  pnlMain: {fileID: 1232665384}
+  pnlCredits: {fileID: 121000172}
 --- !u!1 &1711207138
 GameObject:
   m_ObjectHideFlags: 0
@@ -1839,9 +1852,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 2
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
+    m_Mode: 4
+    m_SelectOnUp: {fileID: 1215496965}
+    m_SelectOnDown: {fileID: 1385013830}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
   m_Transition: 3
