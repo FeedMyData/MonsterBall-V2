@@ -43,58 +43,58 @@ public class GoalScriptF : MonoBehaviour {
 
         if (other.gameObject.tag == "Monster")
         {
-            if (!other.gameObject.GetComponent<MonsterControllerF>().IsMonsterForm())
-            {
-
-                //feedbacks goal balle
-                Camera.main.GetComponent<CameraShake>().shake(0.8f, 0.6f, 1.0f);
-                guiEffectsScript.flashGoal(tag);
-
-                GetComponent<Renderer>().material.SetFloat("_Switch_goal", 1);
-                StartCoroutine(StopSwitchGoal());
-
-                other.gameObject.GetComponent<SoundManager>().PlayEvent("VX_Balle_But",other.gameObject);
-
-
-
-                PlayerControllerF striker = other.gameObject.GetComponent<MonsterControllerF>().GetStriker();
-
-                bool goalInHisTeam = false;
-
-                if (striker != null)
+            MonsterControllerF monster = other.gameObject.GetComponent<MonsterControllerF>();
+                if (!monster.IsMonsterForm() && monster.canCount)
                 {
-                    if ((other.gameObject.GetComponent<MonsterControllerF>().GetStriker().team == GameControllerF.Team.Blu && tag == "TeamBlu") || (other.gameObject.GetComponent<MonsterControllerF>().GetStriker().team == GameControllerF.Team.Red && tag == "TeamRed"))
+
+                    //feedbacks goal balle
+                    Camera.main.GetComponent<CameraShake>().shake(0.8f, 0.6f, 1.0f);
+                    guiEffectsScript.flashGoal(tag);
+
+                    GetComponent<Renderer>().material.SetFloat("_Switch_goal", 1);
+                    StartCoroutine(StopSwitchGoal());
+
+                    other.gameObject.GetComponent<SoundManager>().PlayEvent("VX_Balle_But", other.gameObject);
+
+
+
+                    PlayerControllerF striker = other.gameObject.GetComponent<MonsterControllerF>().GetStriker();
+
+                    bool goalInHisTeam = false;
+
+                    if (striker != null)
                     {
-                        other.gameObject.GetComponent<SoundManager>().PlayEvent("VX_Niveks_ButGagnant", striker.gameObject);
+                        if ((monster.GetStriker().team == GameControllerF.Team.Blu && tag == "TeamBlu") || (monster.GetStriker().team == GameControllerF.Team.Red && tag == "TeamRed"))
+                        {
+                            other.gameObject.GetComponent<SoundManager>().PlayEvent("VX_Niveks_ButGagnant", striker.gameObject);
 
-                        goalInHisTeam = true;
+                            goalInHisTeam = true;
 
+                        }
+                        else
+                        {
+                            other.gameObject.GetComponent<SoundManager>().PlayEvent("VX_Niveks_ButPerdant", striker.gameObject);
+                        }
+
+                        striker.marqueBut++;
+                    }
+
+                    if (goalInHisTeam)
+                    {
+                        string tagCommentary = tag;
+                        tagCommentary = (tagCommentary == "TeamBlu") ? "TeamRed" : "TeamBlu";
+                        commentariesScript.WriteCommentary(tagCommentary, "playerOG");
                     }
                     else
                     {
-                        other.gameObject.GetComponent<SoundManager>().PlayEvent("VX_Niveks_ButPerdant", striker.gameObject);
+                        commentariesScript.WriteCommentary(tag, "playerG");
                     }
 
-                    striker.marqueBut++;
+                    manager.AddScore(tag);
+                    //tp au centre + invul de 3 secondes
+                    StartCoroutine(DezRez(other.gameObject));
                 }
-
-                if (goalInHisTeam)
-                {
-                    string tagCommentary = tag;
-                    tagCommentary = (tagCommentary == "TeamBlu") ? "TeamRed" : "TeamBlu";
-                    commentariesScript.WriteCommentary(tagCommentary, "playerOG");
-                }
-                else
-                {
-                    commentariesScript.WriteCommentary(tag, "playerG");
-                }
-
-                manager.AddScore(tag);
-                //tp au centre + invul de 3 secondes
-                other.gameObject.GetComponent<MonsterControllerF>().RespawnBall();
             }
-        }
-
         //if (player != null)
         //{
         //    if (player.IsProjectionInGoal())
@@ -119,7 +119,9 @@ public class GoalScriptF : MonoBehaviour {
         //        player.AddImpact(dirImpact * 200);
         //    }
         //}
+            
     }
+
 
     IEnumerator StopSwitchGoal(){
 
@@ -127,5 +129,20 @@ public class GoalScriptF : MonoBehaviour {
 
         timeSwitch = Time.time + durationReturnSwitch;
         returnSwitch = true;
+    }
+
+    IEnumerator DezRez(GameObject monster)
+    {
+        MonsterControllerF monsterController = monster.GetComponent<MonsterControllerF>();
+        monsterController.canCount = false;
+        monster.GetComponent<Rigidbody>().velocity = Vector3.zero;
+        TeleportationF telMonster = monster.GetComponentInChildren<TeleportationF>();
+        telMonster.SetTeleportation(true);
+        yield return new WaitForSeconds(telMonster.durationTP);
+        telMonster.SetTeleportation(false);
+        monsterController.RespawnBall();
+        yield return new WaitForSeconds(telMonster.durationTP);
+        monsterController.canCount = true;
+
     }
 }

@@ -109,7 +109,10 @@ public class MonsterControllerF : MonoBehaviour {
     public Vector3 respawnPositionBall;
 
     private GameObject smokeFury;
-    private GameObject transfoFury; 
+    private GameObject transfoFury;
+
+    [HideInInspector]
+    public bool canCount= true;
 
     //public delegate void OnClickHit();
     //public event OnClickHit OnClickHitEvent;
@@ -145,7 +148,7 @@ public class MonsterControllerF : MonoBehaviour {
         }
 
 
-       // tp.SetTeleportation(true);
+        //tp.SetTeleportation(true);
 	}
 	
 	// Update is called once per frame
@@ -258,41 +261,44 @@ public class MonsterControllerF : MonoBehaviour {
         }
         else
         {
-            if (GetActualSpeed() < speedMaxToChooseDirection && isGround())
+            if (canCount)
             {
-                body.velocity = Vector3.zero;
-                body.angularVelocity = Vector3.zero;
-                transform.eulerAngles = new Vector3(0, transform.eulerAngles.y, 0);
-
-                Vector3 newPosition = transform.forward;
-                //newPosition.y = transform.localScale.y/2;
-
-                transform.position += newPosition * Time.deltaTime * speedBall;
-
-
-                if (GameControllerF.InCircle(gameObject) > 0.80f)
+                if (GetActualSpeed() < speedMaxToChooseDirection && isGround())
                 {
-                    float newDirection = transform.eulerAngles.y +180;
+                    body.velocity = Vector3.zero;
+                    body.angularVelocity = Vector3.zero;
+                    transform.eulerAngles = new Vector3(0, transform.eulerAngles.y, 0);
 
-                    newDirection += GetAngleBounce(transform.position);
+                    Vector3 newPosition = transform.forward;
+                    //newPosition.y = transform.localScale.y/2;
 
-                    transform.eulerAngles = new Vector3(0,newDirection,0);
-                }
-                else
-                {
-                    //regarde s'il y a un joueur devant lui et se décale pour l'éviter
-                    try
+                    transform.position += newPosition * Time.deltaTime * speedBall;
+
+
+                    if (GameControllerF.InCircle(gameObject) > 0.80f)
                     {
-                       if(GameControllerF.FieldOfView(gameObject,20,90)[0] != null)
-                       {
-                           Vector3 relativePoint = transform.InverseTransformPoint(GameControllerF.FieldOfView(gameObject,20,90)[0].transform.position) ;
-                           if(relativePoint.x < 0)
-                               transform.RotateAround(transform.position,Vector3.up,angleAvoidPlayer*Time.deltaTime);
-                           else
-                               transform.RotateAround(transform.position, Vector3.up,- angleAvoidPlayer * Time.deltaTime);
-                       }
+                        float newDirection = transform.eulerAngles.y + 180;
+
+                        newDirection += GetAngleBounce(transform.position);
+
+                        transform.eulerAngles = new Vector3(0, newDirection, 0);
                     }
-                    catch(Exception e){ }
+                    else
+                    {
+                        //regarde s'il y a un joueur devant lui et se décale pour l'éviter
+                        try
+                        {
+                            if (GameControllerF.FieldOfView(gameObject, 20, 90)[0] != null)
+                            {
+                                Vector3 relativePoint = transform.InverseTransformPoint(GameControllerF.FieldOfView(gameObject, 20, 90)[0].transform.position);
+                                if (relativePoint.x < 0)
+                                    transform.RotateAround(transform.position, Vector3.up, angleAvoidPlayer * Time.deltaTime);
+                                else
+                                    transform.RotateAround(transform.position, Vector3.up, -angleAvoidPlayer * Time.deltaTime);
+                            }
+                        }
+                        catch (Exception e) { }
+                    }
                 }
             }
         }
