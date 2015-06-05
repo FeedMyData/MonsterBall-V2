@@ -110,14 +110,11 @@ public class MonsterControllerF : MonoBehaviour {
 
     private GameObject smokeFury;
     private GameObject transfoFury;
-<<<<<<< HEAD
 
     [HideInInspector]
     public bool canCount= true;
-=======
     private GameObject saliveDroite;
     private GameObject saliveGauche;
->>>>>>> origin/master
 
     //public delegate void OnClickHit();
     //public event OnClickHit OnClickHitEvent;
