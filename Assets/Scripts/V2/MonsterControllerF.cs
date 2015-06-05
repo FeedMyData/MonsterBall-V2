@@ -108,11 +108,10 @@ public class MonsterControllerF : MonoBehaviour {
     
     public Vector3 respawnPositionBall;
 
-    private ParticleSystem smokeFury;
-    private ParticleSystem transfoFury;
-    private ParticleSystem saliveDroite;
-    private ParticleSystem saliveGauche;
-    private ParticleSystem ragingFx;
+    private GameObject smokeFury;
+    private GameObject transfoFury;
+    private GameObject saliveDroite;
+    private GameObject saliveGauche;
 
     //public delegate void OnClickHit();
     //public event OnClickHit OnClickHitEvent;
@@ -128,11 +127,14 @@ public class MonsterControllerF : MonoBehaviour {
 
         commentariesScript = GameObject.Find("Commentaries").GetComponent<TextCommentaries>();
 
-        smokeFury = GameObject.Find("FumeeTransfo").GetComponent<ParticleSystem>();
-        transfoFury = GameObject.Find("Transformation_particules").GetComponent<ParticleSystem>();
-        saliveDroite = GameObject.Find("Salive droite").GetComponent<ParticleSystem>();
-        saliveGauche = GameObject.Find("Salive gauche").GetComponent<ParticleSystem>();
-        ragingFx = GameObject.Find("raging fx").GetComponent<ParticleSystem>();
+        smokeFury = GameObject.Find("FumeeTransfo");
+        transfoFury = GameObject.Find("Transformation_particules");
+        saliveDroite = GameObject.Find("Salive droite");
+        saliveGauche = GameObject.Find("Salive gauche");
+
+
+        //smokeFury.SetActive(false);
+        //transfoFury.SetActive(false);
 
         if (!monsterForm)
         {
@@ -307,7 +309,6 @@ public class MonsterControllerF : MonoBehaviour {
         {
             yield return new WaitForSeconds(wrathDribblingEachTime);
             wrath += wrathDribblingValue;
-            ragingFx.Play();
         }
         
     }
@@ -527,12 +528,15 @@ public class MonsterControllerF : MonoBehaviour {
 
         TransformationBallMonstre();
 
-        transfoFury.Play();
+        transfoFury.GetComponent<ParticleSystem>().Play();
 
         yield return new WaitForSeconds(summon / 2);
 
         smokeFury.transform.position = transform.position;
-        smokeFury.Play();
+        smokeFury.GetComponent<ParticleSystem>().Play();
+
+        //GameObject smokeFury = Instantiate(Resources.Load("Fumee", typeof(GameObject)), transform.position, Quaternion.identity) as GameObject;
+        //GameObject transfoFury = Instantiate(Resources.Load("Transformation_particules", typeof(GameObject)), transform.position, Quaternion.identity) as GameObject;
 
         yield return new WaitForSeconds(summon/2);
 
@@ -551,8 +555,8 @@ public class MonsterControllerF : MonoBehaviour {
         skinMonster.SetActive(true);
         transform.localScale *= monsterScale;
 
-        transfoFury.Stop();
-        smokeFury.Stop();
+        transfoFury.GetComponent<ParticleSystem>().Stop();
+        smokeFury.GetComponent<ParticleSystem>().Stop();
 
 
         //int actualCycleMonster = 0;
@@ -663,13 +667,13 @@ public class MonsterControllerF : MonoBehaviour {
 		if(GetComponentInChildren<Animator>()) GetComponentInChildren<Animator>().SetTrigger("spit");
 
         //feedbacks chewing
-        saliveDroite.Play();
-        saliveGauche.Play();
+        saliveDroite.GetComponent<ParticleSystem>().Play();
+        saliveGauche.GetComponent<ParticleSystem>().Play();
 
         yield return new WaitForSeconds(durationEatingPlayer);
 
-        saliveDroite.Stop();
-        saliveGauche.Stop();
+        saliveDroite.GetComponent<ParticleSystem>().Stop();
+        saliveGauche.GetComponent<ParticleSystem>().Stop();
 
         //Faire réapparaitre le joueur
         //player.GetComponent<Renderer>().enabled = true;
@@ -712,7 +716,6 @@ public class MonsterControllerF : MonoBehaviour {
     public void AddWrath(int wrath)
     {
         this.wrath += wrath;
-        ragingFx.Play();
     }
 
     /**
