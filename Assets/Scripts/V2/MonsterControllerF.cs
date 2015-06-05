@@ -560,7 +560,7 @@ public class MonsterControllerF : MonoBehaviour {
         yield return new WaitForSeconds(durationFirstPart);
             if (!monsterModeCharge)
             {
-                Debug.Log("choix player");
+                Debug.Log("choix player  :actuellement sur j1, à changer");
 
                 targetCharge = GameControllerF.GetPlayer(/*(int)UnityEngine.Random.Range(1,5)*/1);
                 Debug.Log(targetCharge.name);
@@ -578,9 +578,18 @@ public class MonsterControllerF : MonoBehaviour {
 
         Vector3 reposition = magnet.transform.position;
         reposition.x += magnet.transform.forward.x * spaceBetweenBallPlayer;
-        reposition.y = magnet.transform.position.y - transform.localScale.y;
+        reposition.y = magnet.transform.position.y - magnet.transform.localScale.y/3f;
         reposition.z += magnet.transform.forward.z * spaceBetweenBallPlayer;
         transform.position = reposition;
+
+        if (magnet.GetComponent<PlayerControllerF>().isRunning)
+        {
+            body.AddTorque(magnet.transform.forward * 10,ForceMode.Acceleration);
+        }
+        else
+        {
+            body.angularVelocity = Vector3.zero;
+        }
     }
 
     void SetMagnet()

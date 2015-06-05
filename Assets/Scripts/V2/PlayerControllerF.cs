@@ -74,6 +74,9 @@ public class PlayerControllerF : MonoBehaviour
 
     private SoundManager sound;
 
+    [HideInInspector]
+    public bool isRunning;
+
     /* Statistiques */
     [HideInInspector]
     public int coupsDonnes = 0;
@@ -259,6 +262,7 @@ public class PlayerControllerF : MonoBehaviour
         }
         else if (directionMove.sqrMagnitude > 0.2f && !isStunned /*&& !dash*/)
         {
+            isRunning = true;
             transform.LookAt(transform.position + directionMove);
             directionMove = transform.forward * actualSpeed;
             direction = transform.forward;
@@ -267,6 +271,7 @@ public class PlayerControllerF : MonoBehaviour
         }
         else
         {
+            isRunning = false;
             directionMove = Vector3.zero;
             if (GetComponentInChildren<Animator>() && GetComponentInChildren<Animator>().GetBool("isRunning") == true)
                 GetComponentInChildren<Animator>().SetBool("isRunning", false);
@@ -527,8 +532,8 @@ public class PlayerControllerF : MonoBehaviour
                         if (GameControllerF.WhereIsMyAlly(this) != Vector3.zero)
                         {
                             directionImpact = GameControllerF.WhereIsMyAlly(this) - transform.position;
-                            directionImpact.y = 0;
                             directionImpact.Normalize();
+                            directionImpact.y = 0;
                             directionImpact *= power;
                         }
                         
