@@ -95,7 +95,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 945540}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: LeftForeFinger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -146,6 +146,8 @@ Transform:
   - {fileID: 615020599}
   - {fileID: 1215151605}
   - {fileID: 158218451}
+  - {fileID: 1807323546}
+  - {fileID: 1915135067}
   m_Father: {fileID: 0}
   m_RootOrder: 3
 --- !u!114 &7400955
@@ -171,7 +173,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speedBall: 12
-  speedRotationBall: 10
+  speedRotationBall: 30
   speedMonster: 13
   angleChangeDirection: 45
   speedMaxToChooseDirection: 5
@@ -181,7 +183,7 @@ MonoBehaviour:
   angleAvoidPlayer: 45
   areaMagnet: 3
   speedMagnet: 40
-  wrathMax: 10000
+  wrathMax: 5
   wrathDribblingValue: 1
   wrathDribblingEachTime: .5
   summon: 2
@@ -189,12 +191,12 @@ MonoBehaviour:
   durationSecondPart: 5
   monsterScale: 6
   monsterMass: 20
-  safeTransform: .699999988
+  safeTransform: .600000024
   nbCycleMonster: 3
   durationLoadingCharge: 2
-  durationUpSpeedCharge: 8
-  minSpeedCharge: 2
-  maxSpeedCharge: 25
+  numberOfReboundsToMaxSpeed: 10
+  minSpeedCharge: 20
+  maxSpeedCharge: 80
   durationInvul: 2
   coefColliderMonster: .699999988
   durationEatingPlayer: 1
@@ -247,7 +249,7 @@ GameObject:
   - 33: {fileID: 17312134}
   - 23: {fileID: 17312133}
   - 95: {fileID: 17312132}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: Asteroid 33
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -325,7 +327,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 21774802}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: RightFootFingers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -355,7 +357,7 @@ GameObject:
   - 33: {fileID: 43463680}
   - 23: {fileID: 43463679}
   - 95: {fileID: 43463681}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: arme
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -531,7 +533,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 56633908}
   - 212: {fileID: 56633909}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: SpriteBonus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -689,7 +691,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 84324941}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Spin2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -750,7 +752,7 @@ Light:
   m_Type: 0
   m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_Intensity: 6
-  m_Range: 35
+  m_Range: 36
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -765,9 +767,9 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 262144
+    m_Bits: 2392064
   m_Lightmapping: 4
-  m_BounceIntensity: 1
+  m_BounceIntensity: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
   m_AreaSize: {x: 1, y: 1}
@@ -794,7 +796,7 @@ GameObject:
   - 33: {fileID: 94289449}
   - 23: {fileID: 94289448}
   - 64: {fileID: 94289447}
-  m_Layer: 16
+  m_Layer: 0
   m_Name: invisible interior walls front
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1015,7 +1017,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 102926632}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: LeftArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1045,7 +1047,7 @@ GameObject:
   - 4: {fileID: 111314106}
   - 33: {fileID: 111314108}
   - 23: {fileID: 111314107}
-  m_Layer: 17
+  m_Layer: 0
   m_Name: dome fx
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1107,7 +1109,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 126440860}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: LeftFoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1179,7 +1181,7 @@ GameObject:
   - 33: {fileID: 142682167}
   - 23: {fileID: 142682166}
   - 95: {fileID: 142682168}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: arme
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1401,8 +1403,8 @@ ParticleSystemRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 158218450}
   m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
   m_Materials:
   - {fileID: 2100000, guid: 02a46fb295082ed488cab61782ddc01f, type: 2}
   m_SubsetIndices: 
@@ -2473,7 +2475,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 167506542}
   - 64: {fileID: 167506543}
-  m_Layer: 0
+  m_Layer: 21
   m_Name: RedArrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2651,7 +2653,7 @@ GameObject:
   - 4: {fileID: 175363495}
   - 137: {fileID: 175363496}
   - 114: {fileID: 175363497}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Nivek
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2763,7 +2765,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 179729937}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: Asteroid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2797,7 +2799,7 @@ GameObject:
   - 33: {fileID: 184159538}
   - 23: {fileID: 184159537}
   - 95: {fileID: 184159536}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: Asteroid 17
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2998,7 +3000,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 223895742}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: LeftAnkle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3026,7 +3028,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 239591227}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: RightHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3059,7 +3061,7 @@ GameObject:
   - 4: {fileID: 275250415}
   - 95: {fileID: 275250417}
   - 114: {fileID: 275250416}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Nivek
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3119,7 +3121,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 281415428}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: LeftShin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3147,7 +3149,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 282978682}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: RightLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3175,7 +3177,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 286169526}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Spin2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3207,7 +3209,7 @@ GameObject:
   - 33: {fileID: 294119316}
   - 23: {fileID: 294119315}
   - 95: {fileID: 294119317}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: arme
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3291,7 +3293,7 @@ GameObject:
   - 33: {fileID: 302678231}
   - 23: {fileID: 302678230}
   - 64: {fileID: 302678229}
-  m_Layer: 0
+  m_Layer: 21
   m_Name: socle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3371,7 +3373,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 311153588}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: RIghtFoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3484,7 +3486,7 @@ GameObject:
   - 33: {fileID: 319266657}
   - 23: {fileID: 319266656}
   - 95: {fileID: 319266655}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: Asteroid 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3589,7 +3591,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 336816487}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Spin1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3679,7 +3681,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 366577428}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: LeftArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3707,7 +3709,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 379644006}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: RightLittleFinger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3934,7 +3936,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 392685105}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: LeftArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3963,7 +3965,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 392790972}
   - 212: {fileID: 392790973}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Circle2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4017,7 +4019,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 395940174}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: LeftForeFinger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4044,7 +4046,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 406547862}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: LeftAnkle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4101,7 +4103,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 444043325}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: LeftHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4134,7 +4136,7 @@ GameObject:
   - 33: {fileID: 456353352}
   - 23: {fileID: 456353351}
   - 95: {fileID: 456353350}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: Asteroid 24
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4212,7 +4214,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 456875003}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: RightShoulders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4333,7 +4335,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 475993906}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: RightFootFingers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4361,7 +4363,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 479924466}
   - 212: {fileID: 479924467}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: SpriteBonus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4417,7 +4419,7 @@ GameObject:
   - 4: {fileID: 480821635}
   - 95: {fileID: 480821637}
   - 114: {fileID: 480821636}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Nivek
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4477,7 +4479,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 498865591}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: LeftHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4665,7 +4667,7 @@ GameObject:
   - 4: {fileID: 500802389}
   - 95: {fileID: 500802391}
   - 114: {fileID: 500802390}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Nivek
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4726,7 +4728,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 506199789}
   - 212: {fileID: 506199790}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4990,7 +4992,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 533525429}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: LeftFootFingers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5017,7 +5019,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 533925430}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: RightShoulders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5108,7 +5110,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 568214955}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: RightArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5136,7 +5138,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 583225020}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: RightThumb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5163,7 +5165,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 583732061}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: RightLittleFinger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5193,7 +5195,7 @@ GameObject:
   - 33: {fileID: 601880467}
   - 23: {fileID: 601880466}
   - 95: {fileID: 601880465}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: Asteroid 6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5315,7 +5317,7 @@ GameObject:
   - 33: {fileID: 613491960}
   - 23: {fileID: 613491959}
   - 95: {fileID: 613491958}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: Asteroid 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5520,7 +5522,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 622455560}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: LeftForeArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5721,7 +5723,7 @@ GameObject:
   - 33: {fileID: 632581609}
   - 23: {fileID: 632581608}
   - 95: {fileID: 632581607}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: Asteroid 31
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5800,7 +5802,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 634162973}
   - 212: {fileID: 634162974}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5853,7 +5855,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 640113960}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: RightForeArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5884,7 +5886,7 @@ GameObject:
   - 33: {fileID: 656183280}
   - 23: {fileID: 656183279}
   - 95: {fileID: 656183278}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: Asteroid 28
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6028,7 +6030,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 669021308}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: RightArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6056,7 +6058,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 673153073}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: RightThumb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6084,7 +6086,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 677705964}
   - 114: {fileID: 677705965}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: AsteroidFront
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6130,7 +6132,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 680037102}
-  m_Layer: 0
+  m_Layer: 21
   m_Name: Sprites
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6260,7 +6262,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 710931141}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: LeftForeArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6288,7 +6290,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 725309356}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: RightLittleFinger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6317,7 +6319,7 @@ GameObject:
   - 4: {fileID: 732124679}
   - 137: {fileID: 732124680}
   - 114: {fileID: 732124681}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Nivek
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6432,7 +6434,7 @@ GameObject:
   - 33: {fileID: 739833765}
   - 23: {fileID: 739833764}
   - 64: {fileID: 739833763}
-  m_Layer: 16
+  m_Layer: 0
   m_Name: invisible interior walls back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6789,7 +6791,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 800269684}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: LeftShin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6817,7 +6819,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 817335604}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Spin1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6911,7 +6913,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 834670777}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: RightForeFinger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6938,7 +6940,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 841635772}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: LeftFootFingers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6967,7 +6969,7 @@ GameObject:
   - 4: {fileID: 853068041}
   - 198: {fileID: 853068043}
   - 199: {fileID: 853068042}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Course
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8124,7 +8126,7 @@ GameObject:
   - 33: {fileID: 856438044}
   - 23: {fileID: 856438043}
   - 95: {fileID: 856438045}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: arme
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8208,7 +8210,7 @@ GameObject:
   - 33: {fileID: 863303129}
   - 23: {fileID: 863303128}
   - 95: {fileID: 863303127}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: Asteroid 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8286,7 +8288,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 863336633}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: LeftShin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8317,7 +8319,7 @@ GameObject:
   - 33: {fileID: 881065389}
   - 23: {fileID: 881065388}
   - 95: {fileID: 881065387}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: Asteroid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8458,7 +8460,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 897209436}
   - 212: {fileID: 897209437}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8577,7 +8579,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 897941056}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: RightThumb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8604,7 +8606,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 903980102}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Spin0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8637,7 +8639,7 @@ GameObject:
   - 33: {fileID: 918998601}
   - 23: {fileID: 918998600}
   - 95: {fileID: 918998599}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: Asteroid 16
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8715,7 +8717,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 927586568}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: RightLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8746,7 +8748,7 @@ GameObject:
   - 33: {fileID: 929218775}
   - 23: {fileID: 929218774}
   - 95: {fileID: 929218773}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: Asteroid 12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8824,7 +8826,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 944120938}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: LeftFoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8852,7 +8854,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 946470394}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: RightShin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8880,7 +8882,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 949526735}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: RightForeArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8909,7 +8911,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 953078914}
   - 114: {fileID: 953078915}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: AsteroidFrontLine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8976,7 +8978,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 956950063}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: RightForeFinger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9003,7 +9005,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 957049316}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: LeftLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9031,7 +9033,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 960383909}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: LeftFoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9059,7 +9061,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 965493379}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: LeftLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9088,7 +9090,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 979948206}
   - 212: {fileID: 979948207}
-  m_Layer: 0
+  m_Layer: 21
   m_Name: ArrowSprite 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9143,7 +9145,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 981119693}
   - 212: {fileID: 981119694}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9240,7 +9242,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 985672630}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: RightFootFingers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9267,7 +9269,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1022613090}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: RightFootFingers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9294,7 +9296,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1024260426}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Spin2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9384,7 +9386,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1026215565}
   - 114: {fileID: 1026215566}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: AsteroidMiddleLine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9428,7 +9430,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1026307694}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: RightForeFinger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9472,8 +9474,8 @@ ParticleSystemRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1038077884}
   m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
   m_Materials:
   - {fileID: 2100000, guid: f892253ab15f74115b6d10bd736b2e29, type: 2}
   m_SubsetIndices: 
@@ -10515,7 +10517,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1047367080}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: LeftForeArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10543,7 +10545,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1051518365}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: LeftThumb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10573,7 +10575,7 @@ GameObject:
   - 33: {fileID: 1051817989}
   - 23: {fileID: 1051817988}
   - 95: {fileID: 1051817987}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: Asteroid 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10651,7 +10653,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1072638209}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: RightForeArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10679,7 +10681,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1076590450}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: LeftLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10891,7 +10893,7 @@ GameObject:
   - 33: {fileID: 1102650215}
   - 23: {fileID: 1102650214}
   - 95: {fileID: 1102650213}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: Asteroid 14
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11073,7 +11075,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1109858667}
   - 212: {fileID: 1109858668}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: SpriteBonus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11127,7 +11129,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1122147950}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Spin0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11160,7 +11162,7 @@ GameObject:
   - 33: {fileID: 1123659806}
   - 23: {fileID: 1123659805}
   - 95: {fileID: 1123659804}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: Asteroid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11309,7 +11311,7 @@ GameObject:
   - 33: {fileID: 1132927525}
   - 23: {fileID: 1132927524}
   - 95: {fileID: 1132927523}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: Asteroid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11388,7 +11390,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1134231507}
   - 212: {fileID: 1134231508}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Circle2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11445,7 +11447,7 @@ GameObject:
   - 33: {fileID: 1134436192}
   - 23: {fileID: 1134436191}
   - 95: {fileID: 1134436190}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: Asteroid 7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11617,7 +11619,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1146964693}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Spin0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11702,7 +11704,7 @@ GameObject:
   - 33: {fileID: 1158255908}
   - 23: {fileID: 1158255907}
   - 95: {fileID: 1158255906}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: Asteroid 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11783,7 +11785,7 @@ GameObject:
   - 33: {fileID: 1185214116}
   - 23: {fileID: 1185214115}
   - 95: {fileID: 1185214114}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: Asteroid 13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11864,7 +11866,7 @@ GameObject:
   - 33: {fileID: 1190307299}
   - 23: {fileID: 1190307298}
   - 95: {fileID: 1190307297}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: Asteroid 20
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11943,7 +11945,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1191416819}
   - 64: {fileID: 1191416820}
-  m_Layer: 0
+  m_Layer: 21
   m_Name: BlueArrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12060,7 +12062,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1214042435}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: RightLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12296,7 +12298,7 @@ GameObject:
   - 33: {fileID: 1230171922}
   - 23: {fileID: 1230171921}
   - 95: {fileID: 1230171920}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: Asteroid 18
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12434,7 +12436,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1242144104}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: LeftLittleFinger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12464,7 +12466,7 @@ GameObject:
   - 33: {fileID: 1243423542}
   - 23: {fileID: 1243423541}
   - 95: {fileID: 1243423540}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: Asteroid 22
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12544,7 +12546,7 @@ GameObject:
   - 4: {fileID: 1249978055}
   - 198: {fileID: 1249978054}
   - 199: {fileID: 1249978053}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Course
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13632,7 +13634,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1256474936}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: LeftLittleFinger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14049,7 +14051,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1290406492}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: LeftThumb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14079,7 +14081,7 @@ GameObject:
   - 33: {fileID: 1298894002}
   - 23: {fileID: 1298894001}
   - 95: {fileID: 1298894000}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: Asteroid 15
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14159,7 +14161,7 @@ GameObject:
   - 4: {fileID: 1303832278}
   - 198: {fileID: 1303832280}
   - 199: {fileID: 1303832279}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Course
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15247,7 +15249,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1311771983}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: LeftShin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15275,7 +15277,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1314751138}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: LeftLittleFinger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15302,7 +15304,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1341213749}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: LeftHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15332,7 +15334,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1341943372}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: LeftHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15363,7 +15365,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1350007049}
   - 212: {fileID: 1350007050}
-  m_Layer: 0
+  m_Layer: 21
   m_Name: ArrowSprite 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15420,7 +15422,7 @@ GameObject:
   - 33: {fileID: 1356557984}
   - 23: {fileID: 1356557983}
   - 95: {fileID: 1356557982}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: Asteroid 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15498,7 +15500,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1358514411}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: RightAnkle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15529,7 +15531,7 @@ GameObject:
   - 33: {fileID: 1361442871}
   - 23: {fileID: 1361442870}
   - 95: {fileID: 1361442869}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: Asteroid 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15607,7 +15609,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1363593656}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Spin1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15635,7 +15637,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1371428295}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: LeftShoulder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15666,7 +15668,7 @@ GameObject:
   - 33: {fileID: 1387860659}
   - 23: {fileID: 1387860658}
   - 95: {fileID: 1387860657}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: Asteroid 26
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15747,7 +15749,7 @@ GameObject:
   - 33: {fileID: 1413661403}
   - 23: {fileID: 1413661402}
   - 95: {fileID: 1413661401}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: Asteroid 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15894,7 +15896,7 @@ GameObject:
   - 33: {fileID: 1422211990}
   - 23: {fileID: 1422211989}
   - 95: {fileID: 1422211988}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: Asteroid 11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15975,7 +15977,7 @@ GameObject:
   - 33: {fileID: 1424632769}
   - 23: {fileID: 1424632768}
   - 95: {fileID: 1424632767}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: Asteroid 30
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16117,7 +16119,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1458615753}
   - 212: {fileID: 1458615754}
-  m_Layer: 0
+  m_Layer: 21
   m_Name: ArrowSprite 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16174,7 +16176,7 @@ GameObject:
   - 33: {fileID: 1460392102}
   - 23: {fileID: 1460392101}
   - 95: {fileID: 1460392100}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: Asteroid 9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16255,7 +16257,7 @@ GameObject:
   - 33: {fileID: 1463454469}
   - 23: {fileID: 1463454468}
   - 95: {fileID: 1463454467}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: Asteroid 23
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16336,7 +16338,7 @@ GameObject:
   - 33: {fileID: 1463490073}
   - 23: {fileID: 1463490072}
   - 95: {fileID: 1463490071}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: Asteroid 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16414,7 +16416,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1471370141}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Spin2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16443,7 +16445,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1483754752}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: RightArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16715,7 +16717,7 @@ GameObject:
   - 33: {fileID: 1509375503}
   - 23: {fileID: 1509375502}
   - 95: {fileID: 1509375501}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: Asteroid 25
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16793,7 +16795,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1509795430}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: RightForeFinger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16820,7 +16822,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1509996308}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: RightShoulders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16848,7 +16850,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1513599788}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Spin0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16880,7 +16882,7 @@ GameObject:
   - 4: {fileID: 1519344843}
   - 198: {fileID: 1519344845}
   - 199: {fileID: 1519344844}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Course
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17968,7 +17970,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1522438736}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: RightForeArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17997,7 +17999,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1530337434}
   - 114: {fileID: 1530337435}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: AsteroidBackLine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18112,7 +18114,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1538482381}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: LeftShoulder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18140,7 +18142,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1561177447}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: RightLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18168,7 +18170,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1563541383}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: LeftShoulder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18199,7 +18201,7 @@ GameObject:
   - 33: {fileID: 1563936167}
   - 23: {fileID: 1563936166}
   - 95: {fileID: 1563936165}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: Asteroid 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18306,7 +18308,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1586381842}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: RightArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18334,7 +18336,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1606723507}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: LeftArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18458,7 +18460,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1625249824}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: LeftForeFinger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18485,7 +18487,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1654682715}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: LeftForeFinger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18512,7 +18514,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1655113894}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: RightHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18543,7 +18545,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1673975505}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: LeftFootFingers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18634,7 +18636,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1680736819}
   - 212: {fileID: 1680736820}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Circle2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18690,7 +18692,7 @@ GameObject:
   - 4: {fileID: 1686672457}
   - 137: {fileID: 1686672458}
   - 114: {fileID: 1686672459}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Nivek
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18898,7 +18900,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1702686961}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: LeftShoulder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18997,7 +18999,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1718986783}
   - 212: {fileID: 1718986784}
-  m_Layer: 0
+  m_Layer: 21
   m_Name: ArrowSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19117,7 +19119,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1728576452}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Spin1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19172,7 +19174,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1747368449}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: RightShin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19447,7 +19449,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1792388571}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: LeftThumb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19546,6 +19548,1046 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1806177937}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1807323545
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 194466, guid: c8bbf4bb1b307f54e8e561e2561de74b, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1807323546}
+  - 198: {fileID: 1807323548}
+  - 199: {fileID: 1807323547}
+  m_Layer: 0
+  m_Name: Salive gauche
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1807323546
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 418720, guid: c8bbf4bb1b307f54e8e561e2561de74b, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1807323545}
+  m_LocalRotation: {x: -.197808623, y: -.678875446, z: -.197808653, w: .678875327}
+  m_LocalPosition: {x: -.349999994, y: -.259999931, z: .100000001}
+  m_LocalScale: {x: .666666746, y: .666666746, z: .666666687}
+  m_Children: []
+  m_Father: {fileID: 7400954}
+  m_RootOrder: 3
+--- !u!199 &1807323547
+ParticleSystemRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 19956452, guid: c8bbf4bb1b307f54e8e561e2561de74b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1807323545}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_Materials:
+  - {fileID: 2100000, guid: f63c576739a709747a1a571260d4fabd, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_ReflectionProbeUsage: 0
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_RenderMode: 1
+  m_MaxParticleSize: .5
+  m_CameraVelocityScale: 0
+  m_VelocityScale: .0299999993
+  m_LengthScale: 1
+  m_SortingFudge: 0
+  m_NormalDirection: 1
+  m_SortMode: 0
+  m_Mesh: {fileID: 0}
+  m_Mesh1: {fileID: 0}
+  m_Mesh2: {fileID: 0}
+  m_Mesh3: {fileID: 0}
+--- !u!198 &1807323548
+ParticleSystem:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 19810712, guid: c8bbf4bb1b307f54e8e561e2561de74b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1807323545}
+  lengthInSec: 1
+  startDelay: 0
+  speed: 1
+  randomSeed: 0
+  looping: 0
+  prewarm: 0
+  playOnAwake: 0
+  moveWithTransform: 0
+  InitialModule:
+    enabled: 1
+    startLifetime:
+      scalar: 1
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: .699999988
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minMaxState: 0
+    startSpeed:
+      scalar: 5
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: .400000006
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minMaxState: 3
+    startColor:
+      maxGradient:
+        key0:
+          serializedVersion: 2
+          rgba: 4294967295
+        key1:
+          serializedVersion: 2
+          rgba: 4294967295
+        key2:
+          serializedVersion: 2
+          rgba: 0
+        key3:
+          serializedVersion: 2
+          rgba: 0
+        key4:
+          serializedVersion: 2
+          rgba: 0
+        key5:
+          serializedVersion: 2
+          rgba: 0
+        key6:
+          serializedVersion: 2
+          rgba: 0
+        key7:
+          serializedVersion: 2
+          rgba: 0
+        ctime0: 0
+        ctime1: 65535
+        ctime2: 0
+        ctime3: 0
+        ctime4: 0
+        ctime5: 0
+        ctime6: 0
+        ctime7: 0
+        atime0: 0
+        atime1: 65535
+        atime2: 0
+        atime3: 0
+        atime4: 0
+        atime5: 0
+        atime6: 0
+        atime7: 0
+        m_NumColorKeys: 2
+        m_NumAlphaKeys: 2
+      minGradient:
+        key0:
+          serializedVersion: 2
+          rgba: 4294967295
+        key1:
+          serializedVersion: 2
+          rgba: 4294967295
+        key2:
+          serializedVersion: 2
+          rgba: 0
+        key3:
+          serializedVersion: 2
+          rgba: 0
+        key4:
+          serializedVersion: 2
+          rgba: 0
+        key5:
+          serializedVersion: 2
+          rgba: 0
+        key6:
+          serializedVersion: 2
+          rgba: 0
+        key7:
+          serializedVersion: 2
+          rgba: 0
+        ctime0: 0
+        ctime1: 65535
+        ctime2: 0
+        ctime3: 0
+        ctime4: 0
+        ctime5: 0
+        ctime6: 0
+        ctime7: 0
+        atime0: 0
+        atime1: 65535
+        atime2: 0
+        atime3: 0
+        atime4: 0
+        atime5: 0
+        atime6: 0
+        atime7: 0
+        m_NumColorKeys: 2
+        m_NumAlphaKeys: 2
+      minColor:
+        serializedVersion: 2
+        rgba: 4294915840
+      maxColor:
+        serializedVersion: 2
+        rgba: 4294967295
+      minMaxState: 2
+    startSize:
+      scalar: 1
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: .600000024
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minMaxState: 3
+    startRotation:
+      scalar: 3.14159274
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: -1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minMaxState: 2
+    gravityModifier: 1
+    inheritVelocity: 0
+    maxNumParticles: 10000
+  ShapeModule:
+    serializedVersion: 2
+    enabled: 1
+    type: 4
+    radius: .00999999978
+    angle: 11.4923096
+    length: 5
+    boxX: 1
+    boxY: 1
+    boxZ: 1
+    arc: 360
+    placementMode: 0
+    m_Mesh: {fileID: 0}
+    randomDirection: 1
+  EmissionModule:
+    enabled: 1
+    m_Type: 0
+    rate:
+      scalar: 50
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minMaxState: 0
+    cnt0: 30
+    cnt1: 30
+    cnt2: 30
+    cnt3: 30
+    time0: 0
+    time1: 0
+    time2: 0
+    time3: 0
+    m_BurstCount: 0
+  SizeModule:
+    enabled: 1
+    curve:
+      scalar: 1
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minMaxState: 1
+  RotationModule:
+    enabled: 0
+    curve:
+      scalar: .785398185
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minMaxState: 0
+  ColorModule:
+    enabled: 0
+    gradient:
+      maxGradient:
+        key0:
+          serializedVersion: 2
+          rgba: 4294967295
+        key1:
+          serializedVersion: 2
+          rgba: 4294967295
+        key2:
+          serializedVersion: 2
+          rgba: 0
+        key3:
+          serializedVersion: 2
+          rgba: 0
+        key4:
+          serializedVersion: 2
+          rgba: 0
+        key5:
+          serializedVersion: 2
+          rgba: 0
+        key6:
+          serializedVersion: 2
+          rgba: 0
+        key7:
+          serializedVersion: 2
+          rgba: 0
+        ctime0: 0
+        ctime1: 39850
+        ctime2: 65535
+        ctime3: 0
+        ctime4: 0
+        ctime5: 0
+        ctime6: 0
+        ctime7: 0
+        atime0: 0
+        atime1: 57819
+        atime2: 65535
+        atime3: 0
+        atime4: 0
+        atime5: 0
+        atime6: 0
+        atime7: 0
+        m_NumColorKeys: 3
+        m_NumAlphaKeys: 3
+      minGradient:
+        key0:
+          serializedVersion: 2
+          rgba: 4294967295
+        key1:
+          serializedVersion: 2
+          rgba: 4294967295
+        key2:
+          serializedVersion: 2
+          rgba: 0
+        key3:
+          serializedVersion: 2
+          rgba: 0
+        key4:
+          serializedVersion: 2
+          rgba: 0
+        key5:
+          serializedVersion: 2
+          rgba: 0
+        key6:
+          serializedVersion: 2
+          rgba: 0
+        key7:
+          serializedVersion: 2
+          rgba: 0
+        ctime0: 0
+        ctime1: 65535
+        ctime2: 0
+        ctime3: 0
+        ctime4: 0
+        ctime5: 0
+        ctime6: 0
+        ctime7: 0
+        atime0: 0
+        atime1: 65535
+        atime2: 0
+        atime3: 0
+        atime4: 0
+        atime5: 0
+        atime6: 0
+        atime7: 0
+        m_NumColorKeys: 2
+        m_NumAlphaKeys: 2
+      minColor:
+        serializedVersion: 2
+        rgba: 4294967295
+      maxColor:
+        serializedVersion: 2
+        rgba: 4294967295
+      minMaxState: 1
+  UVModule:
+    enabled: 0
+    frameOverTime:
+      scalar: 1
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 1
+          tangentMode: 0
+        - time: 1
+          value: 1
+          inSlope: 1
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 1
+          tangentMode: 0
+        - time: 1
+          value: 1
+          inSlope: 1
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minMaxState: 1
+    tilesX: 1
+    tilesY: 1
+    animationType: 0
+    rowIndex: 0
+    cycles: 1
+    randomRow: 1
+  VelocityModule:
+    enabled: 0
+    x:
+      scalar: 0
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minMaxState: 0
+    y:
+      scalar: 0
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minMaxState: 0
+    z:
+      scalar: 0
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minMaxState: 0
+    inWorldSpace: 1
+  ForceModule:
+    enabled: 1
+    x:
+      scalar: 6
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: -1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minMaxState: 3
+    y:
+      scalar: 0
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minMaxState: 3
+    z:
+      scalar: 2
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minMaxState: 3
+    inWorldSpace: 1
+    randomizePerFrame: 0
+  ExternalForcesModule:
+    enabled: 0
+    multiplier: 1
+  ClampVelocityModule:
+    enabled: 0
+    x:
+      scalar: 1
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minMaxState: 0
+    y:
+      scalar: 1
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minMaxState: 0
+    z:
+      scalar: 1
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minMaxState: 0
+    magnitude:
+      scalar: 1
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minMaxState: 0
+    separateAxis: 0
+    inWorldSpace: 0
+    dampen: 1
+  SizeBySpeedModule:
+    enabled: 0
+    curve:
+      scalar: 1
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minMaxState: 1
+    range: {x: 0, y: 1}
+  RotationBySpeedModule:
+    enabled: 0
+    curve:
+      scalar: .785398185
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minMaxState: 0
+    range: {x: 0, y: 1}
+  ColorBySpeedModule:
+    enabled: 0
+    gradient:
+      maxGradient:
+        key0:
+          serializedVersion: 2
+          rgba: 4278227199
+        key1:
+          serializedVersion: 2
+          rgba: 4294967295
+        key2:
+          serializedVersion: 2
+          rgba: 16777215
+        key3:
+          serializedVersion: 2
+          rgba: 0
+        key4:
+          serializedVersion: 2
+          rgba: 0
+        key5:
+          serializedVersion: 2
+          rgba: 0
+        key6:
+          serializedVersion: 2
+          rgba: 0
+        key7:
+          serializedVersion: 2
+          rgba: 0
+        ctime0: 0
+        ctime1: 65535
+        ctime2: 65535
+        ctime3: 0
+        ctime4: 0
+        ctime5: 0
+        ctime6: 0
+        ctime7: 0
+        atime0: 0
+        atime1: 65535
+        atime2: 0
+        atime3: 0
+        atime4: 0
+        atime5: 0
+        atime6: 0
+        atime7: 0
+        m_NumColorKeys: 2
+        m_NumAlphaKeys: 2
+      minGradient:
+        key0:
+          serializedVersion: 2
+          rgba: 4294967295
+        key1:
+          serializedVersion: 2
+          rgba: 4294967295
+        key2:
+          serializedVersion: 2
+          rgba: 0
+        key3:
+          serializedVersion: 2
+          rgba: 0
+        key4:
+          serializedVersion: 2
+          rgba: 0
+        key5:
+          serializedVersion: 2
+          rgba: 0
+        key6:
+          serializedVersion: 2
+          rgba: 0
+        key7:
+          serializedVersion: 2
+          rgba: 0
+        ctime0: 0
+        ctime1: 65535
+        ctime2: 0
+        ctime3: 0
+        ctime4: 0
+        ctime5: 0
+        ctime6: 0
+        ctime7: 0
+        atime0: 0
+        atime1: 65535
+        atime2: 0
+        atime3: 0
+        atime4: 0
+        atime5: 0
+        atime6: 0
+        atime7: 0
+        m_NumColorKeys: 2
+        m_NumAlphaKeys: 2
+      minColor:
+        serializedVersion: 2
+        rgba: 4294967295
+      maxColor:
+        serializedVersion: 2
+        rgba: 4294967295
+      minMaxState: 1
+    range: {x: 0, y: 1}
+  CollisionModule:
+    enabled: 0
+    type: 1
+    plane0: {fileID: 0}
+    plane1: {fileID: 0}
+    plane2: {fileID: 0}
+    plane3: {fileID: 0}
+    plane4: {fileID: 0}
+    plane5: {fileID: 0}
+    dampen: .5
+    bounce: .75
+    energyLossOnCollision: 0
+    minKillSpeed: 0
+    particleRadius: .00999999978
+    collidesWith:
+      serializedVersion: 2
+      m_Bits: 4294967295
+    quality: 1
+    voxelSize: .5
+    collisionMessages: 0
+  SubModule:
+    enabled: 0
+    subEmitterBirth: {fileID: 0}
+    subEmitterBirth1: {fileID: 0}
+    subEmitterCollision: {fileID: 0}
+    subEmitterCollision1: {fileID: 0}
+    subEmitterDeath: {fileID: 0}
+    subEmitterDeath1: {fileID: 0}
 --- !u!1 &1822650889
 GameObject:
   m_ObjectHideFlags: 0
@@ -19554,7 +20596,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1822650890}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: RightShin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19582,7 +20624,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1832754160}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: RIghtFoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19610,7 +20652,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1843554648}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: RIghtFoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19639,7 +20681,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1854264641}
   - 212: {fileID: 1854264642}
-  m_Layer: 0
+  m_Layer: 21
   m_Name: ArrowSprite 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19696,7 +20738,7 @@ GameObject:
   - 33: {fileID: 1855729701}
   - 23: {fileID: 1855729700}
   - 95: {fileID: 1855729699}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: Asteroid 29
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19807,7 +20849,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1860620047}
   - 212: {fileID: 1860620048}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: SpriteBonus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19861,7 +20903,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1868311881}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: LeftLittleFinger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19888,7 +20930,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1879170837}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: RightShoulders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19916,7 +20958,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1886627961}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: LeftAnkle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19944,7 +20986,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1890650402}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: LeftThumb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19971,7 +21013,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1890912586}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: RightThumb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20147,7 +21189,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1904497697}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: RightAnkle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20175,7 +21217,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1914611779}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: RightHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20198,6 +21240,1046 @@ Transform:
   - {fileID: 673153073}
   m_Father: {fileID: 949526735}
   m_RootOrder: 0
+--- !u!1 &1915135066
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 194466, guid: c8bbf4bb1b307f54e8e561e2561de74b, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1915135067}
+  - 198: {fileID: 1915135069}
+  - 199: {fileID: 1915135068}
+  m_Layer: 0
+  m_Name: Salive droite
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1915135067
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 418720, guid: c8bbf4bb1b307f54e8e561e2561de74b, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1915135066}
+  m_LocalRotation: {x: .197808594, y: -.678875446, z: -.197808638, w: -.678875327}
+  m_LocalPosition: {x: .349999994, y: -.259999961, z: .100000001}
+  m_LocalScale: {x: .666666925, y: .666666687, z: .666666746}
+  m_Children: []
+  m_Father: {fileID: 7400954}
+  m_RootOrder: 4
+--- !u!199 &1915135068
+ParticleSystemRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 19956452, guid: c8bbf4bb1b307f54e8e561e2561de74b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1915135066}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_Materials:
+  - {fileID: 2100000, guid: f63c576739a709747a1a571260d4fabd, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_ReflectionProbeUsage: 0
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_RenderMode: 1
+  m_MaxParticleSize: .5
+  m_CameraVelocityScale: 0
+  m_VelocityScale: .0299999993
+  m_LengthScale: 1
+  m_SortingFudge: 0
+  m_NormalDirection: 1
+  m_SortMode: 0
+  m_Mesh: {fileID: 0}
+  m_Mesh1: {fileID: 0}
+  m_Mesh2: {fileID: 0}
+  m_Mesh3: {fileID: 0}
+--- !u!198 &1915135069
+ParticleSystem:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 19810712, guid: c8bbf4bb1b307f54e8e561e2561de74b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1915135066}
+  lengthInSec: 1
+  startDelay: 0
+  speed: 1
+  randomSeed: 0
+  looping: 0
+  prewarm: 0
+  playOnAwake: 0
+  moveWithTransform: 0
+  InitialModule:
+    enabled: 1
+    startLifetime:
+      scalar: 1
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: .400000006
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minMaxState: 0
+    startSpeed:
+      scalar: 5
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: .400000006
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minMaxState: 3
+    startColor:
+      maxGradient:
+        key0:
+          serializedVersion: 2
+          rgba: 4294967295
+        key1:
+          serializedVersion: 2
+          rgba: 4294967295
+        key2:
+          serializedVersion: 2
+          rgba: 0
+        key3:
+          serializedVersion: 2
+          rgba: 0
+        key4:
+          serializedVersion: 2
+          rgba: 0
+        key5:
+          serializedVersion: 2
+          rgba: 0
+        key6:
+          serializedVersion: 2
+          rgba: 0
+        key7:
+          serializedVersion: 2
+          rgba: 0
+        ctime0: 0
+        ctime1: 65535
+        ctime2: 0
+        ctime3: 0
+        ctime4: 0
+        ctime5: 0
+        ctime6: 0
+        ctime7: 0
+        atime0: 0
+        atime1: 65535
+        atime2: 0
+        atime3: 0
+        atime4: 0
+        atime5: 0
+        atime6: 0
+        atime7: 0
+        m_NumColorKeys: 2
+        m_NumAlphaKeys: 2
+      minGradient:
+        key0:
+          serializedVersion: 2
+          rgba: 4294967295
+        key1:
+          serializedVersion: 2
+          rgba: 4294967295
+        key2:
+          serializedVersion: 2
+          rgba: 0
+        key3:
+          serializedVersion: 2
+          rgba: 0
+        key4:
+          serializedVersion: 2
+          rgba: 0
+        key5:
+          serializedVersion: 2
+          rgba: 0
+        key6:
+          serializedVersion: 2
+          rgba: 0
+        key7:
+          serializedVersion: 2
+          rgba: 0
+        ctime0: 0
+        ctime1: 65535
+        ctime2: 0
+        ctime3: 0
+        ctime4: 0
+        ctime5: 0
+        ctime6: 0
+        ctime7: 0
+        atime0: 0
+        atime1: 65535
+        atime2: 0
+        atime3: 0
+        atime4: 0
+        atime5: 0
+        atime6: 0
+        atime7: 0
+        m_NumColorKeys: 2
+        m_NumAlphaKeys: 2
+      minColor:
+        serializedVersion: 2
+        rgba: 4294915840
+      maxColor:
+        serializedVersion: 2
+        rgba: 4294967295
+      minMaxState: 2
+    startSize:
+      scalar: 1
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: .600000024
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minMaxState: 3
+    startRotation:
+      scalar: 3.14159274
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: -1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minMaxState: 2
+    gravityModifier: 1
+    inheritVelocity: 0
+    maxNumParticles: 10000
+  ShapeModule:
+    serializedVersion: 2
+    enabled: 1
+    type: 4
+    radius: .00999999978
+    angle: 11.4923096
+    length: 5
+    boxX: 1
+    boxY: 1
+    boxZ: 1
+    arc: 360
+    placementMode: 0
+    m_Mesh: {fileID: 0}
+    randomDirection: 1
+  EmissionModule:
+    enabled: 1
+    m_Type: 0
+    rate:
+      scalar: 50
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minMaxState: 0
+    cnt0: 30
+    cnt1: 30
+    cnt2: 30
+    cnt3: 30
+    time0: 0
+    time1: 0
+    time2: 0
+    time3: 0
+    m_BurstCount: 0
+  SizeModule:
+    enabled: 1
+    curve:
+      scalar: 1
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minMaxState: 1
+  RotationModule:
+    enabled: 0
+    curve:
+      scalar: .785398185
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minMaxState: 0
+  ColorModule:
+    enabled: 0
+    gradient:
+      maxGradient:
+        key0:
+          serializedVersion: 2
+          rgba: 4294967295
+        key1:
+          serializedVersion: 2
+          rgba: 4294967295
+        key2:
+          serializedVersion: 2
+          rgba: 0
+        key3:
+          serializedVersion: 2
+          rgba: 0
+        key4:
+          serializedVersion: 2
+          rgba: 0
+        key5:
+          serializedVersion: 2
+          rgba: 0
+        key6:
+          serializedVersion: 2
+          rgba: 0
+        key7:
+          serializedVersion: 2
+          rgba: 0
+        ctime0: 0
+        ctime1: 39850
+        ctime2: 65535
+        ctime3: 0
+        ctime4: 0
+        ctime5: 0
+        ctime6: 0
+        ctime7: 0
+        atime0: 0
+        atime1: 57819
+        atime2: 65535
+        atime3: 0
+        atime4: 0
+        atime5: 0
+        atime6: 0
+        atime7: 0
+        m_NumColorKeys: 3
+        m_NumAlphaKeys: 3
+      minGradient:
+        key0:
+          serializedVersion: 2
+          rgba: 4294967295
+        key1:
+          serializedVersion: 2
+          rgba: 4294967295
+        key2:
+          serializedVersion: 2
+          rgba: 0
+        key3:
+          serializedVersion: 2
+          rgba: 0
+        key4:
+          serializedVersion: 2
+          rgba: 0
+        key5:
+          serializedVersion: 2
+          rgba: 0
+        key6:
+          serializedVersion: 2
+          rgba: 0
+        key7:
+          serializedVersion: 2
+          rgba: 0
+        ctime0: 0
+        ctime1: 65535
+        ctime2: 0
+        ctime3: 0
+        ctime4: 0
+        ctime5: 0
+        ctime6: 0
+        ctime7: 0
+        atime0: 0
+        atime1: 65535
+        atime2: 0
+        atime3: 0
+        atime4: 0
+        atime5: 0
+        atime6: 0
+        atime7: 0
+        m_NumColorKeys: 2
+        m_NumAlphaKeys: 2
+      minColor:
+        serializedVersion: 2
+        rgba: 4294967295
+      maxColor:
+        serializedVersion: 2
+        rgba: 4294967295
+      minMaxState: 1
+  UVModule:
+    enabled: 0
+    frameOverTime:
+      scalar: 1
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 1
+          tangentMode: 0
+        - time: 1
+          value: 1
+          inSlope: 1
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 1
+          tangentMode: 0
+        - time: 1
+          value: 1
+          inSlope: 1
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minMaxState: 1
+    tilesX: 1
+    tilesY: 1
+    animationType: 0
+    rowIndex: 0
+    cycles: 1
+    randomRow: 1
+  VelocityModule:
+    enabled: 0
+    x:
+      scalar: 0
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minMaxState: 0
+    y:
+      scalar: 0
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minMaxState: 0
+    z:
+      scalar: 0
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minMaxState: 0
+    inWorldSpace: 1
+  ForceModule:
+    enabled: 1
+    x:
+      scalar: 6
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: -1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minMaxState: 3
+    y:
+      scalar: 0
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minMaxState: 3
+    z:
+      scalar: 2
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minMaxState: 3
+    inWorldSpace: 1
+    randomizePerFrame: 0
+  ExternalForcesModule:
+    enabled: 0
+    multiplier: 1
+  ClampVelocityModule:
+    enabled: 0
+    x:
+      scalar: 1
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minMaxState: 0
+    y:
+      scalar: 1
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minMaxState: 0
+    z:
+      scalar: 1
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minMaxState: 0
+    magnitude:
+      scalar: 1
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minMaxState: 0
+    separateAxis: 0
+    inWorldSpace: 0
+    dampen: 1
+  SizeBySpeedModule:
+    enabled: 0
+    curve:
+      scalar: 1
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minMaxState: 1
+    range: {x: 0, y: 1}
+  RotationBySpeedModule:
+    enabled: 0
+    curve:
+      scalar: .785398185
+      maxCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minCurve:
+        serializedVersion: 2
+        m_Curve:
+        - time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: 1
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+      minMaxState: 0
+    range: {x: 0, y: 1}
+  ColorBySpeedModule:
+    enabled: 0
+    gradient:
+      maxGradient:
+        key0:
+          serializedVersion: 2
+          rgba: 4278227199
+        key1:
+          serializedVersion: 2
+          rgba: 4294967295
+        key2:
+          serializedVersion: 2
+          rgba: 16777215
+        key3:
+          serializedVersion: 2
+          rgba: 0
+        key4:
+          serializedVersion: 2
+          rgba: 0
+        key5:
+          serializedVersion: 2
+          rgba: 0
+        key6:
+          serializedVersion: 2
+          rgba: 0
+        key7:
+          serializedVersion: 2
+          rgba: 0
+        ctime0: 0
+        ctime1: 65535
+        ctime2: 65535
+        ctime3: 0
+        ctime4: 0
+        ctime5: 0
+        ctime6: 0
+        ctime7: 0
+        atime0: 0
+        atime1: 65535
+        atime2: 0
+        atime3: 0
+        atime4: 0
+        atime5: 0
+        atime6: 0
+        atime7: 0
+        m_NumColorKeys: 2
+        m_NumAlphaKeys: 2
+      minGradient:
+        key0:
+          serializedVersion: 2
+          rgba: 4294967295
+        key1:
+          serializedVersion: 2
+          rgba: 4294967295
+        key2:
+          serializedVersion: 2
+          rgba: 0
+        key3:
+          serializedVersion: 2
+          rgba: 0
+        key4:
+          serializedVersion: 2
+          rgba: 0
+        key5:
+          serializedVersion: 2
+          rgba: 0
+        key6:
+          serializedVersion: 2
+          rgba: 0
+        key7:
+          serializedVersion: 2
+          rgba: 0
+        ctime0: 0
+        ctime1: 65535
+        ctime2: 0
+        ctime3: 0
+        ctime4: 0
+        ctime5: 0
+        ctime6: 0
+        ctime7: 0
+        atime0: 0
+        atime1: 65535
+        atime2: 0
+        atime3: 0
+        atime4: 0
+        atime5: 0
+        atime6: 0
+        atime7: 0
+        m_NumColorKeys: 2
+        m_NumAlphaKeys: 2
+      minColor:
+        serializedVersion: 2
+        rgba: 4294967295
+      maxColor:
+        serializedVersion: 2
+        rgba: 4294967295
+      minMaxState: 1
+    range: {x: 0, y: 1}
+  CollisionModule:
+    enabled: 0
+    type: 1
+    plane0: {fileID: 0}
+    plane1: {fileID: 0}
+    plane2: {fileID: 0}
+    plane3: {fileID: 0}
+    plane4: {fileID: 0}
+    plane5: {fileID: 0}
+    dampen: .5
+    bounce: .75
+    energyLossOnCollision: 0
+    minKillSpeed: 0
+    particleRadius: .00999999978
+    collidesWith:
+      serializedVersion: 2
+      m_Bits: 4294967295
+    quality: 1
+    voxelSize: .5
+    collisionMessages: 0
+  SubModule:
+    enabled: 0
+    subEmitterBirth: {fileID: 0}
+    subEmitterBirth1: {fileID: 0}
+    subEmitterCollision: {fileID: 0}
+    subEmitterCollision1: {fileID: 0}
+    subEmitterDeath: {fileID: 0}
+    subEmitterDeath1: {fileID: 0}
 --- !u!1 &1925360607
 GameObject:
   m_ObjectHideFlags: 0
@@ -20208,7 +22290,7 @@ GameObject:
   - 4: {fileID: 1925360608}
   - 95: {fileID: 1925360610}
   - 114: {fileID: 1925360609}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Nivek
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20268,7 +22350,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1930511117}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: LeftFootFingers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20327,7 +22409,7 @@ Light:
   m_Type: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 6
-  m_Range: 35
+  m_Range: 36
   m_SpotAngle: 8
   m_CookieSize: 10
   m_Shadows:
@@ -20342,9 +22424,9 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 262144
+    m_Bits: 2392064
   m_Lightmapping: 4
-  m_BounceIntensity: 1
+  m_BounceIntensity: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
   m_AreaSize: {x: 1, y: 1}
@@ -20368,7 +22450,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1988871599}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: RightLittleFinger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20472,7 +22554,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1998758083}
   - 212: {fileID: 1998758084}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Circle2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20526,7 +22608,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2006335754}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: RightShin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20557,7 +22639,7 @@ GameObject:
   - 33: {fileID: 2006884840}
   - 23: {fileID: 2006884839}
   - 95: {fileID: 2006884838}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: Asteroid 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20638,7 +22720,7 @@ GameObject:
   - 33: {fileID: 2008855332}
   - 23: {fileID: 2008855331}
   - 95: {fileID: 2008855330}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: Asteroid 27
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20716,7 +22798,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2012357180}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: RightHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20957,7 +23039,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2029799705}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: RIghtFoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20985,7 +23067,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2036284653}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: RightAnkle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21013,7 +23095,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2041072930}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: RightAnkle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21120,7 +23202,7 @@ GameObject:
   - 33: {fileID: 2049040642}
   - 23: {fileID: 2049040641}
   - 95: {fileID: 2049040640}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: Asteroid 19
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21218,7 +23300,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be088c83819d83046a99eb9fc4edf5ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  durationInSecond: 50000
+  state: 0
+  durationInSecond: 180
   ecranFin: {fileID: 1105067374}
   timeBetweenTwoBonus: 0
   whenToBeginEndTimer: 5
@@ -21267,7 +23350,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2053939470}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: LeftFoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21298,7 +23381,7 @@ GameObject:
   - 33: {fileID: 2062617036}
   - 23: {fileID: 2062617035}
   - 95: {fileID: 2062617034}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: Asteroid 10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21377,7 +23460,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 2064287784}
   - 212: {fileID: 2064287785}
-  m_Layer: 0
+  m_Layer: 21
   m_Name: ArrowSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21431,7 +23514,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2079814986}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: LeftAnkle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21462,7 +23545,7 @@ GameObject:
   - 33: {fileID: 2088721150}
   - 23: {fileID: 2088721149}
   - 95: {fileID: 2088721148}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: Asteroid 32
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21633,7 +23716,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2096274100}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: LeftLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21664,7 +23747,7 @@ GameObject:
   - 33: {fileID: 2099985857}
   - 23: {fileID: 2099985856}
   - 95: {fileID: 2099985855}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: Asteroid 21
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21742,7 +23825,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2107478179}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: LeftForeArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21771,7 +23854,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 2117498845}
   - 212: {fileID: 2117498846}
-  m_Layer: 0
+  m_Layer: 21
   m_Name: MBL_Logo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21826,7 +23909,7 @@ GameObject:
   - 4: {fileID: 2141273378}
   - 137: {fileID: 2141273379}
   - 114: {fileID: 2141273380}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Nivek
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21941,7 +24024,7 @@ GameObject:
   - 33: {fileID: 2144941479}
   - 23: {fileID: 2144941478}
   - 95: {fileID: 2144941477}
-  m_Layer: 11
+  m_Layer: 20
   m_Name: Asteroid 8
   m_TagString: Untagged
   m_Icon: {fileID: 0}

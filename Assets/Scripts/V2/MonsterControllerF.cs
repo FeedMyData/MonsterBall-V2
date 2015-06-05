@@ -109,7 +109,9 @@ public class MonsterControllerF : MonoBehaviour {
     public Vector3 respawnPositionBall;
 
     private GameObject smokeFury;
-    private GameObject transfoFury; 
+    private GameObject transfoFury;
+    private GameObject saliveDroite;
+    private GameObject saliveGauche;
 
     //public delegate void OnClickHit();
     //public event OnClickHit OnClickHitEvent;
@@ -127,6 +129,9 @@ public class MonsterControllerF : MonoBehaviour {
 
         smokeFury = GameObject.Find("FumeeTransfo");
         transfoFury = GameObject.Find("Transformation_particules");
+        saliveDroite = GameObject.Find("Salive droite");
+        saliveGauche = GameObject.Find("Salive gauche");
+
 
         //smokeFury.SetActive(false);
         //transfoFury.SetActive(false);
@@ -155,7 +160,7 @@ public class MonsterControllerF : MonoBehaviour {
 
         if (
             (monsterForm || transforming) && ( 
-            transform.position.y > 26.0f || 
+            transform.position.y > 8.0f || //26
             transform.position.y < -2.0f ||
             transform.position.z > 21.0f ||
             transform.position.z < -21.0f ||
@@ -361,9 +366,8 @@ public class MonsterControllerF : MonoBehaviour {
             }
             else
             {
-
                 body.angularVelocity = Vector3.zero;
-                Debug.Log("charge");
+                //Debug.Log("charge");
                 //avance tout droit et change de direction dans les coins
                 if (GameControllerF.InCircle(gameObject) > 0.50f)
                 {
@@ -371,10 +375,12 @@ public class MonsterControllerF : MonoBehaviour {
                     newDirection += GetAngleBounce(transform.position);
                     transform.eulerAngles = new Vector3(0, newDirection, 0);
                     if (currentNumberOfRebounds < numberOfReboundsToMaxSpeed) currentNumberOfRebounds++;
+                    Camera.main.GetComponent<CameraShake>().shake(0.8f, 2.0f, 1.0f);
                 }
 
                 //float delayCharge = Mathf.Abs((timeCharge - Time.time) / durationUpSpeedCharge - 1);
                 float percentageLSpeed = currentNumberOfRebounds / numberOfReboundsToMaxSpeed;
+                Debug.Log(percentageLSpeed);
                 speedMonsterCharge = Mathf.Lerp(minSpeedCharge, maxSpeedCharge, percentageLSpeed);
 
             }
@@ -418,7 +424,7 @@ public class MonsterControllerF : MonoBehaviour {
         }
         else if(monsterModeCharge)
         {
-            Debug.Log("charge");
+            //Debug.Log("charge");
             if (!moveCharge)
                 transform.LookAt(DirectionMonster, Vector3.up);
             else
@@ -466,6 +472,7 @@ public class MonsterControllerF : MonoBehaviour {
         yield return new WaitForSeconds(durationLoadingCharge);
         //regarde la cible
         //timeCharge = Time.time + durationUpSpeedCharge;
+        Camera.main.GetComponent<CameraShake>().shake(0.8f, 3.0f, 1.5f);
         canEat = true;
         moveCharge = true;
     }
@@ -553,7 +560,7 @@ public class MonsterControllerF : MonoBehaviour {
         smokeFury.GetComponent<ParticleSystem>().Stop();
 
 
-        int actualCycleMonster = 0;
+        //int actualCycleMonster = 0;
 
        // while (actualCycleMonster<nbCycleMonster)
         //{
@@ -564,8 +571,9 @@ public class MonsterControllerF : MonoBehaviour {
 
                 targetCharge = GameControllerF.GetPlayer(/*(int)UnityEngine.Random.Range(1,5)*/1);
                 Debug.Log(targetCharge.name);
-                actualCycleMonster++;
+                //actualCycleMonster++;
                 monsterModeCharge = true;
+                currentNumberOfRebounds = 0;
             }
        // }
 
@@ -659,8 +667,15 @@ public class MonsterControllerF : MonoBehaviour {
 
 		if(GetComponentInChildren<Animator>()) GetComponentInChildren<Animator>().SetTrigger("spit");
 
+        //feedbacks chewing
+        saliveDroite.GetComponent<ParticleSystem>().Play();
+        saliveGauche.GetComponent<ParticleSystem>().Play();
+
         yield return new WaitForSeconds(durationEatingPlayer);
-        
+
+        saliveDroite.GetComponent<ParticleSystem>().Stop();
+        saliveGauche.GetComponent<ParticleSystem>().Stop();
+
         //Faire réapparaitre le joueur
         //player.GetComponent<Renderer>().enabled = true;
         //player.GetComponentInChildren<SkinnedMeshRenderer>().enabled = true;
@@ -822,15 +837,6 @@ public class MonsterControllerF : MonoBehaviour {
 
     void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.name == "socle")
-        {
-            Debug.Log("collision socle");
-        }
-
-        if (other.gameObject.tag == "TeamBlu" || other.gameObject.tag == "TeamRed")
-        {
-            Debug.Log("collision player");
-        }
 
         if (monsterForm && transforming && other.gameObject.transform.parent.name == "stadium 21")
         {
