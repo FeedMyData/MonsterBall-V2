@@ -99,6 +99,8 @@ public class PlayerControllerF : MonoBehaviour
 
     [HideInInspector]
     public bool isEaten = false;
+    [HideInInspector]
+    public bool canCount = true;
 
     // Use this for initialization
     void Start()

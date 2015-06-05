@@ -496,14 +496,14 @@ public class MonsterControllerF : MonoBehaviour {
             callDisableMagnet();
 
         
-        sound.PlayEvent("Tranfo_BalleMonstre", gameObject);
+        sound.PlayEvent("Transfo_BalleMonstre", gameObject);
         sound.PlayEvent("Music_Monstre", gameObject);
         striker = null;
     }
     
     void TransformationMonstreBall()
     {
-        sound.PlayEvent("Tranfo_MonstreBalle", gameObject);
+        sound.PlayEvent("Transfo_MonstreBalle", gameObject);
         sound.StopEvent("Music_Monstre", gameObject, 1000);
         skinBall.SetActive(true);
         skinMonster.SetActive(false);
@@ -652,7 +652,7 @@ public class MonsterControllerF : MonoBehaviour {
 
         eatPlayer = true;
         player.GetComponent<PlayerControllerF>().isEaten = true;
-        //player.GetComponent<CharacterController>().enabled = false;
+        player.GetComponent<CharacterController>().enabled = false;
         player.GetComponent<Collider>().enabled = false;
         player.GetComponent<PlayerControllerF>().joueurMange++;
         //faire disparaitre le joueur, jouer l'anim du monstre qui mache et téléporter le joueur dans le monstre et le stun
@@ -709,7 +709,7 @@ public class MonsterControllerF : MonoBehaviour {
 
         eatPlayer = false;
         player.GetComponent<PlayerControllerF>().isEaten = false;
-        //player.GetComponent<CharacterController>().enabled = true;
+        player.GetComponent<CharacterController>().enabled = true;
         player.GetComponent<Collider>().enabled = true;
     }
 
