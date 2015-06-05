@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 1d6bb16aabd6c364399e62a006f57c34
-timeCreated: 1433431420
+guid: 747a680e120b5fa47a64b3433ade30cd
+timeCreated: 1433497336
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -77,250 +77,250 @@ TextureImporter:
     - name: GlassAnimation_0
       rect:
         serializedVersion: 2
-        x: 39
-        y: 602
-        width: 357
-        height: 114
+        x: 11
+        y: 848
+        width: 355
+        height: 113
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GlassAnimation_1
       rect:
         serializedVersion: 2
-        x: 472
-        y: 602
-        width: 357
-        height: 114
+        x: 388
+        y: 848
+        width: 355
+        height: 113
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GlassAnimation_2
       rect:
         serializedVersion: 2
-        x: 905
-        y: 602
-        width: 357
-        height: 114
+        x: 765
+        y: 848
+        width: 355
+        height: 113
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GlassAnimation_3
       rect:
         serializedVersion: 2
-        x: 1338
-        y: 602
-        width: 357
-        height: 114
+        x: 1142
+        y: 848
+        width: 355
+        height: 113
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GlassAnimation_4
       rect:
         serializedVersion: 2
-        x: 1771
-        y: 602
-        width: 356
-        height: 114
+        x: 1519
+        y: 848
+        width: 355
+        height: 113
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GlassAnimation_5
       rect:
         serializedVersion: 2
-        x: 39
-        y: 455
-        width: 357
-        height: 114
+        x: 11
+        y: 647
+        width: 355
+        height: 113
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GlassAnimation_6
       rect:
         serializedVersion: 2
-        x: 472
-        y: 455
-        width: 357
-        height: 114
+        x: 388
+        y: 647
+        width: 355
+        height: 113
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GlassAnimation_7
       rect:
         serializedVersion: 2
-        x: 905
-        y: 455
-        width: 357
-        height: 114
+        x: 765
+        y: 647
+        width: 355
+        height: 113
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GlassAnimation_8
       rect:
         serializedVersion: 2
-        x: 1338
-        y: 455
-        width: 357
-        height: 114
+        x: 1142
+        y: 647
+        width: 355
+        height: 113
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GlassAnimation_9
       rect:
         serializedVersion: 2
-        x: 1771
-        y: 455
-        width: 356
-        height: 114
+        x: 1519
+        y: 647
+        width: 355
+        height: 113
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GlassAnimation_10
       rect:
         serializedVersion: 2
-        x: 39
-        y: 308
-        width: 357
-        height: 114
+        x: 11
+        y: 446
+        width: 355
+        height: 113
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GlassAnimation_11
       rect:
         serializedVersion: 2
-        x: 472
-        y: 308
-        width: 357
-        height: 114
+        x: 388
+        y: 446
+        width: 355
+        height: 113
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GlassAnimation_12
       rect:
         serializedVersion: 2
-        x: 905
-        y: 308
-        width: 357
-        height: 114
+        x: 765
+        y: 446
+        width: 355
+        height: 113
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GlassAnimation_13
       rect:
         serializedVersion: 2
-        x: 1338
-        y: 308
-        width: 357
-        height: 114
+        x: 1142
+        y: 446
+        width: 355
+        height: 113
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GlassAnimation_14
       rect:
         serializedVersion: 2
-        x: 1771
-        y: 308
-        width: 356
-        height: 114
+        x: 1519
+        y: 446
+        width: 355
+        height: 113
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GlassAnimation_15
       rect:
         serializedVersion: 2
-        x: 39
-        y: 161
-        width: 357
-        height: 114
+        x: 11
+        y: 245
+        width: 355
+        height: 113
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GlassAnimation_16
       rect:
         serializedVersion: 2
-        x: 472
-        y: 161
-        width: 357
-        height: 114
+        x: 388
+        y: 245
+        width: 355
+        height: 113
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GlassAnimation_17
       rect:
         serializedVersion: 2
-        x: 905
-        y: 161
-        width: 357
-        height: 114
+        x: 765
+        y: 245
+        width: 355
+        height: 113
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GlassAnimation_18
       rect:
         serializedVersion: 2
-        x: 1338
-        y: 161
-        width: 357
-        height: 114
+        x: 1142
+        y: 245
+        width: 355
+        height: 113
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GlassAnimation_19
       rect:
         serializedVersion: 2
-        x: 1771
-        y: 161
-        width: 356
-        height: 114
+        x: 1519
+        y: 245
+        width: 355
+        height: 113
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GlassAnimation_20
       rect:
         serializedVersion: 2
-        x: 39
-        y: 14
-        width: 357
-        height: 114
+        x: 11
+        y: 44
+        width: 355
+        height: 113
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GlassAnimation_21
       rect:
         serializedVersion: 2
-        x: 472
-        y: 14
-        width: 357
-        height: 114
+        x: 388
+        y: 44
+        width: 355
+        height: 113
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GlassAnimation_22
       rect:
         serializedVersion: 2
-        x: 905
-        y: 14
-        width: 357
-        height: 114
+        x: 765
+        y: 44
+        width: 355
+        height: 113
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GlassAnimation_23
       rect:
         serializedVersion: 2
-        x: 1338
-        y: 14
-        width: 357
-        height: 114
+        x: 1142
+        y: 44
+        width: 355
+        height: 113
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: GlassAnimation_24
       rect:
         serializedVersion: 2
-        x: 1771
-        y: 14
-        width: 356
-        height: 114
+        x: 1519
+        y: 44
+        width: 355
+        height: 113
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

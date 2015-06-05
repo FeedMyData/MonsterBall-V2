@@ -67,7 +67,7 @@ public class GoalScriptMonster : MonoBehaviour {
 
         if (player != null)
         {
-            if (player.IsProjectionInGoal())
+            if (player.IsProjectionInGoal() && player.canCount)
             {
                 //feedbacks goal joueur
                 Camera.main.GetComponent<CameraShake>().shake(1.0f, 1.0f, 1.0f);
@@ -78,7 +78,7 @@ public class GoalScriptMonster : MonoBehaviour {
                 StartCoroutine(StopSwitchGoal());
 
                 manager.AddScore(tag);
-                player.Respawn();
+                StartCoroutine(DezRez(player.gameObject));
 
             }
             //else
@@ -104,5 +104,18 @@ public class GoalScriptMonster : MonoBehaviour {
 
         timeSwitch = Time.time + durationReturnSwitch;
         returnSwitch = true;
+    }
+
+    IEnumerator DezRez(GameObject player)
+    {
+        PlayerControllerF playerController = player.GetComponent<PlayerControllerF>();
+        playerController.canCount = false;
+        TeleportationF telPlayer = player.GetComponentInChildren<TeleportationF>();
+        telPlayer.InstantTP(true);
+        telPlayer.SetTeleportation(false);
+        playerController.Respawn();
+        yield return new WaitForSeconds(telPlayer.durationTP);
+        playerController.canCount = true;
+
     }
 }

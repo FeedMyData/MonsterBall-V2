@@ -6,6 +6,7 @@ using System.Collections;
 public class MenuStart : MonoBehaviour {
 
     public GameObject defaultButtonMain;
+    public GameObject defaultButtonCreditsFromMain;
     public GameObject defaultButtonCredits;
 
     public GameObject pnlMain;
@@ -35,7 +36,9 @@ public class MenuStart : MonoBehaviour {
         pnlCredits.SetActive(false);
         pnlMain.SetActive(true);
         if (defaultButtonMain != null)
-            EventSystem.current.SetSelectedGameObject(defaultButtonMain);
+            EventSystem.current.SetSelectedGameObject(defaultButtonCreditsFromMain);
+
+
     }
 
     public void Quit()

@@ -110,6 +110,9 @@ public class MonsterControllerF : MonoBehaviour {
 
     private GameObject smokeFury;
     private GameObject transfoFury;
+
+    [HideInInspector]
+    public bool canCount= true;
     private GameObject saliveDroite;
     private GameObject saliveGauche;
 
@@ -150,7 +153,7 @@ public class MonsterControllerF : MonoBehaviour {
         }
 
 
-       // tp.SetTeleportation(true);
+        //tp.SetTeleportation(true);
 	}
 	
 	// Update is called once per frame
@@ -263,41 +266,44 @@ public class MonsterControllerF : MonoBehaviour {
         }
         else
         {
-            if (GetActualSpeed() < speedMaxToChooseDirection && isGround())
+            if (canCount)
             {
-                body.velocity = Vector3.zero;
-                body.angularVelocity = Vector3.zero;
-                transform.eulerAngles = new Vector3(0, transform.eulerAngles.y, 0);
-
-                Vector3 newPosition = transform.forward;
-                //newPosition.y = transform.localScale.y/2;
-
-                transform.position += newPosition * Time.deltaTime * speedBall;
-
-
-                if (GameControllerF.InCircle(gameObject) > 0.80f)
+                if (GetActualSpeed() < speedMaxToChooseDirection && isGround())
                 {
-                    float newDirection = transform.eulerAngles.y +180;
+                    body.velocity = Vector3.zero;
+                    body.angularVelocity = Vector3.zero;
+                    transform.eulerAngles = new Vector3(0, transform.eulerAngles.y, 0);
 
-                    newDirection += GetAngleBounce(transform.position);
+                    Vector3 newPosition = transform.forward;
+                    //newPosition.y = transform.localScale.y/2;
 
-                    transform.eulerAngles = new Vector3(0,newDirection,0);
-                }
-                else
-                {
-                    //regarde s'il y a un joueur devant lui et se décale pour l'éviter
-                    try
+                    transform.position += newPosition * Time.deltaTime * speedBall;
+
+
+                    if (GameControllerF.InCircle(gameObject) > 0.80f)
                     {
-                       if(GameControllerF.FieldOfView(gameObject,20,90)[0] != null)
-                       {
-                           Vector3 relativePoint = transform.InverseTransformPoint(GameControllerF.FieldOfView(gameObject,20,90)[0].transform.position) ;
-                           if(relativePoint.x < 0)
-                               transform.RotateAround(transform.position,Vector3.up,angleAvoidPlayer*Time.deltaTime);
-                           else
-                               transform.RotateAround(transform.position, Vector3.up,- angleAvoidPlayer * Time.deltaTime);
-                       }
+                        float newDirection = transform.eulerAngles.y + 180;
+
+                        newDirection += GetAngleBounce(transform.position);
+
+                        transform.eulerAngles = new Vector3(0, newDirection, 0);
                     }
-                    catch(Exception e){ }
+                    else
+                    {
+                        //regarde s'il y a un joueur devant lui et se décale pour l'éviter
+                        try
+                        {
+                            if (GameControllerF.FieldOfView(gameObject, 20, 90)[0] != null)
+                            {
+                                Vector3 relativePoint = transform.InverseTransformPoint(GameControllerF.FieldOfView(gameObject, 20, 90)[0].transform.position);
+                                if (relativePoint.x < 0)
+                                    transform.RotateAround(transform.position, Vector3.up, angleAvoidPlayer * Time.deltaTime);
+                                else
+                                    transform.RotateAround(transform.position, Vector3.up, -angleAvoidPlayer * Time.deltaTime);
+                            }
+                        }
+                        catch (Exception e) { }
+                    }
                 }
             }
         }
@@ -490,14 +496,14 @@ public class MonsterControllerF : MonoBehaviour {
             callDisableMagnet();
 
         
-        sound.PlayEvent("Tranfo_BalleMonstre", gameObject);
+        sound.PlayEvent("Transfo_BalleMonstre", gameObject);
         sound.PlayEvent("Music_Monstre", gameObject);
         striker = null;
     }
     
     void TransformationMonstreBall()
     {
-        sound.PlayEvent("Tranfo_MonstreBalle", gameObject);
+        sound.PlayEvent("Transfo_MonstreBalle", gameObject);
         sound.StopEvent("Music_Monstre", gameObject, 1000);
         skinBall.SetActive(true);
         skinMonster.SetActive(false);
@@ -646,7 +652,7 @@ public class MonsterControllerF : MonoBehaviour {
 
         eatPlayer = true;
         player.GetComponent<PlayerControllerF>().isEaten = true;
-        //player.GetComponent<CharacterController>().enabled = false;
+        player.GetComponent<CharacterController>().enabled = false;
         player.GetComponent<Collider>().enabled = false;
         player.GetComponent<PlayerControllerF>().joueurMange++;
         //faire disparaitre le joueur, jouer l'anim du monstre qui mache et téléporter le joueur dans le monstre et le stun
@@ -703,7 +709,7 @@ public class MonsterControllerF : MonoBehaviour {
 
         eatPlayer = false;
         player.GetComponent<PlayerControllerF>().isEaten = false;
-        //player.GetComponent<CharacterController>().enabled = true;
+        player.GetComponent<CharacterController>().enabled = true;
         player.GetComponent<Collider>().enabled = true;
     }
 
