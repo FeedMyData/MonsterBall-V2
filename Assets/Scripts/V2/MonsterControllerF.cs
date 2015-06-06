@@ -259,6 +259,8 @@ public class MonsterControllerF : MonoBehaviour {
                 body.velocity = Vector3.Lerp(body.velocity, Vector3.zero, percentageL);
 
                 body.angularVelocity = Vector3.Lerp(body.angularVelocity, Vector3.zero, percentageL);
+
+                ambiantLight.intensity = Mathf.Lerp(intensityWhenBall, intensityWhenMonster, percentageL);
             }
 
         }
@@ -521,6 +523,7 @@ public class MonsterControllerF : MonoBehaviour {
         monsterForm = false;
 
         //feedbacks fin monstre
+        ballSpotlight.GetComponent<ballSpotlight>().position();
         ballSpotlight.SetActive(true);
         monsterSpotlight.SetActive(false);
         ambiantLight.intensity = intensityWhenBall;
@@ -546,10 +549,11 @@ public class MonsterControllerF : MonoBehaviour {
 
         //feedbacks post-transformation
         Camera.main.GetComponent<CameraShake>().shake(0.8f, 3.0f, 1.5f);
-        
+
+        monsterSpotlight.GetComponent<ballSpotlight>().position();
         ballSpotlight.SetActive(false);
         monsterSpotlight.SetActive(true);
-        ambiantLight.intensity = intensityWhenMonster;
+        //ambiantLight.intensity = intensityWhenMonster;
 
         monsterForm = true;
 
