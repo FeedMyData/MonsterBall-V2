@@ -6,32 +6,16 @@ public class CollisionTerrain : MonoBehaviour {
 
     public Transform lightFxCollisionPrefab;
     private float lightDistanceFactor = 8.0f;
-    //private float fadeLightDuration = 1.5f;
-    //private float fadeLightTimer = 0.0f;
-    //private bool isFading = false;
 
     private float speedFadingFactor = 4.0f;
     private List<Transform> lightList = new List<Transform>();
 
     void Start()
     {
-        //lightFxCollision = GameObject.Find("light fx dome").transform;
     }
 
     void Update()
     {
-        //if (isFading)
-        //{
-        //    fadeLightTimer += Time.deltaTime;
-        //    if (fadeLightTimer > fadeLightDuration)
-        //    {
-        //        isFading = false;
-        //        fadeLightTimer = fadeLightDuration;
-        //    }
-        //    float percentageL = fadeLightTimer / fadeLightDuration;
-        //    percentageL = 1.0f - Mathf.Cos(percentageL * Mathf.PI * 0.5f);
-        //    lightFxCollision.GetComponent<Light>().intensity = Mathf.Lerp(8.0f, 0.0f, percentageL);
-        //}
 
         foreach(Transform light in lightList) {
 
@@ -53,7 +37,7 @@ public class CollisionTerrain : MonoBehaviour {
     {
         if (other.gameObject.tag == "Monster")
         {
-            Debug.Log("testCollisionDome");
+            //Debug.Log("testCollisionDome");
 
 
             // display sprite on dome
@@ -80,9 +64,6 @@ public class CollisionTerrain : MonoBehaviour {
         averageContactNormal.Normalize();
 
         //Debug.DrawLine(averageContactPoint, averageContactPoint + averageContactNormal * 4, Color.red, 5.0f, false);
-
-        //fadeLightTimer = 0.0f;
-        //isFading = true;
 
         bool hasRecycled = false;
 
