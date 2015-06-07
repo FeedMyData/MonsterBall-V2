@@ -80,7 +80,7 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: raiseKnee
+  - m_Name: highKnee
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -169,7 +169,10 @@ AnimatorStateTransition:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: 
-  m_Conditions: []
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: tap
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 110253388}
   m_Solo: 0
@@ -278,7 +281,10 @@ AnimatorStateTransition:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: 
-  m_Conditions: []
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: fence
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 110238756}
   m_Solo: 0
@@ -1345,7 +1351,10 @@ AnimatorStateTransition:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: 
-  m_Conditions: []
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: stretch
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 110263208}
   m_Solo: 0
@@ -1853,7 +1862,10 @@ AnimatorStateTransition:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: 
-  m_Conditions: []
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: highKnee
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 110275624}
   m_Solo: 0
@@ -3143,19 +3155,19 @@ AnimatorStateMachine:
   m_EntryTransitions: []
   m_StateMachineTransitions:
     data:
-      first: {fileID: 110755434}
-      second: []
-    data:
       first: {fileID: 0}
-      second: []
-    data:
-      first: {fileID: 110764122}
       second: []
     data:
       first: {fileID: 110795556}
       second: []
     data:
       first: {fileID: 110738960}
+      second: []
+    data:
+      first: {fileID: 110764122}
+      second: []
+    data:
+      first: {fileID: 110755434}
       second: []
     data:
       first: {fileID: 110744188}

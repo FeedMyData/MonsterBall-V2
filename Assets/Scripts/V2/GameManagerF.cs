@@ -9,7 +9,8 @@ public class GameManagerF : MonoBehaviour {
 		opening,
 		choosePlayer,
 		playerPlacement,
-		inGame
+		inGame,
+		quickTest
 	};
 
 	public Step state = Step.opening;
@@ -31,9 +32,12 @@ public class GameManagerF : MonoBehaviour {
     private bool bonusCanPopUp = true;
 
     private bool displayEnd = false;
+	private bool kickOff = false;
+	private bool quickTestLaunched = false;
+    
+	public int whenToBeginEndTimer = 5;
 
-    public int whenToBeginEndTimer = 5;
-
+	public int nextStateValidationRemaining = 4; // if you want to test with one player only, just set it to 1
 	// Use this for initialization
 
     void Start()
@@ -44,7 +48,7 @@ public class GameManagerF : MonoBehaviour {
 
         RefreshDuration();
         RefreshScore();
-        StartCoroutine(matchDuration());
+        
     }
 	
 	// Update is called once per frame
@@ -54,14 +58,8 @@ public class GameManagerF : MonoBehaviour {
 
 		switch (state) {
 
-		case Step.opening :
-			break;
-		case Step.choosePlayer :
-			break;
-		case Step.playerPlacement :
-			break;
-
-		default : 
+		
+		case Step.inGame : 
 			if (durationInSecond <= 0)
 			{
 				Time.timeScale = 0;
@@ -76,10 +74,48 @@ public class GameManagerF : MonoBehaviour {
 				}
 				
 			}
+			break;
+		
+		case Step.choosePlayer :
+			if( nextStateValidationRemaining != 0)
+				break;
+			GameObject.Find("Main Camera").GetComponent<Animator>().enabled = true;
+			nextStateValidationRemaining = 4;
+			state = Step.playerPlacement;
+			break;
+		
+		case Step.playerPlacement :
+			if( nextStateValidationRemaining != 0)
+				break;
+			nextStateValidationRemaining = 4;
+
+			GameControllerF.GetMonster().transform.FindChild("ball_monster").GetComponent<MeshRenderer>().enabled = true;
+			GameControllerF.GetMonster().GetComponent<Rigidbody>().velocity = Vector3.zero;
+			TeleportationF telMonster = GameControllerF.GetMonster().GetComponentInChildren<TeleportationF>();
+			telMonster.InstantTP(true);
+			telMonster.SetTeleportation(false);
+			GameControllerF.GetMonster().GetComponent<MonsterControllerF>().RespawnBall();
+						
+			if(!kickOff) StartCoroutine(WaitForKickOff());
+
 
 			break;
 
+		case Step.quickTest: 
+			if(!quickTestLaunched){
+				quickTestLaunched = true;
+				StartCoroutine(matchDuration());
+			}
+			GameObject.Find("LightsBallMonster").GetComponentInChildren<Light>().enabled = true;
+			GameObject.Find("ball_monster").GetComponent<MeshRenderer>().enabled = true;
+			GameObject.Find("Main Camera").GetComponent<Animator>().SetTrigger("finalPosition");
+			GameControllerF.GetPlayer (1).GetComponent<PlayerControllerF>().Respawn();
+			GameControllerF.GetPlayer (2).GetComponent<PlayerControllerF>().Respawn();
+			GameControllerF.GetPlayer (3).GetComponent<PlayerControllerF>().Respawn();
+			GameControllerF.GetPlayer (4).GetComponent<PlayerControllerF>().Respawn();
 
+			state = Step.inGame;
+			break;
 
 		}
         
@@ -177,5 +213,22 @@ public class GameManagerF : MonoBehaviour {
         rngPop.y = 1.0f;
         Instantiate(GameControllerF.GetCake(),rngPop,Quaternion.identity);
     }
+	public void validNextState(){
 
+		nextStateValidationRemaining--;
+	}
+	IEnumerator WaitForKickOff(){
+
+		kickOff = true;
+		GameObject.Find ("Commentaries").GetComponent<TextCommentaries> ().WriteCommentary ("", "matchB");
+
+		yield return new WaitForSeconds(GameControllerF.GetMonster().GetComponentInChildren<TeleportationF>().durationTP);
+
+		GameObject.Find("LightsBallMonster").GetComponentInChildren<Light>().enabled = true;
+		GameObject.Find ("Commentaries").GetComponent<TextCommentaries> ().WriteCommentary ("", "ballP");
+		StartCoroutine (matchDuration ());
+
+		state = Step.inGame;
+		
+	}
 }

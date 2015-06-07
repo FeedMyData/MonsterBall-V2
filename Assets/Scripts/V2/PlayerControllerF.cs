@@ -98,7 +98,7 @@ public class PlayerControllerF : MonoBehaviour
     private Vector3 respawnPosition = new Vector3(0,5,0);
 
     [HideInInspector]
-    public bool isEaten = false;
+	public bool isEaten = false, isValidated = false;
     [HideInInspector]
     public bool canCount = true;
 
@@ -150,8 +150,13 @@ public class PlayerControllerF : MonoBehaviour
         else
             spriteBonus.enabled = false;
 
-        Move();
-        if (!isStunned)
+
+		if (GameControllerF.getManager().state == GameManagerF.Step.inGame)
+			Move();
+		else if (GameControllerF.getManager ().state == GameManagerF.Step.playerPlacement)
+			MoveToSpawn ();
+	
+		if (!isStunned && (GameControllerF.getManager().state == GameManagerF.Step.choosePlayer || GameControllerF.getManager().state == GameManagerF.Step.inGame) )
         {
             Attack();
         }
@@ -433,6 +438,14 @@ public class PlayerControllerF : MonoBehaviour
                             if (animator.name == "arme")
                                 animator.SetTrigger("shrink");
                     }
+
+					if( isValidated == false){
+
+						isValidated = true;
+						transform.FindChild("AButtonSprite").GetComponent<SpriteRenderer> ().enabled = false;
+						GameControllerF.getManager().validNextState();
+
+					}
                 }
             }
             else
@@ -691,4 +704,27 @@ public class PlayerControllerF : MonoBehaviour
     {
         this.loading = loading;
     }
+
+	private void MoveToSpawn(){
+
+		if (GetComponentInChildren<Animator> ())
+			GetComponentInChildren<Animator> ().SetBool ("isRunning", true);
+
+
+		if (transform.position != this.respawnPosition) {
+
+			transform.position = Vector3.MoveTowards (transform.position, this.respawnPosition, Time.deltaTime * speed);
+			transform.LookAt (this.respawnPosition);
+
+
+		} else {
+			if (GetComponentInChildren<Animator> ())
+				GetComponentInChildren<Animator> ().SetBool ("isRunning", false);
+			transform.LookAt(GameControllerF.GetMonster().transform.position);
+		GameControllerF.getManager().validNextState();
+
+		}
+
+
+	}
 }

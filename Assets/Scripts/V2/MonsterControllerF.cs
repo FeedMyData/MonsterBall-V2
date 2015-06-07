@@ -157,6 +157,8 @@ public class MonsterControllerF : MonoBehaviour {
 	// Update is called once per frame
 	void Update() {
 
+		if (GameControllerF.getManager ().state != GameManagerF.Step.inGame) return;
+
         if (transform.position.y < -3.0f && !monsterForm && !transforming) RespawnBall();
 
         if (
