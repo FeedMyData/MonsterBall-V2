@@ -210,10 +210,6 @@ Material:
         second: 80
       data:
         first:
-          name: _Out
-        second: .0799999982
-      data:
-        first:
           name: _node_5367
         second: 1
       data:
@@ -224,6 +220,10 @@ Material:
         first:
           name: _node_1300
         second: 80
+      data:
+        first:
+          name: _Out
+        second: .0799999982
     m_Colors:
       data:
         first:
@@ -244,7 +244,7 @@ Material:
       data:
         first:
           name: _Color_tp
-        second: {r: 1, g: 0, b: 0, a: 1}
+        second: {r: 0, g: .925172925, b: 1, a: 1}
       data:
         first:
           name: _Color_TP

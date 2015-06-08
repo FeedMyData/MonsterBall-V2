@@ -177,7 +177,7 @@ MonoBehaviour:
   speedRotationBall: 30
   speedMonster: 13
   angleChangeDirection: 45
-  speedMaxToChooseDirection: 5
+  speedMaxToChooseDirection: 60
   speedDivisionFactor: 8
   spaceBetweenBallPlayer: 3
   fovBall: 110
@@ -194,10 +194,10 @@ MonoBehaviour:
   monsterMass: 20
   safeTransform: .600000024
   nbCycleMonster: 3
-  durationLoadingCharge: 2
+  durationLoadingCharge: 3
   numberOfReboundsToMaxSpeed: 10
-  minSpeedCharge: 20
-  maxSpeedCharge: 60
+  minSpeedCharge: 40
+  maxSpeedCharge: 80
   durationInvul: 2
   coefColliderMonster: .699999988
   durationEatingPlayer: 1
@@ -4730,7 +4730,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 499457350}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9b538cd82b6e514193124771aed1850, type: 3}
   m_Name: 
@@ -24316,7 +24316,7 @@ Light:
   serializedVersion: 6
   m_Type: 1
   m_Color: {r: 1, g: .994523346, b: .801470578, a: 1}
-  m_Intensity: 1.20000005
+  m_Intensity: 1.39999998
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -24607,12 +24607,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be088c83819d83046a99eb9fc4edf5ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  state: 0
+  state: 4
   durationInSecond: 180
   ecranFin: {fileID: 1105067374}
   timeBetweenTwoBonus: 0
   whenToBeginEndTimer: 5
-  nextStateValidationRemaining: 1
+  nextStateValidationRemaining: 4
 --- !u!114 &2052379257
 MonoBehaviour:
   m_ObjectHideFlags: 0
