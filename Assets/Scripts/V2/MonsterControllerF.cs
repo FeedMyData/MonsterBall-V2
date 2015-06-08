@@ -59,6 +59,12 @@ public class MonsterControllerF : MonoBehaviour {
     [Header("Respawn")]
     public float durationInvul = 2.0f;
     private bool touchable = true;
+    public float durationMiniRandomRespawn = 1.0f;
+    public float durationMaxiRandomRespawn = 5.0f;
+    public float speedRotationRespawn = 20f;
+    public float respawnDistanceToCenter = 5.0f;
+    private bool chooseNewRespawn = false;
+    private Vector3 newRespawn = Vector3.zero;
 
     [Space(20)]
     public float coefColliderMonster = 1.05f;
@@ -156,6 +162,11 @@ public class MonsterControllerF : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update() {
+
+        if (chooseNewRespawn)
+        {
+            transform.RotateAround(Vector3.zero, Vector3.up, speedRotationRespawn * Time.deltaTime);
+        }
 
 		if (GameControllerF.getManager ().state != GameManagerF.Step.inGame) return;
 
@@ -456,19 +467,29 @@ public class MonsterControllerF : MonoBehaviour {
     {
         body.velocity = Vector3.zero;
         body.angularVelocity = Vector3.zero;
-        //transform.rotation = Quaternion.identity;
         transform.eulerAngles = new Vector3(0,UnityEngine.Random.Range(0,360),0);
-        transform.position = respawnPositionBall;
 
-        sound.PlayEvent("VX_Balle_RemiseEnJeu", gameObject);
-
+        StartCoroutine(WaitRespawn());
         //Camera cam = Camera.allCameras[0];
         //if(cam.GetComponent<CameraManagerF>() != null)
         //{
         //    cam.GetComponent<CameraManagerF>().Respawn();
         //}
 
+        
+    }
+
+    IEnumerator WaitRespawn()
+    {
+        chooseNewRespawn = true;
+        transform.position = new Vector3(0,15,respawnDistanceToCenter);
+        yield return new WaitForSeconds(UnityEngine.Random.Range(durationMiniRandomRespawn,durationMaxiRandomRespawn));
+        chooseNewRespawn = false;
+        
+
+        sound.PlayEvent("VX_Balle_RemiseEnJeu", gameObject);
         StartCoroutine(Intouchable());
+
     }
 
     public void SafeRespawn()
