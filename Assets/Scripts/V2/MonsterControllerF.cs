@@ -166,7 +166,8 @@ public class MonsterControllerF : MonoBehaviour {
 
         if (chooseNewRespawn)
         {
-            transform.RotateAround(Vector3.zero, Vector3.up, speedRotationRespawn * Time.deltaTime);
+
+            lightRespawn.transform.RotateAround(Vector3.zero, Vector3.up, speedRotationRespawn * Time.deltaTime);
         }
 
 		if (GameControllerF.getManager ().state != GameManagerF.Step.inGame) return;
@@ -483,11 +484,11 @@ public class MonsterControllerF : MonoBehaviour {
     IEnumerator WaitRespawn()
     {
         chooseNewRespawn = true;
-        
+        lightRespawn.transform.LookAt(new Vector3(0,0,respawnDistanceToCenter));
+        lightRespawn.gameObject.SetActive(true);
         yield return new WaitForSeconds(UnityEngine.Random.Range(durationMiniRandomRespawn,durationMaxiRandomRespawn));
         chooseNewRespawn = false;
-        
-
+        lightRespawn.gameObject.SetActive(false);
         sound.PlayEvent("VX_Balle_RemiseEnJeu", gameObject);
         transform.position = new Vector3(0, 15, respawnDistanceToCenter);
         StartCoroutine(Intouchable());
