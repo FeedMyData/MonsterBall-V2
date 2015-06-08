@@ -65,6 +65,7 @@ public class MonsterControllerF : MonoBehaviour {
     public float respawnDistanceToCenter = 5.0f;
     private bool chooseNewRespawn = false;
     private Vector3 newRespawn = Vector3.zero;
+    public Light lightRespawn;
 
     [Space(20)]
     public float coefColliderMonster = 1.05f;
@@ -482,12 +483,13 @@ public class MonsterControllerF : MonoBehaviour {
     IEnumerator WaitRespawn()
     {
         chooseNewRespawn = true;
-        transform.position = new Vector3(0,15,respawnDistanceToCenter);
+        
         yield return new WaitForSeconds(UnityEngine.Random.Range(durationMiniRandomRespawn,durationMaxiRandomRespawn));
         chooseNewRespawn = false;
         
 
         sound.PlayEvent("VX_Balle_RemiseEnJeu", gameObject);
+        transform.position = new Vector3(0, 15, respawnDistanceToCenter);
         StartCoroutine(Intouchable());
 
     }

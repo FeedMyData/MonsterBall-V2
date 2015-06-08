@@ -203,6 +203,7 @@ MonoBehaviour:
   durationMaxiRandomRespawn: 5
   speedRotationRespawn: 200
   respawnDistanceToCenter: 5
+  lightRespawn: {fileID: 1592300642}
   coefColliderMonster: .699999988
   durationEatingPlayer: 1
   skinBall: {fileID: 615020600}
