@@ -231,4 +231,15 @@ public class GameManagerF : MonoBehaviour {
 		state = Step.inGame;
 		
 	}
+
+    public int GetBlueScore()
+    {
+        return bluScore;
+    }
+
+    public int GetRedScore()
+    {
+        return redScore;
+    }
+
 }

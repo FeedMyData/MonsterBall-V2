@@ -574,9 +574,7 @@ public class MonsterControllerF : MonoBehaviour {
         yield return new WaitForSeconds(durationFirstPart);
             if (!monsterModeCharge)
             {
-                Debug.Log("choix player  :actuellement sur j1, à changer");
-
-                targetCharge = GameControllerF.GetPlayer(/*(int)UnityEngine.Random.Range(1,5)*/1);
+                targetCharge = GameControllerF.GetTargetCharge();
                 Debug.Log(targetCharge.name);
                 //actualCycleMonster++;
                 monsterModeCharge = true;

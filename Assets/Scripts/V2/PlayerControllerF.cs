@@ -92,6 +92,8 @@ public class PlayerControllerF : MonoBehaviour
     public int coupsVide = 0;
     [HideInInspector]
     public int marqueBut = 0;
+    [HideInInspector]
+    public int coupsDonnesSurBalle = 0;
 
     private GameManagerF manager;
 
@@ -557,10 +559,7 @@ public class PlayerControllerF : MonoBehaviour
 
                         monster.AddWrath((int)(power / coefPower));
 
-                        if (monster.GetWrath() < monster.wrathMax)
-                        {
-
-                        }
+                        coupsDonnesSurBalle++;
 
                         //feedbacks balle coup reçu par un joueur
                         if (power == powerMax)

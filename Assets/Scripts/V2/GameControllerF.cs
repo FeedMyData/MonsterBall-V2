@@ -305,6 +305,74 @@ public class GameControllerF : MonoBehaviour {
     //    return staticTxtScore;
     //}
 
+    public static GameObject GetTargetCharge()
+    {
+        int blueScore = manager.GetBlueScore();
+        int redScore = manager.GetRedScore();
+
+        GameObject targetPlayer;
+        List<GameObject> playersEven = new List<GameObject>();
+        int coupsDonnesMax = 0;
+
+        foreach(GameObject player in tabObj) {
+
+            PlayerControllerF playerScript = player.GetComponent<PlayerControllerF>();
+
+            if (playerScript != null)
+            {
+                Team team = playerScript.team;
+
+                if (blueScore > redScore && team == GameControllerF.Team.Blu) {
+                    if (playerScript.coupsDonnesSurBalle > coupsDonnesMax)
+                    {
+                        coupsDonnesMax = playerScript.coupsDonnesSurBalle;
+                        playersEven.Clear();
+                        playersEven.Add(player);
+                    }
+                    else if (playerScript.coupsDonnesSurBalle == coupsDonnesMax)
+                    {
+                        playersEven.Add(player);
+                    }
+                }
+                else if (blueScore < redScore && team == GameControllerF.Team.Red)
+                {
+                    if (playerScript.coupsDonnesSurBalle > coupsDonnesMax)
+                    {
+                        coupsDonnesMax = playerScript.coupsDonnesSurBalle;
+                        playersEven.Clear();
+                        playersEven.Add(player);
+                    }
+                    else if (playerScript.coupsDonnesSurBalle == coupsDonnesMax)
+                    {
+                        playersEven.Add(player);
+                    }
+                }
+                else if (blueScore == redScore)
+                {
+                    if (playerScript.coupsDonnesSurBalle > coupsDonnesMax)
+                    {
+                        coupsDonnesMax = playerScript.coupsDonnesSurBalle;
+                        playersEven.Clear();
+                        playersEven.Add(player);
+                    }
+                    else if (playerScript.coupsDonnesSurBalle == coupsDonnesMax)
+                    {
+                        playersEven.Add(player);
+                    }
+                }
+            }
+        }
+
+        targetPlayer = playersEven[Random.Range(0, playersEven.Count)];
+        if (targetPlayer == null)
+        {
+            targetPlayer = GetPlayer(Random.Range(1, 5));
+        }
+
+        return targetPlayer;
+
+    }
+
     public static Text GetBlueScoreTxt()
     {
         return staticBlueScoreTxt;
