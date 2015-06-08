@@ -27,7 +27,7 @@ public class CameraShake : MonoBehaviour {
 
         if (GetComponent<CamEffects>() && GetComponent<CamEffects>().GetRepositionned())
         {
-
+            
             if (timeS > 0)
             {
                 if (decreaseShakeWithTime)
