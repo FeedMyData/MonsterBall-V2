@@ -92,7 +92,7 @@ public class GoalScriptF : MonoBehaviour {
 
                     manager.AddScore(tag);
                     //tp au centre + invul de 3 secondes
-                    StartCoroutine(DezRez(other.gameObject));
+                    Dez(other.gameObject);
                 }
             }
         //if (player != null)
@@ -131,17 +131,17 @@ public class GoalScriptF : MonoBehaviour {
         returnSwitch = true;
     }
 
-    IEnumerator DezRez(GameObject monster)
+    void Dez(GameObject monster)
     {
+        //REZ dans le monstre lors du respawn !!
         MonsterControllerF monsterController = monster.GetComponent<MonsterControllerF>();
         monsterController.canCount = false;
         monster.GetComponent<Rigidbody>().velocity = Vector3.zero;
         TeleportationF telMonster = monster.GetComponentInChildren<TeleportationF>();
         telMonster.InstantTP(true);
-        telMonster.SetTeleportation(false);
+        
         monsterController.RespawnBall();
-        yield return new WaitForSeconds(telMonster.durationTP);
-        monsterController.canCount = true;
+        //yield return new WaitForSeconds(telMonster.durationTP);
 
     }
 }
