@@ -12,6 +12,11 @@ public class MenuStart : MonoBehaviour {
     public GameObject pnlMain;
     public GameObject pnlCredits;
 
+    public float timeLoading = 5.0f;
+    private float speedRotation = 160.0f;
+    public GameObject pnlLoading;
+    private bool canRotate = false;
+
     public void Start()
     {
         if (defaultButtonMain != null)
@@ -20,7 +25,18 @@ public class MenuStart : MonoBehaviour {
 
     public void Play()
     {
-        Application.LoadLevel(1);
+        pnlMain.SetActive(false);
+        pnlLoading.SetActive(true);
+        canRotate = true;
+        StartCoroutine(PlayCoroutine());
+    }
+
+    IEnumerator PlayCoroutine()
+    {
+        AsyncOperation aop = Application.LoadLevelAsync(1);
+        aop.allowSceneActivation = false;
+        yield return new WaitForSeconds(timeLoading);
+        aop.allowSceneActivation = true;
     }
 
     public void ToCredits()
