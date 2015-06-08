@@ -48,6 +48,8 @@ ModelImporter:
     7400002: Run
     7400004: Hurt
     7400006: SpitPlayer
+    7400008: ChargeAnnouncement
+    7400010: Charge
     9500000: //RootNode
     13700000: Eyes
     13700002: Monster
@@ -265,6 +267,138 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Eyes
+        weight: 1
+      - path: Head
+        weight: 1
+      - path: Head/Bone016
+        weight: 1
+      - path: Head/LeftEarBase
+        weight: 1
+      - path: Head/LeftEarBase/LeftEar
+        weight: 1
+      - path: Head/LeftEarBase/LeftEar/Bone008
+        weight: 1
+      - path: Head/MouthMeca0
+        weight: 1
+      - path: Head/MouthMeca0/MouthMeca1
+        weight: 1
+      - path: Head/MouthMeca0/MouthMeca1/Mouth
+        weight: 1
+      - path: Head/MouthMeca0/MouthMeca1/Mouth/Bone020
+        weight: 1
+      - path: Head/Nose
+        weight: 1
+      - path: Head/Nose/Bone013
+        weight: 1
+      - path: Head/RightEarBase
+        weight: 1
+      - path: Head/RightEarBase/RightEar
+        weight: 1
+      - path: Head/RightEarBase/RightEar/Bone006
+        weight: 1
+      - path: Monster
+        weight: 1
+      - path: Teeth
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: ChargeAnnouncement
+      takeName: Chikmink
+      firstFrame: 107
+      lastFrame: 190
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: .993478239
+        functionName: StartCharge
+        data: 
+        objectReferenceParameter: {fileID: 100018, guid: aca9e1c84fab4f946a4007ad4035b283,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Eyes
+        weight: 1
+      - path: Head
+        weight: 1
+      - path: Head/Bone016
+        weight: 1
+      - path: Head/LeftEarBase
+        weight: 1
+      - path: Head/LeftEarBase/LeftEar
+        weight: 1
+      - path: Head/LeftEarBase/LeftEar/Bone008
+        weight: 1
+      - path: Head/MouthMeca0
+        weight: 1
+      - path: Head/MouthMeca0/MouthMeca1
+        weight: 1
+      - path: Head/MouthMeca0/MouthMeca1/Mouth
+        weight: 1
+      - path: Head/MouthMeca0/MouthMeca1/Mouth/Bone020
+        weight: 1
+      - path: Head/Nose
+        weight: 1
+      - path: Head/Nose/Bone013
+        weight: 1
+      - path: Head/RightEarBase
+        weight: 1
+      - path: Head/RightEarBase/RightEar
+        weight: 1
+      - path: Head/RightEarBase/RightEar/Bone006
+        weight: 1
+      - path: Monster
+        weight: 1
+      - path: Teeth
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Charge
+      takeName: Chikmink
+      firstFrame: 191
+      lastFrame: 231
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0

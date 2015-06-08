@@ -370,7 +370,8 @@ public class MonsterControllerF : MonoBehaviour {
                 if (!loadingChargeEnd)
                 {
                     loadingChargeEnd = true;
-                    StartCoroutine(LoadingCharge());
+					if(GetComponentInChildren<Animator>()) GetComponentInChildren<Animator>().SetTrigger("chargeAnnouncement");
+                   // StartCoroutine(LoadingCharge());
                 }
             }
             else
@@ -475,7 +476,7 @@ public class MonsterControllerF : MonoBehaviour {
         transform.position = respawnPositionBall;
     }
 
-    IEnumerator LoadingCharge()
+    /*IEnumerator LoadingCharge()
     {
         yield return new WaitForSeconds(durationLoadingCharge);
         //regarde la cible
@@ -483,9 +484,14 @@ public class MonsterControllerF : MonoBehaviour {
         Camera.main.GetComponent<CameraShake>().shake(0.8f, 3.0f, 1.5f);
         canEat = true;
         moveCharge = true;
-    }
-
-    void TransformationBallMonstre()
+    }*/
+	public void StartCharge(){
+		Camera.main.GetComponent<CameraShake>().shake(0.8f, 3.0f, 1.5f);
+		canEat = true;
+		moveCharge = true;
+	}
+	
+	void TransformationBallMonstre()
     {
         // feedbacks pré-transformation
         Camera.main.GetComponent<CameraShake>().shake(2.0f, 0.15f, 0.01f);
