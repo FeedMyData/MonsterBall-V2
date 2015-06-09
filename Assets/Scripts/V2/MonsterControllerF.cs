@@ -49,13 +49,14 @@ public class MonsterControllerF : MonoBehaviour {
     public float durationLoadingCharge = 2.0f;
     //public float durationUpSpeedCharge = 8.0f;
     public float numberOfReboundsToMaxSpeed = 10.0f;
+    public int maxNumberOfChargeRebounds = 10;
     public float minSpeedCharge = 8.0f;
     public float maxSpeedCharge = 25.0f;
     private float speedMonsterCharge;
     //private float timeCharge;
     private bool monsterModeCharge = false;
     private int currentNumberOfRebounds = 0;
-
+	private int totalNumberOfRebounds = 0;
     [Header("Respawn")]
     public float durationInvul = 2.0f;
     private bool touchable = true;
@@ -72,6 +73,7 @@ public class MonsterControllerF : MonoBehaviour {
     [Space(20)]
     public float durationEatingPlayer = 2.0f;
     private bool eatPlayer = false;
+	private int currentNumberOfChargeEatenPlayers = 0;
     private float rotateToGoal = 0.0f;
     private Transform goal;
     private Vector3 DirectionMonster = Vector3.zero;
@@ -399,11 +401,20 @@ public class MonsterControllerF : MonoBehaviour {
                     transform.eulerAngles = new Vector3(0, newDirection, 0);
                     if (currentNumberOfRebounds < numberOfReboundsToMaxSpeed) currentNumberOfRebounds++;
                     Camera.main.GetComponent<CameraShake>().shake(0.8f, 2.0f, 1.0f);
+					totalNumberOfRebounds++;
                 }
 
                 //float delayCharge = Mathf.Abs((timeCharge - Time.time) / durationUpSpeedCharge - 1);
                 float percentageLSpeed = currentNumberOfRebounds / numberOfReboundsToMaxSpeed;
                 speedMonsterCharge = Mathf.Lerp(minSpeedCharge, maxSpeedCharge, percentageLSpeed);
+
+				if (totalNumberOfRebounds >= maxNumberOfChargeRebounds  && currentNumberOfChargeEatenPlayers >= 3 )
+       			{ 
+          		 	monsterModeCharge = false;
+           			loadingChargeEnd = false;
+           			moveCharge = false;
+            		TransformationMonstreBall();
+        		}
 
             }
             
@@ -639,6 +650,8 @@ public class MonsterControllerF : MonoBehaviour {
                 //actualCycleMonster++;
                 monsterModeCharge = true;
                 currentNumberOfRebounds = 0;
+			totalNumberOfRebounds = 0;
+				currentNumberOfChargeEatenPlayers = 0;
             }
        // }
 
@@ -730,20 +743,25 @@ public class MonsterControllerF : MonoBehaviour {
         else
             goal = GameControllerF.GetPosRedGoal();
 
-		if(GetComponentInChildren<Animator>()) GetComponentInChildren<Animator>().SetTrigger("spit");
+		if (!monsterModeCharge) {
 
-        //feedbacks chewing
-        saliveDroite.Play();
-        saliveGauche.Play();
+			if (GetComponentInChildren<Animator> ())
+				GetComponentInChildren<Animator> ().SetTrigger ("spit");
 
-        yield return new WaitForSeconds(durationEatingPlayer);
+			//feedbacks chewing
+			saliveDroite.Play ();
+			saliveGauche.Play ();
 
-        saliveDroite.Stop();
-        saliveGauche.Stop();
+			yield return new WaitForSeconds (durationEatingPlayer);
 
-        //Faire réapparaitre le joueur
-        //player.GetComponent<Renderer>().enabled = true;
-        //player.GetComponentInChildren<SkinnedMeshRenderer>().enabled = true;
+			saliveDroite.Stop ();
+			saliveGauche.Stop ();
+
+			//Faire réapparaitre le joueur
+			//player.GetComponent<Renderer>().enabled = true;
+			//player.GetComponentInChildren<SkinnedMeshRenderer>().enabled = true;
+		}
+		else currentNumberOfChargeEatenPlayers++;
         foreach (Renderer renderer in player.GetComponentsInChildren<Renderer>())
         {
             if (renderer.name == "arme" || renderer.name == "Nivek" || renderer.name == "Circle") { renderer.enabled = true; }
@@ -759,13 +777,13 @@ public class MonsterControllerF : MonoBehaviour {
 
         yield return new WaitForSeconds(0.1f);
 
-        if (monsterModeCharge)
+       /* if (monsterModeCharge)
         {
             monsterModeCharge = false;
             loadingChargeEnd = false;
             moveCharge = false;
             TransformationMonstreBall();
-        }
+        }*/
 
         eatPlayer = false;
         player.GetComponent<PlayerControllerF>().isEaten = false;
