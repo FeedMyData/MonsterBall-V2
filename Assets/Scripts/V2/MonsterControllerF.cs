@@ -19,6 +19,9 @@ public class MonsterControllerF : MonoBehaviour {
     public float spaceBetweenBallPlayer = 2.0f;
     public float fovBall = 110f;
     public float angleAvoidPlayer = 45f;
+    private Vector3 baseScaleBall = new Vector3(0.4f, 0.4f, 0.4f);
+    public float maxScaleFactor = 2.0f;
+    private Transform childBall;
     
     [Header("Magnet")]
     public float areaMagnet = 1.0f;
@@ -123,7 +126,6 @@ public class MonsterControllerF : MonoBehaviour {
     private ParticleSystem saliveDroite;
     private ParticleSystem saliveGauche;
     private ParticleSystem ragingFx;
-
     //public delegate void OnClickHit();
     //public event OnClickHit OnClickHitEvent;
 
@@ -135,6 +137,9 @@ public class MonsterControllerF : MonoBehaviour {
         colliderMagnet = GetComponent<Collider>();
         sound = GetComponent<SoundManager>();
         sound.LoadBank();
+
+        childBall = transform.Find("ball_monster");
+        baseScaleBall = childBall.localScale;
 
         commentariesScript = GameObject.Find("Commentaries").GetComponent<TextCommentaries>();
 
@@ -180,8 +185,8 @@ public class MonsterControllerF : MonoBehaviour {
             transform.position.y < -2.0f ||
             transform.position.z > 21.0f ||
             transform.position.z < -21.0f ||
-            transform.position.x > 39.0f ||
-            transform.position.x < -39.0f)
+            transform.position.x > 44.0f || //39
+            transform.position.x < -44.0f)
             )
         {
             SafeRespawn();
@@ -289,6 +294,8 @@ public class MonsterControllerF : MonoBehaviour {
                     body.angularVelocity = Vector3.zero;
                     transform.eulerAngles = new Vector3(0, transform.eulerAngles.y, 0);
 
+                    childBall.localScale = baseScaleBall;
+
                     Vector3 newPosition = transform.forward;
                     //newPosition.y = transform.localScale.y/2;
 
@@ -319,6 +326,16 @@ public class MonsterControllerF : MonoBehaviour {
                         }
                         catch (Exception e) { }
                     }
+                }
+                else // balle volle, sans volonté propre
+                {
+                    // scale de la balle
+                    transform.forward = body.velocity;
+                    float percentageL = (body.velocity.magnitude - 40.0f) / (80.0f - 40.0f);
+                    float newScaleBalleX = Mathf.Lerp(baseScaleBall.x, baseScaleBall.x / (maxScaleFactor / 2), percentageL);
+                    float newScaleBalleZ = Mathf.Lerp(baseScaleBall.z, baseScaleBall.z / (maxScaleFactor / 2), percentageL);
+                    float newScaleBalleY = Mathf.Lerp(baseScaleBall.y, baseScaleBall.y * maxScaleFactor, percentageL);
+                    childBall.localScale = new Vector3(newScaleBalleX, newScaleBalleY, newScaleBalleZ);
                 }
             }
         }
@@ -398,6 +415,7 @@ public class MonsterControllerF : MonoBehaviour {
                     newDirection += GetAngleBounce(transform.position);
                     transform.eulerAngles = new Vector3(0, newDirection, 0);
                     if (currentNumberOfRebounds < numberOfReboundsToMaxSpeed) currentNumberOfRebounds++;
+                    //feedbacks rebond sur bord quand charge
                     Camera.main.GetComponent<CameraShake>().shake(0.8f, 2.0f, 1.0f);
                 }
 
@@ -552,6 +570,7 @@ public class MonsterControllerF : MonoBehaviour {
         commentariesScript.WriteCommentary("both", "monsterP");
 
         transforming = true;
+        childBall.localScale = baseScaleBall;
         timeTransforming = 0;
         //taille + magnet + variable
         wrath = 0;
@@ -678,6 +697,9 @@ public class MonsterControllerF : MonoBehaviour {
                 magnet.GetComponent<PlayerControllerF>().SetMagnet(true);
 
                 body.velocity = Vector3.zero;
+
+                childBall.localScale = baseScaleBall;
+
             }        
         }
     }
