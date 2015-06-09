@@ -135,10 +135,10 @@ public class GoalScriptF : MonoBehaviour {
     {
         //REZ dans le monstre lors du respawn !!
         MonsterControllerF monsterController = monster.GetComponent<MonsterControllerF>();
-        monsterController.canCount = false;
-        monster.GetComponent<Rigidbody>().velocity = Vector3.zero;
-        TeleportationF telMonster = monster.GetComponentInChildren<TeleportationF>();
-        telMonster.InstantTP(true);
+        //monsterController.canCount = false;
+        //monster.GetComponent<Rigidbody>().velocity = Vector3.zero;
+        //TeleportationF telMonster = monster.GetComponentInChildren<TeleportationF>();
+        //telMonster.InstantTP(true);
         
         monsterController.RespawnBall();
         //yield return new WaitForSeconds(telMonster.durationTP);

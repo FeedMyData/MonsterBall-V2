@@ -357,6 +357,14 @@ public class PlayerControllerF : MonoBehaviour
                 }
                 else
                 {
+
+					// Feedback
+					foreach (ParticleSystem ps in GetComponentsInChildren<ParticleSystem>())
+					{
+						if (ps.name == "Batte_effet") ps.Play();
+					}
+
+
                     List<GameObject> tabProxi = GameControllerF.PlayerView(this, rangeShoot, angleShoot);
 
                     if (tabProxi.Count > 0)

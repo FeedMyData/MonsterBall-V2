@@ -22,12 +22,6 @@ public class CamEffects : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        if (!animatorDesactivated)
-        {
-            gameObject.GetComponent<Animator>().enabled = false;
-            animatorDesactivated = true;
-        }
-
         if (monster.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("SpitPlayer"))
         {
             transform.localPosition = originalCamPos + boneToFollowWhenChewing.forward * camMoveFactor;
