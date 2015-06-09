@@ -32,8 +32,8 @@ public class TwitterFeed : MonoBehaviour {
     private List<Text> displayedTweets = new List<Text>();
     private bool searchingNewTweet = false;
     private string lastTweetDisplayed;
-    //rajouter message tous les X temps pour rappeler l'adresse
-    //optimiser renderTexture
+
+    private bool canDisplay = false;
 
     // Use this for initialization
     void Start()
@@ -41,7 +41,7 @@ public class TwitterFeed : MonoBehaviour {
 
         StartCoroutine(GetTwitterAccessToken());
 
-        DisplayTweet(reminderText);
+        //DisplayTweet(reminderText);
 
     }
 
@@ -49,64 +49,69 @@ public class TwitterFeed : MonoBehaviour {
     void Update()
     {
 
-        timerRefreshingRateWhenNoTweets += Time.deltaTime;
-        timerRefreshingRateForReminderWhenNoTweets += Time.deltaTime;
-
-        if (newResponse)
-        {
-            newResponse = false;
-
-            string textOnOneLine = MakeAllOnOneLine(searchResponse["statuses"][0]["text"]);
-            string finalText = "<color=#FF0033>" + searchResponse["statuses"][0]["user"]["name"] + "</color> <size=40>@" + searchResponse["statuses"][0]["user"]["screen_name"] + "</size> : " + textOnOneLine;
-
-            //Debug.Log(finalText);
-
-            if (lastTweetDisplayed != finalText)
-            {
-                lastTweetDisplayed = finalText;
-                DisplayTweet(finalText);
-            }
-            else if (timerRefreshingRateForReminderWhenNoTweets > refreshingRateForReminderWhenNoTweets)
-            {
-                timerRefreshingRateForReminderWhenNoTweets = 0.0f;
-                DisplayTweet(reminderText);
-            }
-            
-        }
-
-        float lastPixelPositionDisplayed = positionToSearchForNewTweet - 0.01f;
-
-        foreach (Text tweet in displayedTweets)
+        if (canDisplay)
         {
 
-            if (tweet.gameObject.activeSelf)
+            timerRefreshingRateWhenNoTweets += Time.deltaTime;
+            timerRefreshingRateForReminderWhenNoTweets += Time.deltaTime;
+
+            if (newResponse)
             {
+                newResponse = false;
 
-                // move if displayed
-                if (transform.localPosition.x + tweet.transform.localPosition.x + tweet.preferredWidth * tweet.rectTransform.localScale.x < endScrollingPosition.localPosition.x)
-                {
-                    tweet.gameObject.SetActive(false);
-                }
-                else
-                {
-                    tweet.transform.Translate(Time.deltaTime * speedScrolling, 0, 0);
-                }
+                string textOnOneLine = MakeAllOnOneLine(searchResponse["statuses"][0]["text"]);
+                string finalText = "<color=#FF0033>" + searchResponse["statuses"][0]["user"]["name"] + "</color> <size=40>@" + searchResponse["statuses"][0]["user"]["screen_name"] + "</size> : " + textOnOneLine;
 
-                // search for last displaying tweet
-                if (tweet.transform.localPosition.x + tweet.preferredWidth * tweet.rectTransform.localScale.x > lastPixelPositionDisplayed)
+                //Debug.Log(finalText);
+
+                if (lastTweetDisplayed != finalText)
                 {
-                    lastPixelPositionDisplayed = tweet.transform.localPosition.x + tweet.preferredWidth * tweet.rectTransform.localScale.x;
+                    lastTweetDisplayed = finalText;
+                    DisplayTweet(finalText);
+                }
+                else if (timerRefreshingRateForReminderWhenNoTweets > refreshingRateForReminderWhenNoTweets)
+                {
+                    timerRefreshingRateForReminderWhenNoTweets = 0.0f;
+                    DisplayTweet(reminderText);
                 }
 
             }
 
-        }
+            float lastPixelPositionDisplayed = positionToSearchForNewTweet - 0.01f;
 
-        // search for new tweet if place available
-        if (lastPixelPositionDisplayed < positionToSearchForNewTweet && authFinished && !searchingNewTweet && timerRefreshingRateWhenNoTweets > refreshingRateWhenNoTweets)
-        {
-            StartCoroutine(SearchForTweets());
-            searchingNewTweet = true;
+            foreach (Text tweet in displayedTweets)
+            {
+
+                if (tweet.gameObject.activeSelf)
+                {
+
+                    // move if displayed
+                    if (transform.localPosition.x + tweet.transform.localPosition.x + tweet.preferredWidth * tweet.rectTransform.localScale.x < endScrollingPosition.localPosition.x)
+                    {
+                        tweet.gameObject.SetActive(false);
+                    }
+                    else
+                    {
+                        tweet.transform.Translate(Time.deltaTime * speedScrolling, 0, 0);
+                    }
+
+                    // search for last displaying tweet
+                    if (tweet.transform.localPosition.x + tweet.preferredWidth * tweet.rectTransform.localScale.x > lastPixelPositionDisplayed)
+                    {
+                        lastPixelPositionDisplayed = tweet.transform.localPosition.x + tweet.preferredWidth * tweet.rectTransform.localScale.x;
+                    }
+
+                }
+
+            }
+
+            // search for new tweet if place available
+            if (lastPixelPositionDisplayed < positionToSearchForNewTweet && authFinished && !searchingNewTweet && timerRefreshingRateWhenNoTweets > refreshingRateWhenNoTweets)
+            {
+                StartCoroutine(SearchForTweets());
+                searchingNewTweet = true;
+            }
+
         }
 
     }
@@ -207,6 +212,16 @@ public class TwitterFeed : MonoBehaviour {
         searchingNewTweet = false;
         newResponse = true;
         
+    }
+
+    public void SetCanDisplay(bool value)
+    {
+        canDisplay = value;
+    }
+
+    public void LaunchFirstTweet()
+    {
+        DisplayTweet(reminderText);
     }
 
     void DisplayTweet(string text)

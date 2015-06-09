@@ -467,9 +467,18 @@ public class MonsterControllerF : MonoBehaviour {
 
     public void RespawnBall()
     {
+        GetComponentInChildren<TeleportationF>().InstantTP(true);
+        canCount = false;
         body.velocity = Vector3.zero;
         body.angularVelocity = Vector3.zero;
         transform.eulerAngles = new Vector3(0,UnityEngine.Random.Range(0,360),0);
+
+        ballSpotlight.SetActive(false);
+        monsterSpotlight.SetActive(false);
+        ragingFx.gameObject.SetActive(false);
+
+        transform.position = respawnPositionBall;
+        body.useGravity = false;
 
         StartCoroutine(WaitRespawn());
         //Camera cam = Camera.allCameras[0];
@@ -497,8 +506,20 @@ public class MonsterControllerF : MonoBehaviour {
         lightRespawn.gameObject.SetActive(false);
         sound.PlayEvent("VX_Balle_RemiseEnJeu", gameObject);
         transform.position = new Vector3(hit.point.x, 5, hit.point.z);
-
+        body.useGravity = true;
         canCount = true;
+        if (monsterForm)
+        {
+            ballSpotlight.SetActive(false);
+            monsterSpotlight.SetActive(true);
+        }
+        else
+        {
+            ballSpotlight.SetActive(true);
+            monsterSpotlight.SetActive(false);
+        }
+        
+        ragingFx.gameObject.SetActive(true);
         GetComponentInChildren<TeleportationF>().SetTeleportation(false);
         StartCoroutine(Intouchable());
 

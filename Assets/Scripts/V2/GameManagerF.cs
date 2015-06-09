@@ -40,6 +40,8 @@ public class GameManagerF : MonoBehaviour {
 	public int nextStateValidationRemaining = 4; // if you want to test with one player only, just set it to 1
 	// Use this for initialization
 
+    private TwitterFeed twitterScript;
+
     void Start()
     {
         blueScoreTxt = GameControllerF.GetBlueScoreTxt();
@@ -48,7 +50,12 @@ public class GameManagerF : MonoBehaviour {
 
         RefreshDuration();
         RefreshScore();
-        
+
+        twitterScript = GameObject.Find("tweets").GetComponent<TwitterFeed>();
+
+        GameControllerF.GetMonster().GetComponent<MonsterControllerF>().ballSpotlight.SetActive(false);
+        GameControllerF.GetMonster().GetComponent<MonsterControllerF>().monsterSpotlight.SetActive(false);
+
     }
 	
 	// Update is called once per frame
@@ -89,12 +96,10 @@ public class GameManagerF : MonoBehaviour {
 				break;
 			nextStateValidationRemaining = 4;
 
-			GameControllerF.GetMonster().transform.FindChild("ball_monster").GetComponent<MeshRenderer>().enabled = true;
-			GameControllerF.GetMonster().GetComponent<Rigidbody>().velocity = Vector3.zero;
-			TeleportationF telMonster = GameControllerF.GetMonster().GetComponentInChildren<TeleportationF>();
-			telMonster.InstantTP(true);
-			telMonster.SetTeleportation(false);
-			GameControllerF.GetMonster().GetComponent<MonsterControllerF>().RespawnBall();
+            //GameControllerF.GetMonster().GetComponent<Rigidbody>().velocity = Vector3.zero;
+            //TeleportationF telMonster = GameControllerF.GetMonster().GetComponentInChildren<TeleportationF>();
+            //telMonster.InstantTP(true);
+            //telMonster.SetTeleportation(false);
 						
 			if(!kickOff) StartCoroutine(WaitForKickOff());
 
@@ -106,9 +111,13 @@ public class GameManagerF : MonoBehaviour {
 				quickTestLaunched = true;
 				StartCoroutine(matchDuration());
 			}
-			GameObject.Find("LightsBallMonster").GetComponentInChildren<Light>().enabled = true;
+            twitterScript.SetCanDisplay(true);
+            twitterScript.LaunchFirstTweet();
+
 			GameObject.Find("ball_monster").GetComponent<MeshRenderer>().enabled = true;
+            GameControllerF.GetMonster().GetComponent<MonsterControllerF>().RespawnBall();
 			GameObject.Find("Main Camera").GetComponent<Animator>().SetTrigger("finalPosition");
+            GameObject.Find("Main Camera").GetComponent<Animator>().enabled = false;
 			GameControllerF.GetPlayer (1).GetComponent<PlayerControllerF>().Respawn();
 			GameControllerF.GetPlayer (2).GetComponent<PlayerControllerF>().Respawn();
 			GameControllerF.GetPlayer (3).GetComponent<PlayerControllerF>().Respawn();
@@ -220,11 +229,20 @@ public class GameManagerF : MonoBehaviour {
 	IEnumerator WaitForKickOff(){
 
 		kickOff = true;
+
+        GameControllerF.GetMonster().transform.FindChild("ball_monster").GetComponent<MeshRenderer>().enabled = true;
+
+        GameControllerF.GetMonster().GetComponent<MonsterControllerF>().RespawnBall();
+
 		GameObject.Find ("Commentaries").GetComponent<TextCommentaries> ().WriteCommentary ("", "matchB");
 
-		yield return new WaitForSeconds(GameControllerF.GetMonster().GetComponentInChildren<TeleportationF>().durationTP);
+        GameObject.Find("Main Camera").GetComponent<Animator>().enabled = false;
 
-		GameObject.Find("LightsBallMonster").GetComponentInChildren<Light>().enabled = true;
+        twitterScript.SetCanDisplay(true);
+        twitterScript.LaunchFirstTweet();
+
+		yield return new WaitForSeconds(3.0f);
+
 		GameObject.Find ("Commentaries").GetComponent<TextCommentaries> ().WriteCommentary ("", "ballP");
 		StartCoroutine (matchDuration ());
 
