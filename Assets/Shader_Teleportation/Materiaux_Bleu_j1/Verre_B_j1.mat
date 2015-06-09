@@ -193,7 +193,7 @@ Material:
       data:
         first:
           name: _Test2
-        second: 80
+        second: 200
       data:
         first:
           name: _Out
@@ -218,4 +218,4 @@ Material:
       data:
         first:
           name: _Color_tp
-        second: {r: 1, g: 0, b: 0, a: 1}
+        second: {r: 0, g: .647058845, b: 1, a: 1}

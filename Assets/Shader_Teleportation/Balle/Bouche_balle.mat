@@ -244,7 +244,7 @@ Material:
       data:
         first:
           name: _Color_tp
-        second: {r: 1, g: 0, b: 0, a: 1}
+        second: {r: 1, g: 1, b: 1, a: 1}
       data:
         first:
           name: _Color_TP

@@ -179,7 +179,7 @@ Material:
       data:
         first:
           name: _Neg
-        second: .100000001
+        second: -.100000001
       data:
         first:
           name: _Base
@@ -187,7 +187,7 @@ Material:
       data:
         first:
           name: _coeff
-        second: .00100000005
+        second: .00999999978
       data:
         first:
           name: _Coeff_2
@@ -207,7 +207,7 @@ Material:
       data:
         first:
           name: _Test2
-        second: 80
+        second: 200
       data:
         first:
           name: _node_5367
