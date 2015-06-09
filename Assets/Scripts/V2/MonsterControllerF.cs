@@ -480,6 +480,7 @@ public class MonsterControllerF : MonoBehaviour {
                 transform.LookAt(DirectionMonster, Vector3.up);
             else
                 transform.position += transform.forward * Time.deltaTime * speedMonsterCharge;
+            transform.position = new Vector3(transform.position.x, 3.8f, transform.position.z);
         }
         else
         {

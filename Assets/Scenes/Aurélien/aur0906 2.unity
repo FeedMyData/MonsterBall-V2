@@ -182,7 +182,7 @@ MonoBehaviour:
   spaceBetweenBallPlayer: 3
   fovBall: 110
   angleAvoidPlayer: 45
-  maxScaleFactor: 4
+  maxScaleFactor: 3
   areaMagnet: 3
   speedMagnet: 40
   wrathMax: 100
@@ -197,6 +197,7 @@ MonoBehaviour:
   nbCycleMonster: 3
   durationLoadingCharge: 3
   numberOfReboundsToMaxSpeed: 10
+  maxNumberOfChargeRebounds: 10
   minSpeedCharge: 40
   maxSpeedCharge: 80
   durationInvul: 2
@@ -6763,7 +6764,7 @@ Animator:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 615020600}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 71304b7e0b8774943b5f65f430d2094f, type: 2}
   m_CullingMode: 0
