@@ -469,7 +469,7 @@ public class MonsterControllerF : MonoBehaviour {
 
 
         //transform.Translate(transform.forward*Time.deltaTime/*speedMonster*/); //Marche pas
-        if(eatPlayer)
+        if(eatPlayer && !monsterModeCharge)
         {
             transform.rotation = Quaternion.LookRotation(rotationToGoal);
         }
