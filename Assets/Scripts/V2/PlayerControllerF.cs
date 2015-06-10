@@ -139,7 +139,11 @@ public class PlayerControllerF : MonoBehaviour
             }
                 
         }
-        initControllers();
+        if (GameControllerF.getManager().state == GameManagerF.Step.choosePlayer)
+        {
+            initControllers();
+
+        }
         initPlayer();
         if (team == GameControllerF.Team.Blu)
             goal = GameControllerF.GetPosBluGoal();
