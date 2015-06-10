@@ -58,6 +58,10 @@ public class GameControllerF : MonoBehaviour {
 
     private static SoundManager sound;
 
+    private static Dictionary<int, Vector3> positionsPlayersAtSelection = new Dictionary<int, Vector3>();
+    private static Dictionary<int, Jersey> jerseyPositionsAtStart = new Dictionary<int, Jersey>();
+    private static Vector3 positionXZNeutral = new Vector3(0.0f, 1.0f, 18.0f);
+
 	// Use this for initialization
 	void Awake () {
         tabObj = new GameObject[5];
@@ -66,6 +70,17 @@ public class GameControllerF : MonoBehaviour {
         tabObj[2] = player2;
         tabObj[3] = player3;
         tabObj[4] = player4;
+
+        positionsPlayersAtSelection.Add(-2, player4.transform.position);
+        positionsPlayersAtSelection.Add(-1, player2.transform.position);
+        positionsPlayersAtSelection.Add(0, positionXZNeutral);
+        positionsPlayersAtSelection.Add(1, player1.transform.position);
+        positionsPlayersAtSelection.Add(2, player3.transform.position);
+
+        jerseyPositionsAtStart.Add(-2, GameControllerF.Jersey.player4);
+        jerseyPositionsAtStart.Add(-1, GameControllerF.Jersey.player2);
+        jerseyPositionsAtStart.Add(1, GameControllerF.Jersey.player1);
+        jerseyPositionsAtStart.Add(2, GameControllerF.Jersey.player3);
 
         staticField = field;
         //staticTxtScore = txtScore;
@@ -411,6 +426,21 @@ public class GameControllerF : MonoBehaviour {
     public static GameObject GetPlayer(int i)
     {
         return tabObj[i];
+    }
+
+    public static Dictionary<int, Vector3> GetPositionsAtSelection()
+    {
+        return positionsPlayersAtSelection;
+    }
+
+    public static Dictionary<int, Jersey> GetJerseyPositionsAtStart()
+    {
+        return jerseyPositionsAtStart;
+    }
+
+    public static Vector3 GetPositionXZNeutral()
+    {
+        return positionXZNeutral;
     }
 
     public static GameObject GetCake()

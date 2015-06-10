@@ -28,6 +28,7 @@ public class PlayerControllerF : MonoBehaviour
     public float coefPower = 10.0f;
     public float delayPowerMax = 4.0f;
     private Bonus bonus = null;
+    private bool canHit = true;
     private float chargingShoot = 0.0f;
     private float power;
     private bool loading = false;
@@ -66,6 +67,7 @@ public class PlayerControllerF : MonoBehaviour
     private Transform goal;
     [Space(20)]
     public float durationInvul = 2.0f;
+    public float durationInvulSiCoupRecu = 1.0f;
     private bool touchable = true;
     private SpriteRenderer spriteBonus;
     private SpriteRenderer spriteGround;
@@ -100,9 +102,18 @@ public class PlayerControllerF : MonoBehaviour
     private Vector3 respawnPosition = new Vector3(0,5,0);
 
     [HideInInspector]
-	public bool isEaten = false, isValidated = false;
+    public bool isEaten = false;
     [HideInInspector]
     public bool canCount = true;
+
+    private int positionControllerSelection = 0;
+    private float positionYControllerSelection;
+    private float[] positionsY = new float[4] {5.5f, 7.0f, 8.5f, 10.0f};
+    private Vector3 positionXZNeutral;
+    private Vector3 positionControllerSprite;
+    private SpriteRenderer controllerSprite;
+    private bool isValidated = false;
+    private bool hasMadeInputHorizontal = false;
 
     // Use this for initialization
     void Start()
@@ -110,6 +121,7 @@ public class PlayerControllerF : MonoBehaviour
         controller = GetComponent<CharacterController>();
         tp = GetComponentInChildren<TeleportationF>();
         manager = GameControllerF.getManager();
+        positionXZNeutral = GameControllerF.GetPositionXZNeutral();
 
         SpriteRenderer[] tabSprite = GetComponentsInChildren<SpriteRenderer>();
 
@@ -120,8 +132,14 @@ public class PlayerControllerF : MonoBehaviour
                 spriteGround = tabSprite[i];
             else if (tabSprite[i].name == "SpriteBonus")
                 spriteBonus = tabSprite[i];
+            else if (tabSprite[i].name == "AButtonSprite")
+            {
+                controllerSprite = tabSprite[i];
+                controllerSprite.enabled = false;
+            }
+                
         }
-
+        initControllers();
         initPlayer();
         if (team == GameControllerF.Team.Blu)
             goal = GameControllerF.GetPosBluGoal();
@@ -157,8 +175,30 @@ public class PlayerControllerF : MonoBehaviour
 			Move();
 		else if (GameControllerF.getManager ().state == GameManagerF.Step.playerPlacement)
 			MoveToSpawn ();
+        else if (GameControllerF.getManager().state == GameManagerF.Step.choosePlayer)
+        {
+            if (Input.GetAxis(horizontal) > 0.4f && !isValidated && !hasMadeInputHorizontal) // droite
+            {
+                hasMadeInputHorizontal = true;
+                MoveControllerSelection(true);
+            }
+            else if (Input.GetAxis(horizontal) < -0.4f && !isValidated && !hasMadeInputHorizontal) // gauche
+            {
+                hasMadeInputHorizontal = true;
+                MoveControllerSelection(false);
+            }
+            else if (Input.GetAxis(horizontal) < 0.4f && Input.GetAxis(horizontal) > -0.4f)
+            {
+                hasMadeInputHorizontal = false;
+            }
+
+            if (Input.GetButtonDown(fire))
+            {
+                ValidInvalidSelection();
+            }
+        }
 	
-		if (!isStunned && (GameControllerF.getManager().state == GameManagerF.Step.choosePlayer || GameControllerF.getManager().state == GameManagerF.Step.inGame) )
+		if (canHit && !isStunned && GameControllerF.getManager().state == GameManagerF.Step.inGame)
         {
             Attack();
         }
@@ -181,10 +221,37 @@ public class PlayerControllerF : MonoBehaviour
 
     }
 
+    void initControllers()
+    {
+        switch (jersey)
+        {
+            case GameControllerF.Jersey.player1:
+                positionYControllerSelection = positionsY[3];
+                break;
+            case GameControllerF.Jersey.player2:
+                positionYControllerSelection = positionsY[2];
+                break;
+            case GameControllerF.Jersey.player3:
+                positionYControllerSelection = positionsY[1];
+                break;
+            case GameControllerF.Jersey.player4:
+                positionYControllerSelection = positionsY[0];
+                break;
+            default:
+                positionYControllerSelection = positionXZNeutral.y;
+                break;
+        }
+
+        positionControllerSprite = new Vector3(positionXZNeutral.x, positionYControllerSelection, positionXZNeutral.z);
+        controllerSprite.transform.position = positionControllerSprite;
+        controllerSprite.enabled = true;
+
+    }
+
     /**
      * Initialise les controles du joueur, son équipe et sa couleur
      */
-    void initPlayer()
+    public void initPlayer()
     {
         switch (jersey)
         {
@@ -193,7 +260,6 @@ public class PlayerControllerF : MonoBehaviour
                 vertical = "Vertical1";
                 fire = "Fire1";
                 respawnPosition = GameObject.Find("respawn player 1").transform.position;
-
                 //if (team == GameControllerF.Team.Blu)
                 //    spriteGround.GetComponent<Renderer>().material.color = new Color32(0, 0, 255, 255);
                 //else
@@ -204,7 +270,6 @@ public class PlayerControllerF : MonoBehaviour
                 vertical = "Vertical2";
                 fire = "Fire2";
                 respawnPosition = GameObject.Find("respawn player 2").transform.position;
-
                 //if (team == GameControllerF.Team.Blu)
                 //    spriteGround.GetComponent<Renderer>().material.color = new Color32(0, 128, 255, 255);
                 //else
@@ -215,7 +280,6 @@ public class PlayerControllerF : MonoBehaviour
                 vertical = "Vertical3";
                 fire = "Fire3";
                 respawnPosition = GameObject.Find("respawn player 3").transform.position;
-
                 //if (team == GameControllerF.Team.Blu)
                 //    spriteGround.GetComponent<Renderer>().material.color = new Color32(0, 255, 255, 255);
                 //else
@@ -226,7 +290,6 @@ public class PlayerControllerF : MonoBehaviour
                 vertical = "Vertical4";
                 fire = "Fire4";
                 respawnPosition = GameObject.Find("respawn player 4").transform.position;
-
                 //if (team == GameControllerF.Team.Blu)
                 //    spriteGround.GetComponent<Renderer>().material.color = new Color32(0, 0, 128, 255);
                 //else
@@ -449,13 +512,6 @@ public class PlayerControllerF : MonoBehaviour
                                 animator.SetTrigger("shrink");
                     }
 
-					if( isValidated == false){
-
-						isValidated = true;
-						transform.FindChild("AButtonSprite").GetComponent<SpriteRenderer> ().enabled = false;
-						GameControllerF.getManager().validNextState();
-
-					}
                 }
             }
             else
@@ -595,7 +651,8 @@ public class PlayerControllerF : MonoBehaviour
      */
     public void callStun(float duration)
     {
-        StartCoroutine(Stun(duration));
+        if(duration != 0.0f)
+            StartCoroutine(Stun(duration));
     }
 
     /**
@@ -665,8 +722,18 @@ public class PlayerControllerF : MonoBehaviour
     {
         //clignote et ignore tous le coups
         touchable = false;
+        canHit = false;
         StartCoroutine(Blink());
         yield return new WaitForSeconds(durationInvul);
+        canHit = true;
+        touchable = true;
+    }
+
+    IEnumerator IntouchableSiCoupRecu()
+    {
+        //clignote et ignore tous le coups
+        touchable = false;
+        yield return new WaitForSeconds(durationInvulSiCoupRecu);
         touchable = true;
     }
 
@@ -728,10 +795,129 @@ public class PlayerControllerF : MonoBehaviour
 			if (GetComponentInChildren<Animator> ())
 				GetComponentInChildren<Animator> ().SetBool ("isRunning", false);
 			transform.LookAt(GameControllerF.GetMonster().transform.position);
-		GameControllerF.getManager().validNextState();
+		    GameControllerF.getManager().validNextState(true);
 
 		}
 
 
 	}
+
+    void MoveControllerSelection(bool onRight)
+    {
+
+        List<int> positionsAvailable = new List<int>() {-2, -1, 0, 1, 2};
+
+        int nextPosition = positionControllerSelection;
+
+        for(int i = 1; i < 5; i++) {
+
+            GameObject playerTested = GameControllerF.GetPlayer(i);
+            int positionPlayerTested = playerTested.GetComponent<PlayerControllerF>().positionControllerSelection;
+
+            if (playerTested.tag != this.tag && positionPlayerTested != 0)
+            {
+                if (positionsAvailable.Contains(positionPlayerTested))
+                {
+                    positionsAvailable.Remove(positionPlayerTested);
+                }
+            }
+
+        }
+
+        //foreach (int a in positionsAvailable)
+        //{
+        //    Debug.Log(a);
+        //}
+
+        if (onRight && positionControllerSelection != 2)
+        {
+            int minimalNewPos = 3;
+
+            foreach (int positionA in positionsAvailable)
+            {
+                if (positionA > nextPosition && positionA < minimalNewPos)
+                {
+                    minimalNewPos = positionA;
+                }
+            }
+            nextPosition = minimalNewPos;
+        }
+        else if (!onRight && positionControllerSelection != -2)
+        {
+            int minimalNewPos = -3;
+
+            foreach (int positionA in positionsAvailable)
+            {
+                if (positionA < nextPosition && positionA > minimalNewPos)
+                {
+                    minimalNewPos = positionA;
+                }
+            }
+            nextPosition = minimalNewPos;
+        }
+
+        if (nextPosition < 2 || nextPosition > -2)
+        {
+
+            positionControllerSelection = nextPosition;
+
+            if (GameControllerF.GetPositionsAtSelection().ContainsKey(nextPosition))
+            {
+                Vector3 newVectorPosition = GameControllerF.GetPositionsAtSelection()[nextPosition];
+
+                positionControllerSprite = new Vector3(newVectorPosition.x, positionYControllerSelection, newVectorPosition.z);
+                controllerSprite.transform.position = positionControllerSprite;
+            }
+            else
+            {
+                Debug.Log("Bug on movement selection for player : " + gameObject.name);
+            }
+
+
+        }
+
+
+
+    }
+
+    void ValidInvalidSelection()
+    {
+        if (!isValidated && positionControllerSelection != 0)
+        {
+            bool canValidate = true;
+
+            for (int i = 1; i < 5; i++)
+            {
+
+                GameObject playerTested = GameControllerF.GetPlayer(i);
+                int positionPlayerTested = playerTested.GetComponent<PlayerControllerF>().positionControllerSelection;
+
+                if (playerTested.tag != this.tag && positionPlayerTested == positionControllerSelection)
+                {
+                    canValidate = false;
+                }
+
+            }
+
+            if (canValidate)
+            {
+                isValidated = true;
+                controllerSprite.enabled = false;
+                GameControllerF.getManager().validNextState(true);
+            }
+
+        }
+        else if (isValidated && positionControllerSelection != 0)
+        {
+            isValidated = false;
+            controllerSprite.enabled = true;
+            GameControllerF.getManager().validNextState(false);
+        }
+    }
+
+    public int GetPositionControllerSelection()
+    {
+        return positionControllerSelection;
+    }
+
 }
