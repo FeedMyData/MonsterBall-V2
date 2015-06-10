@@ -177,7 +177,7 @@ MonoBehaviour:
   speedRotationBall: 30
   speedMonster: 13
   angleChangeDirection: 45
-  speedMaxToChooseDirection: 60
+  speedMaxToChooseDirection: 5
   speedDivisionFactor: 8
   spaceBetweenBallPlayer: 3
   fovBall: 110
@@ -185,7 +185,7 @@ MonoBehaviour:
   maxScaleFactor: 3
   areaMagnet: 3
   speedMagnet: 40
-  wrathMax: 100
+  wrathMax: 200
   wrathDribblingValue: 4
   wrathDribblingEachTime: 1
   summon: 2
@@ -788,7 +788,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 6
   m_Type: 0
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: .441176474, b: 0, a: 1}
   m_Intensity: 6
   m_Range: 35
   m_SpotAngle: 30
@@ -3871,7 +3871,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &361055624
 Transform:
   m_ObjectHideFlags: 0
@@ -30557,7 +30557,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1922182311
 Transform:
   m_ObjectHideFlags: 0
@@ -32666,7 +32666,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be088c83819d83046a99eb9fc4edf5ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  state: 4
+  state: 0
   durationInSecond: 180
   ecranFin: {fileID: 1105067374}
   timeBetweenTwoBonus: 0
