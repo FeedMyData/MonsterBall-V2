@@ -139,7 +139,7 @@ public class PlayerControllerF : MonoBehaviour
             }
                 
         }
-        if (GameControllerF.getManager().state == GameManagerF.Step.choosePlayer)
+        if (GameControllerF.getManager().state != GameManagerF.Step.quickTest)
         {
             initControllers();
 
@@ -579,6 +579,7 @@ public class PlayerControllerF : MonoBehaviour
                 player.AddImpact(directionImpact * multiImpact);
                 player.setLoading(false);
                 player.callStun(stunKick);
+                player.callIntouchable();
 
                 // feedbacks player frappe autre player
                 foreach (ParticleSystem ps in GetComponentsInChildren<ParticleSystem>())
@@ -733,11 +734,15 @@ public class PlayerControllerF : MonoBehaviour
         touchable = true;
     }
 
+    public void callIntouchable()
+    {
+        StartCoroutine(IntouchableSiCoupRecu());
+    }
+
     IEnumerator IntouchableSiCoupRecu()
     {
-        //clignote et ignore tous le coups
         touchable = false;
-        yield return new WaitForSeconds(durationInvulSiCoupRecu);
+        yield return new WaitForSeconds(this.durationInvulSiCoupRecu);
         touchable = true;
     }
 
