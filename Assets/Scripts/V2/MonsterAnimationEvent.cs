@@ -7,6 +7,13 @@ public class MonsterAnimationEvent : MonoBehaviour {
 
 		transform.parent.GetComponent<MonsterControllerF> ().StartCharge ();
 
+		// Feedback_Charge
+
+		foreach (ParticleSystem ps in GetComponentsInChildren<ParticleSystem>())
+		{
+			if (ps.name == "Fumee_charge") ps.Play();
+		}
+
 	}
 
 }
