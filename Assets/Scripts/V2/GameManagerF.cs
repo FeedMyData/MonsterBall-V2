@@ -243,12 +243,12 @@ public class GameManagerF : MonoBehaviour {
         Instantiate(GameControllerF.GetCake(),rngPop,Quaternion.identity);
     }
 
-	public void validNextState(bool add)
+	public void validNextState(bool valid)
     {
-        if (add)
-            nextStateValidationRemaining++;
-        else
+        if (valid)
             nextStateValidationRemaining--;
+        else
+            nextStateValidationRemaining++;
 	}
 
 	IEnumerator WaitForKickOff(){
