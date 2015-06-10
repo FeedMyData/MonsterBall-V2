@@ -86,6 +86,26 @@ public class GameManagerF : MonoBehaviour {
 		case Step.choosePlayer :
 			if( nextStateValidationRemaining != 0)
 				break;
+            
+            // changement des jerseys
+            for (int i = 1; i < 5; i++)
+            {
+
+                PlayerControllerF playerScript = GameControllerF.GetPlayer(i).GetComponent<PlayerControllerF>();
+                int positionPlayerTested = playerScript.GetPositionControllerSelection();
+                if (GameControllerF.GetJerseyPositionsAtStart().ContainsKey(positionPlayerTested))
+                {
+                    playerScript.jersey = GameControllerF.GetJerseyPositionsAtStart()[positionPlayerTested];
+                    playerScript.initPlayer();
+                }
+                else
+                {
+                    Debug.Log("Bug on init jerseys for player : " + playerScript.gameObject.name);
+                }
+
+
+            }
+
 			GameObject.Find("Main Camera").GetComponent<Animator>().enabled = true;
 			nextStateValidationRemaining = 4;
 			state = Step.playerPlacement;
@@ -222,10 +242,15 @@ public class GameManagerF : MonoBehaviour {
         rngPop.y = 1.0f;
         Instantiate(GameControllerF.GetCake(),rngPop,Quaternion.identity);
     }
-	public void validNextState(){
 
-		nextStateValidationRemaining--;
+	public void validNextState(bool valid)
+    {
+        if (valid)
+            nextStateValidationRemaining--;
+        else
+            nextStateValidationRemaining++;
 	}
+
 	IEnumerator WaitForKickOff(){
 
 		kickOff = true;
