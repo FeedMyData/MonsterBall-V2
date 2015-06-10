@@ -1,13 +1,15 @@
 fileFormatVersion: 2
-guid: 1ce90e1a1348f334cb7821ac316d03a0
-timeCreated: 1433846326
+guid: c5bb71292914c984ab5b8d2b5e365f31
+timeCreated: 1433949367
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: PadSpritesheete_0
-    21300002: PadSpritesheete_1
-    21300004: PadSpritesheete_2
-    21300006: PadSpritesheete_3
+    21300000: PadSprite_0
+    21300002: PadSprite_1
+    21300004: PadSprite_2
+    21300006: PadSprite_3
+    21300008: PadSprite_4
+    21300010: PadSprite_5
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -53,46 +55,66 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: PadSpritesheete_0
+    - name: PadSprite_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 944
-        height: 662
-      alignment: 4
-      pivot: {x: 0, y: 0}
+        x: 83
+        y: 52
+        width: 945
+        height: 661
+      alignment: 0
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: PadSpritesheete_1
+    - name: PadSprite_1
       rect:
         serializedVersion: 2
-        x: 944
-        y: 0
-        width: 944
-        height: 662
-      alignment: 4
-      pivot: {x: 0, y: 0}
+        x: 1119
+        y: 542
+        width: 172
+        height: 168
+      alignment: 0
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: PadSpritesheete_2
+    - name: PadSprite_2
       rect:
         serializedVersion: 2
-        x: 1888
-        y: 0
-        width: 944
-        height: 662
-      alignment: 4
-      pivot: {x: 0, y: 0}
+        x: 1183
+        y: 278
+        width: 169
+        height: 53
+      alignment: 0
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: PadSpritesheete_3
+    - name: PadSprite_3
       rect:
         serializedVersion: 2
-        x: 2832
-        y: 0
-        width: 944
-        height: 662
-      alignment: 4
-      pivot: {x: 0, y: 0}
+        x: 1183
+        y: 199
+        width: 169
+        height: 53
+      alignment: 0
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PadSprite_4
+      rect:
+        serializedVersion: 2
+        x: 1119
+        y: 36
+        width: 294
+        height: 87
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PadSprite_5
+      rect:
+        serializedVersion: 2
+        x: 1141
+        y: 439
+        width: 123
+        height: 49
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 20, y: 2, z: 16, w: 0}
   spritePackingTag: 
   userData: 
   assetBundleName: 
