@@ -23,11 +23,14 @@
 				<Event Id="3300306736" Name="Public_Intensification"/>
 				<Event Id="3019773176" Name="Public_Normal"/>
 				<Event Id="213475906" Name="SFX_But"/>
+				<Event Id="3607059188" Name="SFX_Buzz_DebutMatch"/>
 				<Event Id="3040534629" Name="SFX_Monstre_Course"/>
+				<Event Id="2968666366" Name="SFX_Monstre_Stop_Course"/>
 				<Event Id="3534940551" Name="SFX_Niveks_ChargeCoup"/>
 				<Event Id="2725983128" Name="SFX_Niveks_CoupFaible"/>
 				<Event Id="2139348868" Name="SFX_Niveks_CoupFort"/>
 				<Event Id="3227735425" Name="SFX_Niveks_Course"/>
+				<Event Id="2297712543" Name="SFX_Niveks_Footsteps"/>
 				<Event Id="2097335990" Name="SFX_Niveks_Woosh"/>
 				<Event Id="4101663895" Name="Transfo_BalleMonstre"/>
 				<Event Id="3206008515" Name="Transfo_MonstreBalle"/>
@@ -41,6 +44,7 @@
 				<Event Id="3702120541" Name="VX_Comment_MONSTERBALL"/>
 				<Event Id="3644313994" Name="VX_Monstre_Course"/>
 				<Event Id="3004362387" Name="VX_Monstre_Crache"/>
+				<Event Id="3428692437" Name="VX_Monstre_DebutCharge"/>
 				<Event Id="4141078286" Name="VX_Niveks_ButGagnant"/>
 				<Event Id="3212082402" Name="VX_Niveks_ButPerdant"/>
 				<Event Id="2143267510" Name="VX_Niveks_Coup"/>
@@ -56,6 +60,10 @@
 				<File Id="3830108" Language="SFX">
 					<ShortName>WilhemScream\VOIX_Niveks_Wilhem_05.wav</ShortName>
 					<Path>SFX\WilhemScream\VOIX_Niveks_Wilhem_05_DDC98EF4.wem</Path>
+				</File>
+				<File Id="3933717" Language="SFX">
+					<ShortName>2-54 Ice Hockey Arena Buzzer 1.wav</ShortName>
+					<Path>SFX\2-54 Ice Hockey Arena Buzzer 1_7FE3A02A.wem</Path>
 				</File>
 				<File Id="6697481" Language="SFX">
 					<ShortName>RecracheJoueur\VOIX_Monstre_CracheJoueur_04.wav</ShortName>
@@ -393,6 +401,10 @@
 					<ShortName>FX_Public_But_04.wav</ShortName>
 					<Path>SFX\FX_Public_But_04_DDC98EF4.wem</Path>
 				</File>
+				<File Id="558047822" Language="SFX">
+					<ShortName>DebutCharge\VX_Monstre_DebutCharge_04.wav</ShortName>
+					<Path>SFX\DebutCharge\VX_Monstre_DebutCharge_04_DDC98EF4.wem</Path>
+				</File>
 				<File Id="562240076" Language="SFX">
 					<ShortName>Remise en jeu\VOIX_Balle_RemiseEnJeu_08.wav</ShortName>
 					<Path>SFX\Remise en jeu\VOIX_Balle_RemiseEnJeu_08_DDC98EF4.wem</Path>
@@ -404,6 +416,10 @@
 				<File Id="569294467" Language="SFX">
 					<ShortName>Poursuivi\VOIX_Niveks_Poursuivi_09.wav</ShortName>
 					<Path>SFX\Poursuivi\VOIX_Niveks_Poursuivi_09_DDC98EF4.wem</Path>
+				</File>
+				<File Id="574318385" Language="SFX">
+					<ShortName>DebutCharge\VX_Monstre_DebutCharge_03.wav</ShortName>
+					<Path>SFX\DebutCharge\VX_Monstre_DebutCharge_03_DDC98EF4.wem</Path>
 				</File>
 				<File Id="576119392" Language="SFX">
 					<ShortName>Poursuivi\VOIX_Niveks_Poursuivi_12.wav</ShortName>
@@ -491,7 +507,7 @@
 				</File>
 				<File Id="716738540" Language="SFX">
 					<ShortName>42 Earthquake Rumble 2.wav</ShortName>
-					<Path>SFX\42 Earthquake Rumble 2_4B681175.wem</Path>
+					<Path>SFX\42 Earthquake Rumble 2_A9D03A81.wem</Path>
 				</File>
 				<File Id="719339364" Language="SFX">
 					<ShortName>Course\VOIX_Balle_Court_05.wav</ShortName>
@@ -679,7 +695,7 @@
 				</File>
 				<File Id="948141587" Language="SFX">
 					<ShortName>4-50 Earthquake Low Rumble Only.wav</ShortName>
-					<Path>SFX\4-50 Earthquake Low Rumble Only_580CAFBA.wem</Path>
+					<Path>SFX\4-50 Earthquake Low Rumble Only_E9AFBBA0.wem</Path>
 				</File>
 				<File Id="951785897" Language="SFX">
 					<ShortName>CoupBalle\VOIX_Niveks_CoupBalle_07.wav</ShortName>
@@ -736,6 +752,10 @@
 				<File Id="1020075026" Language="SFX">
 					<ShortName>Impact\VOIX_Balle_Impact_09.wav</ShortName>
 					<Path>SFX\Impact\VOIX_Balle_Impact_09_D46630B3.wem</Path>
+				</File>
+				<File Id="1032553778" Language="SFX">
+					<ShortName>DebutCharge\VX_Monstre_DebutCharge_01.wav</ShortName>
+					<Path>SFX\DebutCharge\VX_Monstre_DebutCharge_01_DDC98EF4.wem</Path>
 				</File>
 				<File Id="1042651519" Language="SFX">
 					<ShortName>MarqueBut\VOIX_Niveks_But_06.wav</ShortName>

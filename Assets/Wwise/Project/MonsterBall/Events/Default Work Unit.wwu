@@ -432,6 +432,19 @@
 										</Element>
 									</ElementList>
 								</Action>
+								<Action Name="Play" ID="{65ECE941-4DFF-424C-8BC9-AF2E7E7EEA3D}" ShortID="1067774469" Type="Play" Scope="One" Global="false">
+									<ExcludedPlatformList>
+										<Platform>Windows</Platform>
+									</ExcludedPlatformList>
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="0.3"/>
+									</PropertyList>
+									<ElementList>
+										<Element ID="{1E411E9E-29DA-464D-A252-2ACDA6CEA5E2}" Global="false">
+											<ObjectRef Name="BuzzerBut" ID="{7B74B128-6B8E-4D4F-95DF-AD977FF79DE3}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+										</Element>
+									</ElementList>
+								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="SFX_Monstre_Course" ID="{DCB984B7-6D28-4347-BDDB-3960B62DCBDA}"/>
@@ -476,6 +489,18 @@
 							</ChildrenList>
 						</Event>
 						<Event Name="SFX_Monstre_Stop_Course" ID="{CA4A7523-D08C-4466-82D8-B5631F4F2F1D}"/>
+						<Event Name="SFX_Niveks_Footsteps" ID="{7BE59A6D-901A-43BD-B339-3A6787005B87}"/>
+						<Event Name="SFX_Buzz_DebutMatch" ID="{46CA944A-F972-4848-BE5B-A9112FBE01BF}">
+							<ChildrenList>
+								<Action Name="Play" ID="{4E22D4F5-8DFB-4552-9442-D1A6D119EE40}" ShortID="169473839" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{70C1EE4D-6AC1-4D8B-8479-50CB903A28B0}" Global="false">
+											<ObjectRef Name="BuzzerDebutMatc_01" ID="{B9CD5E1C-A7FF-42CD-89B6-9A903A089173}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+										</Element>
+									</ElementList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Menu" ID="{4E501BF3-2765-46A8-8D9E-ACCC86B0F898}" ShortID="1018834299">

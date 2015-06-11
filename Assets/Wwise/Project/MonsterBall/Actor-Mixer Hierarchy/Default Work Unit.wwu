@@ -2979,6 +2979,100 @@
 								<ActiveSource Name="3-18 Hit, Face Face Or Body Punch Impact, Human" ID="{F31A886C-895D-4643-ADB3-97E0F8F23646}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<ActorMixer Name="BuzzHockey" ID="{DA8D58FD-3F70-46F0-ACAF-0519CBB863F0}" ShortID="1056076390">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="BuzzerBut" ID="{7B74B128-6B8E-4D4F-95DF-AD977FF79DE3}" ShortID="985305075" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="2-54 Ice Hockey Arena Buzzer 1" ID="{97320C97-F388-4CA9-8210-7E58B0938E4D}" ShortID="3933717">
+											<PropertyList>
+												<Property Name="TrimBegin" Type="Real64" Value="0.341229408914729"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.24359162360034"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>2-54 Ice Hockey Arena Buzzer 1.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="2-54 Ice Hockey Arena Buzzer 1" ID="{97320C97-F388-4CA9-8210-7E58B0938E4D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="BuzzerDebutMatch" ID="{A4ABE727-B188-4AC5-8021-A4F6BA4259AB}" ShortID="305639917" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="96 Ice Hockey, arena buzzer - single" ID="{011E158F-4120-4C7C-AD08-254ACA8F171D}" ShortID="339618831">
+											<PropertyList>
+												<Property Name="TrimBegin" Type="Real64" Value="0.810024199171486"/>
+												<Property Name="TrimEnd" Type="Real64" Value="3.08098490042012"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>96 Ice Hockey, arena buzzer - single.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="96 Ice Hockey, arena buzzer - single" ID="{011E158F-4120-4C7C-AD08-254ACA8F171D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="BuzzerDebutMatc_01" ID="{B9CD5E1C-A7FF-42CD-89B6-9A903A089173}" ShortID="564654557" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="2-54 Ice Hockey Arena Buzzer 1" ID="{275B4B44-C8F8-4AE2-B006-6D57D36C98F7}" ShortID="807834395">
+											<PropertyList>
+												<Property Name="TrimBegin" Type="Real64" Value="0.341229408914729"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.24359162360034"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>2-54 Ice Hockey Arena Buzzer 1.wav</AudioFile>
+											<ConvertedFileIDList>
+												<File ID="3933717"/>
+											</ConvertedFileIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="2-54 Ice Hockey Arena Buzzer 1" ID="{275B4B44-C8F8-4AE2-B006-6D57D36C98F7}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</ActorMixer>
+						<RandomSequenceContainer Name="Footsteps_Niveks" ID="{0A98D2C9-D9D4-4219-B760-A133F1DFAA65}" ShortID="717598612">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+								</Reference>
+							</ReferenceList>
+						</RandomSequenceContainer>
 					</ChildrenList>
 				</ActorMixer>
 				<ActorMixer Name="Voix" ID="{F502A3E4-B6F3-45C2-B677-F625DAFE42CA}" ShortID="345599444">
