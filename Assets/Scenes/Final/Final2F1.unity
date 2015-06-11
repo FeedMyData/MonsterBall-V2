@@ -177,15 +177,15 @@ MonoBehaviour:
   speedRotationBall: 30
   speedMonster: 13
   angleChangeDirection: 45
-  speedMaxToChooseDirection: 5
+  speedMaxToChooseDirection: 15
   speedDivisionFactor: 8
   spaceBetweenBallPlayer: 3
   fovBall: 110
   angleAvoidPlayer: 45
-  maxScaleFactor: 3
+  maxScaleFactor: 5
   areaMagnet: 3
   speedMagnet: 40
-  wrathMax: 200
+  wrathMax: 125
   wrathDribblingValue: 4
   wrathDribblingEachTime: 1
   summon: 2
@@ -228,7 +228,7 @@ Rigidbody:
   m_GameObject: {fileID: 7400953}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 0
+  m_Drag: 1
   m_AngularDrag: .0500000007
   m_UseGravity: 1
   m_IsKinematic: 0
@@ -994,6 +994,7 @@ MonoBehaviour:
   jersey: 2
   team: 1
   durationInvul: 3
+  durationInvulSiCoupRecu: 1
   isRunning: 0
   coupsDonnes: 0
   coupsRecus: 0
@@ -1004,7 +1005,6 @@ MonoBehaviour:
   marqueBut: 0
   coupsDonnesSurBalle: 0
   isEaten: 0
-  isValidated: 0
   canCount: 1
 --- !u!23 &99554770
 MeshRenderer:
@@ -7259,7 +7259,7 @@ Transform:
   - {fileID: 506199789}
   - {fileID: 1826428378}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
 --- !u!143 &530266179
 CharacterController:
   m_ObjectHideFlags: 0
@@ -7318,6 +7318,7 @@ MonoBehaviour:
   jersey: 3
   team: 0
   durationInvul: 3
+  durationInvulSiCoupRecu: 1
   isRunning: 0
   coupsDonnes: 0
   coupsRecus: 0
@@ -7328,7 +7329,6 @@ MonoBehaviour:
   marqueBut: 0
   coupsDonnesSurBalle: 0
   isEaten: 0
-  isValidated: 0
   canCount: 1
 --- !u!23 &530266182
 MeshRenderer:
@@ -27467,7 +27467,7 @@ Transform:
   m_LocalScale: {x: 1.29999995, y: 1.29999995, z: 1.29999995}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
 --- !u!1 &1592526315
 GameObject:
   m_ObjectHideFlags: 0
@@ -30424,6 +30424,7 @@ MonoBehaviour:
   jersey: 0
   team: 1
   durationInvul: 3
+  durationInvulSiCoupRecu: 1
   isRunning: 0
   coupsDonnes: 0
   coupsRecus: 0
@@ -30434,7 +30435,6 @@ MonoBehaviour:
   marqueBut: 0
   coupsDonnesSurBalle: 0
   isEaten: 0
-  isValidated: 0
   canCount: 1
 --- !u!23 &1895334761
 MeshRenderer:
@@ -32223,6 +32223,7 @@ MonoBehaviour:
   jersey: 1
   team: 0
   durationInvul: 3
+  durationInvulSiCoupRecu: 1
   isRunning: 0
   coupsDonnes: 0
   coupsRecus: 0
@@ -32233,7 +32234,6 @@ MonoBehaviour:
   marqueBut: 0
   coupsDonnesSurBalle: 0
   isEaten: 0
-  isValidated: 0
   canCount: 1
 --- !u!23 &2021973437
 MeshRenderer:
@@ -32666,7 +32666,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be088c83819d83046a99eb9fc4edf5ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  state: 0
+  state: 4
   durationInSecond: 180
   ecranFin: {fileID: 1105067374}
   timeBetweenTwoBonus: 0
