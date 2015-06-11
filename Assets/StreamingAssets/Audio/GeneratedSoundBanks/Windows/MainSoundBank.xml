@@ -24,14 +24,13 @@
 				<Event Id="3019773176" Name="Public_Normal"/>
 				<Event Id="213475906" Name="SFX_But"/>
 				<Event Id="3040534629" Name="SFX_Monstre_Course"/>
-				<Event Id="3816855095" Name="SFX_Niveks_ChargeAttente"/>
 				<Event Id="3534940551" Name="SFX_Niveks_ChargeCoup"/>
 				<Event Id="2725983128" Name="SFX_Niveks_CoupFaible"/>
 				<Event Id="2139348868" Name="SFX_Niveks_CoupFort"/>
 				<Event Id="3227735425" Name="SFX_Niveks_Course"/>
 				<Event Id="2097335990" Name="SFX_Niveks_Woosh"/>
-				<Event Id="4269045922" Name="Tranfo_BalleMonstre"/>
-				<Event Id="1105087730" Name="Tranfo_MonstreBalle"/>
+				<Event Id="4101663895" Name="Transfo_BalleMonstre"/>
+				<Event Id="3206008515" Name="Transfo_MonstreBalle"/>
 				<Event Id="2279719562" Name="VX_Balle_But"/>
 				<Event Id="4270895000" Name="VX_Balle_Cloison"/>
 				<Event Id="43799444" Name="VX_Balle_Coup"/>
@@ -76,7 +75,7 @@
 				</File>
 				<File Id="49112111" Language="SFX">
 					<ShortName>SFX_Balle_pop1_02.wav</ShortName>
-					<Path>SFX\SFX_Balle_pop1_02_79F1A827.wem</Path>
+					<Path>SFX\SFX_Balle_pop1_02_A7FF502A.wem</Path>
 				</File>
 				<File Id="67887004" Language="SFX">
 					<ShortName>Impact\VOIX_Balle_Impact_05.wav</ShortName>
@@ -130,10 +129,6 @@
 					<ShortName>SFX_Electric_Spark-04.wav</ShortName>
 					<Path>SFX\SFX_Electric_Spark-04_102DAD95.wem</Path>
 				</File>
-				<File Id="152866582" Language="SFX">
-					<ShortName>Electronic Gong 6.wav</ShortName>
-					<Path>SFX\Electronic Gong 6_67C200D8.wem</Path>
-				</File>
 				<File Id="153690963" Language="SFX">
 					<ShortName>RecracheJoueur\VOIX_Monstre_CracheJoueur_06.wav</ShortName>
 					<Path>SFX\RecracheJoueur\VOIX_Monstre_CracheJoueur_06_67ED32F2.wem</Path>
@@ -152,19 +147,7 @@
 				</File>
 				<File Id="173668112" Language="SFX">
 					<ShortName>65 Boxen - Gong.wav</ShortName>
-<<<<<<< HEAD
 					<Path>SFX\65 Boxen - Gong_6E1F6751.wem</Path>
-				</File>
-				<File Id="179227306" Language="SFX">
-					<ShortName>Sheetmetal pulling friction - long -.wav</ShortName>
-					<Path>SFX\Sheetmetal pulling friction - long -_1F8CD0C7.wem</Path>
-				</File>
-				<File Id="179527922" Language="SFX">
-					<ShortName>SFX_Niveks_Footsteps.wav</ShortName>
-					<Path>SFX\SFX_Niveks_Footsteps_780D30D4.wem</Path>
-=======
-					<Path>SFX\65 Boxen - Gong_F9BF0AEE.wem</Path>
->>>>>>> origin/master
 				</File>
 				<File Id="182481853" Language="SFX">
 					<ShortName>Grognements\VOIX_Monstre_Grogne_07.wav</ShortName>
@@ -188,7 +171,7 @@
 				</File>
 				<File Id="210585394" Language="SFX">
 					<ShortName>4-83 Dull metal impact (3) _ light metal impact.wav</ShortName>
-					<Path>SFX\4-83 Dull metal impact (3) _ light metal impact_E83D02CF.wem</Path>
+					<Path>SFX\4-83 Dull metal impact (3) _ light metal impact_E9D5DFEB.wem</Path>
 				</File>
 				<File Id="216323634" Language="SFX">
 					<ShortName>Remise en jeu\VOIX_Balle_RemiseEnJeu_03.wav</ShortName>
@@ -200,7 +183,7 @@
 				</File>
 				<File Id="232677423" Language="SFX">
 					<ShortName>4-66 Light body impact (3).wav</ShortName>
-					<Path>SFX\4-66 Light body impact (3)_4D5B2AAD.wem</Path>
+					<Path>SFX\4-66 Light body impact (3)_EC2F4887.wem</Path>
 				</File>
 				<File Id="236322355" Language="SFX">
 					<ShortName>FX_Public_Fin_01.wav</ShortName>
@@ -208,7 +191,7 @@
 				</File>
 				<File Id="245629822" Language="SFX">
 					<ShortName>4-66 Light body impact (3).wav</ShortName>
-					<Path>SFX\4-66 Light body impact (3)_11A133DD.wem</Path>
+					<Path>SFX\4-66 Light body impact (3)_FF6DFC5C.wem</Path>
 				</File>
 				<File Id="246759114" Language="SFX">
 					<ShortName>Remise en jeu\VOIX_Balle_RemiseEnJeu_04.wav</ShortName>
@@ -224,7 +207,7 @@
 				</File>
 				<File Id="265700849" Language="SFX">
 					<ShortName>SFX_Balle_pop1_05.wav</ShortName>
-					<Path>SFX\SFX_Balle_pop1_05_55B8784C.wem</Path>
+					<Path>SFX\SFX_Balle_pop1_05_6890A0B6.wem</Path>
 				</File>
 				<File Id="291728502" Language="SFX">
 					<ShortName>But\VOIX_Balle_But_11.wav</ShortName>
@@ -336,7 +319,7 @@
 				</File>
 				<File Id="464313749" Language="SFX">
 					<ShortName>SFX_Balle_pop1_04.wav</ShortName>
-					<Path>SFX\SFX_Balle_pop1_04_92555733.wem</Path>
+					<Path>SFX\SFX_Balle_pop1_04_90558AAF.wem</Path>
 				</File>
 				<File Id="477423821" Language="SFX">
 					<ShortName>RecracheJoueur\VOIX_Monstre_CracheJoueur_05.wav</ShortName>
@@ -506,6 +489,10 @@
 					<ShortName>Grognements\VOIX_Monstre_Grogne_01.wav</ShortName>
 					<Path>SFX\Grognements\VOIX_Monstre_Grogne_01_DDC98EF4.wem</Path>
 				</File>
+				<File Id="716738540" Language="SFX">
+					<ShortName>42 Earthquake Rumble 2.wav</ShortName>
+					<Path>SFX\42 Earthquake Rumble 2_4B681175.wem</Path>
+				</File>
 				<File Id="719339364" Language="SFX">
 					<ShortName>Course\VOIX_Balle_Court_05.wav</ShortName>
 					<Path>SFX\Course\VOIX_Balle_Court_05_DDC98EF4.wem</Path>
@@ -570,6 +557,10 @@
 					<ShortName>Poursuivi\VOIX_Niveks_Poursuivi_08.wav</ShortName>
 					<Path>SFX\Poursuivi\VOIX_Niveks_Poursuivi_08_DDC98EF4.wem</Path>
 				</File>
+				<File Id="805847338" Language="SFX">
+					<ShortName>VOIX_Balle_TransfoBalleMonstre_03TEMP.wav</ShortName>
+					<Path>SFX\VOIX_Balle_TransfoBalleMonstre_03TEMP_50622C7F.wem</Path>
+				</File>
 				<File Id="810834730" Language="SFX">
 					<ShortName>SFX_Electric_Spark-05.wav</ShortName>
 					<Path>SFX\SFX_Electric_Spark-05_7A8FFC86.wem</Path>
@@ -584,11 +575,11 @@
 				</File>
 				<File Id="819132964" Language="SFX">
 					<ShortName>SFX_Balle_pop1_03.wav</ShortName>
-					<Path>SFX\SFX_Balle_pop1_03_330EFED4.wem</Path>
+					<Path>SFX\SFX_Balle_pop1_03_E0BED0E1.wem</Path>
 				</File>
 				<File Id="824756831" Language="SFX">
 					<ShortName>SFX_Balle_pop1_01.wav</ShortName>
-					<Path>SFX\SFX_Balle_pop1_01_7A242312.wem</Path>
+					<Path>SFX\SFX_Balle_pop1_01_D2564213.wem</Path>
 				</File>
 				<File Id="832210370" Language="SFX">
 					<ShortName>Poursuivi\VOIX_Niveks_Poursuivi_10.wav</ShortName>
@@ -652,7 +643,7 @@
 				</File>
 				<File Id="901619924" Language="SFX">
 					<ShortName>4-66 Light body impact (3).wav</ShortName>
-					<Path>SFX\4-66 Light body impact (3)_6C50A894.wem</Path>
+					<Path>SFX\4-66 Light body impact (3)_C835CE71.wem</Path>
 				</File>
 				<File Id="905327798" Language="SFX">
 					<ShortName>CoupBalle\VOIX_Niveks_CoupBalle_02.wav</ShortName>
@@ -686,6 +677,10 @@
 					<ShortName>SFX_Coup_Charge_01.wav</ShortName>
 					<Path>SFX\SFX_Coup_Charge_01_0D77B0A7.wem</Path>
 				</File>
+				<File Id="948141587" Language="SFX">
+					<ShortName>4-50 Earthquake Low Rumble Only.wav</ShortName>
+					<Path>SFX\4-50 Earthquake Low Rumble Only_580CAFBA.wem</Path>
+				</File>
 				<File Id="951785897" Language="SFX">
 					<ShortName>CoupBalle\VOIX_Niveks_CoupBalle_07.wav</ShortName>
 					<Path>SFX\CoupBalle\VOIX_Niveks_CoupBalle_07_DDC98EF4.wem</Path>
@@ -693,10 +688,6 @@
 				<File Id="960409890" Language="SFX">
 					<ShortName>Course\VOIX_Balle_Court_01.wav</ShortName>
 					<Path>SFX\Course\VOIX_Balle_Court_01_DDC98EF4.wem</Path>
-				</File>
-				<File Id="965121323" Language="SFX">
-					<ShortName>Sheetmetal pulling friction - long -.wav</ShortName>
-					<Path>SFX\Sheetmetal pulling friction - long -_A40B6C15.wem</Path>
 				</File>
 				<File Id="971967762" Language="SFX">
 					<ShortName>CoupRecu\VOIX_Niveks_CoupRecu_01.wav</ShortName>

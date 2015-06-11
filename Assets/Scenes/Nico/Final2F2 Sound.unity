@@ -185,11 +185,11 @@ MonoBehaviour:
   maxScaleFactor: 5
   areaMagnet: 3
   speedMagnet: 40
-  wrathMax: 125
+  wrathMax: 5
   wrathDribblingValue: 4
   wrathDribblingEachTime: 1
   summon: 2
-  durationFirstPart: 15
+  durationFirstPart: 5
   durationSecondPart: 5
   monsterScale: 6
   monsterMass: 20
@@ -989,6 +989,7 @@ MonoBehaviour:
   rangeShoot: 6
   angleHoming: 50
   multiImpact: 1
+  durationBetweenTwoShoot: 1
   stunKick: 0
   stunGoal: 0
   jersey: 2
@@ -7313,6 +7314,7 @@ MonoBehaviour:
   rangeShoot: 6
   angleHoming: 50
   multiImpact: 1
+  durationBetweenTwoShoot: 1
   stunKick: 0
   stunGoal: 0
   jersey: 3
@@ -30419,6 +30421,7 @@ MonoBehaviour:
   rangeShoot: 6
   angleHoming: 50
   multiImpact: 1
+  durationBetweenTwoShoot: 1
   stunKick: 0
   stunGoal: 0
   jersey: 0
@@ -32218,6 +32221,7 @@ MonoBehaviour:
   rangeShoot: 6
   angleHoming: 50
   multiImpact: 1
+  durationBetweenTwoShoot: 1
   stunKick: 0
   stunGoal: 0
   jersey: 1
