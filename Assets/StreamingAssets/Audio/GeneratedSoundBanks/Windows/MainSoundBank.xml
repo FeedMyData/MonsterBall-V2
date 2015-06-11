@@ -45,6 +45,7 @@
 				<Event Id="3644313994" Name="VX_Monstre_Course"/>
 				<Event Id="3004362387" Name="VX_Monstre_Crache"/>
 				<Event Id="3428692437" Name="VX_Monstre_DebutCharge"/>
+				<Event Id="867415767" Name="VX_Nivek_ImpactBut"/>
 				<Event Id="4141078286" Name="VX_Niveks_ButGagnant"/>
 				<Event Id="3212082402" Name="VX_Niveks_ButPerdant"/>
 				<Event Id="2143267510" Name="VX_Niveks_Coup"/>
@@ -52,7 +53,6 @@
 				<Event Id="1123955361" Name="VX_Niveks_FinMatchGagnant"/>
 				<Event Id="3790591353" Name="VX_Niveks_FinMatchPerdant"/>
 				<Event Id="3955264645" Name="VX_Niveks_Frappe"/>
-				<Event Id="4235626026" Name="VX_Niveks_ImpactBut"/>
 				<Event Id="3251995241" Name="Vx_Niveks_Poursuivi"/>
 				<Event Id="3784437905" Name="Vx_Niveks_Wilhem"/>
 			</IncludedEvents>

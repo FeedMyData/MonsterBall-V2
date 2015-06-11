@@ -32,7 +32,7 @@
 						<ObjectRef Name="Public_But" ID="{068D186E-6A64-4DF4-AF0A-772AC4142926}" WorkUnitID="{D899008C-EE7F-4475-814E-BB3DC86CD141}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="VX_Balle_Cloison" ID="{C3588374-E009-4A41-A379-7893E45A61CF}" WorkUnitID="{D899008C-EE7F-4475-814E-BB3DC86CD141}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Music_Tableau" ID="{0F470E75-820C-470C-B9CD-28EA691D3C08}" WorkUnitID="{D899008C-EE7F-4475-814E-BB3DC86CD141}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="VX_Niveks_ImpactBut" ID="{5568DF7A-41C3-4DED-8E1E-7E0D4BBC92A5}" WorkUnitID="{D899008C-EE7F-4475-814E-BB3DC86CD141}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="VX_Nivek_ImpactBut" ID="{5568DF7A-41C3-4DED-8E1E-7E0D4BBC92A5}" WorkUnitID="{D899008C-EE7F-4475-814E-BB3DC86CD141}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="VX_Niveks_Frappe" ID="{EB02EC7E-8C6D-4630-BCC6-1FCF78070F34}" WorkUnitID="{D899008C-EE7F-4475-814E-BB3DC86CD141}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="VX_Balle_Course" ID="{78E69E8A-6B17-4E01-8E22-CD08CE6BC6FC}" WorkUnitID="{D899008C-EE7F-4475-814E-BB3DC86CD141}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Public_Normal" ID="{51F24495-953D-43F8-B9CE-000C3412ECD4}" WorkUnitID="{D899008C-EE7F-4475-814E-BB3DC86CD141}" Filter="7" Origin="Manual"/>

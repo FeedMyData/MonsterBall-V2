@@ -124,7 +124,7 @@
 										</Action>
 									</ChildrenList>
 								</Event>
-								<Event Name="VX_Niveks_ImpactBut" ID="{5568DF7A-41C3-4DED-8E1E-7E0D4BBC92A5}">
+								<Event Name="VX_Nivek_ImpactBut" ID="{5568DF7A-41C3-4DED-8E1E-7E0D4BBC92A5}">
 									<ChildrenList>
 										<Action Name="Play" ID="{7089B01B-AB60-4681-BF7D-5096661C9873}" ShortID="987430821" Type="Play" Scope="One" Global="false">
 											<ElementList>
@@ -134,6 +134,9 @@
 											</ElementList>
 										</Action>
 										<Action Name="Play" ID="{20CCCFA1-DBD3-4DA8-80D7-FF56E6F5E0BC}" ShortID="49173274" Type="Play" Scope="One" Global="false">
+											<ExcludedPlatformList>
+												<Platform>Windows</Platform>
+											</ExcludedPlatformList>
 											<ElementList>
 												<Element ID="{CCC9DDAE-F501-4BEB-B06E-FF218E5912C2}" Global="false">
 													<ObjectRef Name="Electric_Spark_Light" ID="{A8B4F66E-1865-4F67-8DD6-FCD468CD1F31}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
@@ -232,6 +235,7 @@
 									<ChildrenList>
 										<Action Name="Play" ID="{7A0F5C43-789D-44E3-A049-6257BDF1F7C3}" ShortID="754557599" Type="Play" Scope="One" Global="false">
 											<PropertyList>
+												<Property Name="Delay" Type="Real64" Value="0.2"/>
 												<Property Name="Probability" Type="Real64" Value="61"/>
 											</PropertyList>
 											<ElementList>

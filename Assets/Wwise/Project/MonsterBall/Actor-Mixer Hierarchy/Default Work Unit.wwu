@@ -2478,10 +2478,15 @@
 							<ChildrenList>
 								<Sound Name="SFX_Balle_ImpactMur" ID="{989FAB59-77CB-4F22-83B3-68EF23961F8D}" ShortID="466109121" Type="SoundFX">
 									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>-200</Value>
+											</ValueList>
+										</Property>
 										<Property Name="PositioningType" Type="int16" Value="1"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-8</Value>
+												<Value>-16</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -2510,7 +2515,7 @@
 									<PropertyList>
 										<Property Name="Pitch" Type="int32">
 											<ValueList>
-												<Value>-530</Value>
+												<Value>-1110</Value>
 											</ValueList>
 											<ModifierList>
 												<ModifierInfo>
@@ -2526,7 +2531,7 @@
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-19</Value>
+												<Value>-28</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -5683,11 +5688,6 @@
 								<RandomSequenceContainer Name="Impact" ID="{0F12D014-D3DF-468F-AA60-2C1DB2BD44CA}" ShortID="951000194">
 									<PropertyList>
 										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="10"/>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>-14</Value>
-											</ValueList>
-										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
