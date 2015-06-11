@@ -42,6 +42,8 @@ public class PlayerControllerF : MonoBehaviour
     public float angleHoming = 30.0f;
 
     public float multiImpact = 3.0f;
+    public float durationBetweenTwoShoot = 1.0f;
+    private bool waitBeforeNextShoot = false;
 
     //private Vector3 posDash = Vector3.zero;
     //private bool dash = false;
@@ -202,7 +204,7 @@ public class PlayerControllerF : MonoBehaviour
             }
         }
 	
-		if (canHit && !isStunned && GameControllerF.getManager().state == GameManagerF.Step.inGame)
+		if (canHit && !isStunned && GameControllerF.getManager().state == GameManagerF.Step.inGame && !waitBeforeNextShoot)
         {
             Attack();
         }
@@ -405,6 +407,8 @@ public class PlayerControllerF : MonoBehaviour
         if (Input.GetButtonUp(fire))
         {
             //float valueCirclePlayer = GameControllerF.InCircle(gameObject);
+            waitBeforeNextShoot = true;
+            StartCoroutine(WaitBeforeNextShoot());
 
             if (loading) // && valueCirclePlayer<0.70f
             {
@@ -537,6 +541,12 @@ public class PlayerControllerF : MonoBehaviour
                 //relache la pression et casse l'anim
             }
         }
+    }
+
+    IEnumerator WaitBeforeNextShoot()
+    {
+        yield return new WaitForSeconds(durationBetweenTwoShoot);
+        waitBeforeNextShoot = false;
     }
 
     public void FlyAway()
