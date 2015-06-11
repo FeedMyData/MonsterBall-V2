@@ -496,6 +496,7 @@ public class PlayerControllerF : MonoBehaviour
             //float valueCirclePlayer = GameControllerF.InCircle(gameObject);
             waitBeforeNextShoot = true;
             StartCoroutine(WaitBeforeNextShoot());
+            
 
             if (loading) // && valueCirclePlayer<0.70f
             {

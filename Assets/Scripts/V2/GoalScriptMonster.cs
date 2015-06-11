@@ -70,6 +70,8 @@ public class GoalScriptMonster : MonoBehaviour {
             if (player.IsProjectionInGoal() && player.canCount)
             {
                 //feedbacks goal joueur
+                player.GetComponent<SoundManager>().PlayEvent("SFX_But",player.gameObject);
+                player.GetComponent<SoundManager>().PlayEvent("Public_But", Camera.main.gameObject);
                 Camera.main.GetComponent<CameraShake>().shake(1.0f, 1.0f, 1.0f);
                 guiEffectsScript.flashGoal(tag);
                 commentariesScript.WriteCommentary(tag, "monsterG");

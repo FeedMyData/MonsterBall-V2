@@ -117,6 +117,8 @@ public class MonsterControllerF : MonoBehaviour {
     private GameObject targetCharge;
     private bool moveCharge = false;
     private bool canEat = true;
+    private bool dontPlayRunMonster = true;
+    private Vector3 previousPosition = Vector3.zero;
     
     public Vector3 respawnPositionBall;
 
@@ -366,8 +368,28 @@ public class MonsterControllerF : MonoBehaviour {
         return Physics.Raycast(transform.position,Vector3.down,transform.localScale.y/1.5f);
     }
 
+    void ManageSoundRunMonster(Vector3 actualPosition)
+    {
+        Debug.Log(Vector3.Distance(previousPosition,actualPosition));
+        if (GetActualSpeed() < 0.1f)
+        {
+            sound.PlayEvent("SFX_Monstre_Stop_Course",gameObject);
+            dontPlayRunMonster = true;
+        }
+        if (dontPlayRunMonster && GetActualSpeed() > 0.5f)
+        {
+            sound.PlayEvent("SFX_Monstre_Course", gameObject);
+            dontPlayRunMonster = false;
+        }
+
+        previousPosition = actualPosition;
+    }
+
     void MoveMonster()
     {
+
+        ManageSoundRunMonster(transform.position);
+
         Vector3 rotationToGoal = Vector3.zero;
         body.velocity = Vector3.zero;
 
@@ -664,6 +686,7 @@ public class MonsterControllerF : MonoBehaviour {
         yield return new WaitForSeconds(durationFirstPart);
             if (!monsterModeCharge)
             {
+                sound.PlayEvent("VX_Monstre_DebutCharge",gameObject);
                 targetCharge = GameControllerF.GetTargetCharge();
                 Debug.Log(targetCharge.name);
                 //actualCycleMonster++;

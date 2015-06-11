@@ -66,15 +66,17 @@ public class GoalScriptF : MonoBehaviour {
                     {
                         if ((monster.GetStriker().team == GameControllerF.Team.Blu && tag == "TeamBlu") || (monster.GetStriker().team == GameControllerF.Team.Red && tag == "TeamRed"))
                         {
-                            other.gameObject.GetComponent<SoundManager>().PlayEvent("VX_Niveks_ButGagnant", striker.gameObject);
+
+                            other.gameObject.GetComponent<SoundManager>().PlayEvent("VX_Niveks_ButPerdant", striker.gameObject);
+                            other.gameObject.GetComponent<SoundManager>().PlayEvent("Public_Bouh", Camera.main.gameObject);
 
                             goalInHisTeam = true;
 
                         }
                         else
                         {
-                            other.gameObject.GetComponent<SoundManager>().PlayEvent("VX_Niveks_ButPerdant", striker.gameObject);
-                            other.gameObject.GetComponent<SoundManager>().PlayEvent("Public_Boooh",Camera.main.gameObject);
+                            other.gameObject.GetComponent<SoundManager>().PlayEvent("VX_Niveks_ButGagnant", striker.gameObject);
+                            other.gameObject.GetComponent<SoundManager>().PlayEvent("Public_But", Camera.main.gameObject);
                         }
 
                         striker.marqueBut++;
