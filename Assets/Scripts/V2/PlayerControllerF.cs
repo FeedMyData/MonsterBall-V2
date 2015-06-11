@@ -409,6 +409,11 @@ public class PlayerControllerF : MonoBehaviour
                         animator.SetTrigger("grow");
                 }
 			}
+
+			//Feedback
+			foreach (ParticleSystem ps in GetComponentsInChildren<ParticleSystem>()) {
+				if (ps.name == "Particles_charge")ps.Play ();
+			}
         }
 
         if (chargingShoot < 1)
@@ -425,8 +430,30 @@ public class PlayerControllerF : MonoBehaviour
             {
                 sound.PlayEvent("SFX_Niveks_ChargeAttente",gameObject);
                 sound.StopEvent("SFX_Niveks_ChargeCoup", gameObject,0);
-            }
-        }
+			}
+
+			// Feedback
+			if (power >= powerMax)
+			{
+				foreach (ParticleSystem ps in GetComponentsInChildren<ParticleSystem>()) {
+					if (ps.name == "Particles_charge")ps.startColor = new Color(1,0,1);
+				}
+			}
+
+			if (power < powerMax && team == GameControllerF.Team.Red)
+			{
+				foreach (ParticleSystem ps in GetComponentsInChildren<ParticleSystem>()) {
+					if (ps.name == "Particles_charge")ps.startColor = Color.red;
+				}
+			}
+			if (power < powerMax && team == GameControllerF.Team.Blu)
+			{
+				foreach (ParticleSystem ps in GetComponentsInChildren<ParticleSystem>()) {
+					if (ps.name == "Particles_charge")ps.startColor = Color.blue;
+				}
+			}
+		}
+        
 
         if (Input.GetButtonUp(fire))
         {
@@ -443,6 +470,11 @@ public class PlayerControllerF : MonoBehaviour
 
                     sound.StopEvent("SFX_Niveks_ChargeAttente", gameObject, 50);
                     sound.StopEvent("SFX_Niveks_ChargeCoup", gameObject, 50);
+
+					//Feedback
+						foreach (ParticleSystem ps in GetComponentsInChildren<ParticleSystem>()) {
+							if (ps.name == "Particles_charge")ps.Stop();
+					}
                 }
                 loading = false;
                 if (bonus != null)
