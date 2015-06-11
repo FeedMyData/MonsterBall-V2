@@ -350,6 +350,9 @@
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
 						</Reference>
+						<Reference Name="Effect0" PluginName="iZotope Trash Dynamics Mono" CompanyID="259" PluginID="5" PluginType="3">
+							<ObjectRef Name="Bigger_Boom" ID="{4D23DF35-E058-4705-9D8D-2DBDC605B8B3}" WorkUnitID="{70F46671-A828-4029-A11A-36BB09D872B9}"/>
+						</Reference>
 						<Reference Name="OutputBus">
 							<ObjectRef Name="SFX" ID="{98BA6610-4B70-4EFF-A353-4A61C6BE1A24}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
 						</Reference>
@@ -543,7 +546,7 @@
 												</Property>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>-9</Value>
+														<Value>7</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -576,8 +579,9 @@
 													<ChildrenList>
 														<AudioFileSource Name="4-66 Light body impact (3)" ID="{F3CC000B-9736-4C25-9331-7F29300260E5}" ShortID="245629822">
 															<PropertyList>
-																<Property Name="TrimBegin" Type="Real64" Value="0.310787247885491"/>
-																<Property Name="TrimEnd" Type="Real64" Value="0.621574495770981"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.17391011053316"/>
+																<Property Name="TrimBegin" Type="Real64" Value="1.01966840052016E-02"/>
+																<Property Name="TrimEnd" Type="Real64" Value="0.366657395640942"/>
 															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>4-66 Light body impact (3).wav</AudioFile>
@@ -610,8 +614,9 @@
 													<ChildrenList>
 														<AudioFileSource Name="4-66 Light body impact (3)" ID="{3072F8C9-99AE-4C40-AF35-A1E717DB5728}" ShortID="901619924">
 															<PropertyList>
-																<Property Name="TrimBegin" Type="Real64" Value="4.05503361526784"/>
-																<Property Name="TrimEnd" Type="Real64" Value="4.42501843417914"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.078174577373212"/>
+																<Property Name="TrimBegin" Type="Real64" Value="9.06371911573472E-03"/>
+																<Property Name="TrimEnd" Type="Real64" Value="0.268512678803641"/>
 															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>4-66 Light body impact (3).wav</AudioFile>
@@ -641,8 +646,9 @@
 													<ChildrenList>
 														<AudioFileSource Name="4-66 Light body impact (3)" ID="{F91FFF57-EB1C-4D2D-8499-31209E7B8696}" ShortID="232677423">
 															<PropertyList>
-																<Property Name="TrimBegin" Type="Real64" Value="7.858477553676"/>
-																<Property Name="TrimEnd" Type="Real64" Value="8.05086965950987"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.176176040312094"/>
+																<Property Name="TrimBegin" Type="Real64" Value="1.01966840052016E-02"/>
+																<Property Name="TrimEnd" Type="Real64" Value="0.309299414824447"/>
 															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>4-66 Light body impact (3).wav</AudioFile>
@@ -901,11 +907,6 @@
 											</ModifierList>
 										</Property>
 										<Property Name="PositioningType" Type="int16" Value="1"/>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>-6</Value>
-											</ValueList>
-										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -2861,7 +2862,11 @@
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="Niveks_Footsteps" ID="{C2596DA6-61C0-47E4-B677-F1843296E3AC}" ShortID="146980866">
 							<PropertyList>
+								<Property Name="OverrideEffect" Type="bool" Value="True"/>
 								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-730</Value>
+									</ValueList>
 									<ModifierList>
 										<ModifierInfo>
 											<Modifier Name="" ID="{0533C5B0-B694-437B-A477-1DB4A61905A9}">
@@ -2874,10 +2879,18 @@
 										</ModifierInfo>
 									</ModifierList>
 								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-7</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+								</Reference>
+								<Reference Name="Effect0" PluginName="iZotope Trash Dynamics Mono" CompanyID="259" PluginID="5" PluginType="3">
+									<ObjectRef Name="Bigger_Boom" ID="{4D23DF35-E058-4705-9D8D-2DBDC605B8B3}" WorkUnitID="{70F46671-A828-4029-A11A-36BB09D872B9}"/>
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
@@ -3188,6 +3201,241 @@
 								</Sound>
 							</ChildrenList>
 						</ActorMixer>
+						<BlendContainer Name="ChargeAttente" ID="{C67DCA7A-7880-45A8-8747-865E7E480494}" ShortID="963662320">
+							<PropertyList>
+								<Property Name="PositioningType" Type="int16" Value="1"/>
+								<Property Name="UserAuxSendVolume0" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>11</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{98BA6610-4B70-4EFF-A353-4A61C6BE1A24}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="MagneticField" ID="{D6BAE85C-27B3-40E4-81D1-17BF6AB8F07A}" ShortID="3566151" Type="SoundFX">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>280</Value>
+											</ValueList>
+										</Property>
+										<Property Name="PositioningType" Type="int16" Value="1"/>
+										<Property Name="UserAuxSendVolume0" Type="Real64">
+											<ValueList>
+												<Value>-3</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="SFX" ID="{98BA6610-4B70-4EFF-A353-4A61C6BE1A24}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="MagneticField HI054101" ID="{3A13ED79-D5B4-4436-8738-9677509557AA}" ShortID="1013960400">
+											<PropertyList>
+												<Property Name="CrossfadeDuration" Type="Real64" Value="186"/>
+												<Property Name="LoopBegin" Type="Real64" Value="1.22520987588794"/>
+												<Property Name="LoopEnd" Type="Real64" Value="4.94700683220839"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="1.00147589855188"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>MagneticField HI054101.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="MagneticField HI054101" ID="{3A13ED79-D5B4-4436-8738-9677509557AA}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="MagneticWave" ID="{E97B96BC-8CD4-41E8-9550-3D477C097117}" ShortID="373521685" Type="SoundFX">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="PositioningType" Type="int16" Value="1"/>
+										<Property Name="UserAuxSendVolume0" Type="Real64">
+											<ValueList>
+												<Value>-3</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-7</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="SFX" ID="{98BA6610-4B70-4EFF-A353-4A61C6BE1A24}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="1-22 Machine_Magnetic Waves #1" ID="{2E2D25CE-12E3-48D2-9A7B-8AF8BE1584E4}" ShortID="1010494407">
+											<PropertyList>
+												<Property Name="CrossfadeDuration" Type="Real64" Value="250"/>
+												<Property Name="LoopBegin" Type="Real64" Value="0.656725538069584"/>
+												<Property Name="LoopEnd" Type="Real64" Value="4.97037538812664"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>1-22 Machine_Magnetic Waves #1.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="1-22 Machine_Magnetic Waves #1" ID="{2E2D25CE-12E3-48D2-9A7B-8AF8BE1584E4}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Attente" ID="{36C66ED0-56F3-4D9D-BA3E-99589A05B190}" ShortID="801267213" Type="SoundFX">
+									<ExcludedPlatformList>
+										<Platform>Windows</Platform>
+									</ExcludedPlatformList>
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>-1340</Value>
+											</ValueList>
+										</Property>
+										<Property Name="PositioningType" Type="int16" Value="1"/>
+										<Property Name="UserAuxSendVolume0" Type="Real64">
+											<ValueList>
+												<Value>-3</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-9</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="SFX" ID="{98BA6610-4B70-4EFF-A353-4A61C6BE1A24}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="WooShazam! d" ID="{090CFA12-E308-47EE-A85E-C3B1D78CC93B}" ShortID="965111370">
+											<PropertyList>
+												<Property Name="CrossfadeDuration" Type="Real64" Value="49"/>
+												<Property Name="LoopBegin" Type="Real64" Value="8.29281534460338E-02"/>
+												<Property Name="LoopEnd" Type="Real64" Value="0.68958708550065"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>WooShazam! d.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="WooShazam! d" ID="{090CFA12-E308-47EE-A85E-C3B1D78CC93B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</BlendContainer>
+						<BlendContainer Name="Monstre_Course" ID="{E3EBDF15-0CE3-4190-A910-9C2639FF5E41}" ShortID="700734323">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Monstre_Course" ID="{3EF956D7-6F83-4DC7-9119-7BFB8105ABD5}" ShortID="345271797" Type="SoundFX">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="PositioningType" Type="int16" Value="1"/>
+										<Property Name="UserAuxSendVolume0" Type="Real64">
+											<ValueList>
+												<Value>-3</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="SFX" ID="{98BA6610-4B70-4EFF-A353-4A61C6BE1A24}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Sheetmetal pulling friction - long -" ID="{05210E7D-304A-4586-B929-6E3E799191D0}" ShortID="179227306">
+											<PropertyList>
+												<Property Name="CrossfadeDuration" Type="Real64" Value="145"/>
+												<Property Name="LoopBegin" Type="Real64" Value="0.480212938881665"/>
+												<Property Name="LoopEnd" Type="Real64" Value="2.01689434330299"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.253203185955787"/>
+												<Property Name="TrimEnd" Type="Real64" Value="2.3399466840052"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Sheetmetal pulling friction - long -.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Sheetmetal pulling friction - long -" ID="{05210E7D-304A-4586-B929-6E3E799191D0}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Monstre_Course_01" ID="{6FF4B925-70AA-4E32-9CFB-2BE219006B12}" ShortID="296098411" Type="SoundFX">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="PositioningType" Type="int16" Value="1"/>
+										<Property Name="UserAuxSendVolume0" Type="Real64">
+											<ValueList>
+												<Value>-3</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="SFX" ID="{98BA6610-4B70-4EFF-A353-4A61C6BE1A24}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Sheetmetal pulling friction - long -" ID="{D6386C5B-2B0E-46D4-B698-323DC6CA684D}" ShortID="965121323">
+											<PropertyList>
+												<Property Name="CrossfadeDuration" Type="Real64" Value="163"/>
+												<Property Name="LoopBegin" Type="Real64" Value="8.00645936280884"/>
+												<Property Name="LoopEnd" Type="Real64" Value="9.82253738621586"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="7.63975130039011"/>
+												<Property Name="TrimEnd" Type="Real64" Value="10.1281274382315"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Sheetmetal pulling friction - long -.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Sheetmetal pulling friction - long -" ID="{D6386C5B-2B0E-46D4-B698-323DC6CA684D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</BlendContainer>
 					</ChildrenList>
 				</ActorMixer>
 				<ActorMixer Name="Voix" ID="{F502A3E4-B6F3-45C2-B677-F625DAFE42CA}" ShortID="345599444">
@@ -3198,6 +3446,9 @@
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
 						</Reference>
+						<Reference Name="Effect0" PluginName="iZotope Trash Dynamics Mono" CompanyID="259" PluginID="5" PluginType="3">
+							<ObjectRef Name="Bigger_Boom" ID="{4D23DF35-E058-4705-9D8D-2DBDC605B8B3}" WorkUnitID="{70F46671-A828-4029-A11A-36BB09D872B9}"/>
+						</Reference>
 						<Reference Name="OutputBus">
 							<ObjectRef Name="Voix" ID="{6F7CCEB0-4338-419F-A5F7-1BADCFA7CC6B}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
 						</Reference>
@@ -3205,6 +3456,11 @@
 					<ChildrenList>
 						<ActorMixer Name="Niveks" ID="{26DECD25-014F-4D5D-85D5-811C68FE16F4}" ShortID="210293336">
 							<PropertyList>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>24</Value>
+									</ValueList>
+								</Property>
 								<Property Name="OverrideOutput" Type="bool" Value="True"/>
 							</PropertyList>
 							<ReferenceList>

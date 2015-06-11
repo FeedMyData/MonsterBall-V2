@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PluginInfo Project="MonsterBall" Platform="Windows" Motion="false">
 	<Plugins>
+		<Plugin Name="iZotope Trash Dynamics Mono" ID="331827"/>
 		<Plugin Name="McDSP ML1" ID="6754307"/>
 		<Plugin Name="Wwise Delay" ID="6946819"/>
 		<Plugin Name="Wwise Matrix Reverb" ID="7536643"/>

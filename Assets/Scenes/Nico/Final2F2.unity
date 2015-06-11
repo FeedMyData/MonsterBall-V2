@@ -181,7 +181,7 @@ MonoBehaviour:
   angleAvoidPlayer: 45
   areaMagnet: 3
   speedMagnet: 40
-  wrathMax: 100
+  wrathMax: 10
   wrathDribblingValue: 1
   wrathDribblingEachTime: .5
   summon: 2
@@ -192,7 +192,10 @@ MonoBehaviour:
   safeTransform: .699999988
   nbCycleMonster: 3
   durationLoadingCharge: 2
-  durationInvul: 2
+  durationUpSpeedCharge: 8
+  minSpeedCharge: 2
+  maxSpeedCharge: 25
+  durationInvul: 9
   coefColliderMonster: .699999988
   durationEatingPlayer: 1
   skinBall: {fileID: 615020600}
@@ -205,6 +208,7 @@ MonoBehaviour:
   distanceSoundChase: 5
   rngSoundChase: 1
   timeBetweenTwoChaseSound: 5
+  respawnPositionBall: {x: 0, y: 5, z: 0}
 --- !u!54 &7400958
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -948,7 +952,7 @@ MonoBehaviour:
   stunGoal: 0
   jersey: 2
   team: 1
-  durationInvul: 1.5
+  durationInvul: 3
   coupsDonnes: 0
   coupsRecus: 0
   coupsCharges: 0
@@ -956,6 +960,7 @@ MonoBehaviour:
   sautBut: 0
   coupsVide: 0
   marqueBut: 0
+  isEaten: 0
 --- !u!23 &99554770
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3054,6 +3059,7 @@ GameObject:
   - 4: {fileID: 275250415}
   - 95: {fileID: 275250417}
   - 114: {fileID: 275250416}
+  - 114: {fileID: 275250418}
   m_Layer: 0
   m_Name: Nivek
   m_TagString: Untagged
@@ -3068,7 +3074,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 275250414}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .146666527, y: -.860000014, z: -.0333334617}
+  m_LocalPosition: {x: .146666527, y: -1, z: -.0333334617}
   m_LocalScale: {x: .666666687, y: .666666687, z: .666666687}
   m_Children:
   - {fileID: 175363495}
@@ -3106,6 +3112,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &275250418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 275250414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1688b88a82922d749b9283ca90118fb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &281415427
 GameObject:
   m_ObjectHideFlags: 0
@@ -3549,6 +3566,33 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 319266653}
   m_Mesh: {fileID: 4300000, guid: 338757517445b6a4f91542da55d7c357, type: 3}
+--- !u!1 &325498357
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 325498358}
+  m_Layer: 0
+  m_Name: respawn player 4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &325498358
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 325498357}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -27, y: 2, z: -5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1094668862}
+  m_RootOrder: 3
 --- !u!1 &336816486
 GameObject:
   m_ObjectHideFlags: 0
@@ -3760,6 +3804,33 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 385303265}
+--- !u!1 &389309548
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 389309549}
+  m_Layer: 0
+  m_Name: respawn player 3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &389309549
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 389309548}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 27, y: 2, z: -5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1094668862}
+  m_RootOrder: 2
 --- !u!1 &389545900
 GameObject:
   m_ObjectHideFlags: 0
@@ -4358,6 +4429,7 @@ GameObject:
   - 4: {fileID: 480821635}
   - 95: {fileID: 480821637}
   - 114: {fileID: 480821636}
+  - 114: {fileID: 480821638}
   m_Layer: 0
   m_Name: Nivek
   m_TagString: Untagged
@@ -4372,7 +4444,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 480821634}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .146666527, y: -.860000014, z: -.0333334617}
+  m_LocalPosition: {x: .146666527, y: -1, z: -.0333334617}
   m_LocalScale: {x: .666666687, y: .666666687, z: .666666687}
   m_Children:
   - {fileID: 732124679}
@@ -4410,6 +4482,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &480821638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 480821634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1688b88a82922d749b9283ca90118fb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &498865590
 GameObject:
   m_ObjectHideFlags: 0
@@ -4606,6 +4689,7 @@ GameObject:
   - 4: {fileID: 500802389}
   - 95: {fileID: 500802391}
   - 114: {fileID: 500802390}
+  - 114: {fileID: 500802392}
   m_Layer: 0
   m_Name: Nivek
   m_TagString: Untagged
@@ -4620,7 +4704,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 500802388}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .146666527, y: -.860000014, z: -.0333334617}
+  m_LocalPosition: {x: .146666527, y: -1, z: -.0333334617}
   m_LocalScale: {x: .666666687, y: .666666687, z: .666666687}
   m_Children:
   - {fileID: 1686672457}
@@ -4658,6 +4742,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &500802392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 500802388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1688b88a82922d749b9283ca90118fb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &506199788
 GameObject:
   m_ObjectHideFlags: 0
@@ -4682,7 +4777,7 @@ Transform:
   m_GameObject: {fileID: 506199788}
   m_LocalRotation: {x: -1.1520229e-07, y: -.707106948, z: -.70710659, w: 1.15202347e-07}
   m_LocalPosition: {x: 0, y: -1, z: .5}
-  m_LocalScale: {x: 2.20000005, y: 2.20000005, z: 2.20000005}
+  m_LocalScale: {x: 1.20000005, y: 1.20000005, z: 1.20000005}
   m_Children: []
   m_Father: {fileID: 530266178}
   m_RootOrder: 3
@@ -4806,7 +4901,7 @@ MonoBehaviour:
   stunGoal: 0
   jersey: 3
   team: 0
-  durationInvul: 1.5
+  durationInvul: 3
   coupsDonnes: 0
   coupsRecus: 0
   coupsCharges: 0
@@ -4814,6 +4909,7 @@ MonoBehaviour:
   sautBut: 0
   coupsVide: 0
   marqueBut: 0
+  isEaten: 0
 --- !u!23 &530266182
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5755,7 +5851,7 @@ Transform:
   m_GameObject: {fileID: 634162972}
   m_LocalRotation: {x: -1.1520229e-07, y: -.707106948, z: -.70710659, w: 1.15202347e-07}
   m_LocalPosition: {x: 0, y: -1, z: .5}
-  m_LocalScale: {x: 2.20000005, y: 2.20000005, z: 2.20000005}
+  m_LocalScale: {x: 1.20000005, y: 1.20000005, z: 1.20000005}
   m_Children: []
   m_Father: {fileID: 99554766}
   m_RootOrder: 3
@@ -8413,7 +8509,7 @@ Transform:
   m_GameObject: {fileID: 897209435}
   m_LocalRotation: {x: -1.1520229e-07, y: -.707106948, z: -.70710659, w: 1.15202347e-07}
   m_LocalPosition: {x: 0, y: -1, z: .5}
-  m_LocalScale: {x: 2.20000005, y: 2.20000005, z: 2.20000005}
+  m_LocalScale: {x: 1.20000005, y: 1.20000005, z: 12}
   m_Children: []
   m_Father: {fileID: 1895334757}
   m_RootOrder: 3
@@ -9097,8 +9193,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 981119692}
   m_LocalRotation: {x: -1.1520229e-07, y: -.707106948, z: -.70710659, w: 1.15202347e-07}
-  m_LocalPosition: {x: -0, y: -1, z: .5}
-  m_LocalScale: {x: 2.20000005, y: 2.20000005, z: 2.20000005}
+  m_LocalPosition: {x: 0, y: -1, z: .5}
+  m_LocalScale: {x: 1.20000005, y: 1.20000005, z: 1.20000005}
   m_Children: []
   m_Father: {fileID: 2021973433}
   m_RootOrder: 3
@@ -10723,6 +10819,37 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: .0219999999
+--- !u!1 &1094668861
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1094668862}
+  m_Layer: 0
+  m_Name: Respawns
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1094668862
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1094668861}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1733332723}
+  - {fileID: 1124850478}
+  - {fileID: 389309549}
+  - {fileID: 325498358}
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
 --- !u!1 &1100537764
 GameObject:
   m_ObjectHideFlags: 0
@@ -11139,6 +11266,33 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1123659802}
   m_Mesh: {fileID: 4300000, guid: 338757517445b6a4f91542da55d7c357, type: 3}
+--- !u!1 &1124850477
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1124850478}
+  m_Layer: 0
+  m_Name: respawn player 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1124850478
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1124850477}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -27, y: 2, z: 5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1094668862}
+  m_RootOrder: 1
 --- !u!1 &1124999053
 GameObject:
   m_ObjectHideFlags: 0
@@ -19019,6 +19173,33 @@ Transform:
   - {fileID: 1471370141}
   m_Father: {fileID: 903980102}
   m_RootOrder: 2
+--- !u!1 &1733332722
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1733332723}
+  m_Layer: 0
+  m_Name: respawn player 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1733332723
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1733332722}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 27, y: 2, z: 5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1094668862}
+  m_RootOrder: 0
 --- !u!1 &1747368448
 GameObject:
   m_ObjectHideFlags: 0
@@ -19939,7 +20120,7 @@ MonoBehaviour:
   stunGoal: 0
   jersey: 0
   team: 1
-  durationInvul: 1.5
+  durationInvul: 3
   coupsDonnes: 0
   coupsRecus: 0
   coupsCharges: 0
@@ -19947,6 +20128,7 @@ MonoBehaviour:
   sautBut: 0
   coupsVide: 0
   marqueBut: 0
+  isEaten: 0
 --- !u!23 &1895334761
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -20062,6 +20244,7 @@ GameObject:
   - 4: {fileID: 1925360608}
   - 95: {fileID: 1925360610}
   - 114: {fileID: 1925360609}
+  - 114: {fileID: 1925360611}
   m_Layer: 0
   m_Name: Nivek
   m_TagString: Untagged
@@ -20076,7 +20259,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1925360607}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .146666527, y: -.860000014, z: -.0333334617}
+  m_LocalPosition: {x: .146666527, y: -1, z: -.0333334617}
   m_LocalScale: {x: .666666687, y: .666666687, z: .666666687}
   m_Children:
   - {fileID: 2141273378}
@@ -20114,6 +20297,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1925360611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1925360607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1688b88a82922d749b9283ca90118fb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1930511116
 GameObject:
   m_ObjectHideFlags: 0
@@ -20687,7 +20881,7 @@ MonoBehaviour:
   stunGoal: 0
   jersey: 1
   team: 0
-  durationInvul: 1.5
+  durationInvul: 3
   coupsDonnes: 0
   coupsRecus: 0
   coupsCharges: 0
@@ -20695,6 +20889,7 @@ MonoBehaviour:
   sautBut: 0
   coupsVide: 0
   marqueBut: 0
+  isEaten: 0
 --- !u!23 &2021973437
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -21067,9 +21262,9 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2052379254}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df4ba9cfc8fb09c418e390493d4ae204, type: 3}
+  m_Script: {fileID: 11500000, guid: e1e132045d8422c42b9cfb9b87726111, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &2052379256
@@ -21083,6 +21278,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be088c83819d83046a99eb9fc4edf5ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  state: 0
   durationInSecond: 180
   ecranFin: {fileID: 1105067374}
   timeBetweenTwoBonus: 0
