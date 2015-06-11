@@ -238,6 +238,7 @@ public class PlayerControllerF : MonoBehaviour
 	
 		if (canHit && !isStunned && GameControllerF.getManager().state == GameManagerF.Step.inGame && !waitBeforeNextShoot)
         {
+            Debug.Log("test");
             Attack();
         }
     }
@@ -494,8 +495,6 @@ public class PlayerControllerF : MonoBehaviour
         if (Input.GetButtonUp(fire))
         {
             //float valueCirclePlayer = GameControllerF.InCircle(gameObject);
-            waitBeforeNextShoot = true;
-            StartCoroutine(WaitBeforeNextShoot());
             
 
             if (loading) // && valueCirclePlayer<0.70f
@@ -614,6 +613,10 @@ public class PlayerControllerF : MonoBehaviour
                     }
 
                 }
+
+                waitBeforeNextShoot = true;
+                StartCoroutine(WaitBeforeNextShoot());
+
             }
             else
             {
