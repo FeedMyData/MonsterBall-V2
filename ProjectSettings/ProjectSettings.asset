@@ -11,17 +11,13 @@ PlayerSettings:
   targetIOSGraphics: -1
   targetResolution: 0
   accelerometerFrequency: 60
-  companyName: Enjmin
-  productName: MonsterBall League
+  companyName: DefaultCompany
+  productName: MonsterBall-V2
   cloudProjectId: 
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_ShowUnitySplashScreen: 1
-<<<<<<< HEAD
   defaultScreenWidth: 1024
-=======
-  defaultScreenWidth: 1920
->>>>>>> origin/master
   defaultScreenHeight: 768
   defaultScreenWidthWeb: 960
   defaultScreenHeightWeb: 600
@@ -45,7 +41,7 @@ PlayerSettings:
   disableDepthAndStencilBuffers: 0
   defaultIsFullScreen: 1
   defaultIsNativeResolution: 1
-  runInBackground: 1
+  runInBackground: 0
   captureSingleScreen: 0
   Override IPod Music: 0
   Prepare IOS For Recording: 0
@@ -74,18 +70,18 @@ PlayerSettings:
   psp2PowerMode: 0
   psp2AcquireBGM: 1
   m_SupportedAspectRatios:
-    4:3: 0
-    5:4: 0
-    16:10: 0
+    4:3: 1
+    5:4: 1
+    16:10: 1
     16:9: 1
-    Others: 0
+    Others: 1
   bundleIdentifier: com.Company.ProductName
   bundleVersion: 1.0
   preloadedAssets: []
   metroEnableIndependentInputSource: 0
   metroEnableLowLatencyPresentationAPI: 0
   xboxOneDisableKinectGpuReservation: 0
-  productGUID: 15bd16457ea00e5419b57a3ad62aa56d
+  productGUID: 43f2978fb239c5440a61b5d1b6c11035
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 9
   AndroidPreferredInstallLocation: 1
@@ -121,7 +117,7 @@ PlayerSettings:
   iOSLaunchScreenLandscape: {fileID: 0}
   iOSLaunchScreenBackgroundColor:
     serializedVersion: 2
-    rgba: 0
+    rgba: 3974751484
   iOSLaunchScreenFillPct: 100
   iOSLaunchScreenSize: 100
   iOSLaunchScreenCustomXibPath: 
@@ -137,21 +133,9 @@ PlayerSettings:
     height: 180
     banner: {fileID: 0}
   androidGamepadSupportLevel: 0
-<<<<<<< HEAD
   resolutionDialogBanner: {fileID: 0}
-=======
-  resolutionDialogBanner: {fileID: 2800000, guid: 71cbdbb06cf09394a9dc055dc2574463,
-    type: 3}
->>>>>>> origin/master
-  m_BuildTargetIcons:
-  - m_BuildTarget: 
-    m_Icons:
-    - m_Icon: {fileID: 2800000, guid: 63b2af1ae0f385b4789eb674243056bd, type: 3}
-      m_Size: 128
-  m_BuildTargetBatching:
-  - m_BuildTarget: Standalone
-    m_StaticBatching: 1
-    m_DynamicBatching: 1
+  m_BuildTargetIcons: []
+  m_BuildTargetBatching: []
   webPlayerTemplate: APPLICATION:Default
   m_TemplateCustomTags: {}
   actionOnDotNetUnhandledException: 1
@@ -267,7 +251,7 @@ PlayerSettings:
   psmSplashimage: {fileID: 0}
   spritePackerPolicy: 
   scriptingDefineSymbols: {}
-  metroPackageName: MonsterBall
+  metroPackageName: MonsterBall-V2
   metroPackageLogo: 
   metroPackageLogo140: 
   metroPackageLogo180: 
@@ -278,7 +262,7 @@ PlayerSettings:
   metroCertificateSubject: 
   metroCertificateIssuer: 
   metroCertificateNotAfter: 0000000000000000
-  metroApplicationDescription: MonsterBall
+  metroApplicationDescription: MonsterBall-V2
   metroStoreTileLogo80: 
   metroStoreTileLogo: 
   metroStoreTileLogo140: 

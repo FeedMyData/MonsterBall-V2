@@ -32,12 +32,11 @@
 						<ObjectRef Name="VX_Niveks_Frappe" ID="{EB02EC7E-8C6D-4630-BCC6-1FCF78070F34}" WorkUnitID="{D899008C-EE7F-4475-814E-BB3DC86CD141}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="VX_Balle_Course" ID="{78E69E8A-6B17-4E01-8E22-CD08CE6BC6FC}" WorkUnitID="{D899008C-EE7F-4475-814E-BB3DC86CD141}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Public_Normal" ID="{51F24495-953D-43F8-B9CE-000C3412ECD4}" WorkUnitID="{D899008C-EE7F-4475-814E-BB3DC86CD141}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Tranfo_BalleMonstre" ID="{C4E685A6-7FBC-4AF3-A69E-E6FF1F3FD07E}" WorkUnitID="{D899008C-EE7F-4475-814E-BB3DC86CD141}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Transfo_BalleMonstre" ID="{C4E685A6-7FBC-4AF3-A69E-E6FF1F3FD07E}" WorkUnitID="{D899008C-EE7F-4475-814E-BB3DC86CD141}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="VX_Niveks_FinMatchPerdant" ID="{08ABACA6-8E33-42D3-AC3E-029F3685182C}" WorkUnitID="{D899008C-EE7F-4475-814E-BB3DC86CD141}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="SFX_Niveks_ChargeAttente" ID="{36A2A9AB-D0C4-4661-AC91-4D29851457BC}" WorkUnitID="{D899008C-EE7F-4475-814E-BB3DC86CD141}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="SFX_Niveks_CoupFort" ID="{54F550B1-1B00-498E-B5A4-48D17A9D3876}" WorkUnitID="{D899008C-EE7F-4475-814E-BB3DC86CD141}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="SFX_Monstre_Course" ID="{DCB984B7-6D28-4347-BDDB-3960B62DCBDA}" WorkUnitID="{D899008C-EE7F-4475-814E-BB3DC86CD141}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Tranfo_MonstreBalle" ID="{442A32BF-1890-48CE-B451-234FCD168687}" WorkUnitID="{D899008C-EE7F-4475-814E-BB3DC86CD141}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Transfo_MonstreBalle" ID="{442A32BF-1890-48CE-B451-234FCD168687}" WorkUnitID="{D899008C-EE7F-4475-814E-BB3DC86CD141}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="VX_Niveks_DebutMatch" ID="{85DA7BDD-41CA-408C-ABB1-D2F706102B52}" WorkUnitID="{D899008C-EE7F-4475-814E-BB3DC86CD141}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="VX_Niveks_FinMatchGagnant" ID="{45D991DF-3AC9-45C2-8889-D8895D97AD70}" WorkUnitID="{D899008C-EE7F-4475-814E-BB3DC86CD141}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="SFX_But" ID="{60060BE8-4880-46D8-9497-E296E70750F5}" WorkUnitID="{D899008C-EE7F-4475-814E-BB3DC86CD141}" Filter="7" Origin="Manual"/>
