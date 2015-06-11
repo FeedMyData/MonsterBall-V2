@@ -27,7 +27,7 @@ public class TwitterFeed : MonoBehaviour {
     private bool authFinished = false;
 
     private JSONNode searchResponse;
-    private bool newResponse = false;
+    //private bool newResponse = false;
 
     private List<Text> displayedTweets = new List<Text>();
     private bool searchingNewTweet = false;
@@ -55,27 +55,27 @@ public class TwitterFeed : MonoBehaviour {
             timerRefreshingRateWhenNoTweets += Time.deltaTime;
             timerRefreshingRateForReminderWhenNoTweets += Time.deltaTime;
 
-            if (newResponse)
-            {
-                newResponse = false;
+            //if (newResponse)
+            //{
+            //    newResponse = false;
 
-                string textOnOneLine = MakeAllOnOneLine(searchResponse["statuses"][0]["text"]);
-                string finalText = "<color=#FF0033>" + searchResponse["statuses"][0]["user"]["name"] + "</color> <size=40>@" + searchResponse["statuses"][0]["user"]["screen_name"] + "</size> : " + textOnOneLine;
+            //    string textOnOneLine = MakeAllOnOneLine(searchResponse["statuses"][0]["text"]);
+            //    string finalText = "<color=#FF0033>" + searchResponse["statuses"][0]["user"]["name"] + "</color> <size=40>@" + searchResponse["statuses"][0]["user"]["screen_name"] + "</size> : " + textOnOneLine;
 
-                //Debug.Log(finalText);
+            //    //Debug.Log(finalText);
 
-                if (lastTweetDisplayed != finalText)
-                {
-                    lastTweetDisplayed = finalText;
-                    DisplayTweet(finalText);
-                }
-                else if (timerRefreshingRateForReminderWhenNoTweets > refreshingRateForReminderWhenNoTweets)
-                {
-                    timerRefreshingRateForReminderWhenNoTweets = 0.0f;
-                    DisplayTweet(reminderText);
-                }
+            //    if (lastTweetDisplayed != finalText)
+            //    {
+            //        lastTweetDisplayed = finalText;
+            //        DisplayTweet(finalText);
+            //    }
+            //    else if (timerRefreshingRateForReminderWhenNoTweets > refreshingRateForReminderWhenNoTweets)
+            //    {
+            //        timerRefreshingRateForReminderWhenNoTweets = 0.0f;
+            //        DisplayTweet(reminderText);
+            //    }
 
-            }
+            //}
 
             float lastPixelPositionDisplayed = positionToSearchForNewTweet - 0.01f;
 
@@ -108,8 +108,8 @@ public class TwitterFeed : MonoBehaviour {
             // search for new tweet if place available
             if (lastPixelPositionDisplayed < positionToSearchForNewTweet && authFinished && !searchingNewTweet && timerRefreshingRateWhenNoTweets > refreshingRateWhenNoTweets)
             {
-                StartCoroutine(SearchForTweets());
-                searchingNewTweet = true;
+                StartCoroutine(SearchForTweets(1));
+                //searchingNewTweet = true;
             }
 
         }
@@ -164,8 +164,10 @@ public class TwitterFeed : MonoBehaviour {
 
     }
  
-    IEnumerator SearchForTweets() {
-	
+    IEnumerator SearchForTweets(int indexToSearch) {
+
+        searchingNewTweet = true;
+
         Dictionary<string, string> headers = new Dictionary<string, string>();
 
 	    headers["Authorization"] = "Bearer " + accessToken;
@@ -176,7 +178,7 @@ public class TwitterFeed : MonoBehaviour {
 
         parameters["q="] = "@MBL_GAME -enculé -pd -putain -pute -salope -fuck"; // or to:MBL_GAME or @MBL_GAME or a special # for the occasion
         parameters["result_type="] = "recent";
-        parameters["count"] = "1";
+        parameters["count"] = indexToSearch.ToString();
         //parameters["geocode="] = "45.6537200,0.1486590,10km";
 
         for (int i = 0; i < parameters.Count; i++)
@@ -207,10 +209,11 @@ public class TwitterFeed : MonoBehaviour {
             yield break;
         }
 
-        searchResponse = JSON.Parse(web.text);
+        JSONNode searchResponse = JSON.Parse(web.text);
         timerRefreshingRateWhenNoTweets = 0.0f;
+        CheckNewResponse(searchResponse, indexToSearch);
         searchingNewTweet = false;
-        newResponse = true;
+        //newResponse = true;
         
     }
 
@@ -222,10 +225,39 @@ public class TwitterFeed : MonoBehaviour {
     public void LaunchFirstTweet()
     {
         DisplayTweet(reminderText);
+        StartCoroutine(InitSomeTweets(4));
+
+    }
+
+    IEnumerator InitSomeTweets(int nb)
+    {
+        for (int i = nb; i > 0; i--)
+        {
+            yield return new WaitForSeconds(refreshingRateWhenNoTweets);
+            StartCoroutine(SearchForTweets(nb));
+        }
     }
 
     void DisplayTweet(string text)
     {
+
+        float lastPixelPositionDisplayed = 0.1f;
+
+        foreach (Text tweet in displayedTweets)
+        {
+
+            if (tweet.gameObject.activeSelf)
+            {
+
+                // search for last displaying tweet
+                if (tweet.transform.localPosition.x + tweet.preferredWidth * tweet.rectTransform.localScale.x > lastPixelPositionDisplayed)
+                {
+                    lastPixelPositionDisplayed = tweet.transform.localPosition.x + tweet.preferredWidth * tweet.rectTransform.localScale.x;
+                }
+
+            }
+
+        }
 
         bool hasRecycled = false;
 
@@ -237,7 +269,15 @@ public class TwitterFeed : MonoBehaviour {
                 tweet.gameObject.SetActive(true);
 
                 tweet.transform.SetParent(transform, false);
-                tweet.transform.position = transform.position;
+                //if (lastPixelPositionDisplayed > transform.position.x)
+                //{
+                //    tweet.transform.position = transform.position;
+                //}
+                //else 
+                //{
+                    Vector3 newPositionAfterTweet = new Vector3(transform.position.x - lastPixelPositionDisplayed, transform.position.y, transform.position.z);
+                    tweet.transform.position = newPositionAfterTweet;
+                //}
                 tweet.transform.Translate(-marginBetweenTweets, 0, 0);
 
                 tweet.text = text;
@@ -253,13 +293,42 @@ public class TwitterFeed : MonoBehaviour {
             Text newTweet = Instantiate(prefabTextTweet);
 
             newTweet.transform.SetParent(transform, false);
-            newTweet.transform.position = transform.position;
+
+            Vector3 newPositionAfterTweet = new Vector3(transform.position.x - lastPixelPositionDisplayed, transform.position.y, transform.position.z);
+            newTweet.transform.position = newPositionAfterTweet;
+
             newTweet.transform.Translate(-marginBetweenTweets, 0, 0);
 
             newTweet.text = text;
 
             displayedTweets.Add(newTweet);
 
+        }
+
+    }
+
+    void CheckNewResponse(JSONNode searchResponse, int indexToDisplay)
+    {
+
+        for (int i = 0; i < indexToDisplay; i++)
+        {
+            //Debug.Log(MakeAllOnOneLine(searchResponse["statuses"][i]["text"]));
+        }
+
+        string textOnOneLine = MakeAllOnOneLine(searchResponse["statuses"][indexToDisplay]["text"]);
+        string finalText = "<color=#FF0033>" + searchResponse["statuses"][indexToDisplay]["user"]["name"] + "</color> <size=40>@" + searchResponse["statuses"][indexToDisplay]["user"]["screen_name"] + "</size> : " + textOnOneLine;
+
+        //Debug.Log(finalText);
+
+        if (lastTweetDisplayed != finalText)
+        {
+            lastTweetDisplayed = finalText;
+            DisplayTweet(finalText);
+        }
+        else if (timerRefreshingRateForReminderWhenNoTweets > refreshingRateForReminderWhenNoTweets)
+        {
+            timerRefreshingRateForReminderWhenNoTweets = 0.0f;
+            DisplayTweet(reminderText);
         }
 
     }

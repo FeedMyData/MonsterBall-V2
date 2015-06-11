@@ -51,11 +51,14 @@ public class CamEffects : MonoBehaviour {
 
 	IEnumerator WaitForBeginningAnimationEnd(){
 		yield return new WaitForSeconds(5f);
-		GameControllerF.GetPlayer (1).transform.FindChild ("AButtonSprite").GetComponent<SpriteRenderer> ().enabled = true;
-		GameControllerF.GetPlayer (2).transform.FindChild ("AButtonSprite").GetComponent<SpriteRenderer> ().enabled = true;
-		GameControllerF.GetPlayer (3).transform.FindChild ("AButtonSprite").GetComponent<SpriteRenderer> ().enabled = true;
-		GameControllerF.GetPlayer (4).transform.FindChild ("AButtonSprite").GetComponent<SpriteRenderer> ().enabled = true;
-		GameControllerF.getManager ().state = GameManagerF.Step.choosePlayer;
+        if (GameControllerF.getManager().state == GameManagerF.Step.opening)
+        {
+            GameControllerF.GetPlayer(1).transform.FindChild("AButtonSprite").GetComponent<SpriteRenderer>().enabled = true;
+            GameControllerF.GetPlayer(2).transform.FindChild("AButtonSprite").GetComponent<SpriteRenderer>().enabled = true;
+            GameControllerF.GetPlayer(3).transform.FindChild("AButtonSprite").GetComponent<SpriteRenderer>().enabled = true;
+            GameControllerF.GetPlayer(4).transform.FindChild("AButtonSprite").GetComponent<SpriteRenderer>().enabled = true;
+            GameControllerF.getManager().state = GameManagerF.Step.choosePlayer;
+        }
 
 	}
     public bool GetRepositionned()

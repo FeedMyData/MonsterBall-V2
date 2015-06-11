@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using System.Collections.Generic;
 
 public class GameManagerF : MonoBehaviour {
 
@@ -84,26 +85,71 @@ public class GameManagerF : MonoBehaviour {
 			break;
 		
 		case Step.choosePlayer :
-			if( nextStateValidationRemaining != 0)
+			if( nextStateValidationRemaining > 0)
 				break;
             
             // changement des jerseys
+            List<GameControllerF.Jersey> jerseysAvailable = new List<GameControllerF.Jersey>() { GameControllerF.Jersey.player1, GameControllerF.Jersey.player2, GameControllerF.Jersey.player3, GameControllerF.Jersey.player4 };
+            List<PlayerControllerF> playersNotAssigned = new List<PlayerControllerF>();
+            //List<GameObject> playersNotAssigned = new List<GameObject>();
+
             for (int i = 1; i < 5; i++)
             {
 
-                PlayerControllerF playerScript = GameControllerF.GetPlayer(i).GetComponent<PlayerControllerF>();
-                int positionPlayerTested = playerScript.GetPositionControllerSelection();
-                if (GameControllerF.GetJerseyPositionsAtStart().ContainsKey(positionPlayerTested))
+                PlayerControllerF playerScriptTested = GameControllerF.GetPlayer(i).GetComponent<PlayerControllerF>();
+                int wantedPositionPlayerToPutJerseyOn = playerScriptTested.GetPositionControllerSelection();
+                GameControllerF.Jersey jerseyToPutOnOtherPlayer = playerScriptTested.jersey;
+
+                if (GameControllerF.GetPlayerPositionsAtStart().ContainsKey(wantedPositionPlayerToPutJerseyOn))
                 {
-                    playerScript.jersey = GameControllerF.GetJerseyPositionsAtStart()[positionPlayerTested];
-                    playerScript.initPlayer();
+                    PlayerControllerF playerToPutJerseyOn = GameControllerF.GetPlayerPositionsAtStart()[wantedPositionPlayerToPutJerseyOn];
+                  
+                    Debug.Log("jersey to be changed : " + playerToPutJerseyOn.jersey);
+                    Debug.Log("jersey to place : " + jerseyToPutOnOtherPlayer);
+
+                    playerToPutJerseyOn.jersey = jerseyToPutOnOtherPlayer;
+
+                    playerToPutJerseyOn.initPlayer();
+
+                    playersNotAssigned.Add(playerScriptTested);
+
+                    if (playersNotAssigned.Contains(playerToPutJerseyOn))
+                    {
+                        playersNotAssigned.Remove(playerToPutJerseyOn);
+                    }
+
+                    if (jerseysAvailable.Contains(playerToPutJerseyOn.jersey))
+                    {
+                        jerseysAvailable.Remove(playerToPutJerseyOn.jersey);
+                    }
+                    else
+                    {
+                        Debug.Log("Bug : probably many players with the same jersey");
+                    }
                 }
-                else
+                else // le joueur n'a pas choisi de personnage (controllerPosition à 0)
                 {
-                    Debug.Log("Bug on init jerseys for player : " + playerScript.gameObject.name);
+                    playersNotAssigned.Add(playerScriptTested);
                 }
 
+            }
 
+            if (playersNotAssigned.Count == jerseysAvailable.Count)
+            {
+                foreach (PlayerControllerF player in playersNotAssigned)
+                {
+                    player.jersey = jerseysAvailable[0];
+                    jerseysAvailable.RemoveAt(0);
+                    player.initPlayer();
+                }
+            }
+            else
+            {
+                Debug.Log("Bug with jerseys Available, not the same count of jerseys available and players not assigned :");
+                foreach (PlayerControllerF player in playersNotAssigned)
+                {
+                    Debug.Log(player.gameObject.name);
+                }
             }
 
 			GameObject.Find("Main Camera").GetComponent<Animator>().enabled = true;
@@ -112,7 +158,7 @@ public class GameManagerF : MonoBehaviour {
 			break;
 		
 		case Step.playerPlacement :
-			if( nextStateValidationRemaining != 0)
+			if( nextStateValidationRemaining > 0)
 				break;
 			nextStateValidationRemaining = 4;
 

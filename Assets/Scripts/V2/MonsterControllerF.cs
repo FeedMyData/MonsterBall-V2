@@ -304,7 +304,7 @@ public class MonsterControllerF : MonoBehaviour {
                     transform.position += newPosition * Time.deltaTime * speedBall;
 
 
-                    if (GameControllerF.InCircle(gameObject) > 0.80f)
+                    if (GameControllerF.InCircle(gameObject) > 0.75f)
                     {
                         float newDirection = transform.eulerAngles.y + 180;
 
@@ -418,7 +418,9 @@ public class MonsterControllerF : MonoBehaviour {
                     transform.eulerAngles = new Vector3(0, newDirection, 0);
                     if (currentNumberOfRebounds < numberOfReboundsToMaxSpeed) currentNumberOfRebounds++;
                     //feedbacks rebond sur bord quand charge
-                    Camera.main.GetComponent<CameraShake>().shake(0.8f, 2.0f, 1.0f);
+                    float percentageLShake = currentNumberOfRebounds / numberOfReboundsToMaxSpeed;
+                    speedMonsterCharge = Mathf.Lerp(2.5f, 4.0f, percentageLShake);
+                    Camera.main.GetComponent<CameraShake>().shake(1.0f, percentageLShake, 0.5f);
 					totalNumberOfRebounds++;
                 }
 
