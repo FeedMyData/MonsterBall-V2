@@ -849,7 +849,10 @@ public class PlayerControllerF : MonoBehaviour
                     minimalNewPos = positionA;
                 }
             }
-            nextPosition = minimalNewPos;
+            if (minimalNewPos < 3)
+            {
+                nextPosition = minimalNewPos;
+            }
         }
         else if (!onRight && positionControllerSelection != -2)
         {
@@ -862,7 +865,10 @@ public class PlayerControllerF : MonoBehaviour
                     minimalNewPos = positionA;
                 }
             }
-            nextPosition = minimalNewPos;
+            if (minimalNewPos > -3)
+            {
+                nextPosition = minimalNewPos;
+            }
         }
 
         if (nextPosition < 2 || nextPosition > -2)
@@ -879,7 +885,7 @@ public class PlayerControllerF : MonoBehaviour
             }
             else
             {
-                Debug.Log("Bug on movement selection for player : " + gameObject.name);
+                Debug.Log("Bug on movement selection for player : " + gameObject.name + "with : " + nextPosition);
             }
 
 
