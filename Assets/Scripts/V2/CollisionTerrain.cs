@@ -62,6 +62,10 @@ public class CollisionTerrain : MonoBehaviour {
             // display sprite on dome
 
             //spotlightEffect(other);
+
+            SoundManager sound = GameControllerF.GetSound();
+            sound.PlayEvent("VX_Balle_Cloison", other.gameObject);
+
             collisionEffect(other);
 
         }

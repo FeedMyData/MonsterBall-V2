@@ -74,6 +74,7 @@ public class GoalScriptF : MonoBehaviour {
                         else
                         {
                             other.gameObject.GetComponent<SoundManager>().PlayEvent("VX_Niveks_ButPerdant", striker.gameObject);
+                            other.gameObject.GetComponent<SoundManager>().PlayEvent("Public_Boooh",Camera.main.gameObject);
                         }
 
                         striker.marqueBut++;

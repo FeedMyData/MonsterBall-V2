@@ -531,9 +531,6 @@ public class MonsterControllerF : MonoBehaviour {
         chooseNewRespawn = false;
         RaycastHit hit;
         Physics.Raycast(lightRespawn.transform.position,lightRespawn.transform.forward,out hit);
-        
-
-        Debug.Log(hit.transform.name);
 
         lightRespawn.gameObject.SetActive(false);
         sound.PlayEvent("VX_Balle_RemiseEnJeu", gameObject);
@@ -946,7 +943,6 @@ public class MonsterControllerF : MonoBehaviour {
 
     void OnCollisionEnter(Collision other)
     {
-
         if (monsterForm && transforming && other.gameObject.transform.parent.name == "stadium 21")
         {
             Vector3 averageContactPoint = Vector3.zero;

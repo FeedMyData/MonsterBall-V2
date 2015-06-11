@@ -80,7 +80,6 @@ public class TeleportationF : MonoBehaviour {
     public void SetTeleportation(bool up)
     {
         actualValueShaderTP = ballMaterial[0].GetFloat("_alpha_slider");
-        Debug.Log("setPlayer " + ballMaterial[0].GetFloat("_alpha_slider"));
         if (up)
         {
             teleportationUp = true;
