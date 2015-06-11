@@ -28,6 +28,7 @@ public class PlayerControllerF : MonoBehaviour
     public float coefPower = 10.0f;
     public float delayPowerMax = 4.0f;
     private Bonus bonus = null;
+    private bool canHit = true;
     private float chargingShoot = 0.0f;
     private float power;
     private bool loading = false;
@@ -41,6 +42,8 @@ public class PlayerControllerF : MonoBehaviour
     public float angleHoming = 30.0f;
 
     public float multiImpact = 3.0f;
+    public float durationBetweenTwoShoot = 1.0f;
+    private bool waitBeforeNextShoot = false;
 
     //private Vector3 posDash = Vector3.zero;
     //private bool dash = false;
@@ -66,6 +69,7 @@ public class PlayerControllerF : MonoBehaviour
     private Transform goal;
     [Space(20)]
     public float durationInvul = 2.0f;
+    public float durationInvulSiCoupRecu = 1.0f;
     private bool touchable = true;
     private SpriteRenderer spriteBonus;
     private SpriteRenderer spriteGround;
@@ -73,6 +77,9 @@ public class PlayerControllerF : MonoBehaviour
     private TeleportationF tp;
 
     private SoundManager sound;
+
+    [HideInInspector]
+    public bool isRunning;
 
     /* Statistiques */
     [HideInInspector]
@@ -89,6 +96,8 @@ public class PlayerControllerF : MonoBehaviour
     public int coupsVide = 0;
     [HideInInspector]
     public int marqueBut = 0;
+    [HideInInspector]
+    public int coupsDonnesSurBalle = 0;
 
     private GameManagerF manager;
 
@@ -96,6 +105,17 @@ public class PlayerControllerF : MonoBehaviour
 
     [HideInInspector]
     public bool isEaten = false;
+    [HideInInspector]
+    public bool canCount = true;
+
+    private int positionControllerSelection = 0;
+    private float positionYControllerSelection;
+    private float[] positionsY = new float[4] {5.5f, 7.0f, 8.5f, 10.0f};
+    private Vector3 positionXZNeutral;
+    private Vector3 positionControllerSprite;
+    private SpriteRenderer controllerSprite;
+    private bool isValidated = false;
+    private bool hasMadeInputHorizontal = false;
 
     // Use this for initialization
     void Start()
@@ -103,6 +123,7 @@ public class PlayerControllerF : MonoBehaviour
         controller = GetComponent<CharacterController>();
         tp = GetComponentInChildren<TeleportationF>();
         manager = GameControllerF.getManager();
+        positionXZNeutral = GameControllerF.GetPositionXZNeutral();
 
         SpriteRenderer[] tabSprite = GetComponentsInChildren<SpriteRenderer>();
 
@@ -113,8 +134,18 @@ public class PlayerControllerF : MonoBehaviour
                 spriteGround = tabSprite[i];
             else if (tabSprite[i].name == "SpriteBonus")
                 spriteBonus = tabSprite[i];
+            else if (tabSprite[i].name == "AButtonSprite")
+            {
+                controllerSprite = tabSprite[i];
+                controllerSprite.enabled = false;
+            }
+                
         }
+        if (GameControllerF.getManager().state != GameManagerF.Step.quickTest)
+        {
+            initControllers();
 
+        }
         initPlayer();
         if (team == GameControllerF.Team.Blu)
             goal = GameControllerF.GetPosBluGoal();
@@ -145,8 +176,35 @@ public class PlayerControllerF : MonoBehaviour
         else
             spriteBonus.enabled = false;
 
-        Move();
-        if (!isStunned)
+
+		if (GameControllerF.getManager().state == GameManagerF.Step.inGame)
+			Move();
+		else if (GameControllerF.getManager ().state == GameManagerF.Step.playerPlacement)
+			MoveToSpawn ();
+        else if (GameControllerF.getManager().state == GameManagerF.Step.choosePlayer)
+        {
+            if (Input.GetAxis(horizontal) > 0.4f && !isValidated && !hasMadeInputHorizontal) // droite
+            {
+                hasMadeInputHorizontal = true;
+                MoveControllerSelection(true);
+            }
+            else if (Input.GetAxis(horizontal) < -0.4f && !isValidated && !hasMadeInputHorizontal) // gauche
+            {
+                hasMadeInputHorizontal = true;
+                MoveControllerSelection(false);
+            }
+            else if (Input.GetAxis(horizontal) < 0.4f && Input.GetAxis(horizontal) > -0.4f)
+            {
+                hasMadeInputHorizontal = false;
+            }
+
+            if (Input.GetButtonDown(fire))
+            {
+                ValidInvalidSelection();
+            }
+        }
+	
+		if (canHit && !isStunned && GameControllerF.getManager().state == GameManagerF.Step.inGame && !waitBeforeNextShoot)
         {
             Attack();
         }
@@ -169,10 +227,37 @@ public class PlayerControllerF : MonoBehaviour
 
     }
 
+    void initControllers()
+    {
+        switch (jersey)
+        {
+            case GameControllerF.Jersey.player1:
+                positionYControllerSelection = positionsY[3];
+                break;
+            case GameControllerF.Jersey.player2:
+                positionYControllerSelection = positionsY[2];
+                break;
+            case GameControllerF.Jersey.player3:
+                positionYControllerSelection = positionsY[1];
+                break;
+            case GameControllerF.Jersey.player4:
+                positionYControllerSelection = positionsY[0];
+                break;
+            default:
+                positionYControllerSelection = positionXZNeutral.y;
+                break;
+        }
+
+        positionControllerSprite = new Vector3(positionXZNeutral.x, positionYControllerSelection, positionXZNeutral.z);
+        controllerSprite.transform.position = positionControllerSprite;
+        controllerSprite.enabled = true;
+
+    }
+
     /**
      * Initialise les controles du joueur, son équipe et sa couleur
      */
-    void initPlayer()
+    public void initPlayer()
     {
         switch (jersey)
         {
@@ -181,7 +266,6 @@ public class PlayerControllerF : MonoBehaviour
                 vertical = "Vertical1";
                 fire = "Fire1";
                 respawnPosition = GameObject.Find("respawn player 1").transform.position;
-
                 //if (team == GameControllerF.Team.Blu)
                 //    spriteGround.GetComponent<Renderer>().material.color = new Color32(0, 0, 255, 255);
                 //else
@@ -192,7 +276,6 @@ public class PlayerControllerF : MonoBehaviour
                 vertical = "Vertical2";
                 fire = "Fire2";
                 respawnPosition = GameObject.Find("respawn player 2").transform.position;
-
                 //if (team == GameControllerF.Team.Blu)
                 //    spriteGround.GetComponent<Renderer>().material.color = new Color32(0, 128, 255, 255);
                 //else
@@ -203,7 +286,6 @@ public class PlayerControllerF : MonoBehaviour
                 vertical = "Vertical3";
                 fire = "Fire3";
                 respawnPosition = GameObject.Find("respawn player 3").transform.position;
-
                 //if (team == GameControllerF.Team.Blu)
                 //    spriteGround.GetComponent<Renderer>().material.color = new Color32(0, 255, 255, 255);
                 //else
@@ -214,7 +296,6 @@ public class PlayerControllerF : MonoBehaviour
                 vertical = "Vertical4";
                 fire = "Fire4";
                 respawnPosition = GameObject.Find("respawn player 4").transform.position;
-
                 //if (team == GameControllerF.Team.Blu)
                 //    spriteGround.GetComponent<Renderer>().material.color = new Color32(0, 0, 128, 255);
                 //else
@@ -259,6 +340,7 @@ public class PlayerControllerF : MonoBehaviour
         }
         else if (directionMove.sqrMagnitude > 0.2f && !isStunned /*&& !dash*/)
         {
+            isRunning = true;
             transform.LookAt(transform.position + directionMove);
             directionMove = transform.forward * actualSpeed;
             direction = transform.forward;
@@ -267,6 +349,7 @@ public class PlayerControllerF : MonoBehaviour
         }
         else
         {
+            isRunning = false;
             directionMove = Vector3.zero;
             if (GetComponentInChildren<Animator>() && GetComponentInChildren<Animator>().GetBool("isRunning") == true)
                 GetComponentInChildren<Animator>().SetBool("isRunning", false);
@@ -324,6 +407,8 @@ public class PlayerControllerF : MonoBehaviour
         if (Input.GetButtonUp(fire))
         {
             //float valueCirclePlayer = GameControllerF.InCircle(gameObject);
+            waitBeforeNextShoot = true;
+            StartCoroutine(WaitBeforeNextShoot());
 
             if (loading) // && valueCirclePlayer<0.70f
             {
@@ -343,6 +428,14 @@ public class PlayerControllerF : MonoBehaviour
                 }
                 else
                 {
+
+					// Feedback
+					foreach (ParticleSystem ps in GetComponentsInChildren<ParticleSystem>())
+					{
+						if (ps.name == "Batte_effet") ps.Play();
+					}
+
+
                     List<GameObject> tabProxi = GameControllerF.PlayerView(this, rangeShoot, angleShoot);
 
                     if (tabProxi.Count > 0)
@@ -426,6 +519,7 @@ public class PlayerControllerF : MonoBehaviour
                             if (animator.name == "arme")
                                 animator.SetTrigger("shrink");
                     }
+
                 }
             }
             else
@@ -447,6 +541,12 @@ public class PlayerControllerF : MonoBehaviour
                 //relache la pression et casse l'anim
             }
         }
+    }
+
+    IEnumerator WaitBeforeNextShoot()
+    {
+        yield return new WaitForSeconds(durationBetweenTwoShoot);
+        waitBeforeNextShoot = false;
     }
 
     public void FlyAway()
@@ -489,6 +589,7 @@ public class PlayerControllerF : MonoBehaviour
                 player.AddImpact(directionImpact * multiImpact);
                 player.setLoading(false);
                 player.callStun(stunKick);
+                player.callIntouchable();
 
                 // feedbacks player frappe autre player
                 foreach (ParticleSystem ps in GetComponentsInChildren<ParticleSystem>())
@@ -527,21 +628,17 @@ public class PlayerControllerF : MonoBehaviour
                         if (GameControllerF.WhereIsMyAlly(this) != Vector3.zero)
                         {
                             directionImpact = GameControllerF.WhereIsMyAlly(this) - transform.position;
-                            directionImpact.y = 0;
                             directionImpact.Normalize();
+                            directionImpact.y = 0;
                             directionImpact *= power;
                         }
+                        
                         monster.GetComponent<Rigidbody>().AddForce(directionImpact, ForceMode.Impulse);
                         //TODO: changer pour une valeur proportionnelle
 
-
-
                         monster.AddWrath((int)(power / coefPower));
 
-                        if (monster.GetWrath() < monster.wrathMax)
-                        {
-
-                        }
+                        coupsDonnesSurBalle++;
 
                         //feedbacks balle coup reçu par un joueur
                         if (power == powerMax)
@@ -549,8 +646,6 @@ public class PlayerControllerF : MonoBehaviour
                             Camera.main.GetComponent<CameraShake>().shake(0.6f, 0.4f, 1.0f);
 
                         }
-
-                        manager.SetLastPlayerHitting(gameObject);
 
                         return true;
                     }
@@ -571,7 +666,8 @@ public class PlayerControllerF : MonoBehaviour
      */
     public void callStun(float duration)
     {
-        StartCoroutine(Stun(duration));
+        if(duration != 0.0f)
+            StartCoroutine(Stun(duration));
     }
 
     /**
@@ -641,8 +737,22 @@ public class PlayerControllerF : MonoBehaviour
     {
         //clignote et ignore tous le coups
         touchable = false;
+        canHit = false;
         StartCoroutine(Blink());
         yield return new WaitForSeconds(durationInvul);
+        canHit = true;
+        touchable = true;
+    }
+
+    public void callIntouchable()
+    {
+        StartCoroutine(IntouchableSiCoupRecu());
+    }
+
+    IEnumerator IntouchableSiCoupRecu()
+    {
+        touchable = false;
+        yield return new WaitForSeconds(this.durationInvulSiCoupRecu);
         touchable = true;
     }
 
@@ -687,4 +797,152 @@ public class PlayerControllerF : MonoBehaviour
     {
         this.loading = loading;
     }
+
+	private void MoveToSpawn(){
+
+		if (GetComponentInChildren<Animator> ())
+			GetComponentInChildren<Animator> ().SetBool ("isRunning", true);
+
+
+		if (transform.position != this.respawnPosition) {
+
+			transform.position = Vector3.MoveTowards (transform.position, this.respawnPosition, Time.deltaTime * speed);
+			transform.LookAt (this.respawnPosition);
+
+
+		} else {
+			if (GetComponentInChildren<Animator> ())
+				GetComponentInChildren<Animator> ().SetBool ("isRunning", false);
+			transform.LookAt(GameControllerF.GetMonster().transform.position);
+		    GameControllerF.getManager().validNextState(true);
+
+		}
+
+
+	}
+
+    void MoveControllerSelection(bool onRight)
+    {
+
+        List<int> positionsAvailable = new List<int>() {-2, -1, 0, 1, 2};
+
+        int nextPosition = positionControllerSelection;
+
+        for(int i = 1; i < 5; i++) {
+
+            GameObject playerTested = GameControllerF.GetPlayer(i);
+            int positionPlayerTested = playerTested.GetComponent<PlayerControllerF>().positionControllerSelection;
+
+            if (playerTested.tag != this.tag && positionPlayerTested != 0)
+            {
+                if (positionsAvailable.Contains(positionPlayerTested))
+                {
+                    positionsAvailable.Remove(positionPlayerTested);
+                }
+            }
+
+        }
+
+        //foreach (int a in positionsAvailable)
+        //{
+        //    Debug.Log(a);
+        //}
+
+        if (onRight && positionControllerSelection != 2)
+        {
+            int minimalNewPos = 3;
+
+            foreach (int positionA in positionsAvailable)
+            {
+                if (positionA > nextPosition && positionA < minimalNewPos)
+                {
+                    minimalNewPos = positionA;
+                }
+            }
+            if (minimalNewPos < 3)
+            {
+                nextPosition = minimalNewPos;
+            }
+        }
+        else if (!onRight && positionControllerSelection != -2)
+        {
+            int minimalNewPos = -3;
+
+            foreach (int positionA in positionsAvailable)
+            {
+                if (positionA < nextPosition && positionA > minimalNewPos)
+                {
+                    minimalNewPos = positionA;
+                }
+            }
+            if (minimalNewPos > -3)
+            {
+                nextPosition = minimalNewPos;
+            }
+        }
+
+        if (nextPosition < 2 || nextPosition > -2)
+        {
+
+            positionControllerSelection = nextPosition;
+
+            if (GameControllerF.GetPositionsAtSelection().ContainsKey(nextPosition))
+            {
+                Vector3 newVectorPosition = GameControllerF.GetPositionsAtSelection()[nextPosition];
+
+                positionControllerSprite = new Vector3(newVectorPosition.x, positionYControllerSelection, newVectorPosition.z);
+                controllerSprite.transform.position = positionControllerSprite;
+            }
+            else
+            {
+                Debug.Log("Bug on movement selection for player : " + gameObject.name + "with : " + nextPosition);
+            }
+
+
+        }
+
+
+
+    }
+
+    void ValidInvalidSelection()
+    {
+        if (!isValidated && positionControllerSelection != 0)
+        {
+            bool canValidate = true;
+
+            for (int i = 1; i < 5; i++)
+            {
+
+                GameObject playerTested = GameControllerF.GetPlayer(i);
+                int positionPlayerTested = playerTested.GetComponent<PlayerControllerF>().positionControllerSelection;
+
+                if (playerTested.tag != this.tag && positionPlayerTested == positionControllerSelection)
+                {
+                    canValidate = false;
+                }
+
+            }
+
+            if (canValidate)
+            {
+                isValidated = true;
+                controllerSprite.enabled = false;
+                GameControllerF.getManager().validNextState(true);
+            }
+
+        }
+        else if (isValidated && positionControllerSelection != 0)
+        {
+            isValidated = false;
+            controllerSprite.enabled = true;
+            GameControllerF.getManager().validNextState(false);
+        }
+    }
+
+    public int GetPositionControllerSelection()
+    {
+        return positionControllerSelection;
+    }
+
 }

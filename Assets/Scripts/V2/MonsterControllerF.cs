@@ -19,6 +19,9 @@ public class MonsterControllerF : MonoBehaviour {
     public float spaceBetweenBallPlayer = 2.0f;
     public float fovBall = 110f;
     public float angleAvoidPlayer = 45f;
+    private Vector3 baseScaleBall = new Vector3(0.4f, 0.4f, 0.4f);
+    public float maxScaleFactor = 2.0f;
+    private Transform childBall;
     
     [Header("Magnet")]
     public float areaMagnet = 1.0f;
@@ -40,29 +43,40 @@ public class MonsterControllerF : MonoBehaviour {
     public float monsterScale = 3.0f;
     public float monsterMass = 20.0f;
     [Range(0.0f,1.0f)]
-    public float safeTransform = 0.7f;
+    public float safeTransform = 0.6f;
     private bool transforming = false;
     private float timeTransforming;
     public int nbCycleMonster = 3;
 
     [Header("Charge_Phase2")]
     public float durationLoadingCharge = 2.0f;
-    public float durationUpSpeedCharge = 8.0f;
-    public float minSpeedCharge = 2.0f;
+    //public float durationUpSpeedCharge = 8.0f;
+    public float numberOfReboundsToMaxSpeed = 10.0f;
+    public int maxNumberOfChargeRebounds = 10;
+    public float minSpeedCharge = 8.0f;
     public float maxSpeedCharge = 25.0f;
     private float speedMonsterCharge;
-    private float timeCharge;
+    //private float timeCharge;
     private bool monsterModeCharge = false;
-
+    private int currentNumberOfRebounds = 0;
+	private int totalNumberOfRebounds = 0;
     [Header("Respawn")]
     public float durationInvul = 2.0f;
     private bool touchable = true;
+    public float durationMiniRandomRespawn = 1.0f;
+    public float durationMaxiRandomRespawn = 5.0f;
+    public float speedRotationRespawn = 20f;
+    public float respawnDistanceToCenter = 5.0f;
+    private bool chooseNewRespawn = false;
+    private Vector3 newRespawn = Vector3.zero;
+    public Light lightRespawn;
 
     [Space(20)]
     public float coefColliderMonster = 1.05f;
     [Space(20)]
     public float durationEatingPlayer = 2.0f;
     private bool eatPlayer = false;
+	private int currentNumberOfChargeEatenPlayers = 0;
     private float rotateToGoal = 0.0f;
     private Transform goal;
     private Vector3 DirectionMonster = Vector3.zero;
@@ -106,9 +120,14 @@ public class MonsterControllerF : MonoBehaviour {
     
     public Vector3 respawnPositionBall;
 
-    private GameObject smokeFury;
-    private GameObject transfoFury; 
+    [HideInInspector]
+    public bool canCount= true;
 
+    private ParticleSystem smokeFury;
+    private ParticleSystem transfoFury;
+    private ParticleSystem saliveDroite;
+    private ParticleSystem saliveGauche;
+    private ParticleSystem ragingFx;
     //public delegate void OnClickHit();
     //public event OnClickHit OnClickHitEvent;
 
@@ -121,13 +140,16 @@ public class MonsterControllerF : MonoBehaviour {
         sound = GetComponent<SoundManager>();
         sound.LoadBank();
 
+        childBall = transform.Find("ball_monster");
+        baseScaleBall = childBall.localScale;
+
         commentariesScript = GameObject.Find("Commentaries").GetComponent<TextCommentaries>();
 
-        smokeFury = GameObject.Find("FumeeTransfo");
-        transfoFury = GameObject.Find("Transformation_particules");
-
-        //smokeFury.SetActive(false);
-        //transfoFury.SetActive(false);
+        smokeFury = GameObject.Find("FumeeTransfo").GetComponent<ParticleSystem>();
+        transfoFury = GameObject.Find("Transformation_particules").GetComponent<ParticleSystem>();
+        saliveDroite = GameObject.Find("Salive droite").GetComponent<ParticleSystem>();
+        saliveGauche = GameObject.Find("Salive gauche").GetComponent<ParticleSystem>();
+        ragingFx = GameObject.Find("raging fx").GetComponent<ParticleSystem>();
 
         if (!monsterForm)
         {
@@ -143,13 +165,35 @@ public class MonsterControllerF : MonoBehaviour {
         }
 
 
-       // tp.SetTeleportation(true);
+        //tp.SetTeleportation(true);
 	}
 	
 	// Update is called once per frame
 	void Update() {
 
-        if (transform.position.y < -3.0f) Respawn();
+        if (chooseNewRespawn)
+        {
+            Debug.DrawRay(lightRespawn.transform.position, transform.forward);
+            lightRespawn.transform.RotateAround(Vector3.zero, Vector3.up, speedRotationRespawn * Time.deltaTime);
+        }
+
+		if (GameControllerF.getManager ().state != GameManagerF.Step.inGame) return;
+
+        if (transform.position.y < -3.0f && !monsterForm && !transforming) RespawnBall();
+
+        if (
+            (monsterForm || transforming) && ( 
+            transform.position.y > 8.0f || //26
+            transform.position.y < -2.0f ||
+            transform.position.z > 21.0f ||
+            transform.position.z < -21.0f ||
+            transform.position.x > 44.0f || //39
+            transform.position.x < -44.0f)
+            )
+        {
+            SafeRespawn();
+            Debug.Log("saferespawn by position");
+        }
 
         if (magnet == null)
         {
@@ -237,46 +281,63 @@ public class MonsterControllerF : MonoBehaviour {
                 body.velocity = Vector3.Lerp(body.velocity, Vector3.zero, percentageL);
 
                 body.angularVelocity = Vector3.Lerp(body.angularVelocity, Vector3.zero, percentageL);
+
+                ambiantLight.intensity = Mathf.Lerp(intensityWhenBall, intensityWhenMonster, percentageL);
             }
 
         }
         else
         {
-            if (GetActualSpeed() < speedMaxToChooseDirection && isGround())
+            if (canCount)
             {
-                body.velocity = Vector3.zero;
-                body.angularVelocity = Vector3.zero;
-                transform.eulerAngles = new Vector3(0, transform.eulerAngles.y, 0);
-
-                Vector3 newPosition = transform.forward;
-                //newPosition.y = transform.localScale.y/2;
-
-                transform.position += newPosition * Time.deltaTime * speedBall;
-
-
-                if (GameControllerF.InCircle(gameObject) > 0.80f)
+                if (GetActualSpeed() < speedMaxToChooseDirection && isGround())
                 {
-                    float newDirection = transform.eulerAngles.y +180;
+                    body.velocity = Vector3.zero;
+                    body.angularVelocity = Vector3.zero;
+                    transform.eulerAngles = new Vector3(0, transform.eulerAngles.y, 0);
 
-                    newDirection += GetAngleBounce(transform.position);
+                    childBall.localScale = baseScaleBall;
 
-                    transform.eulerAngles = new Vector3(0,newDirection,0);
-                }
-                else
-                {
-                    //regarde s'il y a un joueur devant lui et se décale pour l'éviter
-                    try
+                    Vector3 newPosition = transform.forward;
+                    //newPosition.y = transform.localScale.y/2;
+
+                    transform.position += newPosition * Time.deltaTime * speedBall;
+
+
+                    if (GameControllerF.InCircle(gameObject) > 0.80f)
                     {
-                       if(GameControllerF.FieldOfView(gameObject,20,90)[0] != null)
-                       {
-                           Vector3 relativePoint = transform.InverseTransformPoint(GameControllerF.FieldOfView(gameObject,20,90)[0].transform.position) ;
-                           if(relativePoint.x < 0)
-                               transform.RotateAround(transform.position,Vector3.up,angleAvoidPlayer*Time.deltaTime);
-                           else
-                               transform.RotateAround(transform.position, Vector3.up,- angleAvoidPlayer * Time.deltaTime);
-                       }
+                        float newDirection = transform.eulerAngles.y + 180;
+
+                        newDirection += GetAngleBounce(transform.position);
+
+                        transform.eulerAngles = new Vector3(0, newDirection, 0);
                     }
-                    catch(Exception e){ }
+                    else
+                    {
+                        //regarde s'il y a un joueur devant lui et se décale pour l'éviter
+                        try
+                        {
+                            if (GameControllerF.FieldOfView(gameObject, 20, 90)[0] != null)
+                            {
+                                Vector3 relativePoint = transform.InverseTransformPoint(GameControllerF.FieldOfView(gameObject, 20, 90)[0].transform.position);
+                                if (relativePoint.x < 0)
+                                    transform.RotateAround(transform.position, Vector3.up, angleAvoidPlayer * Time.deltaTime);
+                                else
+                                    transform.RotateAround(transform.position, Vector3.up, -angleAvoidPlayer * Time.deltaTime);
+                            }
+                        }
+                        catch (Exception e) { }
+                    }
+                }
+                else // balle volle, sans volonté propre
+                {
+                    // scale de la balle
+                    transform.forward = body.velocity;
+                    float percentageL = (body.velocity.magnitude - 40.0f) / (80.0f - 40.0f);
+                    float newScaleBalleX = Mathf.Lerp(baseScaleBall.x, baseScaleBall.x / (maxScaleFactor / 2), percentageL);
+                    float newScaleBalleZ = Mathf.Lerp(baseScaleBall.z, baseScaleBall.z / (maxScaleFactor / 2), percentageL);
+                    float newScaleBalleY = Mathf.Lerp(baseScaleBall.y, baseScaleBall.y * maxScaleFactor, percentageL);
+                    childBall.localScale = new Vector3(newScaleBalleX, newScaleBalleY, newScaleBalleZ);
                 }
             }
         }
@@ -288,6 +349,7 @@ public class MonsterControllerF : MonoBehaviour {
         {
             yield return new WaitForSeconds(wrathDribblingEachTime);
             wrath += wrathDribblingValue;
+            ragingFx.Play();
         }
         
     }
@@ -330,7 +392,7 @@ public class MonsterControllerF : MonoBehaviour {
 
             if (!moveCharge)
             {
-                Debug.Log("vise");
+                //Debug.Log("vise");
                 canEat = false;
                 //s'il se déplace pas, il vise un joueur
                 DirectionMonster = targetCharge.transform.position;// -transform.position;
@@ -340,24 +402,37 @@ public class MonsterControllerF : MonoBehaviour {
                 if (!loadingChargeEnd)
                 {
                     loadingChargeEnd = true;
-                    StartCoroutine(LoadingCharge());
+					if(GetComponentInChildren<Animator>()) GetComponentInChildren<Animator>().SetTrigger("chargeAnnouncement");
+                   // StartCoroutine(LoadingCharge());
                 }
             }
             else
             {
-
                 body.angularVelocity = Vector3.zero;
-                Debug.Log("charge");
+                //Debug.Log("charge");
                 //avance tout droit et change de direction dans les coins
                 if (GameControllerF.InCircle(gameObject) > 0.50f)
                 {
                     float newDirection = transform.eulerAngles.y + 180;
                     newDirection += GetAngleBounce(transform.position);
                     transform.eulerAngles = new Vector3(0, newDirection, 0);
+                    if (currentNumberOfRebounds < numberOfReboundsToMaxSpeed) currentNumberOfRebounds++;
+                    //feedbacks rebond sur bord quand charge
+                    Camera.main.GetComponent<CameraShake>().shake(0.8f, 2.0f, 1.0f);
+					totalNumberOfRebounds++;
                 }
 
-                float delayCharge = Mathf.Abs((timeCharge - Time.time) / durationUpSpeedCharge - 1);
-                speedMonsterCharge = Mathf.Lerp(minSpeedCharge, maxSpeedCharge, delayCharge);
+                //float delayCharge = Mathf.Abs((timeCharge - Time.time) / durationUpSpeedCharge - 1);
+                float percentageLSpeed = currentNumberOfRebounds / numberOfReboundsToMaxSpeed;
+                speedMonsterCharge = Mathf.Lerp(minSpeedCharge, maxSpeedCharge, percentageLSpeed);
+
+				if (totalNumberOfRebounds >= maxNumberOfChargeRebounds  && currentNumberOfChargeEatenPlayers >= 3 )
+       			{ 
+          		 	monsterModeCharge = false;
+           			loadingChargeEnd = false;
+           			moveCharge = false;
+            		TransformationMonstreBall();
+        		}
 
             }
             
@@ -394,17 +469,18 @@ public class MonsterControllerF : MonoBehaviour {
 
 
         //transform.Translate(transform.forward*Time.deltaTime/*speedMonster*/); //Marche pas
-        if(eatPlayer)
+        if(eatPlayer && !monsterModeCharge)
         {
             transform.rotation = Quaternion.LookRotation(rotationToGoal);
         }
         else if(monsterModeCharge)
         {
-            Debug.Log("charge");
+            //Debug.Log("charge");
             if (!moveCharge)
                 transform.LookAt(DirectionMonster, Vector3.up);
             else
                 transform.position += transform.forward * Time.deltaTime * speedMonsterCharge;
+            transform.position = new Vector3(transform.position.x, 3.8f, transform.position.z);
         }
         else
         {
@@ -419,41 +495,94 @@ public class MonsterControllerF : MonoBehaviour {
         canYell = true;
     }
 
-    public void Respawn()
+    public void RespawnBall()
     {
+        GetComponentInChildren<TeleportationF>().InstantTP(true);
+        canCount = false;
         body.velocity = Vector3.zero;
         body.angularVelocity = Vector3.zero;
-        //transform.rotation = Quaternion.identity;
         transform.eulerAngles = new Vector3(0,UnityEngine.Random.Range(0,360),0);
+
+        ballSpotlight.SetActive(false);
+        monsterSpotlight.SetActive(false);
+        ragingFx.gameObject.SetActive(false);
+
         transform.position = respawnPositionBall;
+        body.useGravity = false;
 
-        sound.PlayEvent("VX_Balle_RemiseEnJeu", gameObject);
+        StartCoroutine(WaitRespawn());
+        //Camera cam = Camera.allCameras[0];
+        //if(cam.GetComponent<CameraManagerF>() != null)
+        //{
+        //    cam.GetComponent<CameraManagerF>().Respawn();
+        //}
 
-        Camera cam = Camera.allCameras[0];
-        if(cam.GetComponent<CameraManagerF>() != null)
-        {
-            cam.GetComponent<CameraManagerF>().Respawn();
-        }
-
-        StartCoroutine(Intouchable());
+        
     }
 
-    IEnumerator LoadingCharge()
+    IEnumerator WaitRespawn()
+    {
+        chooseNewRespawn = true;
+        lightRespawn.transform.LookAt(new Vector3(0,0,respawnDistanceToCenter));
+        lightRespawn.gameObject.SetActive(true);
+        yield return new WaitForSeconds(UnityEngine.Random.Range(durationMiniRandomRespawn,durationMaxiRandomRespawn));
+        chooseNewRespawn = false;
+        RaycastHit hit;
+        Physics.Raycast(lightRespawn.transform.position,lightRespawn.transform.forward,out hit);
+        
+
+        Debug.Log(hit.transform.name);
+
+        lightRespawn.gameObject.SetActive(false);
+        sound.PlayEvent("VX_Balle_RemiseEnJeu", gameObject);
+        transform.position = new Vector3(hit.point.x, 5, hit.point.z);
+        body.useGravity = true;
+        canCount = true;
+        if (monsterForm)
+        {
+            ballSpotlight.SetActive(false);
+            monsterSpotlight.SetActive(true);
+        }
+        else
+        {
+            ballSpotlight.SetActive(true);
+            monsterSpotlight.SetActive(false);
+        }
+        
+        ragingFx.gameObject.SetActive(true);
+        GetComponentInChildren<TeleportationF>().SetTeleportation(false);
+        StartCoroutine(Intouchable());
+
+    }
+
+    public void SafeRespawn()
+    {
+        transform.position = respawnPositionBall;
+    }
+
+    /*IEnumerator LoadingCharge()
     {
         yield return new WaitForSeconds(durationLoadingCharge);
         //regarde la cible
-        timeCharge = Time.time + durationUpSpeedCharge;
+        //timeCharge = Time.time + durationUpSpeedCharge;
+        Camera.main.GetComponent<CameraShake>().shake(0.8f, 3.0f, 1.5f);
         canEat = true;
         moveCharge = true;
-    }
-
-    void TransformationBallMonstre()
+    }*/
+	public void StartCharge(){
+		Camera.main.GetComponent<CameraShake>().shake(0.8f, 3.0f, 1.5f);
+		canEat = true;
+		moveCharge = true;
+	}
+	
+	void TransformationBallMonstre()
     {
         // feedbacks pré-transformation
         Camera.main.GetComponent<CameraShake>().shake(2.0f, 0.15f, 0.01f);
         commentariesScript.WriteCommentary("both", "monsterP");
 
         transforming = true;
+        childBall.localScale = baseScaleBall;
         timeTransforming = 0;
         //taille + magnet + variable
         wrath = 0;
@@ -461,14 +590,14 @@ public class MonsterControllerF : MonoBehaviour {
             callDisableMagnet();
 
         
-        sound.PlayEvent("Tranfo_BalleMonstre", gameObject);
+        sound.PlayEvent("Transfo_BalleMonstre", gameObject);
         sound.PlayEvent("Music_Monstre", gameObject);
         striker = null;
     }
     
     void TransformationMonstreBall()
     {
-        sound.PlayEvent("Tranfo_MonstreBalle", gameObject);
+        sound.PlayEvent("Transfo_MonstreBalle", gameObject);
         sound.StopEvent("Music_Monstre", gameObject, 1000);
         skinBall.SetActive(true);
         skinMonster.SetActive(false);
@@ -487,9 +616,11 @@ public class MonsterControllerF : MonoBehaviour {
         monsterForm = false;
 
         //feedbacks fin monstre
+        ballSpotlight.GetComponent<ballSpotlight>().position();
         ballSpotlight.SetActive(true);
         monsterSpotlight.SetActive(false);
         ambiantLight.intensity = intensityWhenBall;
+
         commentariesScript.WriteCommentary("both", "ballP");
     }
 
@@ -498,15 +629,12 @@ public class MonsterControllerF : MonoBehaviour {
 
         TransformationBallMonstre();
 
-        transfoFury.GetComponent<ParticleSystem>().Play();
+        transfoFury.Play();
 
         yield return new WaitForSeconds(summon / 2);
 
         smokeFury.transform.position = transform.position;
-        smokeFury.GetComponent<ParticleSystem>().Play();
-
-        //GameObject smokeFury = Instantiate(Resources.Load("Fumee", typeof(GameObject)), transform.position, Quaternion.identity) as GameObject;
-        //GameObject transfoFury = Instantiate(Resources.Load("Transformation_particules", typeof(GameObject)), transform.position, Quaternion.identity) as GameObject;
+        smokeFury.Play();
 
         yield return new WaitForSeconds(summon/2);
 
@@ -514,10 +642,11 @@ public class MonsterControllerF : MonoBehaviour {
 
         //feedbacks post-transformation
         Camera.main.GetComponent<CameraShake>().shake(0.8f, 3.0f, 1.5f);
-        
+
+        monsterSpotlight.GetComponent<ballSpotlight>().position();
         ballSpotlight.SetActive(false);
         monsterSpotlight.SetActive(true);
-        ambiantLight.intensity = intensityWhenMonster;
+        //ambiantLight.intensity = intensityWhenMonster;
 
         monsterForm = true;
 
@@ -525,23 +654,24 @@ public class MonsterControllerF : MonoBehaviour {
         skinMonster.SetActive(true);
         transform.localScale *= monsterScale;
 
-        transfoFury.GetComponent<ParticleSystem>().Stop();
-        smokeFury.GetComponent<ParticleSystem>().Stop();
+        transfoFury.Stop();
+        smokeFury.Stop();
 
 
-        int actualCycleMonster = 0;
+        //int actualCycleMonster = 0;
 
        // while (actualCycleMonster<nbCycleMonster)
         //{
         yield return new WaitForSeconds(durationFirstPart);
             if (!monsterModeCharge)
             {
-                Debug.Log("choix player");
-
-                targetCharge = GameControllerF.GetPlayer(/*(int)UnityEngine.Random.Range(1,5)*/1);
+                targetCharge = GameControllerF.GetTargetCharge();
                 Debug.Log(targetCharge.name);
-                actualCycleMonster++;
+                //actualCycleMonster++;
                 monsterModeCharge = true;
+                currentNumberOfRebounds = 0;
+			totalNumberOfRebounds = 0;
+				currentNumberOfChargeEatenPlayers = 0;
             }
        // }
 
@@ -554,9 +684,18 @@ public class MonsterControllerF : MonoBehaviour {
 
         Vector3 reposition = magnet.transform.position;
         reposition.x += magnet.transform.forward.x * spaceBetweenBallPlayer;
-        reposition.y = magnet.transform.position.y - transform.localScale.y;
+        reposition.y = magnet.transform.position.y - magnet.transform.localScale.y/3f;
         reposition.z += magnet.transform.forward.z * spaceBetweenBallPlayer;
         transform.position = reposition;
+
+        if (magnet.GetComponent<PlayerControllerF>().isRunning)
+        {
+            body.AddTorque(magnet.transform.forward * 10,ForceMode.Acceleration);
+        }
+        else
+        {
+            body.angularVelocity = Vector3.zero;
+        }
     }
 
     void SetMagnet()
@@ -572,6 +711,9 @@ public class MonsterControllerF : MonoBehaviour {
                 magnet.GetComponent<PlayerControllerF>().SetMagnet(true);
 
                 body.velocity = Vector3.zero;
+
+                childBall.localScale = baseScaleBall;
+
             }        
         }
     }
@@ -606,7 +748,7 @@ public class MonsterControllerF : MonoBehaviour {
 
         eatPlayer = true;
         player.GetComponent<PlayerControllerF>().isEaten = true;
-        //player.GetComponent<CharacterController>().enabled = false;
+        player.GetComponent<CharacterController>().enabled = false;
         player.GetComponent<Collider>().enabled = false;
         player.GetComponent<PlayerControllerF>().joueurMange++;
         //faire disparaitre le joueur, jouer l'anim du monstre qui mache et téléporter le joueur dans le monstre et le stun
@@ -624,13 +766,25 @@ public class MonsterControllerF : MonoBehaviour {
         else
             goal = GameControllerF.GetPosRedGoal();
 
-		if(GetComponentInChildren<Animator>()) GetComponentInChildren<Animator>().SetTrigger("spit");
+		if (!monsterModeCharge) {
 
-        yield return new WaitForSeconds(durationEatingPlayer);
-        
-        //Faire réapparaitre le joueur
-        //player.GetComponent<Renderer>().enabled = true;
-        //player.GetComponentInChildren<SkinnedMeshRenderer>().enabled = true;
+			if (GetComponentInChildren<Animator> ())
+				GetComponentInChildren<Animator> ().SetTrigger ("spit");
+
+			//feedbacks chewing
+			saliveDroite.Play ();
+			saliveGauche.Play ();
+
+			yield return new WaitForSeconds (durationEatingPlayer);
+
+			saliveDroite.Stop ();
+			saliveGauche.Stop ();
+
+			//Faire réapparaitre le joueur
+			//player.GetComponent<Renderer>().enabled = true;
+			//player.GetComponentInChildren<SkinnedMeshRenderer>().enabled = true;
+		}
+		else currentNumberOfChargeEatenPlayers++;
         foreach (Renderer renderer in player.GetComponentsInChildren<Renderer>())
         {
             if (renderer.name == "arme" || renderer.name == "Nivek" || renderer.name == "Circle") { renderer.enabled = true; }
@@ -646,17 +800,17 @@ public class MonsterControllerF : MonoBehaviour {
 
         yield return new WaitForSeconds(0.1f);
 
-        if (monsterModeCharge)
+       /* if (monsterModeCharge)
         {
             monsterModeCharge = false;
             loadingChargeEnd = false;
             moveCharge = false;
             TransformationMonstreBall();
-        }
+        }*/
 
         eatPlayer = false;
         player.GetComponent<PlayerControllerF>().isEaten = false;
-        //player.GetComponent<CharacterController>().enabled = true;
+        player.GetComponent<CharacterController>().enabled = true;
         player.GetComponent<Collider>().enabled = true;
     }
 
@@ -669,6 +823,7 @@ public class MonsterControllerF : MonoBehaviour {
     public void AddWrath(int wrath)
     {
         this.wrath += wrath;
+        ragingFx.Play();
     }
 
     /**
@@ -789,14 +944,32 @@ public class MonsterControllerF : MonoBehaviour {
 
     void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.name == "socle")
-        {
-            Debug.Log("collision socle");
-        }
 
-        if (other.gameObject.tag == "TeamBlu" || other.gameObject.tag == "TeamRed")
+        if (monsterForm && transforming && other.gameObject.transform.parent.name == "stadium 21")
         {
-            Debug.Log("collision player");
+            Vector3 averageContactPoint = Vector3.zero;
+            Vector3 averageContactNormal = Vector3.zero;
+
+            foreach (ContactPoint contact in other.contacts)
+            {
+                averageContactPoint += contact.point;
+                averageContactNormal += contact.normal;
+            }
+
+            averageContactPoint = averageContactPoint / other.contacts.Length;
+            averageContactNormal = averageContactNormal / other.contacts.Length;
+            averageContactNormal.Normalize();
+
+            if (
+                    (averageContactPoint.x > 0 && averageContactNormal.x > 0) ||
+                    (averageContactPoint.x < 0 && averageContactNormal.x < 0) ||
+                    (averageContactPoint.z > 0 && averageContactNormal.z > 0) ||
+                    (averageContactPoint.z < 0 && averageContactNormal.z < 0)
+                )
+            {
+                SafeRespawn();
+                Debug.Log("saferespawn by collision");
+            }
         }
     }
 }

@@ -9,12 +9,13 @@ public class GameManagerF : MonoBehaviour {
 		opening,
 		choosePlayer,
 		playerPlacement,
-		inGame
+		inGame,
+		quickTest
 	};
 
 	public Step state = Step.opening;
-    private string blue = "#68C5EE";
-    private string red = "#AB0101";
+    //private string blue = "#68C5EE";
+    //private string red = "#AB0101";
 
     private int bluScore = 0;
     private int redScore = 0;
@@ -31,14 +32,15 @@ public class GameManagerF : MonoBehaviour {
     private bool bonusCanPopUp = true;
 
     private bool displayEnd = false;
+	private bool kickOff = false;
+	private bool quickTestLaunched = false;
+    
+	public int whenToBeginEndTimer = 5;
 
-    public int whenToBeginEndTimer = 5;
-
-    private GameObject lastPlayerHitting;
-
-
-
+	public int nextStateValidationRemaining = 4; // if you want to test with one player only, just set it to 1
 	// Use this for initialization
+
+    private TwitterFeed twitterScript;
 
     void Start()
     {
@@ -48,7 +50,12 @@ public class GameManagerF : MonoBehaviour {
 
         RefreshDuration();
         RefreshScore();
-        StartCoroutine(matchDuration());
+
+        twitterScript = GameObject.Find("tweets").GetComponent<TwitterFeed>();
+
+        GameControllerF.GetMonster().GetComponent<MonsterControllerF>().ballSpotlight.SetActive(false);
+        GameControllerF.GetMonster().GetComponent<MonsterControllerF>().monsterSpotlight.SetActive(false);
+
     }
 	
 	// Update is called once per frame
@@ -58,14 +65,8 @@ public class GameManagerF : MonoBehaviour {
 
 		switch (state) {
 
-		case Step.opening :
-			break;
-		case Step.choosePlayer :
-			break;
-		case Step.playerPlacement :
-			break;
-
-		default : 
+		
+		case Step.inGame : 
 			if (durationInSecond <= 0)
 			{
 				Time.timeScale = 0;
@@ -80,10 +81,70 @@ public class GameManagerF : MonoBehaviour {
 				}
 				
 			}
+			break;
+		
+		case Step.choosePlayer :
+			if( nextStateValidationRemaining != 0)
+				break;
+            
+            // changement des jerseys
+            for (int i = 1; i < 5; i++)
+            {
+
+                PlayerControllerF playerScript = GameControllerF.GetPlayer(i).GetComponent<PlayerControllerF>();
+                int positionPlayerTested = playerScript.GetPositionControllerSelection();
+                if (GameControllerF.GetJerseyPositionsAtStart().ContainsKey(positionPlayerTested))
+                {
+                    playerScript.jersey = GameControllerF.GetJerseyPositionsAtStart()[positionPlayerTested];
+                    playerScript.initPlayer();
+                }
+                else
+                {
+                    Debug.Log("Bug on init jerseys for player : " + playerScript.gameObject.name);
+                }
+
+
+            }
+
+			GameObject.Find("Main Camera").GetComponent<Animator>().enabled = true;
+			nextStateValidationRemaining = 4;
+			state = Step.playerPlacement;
+			break;
+		
+		case Step.playerPlacement :
+			if( nextStateValidationRemaining != 0)
+				break;
+			nextStateValidationRemaining = 4;
+
+            //GameControllerF.GetMonster().GetComponent<Rigidbody>().velocity = Vector3.zero;
+            //TeleportationF telMonster = GameControllerF.GetMonster().GetComponentInChildren<TeleportationF>();
+            //telMonster.InstantTP(true);
+            //telMonster.SetTeleportation(false);
+						
+			if(!kickOff) StartCoroutine(WaitForKickOff());
+
 
 			break;
 
+		case Step.quickTest: 
+			if(!quickTestLaunched){
+				quickTestLaunched = true;
+				StartCoroutine(matchDuration());
+			}
+            twitterScript.SetCanDisplay(true);
+            twitterScript.LaunchFirstTweet();
 
+			GameObject.Find("ball_monster").GetComponent<MeshRenderer>().enabled = true;
+            GameControllerF.GetMonster().GetComponent<MonsterControllerF>().RespawnBall();
+			GameObject.Find("Main Camera").GetComponent<Animator>().SetTrigger("finalPosition");
+            GameObject.Find("Main Camera").GetComponent<Animator>().enabled = false;
+			GameControllerF.GetPlayer (1).GetComponent<PlayerControllerF>().Respawn();
+			GameControllerF.GetPlayer (2).GetComponent<PlayerControllerF>().Respawn();
+			GameControllerF.GetPlayer (3).GetComponent<PlayerControllerF>().Respawn();
+			GameControllerF.GetPlayer (4).GetComponent<PlayerControllerF>().Respawn();
+
+			state = Step.inGame;
+			break;
 
 		}
         
@@ -182,13 +243,46 @@ public class GameManagerF : MonoBehaviour {
         Instantiate(GameControllerF.GetCake(),rngPop,Quaternion.identity);
     }
 
-    public GameObject GetLastPlayerHitting()
+	public void validNextState(bool valid)
     {
-        return lastPlayerHitting;
+        if (valid)
+            nextStateValidationRemaining--;
+        else
+            nextStateValidationRemaining++;
+	}
+
+	IEnumerator WaitForKickOff(){
+
+		kickOff = true;
+
+        GameControllerF.GetMonster().transform.FindChild("ball_monster").GetComponent<MeshRenderer>().enabled = true;
+
+        GameControllerF.GetMonster().GetComponent<MonsterControllerF>().RespawnBall();
+
+		GameObject.Find ("Commentaries").GetComponent<TextCommentaries> ().WriteCommentary ("", "matchB");
+
+        GameObject.Find("Main Camera").GetComponent<Animator>().enabled = false;
+
+        twitterScript.SetCanDisplay(true);
+        twitterScript.LaunchFirstTweet();
+
+		yield return new WaitForSeconds(3.0f);
+
+		GameObject.Find ("Commentaries").GetComponent<TextCommentaries> ().WriteCommentary ("", "ballP");
+		StartCoroutine (matchDuration ());
+
+		state = Step.inGame;
+		
+	}
+
+    public int GetBlueScore()
+    {
+        return bluScore;
     }
 
-    public void SetLastPlayerHitting(GameObject player)
+    public int GetRedScore()
     {
-        lastPlayerHitting = player;
+        return redScore;
     }
+
 }

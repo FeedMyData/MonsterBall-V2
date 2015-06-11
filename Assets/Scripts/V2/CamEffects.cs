@@ -3,13 +3,14 @@ using System.Collections;
 
 public class CamEffects : MonoBehaviour {
 
-    public GameObject monster;
-    public Transform boneToFollowWhenChewing;
+    public GameObject monster; //monster1
+    public Transform boneToFollowWhenChewing; //bone16
     public float camMoveFactor = 0.5f;
 
     private Vector3 originalCamPos;
 
     private bool repositionned = false;
+    private bool animatorDesactivated = false;
 
 	// Use this for initialization
 	void Start () {
@@ -23,7 +24,6 @@ public class CamEffects : MonoBehaviour {
 
         if (monster.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("SpitPlayer"))
         {
-
             transform.localPosition = originalCamPos + boneToFollowWhenChewing.forward * camMoveFactor;
             repositionned = false;
 
@@ -35,9 +35,28 @@ public class CamEffects : MonoBehaviour {
         }
 
 	}
-	public void StopAnimation(){
-		if (GetComponent<Animator> ())
-			GetComponent<Animator> ().enabled = false;
+
+	public void GoToChoosePlayerState(){
+
+		gameObject.GetComponent<Animator> ().enabled = false;
+
+		GameControllerF.GetPlayer (1).GetComponentInChildren<Animator> ().SetTrigger ("stretch");
+		GameControllerF.GetPlayer (2).GetComponentInChildren<Animator> ().SetTrigger ("fence");
+		GameControllerF.GetPlayer (3).GetComponentInChildren<Animator> ().SetTrigger ("highKnee");
+		GameControllerF.GetPlayer (4).GetComponentInChildren<Animator> ().SetTrigger ("tap");
+
+
+		StartCoroutine (WaitForBeginningAnimationEnd ());
+	}
+
+	IEnumerator WaitForBeginningAnimationEnd(){
+		yield return new WaitForSeconds(5f);
+		GameControllerF.GetPlayer (1).transform.FindChild ("AButtonSprite").GetComponent<SpriteRenderer> ().enabled = true;
+		GameControllerF.GetPlayer (2).transform.FindChild ("AButtonSprite").GetComponent<SpriteRenderer> ().enabled = true;
+		GameControllerF.GetPlayer (3).transform.FindChild ("AButtonSprite").GetComponent<SpriteRenderer> ().enabled = true;
+		GameControllerF.GetPlayer (4).transform.FindChild ("AButtonSprite").GetComponent<SpriteRenderer> ().enabled = true;
+		GameControllerF.getManager ().state = GameManagerF.Step.choosePlayer;
+
 	}
     public bool GetRepositionned()
     {

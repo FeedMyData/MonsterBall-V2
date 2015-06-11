@@ -11,6 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64e666e89aeccd84bac5d95a4d1f9d0e, type: 3}
   m_Name: AkWwiseProjectData 490
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   CurrentPluginConfig: 
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
@@ -596,6 +597,17 @@ MonoBehaviour:
   ExpandedItems: []
   m_lastPopulateTimePsrt1: -166860342
   m_lastPopulateTimePart2: -1999475321
+=======
+  CurrentPluginConfig: Profile
+  EventWwu: []
+  AuxBusWwu: []
+  StateWwu: []
+  SwitchWwu: []
+  BankWwu: []
+  ExpandedItems: []
+  m_lastPopulateTimePsrt1: 0
+  m_lastPopulateTimePart2: 0
+>>>>>>> origin/master
   autoPopulateEnabled: 1
   basePath: Audio\GeneratedSoundBanks
   language: English(US)

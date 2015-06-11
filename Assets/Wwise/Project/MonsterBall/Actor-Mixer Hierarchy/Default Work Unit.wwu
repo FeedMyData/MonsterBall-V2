@@ -505,7 +505,7 @@
 												</Property>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>-4</Value>
+														<Value>-15</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -947,7 +947,7 @@
 								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="6"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-4</Value>
+										<Value>-19</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -1585,15 +1585,6 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="SFX_Electronic_ShortImpact-03" ID="{28A0CD5F-0AAF-4355-BECA-F28FE14497B3}" ShortID="349407121" Type="SoundFX">
-									<PropertyList>
-										<Property Name="Pitch" Type="int32">
-											<ModifierList>
-												<ModifierInfo>
-													<Modifier Name="" ID="{38E39F07-8F3C-4EF9-9607-EC0D8E1244DB}"/>
-												</ModifierInfo>
-											</ModifierList>
-										</Property>
-									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
@@ -2174,11 +2165,6 @@
 						</ActorMixer>
 						<RandomSequenceContainer Name="SFX_Batte_Charge" ID="{1E8F8982-6462-44AD-B7CB-82CF61843427}" ShortID="533866854">
 							<PropertyList>
-								<Property Name="MakeUpGain" Type="Real64">
-									<ValueList>
-										<Value>3</Value>
-									</ValueList>
-								</Property>
 								<Property Name="Pitch" Type="int32">
 									<ValueList>
 										<Value>-380</Value>
@@ -2193,11 +2179,6 @@
 											</Modifier>
 										</ModifierInfo>
 									</ModifierList>
-								</Property>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>6</Value>
-									</ValueList>
 								</Property>
 							</PropertyList>
 							<ReferenceList>
@@ -2233,13 +2214,6 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="SFX_Coup_Charge_02" ID="{4691862F-85EA-4BCC-BF08-2D9E7A536054}" ShortID="509140967" Type="SoundFX">
-									<PropertyList>
-										<Property Name="Pitch" Type="int32">
-											<ValueList>
-												<Value>430</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
@@ -2310,7 +2284,7 @@
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>3</Value>
+												<Value>-7</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -2341,11 +2315,6 @@
 								</Sound>
 								<Sound Name="SFX_But_ShakeCamera_01" ID="{2AB34BFD-F9D7-40E0-A750-5BB481B43FE0}" ShortID="703565544" Type="SoundFX">
 									<PropertyList>
-										<Property Name="MakeUpGain" Type="Real64">
-											<ValueList>
-												<Value>4</Value>
-											</ValueList>
-										</Property>
 										<Property Name="Pitch" Type="int32">
 											<ModifierList>
 												<ModifierInfo>
@@ -2367,7 +2336,7 @@
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>4</Value>
+												<Value>-2</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -2409,17 +2378,12 @@
 										</Property>
 										<Property Name="Pitch" Type="int32">
 											<ValueList>
-												<Value>-680</Value>
+												<Value>-480</Value>
 											</ValueList>
-											<ModifierList>
-												<ModifierInfo>
-													<Modifier Name="" ID="{47929842-32EC-404D-B208-98CC4594B203}"/>
-												</ModifierInfo>
-											</ModifierList>
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-3</Value>
+												<Value>-11</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -2449,14 +2413,9 @@
 								</Sound>
 								<Sound Name="SFX_But_Gong_02" ID="{93CE2225-15DB-41F3-A07A-39B12C5696BF}" ShortID="217137144" Type="SoundFX">
 									<PropertyList>
-										<Property Name="Pitch" Type="int32">
-											<ValueList>
-												<Value>-300</Value>
-											</ValueList>
-										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-1</Value>
+												<Value>-4</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -2860,6 +2819,7 @@
 								</Sound>
 							</ChildrenList>
 						</RandomSequenceContainer>
+<<<<<<< HEAD
 						<RandomSequenceContainer Name="Niveks_Footsteps" ID="{C2596DA6-61C0-47E4-B677-F1843296E3AC}" ShortID="146980866">
 							<PropertyList>
 								<Property Name="OverrideEffect" Type="bool" Value="True"/>
@@ -3436,6 +3396,8 @@
 								</Sound>
 							</ChildrenList>
 						</BlendContainer>
+=======
+>>>>>>> origin/master
 					</ChildrenList>
 				</ActorMixer>
 				<ActorMixer Name="Voix" ID="{F502A3E4-B6F3-45C2-B677-F625DAFE42CA}" ShortID="345599444">
@@ -3851,11 +3813,6 @@
 								<RandomSequenceContainer Name="CoupRecu" ID="{6A2724C3-5957-4C8D-B1A4-46CC9C9BCB62}" ShortID="893949498">
 									<PropertyList>
 										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="6"/>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>5</Value>
-											</ValueList>
-										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">

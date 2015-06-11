@@ -11,16 +11,16 @@ Shader "Shader Forge/TP" {
         _alpha_slider ("alpha_slider", Range(0, 80)) = 80
         _alpha_neg ("alpha_neg", 2D) = "bump" {}
         _alpha_base ("alpha_base", 2D) = "white" {}
-        _Neg ("Neg", Float ) = 0.1
+        _Neg ("Neg", Float ) = -0.1
         _Base ("Base", Float ) = 0.2
-        _coeff ("coeff", Float ) = 0.001
+        _coeff ("coeff", Float ) = 0.01
         _Coeff_2 ("Coeff_2", Float ) = 0.3
         _divide_color ("divide_color", Float ) = 10
         _normale ("normale", 2D) = "white" {}
         _node_1632 ("node_1632", Float ) = -0.125
         _Neg_copy ("Neg_copy", Float ) = 10
         _Color_base ("Color_base", Color) = (0.1172414,0,1,1)
-        _Test2 ("Test2", Float ) = 80
+        _Test2 ("Test2", Float ) = 100
         _Color_tp ("Color_tp", Color) = (1,0,0,1)
         _Ramp ("Ramp", 2D) = "black" {}
         _Out ("Out", Float ) = 0.05
@@ -83,7 +83,7 @@ Shader "Shader Forge/TP" {
                 float3 recipObjScale = float3( length(_World2Object[0].xyz), length(_World2Object[1].xyz), length(_World2Object[2].xyz) );
                 float node_4873 = ((_divide_color/_alpha_slider)+_node_1632);
                 float4 _alpha_neg_var = tex2Dlod(_alpha_neg,float4(TRANSFORM_TEX(o.uv0, _alpha_neg),0.0,0));
-                v.vertex.xyz += (recipObjScale.g*(node_4873*_Neg_copy)*_alpha_neg_var.rgb*float3(0,0,1));
+                v.vertex.xyz += (recipObjScale.g*(node_4873*_Neg_copy)*_alpha_neg_var.rgb*float3(-1,0,0));
                 o.pos = mul(UNITY_MATRIX_MVP, float4(v.vertex.xyz + v.normal*_Out,1));
                 UNITY_TRANSFER_FOG(o,o.pos);
                 return o;
@@ -162,7 +162,7 @@ Shader "Shader Forge/TP" {
                 float3 recipObjScale = float3( length(_World2Object[0].xyz), length(_World2Object[1].xyz), length(_World2Object[2].xyz) );
                 float node_4873 = ((_divide_color/_alpha_slider)+_node_1632);
                 float4 _alpha_neg_var = tex2Dlod(_alpha_neg,float4(TRANSFORM_TEX(o.uv0, _alpha_neg),0.0,0));
-                v.vertex.xyz += (recipObjScale.g*(node_4873*_Neg_copy)*_alpha_neg_var.rgb*float3(0,0,1));
+                v.vertex.xyz += (recipObjScale.g*(node_4873*_Neg_copy)*_alpha_neg_var.rgb*float3(-1,0,0));
                 o.posWorld = mul(_Object2World, v.vertex);
                 float3 lightColor = _LightColor0.rgb;
                 o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
@@ -262,7 +262,7 @@ Shader "Shader Forge/TP" {
                 float3 recipObjScale = float3( length(_World2Object[0].xyz), length(_World2Object[1].xyz), length(_World2Object[2].xyz) );
                 float node_4873 = ((_divide_color/_alpha_slider)+_node_1632);
                 float4 _alpha_neg_var = tex2Dlod(_alpha_neg,float4(TRANSFORM_TEX(o.uv0, _alpha_neg),0.0,0));
-                v.vertex.xyz += (recipObjScale.g*(node_4873*_Neg_copy)*_alpha_neg_var.rgb*float3(0,0,1));
+                v.vertex.xyz += (recipObjScale.g*(node_4873*_Neg_copy)*_alpha_neg_var.rgb*float3(-1,0,0));
                 o.posWorld = mul(_Object2World, v.vertex);
                 float3 lightColor = _LightColor0.rgb;
                 o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
@@ -343,7 +343,7 @@ Shader "Shader Forge/TP" {
                 float3 recipObjScale = float3( length(_World2Object[0].xyz), length(_World2Object[1].xyz), length(_World2Object[2].xyz) );
                 float node_4873 = ((_divide_color/_alpha_slider)+_node_1632);
                 float4 _alpha_neg_var = tex2Dlod(_alpha_neg,float4(TRANSFORM_TEX(o.uv0, _alpha_neg),0.0,0));
-                v.vertex.xyz += (recipObjScale.g*(node_4873*_Neg_copy)*_alpha_neg_var.rgb*float3(0,0,1));
+                v.vertex.xyz += (recipObjScale.g*(node_4873*_Neg_copy)*_alpha_neg_var.rgb*float3(-1,0,0));
                 o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
                 TRANSFER_SHADOW_COLLECTOR(o)
                 return o;
@@ -412,7 +412,7 @@ Shader "Shader Forge/TP" {
                 float3 recipObjScale = float3( length(_World2Object[0].xyz), length(_World2Object[1].xyz), length(_World2Object[2].xyz) );
                 float node_4873 = ((_divide_color/_alpha_slider)+_node_1632);
                 float4 _alpha_neg_var = tex2Dlod(_alpha_neg,float4(TRANSFORM_TEX(o.uv0, _alpha_neg),0.0,0));
-                v.vertex.xyz += (recipObjScale.g*(node_4873*_Neg_copy)*_alpha_neg_var.rgb*float3(0,0,1));
+                v.vertex.xyz += (recipObjScale.g*(node_4873*_Neg_copy)*_alpha_neg_var.rgb*float3(-1,0,0));
                 o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
                 TRANSFER_SHADOW_CASTER(o)
                 return o;

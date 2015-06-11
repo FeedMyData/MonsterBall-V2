@@ -223,7 +223,7 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 4.07515743e-10
+      - time: 0
         functionName: EmitParticle
         data: 
         objectReferenceParameter: {fileID: 11500000, guid: 1c4c8b681a684464d9183c0fe0eff43f,
@@ -231,26 +231,10 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: .252934903
-        functionName: PlayRun
-        data: 
-        objectReferenceParameter: {fileID: 11500000, guid: 1688b88a82922d749b9283ca90118fb8,
-          type: 3}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
-      - time: .49961102
+      - time: .50420171
         functionName: EmitParticle
         data: 
         objectReferenceParameter: {fileID: 11500000, guid: 1c4c8b681a684464d9183c0fe0eff43f,
-          type: 3}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
-      - time: .750747561
-        functionName: PlayRun
-        data: 
-        objectReferenceParameter: {fileID: 11500000, guid: 1688b88a82922d749b9283ca90118fb8,
           type: 3}
         floatParameter: 0
         intParameter: 0
@@ -684,23 +668,7 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events:
-      - time: .0802350864
-        functionName: PlayRun
-        data: 
-        objectReferenceParameter: {fileID: 11500000, guid: 1688b88a82922d749b9283ca90118fb8,
-          type: 3}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
-      - time: .579968035
-        functionName: PlayRun
-        data: 
-        objectReferenceParameter: {fileID: 11500000, guid: 1688b88a82922d749b9283ca90118fb8,
-          type: 3}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
+      events: []
       transformMask:
       - path: 
         weight: 1

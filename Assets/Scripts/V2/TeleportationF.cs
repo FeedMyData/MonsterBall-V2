@@ -43,6 +43,24 @@ public class TeleportationF : MonoBehaviour {
             
     }
 
+    public void InstantTP(bool up)
+    {
+        actualValueShaderTP = ballMaterial[0].GetFloat("_alpha_slider");
+        Debug.Log("tpinstant " + ballMaterial[0].GetFloat("_alpha_slider"));
+
+        for (int i = 0; i < ballMaterial.Length; i++)
+        {
+            if (up)
+            {
+                ballMaterial[i].SetFloat("_alpha_slider", 0);
+            }
+            else
+            {
+                ballMaterial[i].SetFloat("_alpha_slider", 80);
+            }
+        }
+    }
+
     void TeleportationDown()
     {
         float delayTP = Mathf.Abs(((timeTP - Time.time) / durationTP) - 1);
@@ -61,6 +79,8 @@ public class TeleportationF : MonoBehaviour {
 
     public void SetTeleportation(bool up)
     {
+        actualValueShaderTP = ballMaterial[0].GetFloat("_alpha_slider");
+        Debug.Log("setPlayer " + ballMaterial[0].GetFloat("_alpha_slider"));
         if (up)
         {
             teleportationUp = true;
