@@ -23,6 +23,7 @@ public class GameManagerF : MonoBehaviour {
     private Text blueScoreTxt;
     private Text redScoreTxt;
     private Text txtDuration;
+    private Text chooseYourplayer;
 
     public int durationInSecond;
 
@@ -48,9 +49,15 @@ public class GameManagerF : MonoBehaviour {
         blueScoreTxt = GameControllerF.GetBlueScoreTxt();
         redScoreTxt = GameControllerF.GetRedScoreTxt();
         txtDuration = GameControllerF.GetTxtDuration();
+        chooseYourplayer = GameControllerF.GetChooseYourPlayer();
 
         RefreshDuration();
         RefreshScore();
+
+        blueScoreTxt.enabled = false;
+        redScoreTxt.enabled = false;
+        txtDuration.enabled = false;
+        chooseYourplayer.enabled = true;
 
         twitterScript = GameObject.Find("tweets").GetComponent<TwitterFeed>();
 
@@ -129,6 +136,7 @@ public class GameManagerF : MonoBehaviour {
                 }
                 else // le joueur n'a pas choisi de personnage (controllerPosition à 0)
                 {
+                    //Debug.Log("Bug on init jerseys for player : " + playerScriptTested.gameObject.name);
                     playersNotAssigned.Add(playerScriptTested);
                 }
 
@@ -153,7 +161,11 @@ public class GameManagerF : MonoBehaviour {
             }
 
 			GameObject.Find("Main Camera").GetComponent<Animator>().enabled = true;
+
 			nextStateValidationRemaining = 4;
+
+            StartCoroutine(FadeCanvasChooseYourPlayer());
+
 			state = Step.playerPlacement;
 			break;
 		
@@ -184,10 +196,20 @@ public class GameManagerF : MonoBehaviour {
             GameControllerF.GetMonster().GetComponent<MonsterControllerF>().RespawnBall();
 			GameObject.Find("Main Camera").GetComponent<Animator>().SetTrigger("finalPosition");
             GameObject.Find("Main Camera").GetComponent<Animator>().enabled = false;
-			GameControllerF.GetPlayer (1).GetComponent<PlayerControllerF>().Respawn();
-			GameControllerF.GetPlayer (2).GetComponent<PlayerControllerF>().Respawn();
-			GameControllerF.GetPlayer (3).GetComponent<PlayerControllerF>().Respawn();
-			GameControllerF.GetPlayer (4).GetComponent<PlayerControllerF>().Respawn();
+			GameControllerF.GetPlayer(1).GetComponent<PlayerControllerF>().Respawn();
+			GameControllerF.GetPlayer(2).GetComponent<PlayerControllerF>().Respawn();
+			GameControllerF.GetPlayer(3).GetComponent<PlayerControllerF>().Respawn();
+			GameControllerF.GetPlayer(4).GetComponent<PlayerControllerF>().Respawn();
+
+            GameControllerF.GetPlayer(1).GetComponent<PlayerControllerF>().DesactivateControllerSprite();
+            GameControllerF.GetPlayer(2).GetComponent<PlayerControllerF>().DesactivateControllerSprite();
+            GameControllerF.GetPlayer(3).GetComponent<PlayerControllerF>().DesactivateControllerSprite();
+            GameControllerF.GetPlayer(4).GetComponent<PlayerControllerF>().DesactivateControllerSprite();
+
+            blueScoreTxt.enabled = true;
+            redScoreTxt.enabled = true;
+            txtDuration.enabled = true;
+            chooseYourplayer.enabled = false;
 
 			state = Step.inGame;
 			break;
@@ -329,6 +351,55 @@ public class GameManagerF : MonoBehaviour {
     public int GetRedScore()
     {
         return redScore;
+    }
+
+    IEnumerator FadeCanvasChooseYourPlayer()
+    {
+        if (chooseYourplayer.GetComponent<Animator>())
+        {
+            chooseYourplayer.GetComponent<Animator>().enabled = false;
+        }
+        if (txtDuration.GetComponent<Animator>())
+        {
+            txtDuration.GetComponent<Animator>().enabled = false;
+        }
+        StartCoroutine(FadeText(1.0f, 0.0f, 1.5f, chooseYourplayer));
+        yield return new WaitForSeconds(2.0f);
+        StartCoroutine(FadeText(0.0f, 1.0f, 1.5f, txtDuration));
+        StartCoroutine(FadeText(0.0f, 1.0f, 1.5f, blueScoreTxt));
+        StartCoroutine(FadeText(0.0f, 1.0f, 1.5f, redScoreTxt));
+
+    }
+
+    IEnumerator FadeText(float beginAlpha, float endAlpha, float aTime, Text text)
+    {
+
+        text.enabled = true;
+        Color textColor = text.color;
+
+        for (float t = 0.0f; t < 1.0f; t += Time.deltaTime / aTime)
+        {
+            Color newColor = new Color(textColor.r, textColor.g, textColor.b, Mathf.Lerp(beginAlpha, endAlpha, t));
+            text.color = newColor;
+            Debug.Log(Mathf.Lerp(beginAlpha, endAlpha, t));
+            yield return null;
+        }
+
+        if (endAlpha < 0.01f)
+        {
+            text.enabled = false;
+            text.gameObject.SetActive(false);
+        }
+        else if (endAlpha > 0.99f)
+        {
+            text.color = new Color(textColor.r, textColor.g, textColor.b, 1.0f);
+        }
+
+        if (text.GetComponent<Animator>() && !text.GetComponent<Animator>().enabled)
+        {
+            text.GetComponent<Animator>().enabled = true;
+        }
+
     }
 
 }

@@ -1,18 +1,18 @@
 fileFormatVersion: 2
-guid: e1a1b13f33cc2574fb1a025f1355db8b
-timeCreated: 1433842442
+guid: a00f3ec37e07bc042a3fa7025439ef98
+timeCreated: 1434035718
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Controller_0
-    21300002: Controller_1
-    21300004: Controller_2
-    21300006: Controller_3
-    21300008: Controller_4
+    21300000: redController
+    21300002: leftArrow
+    21300004: blueController
+    21300006: whiteController
+    21300008: rightArrow
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     linearTexture: 0
     correctGamma: 0
     fadeOut: 0
@@ -35,7 +35,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
-    aniso: 16
+    aniso: -1
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
@@ -54,55 +54,55 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: Controller_0
+    - name: redController
       rect:
         serializedVersion: 2
-        x: 16
-        y: 116
-        width: 117
-        height: 69
+        x: 0
+        y: 512
+        width: 512
+        height: 512
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Controller_1
+    - name: leftArrow
       rect:
         serializedVersion: 2
-        x: 178
-        y: 134
-        width: 17
-        height: 34
+        x: 640
+        y: 640
+        width: 128
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Controller_2
+    - name: blueController
       rect:
         serializedVersion: 2
-        x: 227
-        y: 134
-        width: 17
-        height: 34
+        x: 0
+        y: 0
+        width: 512
+        height: 512
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Controller_3
+    - name: whiteController
       rect:
         serializedVersion: 2
-        x: 16
-        y: 16
-        width: 117
-        height: 69
+        x: 512
+        y: 0
+        width: 512
+        height: 512
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Controller_4
+    - name: rightArrow
       rect:
         serializedVersion: 2
-        x: 161
-        y: 15
-        width: 99
-        height: 69
+        x: 768
+        y: 640
+        width: 128
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

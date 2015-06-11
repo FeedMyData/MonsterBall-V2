@@ -40,23 +40,23 @@ public class CamEffects : MonoBehaviour {
 
 		gameObject.GetComponent<Animator> ().enabled = false;
 
-		GameControllerF.GetPlayer (1).GetComponentInChildren<Animator> ().SetTrigger ("stretch");
-		GameControllerF.GetPlayer (2).GetComponentInChildren<Animator> ().SetTrigger ("fence");
-		GameControllerF.GetPlayer (3).GetComponentInChildren<Animator> ().SetTrigger ("highKnee");
-		GameControllerF.GetPlayer (4).GetComponentInChildren<Animator> ().SetTrigger ("tap");
+		GameControllerF.GetPlayer(1).GetComponentInChildren<Animator>().SetTrigger("stretch");
+		GameControllerF.GetPlayer(2).GetComponentInChildren<Animator>().SetTrigger("fence");
+		GameControllerF.GetPlayer(3).GetComponentInChildren<Animator>().SetTrigger("highKnee");
+		GameControllerF.GetPlayer(4).GetComponentInChildren<Animator>().SetTrigger("tap");
 
 
 		StartCoroutine (WaitForBeginningAnimationEnd ());
 	}
 
 	IEnumerator WaitForBeginningAnimationEnd(){
-		yield return new WaitForSeconds(5f);
+		yield return new WaitForSeconds(0.2f);
         if (GameControllerF.getManager().state == GameManagerF.Step.opening)
         {
-            GameControllerF.GetPlayer(1).transform.FindChild("AButtonSprite").GetComponent<SpriteRenderer>().enabled = true;
-            GameControllerF.GetPlayer(2).transform.FindChild("AButtonSprite").GetComponent<SpriteRenderer>().enabled = true;
-            GameControllerF.GetPlayer(3).transform.FindChild("AButtonSprite").GetComponent<SpriteRenderer>().enabled = true;
-            GameControllerF.GetPlayer(4).transform.FindChild("AButtonSprite").GetComponent<SpriteRenderer>().enabled = true;
+            //GameControllerF.GetPlayer(1).transform.FindChild("AButtonSprite").GetComponent<SpriteRenderer>().enabled = true;
+            //GameControllerF.GetPlayer(2).transform.FindChild("AButtonSprite").GetComponent<SpriteRenderer>().enabled = true;
+            //GameControllerF.GetPlayer(3).transform.FindChild("AButtonSprite").GetComponent<SpriteRenderer>().enabled = true;
+            //GameControllerF.GetPlayer(4).transform.FindChild("AButtonSprite").GetComponent<SpriteRenderer>().enabled = true;
             GameControllerF.getManager().state = GameManagerF.Step.choosePlayer;
         }
 

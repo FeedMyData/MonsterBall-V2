@@ -110,14 +110,28 @@ public class PlayerControllerF : MonoBehaviour
 
     private int positionControllerSelection = 0;
     private float positionYControllerSelection;
-    private float[] positionsY = new float[4] {5.5f, 7.0f, 8.5f, 10.0f};
     private Vector3 positionXZNeutral;
+    private float[] positionsY;
     private Vector3 positionControllerSprite;
     private SpriteRenderer controllerSprite;
+    private SpriteRenderer[] arrows = new SpriteRenderer[2];
+    private Sprite[] spritesController;
+    private string[] namesSpriteSheetController;
     private bool isValidated = false;
     private bool hasMadeInputHorizontal = false;
     private bool hasArrived = false;
     private bool hasBegunRunning = false;
+
+    void Awake()
+    {
+        spritesController = Resources.LoadAll<Sprite>("Controller");
+        namesSpriteSheetController = new string[spritesController.Length];
+
+        for (int i = 0; i < namesSpriteSheetController.Length; i++)
+        {
+            namesSpriteSheetController[i] = spritesController[i].name;
+        }
+    }
 
     // Use this for initialization
     void Start()
@@ -126,6 +140,7 @@ public class PlayerControllerF : MonoBehaviour
         tp = GetComponentInChildren<TeleportationF>();
         manager = GameControllerF.getManager();
         positionXZNeutral = GameControllerF.GetPositionXZNeutral();
+        positionsY = GameControllerF.GetPositionsY();
 
         SpriteRenderer[] tabSprite = GetComponentsInChildren<SpriteRenderer>();
 
@@ -136,10 +151,23 @@ public class PlayerControllerF : MonoBehaviour
                 spriteGround = tabSprite[i];
             else if (tabSprite[i].name == "SpriteBonus")
                 spriteBonus = tabSprite[i];
-            else if (tabSprite[i].name == "AButtonSprite")
+            else if (tabSprite[i].name == "ControllerSprite")
             {
                 controllerSprite = tabSprite[i];
                 controllerSprite.enabled = false;
+                controllerSprite.sprite = spritesController[System.Array.IndexOf(namesSpriteSheetController, "whiteController")];
+            }
+            else if (tabSprite[i].name == "LeftA")
+            {
+                arrows[0] = tabSprite[i];
+                arrows[0].enabled = false;
+                arrows[0].sprite = spritesController[System.Array.IndexOf(namesSpriteSheetController, "leftArrow")];
+            }
+            else if (tabSprite[i].name == "RightA")
+            {
+                arrows[1] = tabSprite[i];
+                arrows[1].enabled = false;
+                arrows[1].sprite = spritesController[System.Array.IndexOf(namesSpriteSheetController, "rightArrow")];
             }
                 
         }
@@ -255,6 +283,14 @@ public class PlayerControllerF : MonoBehaviour
         positionControllerSprite = new Vector3(positionXZNeutral.x, positionYControllerSelection, positionXZNeutral.z);
         controllerSprite.transform.position = positionControllerSprite;
         controllerSprite.enabled = true;
+
+        Vector3 positionLArrow = new Vector3(positionXZNeutral.x - 1.5f, positionYControllerSelection, positionXZNeutral.z);
+        arrows[0].transform.position = positionLArrow;
+        arrows[0].enabled = true;
+
+        Vector3 positionRArrow = new Vector3(positionXZNeutral.x + 1.5f, positionYControllerSelection, positionXZNeutral.z);
+        arrows[1].transform.position = positionRArrow;
+        arrows[1].enabled = true;
 
     }
 
@@ -854,6 +890,13 @@ public class PlayerControllerF : MonoBehaviour
         this.loading = loading;
     }
 
+    public void DesactivateControllerSprite()
+    {
+        controllerSprite.gameObject.SetActive(false);
+        arrows[0].gameObject.SetActive(false);
+        arrows[1].gameObject.SetActive(false);
+    }
+
 	private void MoveToSpawn(){
 
         if (!hasBegunRunning)
@@ -864,6 +907,8 @@ public class PlayerControllerF : MonoBehaviour
                 hasBegunRunning = true;
                 hasArrived = false;
             }
+
+            DesactivateControllerSprite();
         }
 
 
@@ -992,7 +1037,13 @@ public class PlayerControllerF : MonoBehaviour
             if (canValidate)
             {
                 isValidated = true;
-                controllerSprite.enabled = false;
+
+                string colorController = "blueController";
+                if (GameControllerF.GetPlayerPositionsAtStart()[positionControllerSelection].team == GameControllerF.Team.Red)
+                {
+                    colorController = "redController";
+                }
+                controllerSprite.sprite = spritesController[System.Array.IndexOf(namesSpriteSheetController, colorController)];
                 GameControllerF.getManager().validNextState(true);
             }
 
@@ -1000,7 +1051,9 @@ public class PlayerControllerF : MonoBehaviour
         else if (isValidated && positionControllerSelection != 0)
         {
             isValidated = false;
-            controllerSprite.enabled = true;
+
+            controllerSprite.sprite = spritesController[System.Array.IndexOf(namesSpriteSheetController, "whiteController")];
+                
             GameControllerF.getManager().validNextState(false);
         }
     }

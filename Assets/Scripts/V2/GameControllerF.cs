@@ -40,6 +40,8 @@ public class GameControllerF : MonoBehaviour {
     private static Text staticRedScoreTxt;
     public Text txtDuration;
     private static Text staticTxtDuration;
+    public Text chooseYourPlayer;
+    private static Text staticChooseYourPlayer;
 
     [Header("Bonus")]
     public GameObject cake;
@@ -61,6 +63,7 @@ public class GameControllerF : MonoBehaviour {
     private static Dictionary<int, Vector3> positionsPlayersAtSelection = new Dictionary<int, Vector3>();
     private static Dictionary<int, PlayerControllerF> playerPositionsAtStart = new Dictionary<int, PlayerControllerF>();
     private static Vector3 positionXZNeutral = new Vector3(0.0f, 1.0f, 18.0f);
+    private static float[] positionsY = new float[4] { 5.5f, 7.0f, 8.5f, 10.0f };
 
 	// Use this for initialization
 	void Awake () {
@@ -87,6 +90,7 @@ public class GameControllerF : MonoBehaviour {
         staticBlueScoreTxt = blueScoreTxt;
         staticRedScoreTxt = redScoreTxt;
         staticTxtDuration = txtDuration;
+        staticChooseYourPlayer = chooseYourPlayer;
         staticBluGoal = bluGoal;
         staticRedGoal = redGoal;
         staticPosBluGoal = posBluGoal;
@@ -403,6 +407,11 @@ public class GameControllerF : MonoBehaviour {
         return staticTxtDuration;
     }
 
+    public static Text GetChooseYourPlayer()
+    {
+        return staticChooseYourPlayer;
+    }
+
     public static GameObject GetBluGoal()
     {
         return staticBluGoal;
@@ -441,6 +450,11 @@ public class GameControllerF : MonoBehaviour {
     public static Vector3 GetPositionXZNeutral()
     {
         return positionXZNeutral;
+    }
+
+    public static float[] GetPositionsY()
+    {
+        return positionsY;
     }
 
     public static GameObject GetCake()
