@@ -248,6 +248,7 @@ MonoBehaviour:
   durationLoadingCharge: 3
   numberOfReboundsToMaxSpeed: 10
   maxNumberOfChargeRebounds: 10
+  maxNumberOfPlayerEatenWhenCharge: 3
   minSpeedCharge: 40
   maxSpeedCharge: 80
   durationInvul: 2
@@ -16892,7 +16893,7 @@ MonoBehaviour:
   marginBetweenTweets: 5
   speedScrolling: 22
   refreshingRateWhenNoTweets: 2
-  positionToSearchForNewTweet: 0
+  positionToSearchForNewTweet: 330
   endScrollingPosition: {fileID: 1856855241}
   prefabTextTweet: {fileID: 11461560, guid: bba6d8dfc5a4c2f42a71f02eab9fd973, type: 2}
   reminderText: Tweet your reactions to <color=#55ACEE>@MBL_GAME</color> !
@@ -22056,7 +22057,7 @@ GameObject:
   - 114: {fileID: 1409434888}
   - 114: {fileID: 1409434887}
   - 114: {fileID: 1409434886}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: CanvasCracks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22122,7 +22123,7 @@ MonoBehaviour:
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
-  m_ScreenMatchMode: 1
+  m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
@@ -22144,7 +22145,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
 --- !u!1 &1413661399
 GameObject:
   m_ObjectHideFlags: 0
@@ -33408,7 +33409,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: 4
-  durationInSecond: 20
+  durationInSecond: 180
   ecranFin: {fileID: 1105067374}
   timeBetweenTwoBonus: 0
   whenToBeginEndTimer: 5

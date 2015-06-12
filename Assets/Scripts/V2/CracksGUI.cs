@@ -10,8 +10,9 @@ public class CracksGUI : MonoBehaviour {
     private List<RawImage> cracksAvailable;
     private List<RawImage> cracksEnabled;
 
-    private float minAlpha = 0.1f;
-    private float maxAlpha = 1.0f;
+    private float minAlpha = 0.2f;
+    private float maxAlpha = 0.8f;
+    private float timeDisappearing = 1.0f;
 
     private Color baseColor = new Color(1, 1, 1, 0);
     private Color currentAlphaColor = new Color(1, 1, 1, 0.0f);
@@ -31,6 +32,7 @@ public class CracksGUI : MonoBehaviour {
             textureRaw.enabled = false;
             textureRaw.texture = spritesCracks[i];
             textureRaw.color = baseColor;
+            textureRaw.rectTransform.sizeDelta = new Vector2(spritesCracks[i].width, spritesCracks[i].height);
 
             cracksAvailable.Add(textureRaw);
         }
@@ -48,7 +50,7 @@ public class CracksGUI : MonoBehaviour {
 
     public void DesactivateCracks()
     {
-        RemoveAllCracks();
+        StartCoroutine(RemoveAllCracks(timeDisappearing));
     }
 
     public void AddCrack(int currentRebound, float maxRebounds)
@@ -59,6 +61,7 @@ public class CracksGUI : MonoBehaviour {
 
         int numberToDisplay = Mathf.FloorToInt(objectsCracks.Length * percentageL);
         int numberToAdd = numberToDisplay - cracksEnabled.Count;
+
         if (numberToAdd > 0)
         {
             StartCoroutine(DisplayNewCracks(numberToAdd));
@@ -89,14 +92,24 @@ public class CracksGUI : MonoBehaviour {
         }
     }
 
-    void RemoveAllCracks()
+    IEnumerator RemoveAllCracks(float aTime)
     {
+        Color beginAlpha = currentAlphaColor;
+        for (float t = 0.0f; t < 1.0f; t += Time.deltaTime / aTime)
+        {
+            Color colorFading = new Color(1, 1, 1, Mathf.Lerp(beginAlpha.a, 0.0f, t));
+            foreach (RawImage crack in cracksEnabled)
+            {
+                crack.color = colorFading;
+            }
+            yield return null;
+        }
         foreach (RawImage crack in cracksEnabled)
         {
             crack.enabled = false;
-            crack.color = baseColor;
-            cracksEnabled.Remove(crack);
+            crack.color = new Color(1, 1, 1, 0.0f);
             cracksAvailable.Add(crack);
         }
+        cracksEnabled.Clear();
     }
 }

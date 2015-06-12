@@ -248,6 +248,7 @@ MonoBehaviour:
   durationLoadingCharge: 3
   numberOfReboundsToMaxSpeed: 10
   maxNumberOfChargeRebounds: 10
+  maxNumberOfPlayerEatenWhenCharge: 3
   minSpeedCharge: 40
   maxSpeedCharge: 80
   durationInvul: 2
@@ -3060,7 +3061,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -16892,7 +16893,7 @@ MonoBehaviour:
   marginBetweenTweets: 5
   speedScrolling: 22
   refreshingRateWhenNoTweets: 2
-  positionToSearchForNewTweet: 0
+  positionToSearchForNewTweet: 350
   endScrollingPosition: {fileID: 1856855241}
   prefabTextTweet: {fileID: 11461560, guid: bba6d8dfc5a4c2f42a71f02eab9fd973, type: 2}
   reminderText: Tweet your reactions to <color=#55ACEE>@MBL_GAME</color> !
@@ -17426,6 +17427,7 @@ Transform:
   - {fileID: 1279058673}
   - {fileID: 222847297}
   - {fileID: 1105067378}
+  - {fileID: 1494026340}
   m_Father: {fileID: 0}
   m_RootOrder: 16
 --- !u!1 &1230171918
@@ -24986,6 +24988,107 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1491356900}
+--- !u!1 &1494026339
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 1494026340}
+  - 223: {fileID: 1494026344}
+  - 114: {fileID: 1494026343}
+  - 114: {fileID: 1494026342}
+  - 114: {fileID: 1494026341}
+  m_Layer: 5
+  m_Name: CanvasCracks
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1494026340
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1494026339}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1226245006}
+  m_RootOrder: 4
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
+--- !u!114 &1494026341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1494026339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7875c7688cfb6d44a9c0ce0839bc958d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1494026342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1494026339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1301386320, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &1494026343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1494026339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1980459831, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 1
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 1920, y: 1080}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+--- !u!223 &1494026344
+Canvas:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1494026339}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 1
 --- !u!1 &1494744202
 GameObject:
   m_ObjectHideFlags: 0
@@ -33306,7 +33409,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: 4
-  durationInSecond: 20
+  durationInSecond: 180
   ecranFin: {fileID: 1105067374}
   timeBetweenTwoBonus: 0
   whenToBeginEndTimer: 5

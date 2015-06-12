@@ -53,6 +53,7 @@ public class MonsterControllerF : MonoBehaviour {
     //public float durationUpSpeedCharge = 8.0f;
     public float numberOfReboundsToMaxSpeed = 10.0f;
     public int maxNumberOfChargeRebounds = 10;
+    public int maxNumberOfPlayerEatenWhenCharge = 3;
     public float minSpeedCharge = 8.0f;
     public float maxSpeedCharge = 25.0f;
     private float speedMonsterCharge;
@@ -148,7 +149,7 @@ public class MonsterControllerF : MonoBehaviour {
 
         commentariesScript = GameObject.Find("Commentaries").GetComponent<TextCommentaries>();
 
-        //cracksScript = GameObject.Find("CanvasCracks").GetComponent<CracksGUI>();
+        cracksScript = GameObject.Find("CanvasCracks").GetComponent<CracksGUI>();
 
         smokeFury = GameObject.Find("FumeeTransfo").GetComponent<ParticleSystem>();
         transfoFury = GameObject.Find("Transformation_particules").GetComponent<ParticleSystem>();
@@ -447,7 +448,7 @@ public class MonsterControllerF : MonoBehaviour {
                     speedMonsterCharge = Mathf.Lerp(2.5f, 4.0f, percentageLShake);
                     Camera.main.GetComponent<CameraShake>().shake(1.0f, percentageLShake, 0.5f);
 
-                    //cracksScript.AddCrack(currentNumberOfRebounds, numberOfReboundsToMaxSpeed);
+                    cracksScript.AddCrack(currentNumberOfRebounds, numberOfReboundsToMaxSpeed);
 
 					totalNumberOfRebounds++;
                 }
@@ -456,12 +457,12 @@ public class MonsterControllerF : MonoBehaviour {
                 float percentageLSpeed = currentNumberOfRebounds / numberOfReboundsToMaxSpeed;
                 speedMonsterCharge = Mathf.Lerp(minSpeedCharge, maxSpeedCharge, percentageLSpeed);
 
-				if (totalNumberOfRebounds >= maxNumberOfChargeRebounds  && currentNumberOfChargeEatenPlayers >= 3 )
+                if (totalNumberOfRebounds >= maxNumberOfChargeRebounds || currentNumberOfChargeEatenPlayers >= maxNumberOfPlayerEatenWhenCharge)
        			{ 
           		 	monsterModeCharge = false;
            			loadingChargeEnd = false;
            			moveCharge = false;
-                    //cracksScript.DesactivateCracks();
+                    cracksScript.DesactivateCracks();
             		TransformationMonstreBall();
         		}
 
