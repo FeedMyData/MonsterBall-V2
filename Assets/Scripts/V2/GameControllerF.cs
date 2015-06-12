@@ -62,7 +62,7 @@ public class GameControllerF : MonoBehaviour {
 
     private static Dictionary<int, Vector3> positionsPlayersAtSelection = new Dictionary<int, Vector3>();
     private static Dictionary<int, PlayerControllerF> playerPositionsAtStart = new Dictionary<int, PlayerControllerF>();
-	private static List<string>[] playerAwards = new List<string>[4];
+	private static List<string>[] playerAwards;
     private static Vector3 positionXZNeutral = new Vector3(0.0f, 1.0f, 18.0f);
     private static float[] positionsY = new float[4] { 5.5f, 7.0f, 8.5f, 10.0f };
 	private static string winner = "tie";
@@ -102,6 +102,9 @@ public class GameControllerF : MonoBehaviour {
         sound = GetComponent<SoundManager>();
 
         manager = GetComponent<GameManagerF>();
+
+		playerAwards = new  List<string>[4];
+
 	}
 
     public static SoundManager GetSound()

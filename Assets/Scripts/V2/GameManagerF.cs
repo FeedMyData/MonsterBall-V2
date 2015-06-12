@@ -77,7 +77,7 @@ public class GameManagerF : MonoBehaviour {
 		case Step.inGame : 
 			if (durationInSecond <= 0)
 			{
-				Time.timeScale = 0;
+				//Time.timeScale = 0;
 				
 				if (!displayEnd)
 				{
@@ -193,7 +193,7 @@ public class GameManagerF : MonoBehaviour {
 				quickTestLaunched = true;
 				StartCoroutine(matchDuration());
 			}
-            twitterScript.SetCanDisplay(true);
+			twitterScript.SetCanDisplay(true);
             twitterScript.LaunchFirstTweet();
 
 			GameObject.Find("ball_monster").GetComponent<MeshRenderer>().enabled = true;
