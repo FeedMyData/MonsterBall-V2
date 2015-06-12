@@ -1050,10 +1050,16 @@ public class PlayerControllerF : MonoBehaviour
                 }
                 controllerSprite.sprite = spritesController[System.Array.IndexOf(namesSpriteSheetController, colorController)];
                 GameControllerF.getManager().validNextState(true);
-                if (GetComponentInChildren<Animator>())
+
+                if (GameControllerF.GetPlayerPositionsAtStart().ContainsKey(positionControllerSelection))
                 {
-                    GetComponentInChildren<Animator>().SetTrigger("hit");
+                    PlayerControllerF playerValidated = GameControllerF.GetPlayerPositionsAtStart()[positionControllerSelection];
+                    if (playerValidated.GetComponentInChildren<Animator>())
+                    {
+                        playerValidated.GetComponentInChildren<Animator>().SetTrigger("hit");
+                    }
                 }
+
             }
 
         }
