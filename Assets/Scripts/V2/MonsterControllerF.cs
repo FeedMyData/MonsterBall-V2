@@ -122,6 +122,8 @@ public class MonsterControllerF : MonoBehaviour {
     
     public Vector3 respawnPositionBall;
 
+    private CracksGUI cracksScript;
+
     [HideInInspector]
     public bool canCount= true;
 
@@ -132,7 +134,6 @@ public class MonsterControllerF : MonoBehaviour {
     private ParticleSystem ragingFx;
     //public delegate void OnClickHit();
     //public event OnClickHit OnClickHitEvent;
-
 
 	// Use this for initialization
 	void Start () {
@@ -146,6 +147,8 @@ public class MonsterControllerF : MonoBehaviour {
         baseScaleBall = childBall.localScale;
 
         commentariesScript = GameObject.Find("Commentaries").GetComponent<TextCommentaries>();
+
+        cracksScript = GameObject.Find("CanvasCracks").GetComponent<CracksGUI>();
 
         smokeFury = GameObject.Find("FumeeTransfo").GetComponent<ParticleSystem>();
         transfoFury = GameObject.Find("Transformation_particules").GetComponent<ParticleSystem>();
@@ -388,7 +391,7 @@ public class MonsterControllerF : MonoBehaviour {
     void MoveMonster()
     {
 
-        ManageSoundRunMonster(transform.position);
+        //ManageSoundRunMonster(transform.position);
 
         Vector3 rotationToGoal = Vector3.zero;
         body.velocity = Vector3.zero;
@@ -433,7 +436,7 @@ public class MonsterControllerF : MonoBehaviour {
                 body.angularVelocity = Vector3.zero;
                 //Debug.Log("charge");
                 //avance tout droit et change de direction dans les coins
-                if (GameControllerF.InCircle(gameObject) > 0.50f)
+                if (GameControllerF.InCircle(gameObject) > 0.50f) // Rebound
                 {
                     float newDirection = transform.eulerAngles.y + 180;
                     newDirection += GetAngleBounce(transform.position);
@@ -443,6 +446,9 @@ public class MonsterControllerF : MonoBehaviour {
                     float percentageLShake = currentNumberOfRebounds / numberOfReboundsToMaxSpeed;
                     speedMonsterCharge = Mathf.Lerp(2.5f, 4.0f, percentageLShake);
                     Camera.main.GetComponent<CameraShake>().shake(1.0f, percentageLShake, 0.5f);
+
+                    cracksScript.AddCrack(currentNumberOfRebounds, numberOfReboundsToMaxSpeed);
+
 					totalNumberOfRebounds++;
                 }
 
@@ -455,6 +461,7 @@ public class MonsterControllerF : MonoBehaviour {
           		 	monsterModeCharge = false;
            			loadingChargeEnd = false;
            			moveCharge = false;
+                    cracksScript.DesactivateCracks();
             		TransformationMonstreBall();
         		}
 
@@ -688,11 +695,11 @@ public class MonsterControllerF : MonoBehaviour {
             {
                 sound.PlayEvent("VX_Monstre_DebutCharge",gameObject);
                 targetCharge = GameControllerF.GetTargetCharge();
-                Debug.Log(targetCharge.name);
+                //Debug.Log(targetCharge.name);
                 //actualCycleMonster++;
                 monsterModeCharge = true;
                 currentNumberOfRebounds = 0;
-			totalNumberOfRebounds = 0;
+			    totalNumberOfRebounds = 0;
 				currentNumberOfChargeEatenPlayers = 0;
             }
        // }
