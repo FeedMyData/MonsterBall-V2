@@ -98,11 +98,16 @@ public class GameManagerF : MonoBehaviour {
 		case Step.choosePlayer :
 			if( nextStateValidationRemaining > 0)
 				break;
-            
+
             // changement des jerseys
             List<GameControllerF.Jersey> jerseysAvailable = new List<GameControllerF.Jersey>() { GameControllerF.Jersey.player1, GameControllerF.Jersey.player2, GameControllerF.Jersey.player3, GameControllerF.Jersey.player4 };
             List<PlayerControllerF> playersNotAssigned = new List<PlayerControllerF>();
-            //List<GameObject> playersNotAssigned = new List<GameObject>();
+
+            for (int i = 1; i < 5; i++)
+            {
+                PlayerControllerF playerScriptTested = GameControllerF.GetPlayer(i).GetComponent<PlayerControllerF>();
+                playersNotAssigned.Add(playerScriptTested);
+            }
 
             for (int i = 1; i < 5; i++)
             {
@@ -114,34 +119,21 @@ public class GameManagerF : MonoBehaviour {
                 if (GameControllerF.GetPlayerPositionsAtStart().ContainsKey(wantedPositionPlayerToPutJerseyOn))
                 {
                     PlayerControllerF playerToPutJerseyOn = GameControllerF.GetPlayerPositionsAtStart()[wantedPositionPlayerToPutJerseyOn];
-                  
-                    Debug.Log("jersey to be changed : " + playerToPutJerseyOn.jersey);
-                    Debug.Log("jersey to place : " + jerseyToPutOnOtherPlayer);
 
                     playerToPutJerseyOn.jersey = jerseyToPutOnOtherPlayer;
 
                     playerToPutJerseyOn.initPlayer();
 
-                    playersNotAssigned.Add(playerScriptTested);
+                    playersNotAssigned.Remove(playerToPutJerseyOn);
 
-                    if (playersNotAssigned.Contains(playerToPutJerseyOn))
+                    if (jerseysAvailable.Contains(jerseyToPutOnOtherPlayer))
                     {
-                        playersNotAssigned.Remove(playerToPutJerseyOn);
-                    }
-
-                    if (jerseysAvailable.Contains(playerToPutJerseyOn.jersey))
-                    {
-                        jerseysAvailable.Remove(playerToPutJerseyOn.jersey);
+                        jerseysAvailable.Remove(jerseyToPutOnOtherPlayer);
                     }
                     else
                     {
                         Debug.Log("Bug : probably many players with the same jersey");
                     }
-                }
-                else // le joueur n'a pas choisi de personnage (controllerPosition à 0)
-                {
-                    //Debug.Log("Bug on init jerseys for player : " + playerScriptTested.gameObject.name);
-                    playersNotAssigned.Add(playerScriptTested);
                 }
 
             }
@@ -162,16 +154,17 @@ public class GameManagerF : MonoBehaviour {
                 {
                     Debug.Log(player.gameObject.name);
                 }
+                Debug.Log("player count : " + playersNotAssigned.Count + " ; Jerseys count : " + jerseysAvailable.Count);
             }
 
-			GameObject.Find("Main Camera").GetComponent<Animator>().enabled = true;
+            GameObject.Find("Main Camera").GetComponent<Animator>().enabled = true;
 
-			nextStateValidationRemaining = 4;
+            nextStateValidationRemaining = 4;
 
             StartCoroutine(FadeCanvasChooseYourPlayer());
 
-			state = Step.playerPlacement;
-			break;
+            state = Step.playerPlacement;
+            break;
 		
 		case Step.playerPlacement :
 			if( nextStateValidationRemaining > 0)

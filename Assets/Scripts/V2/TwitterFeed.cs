@@ -8,6 +8,8 @@ using UnityEngine.UI;
 
 public class TwitterFeed : MonoBehaviour {
 
+    // §§§ LES VALEURS GLOBALES SONT INVERSEES CAR LE CONTENEUR A UN SCALE NEGATIF §§§
+
     public float marginBetweenTweets = 50.0f;
     public float speedScrolling = 16.0f;
 
@@ -40,7 +42,6 @@ public class TwitterFeed : MonoBehaviour {
     {
 
         StartCoroutine(GetTwitterAccessToken());
-
         //DisplayTweet(reminderText);
 
     }
@@ -109,9 +110,7 @@ public class TwitterFeed : MonoBehaviour {
             if (lastPixelPositionDisplayed < positionToSearchForNewTweet && authFinished && !searchingNewTweet && timerRefreshingRateWhenNoTweets > refreshingRateWhenNoTweets)
             {
                 StartCoroutine(SearchForTweets(1));
-                //searchingNewTweet = true;
             }
-
         }
 
     }
@@ -164,7 +163,7 @@ public class TwitterFeed : MonoBehaviour {
 
     }
  
-    IEnumerator SearchForTweets(int indexToSearch) {
+    IEnumerator SearchForTweets(int numberToSearch) {
 
         searchingNewTweet = true;
 
@@ -178,7 +177,7 @@ public class TwitterFeed : MonoBehaviour {
 
         parameters["q="] = "@MBL_GAME -enculé -pd -putain -pute -salope -fuck"; // or to:MBL_GAME or @MBL_GAME or a special # for the occasion
         parameters["result_type="] = "recent";
-        parameters["count"] = indexToSearch.ToString();
+        parameters["count"] = numberToSearch.ToString();
         //parameters["geocode="] = "45.6537200,0.1486590,10km";
 
         for (int i = 0; i < parameters.Count; i++)
@@ -211,7 +210,7 @@ public class TwitterFeed : MonoBehaviour {
 
         JSONNode searchResponse = JSON.Parse(web.text);
         timerRefreshingRateWhenNoTweets = 0.0f;
-        CheckNewResponse(searchResponse, indexToSearch);
+        CheckNewResponse(searchResponse, numberToSearch - 1);
         searchingNewTweet = false;
         //newResponse = true;
         
@@ -224,18 +223,27 @@ public class TwitterFeed : MonoBehaviour {
 
     public void LaunchFirstTweet()
     {
+        searchingNewTweet = true;
         DisplayTweet(reminderText);
-        StartCoroutine(InitSomeTweets(4));
-
+        StartCoroutine(InitSomeTweets(3));
+        canDisplay = true;
     }
 
     IEnumerator InitSomeTweets(int nb)
     {
+        while (!authFinished)
+        {
+            yield return new WaitForSeconds(1.0f);
+        }
         for (int i = nb; i > 0; i--)
         {
+
+            StartCoroutine(SearchForTweets(i));
+            searchingNewTweet = true;
             yield return new WaitForSeconds(refreshingRateWhenNoTweets);
-            StartCoroutine(SearchForTweets(nb));
+
         }
+        searchingNewTweet = false;
     }
 
     void DisplayTweet(string text)
@@ -310,10 +318,10 @@ public class TwitterFeed : MonoBehaviour {
     void CheckNewResponse(JSONNode searchResponse, int indexToDisplay)
     {
 
-        for (int i = 0; i < indexToDisplay; i++)
-        {
-            //Debug.Log(MakeAllOnOneLine(searchResponse["statuses"][i]["text"]));
-        }
+        //for (int i = 0; i <= indexToDisplay; i++)
+        //{
+        //    Debug.Log(MakeAllOnOneLine(searchResponse["statuses"][i]["text"]));
+        //}
 
         string textOnOneLine = MakeAllOnOneLine(searchResponse["statuses"][indexToDisplay]["text"]);
         string finalText = "<color=#FF0033>" + searchResponse["statuses"][indexToDisplay]["user"]["name"] + "</color> <size=40>@" + searchResponse["statuses"][indexToDisplay]["user"]["screen_name"] + "</size> : " + textOnOneLine;

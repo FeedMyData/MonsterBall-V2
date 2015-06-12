@@ -907,6 +907,7 @@ public class PlayerControllerF : MonoBehaviour
         {
             if (GetComponentInChildren<Animator>())
             {
+                GetComponentInChildren<Animator>().SetTrigger("idle");
                 GetComponentInChildren<Animator>().SetBool("isRunning", true);
                 hasBegunRunning = true;
                 hasArrived = false;
@@ -1049,6 +1050,10 @@ public class PlayerControllerF : MonoBehaviour
                 }
                 controllerSprite.sprite = spritesController[System.Array.IndexOf(namesSpriteSheetController, colorController)];
                 GameControllerF.getManager().validNextState(true);
+                if (GetComponentInChildren<Animator>())
+                {
+                    GetComponentInChildren<Animator>().SetTrigger("hit");
+                }
             }
 
         }
