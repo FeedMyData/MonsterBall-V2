@@ -378,7 +378,6 @@ public class GameManagerF : MonoBehaviour {
         {
             Color newColor = new Color(textColor.r, textColor.g, textColor.b, Mathf.Lerp(beginAlpha, endAlpha, t));
             text.color = newColor;
-            Debug.Log(Mathf.Lerp(beginAlpha, endAlpha, t));
             yield return null;
         }
 
