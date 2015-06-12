@@ -453,6 +453,7 @@ public class GameControllerF : MonoBehaviour {
     }
 
 	public static List<string>[] GetPlayerAwards(){
+		if(playerAwards == null) playerAwards = new  List<string>[4];
 		return playerAwards;
 	}
 

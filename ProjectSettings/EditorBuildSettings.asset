@@ -11,3 +11,5 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu/Menu1.unity
   - enabled: 1
     path: Assets/Scenes/Final/Final2F1.unity
+  - enabled: 1
+    path: Assets/Scenes/Menu/EndScreen.unity

@@ -8,7 +8,7 @@ public class MenuFinF : MonoBehaviour {
 
     public GameObject defaultButton;
 	public GameObject[] podiums;
-
+	public float YPodiumOffset = 0.1f;
 
   
 
@@ -32,9 +32,29 @@ public class MenuFinF : MonoBehaviour {
 
 		for (int i = 0; i<4; i++) {
 
-			if(GameControllerF.GetWinner() == "blu") podiums[i].GetComponentInChildren<Animator>().SetTrigger(i%2 == 0 ? "lose" : "win"); // temporaire
-			else if(GameControllerF.GetWinner() == "red") podiums[i].GetComponentInChildren<Animator>().SetTrigger(i%2 == 0 ? "win" : "lose");// idem
-		
+			Transform 	podiumProp = podiums[i].transform.FindChild("Podium");
+
+
+			if(GameControllerF.GetWinner() == "blu") {
+				podiums[i].GetComponentInChildren<Animator>().SetTrigger(i%2 == 0 ? "lose" : "win"); 
+				podiumProp.localScale = new Vector3( podiumProp.localScale.x, podiumProp.localScale.y, i%2 == 0? 2f : 3f);
+				podiumProp.localPosition = new Vector3( podiumProp.localPosition.x, -(podiumProp.localScale.z+ YPodiumOffset), podiumProp.localPosition.z);
+			}
+			else if(GameControllerF.GetWinner() == "red"){
+					podiums[i].GetComponentInChildren<Animator>().SetTrigger(i%2 == 0 ? "win" : "lose");
+				podiumProp.localScale = new Vector3( podiumProp.localScale.x, podiumProp.localScale.y, i%2 == 0? 3f : 2f);
+				podiumProp.localPosition = new Vector3( podiumProp.localPosition.x, -(podiumProp.localScale.z+ YPodiumOffset), podiumProp.localPosition.z);
+
+			}
+			else {
+				podiums[i].GetComponentInChildren<Animator>().SetTrigger("lose"); 
+				podiumProp.localScale = new Vector3( podiumProp.localScale.x, podiumProp.localScale.y,  2.5f);
+				podiumProp.localPosition = new Vector3( podiumProp.localPosition.x, -(podiumProp.localScale.z+ YPodiumOffset), podiumProp.localPosition.z);
+
+			}
+
+			podiums[i].transform.localPosition = new Vector3( podiums[i].transform.localPosition.x,(podiumProp.localScale.z ) == 3 ? 10.2f : (podiumProp.localScale.z == 2.5) ? 8.5f : 6.8f ,podiums[i].transform.localPosition.z);
+
 			if(awards[i] != null && awards[i].Count > 0){
 
 				if(awards[i][0] != string.Empty){
