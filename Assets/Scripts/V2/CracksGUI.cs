@@ -5,48 +5,38 @@ using System.Collections.Generic;
 
 public class CracksGUI : MonoBehaviour {
 
-    private Texture[] spritesCracks;
+    private Sprite[] spritesCracks;
     private GameObject[] objectsCracks;
-    private List<RawImage> cracksAvailable;
-    private List<RawImage> cracksEnabled;
+    private List<Image> cracksAvailable;
+    private List<Image> cracksEnabled;
 
-    private float minAlpha = 0.2f;
-    private float maxAlpha = 0.8f;
-    private float timeDisappearing = 1.0f;
+    public float minAlpha = 0.2f;
+    public float maxAlpha = 0.8f;
+    public float timeDisappearing = 1.0f;
 
     private Color baseColor = new Color(1, 1, 1, 0);
     private Color currentAlphaColor = new Color(1, 1, 1, 0.0f);
 
     void Awake()
     {
-        spritesCracks = Resources.LoadAll<Texture>("Crackcamera");
+        spritesCracks = Resources.LoadAll<Sprite>("Crackcamera");
         objectsCracks = new GameObject[spritesCracks.Length];
-        cracksAvailable = new List<RawImage>();
-        cracksEnabled = new List<RawImage>();
+        cracksAvailable = new List<Image>();
+        cracksEnabled = new List<Image>();
 
         for (int i = 0, nb = objectsCracks.Length; i < nb; i++)
         {
             objectsCracks[i] = new GameObject("crackCamera" + i);
             objectsCracks[i].transform.SetParent(transform, false);
-            RawImage textureRaw = objectsCracks[i].AddComponent<RawImage>();
+            Image textureRaw = objectsCracks[i].AddComponent<Image>();
             textureRaw.enabled = false;
-            textureRaw.texture = spritesCracks[i];
+            textureRaw.sprite = spritesCracks[i];
             textureRaw.color = baseColor;
-            textureRaw.rectTransform.sizeDelta = new Vector2(spritesCracks[i].width, spritesCracks[i].height);
+            textureRaw.rectTransform.sizeDelta = new Vector2(spritesCracks[i].rect.width, spritesCracks[i].rect.height);
 
             cracksAvailable.Add(textureRaw);
         }
     }
-
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
 
     public void DesactivateCracks()
     {
@@ -61,7 +51,6 @@ public class CracksGUI : MonoBehaviour {
 
         int numberToDisplay = Mathf.FloorToInt(objectsCracks.Length * percentageL);
         int numberToAdd = numberToDisplay - cracksEnabled.Count;
-
         if (numberToAdd > 0)
         {
             StartCoroutine(DisplayNewCracks(numberToAdd));
@@ -74,7 +63,7 @@ public class CracksGUI : MonoBehaviour {
         {
             if (cracksAvailable.Count > 0)
             {
-                RawImage newCrack = cracksAvailable[Random.Range(0, cracksAvailable.Count)];
+                Image newCrack = cracksAvailable[Random.Range(0, cracksAvailable.Count)];
                 newCrack.color = currentAlphaColor;
                 newCrack.enabled = true;
                 cracksEnabled.Add(newCrack);
@@ -86,7 +75,7 @@ public class CracksGUI : MonoBehaviour {
 
     void AddAlphaOnCracks()
     {
-        foreach (RawImage crack in cracksEnabled)
+        foreach (Image crack in cracksEnabled)
         {
             crack.color = currentAlphaColor;
         }
@@ -97,19 +86,21 @@ public class CracksGUI : MonoBehaviour {
         Color beginAlpha = currentAlphaColor;
         for (float t = 0.0f; t < 1.0f; t += Time.deltaTime / aTime)
         {
-            Color colorFading = new Color(1, 1, 1, Mathf.Lerp(beginAlpha.a, 0.0f, t));
-            foreach (RawImage crack in cracksEnabled)
+            currentAlphaColor = new Color(1, 1, 1, Mathf.Lerp(beginAlpha.a, 0.0f, t));
+            foreach (Image crack in cracksEnabled)
             {
-                crack.color = colorFading;
+                crack.color = currentAlphaColor;
             }
             yield return null;
         }
-        foreach (RawImage crack in cracksEnabled)
+        currentAlphaColor = new Color(1, 1, 1, 0.0f);
+        foreach (Image crack in cracksEnabled)
         {
             crack.enabled = false;
-            crack.color = new Color(1, 1, 1, 0.0f);
+            crack.color = currentAlphaColor;
             cracksAvailable.Add(crack);
         }
+        
         cracksEnabled.Clear();
     }
 }

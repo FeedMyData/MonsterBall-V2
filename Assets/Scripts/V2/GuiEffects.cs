@@ -4,9 +4,9 @@ using System.Collections;
 
 public class GuiEffects : MonoBehaviour {
 
-    public RawImage[] redTextureObject;
-    public RawImage[] blueTextureObject;
-    private RawImage textureToFlash;
+    public Image[] redTextureObject;
+    public Image[] blueTextureObject;
+    private Image textureToFlash;
 
     private bool newFlash = false;
     private bool isFlashing = false;
