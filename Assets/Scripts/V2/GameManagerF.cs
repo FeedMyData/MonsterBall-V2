@@ -462,6 +462,20 @@ public class GameManagerF : MonoBehaviour {
 			GameControllerF.GetPlayerAwards () [coupFort].Add ("Berserk,"+maxCoupsFort.ToString());
 		}
 
+		int maxMangeJoueur = 0;
+		for (int i = 0; i < tabPlayer.Length; i++)
+		{
+			if (tabPlayer[i].joueurMange > maxMangeJoueur)
+			{
+				maxMangeJoueur = tabPlayer[i].joueurMange;
+				mangeJoueur = i;
+			}
+		}
+		if (mangeJoueur >= 0 && mangeJoueur < 4) {
+			if(GameControllerF.GetPlayerAwards () [mangeJoueur] == null) GameControllerF.GetPlayerAwards () [mangeJoueur] = new List<string>();
+			GameControllerF.GetPlayerAwards () [mangeJoueur].Add ("Scrumptious,"+maxMangeJoueur.ToString());
+		}
+
 		// buts marqués
 		int maxMarqueBut = 0;
 		for (int i = 0; i < tabPlayer.Length; i++)
@@ -476,6 +490,34 @@ public class GameManagerF : MonoBehaviour {
 		if (marqueBut >= 0 && marqueBut < 4) {
 			if(GameControllerF.GetPlayerAwards () [marqueBut] == null) GameControllerF.GetPlayerAwards () [marqueBut] = new List<string>();
 			GameControllerF.GetPlayerAwards () [marqueBut].Add ("Champion,"+maxMarqueBut.ToString());
+		}
+
+		int maxSautBut = 0;
+		for (int i = 0; i < tabPlayer.Length; i++)
+		{
+			if (tabPlayer[i].sautBut > maxSautBut)
+			{
+				maxSautBut = tabPlayer[i].sautBut;
+				sautBut = i;
+			}
+		}
+		if (sautBut >= 0 && sautBut < 4) {
+			if(GameControllerF.GetPlayerAwards () [sautBut] == null) GameControllerF.GetPlayerAwards () [sautBut] = new List<string>();
+			GameControllerF.GetPlayerAwards () [sautBut].Add ("LivingCanonBall,"+maxSautBut.ToString());
+		}
+
+		int maxCoupsVides = 0;
+		for (int i = 0; i < tabPlayer.Length; i++)
+		{
+			if (tabPlayer[i].coupsVide > maxCoupsVides)
+			{
+				maxCoupsVides = tabPlayer[i].coupsVide;
+				coupVide = i;
+			}
+		}
+		if (coupVide >= 0 && coupVide < 4) {
+			if(GameControllerF.GetPlayerAwards () [coupVide] == null) GameControllerF.GetPlayerAwards () [coupVide] = new List<string>();
+			GameControllerF.GetPlayerAwards () [coupVide].Add ("Ghostbuster,"+maxCoupsVides.ToString());
 		}
 
 		
