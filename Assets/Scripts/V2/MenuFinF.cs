@@ -6,28 +6,46 @@ using UnityEngine.EventSystems;
 
 public class MenuFinF : MonoBehaviour {
 
-    public GameObject defaultButton;
+	public GameObject playAgainButton, mainMenuButton;
 	public GameObject[] podiums;
 	public GameObject monster;
 	public float YPodiumOffset = 0.1f;
+	public float buttonWaitingDuration = 2.5f;
 
   
 
 	// Use this for initialization
 	void Start () {
-        if (defaultButton != null)
-            EventSystem.current.SetSelectedGameObject(defaultButton);
+       
+
 		InitMenu ();
+
+		playAgainButton.GetComponent<Button> ().interactable = mainMenuButton.GetComponent<Button> ().interactable = false;
 		monster.GetComponentInChildren<Animator> ().SetTrigger ("endScreen");
+
+		StartCoroutine (WaitButtonActivation ());
+
+
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+
+	IEnumerator WaitButtonActivation(){
+
+		yield return new WaitForSeconds (buttonWaitingDuration);
+
+		playAgainButton.GetComponent<Button> ().interactable = mainMenuButton.GetComponent<Button> ().interactable = true;
+
+		if (playAgainButton != null)
+			EventSystem.current.SetSelectedGameObject(playAgainButton);
 	}
 
     private void InitMenu()
     {
+
+
+
+		GameObject.Find ("BlueScore").GetComponent<Text> ().text = GameControllerF.GetFinalScore ().Split ("," [0]) [0];
+		GameObject.Find("RedScore").GetComponent<Text> ().text = GameControllerF.GetFinalScore ().Split ("," [0]) [1];
+
 
 		List<string>[] awards = GameControllerF.GetPlayerAwards ();
 
@@ -63,9 +81,7 @@ public class MenuFinF : MonoBehaviour {
 					highReward.gameObject.SetActive(true);
 					highReward.FindChild("Award").GetComponent<SpriteRenderer>().sprite = Resources.Load("Awards/"+awards[i][0].Split(","[0])[0], typeof(Sprite)) as Sprite;
 					highReward.GetComponentInChildren<TextMesh>().text = awards[i][0].Split(","[0])[1];
-					/*Debug.Log("HIGH");
-					Debug.Log(awards[i][0].Split(","[0])[0]);
-					Debug.Log(awards[i][0].Split(","[0])[1]);*/
+				
 					
 				}
 				if(awards[i].Count > 1 && awards[i][1] != string.Empty ){
@@ -73,9 +89,7 @@ public class MenuFinF : MonoBehaviour {
 					lowReward.gameObject.SetActive(true);
 					lowReward.FindChild("Award").GetComponent<SpriteRenderer>().sprite = Resources.Load("Awards/"+awards[i][1].Split(","[0])[0],typeof(Sprite)) as Sprite;
 					lowReward.GetComponentInChildren<TextMesh>().text = awards[i][1].Split(","[0])[1];
-					/*Debug.Log("Low");
-					Debug.Log(awards[i][1].Split(","[0])[0]);
-					Debug.Log(awards[i][1].Split(","[0])[1]);*/
+				
 
 				}
 

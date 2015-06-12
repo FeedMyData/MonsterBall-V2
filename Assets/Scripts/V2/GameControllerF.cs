@@ -65,7 +65,7 @@ public class GameControllerF : MonoBehaviour {
 	private static List<string>[] playerAwards;
     private static Vector3 positionXZNeutral = new Vector3(0.0f, 1.0f, 18.0f);
     private static float[] positionsY = new float[4] { 5.5f, 7.0f, 8.5f, 10.0f };
-	private static string winner = "tie";
+	private static string winner = "tie", finalScore = "0,0";
 
 	// Use this for initialization
 	void Awake () {
@@ -478,6 +478,18 @@ public class GameControllerF : MonoBehaviour {
 	}
 	public static string GetWinner(){
 		return winner;
+	}
+
+	public static void SetFinalScore(int blueScore, int redScore){
+
+		finalScore = blueScore.ToString () + "," + redScore.ToString ();
+
+	}
+
+	public static string GetFinalScore(){
+
+		return finalScore;
+
 	}
 
 }

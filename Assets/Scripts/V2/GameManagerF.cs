@@ -63,6 +63,8 @@ public class GameManagerF : MonoBehaviour {
 
         GameControllerF.GetMonster().GetComponent<MonsterControllerF>().ballSpotlight.SetActive(false);
         GameControllerF.GetMonster().GetComponent<MonsterControllerF>().monsterSpotlight.SetActive(false);
+		if (state != Step.quickTest)
+			state = Step.opening;
 
     }
 	
@@ -536,6 +538,10 @@ public class GameManagerF : MonoBehaviour {
 		{
 			GameControllerF.SetWinner("tie");
 		}
+
+		GameControllerF.SetFinalScore (bluScore, redScore);
+
+
 	}
 
 
