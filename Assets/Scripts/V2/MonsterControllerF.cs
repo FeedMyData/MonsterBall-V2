@@ -148,7 +148,7 @@ public class MonsterControllerF : MonoBehaviour {
 
         commentariesScript = GameObject.Find("Commentaries").GetComponent<TextCommentaries>();
 
-        cracksScript = GameObject.Find("CanvasCracks").GetComponent<CracksGUI>();
+        //cracksScript = GameObject.Find("CanvasCracks").GetComponent<CracksGUI>();
 
         smokeFury = GameObject.Find("FumeeTransfo").GetComponent<ParticleSystem>();
         transfoFury = GameObject.Find("Transformation_particules").GetComponent<ParticleSystem>();
@@ -447,7 +447,7 @@ public class MonsterControllerF : MonoBehaviour {
                     speedMonsterCharge = Mathf.Lerp(2.5f, 4.0f, percentageLShake);
                     Camera.main.GetComponent<CameraShake>().shake(1.0f, percentageLShake, 0.5f);
 
-                    cracksScript.AddCrack(currentNumberOfRebounds, numberOfReboundsToMaxSpeed);
+                    //cracksScript.AddCrack(currentNumberOfRebounds, numberOfReboundsToMaxSpeed);
 
 					totalNumberOfRebounds++;
                 }
@@ -461,7 +461,7 @@ public class MonsterControllerF : MonoBehaviour {
           		 	monsterModeCharge = false;
            			loadingChargeEnd = false;
            			moveCharge = false;
-                    cracksScript.DesactivateCracks();
+                    //cracksScript.DesactivateCracks();
             		TransformationMonstreBall();
         		}
 
