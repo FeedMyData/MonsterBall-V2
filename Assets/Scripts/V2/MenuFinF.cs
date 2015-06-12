@@ -8,6 +8,7 @@ public class MenuFinF : MonoBehaviour {
 
     public GameObject defaultButton;
 	public GameObject[] podiums;
+	public GameObject monster;
 	public float YPodiumOffset = 0.1f;
 
   
@@ -17,7 +18,7 @@ public class MenuFinF : MonoBehaviour {
         if (defaultButton != null)
             EventSystem.current.SetSelectedGameObject(defaultButton);
 		InitMenu ();
-
+		monster.GetComponentInChildren<Animator> ().SetTrigger ("endScreen");
 	}
 	
 	// Update is called once per frame

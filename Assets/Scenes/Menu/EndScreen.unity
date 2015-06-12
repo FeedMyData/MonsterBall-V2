@@ -6506,7 +6506,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100018, guid: aca9e1c84fab4f946a4007ad4035b283, type: 3}
       propertyPath: m_Name
-      value: Monster 1
+      value: Monster
       objectReference: {fileID: 0}
     - target: {fileID: 400018, guid: aca9e1c84fab4f946a4007ad4035b283, type: 3}
       propertyPath: m_LocalScale.x
@@ -9339,6 +9339,7 @@ MonoBehaviour:
   - {fileID: 2021973432}
   - {fileID: 99554765}
   - {fileID: 530266177}
+  monster: {fileID: 7400953}
   YPodiumOffset: .0500000007
 --- !u!1 &1966745240 stripped
 GameObject:
