@@ -238,7 +238,7 @@ public class PlayerControllerF : MonoBehaviour
 	
 		if (canHit && !isStunned && GameControllerF.getManager().state == GameManagerF.Step.inGame && !waitBeforeNextShoot)
         {
-            Debug.Log("test");
+//            Debug.Log("test");
             Attack();
         }
     }

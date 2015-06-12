@@ -81,11 +81,15 @@ public class GameManagerF : MonoBehaviour {
 				
 				if (!displayEnd)
 				{
-					ecranFin.SetActive(true);
+					/*ecranFin.SetActive(true);
 					ecranFin.GetComponent<MenuFin>().InitMenu();
 					ecranFin.GetComponent<MenuFin>().WhoWin(bluScore, redScore);
-					ecranFin.GetComponent<MenuFin>().RewardPlayer();
+					ecranFin.GetComponent<MenuFin>().RewardPlayer();*/
 					displayEnd = true;
+					WhoWin();
+					RewardPlayer();
+
+					Application.LoadLevel(2);
 				}
 				
 			}
@@ -401,5 +405,104 @@ public class GameManagerF : MonoBehaviour {
         }
 
     }
+	public void RewardPlayer()
+	{
+		PlayerControllerF[] tabPlayer = new PlayerControllerF[4];
+		
+		tabPlayer[0] = GameControllerF.GetPlayer(1).GetComponent<PlayerControllerF>();
+		tabPlayer[1] = GameControllerF.GetPlayer(2).GetComponent<PlayerControllerF>();
+		tabPlayer[2] = GameControllerF.GetPlayer(3).GetComponent<PlayerControllerF>();
+		tabPlayer[3] = GameControllerF.GetPlayer(4).GetComponent<PlayerControllerF>();
+		
+		int coupDonne = -1, coupRecu = -1, coupFort = -1, mangeJoueur = -1, sautBut = -1, coupVide = -1, marqueBut = -1;
+		
+		//Coups donnés
+		int maxCoupsDonnes = 0;
+		for (int i = 0; i < tabPlayer.Length; i++)
+		{
+			if (tabPlayer[i].coupsDonnes > maxCoupsDonnes)
+			{
+				maxCoupsDonnes = tabPlayer[i].coupsDonnes;
+				coupDonne = i;
+			}
+		}
+
+
+		if (coupDonne >= 0 && coupDonne < 4) {
+			if(GameControllerF.GetPlayerAwards () [coupDonne] == null) GameControllerF.GetPlayerAwards () [coupDonne] = new List<string>();
+			GameControllerF.GetPlayerAwards () [coupDonne].Add ("Bully,"+maxCoupsDonnes.ToString());
+		}
+
+		
+		//Coups reçus
+		int maxCoupsRecus = 0;
+		for (int i = 0; i < tabPlayer.Length; i++)
+		{
+			if (tabPlayer[i].coupsRecus > maxCoupsRecus)
+			{
+				maxCoupsRecus = tabPlayer[i].coupsRecus;
+				coupRecu = i;
+			}
+		}
+
+		if (coupRecu >= 0 && coupRecu < 4) {
+			if(GameControllerF.GetPlayerAwards () [coupRecu] == null) GameControllerF.GetPlayerAwards () [coupRecu] = new List<string>();
+			GameControllerF.GetPlayerAwards () [coupRecu].Add ("PunchingBall,"+maxCoupsRecus.ToString());
+		}
+
+
+		
+		//Coups forts
+		
+		int maxCoupsFort = 0;
+		for (int i = 0; i < tabPlayer.Length; i++)
+		{
+			if (tabPlayer[i].coupsCharges > maxCoupsFort)
+			{
+				maxCoupsFort = tabPlayer[i].coupsCharges;
+				coupFort = i;
+			}
+		}
+
+		
+		if (coupFort >= 0 && coupFort < 4) {
+			if(GameControllerF.GetPlayerAwards () [coupFort] == null) GameControllerF.GetPlayerAwards () [coupFort] = new List<string>();
+			GameControllerF.GetPlayerAwards () [coupFort].Add ("Berserk,"+maxCoupsFort.ToString());
+		}
+
+		// buts marqués
+		int maxMarqueBut = 0;
+		for (int i = 0; i < tabPlayer.Length; i++)
+		{
+			if (tabPlayer[i].marqueBut > maxMarqueBut)
+			{
+				maxMarqueBut = tabPlayer[i].marqueBut;
+				marqueBut = i;
+			}
+		}
+
+		if (marqueBut >= 0 && marqueBut < 4) {
+			if(GameControllerF.GetPlayerAwards () [marqueBut] == null) GameControllerF.GetPlayerAwards () [marqueBut] = new List<string>();
+			GameControllerF.GetPlayerAwards () [marqueBut].Add ("Champion,"+maxMarqueBut.ToString());
+		}
+
+		
+	}
+	public void WhoWin()
+	{
+		if (bluScore > redScore)
+		{
+			GameControllerF.SetWinner("blu");
+		}
+		else if (bluScore < redScore)
+		{
+			GameControllerF.SetWinner("red");
+		}
+		else
+		{
+			GameControllerF.SetWinner("tie");
+		}
+	}
+
 
 }

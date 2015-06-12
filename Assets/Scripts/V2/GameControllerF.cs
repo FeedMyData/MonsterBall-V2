@@ -42,13 +42,13 @@ public class GameControllerF : MonoBehaviour {
     private static Text staticTxtDuration;
     public Text chooseYourPlayer;
     private static Text staticChooseYourPlayer;
-
+	
     [Header("Bonus")]
     public GameObject cake;
     private static GameObject staticCake;
 
 
-    private static GameManagerF manager;
+	private static GameManagerF manager;
 
     private static GameObject[] tabObj;
     private static GameObject staticField;
@@ -62,8 +62,10 @@ public class GameControllerF : MonoBehaviour {
 
     private static Dictionary<int, Vector3> positionsPlayersAtSelection = new Dictionary<int, Vector3>();
     private static Dictionary<int, PlayerControllerF> playerPositionsAtStart = new Dictionary<int, PlayerControllerF>();
+	private static List<string>[] playerAwards = new List<string>[4];
     private static Vector3 positionXZNeutral = new Vector3(0.0f, 1.0f, 18.0f);
     private static float[] positionsY = new float[4] { 5.5f, 7.0f, 8.5f, 10.0f };
+	private static string winner = "tie";
 
 	// Use this for initialization
 	void Awake () {
@@ -79,7 +81,7 @@ public class GameControllerF : MonoBehaviour {
         positionsPlayersAtSelection.Add(0, positionXZNeutral);
         positionsPlayersAtSelection.Add(1, player1.transform.position);
         positionsPlayersAtSelection.Add(2, player3.transform.position);
-
+        
         playerPositionsAtStart.Add(-2, player4.GetComponent<PlayerControllerF>());
         playerPositionsAtStart.Add(-1, player2.GetComponent<PlayerControllerF>());
         playerPositionsAtStart.Add(1, player1.GetComponent<PlayerControllerF>());
@@ -447,6 +449,10 @@ public class GameControllerF : MonoBehaviour {
         return playerPositionsAtStart;
     }
 
+	public static List<string>[] GetPlayerAwards(){
+		return playerAwards;
+	}
+
     public static Vector3 GetPositionXZNeutral()
     {
         return positionXZNeutral;
@@ -461,4 +467,14 @@ public class GameControllerF : MonoBehaviour {
     {
         return staticCake;
     }
+	public static void SetWinner(string winnerTeam){
+
+		winner = winnerTeam;
+
+	}
+	public static string GetWinner(){
+		return winner;
+	}
+
 }
+
