@@ -167,8 +167,6 @@ public class MonsterControllerF : MonoBehaviour {
 
         colorSkinMonsterWhenNoCharge = transform.Find("Monster 1/Monster").GetComponent<SkinnedMeshRenderer>().materials[0].GetColor("_Color_base");
 
-        skinBall.SetActive(false);
-
         if (!monsterForm)
         {
             ballSpotlight.SetActive(true);
@@ -182,8 +180,8 @@ public class MonsterControllerF : MonoBehaviour {
             ambiantLight.intensity = intensityWhenMonster;
         }
 
+        skinBall.SetActive(false);
 
-        //tp.SetTeleportation(true);
 	}
 	
 	// Update is called once per frame
@@ -234,6 +232,20 @@ public class MonsterControllerF : MonoBehaviour {
             }
             else
             {
+                // safe fix bug rare
+                if (skinBall.activeSelf)
+                {
+                    skinBall.SetActive(false);
+                    skinMonster.SetActive(true);
+                    Debug.Log("Bug appeared bug safe fixed");
+                }
+                if (!skinMonster.activeSelf)
+                {
+                    skinBall.SetActive(false);
+                    skinMonster.SetActive(true);
+                    Debug.Log("Bug safe fixed");
+                }
+
                 MoveMonster();
                 //if un joueur est à portée
                 //prendre le plus proche
@@ -680,8 +692,6 @@ public class MonsterControllerF : MonoBehaviour {
     {
         sound.PlayEvent("Transfo_MonstreBalle", gameObject);
         sound.StopEvent("Music_Monstre", gameObject, 1000);
-        skinBall.SetActive(true);
-        skinMonster.SetActive(false);
         wrath = 0;
 
         if (eatPlayer)
@@ -695,6 +705,9 @@ public class MonsterControllerF : MonoBehaviour {
         transform.localScale /= monsterScale;
 
         monsterForm = false;
+
+        skinBall.SetActive(true);
+        skinMonster.SetActive(false);
 
         //feedbacks fin monstre
         ballSpotlight.GetComponent<ballSpotlight>().position();
@@ -729,11 +742,11 @@ public class MonsterControllerF : MonoBehaviour {
         monsterSpotlight.SetActive(true);
         //ambiantLight.intensity = intensityWhenMonster;
 
-        monsterForm = true;
-
         skinBall.SetActive(false);
         skinMonster.SetActive(true);
         transform.localScale *= monsterScale;
+
+        monsterForm = true;
 
         transfoFury.Stop();
         smokeFury.Stop();
