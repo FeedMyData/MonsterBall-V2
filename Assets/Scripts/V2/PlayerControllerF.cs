@@ -916,6 +916,7 @@ public class PlayerControllerF : MonoBehaviour
             {
                 GetComponentInChildren<Animator>().SetTrigger("idle");
                 GetComponentInChildren<Animator>().SetBool("isRunning", true);
+
                 hasBegunRunning = true;
                 hasArrived = false;
             }
@@ -933,7 +934,10 @@ public class PlayerControllerF : MonoBehaviour
             if (!hasArrived)
             {
                 if (GetComponentInChildren<Animator>())
+                {
+                    GetComponentInChildren<Animator>().ResetTrigger("idle"); // to be clean
                     GetComponentInChildren<Animator>().SetBool("isRunning", false);
+                }
                 transform.LookAt(GameControllerF.GetMonster().transform.position);
                 GameControllerF.getManager().validNextState(true);
                 hasArrived = true;

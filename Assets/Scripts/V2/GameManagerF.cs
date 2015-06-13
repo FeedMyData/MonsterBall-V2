@@ -165,6 +165,11 @@ public class GameManagerF : MonoBehaviour {
 
             StartCoroutine(FadeCanvasChooseYourPlayer());
 
+            GameControllerF.GetPlayer(1).GetComponentInChildren<Animator>().ResetTrigger("stretch");
+            GameControllerF.GetPlayer(2).GetComponentInChildren<Animator>().ResetTrigger("fence");
+            GameControllerF.GetPlayer(3).GetComponentInChildren<Animator>().ResetTrigger("highKnee");
+            GameControllerF.GetPlayer(4).GetComponentInChildren<Animator>().ResetTrigger("tap");
+
             state = Step.playerPlacement;
             break;
 		
@@ -191,7 +196,7 @@ public class GameManagerF : MonoBehaviour {
 			twitterScript.SetCanDisplay(true);
             twitterScript.LaunchFirstTweet();
 
-			GameObject.Find("ball_monster").GetComponent<MeshRenderer>().enabled = true;
+            //GameObject.Find("ball_monster").GetComponent<MeshRenderer>().enabled = true;
             GameControllerF.GetMonster().GetComponent<MonsterControllerF>().RespawnBall();
 			GameObject.Find("Main Camera").GetComponent<Animator>().SetTrigger("finalPosition");
             GameObject.Find("Main Camera").GetComponent<Animator>().enabled = false;

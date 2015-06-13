@@ -167,6 +167,8 @@ public class MonsterControllerF : MonoBehaviour {
 
         colorSkinMonsterWhenNoCharge = transform.Find("Monster 1/Monster").GetComponent<SkinnedMeshRenderer>().materials[0].GetColor("_Color_base");
 
+        skinBall.SetActive(false);
+
         if (!monsterForm)
         {
             ballSpotlight.SetActive(true);
@@ -563,7 +565,10 @@ public class MonsterControllerF : MonoBehaviour {
 
     public void RespawnBall()
     {
-        GetComponentInChildren<TeleportationF>().InstantTP(true);
+        if (GetComponentInChildren<TeleportationF>())
+        {
+            GetComponentInChildren<TeleportationF>().InstantTP(true);
+        }
         canCount = false;
         body.velocity = Vector3.zero;
         body.angularVelocity = Vector3.zero;

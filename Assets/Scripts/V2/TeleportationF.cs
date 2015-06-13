@@ -11,7 +11,7 @@ public class TeleportationF : MonoBehaviour {
     private float timeTP;
 
 	// Use this for initialization
-	void Start () {
+	void Awake () {
         ballMaterial = GetComponent<Renderer>().materials;
         actualValueShaderTP = ballMaterial[0].GetFloat("_alpha_slider");
 	}

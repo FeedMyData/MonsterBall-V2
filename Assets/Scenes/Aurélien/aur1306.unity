@@ -240,11 +240,11 @@ MonoBehaviour:
   dragOnGround: 2
   areaMagnet: 3
   speedMagnet: 40
-  wrathMax: 125
+  wrathMax: 20
   wrathDribblingValue: 4
   wrathDribblingEachTime: 1
   summon: 2
-  durationFirstPart: 10
+  durationFirstPart: 2
   durationSecondPart: 5
   monsterScale: 6
   monsterMass: 20
@@ -256,6 +256,7 @@ MonoBehaviour:
   maxNumberOfPlayerEatenWhenCharge: 3
   minSpeedCharge: 40
   maxSpeedCharge: 80
+  colorSkinMonsterWhenCharge: {r: .352941185, g: .196078435, b: 0, a: 1}
   durationInvul: 2
   durationMiniRandomRespawn: 1
   durationMaxiRandomRespawn: 3
@@ -5208,8 +5209,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collisionEffectPrefab: {fileID: 19818342, guid: 557eb93ecaaf73541b29202c0e9996c3,
     type: 2}
-  minPower: 40
-  maxPower: 80
+  minVelocityBallReadOnly: 40
+  maxVelocityBallReadOnly: 80
   minSpeed: 3
   maxSpeed: 10
   minRate: 10
@@ -33416,7 +33417,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be088c83819d83046a99eb9fc4edf5ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  state: 4
+  state: 0
   durationInSecond: 180
   ecranFin: {fileID: 1105067374}
   timeBetweenTwoBonus: 0
