@@ -344,8 +344,28 @@ ModelImporter:
       - time: .993478239
         functionName: StartCharge
         data: 
-        objectReferenceParameter: {fileID: 100018, guid: aca9e1c84fab4f946a4007ad4035b283,
-          type: 3}
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: .64007473
+        functionName: ShakeCamera
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: .754008412
+        functionName: ShakeCamera
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: .885232687
+        functionName: ShakeCamera
+        data: 
+        objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0

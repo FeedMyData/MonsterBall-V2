@@ -438,6 +438,8 @@ public class MonsterControllerF : MonoBehaviour {
                     loadingChargeEnd = true;
 					if(GetComponentInChildren<Animator>()) GetComponentInChildren<Animator>().SetTrigger("chargeAnnouncement");
                    // StartCoroutine(LoadingCharge());
+                    // appeler coroutine changement de couleur de peau ici
+                    //skinMonster.transform.Find("Monster").GetComponent<MeshRenderer>().materials[0].color = ...;
                 }
             }
             else
@@ -619,7 +621,12 @@ public class MonsterControllerF : MonoBehaviour {
 		canEat = true;
 		moveCharge = true;
 	}
-	
+
+    public void ShakeWhenAnimationPreCharge()
+    {
+        Camera.main.GetComponent<CameraShake>().shake(0.8f, 1.5f, 1.0f);
+    }
+
 	void TransformationBallMonstre()
     {
         // feedbacks pré-transformation

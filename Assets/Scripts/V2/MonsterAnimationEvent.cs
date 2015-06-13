@@ -5,15 +5,21 @@ public class MonsterAnimationEvent : MonoBehaviour {
 
 	public void StartCharge(){
 
-		transform.parent.GetComponent<MonsterControllerF> ().StartCharge ();
-
-		// Feedback_Charge
-
+        MonsterControllerF monsterScript = transform.parent.GetComponent<MonsterControllerF>();
+		monsterScript.StartCharge ();
+		
+        // Feedback_Charge
 		foreach (ParticleSystem ps in GetComponentsInChildren<ParticleSystem>())
 		{
 			if (ps.name == "Fumee_charge") ps.Play();
 		}
 
 	}
+
+    public void ShakeCamera()
+    {
+        MonsterControllerF monsterScript = transform.parent.GetComponent<MonsterControllerF>();
+        monsterScript.ShakeWhenAnimationPreCharge();
+    }
 
 }
