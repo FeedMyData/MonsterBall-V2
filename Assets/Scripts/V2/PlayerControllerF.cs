@@ -447,10 +447,12 @@ public class PlayerControllerF : MonoBehaviour
                 }
 			}
 
-			//Feedback
-			foreach (ParticleSystem ps in GetComponentsInChildren<ParticleSystem>()) {
-				if (ps.name == "Particles_charge")ps.Play ();
-			}
+            //Feedback
+            foreach (ParticleSystem ps in GetComponentsInChildren<ParticleSystem>())
+            {
+                if (ps.name == "Particles_charge") ps.Play();
+            }
+
         }
 
         if (chargingShoot < 1)
@@ -508,8 +510,8 @@ public class PlayerControllerF : MonoBehaviour
                     sound.StopEvent("SFX_Niveks_ChargeCoup", gameObject, 50);
 
 					//Feedback
-						foreach (ParticleSystem ps in GetComponentsInChildren<ParticleSystem>()) {
-							if (ps.name == "Particles_charge")ps.Stop();
+					foreach (ParticleSystem ps in GetComponentsInChildren<ParticleSystem>()) {
+							if (ps.name == "Particles_charge") ps.Stop();
 					}
                 }
                 loading = false;
@@ -524,7 +526,12 @@ public class PlayerControllerF : MonoBehaviour
 					// Feedback
 					foreach (ParticleSystem ps in GetComponentsInChildren<ParticleSystem>())
 					{
-						if (ps.name == "Batte_effet") ps.Play();
+                        if (ps.name == "Batte_effet")
+                        {
+                            ps.gameObject.SetActive(false);
+                            ps.gameObject.SetActive(true);
+                            ps.Play();
+                        }
 					}
 
 
