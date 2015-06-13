@@ -20,8 +20,14 @@ public class MonsterControllerF : MonoBehaviour {
     public float fovBall = 110f;
     public float angleAvoidPlayer = 45f;
     private Vector3 baseScaleBall = new Vector3(0.4f, 0.4f, 0.4f);
-    public float maxScaleFactor = 2.0f;
+    public float maxScaleFactor = 5.0f;
+    public float velocityMinReadValue = 40.0f;
+    public float velocityMaxReadValue = 80.0f;
     private Transform childBall;
+
+    [Header("Drag parameters")]
+    public float dragInAir = 1.0f;
+    public float dragOnGround = 1.0f;
     
     [Header("Magnet")]
     public float areaMagnet = 1.0f;
@@ -335,15 +341,17 @@ public class MonsterControllerF : MonoBehaviour {
                         catch (Exception e) { }
                     }
                 }
-                else // balle volle, sans volonté propre
+                else // balle volle ou sans volonté propre
                 {
                     // scale de la balle
                     transform.forward = body.velocity;
-                    float percentageL = (body.velocity.magnitude - 40.0f) / (80.0f - 40.0f);
+                    float percentageL = (body.velocity.magnitude - velocityMinReadValue) / (velocityMaxReadValue - velocityMinReadValue);
                     float newScaleBalleX = Mathf.Lerp(baseScaleBall.x, baseScaleBall.x / (maxScaleFactor / 2), percentageL);
                     float newScaleBalleZ = Mathf.Lerp(baseScaleBall.z, baseScaleBall.z / (maxScaleFactor / 2), percentageL);
                     float newScaleBalleY = Mathf.Lerp(baseScaleBall.y, baseScaleBall.y * maxScaleFactor, percentageL);
                     childBall.localScale = new Vector3(newScaleBalleX, newScaleBalleY, newScaleBalleZ);
+
+                    body.drag = isGround() ? dragOnGround : dragInAir;
                 }
             }
         }
@@ -579,6 +587,14 @@ public class MonsterControllerF : MonoBehaviour {
         }
         
         ragingFx.gameObject.SetActive(true);
+        if (!skinBall.activeSelf)
+        {
+            skinBall.SetActive(true);
+        }
+        if (skinBall.GetComponent<MeshRenderer>() && !skinBall.GetComponent<MeshRenderer>().enabled)
+        {
+            skinBall.GetComponent<MeshRenderer>().enabled = true;
+        }
         GetComponentInChildren<TeleportationF>().SetTeleportation(false);
         StartCoroutine(Intouchable());
 
@@ -896,18 +912,15 @@ public class MonsterControllerF : MonoBehaviour {
     {
         if (!monsterForm)
         {
-            MeshRenderer[] mr = GetComponentsInChildren<MeshRenderer>();
-            for (int i = 0; i < mr.Length; i++)
+            MeshRenderer mr = skinBall.GetComponent<MeshRenderer>();
+            if (mr != null)
             {
-                if (mr[i].name == "ball_monster")
+                while (!touchable)
                 {
-                    while (!touchable)
-                    {
-                        mr[i].enabled = !mr[i].enabled;
-                        yield return new WaitForSeconds(0.1f);
-                    }
-                    mr[i].enabled = true;
+                    mr.enabled = !mr.enabled;
+                    yield return new WaitForSeconds(0.1f);
                 }
+                mr.enabled = true;
             }
         }
     }

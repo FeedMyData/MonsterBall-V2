@@ -38,6 +38,7 @@ public class TeleportationF : MonoBehaviour {
         if (delayTP >= 1)
         {
             teleportationUp = false;
+            InstantTP(true);
             actualValueShaderTP = ballMaterial[0].GetFloat("_alpha_slider");
         }
             
@@ -73,6 +74,7 @@ public class TeleportationF : MonoBehaviour {
         if (delayTP >= 1)
         {
             teleportationDown = false;
+            InstantTP(false);
             actualValueShaderTP = ballMaterial[0].GetFloat("_alpha_slider");
         }
     }

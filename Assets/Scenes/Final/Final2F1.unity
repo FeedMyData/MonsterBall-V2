@@ -44,7 +44,7 @@ LevelGameManager:
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 5
-  m_GIWorkflowMode: 0
+  m_GIWorkflowMode: 1
   m_LightmapsMode: 1
   m_GISettings:
     serializedVersion: 2
@@ -68,7 +68,8 @@ LightmapSettings:
     m_TextureCompression: 1
     m_FinalGather: 0
     m_FinalGatherRayCount: 1024
-  m_LightmapSnapshot: {fileID: 0}
+  m_LightmapSnapshot: {fileID: 112000000, guid: 2bf011cf6d6253e45a9a461626aecaa1,
+    type: 2}
   m_RuntimeCPUUsage: 25
 --- !u!196 &5
 NavMeshSettings:
@@ -233,6 +234,10 @@ MonoBehaviour:
   fovBall: 110
   angleAvoidPlayer: 45
   maxScaleFactor: 5
+  velocityMinReadValue: 40
+  velocityMaxReadValue: 80
+  dragInAir: 1
+  dragOnGround: 2
   areaMagnet: 3
   speedMagnet: 40
   wrathMax: 125
@@ -9082,7 +9087,7 @@ MeshRenderer:
     type: 3}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 615020600}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:

@@ -9,8 +9,8 @@ public class CollisionTerrain : MonoBehaviour {
 
     public ParticleSystem collisionEffectPrefab;
     [Header("Reglages power balle")]
-    public float minPower = 50.0f;
-    public float maxPower = 80.0f;
+    public float minVelocityBallReadOnly = 40.0f;
+    public float maxVelocityBallReadOnly = 80.0f;
     [Header("Speed particles")]
     public float minSpeed = 0.0f;
     public float maxSpeed = 10.0f;
@@ -92,9 +92,9 @@ public class CollisionTerrain : MonoBehaviour {
 
         bool hasRecycled = false;
 
-        float speed = Mathf.Lerp(minSpeed, maxSpeed, (other.relativeVelocity.magnitude - minPower) / (maxPower - minPower));
-        float emissionRate = Mathf.Lerp(minRate, maxRate, (other.relativeVelocity.magnitude - minPower) / (maxPower - minPower));
-        float size = Mathf.Lerp(minSize, maxSize, (other.relativeVelocity.magnitude - minPower) / (maxPower - minPower));
+        float speed = Mathf.Lerp(minSpeed, maxSpeed, (other.relativeVelocity.magnitude - minVelocityBallReadOnly) / (maxVelocityBallReadOnly - minVelocityBallReadOnly));
+        float emissionRate = Mathf.Lerp(minRate, maxRate, (other.relativeVelocity.magnitude - minVelocityBallReadOnly) / (maxVelocityBallReadOnly - minVelocityBallReadOnly));
+        float size = Mathf.Lerp(minSize, maxSize, (other.relativeVelocity.magnitude - minVelocityBallReadOnly) / (maxVelocityBallReadOnly - minVelocityBallReadOnly));
 
         foreach (ParticleSystem particle in effectList)
         {
