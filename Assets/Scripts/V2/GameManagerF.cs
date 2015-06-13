@@ -122,9 +122,7 @@ public class GameManagerF : MonoBehaviour {
                 {
                     PlayerControllerF playerToPutJerseyOn = GameControllerF.GetPlayerPositionsAtStart()[wantedPositionPlayerToPutJerseyOn];
 
-                    playerToPutJerseyOn.jersey = jerseyToPutOnOtherPlayer;
-
-                    playerToPutJerseyOn.initPlayer();
+                    playerToPutJerseyOn.SetWantedJersey(jerseyToPutOnOtherPlayer);
 
                     playersNotAssigned.Remove(playerToPutJerseyOn);
 
@@ -144,9 +142,8 @@ public class GameManagerF : MonoBehaviour {
             {
                 foreach (PlayerControllerF player in playersNotAssigned)
                 {
-                    player.jersey = jerseysAvailable[0];
+                    player.SetWantedJersey(jerseysAvailable[0]);
                     jerseysAvailable.RemoveAt(0);
-                    player.initPlayer();
                 }
             }
             else
@@ -157,6 +154,11 @@ public class GameManagerF : MonoBehaviour {
                     Debug.Log(player.gameObject.name);
                 }
                 Debug.Log("player count : " + playersNotAssigned.Count + " ; Jerseys count : " + jerseysAvailable.Count);
+            }
+
+            for (int i = 1; i < 5; i++)
+            {
+                GameControllerF.GetPlayer(i).GetComponent<PlayerControllerF>().initPlayer();
             }
 
             GameObject.Find("Main Camera").GetComponent<Animator>().enabled = true;

@@ -59,6 +59,7 @@ public class PlayerControllerF : MonoBehaviour
 
     [Header("Custom")]
     public GameControllerF.Jersey jersey;
+    private GameControllerF.Jersey wantedJersey;
     public GameControllerF.Team team;
     private string horizontal;
     private string vertical;
@@ -136,6 +137,8 @@ public class PlayerControllerF : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        wantedJersey = jersey;
+
         controller = GetComponent<CharacterController>();
         tp = GetComponentInChildren<TeleportationF>();
         manager = GameControllerF.getManager();
@@ -330,7 +333,7 @@ public class PlayerControllerF : MonoBehaviour
      */
     public void initPlayer()
     {
-        switch (jersey)
+        switch (wantedJersey)
         {
             case GameControllerF.Jersey.player1:
                 horizontal = "Horizontal1";
@@ -1087,6 +1090,11 @@ public class PlayerControllerF : MonoBehaviour
     public int GetPositionControllerSelection()
     {
         return positionControllerSelection;
+    }
+
+    public void SetWantedJersey(GameControllerF.Jersey wJ)
+    {
+        wantedJersey = wJ;
     }
 
 }
