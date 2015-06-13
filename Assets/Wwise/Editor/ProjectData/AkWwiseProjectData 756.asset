@@ -9,9 +9,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 64e666e89aeccd84bac5d95a4d1f9d0e, type: 3}
-  m_Name: AkWwiseProjectData 739
+  m_Name: AkWwiseProjectData 756
   m_EditorClassIdentifier: 
-  CurrentPluginConfig: Profile
+  CurrentPluginConfig: 
   EventWwu: []
   AuxBusWwu: []
   StateWwu: []

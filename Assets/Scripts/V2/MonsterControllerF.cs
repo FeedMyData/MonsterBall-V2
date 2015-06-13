@@ -67,6 +67,8 @@ public class MonsterControllerF : MonoBehaviour {
     private bool monsterModeCharge = false;
     private int currentNumberOfRebounds = 0;
 	private int totalNumberOfRebounds = 0;
+    public Color colorSkinMonsterWhenCharge = new Color(90.0f / 255.0f, 50.0f / 255.0f, 0, 1);
+    private Color colorSkinMonsterWhenNoCharge;
     [Header("Respawn")]
     public float durationInvul = 2.0f;
     private bool touchable = true;
@@ -162,6 +164,8 @@ public class MonsterControllerF : MonoBehaviour {
         saliveDroite = GameObject.Find("Salive droite").GetComponent<ParticleSystem>();
         saliveGauche = GameObject.Find("Salive gauche").GetComponent<ParticleSystem>();
         ragingFx = GameObject.Find("raging fx").GetComponent<ParticleSystem>();
+
+        colorSkinMonsterWhenNoCharge = transform.Find("Monster 1/Monster").GetComponent<SkinnedMeshRenderer>().materials[0].GetColor("_Color_base");
 
         if (!monsterForm)
         {
@@ -438,8 +442,8 @@ public class MonsterControllerF : MonoBehaviour {
                     loadingChargeEnd = true;
 					if(GetComponentInChildren<Animator>()) GetComponentInChildren<Animator>().SetTrigger("chargeAnnouncement");
                    // StartCoroutine(LoadingCharge());
-                    // appeler coroutine changement de couleur de peau ici
-                    //skinMonster.transform.Find("Monster").GetComponent<MeshRenderer>().materials[0].color = ...;
+
+                    StartCoroutine(ChangeColorToCharge(true, 2.0f));
                 }
             }
             else
@@ -472,6 +476,7 @@ public class MonsterControllerF : MonoBehaviour {
           		 	monsterModeCharge = false;
            			loadingChargeEnd = false;
            			moveCharge = false;
+                    StartCoroutine(ChangeColorToCharge(false, 0.0f));
                     cracksScript.DesactivateCracks();
             		TransformationMonstreBall();
         		}
@@ -530,6 +535,25 @@ public class MonsterControllerF : MonoBehaviour {
             transform.position += transform.forward * Time.deltaTime * speedMonster;
         }
             
+    }
+
+    IEnumerator ChangeColorToCharge(bool isCharging, float time)
+    {
+        Material peauMonster = transform.Find("Monster 1/Monster").GetComponent<SkinnedMeshRenderer>().materials[0];
+
+        if (isCharging && peauMonster != null)
+        {
+            for (float percentageL = 0.0f; percentageL < 1.0f; percentageL += Time.deltaTime / time)
+            {
+                peauMonster.SetColor("_Color_base", Color.Lerp(colorSkinMonsterWhenNoCharge, colorSkinMonsterWhenCharge, percentageL));
+                yield return null;
+            }
+        }
+        else if (!isCharging && peauMonster != null)
+        {
+            peauMonster.SetColor("_Color_base", colorSkinMonsterWhenNoCharge);
+        }
+
     }
 
     private IEnumerator Yelling(){
