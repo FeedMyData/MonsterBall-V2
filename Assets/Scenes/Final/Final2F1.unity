@@ -256,6 +256,7 @@ MonoBehaviour:
   maxNumberOfPlayerEatenWhenCharge: 3
   minSpeedCharge: 40
   maxSpeedCharge: 80
+  colorSkinMonsterWhenCharge: {r: 0, g: 0, b: 0, a: 1}
   durationInvul: 2
   durationMiniRandomRespawn: 1
   durationMaxiRandomRespawn: 3
@@ -5208,8 +5209,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collisionEffectPrefab: {fileID: 19818342, guid: 557eb93ecaaf73541b29202c0e9996c3,
     type: 2}
-  minPower: 40
-  maxPower: 80
+  minVelocityBallReadOnly: 40
+  maxVelocityBallReadOnly: 80
   minSpeed: 3
   maxSpeed: 10
   minRate: 10
