@@ -195,8 +195,11 @@ public class GameManagerF : MonoBehaviour {
 				quickTestLaunched = true;
 				StartCoroutine(matchDuration());
 			}
-			twitterScript.SetCanDisplay(true);
-            twitterScript.LaunchFirstTweet();
+            if (twitterScript != null)
+            {
+                twitterScript.SetCanDisplay(true);
+                twitterScript.LaunchFirstTweet();
+            }
 
             //GameObject.Find("ball_monster").GetComponent<MeshRenderer>().enabled = true;
             GameControllerF.GetMonster().GetComponent<MonsterControllerF>().RespawnBall();
@@ -252,8 +255,8 @@ public class GameManagerF : MonoBehaviour {
             //}
             if (durationInSecond <= whenToBeginEndTimer)
             {
-                Debug.Log(txtDuration.GetComponent<Animator>());
-                txtDuration.GetComponent<Animator>().SetTrigger("countdownIN");
+                if(txtDuration.GetComponent<Animator>());
+                    txtDuration.GetComponent<Animator>().SetTrigger("countdownIN");
             }
 
         }
@@ -337,8 +340,11 @@ public class GameManagerF : MonoBehaviour {
 
         GameObject.Find("Main Camera").GetComponent<Animator>().enabled = false;
 
-        twitterScript.SetCanDisplay(true);
-        twitterScript.LaunchFirstTweet();
+        if (twitterScript != null)
+        {
+            twitterScript.SetCanDisplay(true);
+            twitterScript.LaunchFirstTweet();
+        }
 
 		yield return new WaitForSeconds(3.0f);
 
