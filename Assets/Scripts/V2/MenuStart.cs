@@ -5,29 +5,34 @@ using System.Collections;
 
 public class MenuStart : MonoBehaviour {
 
-    public GameObject defaultButtonMain;
-    public GameObject defaultButtonCreditsFromMain;
-    public GameObject defaultButtonCredits;
+    public GameObject ButtonPlay;
+    public GameObject ButtonBack;
+    public GameObject ButtonCredits;
 
     public GameObject pnlMain;
     public GameObject pnlCredits;
+    public GameObject pnlEnjmin;
+    public GameObject pnlLoading;
+
+    public Image CnamEnjmin;
 
     public float timeLoading = 5.0f;
-    private float speedRotation = 160.0f;
-    public GameObject pnlLoading;
-    private bool canRotate = false;
 
     public void Start()
     {
-        if (defaultButtonMain != null)
-            EventSystem.current.SetSelectedGameObject(defaultButtonMain);
+
+        pnlMain.SetActive(false);
+        pnlCredits.SetActive(false);
+        pnlLoading.SetActive(false);
+        pnlEnjmin.SetActive(true);
+
+        StartCoroutine(EnjminScreen());
     }
 
     public void Play()
     {
         pnlMain.SetActive(false);
         pnlLoading.SetActive(true);
-        canRotate = true;
         StartCoroutine(PlayCoroutine());
     }
 
@@ -43,18 +48,39 @@ public class MenuStart : MonoBehaviour {
     {
         pnlMain.SetActive(false);
         pnlCredits.SetActive(true);
-        if (defaultButtonCredits != null)
-            EventSystem.current.SetSelectedGameObject(defaultButtonCredits);
+        if (ButtonBack != null)
+            EventSystem.current.SetSelectedGameObject(ButtonBack);
     }
 
     public void ToMain()
     {
         pnlCredits.SetActive(false);
         pnlMain.SetActive(true);
-        if (defaultButtonCreditsFromMain != null)
-            EventSystem.current.SetSelectedGameObject(defaultButtonCreditsFromMain);
+        if (ButtonCredits != null)
+            EventSystem.current.SetSelectedGameObject(ButtonCredits);
 
+    }
 
+    IEnumerator EnjminScreen()
+    {
+        yield return new WaitForSeconds(2.0f);
+        pnlMain.SetActive(true);
+        if (ButtonPlay != null)
+            EventSystem.current.SetSelectedGameObject(ButtonPlay);
+        StartCoroutine(FadeTo(0.0f, 0.5f));
+    }
+
+    IEnumerator FadeTo(float aValue, float aTime)
+    {
+        float alpha = CnamEnjmin.color.a;
+
+        for (float t = 0.0f; t < 1.0f; t += Time.deltaTime / aTime)
+        {
+            Color newColor = new Color(1, 1, 1, Mathf.Lerp(alpha, aValue, t));
+            CnamEnjmin.color = newColor;
+            yield return null;
+        }
+        pnlEnjmin.SetActive(false);
     }
 
     public void Quit()
