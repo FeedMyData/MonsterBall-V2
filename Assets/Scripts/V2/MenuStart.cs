@@ -51,7 +51,7 @@ public class MenuStart : MonoBehaviour {
     {
         pnlCredits.SetActive(false);
         pnlMain.SetActive(true);
-        if (defaultButtonMain != null)
+        if (defaultButtonCreditsFromMain != null)
             EventSystem.current.SetSelectedGameObject(defaultButtonCreditsFromMain);
 
 

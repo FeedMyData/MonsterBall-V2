@@ -76,12 +76,14 @@ public class GameControllerF : MonoBehaviour {
         tabObj[3] = player3;
         tabObj[4] = player4;
 
+        positionsPlayersAtSelection.Clear();
         positionsPlayersAtSelection.Add(-2, player4.transform.position);
         positionsPlayersAtSelection.Add(-1, player2.transform.position);
         positionsPlayersAtSelection.Add(0, positionXZNeutral);
         positionsPlayersAtSelection.Add(1, player1.transform.position);
         positionsPlayersAtSelection.Add(2, player3.transform.position);
-        
+
+        playerPositionsAtStart.Clear();
         playerPositionsAtStart.Add(-2, player4.GetComponent<PlayerControllerF>());
         playerPositionsAtStart.Add(-1, player2.GetComponent<PlayerControllerF>());
         playerPositionsAtStart.Add(1, player1.GetComponent<PlayerControllerF>());
