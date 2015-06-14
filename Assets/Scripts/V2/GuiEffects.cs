@@ -70,6 +70,7 @@ public class GuiEffects : MonoBehaviour {
             {
                 isFlashing = false;
                 textureToFlash.enabled = false;
+                newAlphaColor.a = 0.0f;
             }
 
             textureToFlash.color = newAlphaColor;
