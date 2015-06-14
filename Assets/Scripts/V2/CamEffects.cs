@@ -11,16 +11,26 @@ public class CamEffects : MonoBehaviour {
 
     private bool repositionned = false;
     private bool animatorDesactivated = false;
+    //private GameManagerF.Step currentStep;
+    //private bool playingUntilChoosePlayer = false;
 
-	// Use this for initialization
-	void Start () {
+	void Awake () {
 
         originalCamPos = transform.localPosition;
 
 	}
-	
+
+    void Start()
+    {
+        if (GetComponent<Animator>())
+        {
+            GetComponent<Animator>().enabled = true;
+        }
+    }
+
 	// Update is called once per frame
 	void Update () {
+
 
         if (monster.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("SpitPlayer"))
         {
@@ -30,6 +40,15 @@ public class CamEffects : MonoBehaviour {
         }
         else if (!repositionned)
         {
+            if (!animatorDesactivated && GameControllerF.getManager().state == GameManagerF.Step.inGame)
+            {
+                if (GetComponent<Animator>())
+                {
+                    GetComponent<Animator>().enabled = false;
+                    animatorDesactivated = true;
+                }
+            }
+
             transform.localPosition = originalCamPos;
             repositionned = true;
         }
@@ -58,6 +77,8 @@ public class CamEffects : MonoBehaviour {
             //GameControllerF.GetPlayer(3).transform.FindChild("AButtonSprite").GetComponent<SpriteRenderer>().enabled = true;
             //GameControllerF.GetPlayer(4).transform.FindChild("AButtonSprite").GetComponent<SpriteRenderer>().enabled = true;
             GameControllerF.getManager().state = GameManagerF.Step.choosePlayer;
+        } else { // safe condition to play anyway
+            GameControllerF.getManager().state = GameManagerF.Step.quickTest;
         }
 
 	}

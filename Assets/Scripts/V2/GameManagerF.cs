@@ -338,6 +338,7 @@ public class GameManagerF : MonoBehaviour {
 
 		GameObject.Find ("Commentaries").GetComponent<TextCommentaries> ().WriteCommentary ("", "matchB");
 
+        GameObject.Find("Main Camera").GetComponent<Animator>().SetTrigger("finalPosition");
         GameObject.Find("Main Camera").GetComponent<Animator>().enabled = false;
 
         if (twitterScript != null)
