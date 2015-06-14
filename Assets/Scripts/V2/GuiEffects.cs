@@ -114,6 +114,12 @@ public class GuiEffects : MonoBehaviour {
 
     public void flashGoal(string color)
     {
+        if (textureToFlash != null)
+        {
+            Color newAlphaColor = textureToFlash.color;
+            newAlphaColor.a = 0.0f;
+            textureToFlash.color = newAlphaColor;
+        }
 
         if (color == "TeamBlu")
         {
