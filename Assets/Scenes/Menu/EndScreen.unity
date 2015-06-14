@@ -206,6 +206,10 @@ MonoBehaviour:
   fovBall: 110
   angleAvoidPlayer: 45
   maxScaleFactor: 2
+  velocityMinReadValue: 40
+  velocityMaxReadValue: 80
+  dragInAir: 1
+  dragOnGround: 1
   areaMagnet: 1
   speedMagnet: 10
   wrathMax: 100
@@ -221,8 +225,10 @@ MonoBehaviour:
   durationLoadingCharge: 2
   numberOfReboundsToMaxSpeed: 10
   maxNumberOfChargeRebounds: 10
+  maxNumberOfPlayerEatenWhenCharge: 3
   minSpeedCharge: 8
   maxSpeedCharge: 25
+  colorSkinMonsterWhenCharge: {r: .352941185, g: .196078435, b: 0, a: 1}
   durationInvul: 2
   durationMiniRandomRespawn: 1
   durationMaxiRandomRespawn: 5
@@ -3969,7 +3975,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 4
-    m_SelectOnUp: {fileID: 1357816805}
+    m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 1357816805}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
@@ -7380,7 +7386,7 @@ MonoBehaviour:
   m_Navigation:
     m_Mode: 4
     m_SelectOnUp: {fileID: 804658902}
-    m_SelectOnDown: {fileID: 804658902}
+    m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
   m_Transition: 3
