@@ -473,8 +473,8 @@ public class MonsterControllerF : MonoBehaviour {
                     if (currentNumberOfRebounds < numberOfReboundsToMaxSpeed) currentNumberOfRebounds++;
                     //feedbacks rebond sur bord quand charge
                     float percentageLShake = currentNumberOfRebounds / numberOfReboundsToMaxSpeed;
-                    speedMonsterCharge = Mathf.Lerp(2.5f, 4.0f, percentageLShake);
-                    Camera.main.GetComponent<CameraShake>().shake(1.0f, percentageLShake, 0.5f);
+                    float shakeCam = Mathf.Lerp(2.0f, 3.0f, percentageLShake);
+                    Camera.main.GetComponent<CameraShake>().shake(1.0f, shakeCam, 1.0f);
 
                     cracksScript.AddCrack(currentNumberOfRebounds, numberOfReboundsToMaxSpeed);
 
