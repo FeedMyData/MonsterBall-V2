@@ -109,15 +109,15 @@
 				<Effect Name="Dirty_Double" ID="{B982B1DC-BFC9-4541-ADCC-C41CAA413A54}" PluginName="iZotope Trash Delay" CompanyID="259" PluginID="4" PluginType="3">
 					<PropertyList>
 						<Property Name="DelayType" Type="int32" Value="2"/>
-						<Property Name="DryOut" Type="Real32" Value="65"/>
-						<Property Name="Feedback" Type="Real32" Value="1"/>
+						<Property Name="DryOut" Type="Real32" Value="77"/>
+						<Property Name="Feedback" Type="Real32" Value="21"/>
 						<Property Name="HighCutoff" Type="Real32" Value="20000"/>
 						<Property Name="HighQ" Type="Real32" Value="3"/>
 						<Property Name="LowCutoff" Type="Real32" Value="50"/>
 						<Property Name="LowQ" Type="Real32" Value="0.5"/>
-						<Property Name="Time" Type="Real32" Value="10"/>
-						<Property Name="Trash" Type="Real32" Value="1"/>
-						<Property Name="WetOut" Type="Real32" Value="65"/>
+						<Property Name="Time" Type="Real32" Value="100"/>
+						<Property Name="Trash" Type="Real32" Value="0"/>
+						<Property Name="WetOut" Type="Real32" Value="64"/>
 					</PropertyList>
 				</Effect>
 			</ChildrenList>

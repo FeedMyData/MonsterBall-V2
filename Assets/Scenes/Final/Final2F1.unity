@@ -7143,6 +7143,7 @@ GameObject:
   - 114: {fileID: 499457358}
   - 114: {fileID: 499457359}
   - 95: {fileID: 499457360}
+  - 114: {fileID: 499457357}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -7235,6 +7236,27 @@ MonoBehaviour:
   shakeAmount: .5
   decreaseFactor: 1
   decreaseShakeWithTime: 1
+--- !u!114 &499457357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 499457350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 704553ab0af34f544bca18cd2ee785f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  valueGuid: 2c3b8697abf0d0429bc6f99f690a5d38
+  eventID: -592846755
+  soundEmitterObject: {fileID: 0}
+  enableActionOnEvent: 0
+  actionOnEventType: 0
+  curveInterpolation: 4
+  transitionDuration: 0
+  m_callbackData: {fileID: 0}
 --- !u!114 &499457358
 MonoBehaviour:
   m_ObjectHideFlags: 0
