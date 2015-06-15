@@ -29,6 +29,23 @@ public class MenuStart : MonoBehaviour {
         StartCoroutine(EnjminScreen());
     }
 
+    private void Update()
+    {
+        if(EventSystem.current.currentSelectedGameObject == null) {
+            if (Input.GetAxis("Vertical") > 0.3f || Input.GetAxis("Vertical") < -0.3f)
+            {
+                if (pnlMain.activeSelf)
+                {
+                    EventSystem.current.SetSelectedGameObject(ButtonPlay);
+                }
+                else if (pnlCredits.activeSelf)
+                {
+                    EventSystem.current.SetSelectedGameObject(ButtonBack);
+                }
+            }
+        }
+    }
+
     public void Play()
     {
         pnlMain.SetActive(false);
