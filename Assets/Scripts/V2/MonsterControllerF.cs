@@ -42,7 +42,7 @@ public class MonsterControllerF : MonoBehaviour {
     public float wrathDribblingEachTime = 1.0f;
     public float summon = 0.3f;
     public float durationFirstPart = 15.0f;
-    //public float durationSecondPart = 5.0f;
+    public float durationSecondPart = 5.0f;
     private int wrath = 0;
     private bool monsterForm = false;
     //private bool monsterModeCharge = false;
@@ -165,8 +165,7 @@ public class MonsterControllerF : MonoBehaviour {
         saliveGauche = GameObject.Find("Salive gauche").GetComponent<ParticleSystem>();
         ragingFx = GameObject.Find("raging fx").GetComponent<ParticleSystem>();
 
-        //colorSkinMonsterWhenNoCharge = transform.Find("Monster 1/Monster").GetComponent<SkinnedMeshRenderer>().materials[0].GetColor("_Color_base");
-        colorSkinMonsterWhenNoCharge = transform.Find("Monster 1/Monster").GetComponent<SkinnedMeshRenderer>().materials[0].color;
+        colorSkinMonsterWhenNoCharge = transform.Find("Monster 1/Monster").GetComponent<SkinnedMeshRenderer>().materials[0].GetColor("_Color_base");
 
         if (!monsterForm)
         {
@@ -560,15 +559,13 @@ public class MonsterControllerF : MonoBehaviour {
         {
             for (float percentageL = 0.0f; percentageL < 1.0f; percentageL += Time.deltaTime / time)
             {
-                //peauMonster.SetColor("_Color_base", Color.Lerp(colorSkinMonsterWhenNoCharge, colorSkinMonsterWhenCharge, percentageL));
-                peauMonster.color = Color.Lerp(colorSkinMonsterWhenNoCharge, colorSkinMonsterWhenCharge, percentageL);
+                peauMonster.SetColor("_Color_base", Color.Lerp(colorSkinMonsterWhenNoCharge, colorSkinMonsterWhenCharge, percentageL));
                 yield return null;
             }
         }
         else if (!isCharging && peauMonster != null)
         {
-            //peauMonster.SetColor("_Color_base", colorSkinMonsterWhenNoCharge);
-            peauMonster.color = colorSkinMonsterWhenNoCharge;
+            peauMonster.SetColor("_Color_base", colorSkinMonsterWhenNoCharge);
         }
 
     }
@@ -731,6 +728,10 @@ public class MonsterControllerF : MonoBehaviour {
         yield return new WaitForSeconds(summon / 2);
 
         smokeFury.transform.position = transform.position;
+        StartCoroutine(GameControllerF.GetPlayer(1).GetComponent<PlayerControllerF>().Vibration(0, GameControllerF.GetPlayer(1).GetComponent<PlayerControllerF>().powerTransformation, GameControllerF.GetPlayer(1).GetComponent<PlayerControllerF>().durationTransformation));
+        StartCoroutine(GameControllerF.GetPlayer(1).GetComponent<PlayerControllerF>().Vibration(1, GameControllerF.GetPlayer(1).GetComponent<PlayerControllerF>().powerTransformation, GameControllerF.GetPlayer(1).GetComponent<PlayerControllerF>().durationTransformation));
+        StartCoroutine(GameControllerF.GetPlayer(1).GetComponent<PlayerControllerF>().Vibration(2, GameControllerF.GetPlayer(1).GetComponent<PlayerControllerF>().powerTransformation, GameControllerF.GetPlayer(1).GetComponent<PlayerControllerF>().durationTransformation));
+        StartCoroutine(GameControllerF.GetPlayer(1).GetComponent<PlayerControllerF>().Vibration(3, GameControllerF.GetPlayer(1).GetComponent<PlayerControllerF>().powerTransformation, GameControllerF.GetPlayer(1).GetComponent<PlayerControllerF>().durationTransformation));
         smokeFury.Play();
 
         yield return new WaitForSeconds(summon/2);
@@ -845,6 +846,7 @@ public class MonsterControllerF : MonoBehaviour {
     {
 
         eatPlayer = true;
+        StartCoroutine(player.GetComponent<PlayerControllerF>().Vibration(player.GetComponent<PlayerControllerF>().numController, player.GetComponent<PlayerControllerF>().powerVibrJoueurMange, player.GetComponent<PlayerControllerF>().durationJoueurMange));
         player.GetComponent<PlayerControllerF>().isEaten = true;
         player.GetComponent<CharacterController>().enabled = false;
         player.GetComponent<Collider>().enabled = false;
