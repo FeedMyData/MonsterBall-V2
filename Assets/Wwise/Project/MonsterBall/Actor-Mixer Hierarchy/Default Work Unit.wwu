@@ -3078,6 +3078,324 @@
 								</Reference>
 							</ReferenceList>
 						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Footsteps" ID="{F9317DBD-6E70-495A-9477-6958FE27CB14}" ShortID="517506180">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{38959EE3-6CCD-4906-971B-1CBA5C349F69}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="150"/>
+													<Property Name="Min" Type="Real64" Value="-150"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="10"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-22</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="SFX_Niveks_Footsteps_01-01" ID="{5B7A0E6E-07F8-4358-B1C0-44B1945F5348}" ShortID="638838197" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Niveks_Footsteps_01-01" ID="{2CD6BEF2-12B7-4D45-A5A3-9A816FE2F901}" ShortID="1061812709">
+											<Language>SFX</Language>
+											<AudioFile>Footsteps\SFX_Niveks_Footsteps_01-01.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Niveks_Footsteps_01-01" ID="{2CD6BEF2-12B7-4D45-A5A3-9A816FE2F901}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Niveks_Footsteps_01-02" ID="{14345FC6-B10A-4834-9ADA-319B53E9C1C4}" ShortID="920340630" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Niveks_Footsteps_01-02" ID="{191E8FDD-A040-44D8-A692-29EE2EA9C6A2}" ShortID="432251405">
+											<Language>SFX</Language>
+											<AudioFile>Footsteps\SFX_Niveks_Footsteps_01-02.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Niveks_Footsteps_01-02" ID="{191E8FDD-A040-44D8-A692-29EE2EA9C6A2}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Niveks_Footsteps_01-03" ID="{A55B6072-CB2A-4445-B13F-4E13700586B6}" ShortID="56530857" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Niveks_Footsteps_01-03" ID="{1AC0CC92-3265-4B82-AC3A-0999EAB5337A}" ShortID="643260042">
+											<Language>SFX</Language>
+											<AudioFile>Footsteps\SFX_Niveks_Footsteps_01-03.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Niveks_Footsteps_01-03" ID="{1AC0CC92-3265-4B82-AC3A-0999EAB5337A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Niveks_Footsteps_01-04" ID="{1467E14D-9A1B-4598-816B-D1484AE0D6B9}" ShortID="291372119" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Niveks_Footsteps_01-04" ID="{B6A98940-C75D-481B-BBB0-FC357CD3DC9F}" ShortID="509617402">
+											<Language>SFX</Language>
+											<AudioFile>Footsteps\SFX_Niveks_Footsteps_01-04.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Niveks_Footsteps_01-04" ID="{B6A98940-C75D-481B-BBB0-FC357CD3DC9F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Niveks_Footsteps_01-05" ID="{8F6978DA-E953-4F86-AE60-A624FFA04320}" ShortID="973448516" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Niveks_Footsteps_01-05" ID="{3D5FD6FA-6E38-4E90-B345-65B08982CC5C}" ShortID="675542163">
+											<Language>SFX</Language>
+											<AudioFile>Footsteps\SFX_Niveks_Footsteps_01-05.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Niveks_Footsteps_01-05" ID="{3D5FD6FA-6E38-4E90-B345-65B08982CC5C}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Niveks_Footsteps_01-06" ID="{97303A26-C8AF-4559-B48D-64836D8FFDA0}" ShortID="333259755" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Niveks_Footsteps_01-06" ID="{B2638650-B05E-4035-90D6-A52AA3638091}" ShortID="151072850">
+											<Language>SFX</Language>
+											<AudioFile>Footsteps\SFX_Niveks_Footsteps_01-06.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Niveks_Footsteps_01-06" ID="{B2638650-B05E-4035-90D6-A52AA3638091}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Niveks_Footsteps_01-09" ID="{015FD5B4-29CD-41EC-99AD-A5152F4F395A}" ShortID="1037629835" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Niveks_Footsteps_01-09" ID="{3E550FB9-8415-4BA7-B87A-C03690530C3A}" ShortID="494334392">
+											<Language>SFX</Language>
+											<AudioFile>Footsteps\SFX_Niveks_Footsteps_01-09.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Niveks_Footsteps_01-09" ID="{3E550FB9-8415-4BA7-B87A-C03690530C3A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Niveks_Footsteps_01-10" ID="{DF88A8CD-4029-496E-9632-9F1DAFA5B3D1}" ShortID="911495771" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Niveks_Footsteps_01-10" ID="{3A6CF58D-F679-41EE-8C71-AA294941A077}" ShortID="127836317">
+											<Language>SFX</Language>
+											<AudioFile>Footsteps\SFX_Niveks_Footsteps_01-10.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Niveks_Footsteps_01-10" ID="{3A6CF58D-F679-41EE-8C71-AA294941A077}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Niveks_Footsteps_01-11" ID="{3DC27C52-A293-48B1-B511-43A0D7185879}" ShortID="277036756" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Niveks_Footsteps_01-11" ID="{343ED9BE-BA98-4530-8110-8CE7E329B95E}" ShortID="1042176562">
+											<Language>SFX</Language>
+											<AudioFile>Footsteps\SFX_Niveks_Footsteps_01-11.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Niveks_Footsteps_01-11" ID="{343ED9BE-BA98-4530-8110-8CE7E329B95E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Niveks_Footsteps_01-12" ID="{3C3668BC-555F-4FB2-AF44-FC9BC240A0B3}" ShortID="481614790" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Niveks_Footsteps_01-12" ID="{995D1C66-44EF-4D14-888B-83D5893D92ED}" ShortID="835594618">
+											<Language>SFX</Language>
+											<AudioFile>Footsteps\SFX_Niveks_Footsteps_01-12.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Niveks_Footsteps_01-12" ID="{995D1C66-44EF-4D14-888B-83D5893D92ED}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Niveks_Footsteps_01-13" ID="{CF61DC6D-E550-4B3B-A022-8BCCD3315D17}" ShortID="949568578" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Niveks_Footsteps_01-13" ID="{F307D6E5-6026-4541-95C5-5E3B4BD02B11}" ShortID="957361454">
+											<Language>SFX</Language>
+											<AudioFile>Footsteps\SFX_Niveks_Footsteps_01-13.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Niveks_Footsteps_01-13" ID="{F307D6E5-6026-4541-95C5-5E3B4BD02B11}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Niveks_Footsteps_01-14" ID="{CEDBEFC4-4AF4-4D88-840A-2C7064BF11DA}" ShortID="815204005" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Niveks_Footsteps_01-14" ID="{42E96E50-9F47-4540-8EB1-34E00BCAEB08}" ShortID="778713863">
+											<Language>SFX</Language>
+											<AudioFile>Footsteps\SFX_Niveks_Footsteps_01-14.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Niveks_Footsteps_01-14" ID="{42E96E50-9F47-4540-8EB1-34E00BCAEB08}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Niveks_Footsteps_01-15" ID="{7E7D27FE-F8E9-4B2C-AF15-53D671E68C76}" ShortID="927467627" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Niveks_Footsteps_01-15" ID="{1D3D95B7-6BA2-45AA-8CC9-731AF0D6C198}" ShortID="660335167">
+											<Language>SFX</Language>
+											<AudioFile>Footsteps\SFX_Niveks_Footsteps_01-15.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Niveks_Footsteps_01-15" ID="{1D3D95B7-6BA2-45AA-8CC9-731AF0D6C198}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Niveks_Footsteps_01-17" ID="{C4C26D13-58D4-45B3-A118-5098435BA93D}" ShortID="170371969" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Niveks_Footsteps_01-17" ID="{61D622CC-5178-4384-BCA1-B2C186CE0398}" ShortID="638542275">
+											<Language>SFX</Language>
+											<AudioFile>Footsteps\SFX_Niveks_Footsteps_01-17.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Niveks_Footsteps_01-17" ID="{61D622CC-5178-4384-BCA1-B2C186CE0398}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_Niveks_Footsteps_01-18" ID="{75D9B141-EE0F-499C-9111-462A0008499D}" ShortID="299954406" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Niveks_Footsteps_01-18" ID="{D337A287-3BA3-4FAF-B899-4452A6B287FF}" ShortID="833693706">
+											<Language>SFX</Language>
+											<AudioFile>Footsteps\SFX_Niveks_Footsteps_01-18.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_Niveks_Footsteps_01-18" ID="{D337A287-3BA3-4FAF-B899-4452A6B287FF}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
 					</ChildrenList>
 				</ActorMixer>
 				<ActorMixer Name="Voix" ID="{F502A3E4-B6F3-45C2-B677-F625DAFE42CA}" ShortID="345599444">
