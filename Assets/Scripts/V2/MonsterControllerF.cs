@@ -42,7 +42,7 @@ public class MonsterControllerF : MonoBehaviour {
     public float wrathDribblingEachTime = 1.0f;
     public float summon = 0.3f;
     public float durationFirstPart = 15.0f;
-    public float durationSecondPart = 5.0f;
+    //public float durationSecondPart = 5.0f;
     private int wrath = 0;
     private bool monsterForm = false;
     //private bool monsterModeCharge = false;
@@ -165,7 +165,8 @@ public class MonsterControllerF : MonoBehaviour {
         saliveGauche = GameObject.Find("Salive gauche").GetComponent<ParticleSystem>();
         ragingFx = GameObject.Find("raging fx").GetComponent<ParticleSystem>();
 
-        colorSkinMonsterWhenNoCharge = transform.Find("Monster 1/Monster").GetComponent<SkinnedMeshRenderer>().materials[0].GetColor("_Color_base");
+        //colorSkinMonsterWhenNoCharge = transform.Find("Monster 1/Monster").GetComponent<SkinnedMeshRenderer>().materials[0].GetColor("_Color_base");
+        colorSkinMonsterWhenNoCharge = transform.Find("Monster 1/Monster").GetComponent<SkinnedMeshRenderer>().materials[0].color;
 
         if (!monsterForm)
         {
@@ -559,13 +560,15 @@ public class MonsterControllerF : MonoBehaviour {
         {
             for (float percentageL = 0.0f; percentageL < 1.0f; percentageL += Time.deltaTime / time)
             {
-                peauMonster.SetColor("_Color_base", Color.Lerp(colorSkinMonsterWhenNoCharge, colorSkinMonsterWhenCharge, percentageL));
+                //peauMonster.SetColor("_Color_base", Color.Lerp(colorSkinMonsterWhenNoCharge, colorSkinMonsterWhenCharge, percentageL));
+                peauMonster.color = Color.Lerp(colorSkinMonsterWhenNoCharge, colorSkinMonsterWhenCharge, percentageL);
                 yield return null;
             }
         }
         else if (!isCharging && peauMonster != null)
         {
-            peauMonster.SetColor("_Color_base", colorSkinMonsterWhenNoCharge);
+            //peauMonster.SetColor("_Color_base", colorSkinMonsterWhenNoCharge);
+            peauMonster.color = colorSkinMonsterWhenNoCharge;
         }
 
     }
@@ -872,7 +875,11 @@ public class MonsterControllerF : MonoBehaviour {
 				GetComponentInChildren<Animator> ().SetTrigger ("spit");
 
 			//feedbacks chewing
+            saliveDroite.gameObject.SetActive(false);
+            saliveDroite.gameObject.SetActive(true);
 			saliveDroite.Play ();
+            saliveGauche.gameObject.SetActive(false);
+            saliveGauche.gameObject.SetActive(true);
 			saliveGauche.Play ();
 
 			yield return new WaitForSeconds (durationEatingPlayer);

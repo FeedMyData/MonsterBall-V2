@@ -17,7 +17,12 @@ public class MonsterAnimationEvent : MonoBehaviour {
         // Feedback_Charge
 		foreach (ParticleSystem ps in GetComponentsInChildren<ParticleSystem>())
 		{
-			if (ps.name == "Fumee_charge") ps.Play();
+            if (ps.name == "Fumee_charge")
+            {
+                ps.gameObject.SetActive(false);
+                ps.gameObject.SetActive(true);
+                ps.Play();
+            }
 		}
 
 	}

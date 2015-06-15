@@ -1123,6 +1123,7 @@ public class PlayerControllerF : MonoBehaviour
                     {
                         playerValidated.GetComponentInChildren<Animator>().SetTrigger("hit");
                     }
+                    sound.PlayEvent("SFX_Niveks_Woosh", playerValidated.gameObject);
                 }
 
             }
