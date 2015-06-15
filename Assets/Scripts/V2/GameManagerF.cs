@@ -349,6 +349,8 @@ public class GameManagerF : MonoBehaviour {
 
 		yield return new WaitForSeconds(3.0f);
 
+        GameControllerF.GetSound().PlayEvent("SFX_Buzz_DebutMatch", Camera.main.gameObject);
+
 		GameObject.Find ("Commentaries").GetComponent<TextCommentaries> ().WriteCommentary ("", "ballP");
 		StartCoroutine (matchDuration ());
 
