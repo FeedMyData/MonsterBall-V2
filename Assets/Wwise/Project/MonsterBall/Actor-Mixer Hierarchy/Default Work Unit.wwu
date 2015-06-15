@@ -80,8 +80,53 @@
 										<Value>4</Value>
 									</ValueList>
 								</Property>
+								<Property Name="OverrideEffect" Type="bool" Value="True"/>
 								<Property Name="OverridePositioning" Type="bool" Value="True"/>
 								<Property Name="PositioningType" Type="int16" Value="1"/>
+								<Property Name="Volume" Type="Real64">
+									<RTPCList>
+										<RTPC Name="" ID="{99FD7D68-E946-4B85-9EC7-C60B4A8218BA}" ShortID="223837622">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="Public_Bouh" ID="{FDA1CDCA-C94B-42C9-B2DB-CD8323E7D074}" WorkUnitID="{D102035F-3B94-40DD-8154-2F91360ACE51}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{557540A0-8F32-4D45-A6F5-FF8E67BE445A}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="3"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>-48</XPos>
+														<YPos>0</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>-47.999</XPos>
+														<YPos>-200</YPos>
+														<Flags>0</Flags>
+													</Point>
+													<Point>
+														<XPos>-7.48428</XPos>
+														<YPos>-200</YPos>
+														<Flags>0</Flags>
+														<SegmentShape>Log1</SegmentShape>
+													</Point>
+													<Point>
+														<XPos>-6</XPos>
+														<YPos>0.17158</YPos>
+														<Flags>0</Flags>
+													</Point>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>-0.02271</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -317,9 +362,26 @@
 							</ChildrenList>
 						</RandomSequenceContainer>
 						<Sound Name="AMB_Public_Disapoint" ID="{9E7E27C7-020F-4EA1-97D2-8B72DFA8F8FA}" ShortID="211834431" Type="SoundFX">
+							<PropertyList>
+								<Property Name="OverrideEffect" Type="bool" Value="True"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+								</Reference>
+								<Reference Name="Effect0">
+									<Custom>
+										<Effect Name="Wwise Meter (Custom)" ID="{9090772C-1621-4604-9E9F-A910758F6F53}" ShortID="869685477" PluginName="Wwise Meter" CompanyID="0" PluginID="129" PluginType="3">
+											<PropertyList>
+												<Property Name="AttackTime" Type="Real32" Value="0.1"/>
+												<Property Name="Max" Type="Real32" Value="-6.2"/>
+												<Property Name="ReleaseTime" Type="Real32" Value="0"/>
+											</PropertyList>
+											<PluginData>
+	<GameParameter Name="Public_Bouh" ID="{FDA1CDCA-C94B-42C9-B2DB-CD8323E7D074}"/>
+</PluginData>
+										</Effect>
+									</Custom>
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
@@ -335,7 +397,7 @@
 								<ActiveSource Name="AMB_Public_Disapoint" ID="{052FD9C9-8E01-433E-945A-DFFCADFCB189}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="FX_Public_Intensification_Trnsfo" ID="{0836B42F-8583-49D8-9DCE-FE48BD98F31C}" ShortID="810501587" Type="SoundFX">
+						<Sound Name="FX_Public_Intensification_Transfo" ID="{0836B42F-8583-49D8-9DCE-FE48BD98F31C}" ShortID="810501587" Type="SoundFX">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
@@ -2851,7 +2913,7 @@
 							<PropertyList>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-6</Value>
+										<Value>-2</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -3080,6 +3142,11 @@
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="Footsteps" ID="{F9317DBD-6E70-495A-9477-6958FE27CB14}" ShortID="517506180">
 							<PropertyList>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>-18</Value>
+									</ValueList>
+								</Property>
 								<Property Name="Pitch" Type="int32">
 									<ModifierList>
 										<ModifierInfo>
@@ -3096,7 +3163,7 @@
 								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="10"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-22</Value>
+										<Value>-12</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>

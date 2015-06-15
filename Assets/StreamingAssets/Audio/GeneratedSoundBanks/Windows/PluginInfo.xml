@@ -7,5 +7,6 @@
 		<Plugin Name="Wwise Matrix Reverb" ID="7536643"/>
 		<Plugin Name="Wwise RoomVerb" ID="7733251"/>
 		<Plugin Name="Wwise Flanger" ID="8192003"/>
+		<Plugin Name="Wwise Meter" ID="8454147"/>
 	</Plugins>
 </PluginInfo>

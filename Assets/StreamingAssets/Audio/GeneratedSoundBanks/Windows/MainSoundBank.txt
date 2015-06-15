@@ -3,7 +3,6 @@ Event	ID	Name			Wwise Object Path	Notes
 	49016843	Music_Monstre			\Default Work Unit\Music\Music_Monstre	
 	213475906	SFX_But			\Default Work Unit\SFX\SFX_But	
 	682388778	VX_Comment_FinMatch			\Default Work Unit\Voix\Commentaire\VX_Comment_FinMatch	
-	867415767	VX_Nivek_ImpactBut			\Default Work Unit\Voix\Niveks\VX_Nivek_ImpactBut	
 	1123955361	VX_Niveks_FinMatchGagnant			\Default Work Unit\Voix\Niveks\VX_Niveks_FinMatchGagnant	
 	1598298728	Music_Menu			\Default Work Unit\Music\Music_Menu	
 	1640672383	Public_Bouh			\Default Work Unit\Public\Public_Bouh	
@@ -41,9 +40,14 @@ Event	ID	Name			Wwise Object Path	Notes
 	3955264645	VX_Niveks_Frappe			\Default Work Unit\Voix\Niveks\VX_Niveks_Frappe	
 	4101663895	Transfo_BalleMonstre			\Default Work Unit\Voix\Transformation\Transfo_BalleMonstre	
 	4141078286	VX_Niveks_ButGagnant			\Default Work Unit\Voix\Niveks\VX_Niveks_ButGagnant	
+	4235626026	VX_Niveks_ImpactBut			\Default Work Unit\Voix\Niveks\VX_Niveks_ImpactBut	
 	4270895000	VX_Balle_Cloison			\Default Work Unit\Voix\Balle\VX_Balle_Cloison	
 
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	1640672383	Public_Bouh			\Default Work Unit\Public_Bouh	
+
 Effect plug-ins	ID	Name	Type				Notes
+	869685477	Wwise Meter (Custom)	Wwise Meter			
 	1487150281	Bigger_Boom	iZotope Trash Dynamics Mono			
 	1588715066	Echoes_Linear	Wwise Delay			
 	2656259783	PA_Announcement1	Wwise Matrix Reverb			

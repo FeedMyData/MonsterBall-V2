@@ -124,7 +124,7 @@
 										</Action>
 									</ChildrenList>
 								</Event>
-								<Event Name="VX_Nivek_ImpactBut" ID="{5568DF7A-41C3-4DED-8E1E-7E0D4BBC92A5}">
+								<Event Name="VX_Niveks_ImpactBut" ID="{5568DF7A-41C3-4DED-8E1E-7E0D4BBC92A5}">
 									<ChildrenList>
 										<Action Name="Play" ID="{7089B01B-AB60-4681-BF7D-5096661C9873}" ShortID="987430821" Type="Play" Scope="One" Global="false">
 											<ElementList>
@@ -351,7 +351,7 @@
 											</PropertyList>
 											<ElementList>
 												<Element ID="{927494E7-8167-46BD-9BFF-560119D298BA}" Global="false">
-													<ObjectRef Name="FX_Public_Intensification_Trnsfo" ID="{0836B42F-8583-49D8-9DCE-FE48BD98F31C}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+													<ObjectRef Name="FX_Public_Intensification_Transfo" ID="{0836B42F-8583-49D8-9DCE-FE48BD98F31C}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
 												</Element>
 											</ElementList>
 										</Action>
