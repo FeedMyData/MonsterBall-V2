@@ -81,7 +81,7 @@
 				</File>
 				<File Id="22050384" Language="SFX">
 					<ShortName>Monster Ball Music Test.wav</ShortName>
-					<Path>SFX\Monster Ball Music Test_A0105B42.wem</Path>
+					<Path>SFX\Monster Ball Music Test_01E37AA8.wem</Path>
 				</File>
 				<File Id="24715378" Language="SFX">
 					<ShortName>CoupRecu\VOIX_Niveks_CoupRecu_06.wav</ShortName>
@@ -682,6 +682,10 @@
 				<File Id="865376660" Language="SFX">
 					<ShortName>But\VOIX_Balle_But_10.wav</ShortName>
 					<Path>SFX\But\VOIX_Balle_But_10_DDC98EF4.wem</Path>
+				</File>
+				<File Id="866111390" Language="SFX">
+					<ShortName>FX_Public_Objet .wav</ShortName>
+					<Path>SFX\FX_Public_Objet _DDC98EF4.wem</Path>
 				</File>
 				<File Id="877656492" Language="SFX">
 					<ShortName>MarqueBut\VOIX_Niveks_But_01.wav</ShortName>

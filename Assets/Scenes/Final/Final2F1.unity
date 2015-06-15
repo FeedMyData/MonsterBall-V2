@@ -245,6 +245,7 @@ MonoBehaviour:
   wrathDribblingEachTime: 1
   summon: 2
   durationFirstPart: 10
+  durationSecondPart: 5
   monsterScale: 6
   monsterMass: 20
   safeTransform: .600000024
@@ -1052,6 +1053,17 @@ MonoBehaviour:
   stunGoal: 0
   jersey: 2
   team: 1
+  numController: 0
+  durationFrappe: .200000003
+  powerVibrFrappe: .200000003
+  durationFrappeFort: .5
+  powerVibrFrappeFort: .400000006
+  durationTransformation: 1
+  powerTransformation: .5
+  durationJoueurFrappe: .400000006
+  powerVibrJoueurFrappe: .600000024
+  durationJoueurMange: 1
+  powerVibrJoueurMange: .600000024
   durationInvul: 3
   durationInvulSiCoupRecu: 1
   isRunning: 0
@@ -7536,6 +7548,17 @@ MonoBehaviour:
   stunGoal: 0
   jersey: 3
   team: 0
+  numController: 0
+  durationFrappe: .200000003
+  powerVibrFrappe: .200000003
+  durationFrappeFort: .5
+  powerVibrFrappeFort: .400000006
+  durationTransformation: 1
+  powerTransformation: .5
+  durationJoueurFrappe: .400000006
+  powerVibrJoueurFrappe: .600000024
+  durationJoueurMange: 1
+  powerVibrJoueurMange: .600000024
   durationInvul: 3
   durationInvulSiCoupRecu: 1
   isRunning: 0
@@ -29256,6 +29279,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e940b47af323fd64aa190c5a9d34507f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  durationVibr: .300000012
+  powerVibr: .400000006
 --- !u!95 &1800922602
 Animator:
   serializedVersion: 3
@@ -31217,6 +31242,17 @@ MonoBehaviour:
   stunGoal: 0
   jersey: 0
   team: 1
+  numController: 0
+  durationFrappe: .200000003
+  powerVibrFrappe: .200000003
+  durationFrappeFort: .5
+  powerVibrFrappeFort: .400000006
+  durationTransformation: 1
+  powerTransformation: .5
+  durationJoueurFrappe: .400000006
+  powerVibrJoueurFrappe: .600000024
+  durationJoueurMange: 1
+  powerVibrJoueurMange: .600000024
   durationInvul: 3
   durationInvulSiCoupRecu: 1
   isRunning: 0
@@ -32049,6 +32085,17 @@ MonoBehaviour:
   stunGoal: 0
   jersey: 1
   team: 0
+  numController: 0
+  durationFrappe: .200000003
+  powerVibrFrappe: .200000003
+  durationFrappeFort: .5
+  powerVibrFrappeFort: .400000006
+  durationTransformation: 1
+  powerTransformation: .5
+  durationJoueurFrappe: .400000006
+  powerVibrJoueurFrappe: .600000024
+  durationJoueurMange: 1
+  powerVibrJoueurMange: .600000024
   durationInvul: 3
   durationInvulSiCoupRecu: 1
   isRunning: 0

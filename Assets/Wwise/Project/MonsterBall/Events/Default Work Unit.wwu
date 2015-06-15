@@ -51,6 +51,13 @@
 						</Event>
 						<Event Name="Public_Bouh" ID="{126A55FE-4CE1-449E-8F28-60F069DBFA4E}">
 							<ChildrenList>
+								<Action Name="Stop" ID="{8F087A14-0C24-41BA-BA9B-A3A2C9057023}" ShortID="711358644" Type="Stop" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{A60BA36F-02B5-424A-B87E-4B577F90C742}" Global="false">
+											<ObjectRef Name="But" ID="{B96DE30D-FF5F-47B0-9B54-1C4BA488B784}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+										</Element>
+									</ElementList>
+								</Action>
 								<Action Name="Play" ID="{152BEB20-94D5-469C-9C1E-62AE371B7D5C}" ShortID="396927947" Type="Play" Scope="One" Global="false">
 									<ElementList>
 										<Element ID="{809006F2-BCBB-43DF-9F55-33DA427F1A6B}" Global="false">
@@ -520,9 +527,6 @@
 						<Event Name="SFX_Buzz_DebutMatch" ID="{46CA944A-F972-4848-BE5B-A9112FBE01BF}">
 							<ChildrenList>
 								<Action Name="Stop" ID="{18B0DE99-0ECA-44AD-8CC8-98D35BC5B02D}" ShortID="456332705" Type="Stop" Scope="One" Global="false">
-									<PropertyList>
-										<Property Name="FadeTime" Type="Real64" Value="1"/>
-									</PropertyList>
 									<ElementList>
 										<Element ID="{05F11DB0-C43C-4283-9F3C-3D087F621920}" Global="false">
 											<ObjectRef Name="Music_Selection" ID="{814021AA-6BA9-4C22-A014-A745571C77FD}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
@@ -533,6 +537,23 @@
 									<ElementList>
 										<Element ID="{70C1EE4D-6AC1-4D8B-8479-50CB903A28B0}" Global="false">
 											<ObjectRef Name="BuzzerDebutMatc_01" ID="{B9CD5E1C-A7FF-42CD-89B6-9A903A089173}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+										</Element>
+									</ElementList>
+								</Action>
+								<Action Name="Play" ID="{7B98AF72-CA8E-4BFB-8C80-0CA9AEEA3F79}" ShortID="373594734" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{0D713E26-362E-432A-89AB-BDD449B07C80}" Global="false">
+											<ObjectRef Name="FX_Public_Intensification_02" ID="{5E29AA64-AD31-406F-8711-42D11570C1A1}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+										</Element>
+									</ElementList>
+								</Action>
+								<Action Name="Play" ID="{AFA61615-761C-4EAD-A169-7AD0073DBB91}" ShortID="733988996" Type="Play" Scope="One" Global="false">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="1.5"/>
+									</PropertyList>
+									<ElementList>
+										<Element ID="{F972DD8D-4E8A-4BF5-A80E-CAC67A30DB37}" Global="false">
+											<ObjectRef Name="FX_Public_Objet" ID="{AD191104-07E6-43A4-A649-7B7856434AB8}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
 										</Element>
 									</ElementList>
 								</Action>

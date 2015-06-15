@@ -6,6 +6,5 @@
 		<Plugin Name="Wwise Delay" ID="6946819"/>
 		<Plugin Name="Wwise RoomVerb" ID="7733251"/>
 		<Plugin Name="Wwise Flanger" ID="8192003"/>
-		<Plugin Name="Wwise Meter" ID="8454147"/>
 	</Plugins>
 </PluginInfo>
