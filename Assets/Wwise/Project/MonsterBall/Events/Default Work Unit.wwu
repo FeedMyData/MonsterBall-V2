@@ -367,9 +367,22 @@
 								<Event Name="VX_Comment_MONSTERBALL" ID="{97863B2C-F0AB-42D0-9BC6-F99F690A5D38}">
 									<ChildrenList>
 										<Action Name="Play" ID="{D5CA7D4B-7285-4D54-87DB-DE3ABF1B7BC9}" ShortID="1016091764" Type="Play" Scope="One" Global="false">
+											<PropertyList>
+												<Property Name="Delay" Type="Real64" Value="4.5"/>
+											</PropertyList>
 											<ElementList>
 												<Element ID="{812A8B18-9172-4DE8-A716-289408398820}" Global="false">
 													<ObjectRef Name="VOIX_Commentateur_MonsterBall" ID="{154EE251-C2AE-454C-8D60-7A9BBC16ADCF}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+												</Element>
+											</ElementList>
+										</Action>
+										<Action Name="Play" ID="{40BF811E-B028-48F8-8653-EA349AF86516}" ShortID="410292581" Type="Play" Scope="One" Global="false">
+											<PropertyList>
+												<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+											</PropertyList>
+											<ElementList>
+												<Element ID="{89BEF15D-41DC-4517-BAEA-E5E022AAFD7C}" Global="false">
+													<ObjectRef Name="Monster Ball Music Test" ID="{814021AA-6BA9-4C22-A014-A745571C77FD}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
 												</Element>
 											</ElementList>
 										</Action>

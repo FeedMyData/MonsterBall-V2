@@ -3,7 +3,7 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 	426462839	Niveks			\Default Work Unit\Master Audio Bus\Voix\Niveks	
 	701539273	Musiques			\Default Work Unit\Master Audio Bus\Musiques	
 	805203703	Master Secondary Bus			\Default Work Unit\Master Secondary Bus	
-	1273031416	Comment			\Default Work Unit\Master Audio Bus\Comment	
+	931844945	HDR			\Default Work Unit\Master Audio Bus\HDR	
 	1404066300	Ambiances			\Default Work Unit\Master Audio Bus\Ambiances	
 	2594437235	Monstre			\Default Work Unit\Master Audio Bus\Voix\Monstre	
 	3370469991	Voix			\Default Work Unit\Master Audio Bus\Voix	

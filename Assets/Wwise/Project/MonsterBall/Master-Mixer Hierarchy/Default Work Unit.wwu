@@ -37,7 +37,25 @@
 								</Reference>
 							</ReferenceList>
 						</AuxBus>
-						<Bus Name="Comment" ID="{4A87905F-E3B1-44DA-9DE8-47611B37C7A5}"/>
+						<Bus Name="HDR" ID="{4A87905F-E3B1-44DA-9DE8-47611B37C7A5}">
+							<PropertyList>
+								<Property Name="HdrEnable" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
+								<Property Name="HdrReleaseTime" Type="Real64">
+									<ValueList>
+										<Value>0.5</Value>
+									</ValueList>
+								</Property>
+								<Property Name="HdrThreshold" Type="Real64">
+									<ValueList>
+										<Value>-8</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+						</Bus>
 					</ChildrenList>
 				</Bus>
 				<Bus Name="Master Secondary Bus" ID="{D2E0BC7E-7B3F-4FFE-A670-FAE02761B631}"/>

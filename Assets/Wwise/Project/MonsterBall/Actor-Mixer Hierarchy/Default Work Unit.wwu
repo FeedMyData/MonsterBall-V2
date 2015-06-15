@@ -6637,17 +6637,37 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Comment" ID="{4A87905F-E3B1-44DA-9DE8-47611B37C7A5}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+									<ObjectRef Name="HDR" ID="{4A87905F-E3B1-44DA-9DE8-47611B37C7A5}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
 								<Sound Name="VOIX_Commentateur_MonsterBall" ID="{154EE251-C2AE-454C-8D60-7A9BBC16ADCF}" ShortID="248501670" Type="SoundFX">
 									<PropertyList>
+										<Property Name="HdrActiveRange" Type="Real64">
+											<ValueList>
+												<Value>17</Value>
+											</ValueList>
+										</Property>
+										<Property Name="HdrEnableEnvelope" Type="bool" Value="True"/>
 										<Property Name="OverrideEffect" Type="bool" Value="True"/>
+										<Property Name="OverrideHdrEnvelope" Type="bool" Value="True"/>
+										<Property Name="RenderEffect0" Type="bool">
+											<ValueList>
+												<Value>True</Value>
+											</ValueList>
+										</Property>
+										<Property Name="RenderEffect1" Type="bool">
+											<ValueList>
+												<Value>True</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+										</Reference>
+										<Reference Name="Effect0" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
+											<ObjectRef Name="Dialog_Leveler_Hard" ID="{865FB36F-8717-4D30-AD05-14E56375CD40}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
 										</Reference>
 										<Reference Name="Effect1" PluginName="Wwise Matrix Reverb" CompanyID="0" PluginID="115" PluginType="3">
 											<ObjectRef Name="PA_Announcement1" ID="{65E0ACE4-B404-4485-87A4-5907277D9858}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
@@ -6664,9 +6684,13 @@
 												<File ID="850496961"/>
 											</ConvertedFileIDList>
 										</AudioFileSource>
+										<AudioFileSource Name="VOIX_Commentateur_MonsterBall_02" ID="{608D4648-9D06-4B93-960F-E9FA532CE3B2}" ShortID="688804267">
+											<Language>SFX</Language>
+											<AudioFile>VOIX_Commentateur_MonsterBall_02.wav</AudioFile>
+										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="VOIX_Commentateur_MonsterBall" ID="{9E85A3F6-7D35-4361-9AF5-A94FF7249FDF}" Platform="Linked"/>
+										<ActiveSource Name="VOIX_Commentateur_MonsterBall_02" ID="{608D4648-9D06-4B93-960F-E9FA532CE3B2}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
@@ -6684,16 +6708,28 @@
 					</ReferenceList>
 					<ChildrenList>
 						<Sound Name="Monster Ball Music Test" ID="{814021AA-6BA9-4C22-A014-A745571C77FD}" ShortID="135082212" Type="SoundFX">
+							<PropertyList>
+								<Property Name="OverrideOutput" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-10</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+									<ObjectRef Name="HDR" ID="{4A87905F-E3B1-44DA-9DE8-47611B37C7A5}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="Monster Ball Music Test" ID="{EE1F4BFC-2703-40F0-9115-E9DBF4D2E33A}" ShortID="926728707">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="3.67499282227968E-02"/>
+										<Property Name="TrimBegin" Type="Real64" Value="8.01416403483587"/>
+									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>Monster Ball Music Test.wav</AudioFile>
 								</AudioFileSource>
