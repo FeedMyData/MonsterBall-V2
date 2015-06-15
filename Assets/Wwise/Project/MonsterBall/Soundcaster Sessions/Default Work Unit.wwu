@@ -6,12 +6,16 @@
 				<SoundcasterSession Name="Public" ID="{CAD9FC72-6972-4473-89A6-36D18A2A0FC2}">
 					<ModuleList>
 						<Module>
-							<ObjectRef Name="VOIX_Commentateur_MonsterBall" ID="{154EE251-C2AE-454C-8D60-7A9BBC16ADCF}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+							<ObjectRef Name="SFX_Monstre_TransfoRumble" ID="{0F15C205-E037-4008-8659-D6F7CFC8B528}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="SFX_But_ShakeCamera_02" ID="{5EEDC6C8-116E-44A7-85BB-A20AC08BAD13}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
 							<Position X="0" Y="1"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Music_Selection" ID="{814021AA-6BA9-4C22-A014-A745571C77FD}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
-							<Position X="1" Y="1"/>
+							<ObjectRef Name="AMB_Public_Normal" ID="{C0D3115C-8B4C-4E28-ABDF-5544C5F971D3}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+							<Position X="1" Y="0"/>
 						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
@@ -36,8 +40,8 @@
 							<Value>6</Value>
 						</RTPCValue>
 						<RTPCValue>
-							<GameParameterRef Name="MonsterBall_Debut" ID="{ED1A6258-6156-451D-8BF3-DD498300F19A}"/>
-							<Value>50</Value>
+							<GameParameterRef Name="BallePop_Debut" ID="{ED1A6258-6156-451D-8BF3-DD498300F19A}"/>
+							<Value>-15</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="SS_Air_Fear" ID="{F72E0659-4346-4E1C-A1B1-DAB46A05101E}"/>
@@ -48,8 +52,8 @@
 							<Value>50</Value>
 						</RTPCValue>
 						<RTPCValue>
-							<GameParameterRef Name="Public_Bouh" ID="{FDA1CDCA-C94B-42C9-B2DB-CD8323E7D074}"/>
-							<Value>-16.4311097726246</Value>
+							<GameParameterRef Name="But_Ambiance" ID="{FDA1CDCA-C94B-42C9-B2DB-CD8323E7D074}"/>
+							<Value>-21.551799427797</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="SS_Air_Storm" ID="{E93F8CDB-06D1-4737-ACAF-7CD44BBED783}"/>

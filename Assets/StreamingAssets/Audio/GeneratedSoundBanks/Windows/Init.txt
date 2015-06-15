@@ -3,9 +3,10 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 	426462839	Niveks			\Default Work Unit\Master Audio Bus\Voix\Niveks	
 	701539273	Musiques			\Default Work Unit\Master Audio Bus\Musiques	
 	805203703	Master Secondary Bus			\Default Work Unit\Master Secondary Bus	
-	931844945	HDR			\Default Work Unit\Master Audio Bus\HDR	
 	1404066300	Ambiances			\Default Work Unit\Master Audio Bus\Ambiances	
 	2594437235	Monstre			\Default Work Unit\Master Audio Bus\Voix\Monstre	
+	2900642665	Music_HDR			\Default Work Unit\Master Audio Bus\Musiques\Music_HDR	
+	3100063744	Amb_Hdr			\Default Work Unit\Master Audio Bus\Ambiances\Amb_Hdr	
 	3370469991	Voix			\Default Work Unit\Master Audio Bus\Voix	
 	3395410983	Balle			\Default Work Unit\Master Audio Bus\Voix\Balle	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
@@ -14,7 +15,7 @@ Auxiliary Bus	ID	Name			Wwise Object Path	Notes
 	1802970371	FX			\Default Work Unit\Master Audio Bus\FX	
 
 Effect plug-ins	ID	Name	Type				Notes
+	1310797273	Master_Clean	McDSP ML1			
 	2791153688	Hall_Small	Wwise RoomVerb			
 	2805769450	Special_Effect_1	Wwise Flanger			
-	4279410238	Buss_Dynamic	McDSP ML1			
 

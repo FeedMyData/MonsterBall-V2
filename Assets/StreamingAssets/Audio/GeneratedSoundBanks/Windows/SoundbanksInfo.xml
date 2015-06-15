@@ -89,7 +89,7 @@
 				</File>
 				<File Id="49112111" Language="SFX">
 					<ShortName>SFX_Balle_pop1_02.wav</ShortName>
-					<Path>SFX\SFX_Balle_pop1_02_A7FF502A.wem</Path>
+					<Path>SFX\SFX_Balle_pop1_02_E8D3B588.wem</Path>
 				</File>
 				<File Id="67887004" Language="SFX">
 					<ShortName>Impact\VOIX_Balle_Impact_05.wav</ShortName>
@@ -229,7 +229,7 @@
 				</File>
 				<File Id="265700849" Language="SFX">
 					<ShortName>SFX_Balle_pop1_05.wav</ShortName>
-					<Path>SFX\SFX_Balle_pop1_05_6890A0B6.wem</Path>
+					<Path>SFX\SFX_Balle_pop1_05_FFAAFFD0.wem</Path>
 				</File>
 				<File Id="291728502" Language="SFX">
 					<ShortName>But\VOIX_Balle_But_11.wav</ShortName>
@@ -345,7 +345,7 @@
 				</File>
 				<File Id="464313749" Language="SFX">
 					<ShortName>SFX_Balle_pop1_04.wav</ShortName>
-					<Path>SFX\SFX_Balle_pop1_04_90558AAF.wem</Path>
+					<Path>SFX\SFX_Balle_pop1_04_2EA91971.wem</Path>
 				</File>
 				<File Id="477423821" Language="SFX">
 					<ShortName>RecracheJoueur\VOIX_Monstre_CracheJoueur_05.wav</ShortName>
@@ -485,7 +485,7 @@
 				</File>
 				<File Id="629518519" Language="SFX">
 					<ShortName>SFX_Coup_Charge_02.wav</ShortName>
-					<Path>SFX\SFX_Coup_Charge_02_E769FBAE.wem</Path>
+					<Path>SFX\SFX_Coup_Charge_02_12C26862.wem</Path>
 				</File>
 				<File Id="632971419" Language="SFX">
 					<ShortName>Impact\VOIX_Balle_Impact_14.wav</ShortName>
@@ -641,11 +641,11 @@
 				</File>
 				<File Id="819132964" Language="SFX">
 					<ShortName>SFX_Balle_pop1_03.wav</ShortName>
-					<Path>SFX\SFX_Balle_pop1_03_E0BED0E1.wem</Path>
+					<Path>SFX\SFX_Balle_pop1_03_D09C55CB.wem</Path>
 				</File>
 				<File Id="824756831" Language="SFX">
 					<ShortName>SFX_Balle_pop1_01.wav</ShortName>
-					<Path>SFX\SFX_Balle_pop1_01_D2564213.wem</Path>
+					<Path>SFX\SFX_Balle_pop1_01_29AC82A9.wem</Path>
 				</File>
 				<File Id="832210370" Language="SFX">
 					<ShortName>Poursuivi\VOIX_Niveks_Poursuivi_10.wav</ShortName>
@@ -682,10 +682,6 @@
 				<File Id="865376660" Language="SFX">
 					<ShortName>But\VOIX_Balle_But_10.wav</ShortName>
 					<Path>SFX\But\VOIX_Balle_But_10_DDC98EF4.wem</Path>
-				</File>
-				<File Id="866111390" Language="SFX">
-					<ShortName>FX_Public_Objet .wav</ShortName>
-					<Path>SFX\FX_Public_Objet _DDC98EF4.wem</Path>
 				</File>
 				<File Id="877656492" Language="SFX">
 					<ShortName>MarqueBut\VOIX_Niveks_But_01.wav</ShortName>
@@ -749,7 +745,7 @@
 				</File>
 				<File Id="937831110" Language="SFX">
 					<ShortName>SFX_Coup_Charge_01.wav</ShortName>
-					<Path>SFX\SFX_Coup_Charge_01_0D77B0A7.wem</Path>
+					<Path>SFX\SFX_Coup_Charge_01_CD829A6B.wem</Path>
 				</File>
 				<File Id="948141587" Language="SFX">
 					<ShortName>4-50 Earthquake Low Rumble Only.wav</ShortName>

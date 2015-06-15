@@ -51,13 +51,6 @@
 						</Event>
 						<Event Name="Public_Bouh" ID="{126A55FE-4CE1-449E-8F28-60F069DBFA4E}">
 							<ChildrenList>
-								<Action Name="Stop" ID="{8F087A14-0C24-41BA-BA9B-A3A2C9057023}" ShortID="711358644" Type="Stop" Scope="One" Global="false">
-									<ElementList>
-										<Element ID="{A60BA36F-02B5-424A-B87E-4B577F90C742}" Global="false">
-											<ObjectRef Name="But" ID="{B96DE30D-FF5F-47B0-9B54-1C4BA488B784}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
-										</Element>
-									</ElementList>
-								</Action>
 								<Action Name="Play" ID="{152BEB20-94D5-469C-9C1E-62AE371B7D5C}" ShortID="396927947" Type="Play" Scope="One" Global="false">
 									<ElementList>
 										<Element ID="{809006F2-BCBB-43DF-9F55-33DA427F1A6B}" Global="false">
@@ -306,6 +299,9 @@
 								<Event Name="VX_Monstre_DebutCharge" ID="{C3531607-D057-42DB-8B57-17C9CED5E9E9}">
 									<ChildrenList>
 										<Action Name="Play" ID="{60872BE3-9A2A-4D16-9667-4E8483F42507}" ShortID="979988160" Type="Play" Scope="One" Global="false">
+											<PropertyList>
+												<Property Name="Delay" Type="Real64" Value="2"/>
+											</PropertyList>
 											<ElementList>
 												<Element ID="{C2862C66-3B70-482B-9877-0EA1D2FBA66C}" Global="false">
 													<ObjectRef Name="DebutCharge" ID="{EA69DC5B-4F6A-470C-83BC-563E4BD757BE}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
@@ -354,7 +350,6 @@
 										<Action Name="Play" ID="{3A6EDA4D-8AA4-4492-AA69-A409C4814B15}" ShortID="166763261" Type="Play" Scope="One" Global="false">
 											<PropertyList>
 												<Property Name="Delay" Type="Real64" Value="2"/>
-												<Property Name="FadeTime" Type="Real64" Value="0.2"/>
 											</PropertyList>
 											<ElementList>
 												<Element ID="{927494E7-8167-46BD-9BFF-560119D298BA}" Global="false">
@@ -540,20 +535,10 @@
 										</Element>
 									</ElementList>
 								</Action>
-								<Action Name="Play" ID="{7B98AF72-CA8E-4BFB-8C80-0CA9AEEA3F79}" ShortID="373594734" Type="Play" Scope="One" Global="false">
+								<Action Name="Play" ID="{4856FEFA-E3A3-408F-81FB-D071FA082C3B}" ShortID="849160186" Type="Play" Scope="One" Global="false">
 									<ElementList>
-										<Element ID="{0D713E26-362E-432A-89AB-BDD449B07C80}" Global="false">
-											<ObjectRef Name="FX_Public_Intensification_02" ID="{5E29AA64-AD31-406F-8711-42D11570C1A1}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
-										</Element>
-									</ElementList>
-								</Action>
-								<Action Name="Play" ID="{AFA61615-761C-4EAD-A169-7AD0073DBB91}" ShortID="733988996" Type="Play" Scope="One" Global="false">
-									<PropertyList>
-										<Property Name="Delay" Type="Real64" Value="1.5"/>
-									</PropertyList>
-									<ElementList>
-										<Element ID="{F972DD8D-4E8A-4BF5-A80E-CAC67A30DB37}" Global="false">
-											<ObjectRef Name="FX_Public_Objet" ID="{AD191104-07E6-43A4-A649-7B7856434AB8}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+										<Element ID="{9F02D4FA-6E7A-4249-83EA-E2208E6DD87D}" Global="false">
+											<ObjectRef Name="Fin" ID="{65A62B4B-6555-46DB-BF3D-95B5C1A00058}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
 										</Element>
 									</ElementList>
 								</Action>

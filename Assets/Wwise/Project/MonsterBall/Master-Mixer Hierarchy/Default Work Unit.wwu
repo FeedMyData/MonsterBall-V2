@@ -4,19 +4,12 @@
 		<WorkUnit Name="Default Work Unit" ID="{F2826676-125A-488D-B5BC-8666D671270D}" PersistMode="Standalone">
 			<ChildrenList>
 				<Bus Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}">
-					<PropertyList>
-						<Property Name="BypassEffect1" Type="bool">
-							<ValueList>
-								<Value>True</Value>
-							</ValueList>
-						</Property>
-					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Effect0" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
 							<ObjectRef Name="Hall_Small" ID="{D65B5F04-B83B-412C-9434-34A13A477E24}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
 						</Reference>
-						<Reference Name="Effect1" CompanyID="4095" PluginID="65535" PluginType="15">
-							<ObjectRef Name="Buss_Dynamic" ID="{0094617E-BE05-48D2-931A-EDD3DEC652FF}" WorkUnitID="{C495E5B0-5DF1-4961-BC6A-4C9887E70704}"/>
+						<Reference Name="Effect2" PluginName="McDSP ML1" CompanyID="256" PluginID="103" PluginType="3">
+							<ObjectRef Name="Master_Clean" ID="{92F16E55-D596-4E48-BC84-0ED418D3FFCA}" WorkUnitID="{C495E5B0-5DF1-4961-BC6A-4C9887E70704}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
@@ -27,9 +20,53 @@
 								<Bus Name="Balle" ID="{77C5DDAF-67F0-4DB5-AD22-3EACEEEFBA84}"/>
 							</ChildrenList>
 						</Bus>
-						<Bus Name="Ambiances" ID="{B9DD8753-6E85-4214-991C-F19471FEBA39}"/>
+						<Bus Name="Ambiances" ID="{B9DD8753-6E85-4214-991C-F19471FEBA39}">
+							<ChildrenList>
+								<Bus Name="Amb_Hdr" ID="{C5D4FA84-D93D-47E5-8FB1-59CEBD87CA70}">
+									<PropertyList>
+										<Property Name="HdrEnable" Type="bool">
+											<ValueList>
+												<Value>True</Value>
+											</ValueList>
+										</Property>
+										<Property Name="HdrRatio" Type="Real64">
+											<ValueList>
+												<Value>63</Value>
+											</ValueList>
+										</Property>
+										<Property Name="HdrThreshold" Type="Real64">
+											<ValueList>
+												<Value>-24</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+								</Bus>
+							</ChildrenList>
+						</Bus>
 						<Bus Name="SFX" ID="{98BA6610-4B70-4EFF-A353-4A61C6BE1A24}"/>
-						<Bus Name="Musiques" ID="{51DA5A6D-5764-451B-9A18-180342A5B0FE}"/>
+						<Bus Name="Musiques" ID="{51DA5A6D-5764-451B-9A18-180342A5B0FE}">
+							<ChildrenList>
+								<Bus Name="Music_HDR" ID="{4A87905F-E3B1-44DA-9DE8-47611B37C7A5}">
+									<PropertyList>
+										<Property Name="HdrEnable" Type="bool">
+											<ValueList>
+												<Value>True</Value>
+											</ValueList>
+										</Property>
+										<Property Name="HdrReleaseTime" Type="Real64">
+											<ValueList>
+												<Value>0.5</Value>
+											</ValueList>
+										</Property>
+										<Property Name="HdrThreshold" Type="Real64">
+											<ValueList>
+												<Value>-8</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+								</Bus>
+							</ChildrenList>
+						</Bus>
 						<AuxBus Name="FX" ID="{AE17BDD2-F728-4C96-A483-B4560EE81FA8}">
 							<ReferenceList>
 								<Reference Name="Effect0" PluginName="Wwise Flanger" CompanyID="0" PluginID="125" PluginType="3">
@@ -37,25 +74,6 @@
 								</Reference>
 							</ReferenceList>
 						</AuxBus>
-						<Bus Name="HDR" ID="{4A87905F-E3B1-44DA-9DE8-47611B37C7A5}">
-							<PropertyList>
-								<Property Name="HdrEnable" Type="bool">
-									<ValueList>
-										<Value>True</Value>
-									</ValueList>
-								</Property>
-								<Property Name="HdrReleaseTime" Type="Real64">
-									<ValueList>
-										<Value>0.5</Value>
-									</ValueList>
-								</Property>
-								<Property Name="HdrThreshold" Type="Real64">
-									<ValueList>
-										<Value>-8</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-						</Bus>
 					</ChildrenList>
 				</Bus>
 				<Bus Name="Master Secondary Bus" ID="{D2E0BC7E-7B3F-4FFE-A670-FAE02761B631}"/>
