@@ -42,7 +42,7 @@ public class MonsterControllerF : MonoBehaviour {
     public float wrathDribblingEachTime = 1.0f;
     public float summon = 0.3f;
     public float durationFirstPart = 15.0f;
-    public float durationSecondPart = 5.0f;
+    //public float durationSecondPart = 5.0f;
     private int wrath = 0;
     private bool monsterForm = false;
     //private bool monsterModeCharge = false;

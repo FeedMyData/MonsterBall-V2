@@ -12,6 +12,7 @@ public class MonsterAnimationEvent : MonoBehaviour {
 		foreach (ParticleSystem ps in GetComponentsInChildren<ParticleSystem>())
 		{
 			if (ps.name == "Fumee_charge") ps.Play();
+            if (ps.name == "Wind") ps.Play();
 		}
 
 	}
