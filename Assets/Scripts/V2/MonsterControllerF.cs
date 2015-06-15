@@ -728,6 +728,10 @@ public class MonsterControllerF : MonoBehaviour {
         yield return new WaitForSeconds(summon / 2);
 
         smokeFury.transform.position = transform.position;
+        StartCoroutine(GameControllerF.GetPlayer(1).GetComponent<PlayerControllerF>().Vibration(0, GameControllerF.GetPlayer(1).GetComponent<PlayerControllerF>().powerTransformation, GameControllerF.GetPlayer(1).GetComponent<PlayerControllerF>().durationTransformation));
+        StartCoroutine(GameControllerF.GetPlayer(1).GetComponent<PlayerControllerF>().Vibration(1, GameControllerF.GetPlayer(1).GetComponent<PlayerControllerF>().powerTransformation, GameControllerF.GetPlayer(1).GetComponent<PlayerControllerF>().durationTransformation));
+        StartCoroutine(GameControllerF.GetPlayer(1).GetComponent<PlayerControllerF>().Vibration(2, GameControllerF.GetPlayer(1).GetComponent<PlayerControllerF>().powerTransformation, GameControllerF.GetPlayer(1).GetComponent<PlayerControllerF>().durationTransformation));
+        StartCoroutine(GameControllerF.GetPlayer(1).GetComponent<PlayerControllerF>().Vibration(3, GameControllerF.GetPlayer(1).GetComponent<PlayerControllerF>().powerTransformation, GameControllerF.GetPlayer(1).GetComponent<PlayerControllerF>().durationTransformation));
         smokeFury.Play();
 
         yield return new WaitForSeconds(summon/2);
@@ -842,6 +846,7 @@ public class MonsterControllerF : MonoBehaviour {
     {
 
         eatPlayer = true;
+        StartCoroutine(player.GetComponent<PlayerControllerF>().Vibration(player.GetComponent<PlayerControllerF>().numController, player.GetComponent<PlayerControllerF>().powerVibrJoueurMange, player.GetComponent<PlayerControllerF>().durationJoueurMange));
         player.GetComponent<PlayerControllerF>().isEaten = true;
         player.GetComponent<CharacterController>().enabled = false;
         player.GetComponent<Collider>().enabled = false;

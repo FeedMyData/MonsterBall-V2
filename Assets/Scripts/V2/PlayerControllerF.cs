@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using XInputDotNetPure;
 
 public class PlayerControllerF : MonoBehaviour
 {
@@ -64,6 +65,25 @@ public class PlayerControllerF : MonoBehaviour
     private string horizontal;
     private string vertical;
     private string fire;
+    [HideInInspector]
+    public int numController = 0;
+
+    [Header("Vibration")]
+    public float durationFrappe = 0.2f;
+    [Range(0f, 1f)]
+    public float powerVibrFrappe = 0.2f;
+    public float durationFrappeFort = 0.5f;
+    [Range(0f, 1f)]
+    public float powerVibrFrappeFort = 0.4f;
+    public float durationTransformation = 1f;
+    [Range(0f, 1f)]
+    public float powerTransformation = 0.5f;
+    public float durationJoueurFrappe = 0.4f;
+    [Range(0f, 1f)]
+    public float powerVibrJoueurFrappe = 0.6f;
+    public float durationJoueurMange = 1.0f;
+    [Range(0f, 1f)]
+    public float powerVibrJoueurMange = 0.6f;
 
 
     private bool projectionInGoal;
@@ -195,6 +215,8 @@ public class PlayerControllerF : MonoBehaviour
         //angleShoot *= Mathf.Deg2Rad;
 
         //tp.SetTeleportation(true);
+
+        StartCoroutine(Vibration(0,1,3));
 
     }
 
@@ -339,6 +361,7 @@ public class PlayerControllerF : MonoBehaviour
                 horizontal = "Horizontal1";
                 vertical = "Vertical1";
                 fire = "Fire1";
+                numController = 0;
                 //if (team == GameControllerF.Team.Blu)
                 //    spriteGround.GetComponent<Renderer>().material.color = new Color32(0, 0, 255, 255);
                 //else
@@ -348,6 +371,7 @@ public class PlayerControllerF : MonoBehaviour
                 horizontal = "Horizontal2";
                 vertical = "Vertical2";
                 fire = "Fire2";
+                numController = 1;
                 //if (team == GameControllerF.Team.Blu)
                 //    spriteGround.GetComponent<Renderer>().material.color = new Color32(0, 128, 255, 255);
                 //else
@@ -357,6 +381,7 @@ public class PlayerControllerF : MonoBehaviour
                 horizontal = "Horizontal3";
                 vertical = "Vertical3";
                 fire = "Fire3";
+                numController = 2;
                 //if (team == GameControllerF.Team.Blu)
                 //    spriteGround.GetComponent<Renderer>().material.color = new Color32(0, 255, 255, 255);
                 //else
@@ -366,6 +391,7 @@ public class PlayerControllerF : MonoBehaviour
                 horizontal = "Horizontal4";
                 vertical = "Vertical4";
                 fire = "Fire4";
+                numController = 3;
                 //if (team == GameControllerF.Team.Blu)
                 //    spriteGround.GetComponent<Renderer>().material.color = new Color32(0, 0, 128, 255);
                 //else
@@ -504,6 +530,7 @@ public class PlayerControllerF : MonoBehaviour
 
             if (loading) // && valueCirclePlayer<0.70f
             {
+                
                 if (GetComponentInChildren<Animator>() && GetComponentInChildren<Animator>().GetBool("isCharging") == true)
                 {
 
@@ -555,12 +582,14 @@ public class PlayerControllerF : MonoBehaviour
                         {
                             if (power > (powerMax - powerMax * 0.1f))
                             {
+                                StartCoroutine(Vibration(numController, powerVibrFrappeFort, durationFrappeFort));
                                 sound.PlayEvent("SFX_Niveks_CoupFort", gameObject);
                                 coupsCharges++;
                                 coupsDonnes++;
                             }
                             else
                             {
+                                StartCoroutine(Vibration(numController, powerVibrFrappe, durationFrappe));
                                 sound.PlayEvent("SFX_Niveks_CoupFaible", gameObject);
                                 coupsDonnes++;
                             }
@@ -693,6 +722,7 @@ public class PlayerControllerF : MonoBehaviour
                 sound.PlayEvent("VX_Niveks_Coup", player.gameObject);
                 player.coupsRecus++;
                 player.AddImpact(directionImpact * multiImpact);
+                StartCoroutine(Vibration(player.numController, powerVibrJoueurFrappe, durationJoueurFrappe));
                 player.setLoading(false);
                 player.callStun(stunKick);
                 player.callIntouchable();
@@ -1095,6 +1125,13 @@ public class PlayerControllerF : MonoBehaviour
     public void SetWantedJersey(GameControllerF.Jersey wJ)
     {
         wantedJersey = wJ;
+    }
+
+    public IEnumerator Vibration(int playerNum,float power, float duree)
+    {
+        GamePad.SetVibration((PlayerIndex)playerNum, power, power);
+        yield return new WaitForSeconds(duree);
+        GamePad.SetVibration((PlayerIndex)playerNum, 0f, 0f);
     }
 
 }
