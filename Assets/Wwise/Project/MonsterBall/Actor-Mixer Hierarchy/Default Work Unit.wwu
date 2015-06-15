@@ -6765,6 +6765,40 @@
 								<ActiveSource Name="Music_Monstre" ID="{4C101C8D-D2B9-4D09-A487-D7FE555397AC}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<Sound Name="Monster Ball Music Test_01" ID="{EAE7F11E-5A0F-4B57-984A-C74C4AFD3EA7}" ShortID="55640480" Type="SoundFX">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="OverrideOutput" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-10</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="HDR" ID="{4A87905F-E3B1-44DA-9DE8-47611B37C7A5}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Monster Ball Music Test" ID="{2D5F4E0B-4811-454B-889B-AFF63A65AB91}" ShortID="22050384">
+									<PropertyList>
+										<Property Name="CrossfadeDuration" Type="Real64" Value="0.3"/>
+										<Property Name="LoopBegin" Type="Real64" Value="8.0272450117305"/>
+										<Property Name="LoopEnd" Type="Real64" Value="23.9981851887297"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Monster Ball Music Test.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Monster Ball Music Test" ID="{2D5F4E0B-4811-454B-889B-AFF63A65AB91}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</ActorMixer>
 			</ChildrenList>

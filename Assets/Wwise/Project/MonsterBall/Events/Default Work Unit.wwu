@@ -540,10 +540,13 @@
 					<ChildrenList>
 						<Event Name="Music_Menu" ID="{CF6C4B60-167B-47DE-B567-E8CA62DC3777}">
 							<ChildrenList>
-								<Action Name="Play" ID="{A589291B-22FE-4629-B80B-D3C9BC83A4E7}" ShortID="710159379" Type="Play" Scope="One" Global="false">
+								<Action Name="Play" ID="{40A59940-43FD-41F9-A491-3E6BD2FFA932}" ShortID="761668070" Type="Play" Scope="One" Global="false">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="2"/>
+									</PropertyList>
 									<ElementList>
-										<Element ID="{8D802B08-7DE7-4CF1-BF68-76E8E549704E}" Global="false">
-											<ObjectRef Name="Monster Ball Music Test" ID="{814021AA-6BA9-4C22-A014-A745571C77FD}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+										<Element ID="{2A94019D-512A-417E-9638-1C13B37CEA34}" Global="false">
+											<ObjectRef Name="Monster Ball Music Test_01" ID="{EAE7F11E-5A0F-4B57-984A-C74C4AFD3EA7}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
 										</Element>
 									</ElementList>
 								</Action>
