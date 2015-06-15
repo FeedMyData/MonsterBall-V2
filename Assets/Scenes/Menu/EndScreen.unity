@@ -4054,11 +4054,11 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1377067850}
   m_RootOrder: 0
-  m_AnchorMin: {x: .5, y: .5}
-  m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 585, y: 370}
+  m_AnchorMin: {x: 1, y: .5}
+  m_AnchorMax: {x: 1, y: .5}
+  m_AnchoredPosition: {x: -100, y: 370}
   m_SizeDelta: {x: 150, y: 30}
-  m_Pivot: {x: .5, y: .5}
+  m_Pivot: {x: 1, y: .5}
 --- !u!95 &804658906
 Animator:
   serializedVersion: 3
@@ -7367,11 +7367,11 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1377067850}
   m_RootOrder: 1
-  m_AnchorMin: {x: .5, y: .5}
-  m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 667, y: 243}
+  m_AnchorMin: {x: 1, y: .5}
+  m_AnchorMax: {x: 1, y: .5}
+  m_AnchoredPosition: {x: -100, y: 243}
   m_SizeDelta: {x: 150, y: 30}
-  m_Pivot: {x: .5, y: .5}
+  m_Pivot: {x: 1, y: .5}
 --- !u!114 &1357816805
 MonoBehaviour:
   m_ObjectHideFlags: 0

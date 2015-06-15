@@ -28,6 +28,17 @@ public class MenuFinF : MonoBehaviour {
 
 	}
 
+    private void Update()
+    {
+        if (EventSystem.current.currentSelectedGameObject == null)
+        {
+            if (Input.GetAxis("Vertical") > 0.3f || Input.GetAxis("Vertical") < -0.3f)
+            {
+                 EventSystem.current.SetSelectedGameObject(playAgainButton);
+            }
+        }
+    }
+
 	IEnumerator WaitButtonActivation(){
 
 		yield return new WaitForSeconds (buttonWaitingDuration);
