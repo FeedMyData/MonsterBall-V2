@@ -560,5 +560,4 @@ public class GameManagerF : MonoBehaviour {
 
 	}
 
-
 }
