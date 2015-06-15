@@ -143,6 +143,8 @@ public class PlayerControllerF : MonoBehaviour
     private bool hasArrived = false;
     private bool hasBegunRunning = false;
 
+    private StarsDisplaying starsScript;
+
     void Awake()
     {
         spritesController = Resources.LoadAll<Sprite>("Controller");
@@ -152,6 +154,7 @@ public class PlayerControllerF : MonoBehaviour
         {
             namesSpriteSheetController[i] = spritesController[i].name;
         }
+
     }
 
     // Use this for initialization
@@ -166,6 +169,8 @@ public class PlayerControllerF : MonoBehaviour
         positionsY = GameControllerF.GetPositionsY();
 
         SpriteRenderer[] tabSprite = GetComponentsInChildren<SpriteRenderer>();
+
+        starsScript = GameObject.Find("FxStars").GetComponent<StarsDisplaying>();
 
         for (int i = 0; i < tabSprite.Length; i++)
         {
@@ -743,6 +748,13 @@ public class PlayerControllerF : MonoBehaviour
                     ball.GetComponent<MonsterControllerF>().callDisableMagnet();
                     //ball.GetComponent<MonsterControllerF>().Jump(2.0f);
                 }
+
+                // etoile
+                //Vector3 starPosition = player.transform.Find("Nivek/Nivek").GetComponent<SkinnedMeshRenderer>().bounds.center + (transform.position - player.transform.position).normalized * transform.Find("Nivek/Nivek").GetComponent<SkinnedMeshRenderer>().bounds.extents.magnitude;
+                float starDistancePlayer = 3.0f;
+                Vector3 starPosition = player.transform.position + (player.transform.position - transform.position).normalized * starDistancePlayer;
+                starsScript.DisplayStarEffect(starPosition);
+
                 return true;
             }
         }
@@ -782,6 +794,15 @@ public class PlayerControllerF : MonoBehaviour
                             Camera.main.GetComponent<CameraShake>().shake(0.6f, 0.4f, 1.0f);
 
                         }
+
+                        // etoile
+                        float starDistanceMonster = 3.0f;
+                        if (GameControllerF.InCircle(monster.transform.position) > 0.65f)
+                        {
+                            starDistanceMonster = 0.0f;
+                        }
+                        Vector3 starPosition = monster.transform.position + (monster.transform.position - transform.position).normalized * starDistanceMonster;
+                        starsScript.DisplayStarEffect(starPosition);
 
                         return true;
                     }
