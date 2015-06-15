@@ -6707,7 +6707,7 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<Sound Name="Monster Ball Music Test" ID="{814021AA-6BA9-4C22-A014-A745571C77FD}" ShortID="135082212" Type="SoundFX">
+						<Sound Name="Music_Selection" ID="{814021AA-6BA9-4C22-A014-A745571C77FD}" ShortID="135082212" Type="SoundFX">
 							<PropertyList>
 								<Property Name="OverrideOutput" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
@@ -6765,7 +6765,7 @@
 								<ActiveSource Name="Music_Monstre" ID="{4C101C8D-D2B9-4D09-A487-D7FE555397AC}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="Monster Ball Music Test_01" ID="{EAE7F11E-5A0F-4B57-984A-C74C4AFD3EA7}" ShortID="55640480" Type="SoundFX">
+						<Sound Name="Music_Menu" ID="{EAE7F11E-5A0F-4B57-984A-C74C4AFD3EA7}" ShortID="55640480" Type="SoundFX">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 								<Property Name="OverrideOutput" Type="bool" Value="True"/>

@@ -10,7 +10,7 @@
 							<Position X="0" Y="1"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Monster Ball Music Test" ID="{814021AA-6BA9-4C22-A014-A745571C77FD}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+							<ObjectRef Name="Music_Selection" ID="{814021AA-6BA9-4C22-A014-A745571C77FD}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
 							<Position X="1" Y="1"/>
 						</Module>
 					</ModuleList>
