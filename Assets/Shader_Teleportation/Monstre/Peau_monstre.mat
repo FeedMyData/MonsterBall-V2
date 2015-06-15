@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Peau_monstre
-  m_Shader: {fileID: 4800000, guid: 398050785f10f434c9891e816db63afa, type: 3}
+  m_Shader: {fileID: 4800000, guid: 054a31a99d11e49d110086ba44295342, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
   m_CustomRenderQueue: -1
@@ -79,13 +79,6 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _Ramp
-        second:
-          m_Texture: {fileID: 0}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
           name: _alpha_neg
         second:
           m_Texture: {fileID: 2800000, guid: f2f02f2108349994f83035690c78de1f, type: 3}
@@ -101,6 +94,13 @@ Material:
       data:
         first:
           name: _normale
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Ramp
         second:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
@@ -210,20 +210,20 @@ Material:
         second: 80
       data:
         first:
+          name: _Out
+        second: .00100000005
+      data:
+        first:
           name: _node_5367
         second: 1
       data:
         first:
           name: _Outline
-        second: .0299999993
+        second: .00400000019
       data:
         first:
           name: _node_1300
         second: 80
-      data:
-        first:
-          name: _Out
-        second: .00100000005
     m_Colors:
       data:
         first:
@@ -232,7 +232,7 @@ Material:
       data:
         first:
           name: _Color
-        second: {r: 1, g: 1, b: 1, a: 1}
+        second: {r: .970588207, g: .299740463, b: 0, a: 1}
       data:
         first:
           name: _EmissionColorUI
@@ -253,3 +253,7 @@ Material:
         first:
           name: _node_8668
         second: {r: .0344829559, g: 0, b: 1, a: 1}
+      data:
+        first:
+          name: _OutlineColor
+        second: {r: 0, g: 0, b: 0, a: 1}

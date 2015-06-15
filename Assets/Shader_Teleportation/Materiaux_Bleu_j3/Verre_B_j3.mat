@@ -79,13 +79,6 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _Ramp
-        second:
-          m_Texture: {fileID: 0}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
           name: _alpha_neg
         second:
           m_Texture: {fileID: 2800000, guid: f2f02f2108349994f83035690c78de1f, type: 3}
@@ -103,6 +96,13 @@ Material:
           name: _normale
         second:
           m_Texture: {fileID: 2800000, guid: 839587738573a48e28a59f1905941428, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Ramp
+        second:
+          m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
     m_Floats:
@@ -214,8 +214,8 @@ Material:
       data:
         first:
           name: _Color_base
-        second: {r: .882352948, g: .882352948, b: .882352948, a: 1}
+        second: {r: 1, g: 1, b: 1, a: 1}
       data:
         first:
           name: _Color_tp
-        second: {r: 0, g: .647058845, b: 1, a: 1}
+        second: {r: .407843143, g: .776470602, b: .933333337, a: 1}

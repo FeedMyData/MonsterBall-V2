@@ -37,6 +37,34 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
+          name: _alpha_neg
+        second:
+          m_Texture: {fileID: 2800000, guid: f2f02f2108349994f83035690c78de1f, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _alpha_base
+        second:
+          m_Texture: {fileID: 2800000, guid: 09f4ed74d1b928d43b257e1ed71f3da9, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _normale
+        second:
+          m_Texture: {fileID: 2800000, guid: 80286949e259c2d44876306923857245, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Ramp
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
           name: _ParallaxMap
         second:
           m_Texture: {fileID: 0}
@@ -79,34 +107,6 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _Ramp
-        second:
-          m_Texture: {fileID: 0}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _alpha_neg
-        second:
-          m_Texture: {fileID: 2800000, guid: f2f02f2108349994f83035690c78de1f, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _alpha_base
-        second:
-          m_Texture: {fileID: 2800000, guid: 09f4ed74d1b928d43b257e1ed71f3da9, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _normale
-        second:
-          m_Texture: {fileID: 2800000, guid: 80286949e259c2d44876306923857245, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
           name: _Test
         second:
           m_Texture: {fileID: 8900000, guid: 2f821dbbb5e173e468876ef2e4eaa490, type: 2}
@@ -131,6 +131,46 @@ Material:
       data:
         first:
           name: _DstBlend
+        second: 0
+      data:
+        first:
+          name: _alpha_slider
+        second: 80
+      data:
+        first:
+          name: _Neg
+        second: -.100000001
+      data:
+        first:
+          name: _Base
+        second: .200000003
+      data:
+        first:
+          name: _coeff
+        second: .00999999978
+      data:
+        first:
+          name: _Coeff_2
+        second: .300000012
+      data:
+        first:
+          name: _divide_color
+        second: 10
+      data:
+        first:
+          name: _node_1632
+        second: -.125
+      data:
+        first:
+          name: _Neg_copy
+        second: 10
+      data:
+        first:
+          name: _Test2
+        second: 200
+      data:
+        first:
+          name: _Out
         second: 0
       data:
         first:
@@ -174,42 +214,6 @@ Material:
         second: 0
       data:
         first:
-          name: _alpha_slider
-        second: 80
-      data:
-        first:
-          name: _Neg
-        second: -.100000001
-      data:
-        first:
-          name: _Base
-        second: .200000003
-      data:
-        first:
-          name: _coeff
-        second: .00999999978
-      data:
-        first:
-          name: _Coeff_2
-        second: .300000012
-      data:
-        first:
-          name: _divide_color
-        second: 10
-      data:
-        first:
-          name: _node_1632
-        second: -.125
-      data:
-        first:
-          name: _Neg_copy
-        second: 10
-      data:
-        first:
-          name: _Test2
-        second: 200
-      data:
-        first:
           name: _node_5367
         second: 1
       data:
@@ -220,10 +224,6 @@ Material:
         first:
           name: _node_1300
         second: 80
-      data:
-        first:
-          name: _Out
-        second: .00100000005
     m_Colors:
       data:
         first:
@@ -235,16 +235,16 @@ Material:
         second: {r: 1, g: 1, b: 1, a: 1}
       data:
         first:
-          name: _EmissionColorUI
-        second: {r: 1, g: 1, b: 1, a: 1}
-      data:
-        first:
           name: _Color_base
         second: {r: 1, g: 1, b: 1, a: 1}
       data:
         first:
           name: _Color_tp
         second: {r: .977941155, g: 0, b: 0, a: 1}
+      data:
+        first:
+          name: _EmissionColorUI
+        second: {r: 1, g: 1, b: 1, a: 1}
       data:
         first:
           name: _Color_TP
