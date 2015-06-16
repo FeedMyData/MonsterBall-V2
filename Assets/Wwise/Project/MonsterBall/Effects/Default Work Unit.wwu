@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{D4FB81E1-95C6-40F5-9C6F-EFAA04B0BB60}" SchemaVersion="69">
 	<Effects>
-		<WorkUnit Name="Default Work Unit" ID="{D4FB81E1-95C6-40F5-9C6F-EFAA04B0BB60}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{D4FB81E1-95C6-40F5-9C6F-EFAA04B0BB60}" PersistMode="Standalone">
+			<ChildrenList>
+				<Effect Name="New_Wwise_Meter" ID="{4162E079-F488-4B64-B96D-CB0FF8D83FE5}" PluginName="Wwise Meter" CompanyID="0" PluginID="129" PluginType="3">
+					<PropertyList>
+						<Property Name="Hold" Type="Real32" Value="0.26"/>
+					</PropertyList>
+					<PluginData>
+	<GameParameter Name="But_Ambiance" ID="{FDA1CDCA-C94B-42C9-B2DB-CD8323E7D074}"/>
+</PluginData>
+				</Effect>
+			</ChildrenList>
+		</WorkUnit>
 	</Effects>
 </WwiseDocument>

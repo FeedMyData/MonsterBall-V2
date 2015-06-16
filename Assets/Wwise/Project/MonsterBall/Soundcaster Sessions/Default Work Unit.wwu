@@ -6,16 +6,36 @@
 				<SoundcasterSession Name="Public" ID="{CAD9FC72-6972-4473-89A6-36D18A2A0FC2}">
 					<ModuleList>
 						<Module>
-							<ObjectRef Name="SFX_Monstre_TransfoRumble" ID="{0F15C205-E037-4008-8659-D6F7CFC8B528}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+							<ObjectRef Name="AMB_Public_Normal" ID="{C0D3115C-8B4C-4E28-ABDF-5544C5F971D3}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
 							<Position X="0" Y="0"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="SFX_But_ShakeCamera_02" ID="{5EEDC6C8-116E-44A7-85BB-A20AC08BAD13}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+							<ObjectRef Name="FX_Public_Intensification_Transfo" ID="{0836B42F-8583-49D8-9DCE-FE48BD98F31C}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
 							<Position X="0" Y="1"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="AMB_Public_Normal" ID="{C0D3115C-8B4C-4E28-ABDF-5544C5F971D3}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+							<ObjectRef Name="AMB_Public_Disapoint" ID="{916D2FE2-E18E-45F6-81E6-64B6D413070D}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+							<Position X="0" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="SFX_But_ShakeCamera_01" ID="{2AB34BFD-F9D7-40E0-A750-5BB481B43FE0}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
 							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="But" ID="{B96DE30D-FF5F-47B0-9B54-1C4BA488B784}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+							<Position X="1" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="FX_Public_LanceJoueur" ID="{EA30B4F5-98FE-4D06-93EB-B00A55097457}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+							<Position X="1" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Fin" ID="{65A62B4B-6555-46DB-BF3D-95B5C1A00058}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+							<Position X="2" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="FX_Public_Objet" ID="{AD191104-07E6-43A4-A649-7B7856434AB8}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+							<Position X="2" Y="2"/>
 						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
@@ -53,7 +73,7 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="But_Ambiance" ID="{FDA1CDCA-C94B-42C9-B2DB-CD8323E7D074}"/>
-							<Value>-21.551799427797</Value>
+							<Value>-37.2388650529892</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="SS_Air_Storm" ID="{E93F8CDB-06D1-4737-ACAF-7CD44BBED783}"/>

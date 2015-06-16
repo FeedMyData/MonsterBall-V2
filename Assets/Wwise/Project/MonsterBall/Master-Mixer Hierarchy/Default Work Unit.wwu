@@ -21,6 +21,13 @@
 							</ChildrenList>
 						</Bus>
 						<Bus Name="Ambiances" ID="{B9DD8753-6E85-4214-991C-F19471FEBA39}">
+							<PropertyList>
+								<Property Name="BusVolume" Type="Real64">
+									<ValueList>
+										<Value>2</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ChildrenList>
 								<Bus Name="Amb_Hdr" ID="{C5D4FA84-D93D-47E5-8FB1-59CEBD87CA70}">
 									<PropertyList>
@@ -31,19 +38,31 @@
 										</Property>
 										<Property Name="HdrRatio" Type="Real64">
 											<ValueList>
-												<Value>63</Value>
+												<Value>29</Value>
 											</ValueList>
 										</Property>
-										<Property Name="HdrThreshold" Type="Real64">
+										<Property Name="HdrReleaseTime" Type="Real64">
 											<ValueList>
-												<Value>-24</Value>
+												<Value>0.1</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
 								</Bus>
 							</ChildrenList>
 						</Bus>
-						<Bus Name="SFX" ID="{98BA6610-4B70-4EFF-A353-4A61C6BE1A24}"/>
+						<Bus Name="SFX" ID="{98BA6610-4B70-4EFF-A353-4A61C6BE1A24}">
+							<DuckingList>
+								<DuckItem>
+									<BusRef Name="Ambiances" ID="{B9DD8753-6E85-4214-991C-F19471FEBA39}"/>
+									<DuckingParam>
+										<Volume>-3</Volume>
+										<FadeInTime>0.5</FadeInTime>
+										<FadeOutTime>0.5</FadeOutTime>
+										<FadeCurve>FadeExp1</FadeCurve>
+									</DuckingParam>
+								</DuckItem>
+							</DuckingList>
+						</Bus>
 						<Bus Name="Musiques" ID="{51DA5A6D-5764-451B-9A18-180342A5B0FE}">
 							<ChildrenList>
 								<Bus Name="Music_HDR" ID="{4A87905F-E3B1-44DA-9DE8-47611B37C7A5}">
@@ -66,6 +85,17 @@
 									</PropertyList>
 								</Bus>
 							</ChildrenList>
+							<DuckingList>
+								<DuckItem>
+									<BusRef Name="Ambiances" ID="{B9DD8753-6E85-4214-991C-F19471FEBA39}"/>
+									<DuckingParam>
+										<Volume>-2.5</Volume>
+										<FadeInTime>1</FadeInTime>
+										<FadeOutTime>1</FadeOutTime>
+										<FadeCurve>FadeLinear</FadeCurve>
+									</DuckingParam>
+								</DuckItem>
+							</DuckingList>
 						</Bus>
 						<AuxBus Name="FX" ID="{AE17BDD2-F728-4C96-A483-B4560EE81FA8}">
 							<ReferenceList>

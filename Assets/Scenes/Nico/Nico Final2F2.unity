@@ -240,7 +240,7 @@ MonoBehaviour:
   dragOnGround: 2
   areaMagnet: 3
   speedMagnet: 40
-  wrathMax: 1
+  wrathMax: 2
   wrathDribblingValue: 4
   wrathDribblingEachTime: 1
   summon: 2
