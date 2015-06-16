@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Equipement_R_j2
-  m_Shader: {fileID: 4800000, guid: 33ec342d63cee904e89611e8b29c4c81, type: 3}
+  m_Shader: {fileID: 4800000, guid: 398050785f10f434c9891e816db63afa, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
   m_CustomRenderQueue: -1
@@ -119,6 +119,111 @@ Material:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _node_5956
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _node_2527
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _node_8049
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _node_8512
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Ramp_copy
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _node_9368
+        second:
+          m_Texture: {fileID: 2800000, guid: 398df227343444572afe5e225ddd06aa, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _node_1190
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _node_1235
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Normal
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _node_6603
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _node_5419
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Ramp2
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Diffuse
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Ambiant_occlusion
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Normale
+        second:
+          m_Texture: {fileID: 2800000, guid: 80286949e259c2d44876306923857245, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
     m_Floats:
       data:
         first:
@@ -219,11 +324,27 @@ Material:
       data:
         first:
           name: _Outline
-        second: .0299999993
+        second: 9.99999975e-05
       data:
         first:
           name: _node_1300
         second: 80
+      data:
+        first:
+          name: _Zbuff
+        second: 0
+      data:
+        first:
+          name: _Gloss
+        second: 0
+      data:
+        first:
+          name: _Spec
+        second: 0
+      data:
+        first:
+          name: _node_8804
+        second: 5
     m_Colors:
       data:
         first:
@@ -253,3 +374,15 @@ Material:
         first:
           name: _node_8668
         second: {r: .0344829559, g: 0, b: 1, a: 1}
+      data:
+        first:
+          name: _node_1917
+        second: {r: .5, g: .5, b: .5, a: 1}
+      data:
+        first:
+          name: _Gris
+        second: {r: .5, g: .5, b: .5, a: 1}
+      data:
+        first:
+          name: _node_2548
+        second: {r: .5, g: .5, b: .5, a: 1}

@@ -79,13 +79,6 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _Ramp
-        second:
-          m_Texture: {fileID: 0}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
           name: _alpha_neg
         second:
           m_Texture: {fileID: 2800000, guid: f2f02f2108349994f83035690c78de1f, type: 3}
@@ -103,6 +96,13 @@ Material:
           name: _normale
         second:
           m_Texture: {fileID: 2800000, guid: d0430f2fe2a4e7e4a89aebf7c2bcbf63, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Ramp
+        second:
+          m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
@@ -186,7 +186,7 @@ Material:
       data:
         first:
           name: _Neg
-        second: -1.5
+        second: -.5
       data:
         first:
           name: _Base
@@ -217,6 +217,10 @@ Material:
         second: 250
       data:
         first:
+          name: _Out
+        second: .0500000007
+      data:
+        first:
           name: _node_5367
         second: 1
       data:
@@ -227,10 +231,6 @@ Material:
         first:
           name: _node_1300
         second: 80
-      data:
-        first:
-          name: _Out
-        second: .0500000007
     m_Colors:
       data:
         first:

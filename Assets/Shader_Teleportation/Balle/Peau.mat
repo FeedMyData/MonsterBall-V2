@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Peau
-  m_Shader: {fileID: 4800000, guid: 33ec342d63cee904e89611e8b29c4c81, type: 3}
+  m_Shader: {fileID: 4800000, guid: 989bb759c241a1149b0ca93465098221, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
   m_CustomRenderQueue: -1
@@ -105,6 +105,41 @@ Material:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Normal
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Diffuse
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Ambiant_occlusion
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Normale
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Yeux
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
     m_Floats:
       data:
         first:
@@ -197,7 +232,23 @@ Material:
       data:
         first:
           name: _Out
-        second: .200000003
+        second: .100000001
+      data:
+        first:
+          name: _Outline
+        second: .0500000007
+      data:
+        first:
+          name: _Gloss
+        second: .928017676
+      data:
+        first:
+          name: _Spec
+        second: .964252174
+      data:
+        first:
+          name: _node_8804
+        second: .100000001
     m_Colors:
       data:
         first:
@@ -214,8 +265,12 @@ Material:
       data:
         first:
           name: _Color_base
-        second: {r: .970588207, g: .299740463, b: 0, a: 1}
+        second: {r: .286764681, g: .126513824, b: 0, a: 1}
       data:
         first:
           name: _Color_tp
         second: {r: .984313726, g: .984313726, b: .984313726, a: 1}
+      data:
+        first:
+          name: _node_2548
+        second: {r: .5, g: .5, b: .5, a: 1}

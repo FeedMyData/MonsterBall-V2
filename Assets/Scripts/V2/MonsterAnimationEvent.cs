@@ -23,6 +23,7 @@ public class MonsterAnimationEvent : MonoBehaviour {
                 ps.gameObject.SetActive(true);
                 ps.Play();
             }
+			if (ps.name == "Wind")ps.Play();
 		}
 
 	}
