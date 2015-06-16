@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
+using XInputDotNetPure;
 
 public class GameManagerF : MonoBehaviour {
 
@@ -82,6 +83,10 @@ public class GameManagerF : MonoBehaviour {
 				//Time.timeScale = 0;
 				if (!displayEnd)
 				{
+                    GamePad.SetVibration((PlayerIndex)0, 0f, 0f);
+                    GamePad.SetVibration((PlayerIndex)1, 0f, 0f);
+                    GamePad.SetVibration((PlayerIndex)2, 0f, 0f);
+                    GamePad.SetVibration((PlayerIndex)3, 0f, 0f);
                     GameControllerF.GetSound().PlayEvent("SFX_Fin", Camera.main.gameObject);
 					/*ecranFin.SetActive(true);
 					ecranFin.GetComponent<MenuFin>().InitMenu();
