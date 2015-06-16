@@ -80,9 +80,9 @@ public class GameManagerF : MonoBehaviour {
 			if (durationInSecond <= 0)
 			{
 				//Time.timeScale = 0;
-				
 				if (!displayEnd)
 				{
+                    GameControllerF.GetSound().PlayEvent("SFX_Fin", Camera.main.gameObject);
 					/*ecranFin.SetActive(true);
 					ecranFin.GetComponent<MenuFin>().InitMenu();
 					ecranFin.GetComponent<MenuFin>().WhoWin(bluScore, redScore);
@@ -172,6 +172,8 @@ public class GameManagerF : MonoBehaviour {
             GameControllerF.GetPlayer(3).GetComponentInChildren<Animator>().ResetTrigger("highKnee");
             GameControllerF.GetPlayer(4).GetComponentInChildren<Animator>().ResetTrigger("tap");
 
+            GameControllerF.GetSound().PlayEvent("SFX_Niveks_Validation",Camera.main.gameObject);
+
             state = Step.playerPlacement;
             break;
 		
@@ -258,7 +260,6 @@ public class GameManagerF : MonoBehaviour {
                 if(txtDuration.GetComponent<Animator>());
                     txtDuration.GetComponent<Animator>().SetTrigger("countdownIN");
             }
-
         }
     }
 

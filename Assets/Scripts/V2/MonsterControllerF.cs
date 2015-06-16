@@ -468,6 +468,8 @@ public class MonsterControllerF : MonoBehaviour {
                 //avance tout droit et change de direction dans les coins
                 if (GameControllerF.InCircle(gameObject) > 0.50f) // Rebound
                 {
+                    sound.PlayEvent("SFX_Monstre_Cloison", gameObject);
+
                     float newDirection = transform.eulerAngles.y + 180;
                     newDirection += GetAngleBounce(transform.position);
                     transform.eulerAngles = new Vector3(0, newDirection, 0);

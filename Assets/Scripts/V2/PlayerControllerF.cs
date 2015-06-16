@@ -221,8 +221,6 @@ public class PlayerControllerF : MonoBehaviour
 
         //tp.SetTeleportation(true);
 
-        StartCoroutine(Vibration(0,1,3));
-
     }
 
     // Update is called once per frame
