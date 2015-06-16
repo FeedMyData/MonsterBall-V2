@@ -24,7 +24,7 @@
 							<PropertyList>
 								<Property Name="BusVolume" Type="Real64">
 									<ValueList>
-										<Value>2</Value>
+										<Value>3.5</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -55,7 +55,7 @@
 								<DuckItem>
 									<BusRef Name="Ambiances" ID="{B9DD8753-6E85-4214-991C-F19471FEBA39}"/>
 									<DuckingParam>
-										<Volume>-3</Volume>
+										<Volume>-2.20000004768372</Volume>
 										<FadeInTime>0.5</FadeInTime>
 										<FadeOutTime>0.5</FadeOutTime>
 										<FadeCurve>FadeExp1</FadeCurve>
@@ -89,7 +89,7 @@
 								<DuckItem>
 									<BusRef Name="Ambiances" ID="{B9DD8753-6E85-4214-991C-F19471FEBA39}"/>
 									<DuckingParam>
-										<Volume>-2.5</Volume>
+										<Volume>-3</Volume>
 										<FadeInTime>1</FadeInTime>
 										<FadeOutTime>1</FadeOutTime>
 										<FadeCurve>FadeLinear</FadeCurve>

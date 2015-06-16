@@ -1905,7 +1905,7 @@
 									<PropertyList>
 										<Property Name="Knee" Type="Real32" Value="70"/>
 										<Property Name="Mode" Type="int32" Value="2"/>
-										<Property Name="Threshold" Type="Real32" Value="-30"/>
+										<Property Name="Threshold" Type="Real32" Value="-6"/>
 									</PropertyList>
 								</Effect>
 								<Effect Name="Dialog_Maximizer_1" ID="{F301970D-1EA0-44B5-A065-6A707075AABA}" PluginName="McDSP ML1" CompanyID="256" PluginID="103" PluginType="3">

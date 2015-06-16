@@ -60,7 +60,7 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<RandomSequenceContainer Name="But" ID="{B96DE30D-FF5F-47B0-9B54-1C4BA488B784}" ShortID="1071931550">
+								<RandomSequenceContainer Name="Public_But" ID="{B96DE30D-FF5F-47B0-9B54-1C4BA488B784}" ShortID="1071931550">
 									<PropertyList>
 										<Property Name="HdrActiveRange" Type="Real64">
 											<ValueList>
@@ -202,69 +202,6 @@
 											</ChildrenList>
 											<ActiveSourceList>
 												<ActiveSource Name="FX_Public_But_04" ID="{31C639FA-FE94-42AE-81FB-1C9C00029A2C}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-									</ChildrenList>
-								</RandomSequenceContainer>
-								<RandomSequenceContainer Name="Fin" ID="{65A62B4B-6555-46DB-BF3D-95B5C1A00058}" ShortID="463133673">
-									<PropertyList>
-										<Property Name="MakeUpGain" Type="Real64">
-											<ValueList>
-												<Value>3</Value>
-											</ValueList>
-										</Property>
-										<Property Name="OverrideHdrEnvelope" Type="bool" Value="True"/>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>10</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Ambiances" ID="{B9DD8753-6E85-4214-991C-F19471FEBA39}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<Sound Name="FX_Public_Fin_01" ID="{FC76F290-BD09-4412-8349-C4EAF36EDD3E}" ShortID="650592564" Type="SoundFX">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="FX_Public_Fin_01" ID="{F69D5159-BB79-4ACB-B700-506E0A5C66B3}" ShortID="236322355">
-													<Language>SFX</Language>
-													<AudioFile>FX_Public_Fin_01.wav</AudioFile>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="FX_Public_Fin_01" ID="{F69D5159-BB79-4ACB-B700-506E0A5C66B3}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="FX_Public_Fin_02" ID="{A891061D-A25B-4DA2-9B6C-BF929014C3E6}" ShortID="912113414" Type="SoundFX">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="FX_Public_Fin_02" ID="{26B9ABDC-96F3-4368-9EB0-99A14D7CD7CA}" ShortID="743327687">
-													<Language>SFX</Language>
-													<AudioFile>FX_Public_Fin_02.wav</AudioFile>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="FX_Public_Fin_02" ID="{26B9ABDC-96F3-4368-9EB0-99A14D7CD7CA}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
 									</ChildrenList>
@@ -530,6 +467,68 @@
 										</Sound>
 									</ChildrenList>
 								</BlendContainer>
+								<Sound Name="Public_Debut" ID="{FC76F290-BD09-4412-8349-C4EAF36EDD3E}" ShortID="650592564" Type="SoundFX">
+									<PropertyList>
+										<Property Name="MakeUpGain" Type="Real64">
+											<ValueList>
+												<Value>6</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>10</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Amb_Hdr" ID="{C5D4FA84-D93D-47E5-8FB1-59CEBD87CA70}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="FX_Public_Fin_01" ID="{F69D5159-BB79-4ACB-B700-506E0A5C66B3}" ShortID="236322355">
+											<Language>SFX</Language>
+											<AudioFile>FX_Public_Fin_01.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="FX_Public_Fin_01" ID="{F69D5159-BB79-4ACB-B700-506E0A5C66B3}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Public_Fin" ID="{A891061D-A25B-4DA2-9B6C-BF929014C3E6}" ShortID="912113414" Type="SoundFX">
+									<PropertyList>
+										<Property Name="MakeUpGain" Type="Real64">
+											<ValueList>
+												<Value>6</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>10</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Amb_Hdr" ID="{C5D4FA84-D93D-47E5-8FB1-59CEBD87CA70}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="FX_Public_Fin_02" ID="{26B9ABDC-96F3-4368-9EB0-99A14D7CD7CA}" ShortID="743327687">
+											<Language>SFX</Language>
+											<AudioFile>FX_Public_Fin_02.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="FX_Public_Fin_02" ID="{26B9ABDC-96F3-4368-9EB0-99A14D7CD7CA}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
 							</ChildrenList>
 						</ActorMixer>
 					</ChildrenList>
@@ -869,6 +868,61 @@
 												</Sound>
 											</ChildrenList>
 										</RandomSequenceContainer>
+										<Sound Name="Coup_Menu" ID="{37954FEB-F189-4149-B0CC-FAD55963A83B}" ShortID="823714349" Type="SoundFX">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>-960</Value>
+													</ValueList>
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{BBB85C34-A96B-45DC-9C8B-DFB0B2A8D5A0}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="100"/>
+																	<Property Name="Min" Type="Real64" Value="-100"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="PositioningType" Type="int16" Value="1"/>
+												<Property Name="UserAuxSendVolume0" Type="Real64">
+													<ValueList>
+														<Value>-3</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-6</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{98BA6610-4B70-4EFF-A353-4A61C6BE1A24}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Niveks_CoupBatte_Fort" ID="{B5C103A3-5560-4C66-9B13-92E8E1B97245}" ShortID="223544869">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="7.30203619909502E-04"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="5.22951264581625E-02"/>
+														<Property Name="FadeOutShape" Type="int16" Value="1"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.021298465889472"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.144580316742081"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>SFX_Niveks_CoupBatte_Fort.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Niveks_CoupBatte_Fort" ID="{B5C103A3-5560-4C66-9B13-92E8E1B97245}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
 									</ChildrenList>
 								</ActorMixer>
 								<ActorMixer Name="Fort" ID="{A72C1398-4220-40AC-8D7B-839253C90973}" ShortID="931613747">
@@ -1415,7 +1469,14 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<Sound Name="SFX_Electronic_Impact-01" ID="{873EDE9E-853C-453D-B083-F57FDE910FC8}" ShortID="654757122" Type="SoundFX">
+								<RandomSequenceContainer Name="Electronic_Impact" ID="{3D42A3D5-D95C-41A7-B65F-B83349C9E105}" ShortID="426333181">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-5</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
@@ -1425,338 +1486,548 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="SFX_Electronic_Impact-01" ID="{43C2F857-F811-4ED7-8DD0-445232841F0F}" ShortID="24025628">
-											<Language>SFX</Language>
-											<AudioFile>SFX_Electronic_Impact-01.wav</AudioFile>
-										</AudioFileSource>
+										<Sound Name="SFX_Electronic_Impact-01" ID="{873EDE9E-853C-453D-B083-F57FDE910FC8}" ShortID="654757122" Type="SoundFX">
+											<PropertyList>
+												<Property Name="PositioningType" Type="int16" Value="1"/>
+												<Property Name="UserAuxSendVolume0" Type="Real64">
+													<ValueList>
+														<Value>-3</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+												</Reference>
+												<Reference Name="Effect0" PluginName="iZotope Trash Dynamics Mono" CompanyID="259" PluginID="5" PluginType="3">
+													<ObjectRef Name="Bigger_Boom" ID="{4D23DF35-E058-4705-9D8D-2DBDC605B8B3}" WorkUnitID="{70F46671-A828-4029-A11A-36BB09D872B9}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{98BA6610-4B70-4EFF-A353-4A61C6BE1A24}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Electronic_Impact-01" ID="{43C2F857-F811-4ED7-8DD0-445232841F0F}" ShortID="24025628">
+													<Language>SFX</Language>
+													<AudioFile>SFX_Electronic_Impact-01.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Electronic_Impact-01" ID="{43C2F857-F811-4ED7-8DD0-445232841F0F}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_Electronic_Impact-02" ID="{C94B4F88-F170-4E04-B655-761DAB7FA9B7}" ShortID="427025889" Type="SoundFX">
+											<PropertyList>
+												<Property Name="PositioningType" Type="int16" Value="1"/>
+												<Property Name="UserAuxSendVolume0" Type="Real64">
+													<ValueList>
+														<Value>-3</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+												</Reference>
+												<Reference Name="Effect0" PluginName="iZotope Trash Dynamics Mono" CompanyID="259" PluginID="5" PluginType="3">
+													<ObjectRef Name="Bigger_Boom" ID="{4D23DF35-E058-4705-9D8D-2DBDC605B8B3}" WorkUnitID="{70F46671-A828-4029-A11A-36BB09D872B9}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{98BA6610-4B70-4EFF-A353-4A61C6BE1A24}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Electronic_Impact-02" ID="{05A14C2B-9EFD-4CD4-90EC-D447355759FF}" ShortID="359790784">
+													<Language>SFX</Language>
+													<AudioFile>SFX_Electronic_Impact-02.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Electronic_Impact-02" ID="{05A14C2B-9EFD-4CD4-90EC-D447355759FF}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_Electronic_Impact-03" ID="{D4565036-6DA7-486F-9684-8B37ACB35C0B}" ShortID="877739792" Type="SoundFX">
+											<PropertyList>
+												<Property Name="PositioningType" Type="int16" Value="1"/>
+												<Property Name="UserAuxSendVolume0" Type="Real64">
+													<ValueList>
+														<Value>-3</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+												</Reference>
+												<Reference Name="Effect0" PluginName="iZotope Trash Dynamics Mono" CompanyID="259" PluginID="5" PluginType="3">
+													<ObjectRef Name="Bigger_Boom" ID="{4D23DF35-E058-4705-9D8D-2DBDC605B8B3}" WorkUnitID="{70F46671-A828-4029-A11A-36BB09D872B9}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{98BA6610-4B70-4EFF-A353-4A61C6BE1A24}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Electronic_Impact-03" ID="{A4A96E95-3763-47BE-BCD0-37D378B2570C}" ShortID="955964399">
+													<Language>SFX</Language>
+													<AudioFile>SFX_Electronic_Impact-03.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Electronic_Impact-03" ID="{A4A96E95-3763-47BE-BCD0-37D378B2570C}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_Electronic_Impact-04" ID="{9CB798FC-4A0C-479F-8F78-E4CE2F61AFFA}" ShortID="383319212" Type="SoundFX">
+											<PropertyList>
+												<Property Name="PositioningType" Type="int16" Value="1"/>
+												<Property Name="UserAuxSendVolume0" Type="Real64">
+													<ValueList>
+														<Value>-3</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+												</Reference>
+												<Reference Name="Effect0" PluginName="iZotope Trash Dynamics Mono" CompanyID="259" PluginID="5" PluginType="3">
+													<ObjectRef Name="Bigger_Boom" ID="{4D23DF35-E058-4705-9D8D-2DBDC605B8B3}" WorkUnitID="{70F46671-A828-4029-A11A-36BB09D872B9}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{98BA6610-4B70-4EFF-A353-4A61C6BE1A24}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Electronic_Impact-04" ID="{DF1A9BB3-6EF9-4220-9113-7C19B09C86BB}" ShortID="172249006">
+													<Language>SFX</Language>
+													<AudioFile>SFX_Electronic_Impact-04.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Electronic_Impact-04" ID="{DF1A9BB3-6EF9-4220-9113-7C19B09C86BB}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_Electronic_Impact-05" ID="{8F551CC4-FE8D-4042-8785-8F9348F1C413}" ShortID="38132041" Type="SoundFX">
+											<PropertyList>
+												<Property Name="PositioningType" Type="int16" Value="1"/>
+												<Property Name="UserAuxSendVolume0" Type="Real64">
+													<ValueList>
+														<Value>-3</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+												</Reference>
+												<Reference Name="Effect0" PluginName="iZotope Trash Dynamics Mono" CompanyID="259" PluginID="5" PluginType="3">
+													<ObjectRef Name="Bigger_Boom" ID="{4D23DF35-E058-4705-9D8D-2DBDC605B8B3}" WorkUnitID="{70F46671-A828-4029-A11A-36BB09D872B9}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{98BA6610-4B70-4EFF-A353-4A61C6BE1A24}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Electronic_Impact-05" ID="{845F2820-E2D3-43E9-ABAA-F495A86201A3}" ShortID="358179944">
+													<Language>SFX</Language>
+													<AudioFile>SFX_Electronic_Impact-05.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Electronic_Impact-05" ID="{845F2820-E2D3-43E9-ABAA-F495A86201A3}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_Electronic_Impact-06" ID="{37C6B433-4F03-460B-9430-CDEFEFE64B85}" ShortID="801129212" Type="SoundFX">
+											<PropertyList>
+												<Property Name="PositioningType" Type="int16" Value="1"/>
+												<Property Name="UserAuxSendVolume0" Type="Real64">
+													<ValueList>
+														<Value>-3</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+												</Reference>
+												<Reference Name="Effect0" PluginName="iZotope Trash Dynamics Mono" CompanyID="259" PluginID="5" PluginType="3">
+													<ObjectRef Name="Bigger_Boom" ID="{4D23DF35-E058-4705-9D8D-2DBDC605B8B3}" WorkUnitID="{70F46671-A828-4029-A11A-36BB09D872B9}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{98BA6610-4B70-4EFF-A353-4A61C6BE1A24}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Electronic_Impact-06" ID="{3116C8BA-62F1-4564-A861-CC308BE10E03}" ShortID="1000802272">
+													<Language>SFX</Language>
+													<AudioFile>SFX_Electronic_Impact-06.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Electronic_Impact-06" ID="{3116C8BA-62F1-4564-A861-CC308BE10E03}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_Electronic_Impact-07" ID="{5391B8E0-8F1A-45CE-91B6-3279FB8C1C95}" ShortID="482789692" Type="SoundFX">
+											<PropertyList>
+												<Property Name="PositioningType" Type="int16" Value="1"/>
+												<Property Name="UserAuxSendVolume0" Type="Real64">
+													<ValueList>
+														<Value>-3</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+												</Reference>
+												<Reference Name="Effect0" PluginName="iZotope Trash Dynamics Mono" CompanyID="259" PluginID="5" PluginType="3">
+													<ObjectRef Name="Bigger_Boom" ID="{4D23DF35-E058-4705-9D8D-2DBDC605B8B3}" WorkUnitID="{70F46671-A828-4029-A11A-36BB09D872B9}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{98BA6610-4B70-4EFF-A353-4A61C6BE1A24}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Electronic_Impact-07" ID="{985C0DB2-A57B-410E-AF2E-2671883E7C9A}" ShortID="845702685">
+													<Language>SFX</Language>
+													<AudioFile>SFX_Electronic_Impact-07.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Electronic_Impact-07" ID="{985C0DB2-A57B-410E-AF2E-2671883E7C9A}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_Electronic_Impact-08" ID="{DD84661B-9CE7-4BD7-AAE0-3EB5BB21675E}" ShortID="448766548" Type="SoundFX">
+											<PropertyList>
+												<Property Name="PositioningType" Type="int16" Value="1"/>
+												<Property Name="UserAuxSendVolume0" Type="Real64">
+													<ValueList>
+														<Value>-3</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+												</Reference>
+												<Reference Name="Effect0" PluginName="iZotope Trash Dynamics Mono" CompanyID="259" PluginID="5" PluginType="3">
+													<ObjectRef Name="Bigger_Boom" ID="{4D23DF35-E058-4705-9D8D-2DBDC605B8B3}" WorkUnitID="{70F46671-A828-4029-A11A-36BB09D872B9}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{98BA6610-4B70-4EFF-A353-4A61C6BE1A24}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Electronic_Impact-08" ID="{4CDF6814-FD23-4CC1-BF95-1145A2E8EBF8}" ShortID="1003227509">
+													<Language>SFX</Language>
+													<AudioFile>SFX_Electronic_Impact-08.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Electronic_Impact-08" ID="{4CDF6814-FD23-4CC1-BF95-1145A2E8EBF8}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_Electronic_Impact-09" ID="{4F39383F-112E-4F94-856A-1701C318668B}" ShortID="35690487" Type="SoundFX">
+											<PropertyList>
+												<Property Name="PositioningType" Type="int16" Value="1"/>
+												<Property Name="UserAuxSendVolume0" Type="Real64">
+													<ValueList>
+														<Value>-3</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+												</Reference>
+												<Reference Name="Effect0" PluginName="iZotope Trash Dynamics Mono" CompanyID="259" PluginID="5" PluginType="3">
+													<ObjectRef Name="Bigger_Boom" ID="{4D23DF35-E058-4705-9D8D-2DBDC605B8B3}" WorkUnitID="{70F46671-A828-4029-A11A-36BB09D872B9}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{98BA6610-4B70-4EFF-A353-4A61C6BE1A24}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Electronic_Impact-09" ID="{434CD069-48E3-4B40-BC00-69F5DB11D483}" ShortID="672939018">
+													<Language>SFX</Language>
+													<AudioFile>SFX_Electronic_Impact-09.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Electronic_Impact-09" ID="{434CD069-48E3-4B40-BC00-69F5DB11D483}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_Electronic_Impact-10" ID="{7F2D48D9-7B08-4ADE-8242-E7ABF5DC4313}" ShortID="773087983" Type="SoundFX">
+											<PropertyList>
+												<Property Name="PositioningType" Type="int16" Value="1"/>
+												<Property Name="UserAuxSendVolume0" Type="Real64">
+													<ValueList>
+														<Value>-3</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+												</Reference>
+												<Reference Name="Effect0" PluginName="iZotope Trash Dynamics Mono" CompanyID="259" PluginID="5" PluginType="3">
+													<ObjectRef Name="Bigger_Boom" ID="{4D23DF35-E058-4705-9D8D-2DBDC605B8B3}" WorkUnitID="{70F46671-A828-4029-A11A-36BB09D872B9}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{98BA6610-4B70-4EFF-A353-4A61C6BE1A24}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Electronic_Impact-10" ID="{EE72B924-9B14-4076-BA51-A89D494E7024}" ShortID="600012430">
+													<Language>SFX</Language>
+													<AudioFile>SFX_Electronic_Impact-10.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Electronic_Impact-10" ID="{EE72B924-9B14-4076-BA51-A89D494E7024}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_Electronic_Impact-11" ID="{E71593D9-BC48-4D44-BB3C-FDC83A669CA1}" ShortID="947905328" Type="SoundFX">
+											<PropertyList>
+												<Property Name="PositioningType" Type="int16" Value="1"/>
+												<Property Name="UserAuxSendVolume0" Type="Real64">
+													<ValueList>
+														<Value>-3</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+												</Reference>
+												<Reference Name="Effect0" PluginName="iZotope Trash Dynamics Mono" CompanyID="259" PluginID="5" PluginType="3">
+													<ObjectRef Name="Bigger_Boom" ID="{4D23DF35-E058-4705-9D8D-2DBDC605B8B3}" WorkUnitID="{70F46671-A828-4029-A11A-36BB09D872B9}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{98BA6610-4B70-4EFF-A353-4A61C6BE1A24}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Electronic_Impact-11" ID="{E0B0745F-8B0E-443E-A6DB-ACCDF80677B6}" ShortID="55624661">
+													<Language>SFX</Language>
+													<AudioFile>SFX_Electronic_Impact-11.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Electronic_Impact-11" ID="{E0B0745F-8B0E-443E-A6DB-ACCDF80677B6}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_Electronic_Impact-12" ID="{629321CD-FD8F-4ACD-934D-775A5A1C057C}" ShortID="205842150" Type="SoundFX">
+											<PropertyList>
+												<Property Name="PositioningType" Type="int16" Value="1"/>
+												<Property Name="UserAuxSendVolume0" Type="Real64">
+													<ValueList>
+														<Value>-3</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+												</Reference>
+												<Reference Name="Effect0" PluginName="iZotope Trash Dynamics Mono" CompanyID="259" PluginID="5" PluginType="3">
+													<ObjectRef Name="Bigger_Boom" ID="{4D23DF35-E058-4705-9D8D-2DBDC605B8B3}" WorkUnitID="{70F46671-A828-4029-A11A-36BB09D872B9}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{98BA6610-4B70-4EFF-A353-4A61C6BE1A24}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Electronic_Impact-12" ID="{218D47E7-12A0-454E-99A9-FE67F2A658E5}" ShortID="642013684">
+													<Language>SFX</Language>
+													<AudioFile>SFX_Electronic_Impact-12.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Electronic_Impact-12" ID="{218D47E7-12A0-454E-99A9-FE67F2A658E5}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_Electronic_Impact-13" ID="{90498F1A-7CC5-485E-A5DA-C99968712CA2}" ShortID="1044097038" Type="SoundFX">
+											<PropertyList>
+												<Property Name="PositioningType" Type="int16" Value="1"/>
+												<Property Name="UserAuxSendVolume0" Type="Real64">
+													<ValueList>
+														<Value>-3</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+												</Reference>
+												<Reference Name="Effect0" PluginName="iZotope Trash Dynamics Mono" CompanyID="259" PluginID="5" PluginType="3">
+													<ObjectRef Name="Bigger_Boom" ID="{4D23DF35-E058-4705-9D8D-2DBDC605B8B3}" WorkUnitID="{70F46671-A828-4029-A11A-36BB09D872B9}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{98BA6610-4B70-4EFF-A353-4A61C6BE1A24}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Electronic_Impact-13" ID="{1083AAA9-90FB-4251-8774-86687369B33D}" ShortID="667632295">
+													<Language>SFX</Language>
+													<AudioFile>SFX_Electronic_Impact-13.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Electronic_Impact-13" ID="{1083AAA9-90FB-4251-8774-86687369B33D}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_Electronic_Impact-14" ID="{6872017C-75E3-4A05-8093-A4FD3AF3EE4A}" ShortID="464237221" Type="SoundFX">
+											<PropertyList>
+												<Property Name="PositioningType" Type="int16" Value="1"/>
+												<Property Name="UserAuxSendVolume0" Type="Real64">
+													<ValueList>
+														<Value>-3</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+												</Reference>
+												<Reference Name="Effect0" PluginName="iZotope Trash Dynamics Mono" CompanyID="259" PluginID="5" PluginType="3">
+													<ObjectRef Name="Bigger_Boom" ID="{4D23DF35-E058-4705-9D8D-2DBDC605B8B3}" WorkUnitID="{70F46671-A828-4029-A11A-36BB09D872B9}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{98BA6610-4B70-4EFF-A353-4A61C6BE1A24}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Electronic_Impact-14" ID="{7F65049D-DA38-4A91-A05F-46B8C776FB09}" ShortID="735828750">
+													<Language>SFX</Language>
+													<AudioFile>SFX_Electronic_Impact-14.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Electronic_Impact-14" ID="{7F65049D-DA38-4A91-A05F-46B8C776FB09}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_Electronic_Impact-15" ID="{399DC3AB-A65B-4149-A649-7416979B354D}" ShortID="824275671" Type="SoundFX">
+											<PropertyList>
+												<Property Name="PositioningType" Type="int16" Value="1"/>
+												<Property Name="UserAuxSendVolume0" Type="Real64">
+													<ValueList>
+														<Value>-3</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+												</Reference>
+												<Reference Name="Effect0" PluginName="iZotope Trash Dynamics Mono" CompanyID="259" PluginID="5" PluginType="3">
+													<ObjectRef Name="Bigger_Boom" ID="{4D23DF35-E058-4705-9D8D-2DBDC605B8B3}" WorkUnitID="{70F46671-A828-4029-A11A-36BB09D872B9}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{98BA6610-4B70-4EFF-A353-4A61C6BE1A24}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Electronic_Impact-15" ID="{D4D85786-85A7-4818-B1F3-3FAA51FC5DB4}" ShortID="381801538">
+													<Language>SFX</Language>
+													<AudioFile>SFX_Electronic_Impact-15.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Electronic_Impact-15" ID="{D4D85786-85A7-4818-B1F3-3FAA51FC5DB4}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_Electronic_Impact-16" ID="{FD976726-33E5-4085-BD7A-1E319024899A}" ShortID="634050923" Type="SoundFX">
+											<PropertyList>
+												<Property Name="PositioningType" Type="int16" Value="1"/>
+												<Property Name="UserAuxSendVolume0" Type="Real64">
+													<ValueList>
+														<Value>-3</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+												</Reference>
+												<Reference Name="Effect0" PluginName="iZotope Trash Dynamics Mono" CompanyID="259" PluginID="5" PluginType="3">
+													<ObjectRef Name="Bigger_Boom" ID="{4D23DF35-E058-4705-9D8D-2DBDC605B8B3}" WorkUnitID="{70F46671-A828-4029-A11A-36BB09D872B9}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{98BA6610-4B70-4EFF-A353-4A61C6BE1A24}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Electronic_Impact-16" ID="{13A9ECCF-C78F-4E72-BBDF-90E3824AE9F9}" ShortID="7902661">
+													<Language>SFX</Language>
+													<AudioFile>SFX_Electronic_Impact-16.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Electronic_Impact-16" ID="{13A9ECCF-C78F-4E72-BBDF-90E3824AE9F9}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_Electronic_Impact-17" ID="{81C93046-67D6-4118-A22D-A6BF5B671BCD}" ShortID="444608438" Type="SoundFX">
+											<PropertyList>
+												<Property Name="PositioningType" Type="int16" Value="1"/>
+												<Property Name="UserAuxSendVolume0" Type="Real64">
+													<ValueList>
+														<Value>-3</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+												</Reference>
+												<Reference Name="Effect0" PluginName="iZotope Trash Dynamics Mono" CompanyID="259" PluginID="5" PluginType="3">
+													<ObjectRef Name="Bigger_Boom" ID="{4D23DF35-E058-4705-9D8D-2DBDC605B8B3}" WorkUnitID="{70F46671-A828-4029-A11A-36BB09D872B9}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{98BA6610-4B70-4EFF-A353-4A61C6BE1A24}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Electronic_Impact-17" ID="{F8AAB434-E83E-4A1C-92F8-A9A49EA10A09}" ShortID="670046471">
+													<Language>SFX</Language>
+													<AudioFile>SFX_Electronic_Impact-17.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Electronic_Impact-17" ID="{F8AAB434-E83E-4A1C-92F8-A9A49EA10A09}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_Electronic_Impact-18" ID="{0E5D2F62-5A98-414E-BF12-14FF72837D5B}" ShortID="232787222" Type="SoundFX">
+											<PropertyList>
+												<Property Name="PositioningType" Type="int16" Value="1"/>
+												<Property Name="UserAuxSendVolume0" Type="Real64">
+													<ValueList>
+														<Value>-3</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+												</Reference>
+												<Reference Name="Effect0" PluginName="iZotope Trash Dynamics Mono" CompanyID="259" PluginID="5" PluginType="3">
+													<ObjectRef Name="Bigger_Boom" ID="{4D23DF35-E058-4705-9D8D-2DBDC605B8B3}" WorkUnitID="{70F46671-A828-4029-A11A-36BB09D872B9}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{98BA6610-4B70-4EFF-A353-4A61C6BE1A24}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Electronic_Impact-18" ID="{33862D68-5925-4609-8FB7-2CEFA7A14DB1}" ShortID="249623052">
+													<Language>SFX</Language>
+													<AudioFile>SFX_Electronic_Impact-18.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Electronic_Impact-18" ID="{33862D68-5925-4609-8FB7-2CEFA7A14DB1}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
 									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="SFX_Electronic_Impact-01" ID="{43C2F857-F811-4ED7-8DD0-445232841F0F}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="SFX_Electronic_Impact-02" ID="{C94B4F88-F170-4E04-B655-761DAB7FA9B7}" ShortID="427025889" Type="SoundFX">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="SFX_Electronic_Impact-02" ID="{05A14C2B-9EFD-4CD4-90EC-D447355759FF}" ShortID="359790784">
-											<Language>SFX</Language>
-											<AudioFile>SFX_Electronic_Impact-02.wav</AudioFile>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="SFX_Electronic_Impact-02" ID="{05A14C2B-9EFD-4CD4-90EC-D447355759FF}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="SFX_Electronic_Impact-03" ID="{D4565036-6DA7-486F-9684-8B37ACB35C0B}" ShortID="877739792" Type="SoundFX">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="SFX_Electronic_Impact-03" ID="{A4A96E95-3763-47BE-BCD0-37D378B2570C}" ShortID="955964399">
-											<Language>SFX</Language>
-											<AudioFile>SFX_Electronic_Impact-03.wav</AudioFile>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="SFX_Electronic_Impact-03" ID="{A4A96E95-3763-47BE-BCD0-37D378B2570C}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="SFX_Electronic_Impact-04" ID="{9CB798FC-4A0C-479F-8F78-E4CE2F61AFFA}" ShortID="383319212" Type="SoundFX">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="SFX_Electronic_Impact-04" ID="{DF1A9BB3-6EF9-4220-9113-7C19B09C86BB}" ShortID="172249006">
-											<Language>SFX</Language>
-											<AudioFile>SFX_Electronic_Impact-04.wav</AudioFile>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="SFX_Electronic_Impact-04" ID="{DF1A9BB3-6EF9-4220-9113-7C19B09C86BB}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="SFX_Electronic_Impact-05" ID="{8F551CC4-FE8D-4042-8785-8F9348F1C413}" ShortID="38132041" Type="SoundFX">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="SFX_Electronic_Impact-05" ID="{845F2820-E2D3-43E9-ABAA-F495A86201A3}" ShortID="358179944">
-											<Language>SFX</Language>
-											<AudioFile>SFX_Electronic_Impact-05.wav</AudioFile>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="SFX_Electronic_Impact-05" ID="{845F2820-E2D3-43E9-ABAA-F495A86201A3}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="SFX_Electronic_Impact-06" ID="{37C6B433-4F03-460B-9430-CDEFEFE64B85}" ShortID="801129212" Type="SoundFX">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="SFX_Electronic_Impact-06" ID="{3116C8BA-62F1-4564-A861-CC308BE10E03}" ShortID="1000802272">
-											<Language>SFX</Language>
-											<AudioFile>SFX_Electronic_Impact-06.wav</AudioFile>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="SFX_Electronic_Impact-06" ID="{3116C8BA-62F1-4564-A861-CC308BE10E03}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="SFX_Electronic_Impact-07" ID="{5391B8E0-8F1A-45CE-91B6-3279FB8C1C95}" ShortID="482789692" Type="SoundFX">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="SFX_Electronic_Impact-07" ID="{985C0DB2-A57B-410E-AF2E-2671883E7C9A}" ShortID="845702685">
-											<Language>SFX</Language>
-											<AudioFile>SFX_Electronic_Impact-07.wav</AudioFile>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="SFX_Electronic_Impact-07" ID="{985C0DB2-A57B-410E-AF2E-2671883E7C9A}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="SFX_Electronic_Impact-08" ID="{DD84661B-9CE7-4BD7-AAE0-3EB5BB21675E}" ShortID="448766548" Type="SoundFX">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="SFX_Electronic_Impact-08" ID="{4CDF6814-FD23-4CC1-BF95-1145A2E8EBF8}" ShortID="1003227509">
-											<Language>SFX</Language>
-											<AudioFile>SFX_Electronic_Impact-08.wav</AudioFile>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="SFX_Electronic_Impact-08" ID="{4CDF6814-FD23-4CC1-BF95-1145A2E8EBF8}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="SFX_Electronic_Impact-09" ID="{4F39383F-112E-4F94-856A-1701C318668B}" ShortID="35690487" Type="SoundFX">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="SFX_Electronic_Impact-09" ID="{434CD069-48E3-4B40-BC00-69F5DB11D483}" ShortID="672939018">
-											<Language>SFX</Language>
-											<AudioFile>SFX_Electronic_Impact-09.wav</AudioFile>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="SFX_Electronic_Impact-09" ID="{434CD069-48E3-4B40-BC00-69F5DB11D483}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="SFX_Electronic_Impact-10" ID="{7F2D48D9-7B08-4ADE-8242-E7ABF5DC4313}" ShortID="773087983" Type="SoundFX">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="SFX_Electronic_Impact-10" ID="{EE72B924-9B14-4076-BA51-A89D494E7024}" ShortID="600012430">
-											<Language>SFX</Language>
-											<AudioFile>SFX_Electronic_Impact-10.wav</AudioFile>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="SFX_Electronic_Impact-10" ID="{EE72B924-9B14-4076-BA51-A89D494E7024}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="SFX_Electronic_Impact-11" ID="{E71593D9-BC48-4D44-BB3C-FDC83A669CA1}" ShortID="947905328" Type="SoundFX">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="SFX_Electronic_Impact-11" ID="{E0B0745F-8B0E-443E-A6DB-ACCDF80677B6}" ShortID="55624661">
-											<Language>SFX</Language>
-											<AudioFile>SFX_Electronic_Impact-11.wav</AudioFile>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="SFX_Electronic_Impact-11" ID="{E0B0745F-8B0E-443E-A6DB-ACCDF80677B6}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="SFX_Electronic_Impact-12" ID="{629321CD-FD8F-4ACD-934D-775A5A1C057C}" ShortID="205842150" Type="SoundFX">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="SFX_Electronic_Impact-12" ID="{218D47E7-12A0-454E-99A9-FE67F2A658E5}" ShortID="642013684">
-											<Language>SFX</Language>
-											<AudioFile>SFX_Electronic_Impact-12.wav</AudioFile>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="SFX_Electronic_Impact-12" ID="{218D47E7-12A0-454E-99A9-FE67F2A658E5}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="SFX_Electronic_Impact-13" ID="{90498F1A-7CC5-485E-A5DA-C99968712CA2}" ShortID="1044097038" Type="SoundFX">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="SFX_Electronic_Impact-13" ID="{1083AAA9-90FB-4251-8774-86687369B33D}" ShortID="667632295">
-											<Language>SFX</Language>
-											<AudioFile>SFX_Electronic_Impact-13.wav</AudioFile>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="SFX_Electronic_Impact-13" ID="{1083AAA9-90FB-4251-8774-86687369B33D}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="SFX_Electronic_Impact-14" ID="{6872017C-75E3-4A05-8093-A4FD3AF3EE4A}" ShortID="464237221" Type="SoundFX">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="SFX_Electronic_Impact-14" ID="{7F65049D-DA38-4A91-A05F-46B8C776FB09}" ShortID="735828750">
-											<Language>SFX</Language>
-											<AudioFile>SFX_Electronic_Impact-14.wav</AudioFile>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="SFX_Electronic_Impact-14" ID="{7F65049D-DA38-4A91-A05F-46B8C776FB09}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="SFX_Electronic_Impact-15" ID="{399DC3AB-A65B-4149-A649-7416979B354D}" ShortID="824275671" Type="SoundFX">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="SFX_Electronic_Impact-15" ID="{D4D85786-85A7-4818-B1F3-3FAA51FC5DB4}" ShortID="381801538">
-											<Language>SFX</Language>
-											<AudioFile>SFX_Electronic_Impact-15.wav</AudioFile>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="SFX_Electronic_Impact-15" ID="{D4D85786-85A7-4818-B1F3-3FAA51FC5DB4}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="SFX_Electronic_Impact-16" ID="{FD976726-33E5-4085-BD7A-1E319024899A}" ShortID="634050923" Type="SoundFX">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="SFX_Electronic_Impact-16" ID="{13A9ECCF-C78F-4E72-BBDF-90E3824AE9F9}" ShortID="7902661">
-											<Language>SFX</Language>
-											<AudioFile>SFX_Electronic_Impact-16.wav</AudioFile>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="SFX_Electronic_Impact-16" ID="{13A9ECCF-C78F-4E72-BBDF-90E3824AE9F9}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="SFX_Electronic_Impact-17" ID="{81C93046-67D6-4118-A22D-A6BF5B671BCD}" ShortID="444608438" Type="SoundFX">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="SFX_Electronic_Impact-17" ID="{F8AAB434-E83E-4A1C-92F8-A9A49EA10A09}" ShortID="670046471">
-											<Language>SFX</Language>
-											<AudioFile>SFX_Electronic_Impact-17.wav</AudioFile>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="SFX_Electronic_Impact-17" ID="{F8AAB434-E83E-4A1C-92F8-A9A49EA10A09}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="SFX_Electronic_Impact-18" ID="{0E5D2F62-5A98-414E-BF12-14FF72837D5B}" ShortID="232787222" Type="SoundFX">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="SFX_Electronic_Impact-18" ID="{33862D68-5925-4609-8FB7-2CEFA7A14DB1}" ShortID="249623052">
-											<Language>SFX</Language>
-											<AudioFile>SFX_Electronic_Impact-18.wav</AudioFile>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="SFX_Electronic_Impact-18" ID="{33862D68-5925-4609-8FB7-2CEFA7A14DB1}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
+								</RandomSequenceContainer>
 							</ChildrenList>
 						</ActorMixer>
 						<ActorMixer Name="Electronic_Impact_Short" ID="{FC1872BB-06EE-469E-8CAE-B28C3543D22C}" ShortID="217761152">
@@ -4297,16 +4568,20 @@
 										<Value>4</Value>
 									</ValueList>
 								</Property>
+								<Property Name="OverrideEffect" Type="bool" Value="True"/>
 								<Property Name="OverrideOutput" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>4</Value>
+										<Value>2</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+								</Reference>
+								<Reference Name="Effect0" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
+									<ObjectRef Name="Dialog_Too_Quiet" ID="{F9C77BF1-1CCC-415B-B93F-B048979CA620}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="Niveks" ID="{61A147E8-AD36-479A-8A9B-0755B4FE6CC9}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>

@@ -22,16 +22,12 @@
 							<Position X="1" Y="0"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="But" ID="{B96DE30D-FF5F-47B0-9B54-1C4BA488B784}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+							<ObjectRef Name="Public_But" ID="{B96DE30D-FF5F-47B0-9B54-1C4BA488B784}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
 							<Position X="1" Y="1"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="FX_Public_LanceJoueur" ID="{EA30B4F5-98FE-4D06-93EB-B00A55097457}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
 							<Position X="1" Y="2"/>
-						</Module>
-						<Module>
-							<ObjectRef Name="Fin" ID="{65A62B4B-6555-46DB-BF3D-95B5C1A00058}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
-							<Position X="2" Y="1"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="FX_Public_Objet" ID="{AD191104-07E6-43A4-A649-7B7856434AB8}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>

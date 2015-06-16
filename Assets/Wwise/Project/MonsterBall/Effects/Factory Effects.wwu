@@ -42,8 +42,8 @@
 						<Effect Name="Dialog_Too_Quiet" ID="{F9C77BF1-1CCC-415B-B93F-B048979CA620}" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
 							<PropertyList>
 								<Property Name="OutputGain" Type="Real32" Value="6"/>
-								<Property Name="Ratio" Type="Real32" Value="3"/>
-								<Property Name="Threshold" Type="Real32" Value="-30"/>
+								<Property Name="Ratio" Type="Real32" Value="11.8"/>
+								<Property Name="Threshold" Type="Real32" Value="-31.9"/>
 							</PropertyList>
 						</Effect>
 						<Effect Name="High_Impact" ID="{2AFD6FB0-C906-4683-A377-FEEEF72967B0}" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
@@ -613,11 +613,11 @@
 							<ChildrenList>
 								<Effect Name="Static_Sibilance_Remover_Female" ID="{3E13EF40-7C1A-4EBC-9858-8CB584A642E5}" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
 									<PropertyList>
-										<Property Name="FrequencyBand2" Type="Real32" Value="6000"/>
+										<Property Name="FrequencyBand2" Type="Real32" Value="9254"/>
 										<Property Name="GainBand2" Type="Real32" Value="-6"/>
 										<Property Name="OnOffBand1" Type="bool" Value="False"/>
 										<Property Name="OnOffBand3" Type="bool" Value="False"/>
-										<Property Name="QFactorBand2" Type="Real32" Value="3"/>
+										<Property Name="QFactorBand2" Type="Real32" Value="41.3"/>
 									</PropertyList>
 								</Effect>
 								<Effect Name="Static_Sibilance_Remover_Male" ID="{3FF84C1E-F84E-432E-86BC-96B3C9219F10}" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
@@ -652,6 +652,7 @@
 										<Property Name="FilterTypeBand2" Type="int32" Value="2"/>
 										<Property Name="FilterTypeBand3" Type="int32" Value="0"/>
 										<Property Name="FrequencyBand1" Type="Real32" Value="1000"/>
+										<Property Name="FrequencyBand2" Type="Real32" Value="7675"/>
 										<Property Name="FrequencyBand3" Type="Real32" Value="10000"/>
 										<Property Name="OnOffBand1" Type="bool" Value="False"/>
 										<Property Name="OnOffBand3" Type="bool" Value="False"/>

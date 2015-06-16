@@ -240,11 +240,11 @@ MonoBehaviour:
   dragOnGround: 2
   areaMagnet: 3
   speedMagnet: 40
-  wrathMax: 2
+  wrathMax: 125
   wrathDribblingValue: 4
   wrathDribblingEachTime: 1
   summon: 2
-  durationFirstPart: 2
+  durationFirstPart: 10
   monsterScale: 6
   monsterMass: 20
   safeTransform: .600000024
@@ -256,7 +256,7 @@ MonoBehaviour:
   minSpeedCharge: 40
   maxSpeedCharge: 80
   colorSkinMonsterWhenCharge: {r: 0, g: 0, b: 0, a: 1}
-  durationInvul: 2
+  durationInvul: 1.5
   durationMiniRandomRespawn: 1
   durationMaxiRandomRespawn: 3
   speedRotationRespawn: 200
@@ -1063,7 +1063,11 @@ MonoBehaviour:
   powerVibrJoueurFrappe: .600000024
   durationJoueurMange: 1
   powerVibrJoueurMange: .600000024
-  durationInvul: 3
+  durationRepousseBut: 1
+  powerVibrRepousseBut: .300000012
+  durationMonstreCloison: 1
+  powerVibrMonstreCloison: .300000012
+  durationInvul: 2.5
   durationInvulSiCoupRecu: 1
   isRunning: 0
   coupsDonnes: 0
@@ -6458,7 +6462,11 @@ MonoBehaviour:
   powerVibrJoueurFrappe: .600000024
   durationJoueurMange: 1
   powerVibrJoueurMange: .600000024
-  durationInvul: 3
+  durationRepousseBut: 1
+  powerVibrRepousseBut: .300000012
+  durationMonstreCloison: 1
+  powerVibrMonstreCloison: .300000012
+  durationInvul: 2.5
   durationInvulSiCoupRecu: 1
   isRunning: 0
   coupsDonnes: 0
@@ -31286,7 +31294,11 @@ MonoBehaviour:
   powerVibrJoueurFrappe: .600000024
   durationJoueurMange: 1
   powerVibrJoueurMange: .600000024
-  durationInvul: 3
+  durationRepousseBut: 1
+  powerVibrRepousseBut: .300000012
+  durationMonstreCloison: 1
+  powerVibrMonstreCloison: .300000012
+  durationInvul: 2.5
   durationInvulSiCoupRecu: 1
   isRunning: 0
   coupsDonnes: 0
@@ -32129,7 +32141,11 @@ MonoBehaviour:
   powerVibrJoueurFrappe: .600000024
   durationJoueurMange: 1
   powerVibrJoueurMange: .600000024
-  durationInvul: 3
+  durationRepousseBut: 1
+  powerVibrRepousseBut: .300000012
+  durationMonstreCloison: 1
+  powerVibrMonstreCloison: .300000012
+  durationInvul: 2.5
   durationInvulSiCoupRecu: 1
   isRunning: 0
   coupsDonnes: 0
@@ -32585,7 +32601,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be088c83819d83046a99eb9fc4edf5ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  state: 4
+  state: 0
   durationInSecond: 180
   ecranFin: {fileID: 1105067374}
   timeBetweenTwoBonus: 0
