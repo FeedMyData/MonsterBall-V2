@@ -244,7 +244,7 @@ MonoBehaviour:
   wrathDribblingValue: 4
   wrathDribblingEachTime: 1
   summon: 2
-  durationFirstPart: 1
+  durationFirstPart: 2
   monsterScale: 6
   monsterMass: 20
   safeTransform: .600000024

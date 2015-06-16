@@ -37,42 +37,66 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
+<<<<<<< HEAD
           name: _ParallaxMap
-        second:
-          m_Texture: {fileID: 0}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _OcclusionMap
-        second:
-          m_Texture: {fileID: 0}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _EmissionMap
-        second:
-          m_Texture: {fileID: 0}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _DetailMask
-        second:
-          m_Texture: {fileID: 0}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _DetailAlbedoMap
-        second:
-          m_Texture: {fileID: 0}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
+=======
           name: _MetallicGlossMap
+>>>>>>> origin/master
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+<<<<<<< HEAD
+          name: _OcclusionMap
+=======
+          name: _ParallaxMap
+>>>>>>> origin/master
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+<<<<<<< HEAD
+          name: _EmissionMap
+=======
+          name: _OcclusionMap
+>>>>>>> origin/master
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+<<<<<<< HEAD
+          name: _DetailMask
+=======
+          name: _EmissionMap
+>>>>>>> origin/master
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+<<<<<<< HEAD
+          name: _DetailAlbedoMap
+=======
+          name: _DetailMask
+>>>>>>> origin/master
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+<<<<<<< HEAD
+          name: _MetallicGlossMap
+=======
+          name: _DetailAlbedoMap
+>>>>>>> origin/master
         second:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
@@ -92,10 +116,13 @@ Material:
         second: 0
       data:
         first:
+<<<<<<< HEAD
           name: _Parallax
         second: .0199999996
       data:
         first:
+=======
+>>>>>>> origin/master
           name: _ZWrite
         second: 1
       data:
@@ -104,10 +131,24 @@ Material:
         second: .5
       data:
         first:
+<<<<<<< HEAD
+=======
+          name: _Metallic
+        second: 0
+      data:
+        first:
+>>>>>>> origin/master
           name: _BumpScale
         second: 1
       data:
         first:
+<<<<<<< HEAD
+=======
+          name: _Parallax
+        second: .0199999996
+      data:
+        first:
+>>>>>>> origin/master
           name: _OcclusionStrength
         second: 1
       data:
@@ -126,10 +167,13 @@ Material:
         first:
           name: _Mode
         second: 0
+<<<<<<< HEAD
       data:
         first:
           name: _Metallic
         second: 0
+=======
+>>>>>>> origin/master
     m_Colors:
       data:
         first:
