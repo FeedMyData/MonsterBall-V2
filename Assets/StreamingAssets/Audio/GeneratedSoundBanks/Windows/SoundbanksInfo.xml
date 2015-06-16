@@ -16,9 +16,9 @@
 			<IncludedEvents>
 				<Event Id="1927068452" Name="Menu_Move"/>
 				<Event Id="1988127715" Name="Menu_Valid"/>
+				<Event Id="2747378368" Name="Music_Fin"/>
 				<Event Id="1598298728" Name="Music_Menu"/>
 				<Event Id="49016843" Name="Music_Monstre"/>
-				<Event Id="1834583677" Name="Music_Tableau"/>
 				<Event Id="1640672383" Name="Public_Bouh"/>
 				<Event Id="3060817186" Name="Public_But"/>
 				<Event Id="3395781144" Name="Public_Fin"/>
@@ -33,6 +33,7 @@
 				<Event Id="2139348868" Name="SFX_Niveks_CoupFort"/>
 				<Event Id="3227735425" Name="SFX_Niveks_Course"/>
 				<Event Id="2297712543" Name="SFX_Niveks_Footsteps"/>
+				<Event Id="4179439567" Name="SFX_Niveks_Validation"/>
 				<Event Id="2097335990" Name="SFX_Niveks_Woosh"/>
 				<Event Id="4101663895" Name="Transfo_BalleMonstre"/>
 				<Event Id="3206008515" Name="Transfo_MonstreBalle"/>
@@ -78,10 +79,6 @@
 				<File Id="14358238" Language="SFX">
 					<ShortName>CoupBalle\VOIX_Niveks_CoupBalle_13.wav</ShortName>
 					<Path>SFX\CoupBalle\VOIX_Niveks_CoupBalle_13_DDC98EF4.wem</Path>
-				</File>
-				<File Id="22050384" Language="SFX">
-					<ShortName>Monster Ball Music Test.wav</ShortName>
-					<Path>SFX\Monster Ball Music Test_01E37AA8.wem</Path>
 				</File>
 				<File Id="24715378" Language="SFX">
 					<ShortName>CoupRecu\VOIX_Niveks_CoupRecu_06.wav</ShortName>
@@ -134,6 +131,10 @@
 				<File Id="127836317" Language="SFX">
 					<ShortName>Footsteps\SFX_Niveks_Footsteps_01-10.wav</ShortName>
 					<Path>SFX\Footsteps\SFX_Niveks_Footsteps_01-10_DDC98EF4.wem</Path>
+				</File>
+				<File Id="130603294" Language="SFX">
+					<ShortName>4-50 Earthquake Low Rumble Only.wav</ShortName>
+					<Path>SFX\4-50 Earthquake Low Rumble Only_6B290D1E.wem</Path>
 				</File>
 				<File Id="131947360" Language="SFX">
 					<ShortName>FX_Public_But_03.wav</ShortName>
@@ -242,6 +243,10 @@
 				<File Id="294783796" Language="SFX">
 					<ShortName>FX_Public_But_01.wav</ShortName>
 					<Path>SFX\FX_Public_But_01_DDC98EF4.wem</Path>
+				</File>
+				<File Id="303636486" Language="SFX">
+					<ShortName>Cabin Pressure i.wav</ShortName>
+					<Path>SFX\Cabin Pressure i_DDC98EF4.wem</Path>
 				</File>
 				<File Id="311864473" Language="SFX">
 					<ShortName>CoupBalle\VOIX_Niveks_CoupBalle_03.wav</ShortName>
@@ -359,6 +364,10 @@
 					<ShortName>Impact\VOIX_Balle_Impact_11.wav</ShortName>
 					<Path>SFX\Impact\VOIX_Balle_Impact_11_AA77D5BD.wem</Path>
 				</File>
+				<File Id="485427720" Language="SFX">
+					<ShortName>50 High Pressure Air Hose; High Pressure Hose; Generator In Background, Steady Air Release, Rubber Squeaking, Close Perspective..wav</ShortName>
+					<Path>SFX\50 High Pressure Air Hose; High Pressure Hose; Generator In Background, Steady Air Release, Rubber Squeaking, Close Perspective._727EE2F9.wem</Path>
+				</File>
 				<File Id="490197325" Language="SFX">
 					<ShortName>CoupBalle\VOIX_Niveks_CoupBalle_19.wav</ShortName>
 					<Path>SFX\CoupBalle\VOIX_Niveks_CoupBalle_19_DDC98EF4.wem</Path>
@@ -427,10 +436,6 @@
 					<ShortName>FX_Public_But_04.wav</ShortName>
 					<Path>SFX\FX_Public_But_04_DDC98EF4.wem</Path>
 				</File>
-				<File Id="558047822" Language="SFX">
-					<ShortName>DebutCharge\VX_Monstre_DebutCharge_04.wav</ShortName>
-					<Path>SFX\DebutCharge\VX_Monstre_DebutCharge_04_DDC98EF4.wem</Path>
-				</File>
 				<File Id="562240076" Language="SFX">
 					<ShortName>Remise en jeu\VOIX_Balle_RemiseEnJeu_08.wav</ShortName>
 					<Path>SFX\Remise en jeu\VOIX_Balle_RemiseEnJeu_08_DDC98EF4.wem</Path>
@@ -451,6 +456,10 @@
 					<ShortName>Poursuivi\VOIX_Niveks_Poursuivi_12.wav</ShortName>
 					<Path>SFX\Poursuivi\VOIX_Niveks_Poursuivi_12_DDC98EF4.wem</Path>
 				</File>
+				<File Id="582222585" Language="SFX">
+					<ShortName>36 Rumble Cartoon, Magic Bean Growin.wav</ShortName>
+					<Path>SFX\36 Rumble Cartoon, Magic Bean Growin_1A8545AE.wem</Path>
+				</File>
 				<File Id="589912148" Language="SFX">
 					<ShortName>Grognements\VOIX_Monstre_Grogne_16.wav</ShortName>
 					<Path>SFX\Grognements\VOIX_Monstre_Grogne_16_DDC98EF4.wem</Path>
@@ -462,6 +471,10 @@
 				<File Id="602141891" Language="SFX">
 					<ShortName>SFX_Niveks_Woosh_03.wav</ShortName>
 					<Path>SFX\SFX_Niveks_Woosh_03_DDC98EF4.wem</Path>
+				</File>
+				<File Id="603296988" Language="SFX">
+					<ShortName>Cabin Pressure g.wav</ShortName>
+					<Path>SFX\Cabin Pressure g_DDC98EF4.wem</Path>
 				</File>
 				<File Id="603361104" Language="SFX">
 					<ShortName>But\VOIX_Balle_But_14.wav</ShortName>
@@ -487,6 +500,10 @@
 					<ShortName>SFX_Coup_Charge_02.wav</ShortName>
 					<Path>SFX\SFX_Coup_Charge_02_12C26862.wem</Path>
 				</File>
+				<File Id="632081962" Language="SFX">
+					<ShortName>Cabin Pressure e.wav</ShortName>
+					<Path>SFX\Cabin Pressure e_DDC98EF4.wem</Path>
+				</File>
 				<File Id="632971419" Language="SFX">
 					<ShortName>Impact\VOIX_Balle_Impact_14.wav</ShortName>
 					<Path>SFX\Impact\VOIX_Balle_Impact_14_A5326928.wem</Path>
@@ -494,6 +511,10 @@
 				<File Id="633544018" Language="SFX">
 					<ShortName>But\VOIX_Balle_But_12.wav</ShortName>
 					<Path>SFX\But\VOIX_Balle_But_12_DDC98EF4.wem</Path>
+				</File>
+				<File Id="636484183" Language="SFX">
+					<ShortName>Cabin Pressure n.wav</ShortName>
+					<Path>SFX\Cabin Pressure n_DDC98EF4.wem</Path>
 				</File>
 				<File Id="637446399" Language="SFX">
 					<ShortName>SFX_Niveks_Woosh_04.wav</ShortName>
@@ -547,6 +568,10 @@
 					<ShortName>SFX_Electric_Spark-01.wav</ShortName>
 					<Path>SFX\SFX_Electric_Spark-01_D6980A05.wem</Path>
 				</File>
+				<File Id="708026800" Language="SFX">
+					<ShortName>Cabin Pressure k.wav</ShortName>
+					<Path>SFX\Cabin Pressure k_DDC98EF4.wem</Path>
+				</File>
 				<File Id="710470444" Language="SFX">
 					<ShortName>Grognements\VOIX_Monstre_Grogne_01.wav</ShortName>
 					<Path>SFX\Grognements\VOIX_Monstre_Grogne_01_DDC98EF4.wem</Path>
@@ -570,6 +595,10 @@
 				<File Id="735054049" Language="SFX">
 					<ShortName>SFX_Electric_Spark-02.wav</ShortName>
 					<Path>SFX\SFX_Electric_Spark-02_59B68F55.wem</Path>
+				</File>
+				<File Id="736376216" Language="SFX">
+					<ShortName>Cabin Pressure m.wav</ShortName>
+					<Path>SFX\Cabin Pressure m_DDC98EF4.wem</Path>
 				</File>
 				<File Id="741232199" Language="SFX">
 					<ShortName>FX_Public_Intensification_03.wav</ShortName>
@@ -737,7 +766,7 @@
 				</File>
 				<File Id="926728707" Language="SFX">
 					<ShortName>Monster Ball Music Test.wav</ShortName>
-					<Path>SFX\Monster Ball Music Test_45A874EB.wem</Path>
+					<Path>SFX\Monster Ball Music Test_5A99026A.wem</Path>
 				</File>
 				<File Id="937055937" Language="SFX">
 					<ShortName>But\VOIX_Balle_But_06.wav</ShortName>
@@ -810,10 +839,6 @@
 				<File Id="1020075026" Language="SFX">
 					<ShortName>Impact\VOIX_Balle_Impact_09.wav</ShortName>
 					<Path>SFX\Impact\VOIX_Balle_Impact_09_D46630B3.wem</Path>
-				</File>
-				<File Id="1032553778" Language="SFX">
-					<ShortName>DebutCharge\VX_Monstre_DebutCharge_01.wav</ShortName>
-					<Path>SFX\DebutCharge\VX_Monstre_DebutCharge_01_DDC98EF4.wem</Path>
 				</File>
 				<File Id="1042176562" Language="SFX">
 					<ShortName>Footsteps\SFX_Niveks_Footsteps_01-11.wav</ShortName>

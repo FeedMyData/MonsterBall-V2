@@ -139,7 +139,13 @@
 								<Property Name="WetDryMix" Type="Real32" Value="27"/>
 							</PropertyList>
 						</Effect>
-						<Effect Name="One_Tap_Half_Second" ID="{B8FE0D3B-7AAB-4344-89FE-177602B7BF19}" PluginName="Wwise Delay" CompanyID="0" PluginID="106" PluginType="3"/>
+						<Effect Name="One_Tap_Half_Second" ID="{B8FE0D3B-7AAB-4344-89FE-177602B7BF19}" PluginName="Wwise Delay" CompanyID="0" PluginID="106" PluginType="3">
+							<PropertyList>
+								<Property Name="DelayTime" Type="Real32" Value="0.06"/>
+								<Property Name="Feedback" Type="Real32" Value="74.5"/>
+								<Property Name="WetDryMix" Type="Real32" Value="0"/>
+							</PropertyList>
+						</Effect>
 						<Effect Name="One_Tap_Quarter_Second" ID="{6BD2D67D-601A-45A6-AD4C-2C089078EBED}" PluginName="Wwise Delay" CompanyID="0" PluginID="106" PluginType="3">
 							<PropertyList>
 								<Property Name="DelayTime" Type="Real32" Value="0.25"/>
@@ -1615,15 +1621,18 @@
 						</Effect>
 						<Effect Name="Special_Effect_1" ID="{83317D8A-9D4C-438E-BE8C-BC7D27CAD1B0}" PluginName="Wwise Flanger" CompanyID="0" PluginID="125" PluginType="3">
 							<PropertyList>
-								<Property Name="DelayTime" Type="Real32" Value="37.5"/>
-								<Property Name="DryLevel" Type="Real32" Value="0.74"/>
-								<Property Name="FeedBackLevel" Type="Real32" Value="0.2"/>
-								<Property Name="FeedForwardLevel" Type="Real32" Value="0.4"/>
-								<Property Name="ModDepth" Type="Real32" Value="68.9"/>
-								<Property Name="ModFrequency" Type="Real32" Value="4.08"/>
+								<Property Name="DelayTime" Type="Real32" Value="72.7"/>
+								<Property Name="DryLevel" Type="Real32" Value="0.18"/>
+								<Property Name="FeedBackLevel" Type="Real32" Value="-0.6"/>
+								<Property Name="FeedForwardLevel" Type="Real32" Value="-0.7"/>
+								<Property Name="ModDepth" Type="Real32" Value="23.7"/>
+								<Property Name="ModFrequency" Type="Real32" Value="13.18"/>
 								<Property Name="ModPWM" Type="Real32" Value="0"/>
 								<Property Name="ModPhaseOffset" Type="Real32" Value="72"/>
-								<Property Name="ModPhaseSpread" Type="Real32" Value="56"/>
+								<Property Name="ModPhaseSpread" Type="Real32" Value="69"/>
+								<Property Name="ModSmoothing" Type="Real32" Value="24"/>
+								<Property Name="OutputLevel" Type="Real32" Value="1"/>
+								<Property Name="WetDryMix" Type="Real32" Value="84"/>
 							</PropertyList>
 						</Effect>
 						<Folder Name="Static Comb Filtering" ID="{6044FF31-2237-4EC5-B94F-9C0C25CFAC44}" ShortID="504290141">

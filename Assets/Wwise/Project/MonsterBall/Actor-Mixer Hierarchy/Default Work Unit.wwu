@@ -2959,6 +2959,16 @@
 						</RandomSequenceContainer>
 						<BlendContainer Name="SFX_Monstre_TransfoRumble" ID="{0F15C205-E037-4008-8659-D6F7CFC8B528}" ShortID="755429161">
 							<PropertyList>
+								<Property Name="BypassEffect0" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
+								<Property Name="BypassEffect1" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
 								<Property Name="OverrideEffect" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
@@ -3520,6 +3530,437 @@
 								</Sound>
 							</ChildrenList>
 						</RandomSequenceContainer>
+						<BlendContainer Name="SFX_Monstre_Course" ID="{5E59C47D-9153-46D3-9B30-B48F12EC7976}" ShortID="940814273">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-4</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+								</Reference>
+								<Reference Name="Effect0" PluginName="Wwise Flanger" CompanyID="0" PluginID="125" PluginType="3">
+									<ObjectRef Name="Special_Effect_1" ID="{83317D8A-9D4C-438E-BE8C-BC7D27CAD1B0}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="SFX_Monstre_Course" ID="{E0CA245B-B23D-4129-8E56-0AB5DCEB74AC}" ShortID="878939021" Type="SoundFX">
+									<ExcludedPlatformList>
+										<Platform>Windows</Platform>
+									</ExcludedPlatformList>
+									<PropertyList>
+										<Property Name="Highpass" Type="int16">
+											<ValueList>
+												<Value>25</Value>
+											</ValueList>
+										</Property>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Lowpass" Type="int16">
+											<ValueList>
+												<Value>65</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>-1290</Value>
+											</ValueList>
+										</Property>
+										<Property Name="PositioningType" Type="int16" Value="1"/>
+										<Property Name="UserAuxSendVolume0" Type="Real64">
+											<ValueList>
+												<Value>-3</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>2</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+										</Reference>
+										<Reference Name="Effect0" PluginName="iZotope Trash Dynamics Mono" CompanyID="259" PluginID="5" PluginType="3">
+											<ObjectRef Name="Bigger_Boom" ID="{4D23DF35-E058-4705-9D8D-2DBDC605B8B3}" WorkUnitID="{70F46671-A828-4029-A11A-36BB09D872B9}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="SFX" ID="{98BA6610-4B70-4EFF-A353-4A61C6BE1A24}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="27 Squeaks-Slow And Fast Rubbery Creaks 2 Versions" ID="{B3E142F6-721C-4B81-A6C6-3A8CA2E8CD53}" ShortID="124171098">
+											<PropertyList>
+												<Property Name="TrimEnd" Type="Real64" Value="1.43424553186908"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>27 Squeaks-Slow And Fast Rubbery Creaks 2 Versions.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="27 Squeaks-Slow And Fast Rubbery Creaks 2 Versions" ID="{B3E142F6-721C-4B81-A6C6-3A8CA2E8CD53}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Pressure" ID="{BD92D051-C5A8-4624-BA19-F191436AA635}" ShortID="302405276" Type="SoundFX">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Lowpass" Type="int16">
+											<ValueList>
+												<Value>46</Value>
+											</ValueList>
+										</Property>
+										<Property Name="OverrideEffect" Type="bool" Value="True"/>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>-560</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+										</Reference>
+										<Reference Name="Effect0">
+											<Custom>
+												<Effect Name="Wwise Harmonizer (Custom)" ID="{8756A19C-8635-40A0-884A-5C823B60B009}" ShortID="510781901" PluginName="Wwise Harmonizer" CompanyID="0" PluginID="138" PluginType="3">
+													<PropertyList>
+														<Property Name="DryLevel" Type="Real32" Value="-8"/>
+														<Property Name="Voice1Pitch" Type="Real32" Value="-700"/>
+														<Property Name="Voice2Enable" Type="bool" Value="True"/>
+														<Property Name="Voice2Gain" Type="Real32" Value="1.5"/>
+														<Property Name="Voice2Pitch" Type="Real32" Value="-600"/>
+														<Property Name="WetLevel" Type="Real32" Value="2"/>
+														<Property Name="WindowSize" Type="int32" Value="1792"/>
+													</PropertyList>
+												</Effect>
+											</Custom>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="50 High Pressure Air Hose; High Pressure Hose; Generator In Background, Steady Air Release, Rubber Squeaking, Close Perspective_" ID="{B170E357-1F7E-431D-BFA8-66FBF09A277F}" ShortID="485427720">
+											<PropertyList>
+												<Property Name="CrossfadeDuration" Type="Real64" Value="10"/>
+												<Property Name="LoopBegin" Type="Real64" Value="0.188428819444441"/>
+												<Property Name="LoopEnd" Type="Real64" Value="5.15716377314814"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>50 High Pressure Air Hose; High Pressure Hose; Generator In Background, Steady Air Release, Rubber Squeaking, Close Perspective..wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="50 High Pressure Air Hose; High Pressure Hose; Generator In Background, Steady Air Release, Rubber Squeaking, Close Perspective_" ID="{B170E357-1F7E-431D-BFA8-66FBF09A277F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<RandomSequenceContainer Name="Debut Charge" ID="{55C5A5E8-E628-400B-A40A-4853D2E940E3}" ShortID="104779583">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>-480</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-2</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Cabin Pressure e" ID="{181FF8A7-12A6-41B6-A765-D78C20872806}" ShortID="841943684" Type="SoundFX">
+											<PropertyList>
+												<Property Name="PositioningType" Type="int16" Value="1"/>
+												<Property Name="UserAuxSendVolume0" Type="Real64">
+													<ValueList>
+														<Value>-3</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+												</Reference>
+												<Reference Name="Effect0" PluginName="iZotope Trash Dynamics Mono" CompanyID="259" PluginID="5" PluginType="3">
+													<ObjectRef Name="Bigger_Boom" ID="{4D23DF35-E058-4705-9D8D-2DBDC605B8B3}" WorkUnitID="{70F46671-A828-4029-A11A-36BB09D872B9}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{98BA6610-4B70-4EFF-A353-4A61C6BE1A24}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Cabin Pressure e" ID="{9B7077ED-73B3-4D37-88EE-E53055863DD1}" ShortID="632081962">
+													<Language>SFX</Language>
+													<AudioFile>Cabin Pressure e.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Cabin Pressure e" ID="{9B7077ED-73B3-4D37-88EE-E53055863DD1}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Cabin Pressure g" ID="{572F1CD1-3C4B-4C2D-A4EF-7DA41209E769}" ShortID="421436556" Type="SoundFX">
+											<PropertyList>
+												<Property Name="PositioningType" Type="int16" Value="1"/>
+												<Property Name="UserAuxSendVolume0" Type="Real64">
+													<ValueList>
+														<Value>-3</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+												</Reference>
+												<Reference Name="Effect0" PluginName="iZotope Trash Dynamics Mono" CompanyID="259" PluginID="5" PluginType="3">
+													<ObjectRef Name="Bigger_Boom" ID="{4D23DF35-E058-4705-9D8D-2DBDC605B8B3}" WorkUnitID="{70F46671-A828-4029-A11A-36BB09D872B9}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{98BA6610-4B70-4EFF-A353-4A61C6BE1A24}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Cabin Pressure g" ID="{5EBA30A7-D840-4AF0-A518-601A784094F3}" ShortID="603296988">
+													<Language>SFX</Language>
+													<AudioFile>Cabin Pressure g.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Cabin Pressure g" ID="{5EBA30A7-D840-4AF0-A518-601A784094F3}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Cabin Pressure i" ID="{D695C9D1-3C60-4BA0-815A-AC816EC5E921}" ShortID="394400224" Type="SoundFX">
+											<PropertyList>
+												<Property Name="PositioningType" Type="int16" Value="1"/>
+												<Property Name="UserAuxSendVolume0" Type="Real64">
+													<ValueList>
+														<Value>-3</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+												</Reference>
+												<Reference Name="Effect0" PluginName="iZotope Trash Dynamics Mono" CompanyID="259" PluginID="5" PluginType="3">
+													<ObjectRef Name="Bigger_Boom" ID="{4D23DF35-E058-4705-9D8D-2DBDC605B8B3}" WorkUnitID="{70F46671-A828-4029-A11A-36BB09D872B9}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{98BA6610-4B70-4EFF-A353-4A61C6BE1A24}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Cabin Pressure i" ID="{5F3AE731-A07C-4BD5-AE3A-9FBA150C7BE0}" ShortID="303636486">
+													<Language>SFX</Language>
+													<AudioFile>Cabin Pressure i.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Cabin Pressure i" ID="{5F3AE731-A07C-4BD5-AE3A-9FBA150C7BE0}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Cabin Pressure k" ID="{AD11987A-38F9-405F-810B-EDBA8077814E}" ShortID="163392855" Type="SoundFX">
+											<PropertyList>
+												<Property Name="PositioningType" Type="int16" Value="1"/>
+												<Property Name="UserAuxSendVolume0" Type="Real64">
+													<ValueList>
+														<Value>-3</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+												</Reference>
+												<Reference Name="Effect0" PluginName="iZotope Trash Dynamics Mono" CompanyID="259" PluginID="5" PluginType="3">
+													<ObjectRef Name="Bigger_Boom" ID="{4D23DF35-E058-4705-9D8D-2DBDC605B8B3}" WorkUnitID="{70F46671-A828-4029-A11A-36BB09D872B9}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{98BA6610-4B70-4EFF-A353-4A61C6BE1A24}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Cabin Pressure k" ID="{DC12C273-A7D5-43A8-A03E-8F59EB6D83E1}" ShortID="708026800">
+													<Language>SFX</Language>
+													<AudioFile>Cabin Pressure k.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Cabin Pressure k" ID="{DC12C273-A7D5-43A8-A03E-8F59EB6D83E1}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Cabin Pressure m" ID="{99475F20-3FE5-4C9D-9C07-0112A27F1112}" ShortID="212647213" Type="SoundFX">
+											<PropertyList>
+												<Property Name="PositioningType" Type="int16" Value="1"/>
+												<Property Name="UserAuxSendVolume0" Type="Real64">
+													<ValueList>
+														<Value>-3</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+												</Reference>
+												<Reference Name="Effect0" PluginName="iZotope Trash Dynamics Mono" CompanyID="259" PluginID="5" PluginType="3">
+													<ObjectRef Name="Bigger_Boom" ID="{4D23DF35-E058-4705-9D8D-2DBDC605B8B3}" WorkUnitID="{70F46671-A828-4029-A11A-36BB09D872B9}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{98BA6610-4B70-4EFF-A353-4A61C6BE1A24}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Cabin Pressure m" ID="{B484F768-F78E-469F-8B6B-F6EBC741C4B6}" ShortID="736376216">
+													<Language>SFX</Language>
+													<AudioFile>Cabin Pressure m.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Cabin Pressure m" ID="{B484F768-F78E-469F-8B6B-F6EBC741C4B6}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Cabin Pressure n" ID="{AB93619A-3C4F-4AB5-9122-39B2A2D69000}" ShortID="869974492" Type="SoundFX">
+											<PropertyList>
+												<Property Name="PositioningType" Type="int16" Value="1"/>
+												<Property Name="UserAuxSendVolume0" Type="Real64">
+													<ValueList>
+														<Value>-3</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+												</Reference>
+												<Reference Name="Effect0" PluginName="iZotope Trash Dynamics Mono" CompanyID="259" PluginID="5" PluginType="3">
+													<ObjectRef Name="Bigger_Boom" ID="{4D23DF35-E058-4705-9D8D-2DBDC605B8B3}" WorkUnitID="{70F46671-A828-4029-A11A-36BB09D872B9}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{98BA6610-4B70-4EFF-A353-4A61C6BE1A24}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Cabin Pressure n" ID="{7ACD1A00-E4DB-453A-83B8-1501D65AD2A4}" ShortID="636484183">
+													<Language>SFX</Language>
+													<AudioFile>Cabin Pressure n.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Cabin Pressure n" ID="{7ACD1A00-E4DB-453A-83B8-1501D65AD2A4}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<BlendContainer Name="Rumble" ID="{4305E919-9B25-43DB-8885-8FF37664C5AD}" ShortID="1068289506">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="4-50 Earthquake Low Rumble Only" ID="{4EED6427-77DE-4470-80B4-14683717C0B2}" ShortID="220403777" Type="SoundFX">
+											<PropertyList>
+												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+												<Property Name="PositioningType" Type="int16" Value="1"/>
+												<Property Name="UserAuxSendVolume0" Type="Real64">
+													<ValueList>
+														<Value>-3</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+												</Reference>
+												<Reference Name="Effect0" PluginName="iZotope Trash Dynamics Mono" CompanyID="259" PluginID="5" PluginType="3">
+													<ObjectRef Name="Bigger_Boom" ID="{4D23DF35-E058-4705-9D8D-2DBDC605B8B3}" WorkUnitID="{70F46671-A828-4029-A11A-36BB09D872B9}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{98BA6610-4B70-4EFF-A353-4A61C6BE1A24}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="4-50 Earthquake Low Rumble Only" ID="{35AE6675-021B-4A50-BC5A-25E0741AB3EB}" ShortID="130603294">
+													<PropertyList>
+														<Property Name="TrimBegin" Type="Real64" Value="5.37260981912144"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>4-50 Earthquake Low Rumble Only.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="4-50 Earthquake Low Rumble Only" ID="{35AE6675-021B-4A50-BC5A-25E0741AB3EB}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="36 Rumble Cartoon, Magic Bean Growin" ID="{38704D39-B8AF-4A93-921B-8C4FAE81A44E}" ShortID="658578838" Type="SoundFX">
+											<PropertyList>
+												<Property Name="Lowpass" Type="int16">
+													<ValueList>
+														<Value>31</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>-350</Value>
+													</ValueList>
+												</Property>
+												<Property Name="PositioningType" Type="int16" Value="1"/>
+												<Property Name="UserAuxSendVolume0" Type="Real64">
+													<ValueList>
+														<Value>-3</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+												</Reference>
+												<Reference Name="Effect0" PluginName="iZotope Trash Dynamics Mono" CompanyID="259" PluginID="5" PluginType="3">
+													<ObjectRef Name="Bigger_Boom" ID="{4D23DF35-E058-4705-9D8D-2DBDC605B8B3}" WorkUnitID="{70F46671-A828-4029-A11A-36BB09D872B9}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{98BA6610-4B70-4EFF-A353-4A61C6BE1A24}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="36 Rumble Cartoon, Magic Bean Growin" ID="{9A582405-89C5-47EE-92D9-9CCF69FDB064}" ShortID="582222585">
+													<PropertyList>
+														<Property Name="CrossfadeDuration" Type="Real64" Value="5"/>
+														<Property Name="LoopBegin" Type="Real64" Value="4.86274101027148"/>
+														<Property Name="LoopEnd" Type="Real64" Value="15.7405313270872"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="4.6322793510169"/>
+														<Property Name="TrimEnd" Type="Real64" Value="15.9018544885654"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>36 Rumble Cartoon, Magic Bean Growin.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="36 Rumble Cartoon, Magic Bean Growin" ID="{9A582405-89C5-47EE-92D9-9CCF69FDB064}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</BlendContainer>
+							</ChildrenList>
+						</BlendContainer>
 					</ChildrenList>
 				</ActorMixer>
 				<ActorMixer Name="Voix" ID="{F502A3E4-B6F3-45C2-B677-F625DAFE42CA}" ShortID="345599444">
@@ -5641,6 +6082,9 @@
 									</ReferenceList>
 									<ChildrenList>
 										<Sound Name="VX_Monstre_DebutCharge_01" ID="{C890AEC3-1702-4A1D-A1CF-31A48672832E}" ShortID="1001824326" Type="SoundFX">
+											<ExcludedPlatformList>
+												<Platform>Windows</Platform>
+											</ExcludedPlatformList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
@@ -5701,6 +6145,9 @@
 											</ActiveSourceList>
 										</Sound>
 										<Sound Name="VX_Monstre_DebutCharge_04" ID="{A2B1DCB6-5A05-4E49-AA30-81F42F4300C4}" ShortID="324295047" Type="SoundFX">
+											<ExcludedPlatformList>
+												<Platform>Windows</Platform>
+											</ExcludedPlatformList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
@@ -6778,6 +7225,7 @@
 					<ChildrenList>
 						<Sound Name="Music_Selection" ID="{814021AA-6BA9-4C22-A014-A745571C77FD}" ShortID="135082212" Type="SoundFX">
 							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 								<Property Name="OverrideOutput" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
@@ -6835,7 +7283,8 @@
 								<AudioFileSource Name="Monster Ball Music Test" ID="{EE1F4BFC-2703-40F0-9115-E9DBF4D2E33A}" ShortID="926728707">
 									<PropertyList>
 										<Property Name="FadeInDuration" Type="Real64" Value="3.67499282227968E-02"/>
-										<Property Name="TrimBegin" Type="Real64" Value="8.01416403483587"/>
+										<Property Name="LoopBegin" Type="Real64" Value="8.01772852548741"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
 									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>Monster Ball Music Test.wav</AudioFile>
@@ -6874,7 +7323,6 @@
 						</Sound>
 						<Sound Name="Music_Menu" ID="{EAE7F11E-5A0F-4B57-984A-C74C4AFD3EA7}" ShortID="55640480" Type="SoundFX">
 							<PropertyList>
-								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 								<Property Name="OverrideOutput" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
