@@ -477,10 +477,24 @@
 						</Event>
 						<Event Name="SFX_Monstre_Course" ID="{DCB984B7-6D28-4347-BDDB-3960B62DCBDA}">
 							<ChildrenList>
-								<Action Name="Play" ID="{5B89FED1-2A4D-408C-BC09-6F99670AFA23}" ShortID="383437874" Type="Play" Scope="One" Global="false">
+								<Action Name="Play" ID="{EDB5E308-8F6D-44F2-A152-F7D881BCADE7}" ShortID="968448824" Type="Play" Scope="One" Global="false">
 									<ElementList>
-										<Element ID="{3C025B43-E640-49E9-B7DE-890D01D24780}" Global="false">
-											<ObjectRef Name="SFX_Monstre_Course" ID="{5E59C47D-9153-46D3-9B30-B48F12EC7976}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+										<Element ID="{682A6874-ED9F-41B4-A664-19B6384EE054}" Global="false">
+											<ObjectRef Name="Debut Charge" ID="{55C5A5E8-E628-400B-A40A-4853D2E940E3}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+										</Element>
+									</ElementList>
+								</Action>
+								<Action Name="Play" ID="{906DF4E6-2C48-4743-A9C3-701997685C37}" ShortID="137137869" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{FDDC3DCF-0BD4-4A38-8FDD-BE5EC5CA8682}" Global="false">
+											<ObjectRef Name="Rumble" ID="{4305E919-9B25-43DB-8885-8FF37664C5AD}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+										</Element>
+									</ElementList>
+								</Action>
+								<Action Name="Play" ID="{7CC76C0A-BC50-48DC-A32D-7041F714D2D7}" ShortID="41065049" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{9F6F8CA6-E77C-45FA-AF81-AE19DEECEE42}" Global="false">
+											<ObjectRef Name="Pressure" ID="{BD92D051-C5A8-4624-BA19-F191436AA635}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
 										</Element>
 									</ElementList>
 								</Action>
@@ -528,13 +542,17 @@
 						</Event>
 						<Event Name="SFX_Monstre_Stop_Course" ID="{CA4A7523-D08C-4466-82D8-B5631F4F2F1D}">
 							<ChildrenList>
-								<Action Name="Stop" ID="{656366E5-6FF8-459D-B93A-327AB0B4B0E6}" ShortID="650001304" Type="Stop" Scope="One" Global="true">
-									<PropertyList>
-										<Property Name="FadeTime" Type="Real64" Value="1"/>
-									</PropertyList>
+								<Action Name="Stop" ID="{A3398DA4-79C4-4DB6-9E94-0DF35D4E39BC}" ShortID="332699682" Type="Stop" Scope="One" Global="true">
 									<ElementList>
-										<Element ID="{B8D880D8-03C6-4B43-A574-E0329C36536C}" Global="true">
-											<ObjectRef Name="SFX_Monstre_Course" ID="{5E59C47D-9153-46D3-9B30-B48F12EC7976}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+										<Element ID="{6013A565-D316-4515-A2F7-0DA0D4EF8BD7}" Global="true">
+											<ObjectRef Name="Rumble" ID="{4305E919-9B25-43DB-8885-8FF37664C5AD}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+										</Element>
+									</ElementList>
+								</Action>
+								<Action Name="Stop" ID="{9D144BDE-CB6F-4400-8B8A-9995DD869F8C}" ShortID="176229977" Type="Stop" Scope="One" Global="true">
+									<ElementList>
+										<Element ID="{4964A474-504C-4EFE-A07A-F8BA5E00717B}" Global="true">
+											<ObjectRef Name="Pressure" ID="{BD92D051-C5A8-4624-BA19-F191436AA635}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
 										</Element>
 									</ElementList>
 								</Action>
@@ -577,31 +595,7 @@
 							</ChildrenList>
 						</Event>
 						<Event Name="SFX_Niveks_Validation" ID="{2594576D-C8FC-4D93-94A0-0E81C2212670}"/>
-						<Event Name="SFX_Monstre_Cloison" ID="{993D3485-82A3-4F4A-8AD3-03895EE282F7}">
-							<ChildrenList>
-								<Action Name="Play" ID="{671462A2-5A2E-4608-90E1-4D64A2C8CD2D}" ShortID="355937688" Type="Play" Scope="One" Global="false">
-									<ElementList>
-										<Element ID="{F714111F-0E6A-4630-BAF0-B3CF0C27AA2C}" Global="false">
-											<ObjectRef Name="Debut Charge" ID="{55C5A5E8-E628-400B-A40A-4853D2E940E3}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
-										</Element>
-									</ElementList>
-								</Action>
-								<Action Name="Play" ID="{695AD986-3042-4666-82CA-F62DB867EB33}" ShortID="873733414" Type="Play" Scope="One" Global="false">
-									<ElementList>
-										<Element ID="{27182067-AEEC-4081-B123-8B0307D693FC}" Global="false">
-											<ObjectRef Name="Rumble" ID="{4305E919-9B25-43DB-8885-8FF37664C5AD}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
-										</Element>
-									</ElementList>
-								</Action>
-								<Action Name="Play" ID="{81EC49FE-E8D8-4C53-B52B-B309A71B3219}" ShortID="589944629" Type="Play" Scope="One" Global="false">
-									<ElementList>
-										<Element ID="{D97D091E-31C5-4B94-80CD-A9242DE62FA5}" Global="false">
-											<ObjectRef Name="Pressure" ID="{BD92D051-C5A8-4624-BA19-F191436AA635}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
-										</Element>
-									</ElementList>
-								</Action>
-							</ChildrenList>
-						</Event>
+						<Event Name="SFX_Monstre_Cloison" ID="{993D3485-82A3-4F4A-8AD3-03895EE282F7}"/>
 						<Event Name="SFX_Fin" ID="{4615FFFC-2003-4978-9142-D054EAB0D7A9}"/>
 					</ChildrenList>
 				</Folder>

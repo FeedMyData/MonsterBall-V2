@@ -3621,6 +3621,11 @@
 												<Value>-560</Value>
 											</ValueList>
 										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>5</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -3705,6 +3710,9 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="Cabin Pressure e" ID="{9B7077ED-73B3-4D37-88EE-E53055863DD1}" ShortID="632081962">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.581784399224806"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>Cabin Pressure e.wav</AudioFile>
 												</AudioFileSource>
@@ -3735,6 +3743,9 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="Cabin Pressure g" ID="{5EBA30A7-D840-4AF0-A518-601A784094F3}" ShortID="603296988">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.853539244186047"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>Cabin Pressure g.wav</AudioFile>
 												</AudioFileSource>
@@ -3765,6 +3776,9 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="Cabin Pressure i" ID="{5F3AE731-A07C-4BD5-AE3A-9FBA150C7BE0}" ShortID="303636486">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.739475680986219"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>Cabin Pressure i.wav</AudioFile>
 												</AudioFileSource>
@@ -3795,6 +3809,9 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="Cabin Pressure k" ID="{DC12C273-A7D5-43A8-A03E-8F59EB6D83E1}" ShortID="708026800">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.595378849052541"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>Cabin Pressure k.wav</AudioFile>
 												</AudioFileSource>
@@ -3825,6 +3842,9 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="Cabin Pressure m" ID="{B484F768-F78E-469F-8B6B-F6EBC741C4B6}" ShortID="736376216">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.852775422588286"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>Cabin Pressure m.wav</AudioFile>
 												</AudioFileSource>
@@ -3855,6 +3875,10 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="Cabin Pressure n" ID="{7ACD1A00-E4DB-453A-83B8-1501D65AD2A4}" ShortID="636484183">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.590014750215332"/>
+														<Property Name="TrimEnd" Type="Real64" Value="1.17156617409561"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>Cabin Pressure n.wav</AudioFile>
 												</AudioFileSource>
