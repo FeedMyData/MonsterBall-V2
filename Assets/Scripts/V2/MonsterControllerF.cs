@@ -419,7 +419,7 @@ public class MonsterControllerF : MonoBehaviour {
     void MoveMonster()
     {
 
-        //ManageSoundRunMonster(transform.position);
+        ManageSoundRunMonster(transform.position);
 
         Vector3 rotationToGoal = Vector3.zero;
         body.velocity = Vector3.zero;
