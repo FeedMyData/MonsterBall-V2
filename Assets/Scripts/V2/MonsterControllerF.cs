@@ -470,6 +470,12 @@ public class MonsterControllerF : MonoBehaviour {
                 {
                     sound.PlayEvent("SFX_Monstre_Cloison", gameObject);
 
+                    PlayerControllerF pVibr = GameControllerF.GetPlayer(1).GetComponent<PlayerControllerF>();
+                    StartCoroutine(pVibr.Vibration(0, pVibr.powerVibrMonstreCloison, pVibr.durationMonstreCloison));
+                    StartCoroutine(pVibr.Vibration(1, pVibr.powerVibrMonstreCloison, pVibr.durationMonstreCloison));
+                    StartCoroutine(pVibr.Vibration(2, pVibr.powerVibrMonstreCloison, pVibr.durationMonstreCloison));
+                    StartCoroutine(pVibr.Vibration(3, pVibr.powerVibrMonstreCloison, pVibr.durationMonstreCloison));
+
                     float newDirection = transform.eulerAngles.y + 180;
                     newDirection += GetAngleBounce(transform.position);
                     transform.eulerAngles = new Vector3(0, newDirection, 0);

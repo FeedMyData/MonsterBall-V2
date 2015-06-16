@@ -25,6 +25,7 @@ public class bumpScript : MonoBehaviour {
         {
             if (!player.IsProjectionInGoal())
             {
+                StartCoroutine(player.Vibration(player.numController, player.powerVibrRepousseBut, player.durationRepousseBut));
                 player.callStun(player.stunGoal);
                 player.sautBut++;
 

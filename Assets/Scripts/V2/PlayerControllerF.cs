@@ -84,6 +84,12 @@ public class PlayerControllerF : MonoBehaviour
     public float durationJoueurMange = 1.0f;
     [Range(0f, 1f)]
     public float powerVibrJoueurMange = 0.6f;
+    public float durationRepousseBut = 1.0f;
+    [Range(0f, 1f)]
+    public float powerVibrRepousseBut = 0.3f;
+    public float durationMonstreCloison = 1.0f;
+    [Range(0f, 1f)]
+    public float powerVibrMonstreCloison = 0.3f;
 
 
     private bool projectionInGoal;
@@ -119,6 +125,7 @@ public class PlayerControllerF : MonoBehaviour
     public int marqueBut = 0;
     [HideInInspector]
     public int coupsDonnesSurBalle = 0;
+
 
     private GameManagerF manager;
 
