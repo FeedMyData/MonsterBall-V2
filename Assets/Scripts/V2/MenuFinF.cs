@@ -66,18 +66,18 @@ public class MenuFinF : MonoBehaviour {
 
 
 			if(GameControllerF.GetWinner() == "blu") {
-				podiums[i].GetComponentInChildren<Animator>().SetTrigger(i%2 == 0 ? "lose" : "win"); 
+				podiums[i].GetComponentInChildren<Animator>().SetBool(i%2 == 0 ?  (i == 0 ? "lose":"loseAlt") : (i == 1 ? "win" : "winAlt"), true); 
 				podiumProp.localScale = new Vector3( podiumProp.localScale.x, podiumProp.localScale.y, i%2 == 0? 2f : 3f);
 				podiumProp.localPosition = new Vector3( podiumProp.localPosition.x, -(podiumProp.localScale.z+ YPodiumOffset), podiumProp.localPosition.z);
 			}
 			else if(GameControllerF.GetWinner() == "red"){
-					podiums[i].GetComponentInChildren<Animator>().SetTrigger(i%2 == 0 ? "win" : "lose");
+				podiums[i].GetComponentInChildren<Animator>().SetBool(i%2 == 0 ?  (i == 0 ? "win":"winAlt") : (i == 1 ? "lose" : "loseAlt"), true);
 				podiumProp.localScale = new Vector3( podiumProp.localScale.x, podiumProp.localScale.y, i%2 == 0? 3f : 2f);
 				podiumProp.localPosition = new Vector3( podiumProp.localPosition.x, -(podiumProp.localScale.z+ YPodiumOffset), podiumProp.localPosition.z);
 
 			}
 			else {
-				podiums[i].GetComponentInChildren<Animator>().SetTrigger("lose"); 
+				podiums[i].GetComponentInChildren<Animator>().SetBool(( i == 0|| i == 1 )?"lose" : "loseAlt", true); 
 				podiumProp.localScale = new Vector3( podiumProp.localScale.x, podiumProp.localScale.y,  2.5f);
 				podiumProp.localPosition = new Vector3( podiumProp.localPosition.x, -(podiumProp.localScale.z+ YPodiumOffset), podiumProp.localPosition.z);
 

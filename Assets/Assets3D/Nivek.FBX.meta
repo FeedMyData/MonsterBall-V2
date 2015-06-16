@@ -96,6 +96,9 @@ ModelImporter:
     7400042: Tap
     7400044: Fencing
     7400046: HighKnee
+    7400048: EndMatchWinAlternative
+    7400050: EndMatchLoseAlternative
+    7400052: Cry
     9500000: //RootNode
     13700000: Nivek
   materials:
@@ -1791,6 +1794,264 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Nivek
+        weight: 1
+      - path: Spin0
+        weight: 1
+      - path: Spin0/LeftLeg
+        weight: 1
+      - path: Spin0/LeftLeg/LeftShin
+        weight: 1
+      - path: Spin0/LeftLeg/LeftShin/LeftAnkle
+        weight: 1
+      - path: Spin0/LeftLeg/LeftShin/LeftAnkle/LeftFoot
+        weight: 1
+      - path: Spin0/LeftLeg/LeftShin/LeftAnkle/LeftFoot/LeftFootFingers
+        weight: 1
+      - path: Spin0/RightLeg
+        weight: 1
+      - path: Spin0/RightLeg/RightShin
+        weight: 1
+      - path: Spin0/RightLeg/RightShin/RightAnkle
+        weight: 1
+      - path: Spin0/RightLeg/RightShin/RightAnkle/RIghtFoot
+        weight: 1
+      - path: Spin0/RightLeg/RightShin/RightAnkle/RIghtFoot/RightFootFingers
+        weight: 1
+      - path: Spin0/Spin1
+        weight: 1
+      - path: Spin0/Spin1/Spin2
+        weight: 1
+      - path: Spin0/Spin1/Spin2/LeftShoulder
+        weight: 1
+      - path: Spin0/Spin1/Spin2/LeftShoulder/LeftArm
+        weight: 1
+      - path: Spin0/Spin1/Spin2/LeftShoulder/LeftArm/LeftForeArm
+        weight: 1
+      - path: Spin0/Spin1/Spin2/LeftShoulder/LeftArm/LeftForeArm/LeftHand
+        weight: 1
+      - path: Spin0/Spin1/Spin2/LeftShoulder/LeftArm/LeftForeArm/LeftHand/LeftForeFinger
+        weight: 1
+      - path: Spin0/Spin1/Spin2/LeftShoulder/LeftArm/LeftForeArm/LeftHand/LeftLittleFinger
+        weight: 1
+      - path: Spin0/Spin1/Spin2/LeftShoulder/LeftArm/LeftForeArm/LeftHand/LeftThumb
+        weight: 1
+      - path: Spin0/Spin1/Spin2/RightShoulders
+        weight: 1
+      - path: Spin0/Spin1/Spin2/RightShoulders/RightArm
+        weight: 1
+      - path: Spin0/Spin1/Spin2/RightShoulders/RightArm/RightForeArm
+        weight: 1
+      - path: Spin0/Spin1/Spin2/RightShoulders/RightArm/RightForeArm/RightHand
+        weight: 1
+      - path: Spin0/Spin1/Spin2/RightShoulders/RightArm/RightForeArm/RightHand/Batte
+        weight: 1
+      - path: Spin0/Spin1/Spin2/RightShoulders/RightArm/RightForeArm/RightHand/RightForeFinger
+        weight: 1
+      - path: Spin0/Spin1/Spin2/RightShoulders/RightArm/RightForeArm/RightHand/RightLittleFinger
+        weight: 1
+      - path: Spin0/Spin1/Spin2/RightShoulders/RightArm/RightForeArm/RightHand/RightThumb
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: EndMatchWinAlternative
+      takeName: nivek_anim
+      firstFrame: 840
+      lastFrame: 910
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Nivek
+        weight: 1
+      - path: Spin0
+        weight: 1
+      - path: Spin0/LeftLeg
+        weight: 1
+      - path: Spin0/LeftLeg/LeftShin
+        weight: 1
+      - path: Spin0/LeftLeg/LeftShin/LeftAnkle
+        weight: 1
+      - path: Spin0/LeftLeg/LeftShin/LeftAnkle/LeftFoot
+        weight: 1
+      - path: Spin0/LeftLeg/LeftShin/LeftAnkle/LeftFoot/LeftFootFingers
+        weight: 1
+      - path: Spin0/RightLeg
+        weight: 1
+      - path: Spin0/RightLeg/RightShin
+        weight: 1
+      - path: Spin0/RightLeg/RightShin/RightAnkle
+        weight: 1
+      - path: Spin0/RightLeg/RightShin/RightAnkle/RIghtFoot
+        weight: 1
+      - path: Spin0/RightLeg/RightShin/RightAnkle/RIghtFoot/RightFootFingers
+        weight: 1
+      - path: Spin0/Spin1
+        weight: 1
+      - path: Spin0/Spin1/Spin2
+        weight: 1
+      - path: Spin0/Spin1/Spin2/LeftShoulder
+        weight: 1
+      - path: Spin0/Spin1/Spin2/LeftShoulder/LeftArm
+        weight: 1
+      - path: Spin0/Spin1/Spin2/LeftShoulder/LeftArm/LeftForeArm
+        weight: 1
+      - path: Spin0/Spin1/Spin2/LeftShoulder/LeftArm/LeftForeArm/LeftHand
+        weight: 1
+      - path: Spin0/Spin1/Spin2/LeftShoulder/LeftArm/LeftForeArm/LeftHand/LeftForeFinger
+        weight: 1
+      - path: Spin0/Spin1/Spin2/LeftShoulder/LeftArm/LeftForeArm/LeftHand/LeftLittleFinger
+        weight: 1
+      - path: Spin0/Spin1/Spin2/LeftShoulder/LeftArm/LeftForeArm/LeftHand/LeftThumb
+        weight: 1
+      - path: Spin0/Spin1/Spin2/RightShoulders
+        weight: 1
+      - path: Spin0/Spin1/Spin2/RightShoulders/RightArm
+        weight: 1
+      - path: Spin0/Spin1/Spin2/RightShoulders/RightArm/RightForeArm
+        weight: 1
+      - path: Spin0/Spin1/Spin2/RightShoulders/RightArm/RightForeArm/RightHand
+        weight: 1
+      - path: Spin0/Spin1/Spin2/RightShoulders/RightArm/RightForeArm/RightHand/Batte
+        weight: 1
+      - path: Spin0/Spin1/Spin2/RightShoulders/RightArm/RightForeArm/RightHand/RightForeFinger
+        weight: 1
+      - path: Spin0/Spin1/Spin2/RightShoulders/RightArm/RightForeArm/RightHand/RightLittleFinger
+        weight: 1
+      - path: Spin0/Spin1/Spin2/RightShoulders/RightArm/RightForeArm/RightHand/RightThumb
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: EndMatchLoseAlternative
+      takeName: nivek_anim
+      firstFrame: 910
+      lastFrame: 947
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Nivek
+        weight: 1
+      - path: Spin0
+        weight: 1
+      - path: Spin0/LeftLeg
+        weight: 1
+      - path: Spin0/LeftLeg/LeftShin
+        weight: 1
+      - path: Spin0/LeftLeg/LeftShin/LeftAnkle
+        weight: 1
+      - path: Spin0/LeftLeg/LeftShin/LeftAnkle/LeftFoot
+        weight: 1
+      - path: Spin0/LeftLeg/LeftShin/LeftAnkle/LeftFoot/LeftFootFingers
+        weight: 1
+      - path: Spin0/RightLeg
+        weight: 1
+      - path: Spin0/RightLeg/RightShin
+        weight: 1
+      - path: Spin0/RightLeg/RightShin/RightAnkle
+        weight: 1
+      - path: Spin0/RightLeg/RightShin/RightAnkle/RIghtFoot
+        weight: 1
+      - path: Spin0/RightLeg/RightShin/RightAnkle/RIghtFoot/RightFootFingers
+        weight: 1
+      - path: Spin0/Spin1
+        weight: 1
+      - path: Spin0/Spin1/Spin2
+        weight: 1
+      - path: Spin0/Spin1/Spin2/LeftShoulder
+        weight: 1
+      - path: Spin0/Spin1/Spin2/LeftShoulder/LeftArm
+        weight: 1
+      - path: Spin0/Spin1/Spin2/LeftShoulder/LeftArm/LeftForeArm
+        weight: 1
+      - path: Spin0/Spin1/Spin2/LeftShoulder/LeftArm/LeftForeArm/LeftHand
+        weight: 1
+      - path: Spin0/Spin1/Spin2/LeftShoulder/LeftArm/LeftForeArm/LeftHand/LeftForeFinger
+        weight: 1
+      - path: Spin0/Spin1/Spin2/LeftShoulder/LeftArm/LeftForeArm/LeftHand/LeftLittleFinger
+        weight: 1
+      - path: Spin0/Spin1/Spin2/LeftShoulder/LeftArm/LeftForeArm/LeftHand/LeftThumb
+        weight: 1
+      - path: Spin0/Spin1/Spin2/RightShoulders
+        weight: 1
+      - path: Spin0/Spin1/Spin2/RightShoulders/RightArm
+        weight: 1
+      - path: Spin0/Spin1/Spin2/RightShoulders/RightArm/RightForeArm
+        weight: 1
+      - path: Spin0/Spin1/Spin2/RightShoulders/RightArm/RightForeArm/RightHand
+        weight: 1
+      - path: Spin0/Spin1/Spin2/RightShoulders/RightArm/RightForeArm/RightHand/Batte
+        weight: 1
+      - path: Spin0/Spin1/Spin2/RightShoulders/RightArm/RightForeArm/RightHand/RightForeFinger
+        weight: 1
+      - path: Spin0/Spin1/Spin2/RightShoulders/RightArm/RightForeArm/RightHand/RightLittleFinger
+        weight: 1
+      - path: Spin0/Spin1/Spin2/RightShoulders/RightArm/RightForeArm/RightHand/RightThumb
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Cry
+      takeName: nivek_anim
+      firstFrame: 948
+      lastFrame: 983
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
