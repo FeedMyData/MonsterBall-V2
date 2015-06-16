@@ -1993,7 +1993,7 @@ MonoBehaviour:
   pnlLoading: {fileID: 1065243942}
   CnamEnjmin: {fileID: 1848711927}
   sound: {fileID: 658566880}
-  timeLoading: 5
+  timeLoading: 8
 --- !u!1 &1711207138
 GameObject:
   m_ObjectHideFlags: 0
