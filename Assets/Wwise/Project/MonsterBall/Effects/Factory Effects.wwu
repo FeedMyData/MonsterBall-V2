@@ -1621,18 +1621,18 @@
 						</Effect>
 						<Effect Name="Special_Effect_1" ID="{83317D8A-9D4C-438E-BE8C-BC7D27CAD1B0}" PluginName="Wwise Flanger" CompanyID="0" PluginID="125" PluginType="3">
 							<PropertyList>
-								<Property Name="DelayTime" Type="Real32" Value="72.7"/>
-								<Property Name="DryLevel" Type="Real32" Value="0.18"/>
-								<Property Name="FeedBackLevel" Type="Real32" Value="-0.6"/>
-								<Property Name="FeedForwardLevel" Type="Real32" Value="-0.7"/>
-								<Property Name="ModDepth" Type="Real32" Value="23.7"/>
-								<Property Name="ModFrequency" Type="Real32" Value="13.18"/>
+								<Property Name="DelayTime" Type="Real32" Value="61.1"/>
+								<Property Name="DryLevel" Type="Real32" Value="0.66"/>
+								<Property Name="FeedBackLevel" Type="Real32" Value="-0.4"/>
+								<Property Name="FeedForwardLevel" Type="Real32" Value="-0.3"/>
+								<Property Name="ModDepth" Type="Real32" Value="27.4"/>
+								<Property Name="ModFrequency" Type="Real32" Value="5.98"/>
 								<Property Name="ModPWM" Type="Real32" Value="0"/>
 								<Property Name="ModPhaseOffset" Type="Real32" Value="72"/>
 								<Property Name="ModPhaseSpread" Type="Real32" Value="69"/>
 								<Property Name="ModSmoothing" Type="Real32" Value="24"/>
 								<Property Name="OutputLevel" Type="Real32" Value="1"/>
-								<Property Name="WetDryMix" Type="Real32" Value="84"/>
+								<Property Name="WetDryMix" Type="Real32" Value="63"/>
 							</PropertyList>
 						</Effect>
 						<Folder Name="Static Comb Filtering" ID="{6044FF31-2237-4EC5-B94F-9C0C25CFAC44}" ShortID="504290141">

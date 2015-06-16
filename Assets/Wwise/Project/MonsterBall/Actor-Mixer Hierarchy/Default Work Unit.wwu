@@ -785,6 +785,7 @@
 									<ChildrenList>
 										<RandomSequenceContainer Name="SFX_Impact_Heavy" ID="{62AD9A76-E015-4B0C-A784-F391910B502F}" ShortID="365071339">
 											<PropertyList>
+												<Property Name="OverrideUserAuxSends" Type="bool" Value="True"/>
 												<Property Name="Pitch" Type="int32">
 													<ModifierList>
 														<ModifierInfo>
@@ -801,7 +802,7 @@
 												<Property Name="PositioningType" Type="int16" Value="1"/>
 												<Property Name="UserAuxSendVolume0" Type="Real64">
 													<ValueList>
-														<Value>-3</Value>
+														<Value>-6</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -811,6 +812,9 @@
 												</Reference>
 												<Reference Name="OutputBus">
 													<ObjectRef Name="SFX" ID="{98BA6610-4B70-4EFF-A353-4A61C6BE1A24}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+												</Reference>
+												<Reference Name="UserAuxSend0">
+													<ObjectRef Name="FX" ID="{AE17BDD2-F728-4C96-A483-B4560EE81FA8}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
@@ -968,7 +972,6 @@
 						</ActorMixer>
 						<ActorMixer Name="Niveks_Impact" ID="{C22DF4DD-EB3D-466A-82E6-F723EF944998}" ShortID="163848831">
 							<PropertyList>
-								<Property Name="OverrideUserAuxSends" Type="bool" Value="True"/>
 								<Property Name="UserAuxSendVolume0" Type="Real64">
 									<ValueList>
 										<Value>-8</Value>
@@ -994,6 +997,7 @@
 							<ChildrenList>
 								<Sound Name="SFX_Niveks_ImpactsBut" ID="{E7E04C0B-FD50-41C9-86E2-937FEF5E177F}" ShortID="1008035701" Type="SoundFX">
 									<PropertyList>
+										<Property Name="OverrideUserAuxSends" Type="bool" Value="True"/>
 										<Property Name="Pitch" Type="int32">
 											<ModifierList>
 												<ModifierInfo>
@@ -1008,9 +1012,14 @@
 											</ModifierList>
 										</Property>
 										<Property Name="PositioningType" Type="int16" Value="1"/>
+										<Property Name="UserAuxSendVolume0" Type="Real64">
+											<ValueList>
+												<Value>2</Value>
+											</ValueList>
+										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-6</Value>
+												<Value>-3</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -1020,6 +1029,9 @@
 										</Reference>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="SFX" ID="{98BA6610-4B70-4EFF-A353-4A61C6BE1A24}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+										</Reference>
+										<Reference Name="UserAuxSend0">
+											<ObjectRef Name="FX" ID="{AE17BDD2-F728-4C96-A483-B4560EE81FA8}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -2623,6 +2635,7 @@
 								</Sound>
 								<Sound Name="SFX_Impact_Metal" ID="{30087A8D-4AC4-4609-81D0-8CC3F1EB767B}" ShortID="759391410" Type="SoundFX">
 									<PropertyList>
+										<Property Name="OverrideUserAuxSends" Type="bool" Value="True"/>
 										<Property Name="Pitch" Type="int32">
 											<ValueList>
 												<Value>-1110</Value>
@@ -2639,6 +2652,11 @@
 												</ModifierInfo>
 											</ModifierList>
 										</Property>
+										<Property Name="UserAuxSendVolume0" Type="Real64">
+											<ValueList>
+												<Value>-4</Value>
+											</ValueList>
+										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
 												<Value>-6</Value>
@@ -2651,6 +2669,9 @@
 										</Reference>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+										</Reference>
+										<Reference Name="UserAuxSend0">
+											<ObjectRef Name="FX" ID="{AE17BDD2-F728-4C96-A483-B4560EE81FA8}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -3532,9 +3553,15 @@
 						</RandomSequenceContainer>
 						<BlendContainer Name="SFX_Monstre_Course" ID="{5E59C47D-9153-46D3-9B30-B48F12EC7976}" ShortID="940814273">
 							<PropertyList>
+								<Property Name="OverrideUserAuxSends" Type="bool" Value="True"/>
+								<Property Name="UserAuxSendVolume0" Type="Real64">
+									<ValueList>
+										<Value>-8</Value>
+									</ValueList>
+								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-4</Value>
+										<Value>-8</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -3548,65 +3575,11 @@
 								<Reference Name="OutputBus">
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
 								</Reference>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="FX" ID="{AE17BDD2-F728-4C96-A483-B4560EE81FA8}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<Sound Name="SFX_Monstre_Course" ID="{E0CA245B-B23D-4129-8E56-0AB5DCEB74AC}" ShortID="878939021" Type="SoundFX">
-									<ExcludedPlatformList>
-										<Platform>Windows</Platform>
-									</ExcludedPlatformList>
-									<PropertyList>
-										<Property Name="Highpass" Type="int16">
-											<ValueList>
-												<Value>25</Value>
-											</ValueList>
-										</Property>
-										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-										<Property Name="Lowpass" Type="int16">
-											<ValueList>
-												<Value>65</Value>
-											</ValueList>
-										</Property>
-										<Property Name="Pitch" Type="int32">
-											<ValueList>
-												<Value>-1290</Value>
-											</ValueList>
-										</Property>
-										<Property Name="PositioningType" Type="int16" Value="1"/>
-										<Property Name="UserAuxSendVolume0" Type="Real64">
-											<ValueList>
-												<Value>-3</Value>
-											</ValueList>
-										</Property>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>2</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
-										</Reference>
-										<Reference Name="Effect0" PluginName="iZotope Trash Dynamics Mono" CompanyID="259" PluginID="5" PluginType="3">
-											<ObjectRef Name="Bigger_Boom" ID="{4D23DF35-E058-4705-9D8D-2DBDC605B8B3}" WorkUnitID="{70F46671-A828-4029-A11A-36BB09D872B9}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="SFX" ID="{98BA6610-4B70-4EFF-A353-4A61C6BE1A24}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="27 Squeaks-Slow And Fast Rubbery Creaks 2 Versions" ID="{B3E142F6-721C-4B81-A6C6-3A8CA2E8CD53}" ShortID="124171098">
-											<PropertyList>
-												<Property Name="TrimEnd" Type="Real64" Value="1.43424553186908"/>
-											</PropertyList>
-											<Language>SFX</Language>
-											<AudioFile>27 Squeaks-Slow And Fast Rubbery Creaks 2 Versions.wav</AudioFile>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="27 Squeaks-Slow And Fast Rubbery Creaks 2 Versions" ID="{B3E142F6-721C-4B81-A6C6-3A8CA2E8CD53}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
 								<Sound Name="Pressure" ID="{BD92D051-C5A8-4624-BA19-F191436AA635}" ShortID="302405276" Type="SoundFX">
 									<PropertyList>
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>

@@ -137,16 +137,6 @@
 												</Element>
 											</ElementList>
 										</Action>
-										<Action Name="Play" ID="{20CCCFA1-DBD3-4DA8-80D7-FF56E6F5E0BC}" ShortID="49173274" Type="Play" Scope="One" Global="false">
-											<ExcludedPlatformList>
-												<Platform>Windows</Platform>
-											</ExcludedPlatformList>
-											<ElementList>
-												<Element ID="{CCC9DDAE-F501-4BEB-B06E-FF218E5912C2}" Global="false">
-													<ObjectRef Name="Electric_Spark_Light" ID="{A8B4F66E-1865-4F67-8DD6-FCD468CD1F31}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
-												</Element>
-											</ElementList>
-										</Action>
 										<Action Name="Play" ID="{6B536866-5F5F-47AA-B546-842FDC286D80}" ShortID="439899310" Type="Play" Scope="One" Global="false">
 											<PropertyList>
 												<Property Name="Delay" Type="Real64" Value="0.2"/>
