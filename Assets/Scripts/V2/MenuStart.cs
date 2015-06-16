@@ -16,6 +16,8 @@ public class MenuStart : MonoBehaviour {
 
     public Image CnamEnjmin;
 
+    public SoundManager sound;
+
     public float timeLoading = 5.0f;
 
     public void Start()
@@ -48,6 +50,7 @@ public class MenuStart : MonoBehaviour {
 
     public void Play()
     {
+        sound.PlayEvent("Menu_Valid",Camera.main.gameObject);
         pnlMain.SetActive(false);
         pnlLoading.SetActive(true);
         StartCoroutine(PlayCoroutine());
