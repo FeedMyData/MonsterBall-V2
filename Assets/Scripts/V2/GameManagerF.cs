@@ -6,6 +6,7 @@ using XInputDotNetPure;
 
 public class GameManagerF : MonoBehaviour {
 
+
 	public enum Step
 	{
 		opening,
@@ -44,6 +45,7 @@ public class GameManagerF : MonoBehaviour {
 	// Use this for initialization
 
     private TwitterFeed twitterScript;
+	private int screenshot;
 
     void Start()
     {
@@ -73,6 +75,13 @@ public class GameManagerF : MonoBehaviour {
 	void Update () {
        // Debug.Log("Blu "+bluScore+" - "+redScore+" Red");
 
+	
+		// Screenshot bindé sur ESPACE
+		if (Input.GetKeyDown("space")) {
+			Debug.Log ("Screen");
+			Application.CaptureScreenshot("Screenshot"+screenshot.ToString()+".png",4);
+			screenshot++;
+		}
 
 		switch (state) {
 
