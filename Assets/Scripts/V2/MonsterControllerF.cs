@@ -401,13 +401,13 @@ public class MonsterControllerF : MonoBehaviour {
 
     void ManageSoundRunMonster(Vector3 actualPosition)
     {
-        Debug.Log(Vector3.Distance(previousPosition,actualPosition));
-        if (GetActualSpeed() < 0.1f)
+        float vitesse = Vector3.Distance(actualPosition,previousPosition);
+        if (vitesse < 0.1f)
         {
             sound.PlayEvent("SFX_Monstre_Stop_Course",gameObject);
             dontPlayRunMonster = true;
         }
-        if (dontPlayRunMonster && GetActualSpeed() > 0.5f)
+        if (dontPlayRunMonster && vitesse > 0.2f)
         {
             sound.PlayEvent("SFX_Monstre_Course", gameObject);
             dontPlayRunMonster = false;
