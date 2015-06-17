@@ -327,7 +327,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 885831964c7361848a9fe0515f3891e1, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &17037833
 GameObject:
@@ -827,7 +827,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 543bf50528b6bcd46ae57962af6aeb79, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &143320698
 Prefab:
@@ -2029,7 +2029,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 185648802}
-  m_Text: 150
+  m_Text: 
   m_OffsetZ: 0
   m_CharacterSize: .150000006
   m_LineSpacing: 1
@@ -2566,7 +2566,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &325816237
 Transform:
   m_ObjectHideFlags: 0
@@ -3591,7 +3591,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 639374803}
-  m_Text: 150
+  m_Text: 
   m_OffsetZ: 0
   m_CharacterSize: .150000006
   m_LineSpacing: 1
@@ -3665,7 +3665,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 650419879}
-  m_Text: 150
+  m_Text: 
   m_OffsetZ: 0
   m_CharacterSize: .150000006
   m_LineSpacing: 1
@@ -3743,7 +3743,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 408de15d8a83caa42b956ac90c145760, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &655038546
 Transform:
@@ -4679,7 +4679,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &928997849
 Transform:
   m_ObjectHideFlags: 0
@@ -4756,7 +4756,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 937373112}
-  m_Text: 15
+  m_Text: 
   m_OffsetZ: 0
   m_CharacterSize: .150000006
   m_LineSpacing: 1
@@ -6517,7 +6517,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1166474198
 Transform:
   m_ObjectHideFlags: 0
@@ -6981,7 +6981,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1307063847}
-  m_Text: 15
+  m_Text: 
   m_OffsetZ: 0
   m_CharacterSize: .150000006
   m_LineSpacing: 1
@@ -7138,7 +7138,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 885831964c7361848a9fe0515f3891e1, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &1316318449
 Prefab:
@@ -7298,7 +7298,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1341611621
 Transform:
   m_ObjectHideFlags: 0
@@ -7354,7 +7354,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1342125275
 Transform:
   m_ObjectHideFlags: 0
@@ -7816,7 +7816,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1415243187
 Transform:
   m_ObjectHideFlags: 0
@@ -7909,7 +7909,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 86118554408cd1a48a2e59f17a829545, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1473031509
 GameObject:
@@ -7926,7 +7926,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1473031510
 Transform:
   m_ObjectHideFlags: 0
@@ -8405,7 +8405,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1622195695}
-  m_Text: 150
+  m_Text: 
   m_OffsetZ: 0
   m_CharacterSize: .150000006
   m_LineSpacing: 1
@@ -8832,7 +8832,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1827010394}
-  m_Text: 15
+  m_Text: 
   m_OffsetZ: 0
   m_CharacterSize: .150000006
   m_LineSpacing: 1
@@ -8912,7 +8912,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1855994249
 Transform:
   m_ObjectHideFlags: 0
@@ -8989,7 +8989,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1877937117}
-  m_Text: 15
+  m_Text: 
   m_OffsetZ: 0
   m_CharacterSize: .150000006
   m_LineSpacing: 1
