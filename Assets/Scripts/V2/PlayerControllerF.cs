@@ -1150,10 +1150,11 @@ public class PlayerControllerF : MonoBehaviour
             for (int i = 1; i < 5; i++) // check if other player on this position
             {
 
-                GameObject playerTested = GameControllerF.GetPlayer(i);
-                int positionPlayerTested = playerTested.GetComponent<PlayerControllerF>().positionControllerSelection;
+                PlayerControllerF playerTested = GameControllerF.GetPlayer(i).GetComponent<PlayerControllerF>();
+                int positionPlayerTested = playerTested.positionControllerSelection;
+                GameControllerF.Jersey jerseyTested = playerTested.jersey;
 
-                if (playerTested.tag != this.tag && positionPlayerTested == positionControllerSelection)
+                if (jerseyTested != this.jersey && positionPlayerTested == positionControllerSelection)
                 {
                     canValidate = false;
                 }
