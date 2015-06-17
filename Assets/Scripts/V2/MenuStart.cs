@@ -138,7 +138,7 @@ public class MenuStart : MonoBehaviour {
     {
         pnlMain.SetActive(true);
         pnlEnjmin.SetActive(false);
-        Debug.Log("caca");
+
         sound.PlayEvent("Music_Menu", Camera.main.gameObject);
     }
 
