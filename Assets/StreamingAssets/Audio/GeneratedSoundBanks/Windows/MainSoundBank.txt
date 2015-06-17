@@ -20,19 +20,16 @@ Event	ID	Name			Wwise Object Path	Notes
 	2297712543	SFX_Niveks_Footsteps			\Default Work Unit\SFX\SFX_Niveks_Footsteps	
 	2593163185	SFX_Monstre_Cloison			\Default Work Unit\SFX\SFX_Monstre_Cloison	
 	2649120174	VX_Niveks_DebutMatch			\Default Work Unit\Voix\Niveks\VX_Niveks_DebutMatch	
-	2663589529	VX_Comment_DebutMatch			\Default Work Unit\Voix\Commentaire\VX_Comment_DebutMatch	
 	2676280931	VX_Balle_RemiseEnJeu			\Default Work Unit\Voix\Balle\VX_Balle_RemiseEnJeu	
 	2725983128	SFX_Niveks_CoupFaible			\Default Work Unit\SFX\SFX_Niveks_CoupFaible	
 	2747378368	Music_Fin			\Default Work Unit\Music\Music_Fin	
 	2887782118	VX_Balle_Course			\Default Work Unit\Voix\Balle\VX_Balle_Course	
-	2968666366	SFX_Monstre_Stop_Course			\Default Work Unit\SFX\SFX_Monstre_Stop_Course	
 	3004362387	VX_Monstre_Crache			\Default Work Unit\Voix\Monstre\VX_Monstre_Crache	
 	3019773176	Public_Normal			\Default Work Unit\Public\Public_Normal	
 	3040534629	SFX_Monstre_Course			\Default Work Unit\SFX\SFX_Monstre_Course	
 	3060817186	Public_But			\Default Work Unit\Public\Public_But	
 	3206008515	Transfo_MonstreBalle			\Default Work Unit\Voix\Transformation\Transfo_MonstreBalle	
 	3212082402	VX_Niveks_ButPerdant			\Default Work Unit\Voix\Niveks\VX_Niveks_ButPerdant	
-	3227735425	SFX_Niveks_Course			\Default Work Unit\SFX\SFX_Niveks_Course	
 	3251995241	Vx_Niveks_Poursuivi			\Default Work Unit\Voix\Niveks\Vx_Niveks_Poursuivi	
 	3300306736	Public_Intensification			\Default Work Unit\Public\Public_Intensification	
 	3411820422	VX_Niveks_Victoire			\Default Work Unit\Voix\Niveks\VX_Niveks_Victoire	
@@ -197,6 +194,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	684567994	VOIX_Balle_But_07	C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\.cache\Windows\SFX\But\VOIX_Balle_But_07_DDC98EF4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Voix\Balle\But\VOIX_Balle_But_07		32064
 	688804267	VOIX_Commentateur_MonsterBall	C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\.cache\Windows\SFX\VOIX_Commentateur_MonsterBall_02_CA72B21D_0DBFDC97.wem		\Actor-Mixer Hierarchy\Default Work Unit\Voix\Commentaires\VOIX_Commentateur_MonsterBall		641184
 	695073198	VOIX_Niveks_Wilhem_03	C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\.cache\Windows\SFX\WilhemScream\VOIX_Niveks_Wilhem_03_DDC98EF4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Voix\Niveks\WilhemScream\VOIX_Niveks_Wilhem_03		98844
+	699946924	SFX_Niveks_CoupBatte_Faible	C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\.cache\Windows\SFX\SFX_Niveks_CoupBatte_Fort_FB251AF9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\CoupBatte\Faible\SFX_Niveks_CoupBatte_Faible		8496
 	700327063	VOIX_Balle_Court_03	C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\.cache\Windows\SFX\Course\VOIX_Balle_Court_03_DDC98EF4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Voix\Balle\Course\VOIX_Balle_Court_03		232512
 	701095233	VOIX_Balle_RemiseEnJeu_09	C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\.cache\Windows\SFX\Remise en jeu\VOIX_Balle_RemiseEnJeu_09_DDC98EF4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Voix\Balle\Remise en jeu\VOIX_Balle_RemiseEnJeu_09		141488
 	707440032	SFX_Electric_Spark-08	C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\.cache\Windows\SFX\SFX_Electric_Spark-01_D6980A05.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Electric_Spark_Light\SFX_Electric_Spark-08		54348

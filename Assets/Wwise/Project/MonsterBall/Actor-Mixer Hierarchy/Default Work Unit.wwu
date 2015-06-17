@@ -303,13 +303,6 @@
 									</ChildrenList>
 								</RandomSequenceContainer>
 								<Sound Name="FX_Public_Intensification_Transfo" ID="{0836B42F-8583-49D8-9DCE-FE48BD98F31C}" ShortID="810501587" Type="SoundFX">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>10</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
@@ -471,7 +464,7 @@
 									<PropertyList>
 										<Property Name="MakeUpGain" Type="Real64">
 											<ValueList>
-												<Value>6</Value>
+												<Value>1</Value>
 											</ValueList>
 										</Property>
 										<Property Name="Volume" Type="Real64">
@@ -500,11 +493,6 @@
 								</Sound>
 								<Sound Name="Public_Fin" ID="{A891061D-A25B-4DA2-9B6C-BF929014C3E6}" ShortID="912113414" Type="SoundFX">
 									<PropertyList>
-										<Property Name="MakeUpGain" Type="Real64">
-											<ValueList>
-												<Value>6</Value>
-											</ValueList>
-										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
 												<Value>10</Value>
@@ -3692,7 +3680,7 @@
 								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="10"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-3</Value>
+										<Value>-2</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -6503,33 +6491,6 @@
 												<ActiveSource Name="VOIX_Monstre_CracheJoueur_03" ID="{720C1D08-80B2-4731-A896-42F4E8284F0C}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="VOIX_Monstre_CracheJoueur_04" ID="{7DB10225-3D17-47D2-AC95-ADF7029DD876}" ShortID="203764318" Type="SoundFX">
-											<ExcludedPlatformList>
-												<Platform>Windows</Platform>
-											</ExcludedPlatformList>
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="VOIX_Monstre_CracheJoueur_04" ID="{075A94A8-FB2F-4F35-B82F-08BE3EAF44E1}" ShortID="6697481">
-													<PropertyList>
-														<Property Name="FadeOutDuration" Type="Real64" Value="0.108934218462776"/>
-														<Property Name="TrimBegin" Type="Real64" Value="0.042811767578125"/>
-														<Property Name="TrimEnd" Type="Real64" Value="0.520806927849265"/>
-													</PropertyList>
-													<Language>SFX</Language>
-													<AudioFile>RecracheJoueur\VOIX_Monstre_CracheJoueur_04.wav</AudioFile>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="VOIX_Monstre_CracheJoueur_04" ID="{075A94A8-FB2F-4F35-B82F-08BE3EAF44E1}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
 										<Sound Name="VOIX_Monstre_CracheJoueur_05" ID="{31469C79-B176-4270-8534-1F675F27D56E}" ShortID="220440797" Type="SoundFX">
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -6632,9 +6593,14 @@
 								</RandomSequenceContainer>
 								<Sound Name="VOIX_Balle_TransfoBalleMonstre_03TEMP" ID="{682954ED-8488-4A54-ACDB-B043340A5D15}" ShortID="429878560" Type="SoundFX">
 									<PropertyList>
+										<Property Name="Lowpass" Type="int16">
+											<ValueList>
+												<Value>18</Value>
+											</ValueList>
+										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-1</Value>
+												<Value>6</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>

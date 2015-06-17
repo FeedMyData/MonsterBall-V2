@@ -117,8 +117,6 @@
 										</Action>
 									</ChildrenList>
 								</Event>
-								<Event Name="VX_Niveks_FinMatchGagnant" ID="{45D991DF-3AC9-45C2-8889-D8895D97AD70}"/>
-								<Event Name="VX_Niveks_FinMatchPerdant" ID="{08ABACA6-8E33-42D3-AC3E-029F3685182C}"/>
 								<Event Name="Vx_Niveks_Poursuivi" ID="{9DE89C00-5A9F-490B-8609-3D0F5BBAABA1}">
 									<ChildrenList>
 										<Action Name="Play" ID="{909DE2D2-B16B-4AB7-A370-22B4DD4A3B83}" ShortID="260087246" Type="Play" Scope="One" Global="false">
@@ -162,8 +160,6 @@
 										</Action>
 									</ChildrenList>
 								</Event>
-								<Event Name="VX_Niveks_Victoire" ID="{6532A9D5-9BB8-4F92-BD33-D545A7D3BC6D}"/>
-								<Event Name="VX_Niveks_Defaite" ID="{C8D7D3E4-9958-487A-BB34-71176ECF6831}"/>
 							</ChildrenList>
 						</Folder>
 						<Folder Name="Balle" ID="{C44FF999-3A0B-4106-9D06-DC8E6F73AB9E}" ShortID="147926892">
@@ -341,16 +337,6 @@
 												</Element>
 											</ElementList>
 										</Action>
-										<Action Name="Play" ID="{83C2B65C-DFB2-45FB-99E4-EBBDC3B7721C}" ShortID="1028772970" Type="Play" Scope="One" Global="false">
-											<PropertyList>
-												<Property Name="Delay" Type="Real64" Value="3.2"/>
-											</PropertyList>
-											<ElementList>
-												<Element ID="{DA14F56E-248F-4C16-B668-98E2A71F4F77}" Global="false">
-													<ObjectRef Name="Grognements" ID="{DA313CEB-548A-4DC0-9E3E-F79794B4C644}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
-												</Element>
-											</ElementList>
-										</Action>
 									</ChildrenList>
 								</Event>
 							</ChildrenList>
@@ -379,7 +365,8 @@
 										</Action>
 										<Action Name="Play" ID="{3A6EDA4D-8AA4-4492-AA69-A409C4814B15}" ShortID="166763261" Type="Play" Scope="One" Global="false">
 											<PropertyList>
-												<Property Name="Delay" Type="Real64" Value="2"/>
+												<Property Name="Delay" Type="Real64" Value="2.5"/>
+												<Property Name="FadeTime" Type="Real64" Value="0.8"/>
 											</PropertyList>
 											<ElementList>
 												<Element ID="{927494E7-8167-46BD-9BFF-560119D298BA}" Global="false">
@@ -440,8 +427,6 @@
 						</Folder>
 						<Folder Name="Commentaire" ID="{F6A6D321-88FF-45A5-8AA1-9AA439202DEF}" ShortID="545680764">
 							<ChildrenList>
-								<Event Name="VX_Comment_DebutMatch" ID="{884DBF4E-2347-4E91-8713-026797D48536}"/>
-								<Event Name="VX_Comment_FinMatch" ID="{76D58B56-EC7E-4963-8951-62A8B4BF9FC7}"/>
 								<Event Name="VX_Comment_MONSTERBALL" ID="{97863B2C-F0AB-42D0-9BC6-F99F690A5D38}">
 									<ChildrenList>
 										<Action Name="Play" ID="{D5CA7D4B-7285-4D54-87DB-DE3ABF1B7BC9}" ShortID="1016091764" Type="Play" Scope="One" Global="false">
@@ -489,9 +474,6 @@
 						<Event Name="SFX_Niveks_CoupFaible" ID="{A2BB9F56-E31C-4C23-9C9A-5C9364E13726}">
 							<ChildrenList>
 								<Action Name="Play" ID="{8BA49754-F518-4929-AC33-040C5D3AD55E}" ShortID="655045163" Type="Play" Scope="One" Global="false">
-									<ExcludedPlatformList>
-										<Platform>Windows</Platform>
-									</ExcludedPlatformList>
 									<ElementList>
 										<Element ID="{6B5F378B-0AF2-4CE4-9ED8-31D422AAF0B5}" Global="false">
 											<ObjectRef Name="SFX_Niveks_CoupBatte_Faible" ID="{664E4325-E631-462C-A57E-5BF1654FA4B4}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
@@ -545,50 +527,6 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="SFX_Monstre_Course" ID="{DCB984B7-6D28-4347-BDDB-3960B62DCBDA}">
-							<ChildrenList>
-								<Action Name="Play" ID="{EDB5E308-8F6D-44F2-A152-F7D881BCADE7}" ShortID="968448824" Type="Play" Scope="One" Global="false">
-									<ExcludedPlatformList>
-										<Platform>Windows</Platform>
-									</ExcludedPlatformList>
-									<PropertyList>
-										<Property Name="Delay" Type="Real64" Value="2"/>
-									</PropertyList>
-									<ElementList>
-										<Element ID="{682A6874-ED9F-41B4-A664-19B6384EE054}" Global="false">
-											<ObjectRef Name="SFX_DebutCourse" ID="{55C5A5E8-E628-400B-A40A-4853D2E940E3}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
-										</Element>
-									</ElementList>
-								</Action>
-								<Action Name="Play" ID="{906DF4E6-2C48-4743-A9C3-701997685C37}" ShortID="137137869" Type="Play" Scope="One" Global="false">
-									<ExcludedPlatformList>
-										<Platform>Windows</Platform>
-									</ExcludedPlatformList>
-									<PropertyList>
-										<Property Name="Delay" Type="Real64" Value="5"/>
-									</PropertyList>
-									<ElementList>
-										<Element ID="{FDDC3DCF-0BD4-4A38-8FDD-BE5EC5CA8682}" Global="false">
-											<ObjectRef Name="Rumble" ID="{4305E919-9B25-43DB-8885-8FF37664C5AD}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
-										</Element>
-									</ElementList>
-								</Action>
-								<Action Name="Play" ID="{7CC76C0A-BC50-48DC-A32D-7041F714D2D7}" ShortID="41065049" Type="Play" Scope="One" Global="false">
-									<ExcludedPlatformList>
-										<Platform>Windows</Platform>
-									</ExcludedPlatformList>
-									<PropertyList>
-										<Property Name="FadeCurve" Type="int16" Value="7"/>
-										<Property Name="FadeTime" Type="Real64" Value="0.2"/>
-									</PropertyList>
-									<ElementList>
-										<Element ID="{9F6F8CA6-E77C-45FA-AF81-AE19DEECEE42}" Global="false">
-											<ObjectRef Name="Pressure" ID="{BD92D051-C5A8-4624-BA19-F191436AA635}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
-										</Element>
-									</ElementList>
-								</Action>
-							</ChildrenList>
-						</Event>
 						<Event Name="SFX_Niveks_ChargeCoup" ID="{275CD938-1527-497E-AD43-890CDFAC8929}">
 							<ChildrenList>
 								<Action Name="Play" ID="{FBAAA748-DC98-4A4B-9F2A-D726504E2210}" ShortID="254948468" Type="Play" Scope="One" Global="false">
@@ -603,7 +541,6 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="SFX_Niveks_Course" ID="{7F69C644-D041-47A9-8FCC-8A7A312CFC1C}"/>
 						<Event Name="SFX_Niveks_CoupFort" ID="{54F550B1-1B00-498E-B5A4-48D17A9D3876}">
 							<ChildrenList>
 								<Action Name="Play" ID="{C21C77FA-A444-4D25-A6F1-5CBFCBC0DF4B}" ShortID="813296908" Type="Play" Scope="One" Global="false">
@@ -629,7 +566,6 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="SFX_Monstre_Stop_Course" ID="{CA4A7523-D08C-4466-82D8-B5631F4F2F1D}"/>
 						<Event Name="SFX_Niveks_Footsteps" ID="{7BE59A6D-901A-43BD-B339-3A6787005B87}">
 							<ChildrenList>
 								<Action Name="Play" ID="{EE3EE07C-EE69-4FDD-A1D9-7545AD755EDF}" ShortID="838866083" Type="Play" Scope="One" Global="false">
@@ -791,9 +727,47 @@
 						<Event Name="Music_Fin" ID="{0F470E75-820C-470C-B9CD-28EA691D3C08}">
 							<ChildrenList>
 								<Action Name="Play" ID="{3A3828B8-7D40-4E20-B285-2BCA773129C0}" ShortID="192028334" Type="Play" Scope="One" Global="false">
+									<PropertyList>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+									</PropertyList>
 									<ElementList>
 										<Element ID="{34091B2E-E733-4B25-81A1-7A94B58A9524}" Global="false">
 											<ObjectRef Name="Music_Fin" ID="{EAE7F11E-5A0F-4B57-984A-C74C4AFD3EA7}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+										</Element>
+									</ElementList>
+								</Action>
+								<Action Name="Play" ID="{8BC9778B-0925-4216-BE1C-D61CE7C30C8D}" ShortID="590327350" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{58413692-2E0C-405F-B84E-8225F34D6B1A}" Global="false">
+											<ObjectRef Name="Public_Fin" ID="{A891061D-A25B-4DA2-9B6C-BF929014C3E6}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+										</Element>
+									</ElementList>
+								</Action>
+								<Action Name="Stop" ID="{8225215C-93D7-4096-838E-8FB356D32A2D}" ShortID="681299028" Type="Stop" Scope="One" Global="true">
+									<ElementList>
+										<Element ID="{AEF821F2-D7AD-4D29-8DBB-0DB46749521D}" Global="true">
+											<ObjectRef Name="Music_Main" ID="{814021AA-6BA9-4C22-A014-A745571C77FD}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+										</Element>
+									</ElementList>
+								</Action>
+								<Action Name="Stop" ID="{D38CB907-8FCE-439C-82EA-EFB106E41D7B}" ShortID="195741264" Type="Stop" Scope="One" Global="true">
+									<ElementList>
+										<Element ID="{ED054D3B-4C69-4288-8B6C-4C700D1D7168}" Global="true">
+											<ObjectRef Name="Music_Monstre" ID="{60DE5FB5-A558-4190-B053-D6D64FCA048E}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+										</Element>
+									</ElementList>
+								</Action>
+								<Action Name="Stop" ID="{216F8AF8-836D-4886-A807-7FF9D146C413}" ShortID="16440796" Type="Stop" Scope="One" Global="true">
+									<ElementList>
+										<Element ID="{1AE56F8E-211F-422D-9899-D15EE21A77C5}" Global="true">
+											<ObjectRef Name="SFX_Monstre_Course" ID="{5E59C47D-9153-46D3-9B30-B48F12EC7976}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+										</Element>
+									</ElementList>
+								</Action>
+								<Action Name="Stop" ID="{04478F33-134F-44F0-BE8F-E8182D672E15}" ShortID="386233369" Type="Stop" Scope="One" Global="true">
+									<ElementList>
+										<Element ID="{AC97A70E-1F88-42D3-88DA-4DB5C5505D08}" Global="true">
+											<ObjectRef Name="AMB_Public_Normal" ID="{C0D3115C-8B4C-4E28-ABDF-5544C5F971D3}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
 										</Element>
 									</ElementList>
 								</Action>

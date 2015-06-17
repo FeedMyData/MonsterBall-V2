@@ -33,11 +33,9 @@
 				<Event Id="2593163185" Name="SFX_Monstre_Cloison"/>
 				<Event Id="3040534629" Name="SFX_Monstre_Course"/>
 				<Event Id="3767868511" Name="SFX_Monstre_Grow"/>
-				<Event Id="2968666366" Name="SFX_Monstre_Stop_Course"/>
 				<Event Id="3534940551" Name="SFX_Niveks_ChargeCoup"/>
 				<Event Id="2725983128" Name="SFX_Niveks_CoupFaible"/>
 				<Event Id="2139348868" Name="SFX_Niveks_CoupFort"/>
-				<Event Id="3227735425" Name="SFX_Niveks_Course"/>
 				<Event Id="2297712543" Name="SFX_Niveks_Footsteps"/>
 				<Event Id="4179439567" Name="SFX_Niveks_Validation"/>
 				<Event Id="2097335990" Name="SFX_Niveks_Woosh"/>
@@ -48,7 +46,6 @@
 				<Event Id="43799444" Name="VX_Balle_Coup"/>
 				<Event Id="2887782118" Name="VX_Balle_Course"/>
 				<Event Id="2676280931" Name="VX_Balle_RemiseEnJeu"/>
-				<Event Id="2663589529" Name="VX_Comment_DebutMatch"/>
 				<Event Id="682388778" Name="VX_Comment_FinMatch"/>
 				<Event Id="3702120541" Name="VX_Comment_MONSTERBALL"/>
 				<Event Id="3644313994" Name="VX_Monstre_Course"/>
@@ -591,6 +588,10 @@
 				<File Id="695073198" Language="SFX">
 					<ShortName>WilhemScream\VOIX_Niveks_Wilhem_03.wav</ShortName>
 					<Path>SFX\WilhemScream\VOIX_Niveks_Wilhem_03_DDC98EF4.wem</Path>
+				</File>
+				<File Id="699946924" Language="SFX">
+					<ShortName>SFX_Niveks_CoupBatte_Fort.wav</ShortName>
+					<Path>SFX\SFX_Niveks_CoupBatte_Fort_FB251AF9.wem</Path>
 				</File>
 				<File Id="700327063" Language="SFX">
 					<ShortName>Course\VOIX_Balle_Court_03.wav</ShortName>
