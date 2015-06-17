@@ -655,7 +655,7 @@ Transform:
   - {fileID: 1342125275}
   - {fileID: 1966745241}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
 --- !u!143 &99554767
 CharacterController:
   m_ObjectHideFlags: 0
@@ -763,6 +763,17 @@ Transform:
 GameObject:
   m_PrefabParentObject: {fileID: 100018, guid: aca9e1c84fab4f946a4007ad4035b283, type: 3}
   m_PrefabInternal: {fileID: 1215151604}
+--- !u!114 &131264557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 131264556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1e132045d8422c42b9cfb9b87726111, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &131264558
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -774,7 +785,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9bf1d02f90193a4fb531a7afb98bdeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sound: {fileID: 1748613419}
 --- !u!1 &143206476
 GameObject:
   m_ObjectHideFlags: 0
@@ -3071,7 +3081,6 @@ GameObject:
   - 114: {fileID: 499457357}
   - 114: {fileID: 499457356}
   - 114: {fileID: 499457351}
-  - 114: {fileID: 499457358}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3148,7 +3157,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
 --- !u!114 &499457356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3177,27 +3186,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   translationFactor: .100000001
   rotationFactor: .100000001
---- !u!114 &499457358
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 499457350}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 704553ab0af34f544bca18cd2ee785f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerList: f7e1664c
-  useOtherObject: 0
-  valueGuid: 00000000000000000000000000000000
-  eventID: 0
-  soundEmitterObject: {fileID: 0}
-  enableActionOnEvent: 0
-  actionOnEventType: 0
-  curveInterpolation: 4
-  transitionDuration: 0
-  m_callbackData: {fileID: 0}
 --- !u!1 &511721644
 GameObject:
   m_ObjectHideFlags: 0
@@ -3261,7 +3249,7 @@ Transform:
   - {fileID: 480821635}
   - {fileID: 1109936194}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
 --- !u!143 &530266179
 CharacterController:
   m_ObjectHideFlags: 0
@@ -3561,7 +3549,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
 --- !u!114 &631020835
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3575,8 +3563,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   triggerList: f7e1664c
   useOtherObject: 0
-  valueGuid: 00000000000000000000000000000000
-  bankName: 
+  valueGuid: 933a1cdfb050c344a9b1beae92e6de56
+  bankName: MainSoundBank
   loadAsynchronous: 0
   unloadTriggerList: 958ca0ea
 --- !u!1 &639374803
@@ -6871,7 +6859,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
 --- !u!1 &1270185704
 GameObject:
   m_ObjectHideFlags: 0
@@ -8695,45 +8683,6 @@ Transform:
   - {fileID: 588048379}
   m_Father: {fileID: 1951097506}
   m_RootOrder: 0
---- !u!1 &1748613418
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1748613420}
-  - 114: {fileID: 1748613419}
-  m_Layer: 18
-  m_Name: Sound
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1748613419
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1748613418}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1e132045d8422c42b9cfb9b87726111, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &1748613420
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1748613418}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: -1.62920685e-07}
-  m_LocalPosition: {x: -17.6019993, y: .297999978, z: -10.6859999}
-  m_LocalScale: {x: 1.29999995, y: 1.29999995, z: 1.29999995}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
 --- !u!1 &1797981196
 GameObject:
   m_ObjectHideFlags: 0
@@ -9261,7 +9210,7 @@ Transform:
   - {fileID: 1341611621}
   - {fileID: 1258269520}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
 --- !u!143 &1895334758
 CharacterController:
   m_ObjectHideFlags: 0
@@ -9803,6 +9752,7 @@ GameObject:
   - 114: {fileID: 1960922079}
   - 114: {fileID: 1960922078}
   - 114: {fileID: 1960922082}
+  - 114: {fileID: 1960922083}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -9903,6 +9853,17 @@ MonoBehaviour:
   monster: {fileID: 7400953}
   YPodiumOffset: .0500000007
   buttonWaitingDuration: 2.5
+--- !u!114 &1960922083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1960922077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1e132045d8422c42b9cfb9b87726111, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1966745240 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: d90a76635f571cc43b387cee0e742216, type: 3}
@@ -10072,7 +10033,7 @@ Transform:
   - {fileID: 1925360608}
   - {fileID: 1948537797}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
 --- !u!143 &2021973434
 CharacterController:
   m_ObjectHideFlags: 0

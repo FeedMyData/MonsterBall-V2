@@ -12,15 +12,20 @@ public class MenuFinF : MonoBehaviour {
 	public float YPodiumOffset = 0.1f;
 	public float buttonWaitingDuration = 2.5f;
 
-  
+    private SoundManager sound;
 
 	// Use this for initialization
 	void Start () {
-       
+
+        sound = GetComponent<SoundManager>();
+        sound.LoadBank();
+
+        playAgainButton.GetComponent<Button>().interactable = mainMenuButton.GetComponent<Button>().interactable = false;
 
 		InitMenu ();
 
-		playAgainButton.GetComponent<Button> ().interactable = mainMenuButton.GetComponent<Button> ().interactable = false;
+        sound.PlayEvent("Music_Fin", Camera.main.gameObject);
+
 		monster.GetComponentInChildren<Animator> ().SetTrigger ("endScreen");
 
 		StartCoroutine (WaitButtonActivation ());

@@ -67,6 +67,8 @@ public class GameControllerF : MonoBehaviour {
     private static float[] positionsY = new float[4] { 5.5f, 7.0f, 8.5f, 10.0f };
 	private static string winner = "tie", finalScore = "0,0";
 
+    private static bool isFirstLaunched = true;
+
 	// Use this for initialization
 	void Awake () {
         tabObj = new GameObject[5];
@@ -108,6 +110,15 @@ public class GameControllerF : MonoBehaviour {
 		playerAwards = new  List<string>[4];
 
 	}
+
+    public static bool IsFirstLaunched() {
+        return isFirstLaunched;
+    }
+
+    public static void SetIsFirstLaunched(bool isFirst)
+    {
+        isFirstLaunched = isFirst;
+    }
 
     public static SoundManager GetSound()
     {

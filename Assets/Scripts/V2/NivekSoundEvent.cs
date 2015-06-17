@@ -9,8 +9,6 @@ public class NivekSoundEvent : MonoBehaviour {
 		gameObject.GetComponentInParent<SoundManager> ().PlayEvent ("SFX_Niveks_Footsteps", gameObject);
 	}
 
-
-
 	public void PlayWin(){
 
         gameObject.GetComponentInParent<SoundManager>().PlayEvent("Anim_EndMatch_Win", gameObject);

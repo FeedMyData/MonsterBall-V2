@@ -3,7 +3,13 @@ using System.Collections;
 
 public class MonstreGlowSound : MonoBehaviour {
 
-    public SoundManager sound;
+    private SoundManager sound;
+
+    void Start()
+    {
+        sound = GetComponent<SoundManager>();
+        sound.LoadBank();
+    }
 
     public void PlayGlow()
     {

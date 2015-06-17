@@ -16,19 +16,51 @@ public class MenuStart : MonoBehaviour {
 
     public Image CnamEnjmin;
 
-    public SoundManager sound;
-
     public float timeLoading = 5.0f;
+
+    private SoundManager sound;
+
+    private float durationFade = 0.5f;
+    private float timePanelEnjmin = 2.0f;
 
     public void Start()
     {
 
-        pnlMain.SetActive(false);
+        sound = GetComponent<SoundManager>();
+        sound.LoadBank();
+
+        if (GameControllerF.IsFirstLaunched())
+        {
+            ButtonPlay.GetComponent<Button>().interactable = false;
+            ButtonBack.GetComponent<Button>().interactable = false;
+            ButtonCredits.GetComponent<Button>().interactable = false;
+            StartCoroutine(WaitButtonActivation());
+
+            pnlEnjmin.SetActive(true);
+            pnlMain.SetActive(false);
+            StartCoroutine(EnjminScreen());
+        }
+        else
+        {
+            MenuDisplayed();
+            if (ButtonPlay != null)
+                EventSystem.current.SetSelectedGameObject(ButtonPlay);
+        }
+
         pnlCredits.SetActive(false);
         pnlLoading.SetActive(false);
-        pnlEnjmin.SetActive(true);
 
-        StartCoroutine(EnjminScreen());
+    }
+
+    private IEnumerator WaitButtonActivation()
+    {
+        yield return new WaitForSeconds(durationFade + timePanelEnjmin);
+        ButtonPlay.GetComponent<Button>().interactable = true;
+        ButtonBack.GetComponent<Button>().interactable = true;
+        ButtonCredits.GetComponent<Button>().interactable = true;
+        if (ButtonPlay != null)
+            EventSystem.current.SetSelectedGameObject(ButtonPlay);
+
     }
 
     private void Update()
@@ -83,11 +115,10 @@ public class MenuStart : MonoBehaviour {
 
     IEnumerator EnjminScreen()
     {
-        yield return new WaitForSeconds(2.0f);
+        GameControllerF.SetIsFirstLaunched(false);
+        yield return new WaitForSeconds(timePanelEnjmin);
         pnlMain.SetActive(true);
-        if (ButtonPlay != null)
-            EventSystem.current.SetSelectedGameObject(ButtonPlay);
-        StartCoroutine(FadeTo(0.0f, 0.5f));
+        StartCoroutine(FadeTo(0.0f, durationFade));
     }
 
     IEnumerator FadeTo(float aValue, float aTime)
@@ -100,7 +131,15 @@ public class MenuStart : MonoBehaviour {
             CnamEnjmin.color = newColor;
             yield return null;
         }
+        MenuDisplayed();
+    }
+
+    void MenuDisplayed()
+    {
+        pnlMain.SetActive(true);
         pnlEnjmin.SetActive(false);
+        Debug.Log("caca");
+        sound.PlayEvent("Music_Menu", Camera.main.gameObject);
     }
 
     public void Quit()

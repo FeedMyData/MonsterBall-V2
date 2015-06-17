@@ -540,34 +540,45 @@ public class PlayerControllerF : MonoBehaviour
                 //Feedback
                 foreach (ParticleSystem ps in GetComponentsInChildren<ParticleSystem>())
                 {
-                    if (ps.name == "Particles_charge") ps.Play();
+                    if (ps.name == "Particles_charge" && !ps.isPlaying) ps.Play();
                 }
             }
 
             power = Mathf.Lerp(power, powerMax, chargingShoot);
 
 			// Feedback
+            ParticleSystem psCharge = GetComponentInChildren<ParticleSystem>();
+
+            foreach (ParticleSystem ps in GetComponentsInChildren<ParticleSystem>())
+            {
+                if (ps.name == "Particles_charge")
+                {
+                    psCharge = ps;
+                    break;
+                }
+            }
+
+            if (psCharge.name == "Particles_charge")
+            {
+                psCharge.Play();
+            }
+
 			if (power >= powerMax)
 			{
                 sound.PlayEvent("SFX_Niveks_ChargeAttente", gameObject);
                 sound.StopEvent("SFX_Niveks_ChargeCoup", gameObject, 0);
 
-				foreach (ParticleSystem ps in GetComponentsInChildren<ParticleSystem>()) {
-					if (ps.name == "Particles_charge") ps.startColor = new Color(1,0,1);
-				}
+                if(psCharge.name == "Particles_charge") psCharge.startColor = new Color(1, 0, 1);
+
 			}
 
 			if (power < powerMax && team == GameControllerF.Team.Red)
 			{
-				foreach (ParticleSystem ps in GetComponentsInChildren<ParticleSystem>()) {
-					if (ps.name == "Particles_charge") ps.startColor = Color.red;
-				}
+                if (psCharge.name == "Particles_charge") psCharge.startColor = Color.red;
 			}
 			if (power < powerMax && team == GameControllerF.Team.Blu)
 			{
-				foreach (ParticleSystem ps in GetComponentsInChildren<ParticleSystem>()) {
-					if (ps.name == "Particles_charge") ps.startColor = Color.blue;
-				}
+                if (psCharge.name == "Particles_charge") psCharge.startColor = Color.blue;
 			}
 		}
         
