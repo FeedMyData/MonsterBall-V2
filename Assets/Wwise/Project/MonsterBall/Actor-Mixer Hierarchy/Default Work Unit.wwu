@@ -7896,19 +7896,24 @@
 									<Language>SFX</Language>
 									<AudioFile>Monster Ball Music Test.wav</AudioFile>
 								</AudioFileSource>
+								<AudioFileSource Name="MonsterBall - Master" ID="{34F9AD79-DAD4-4CD9-9FFA-15A7BC18DD65}" ShortID="187485766">
+									<PropertyList>
+										<Property Name="CrossfadeDuration" Type="Real64" Value="5"/>
+										<Property Name="LoopBegin" Type="Real64" Value="7.38134431142669"/>
+										<Property Name="LoopEnd" Type="Real64" Value="36.9193374052771"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>MonsterBall - Master.wav</AudioFile>
+								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
-								<ActiveSource Name="Monster Ball Music Test" ID="{EE1F4BFC-2703-40F0-9115-E9DBF4D2E33A}" Platform="Linked"/>
+								<ActiveSource Name="MonsterBall - Master" ID="{34F9AD79-DAD4-4CD9-9FFA-15A7BC18DD65}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Music_Monstre" ID="{60DE5FB5-A558-4190-B053-D6D64FCA048E}" ShortID="839311491" Type="SoundFX">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>-10</Value>
-									</ValueList>
-								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">

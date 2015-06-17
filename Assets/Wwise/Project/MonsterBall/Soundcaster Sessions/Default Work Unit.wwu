@@ -57,7 +57,7 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="BallePop_Debut" ID="{ED1A6258-6156-451D-8BF3-DD498300F19A}"/>
-							<Value>-15</Value>
+							<Value>-21.8761061946903</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="SS_Air_Fear" ID="{F72E0659-4346-4E1C-A1B1-DAB46A05101E}"/>
