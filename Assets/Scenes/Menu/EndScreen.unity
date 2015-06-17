@@ -2934,6 +2934,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 480821635}
   - 95: {fileID: 480821637}
+  - 114: {fileID: 480821638}
+  - 114: {fileID: 480821636}
   m_Layer: 0
   m_Name: Nivek
   m_TagString: Untagged
@@ -2955,6 +2957,17 @@ Transform:
   - {fileID: 1513599788}
   m_Father: {fileID: 530266178}
   m_RootOrder: 2
+--- !u!114 &480821636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 480821634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 327f6eb847ff00946bcf98c17e0b67bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!95 &480821637
 Animator:
   serializedVersion: 3
@@ -2973,6 +2986,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &480821638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 480821634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c4c8b681a684464d9183c0fe0eff43f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &489939098
 GameObject:
   m_ObjectHideFlags: 0
@@ -7743,7 +7767,6 @@ GameObject:
   m_Component:
   - 224: {fileID: 1377067850}
   - 222: {fileID: 1377067852}
-  - 114: {fileID: 1377067851}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -7774,27 +7797,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: .5, y: .5}
---- !u!114 &1377067851
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1377067849}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: f138f360ff28e734b84032762e1dd159, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
 --- !u!222 &1377067852
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8209,6 +8211,8 @@ GameObject:
   - 4: {fileID: 1573187491}
   - 95: {fileID: 1573187493}
   - 114: {fileID: 1573187492}
+  - 114: {fileID: 1573187495}
+  - 114: {fileID: 1573187494}
   m_Layer: 0
   m_Name: Nivek
   m_TagString: Untagged
@@ -8261,6 +8265,28 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1573187494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1573187490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 327f6eb847ff00946bcf98c17e0b67bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1573187495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1573187490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c4c8b681a684464d9183c0fe0eff43f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1586552259
 GameObject:
   m_ObjectHideFlags: 0
@@ -8480,6 +8506,8 @@ GameObject:
   - 4: {fileID: 1630733652}
   - 95: {fileID: 1630733654}
   - 114: {fileID: 1630733653}
+  - 114: {fileID: 1630733656}
+  - 114: {fileID: 1630733655}
   m_Layer: 0
   m_Name: Nivek
   m_TagString: Untagged
@@ -8532,6 +8560,28 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1630733655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1630733651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 327f6eb847ff00946bcf98c17e0b67bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1630733656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1630733651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c4c8b681a684464d9183c0fe0eff43f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1673975504
 GameObject:
   m_ObjectHideFlags: 0
@@ -9602,6 +9652,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 1925360608}
   - 95: {fileID: 1925360610}
+  - 114: {fileID: 1925360611}
+  - 114: {fileID: 1925360609}
   m_Layer: 0
   m_Name: Nivek
   m_TagString: Untagged
@@ -9623,6 +9675,17 @@ Transform:
   - {fileID: 1146964693}
   m_Father: {fileID: 2021973433}
   m_RootOrder: 2
+--- !u!114 &1925360609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1925360607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 327f6eb847ff00946bcf98c17e0b67bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!95 &1925360610
 Animator:
   serializedVersion: 3
@@ -9641,6 +9704,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1925360611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1925360607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c4c8b681a684464d9183c0fe0eff43f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1948537796 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: bb31dd39cab4abb49a4694481807fc5a, type: 3}
