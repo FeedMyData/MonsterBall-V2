@@ -292,7 +292,7 @@ public class GameControllerF : MonoBehaviour {
         for (int i = 1; i < tabObj.Length; i++)
         {
             KatyPerry = Distance(tabObj[i], tabObj[0]);
-            if (tabObj[i].GetComponent<PlayerControllerF>().IsTouchable())
+            if (tabObj[i].GetComponent<PlayerControllerF>().IsEatable())
             {
                 if (KatyPerry < distance)
                 {

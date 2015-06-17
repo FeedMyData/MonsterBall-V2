@@ -98,6 +98,7 @@ public class PlayerControllerF : MonoBehaviour
     public float durationInvul = 2.0f;
     public float durationInvulSiCoupRecu = 1.0f;
     private bool touchable = true;
+    private bool eatable = true;
     private SpriteRenderer spriteBonus;
     private SpriteRenderer spriteGround;
 
@@ -234,7 +235,25 @@ public class PlayerControllerF : MonoBehaviour
     void Update()
     {
 
-        if (transform.position.y < -3.0f) Respawn();
+        if (transform.position.y < -3.0f)
+        {
+            Respawn();
+            Debug.Log("safe respawn y only");
+        }
+
+        if (
+            (!projectionInGoal && !isEaten) && (
+            transform.position.y > 3.5f || //26
+            transform.position.y < -2.0f ||
+            transform.position.z > 21.0f ||
+            transform.position.z < -21.0f ||
+            transform.position.x > 39.0f || //39
+            transform.position.x < -39.0f)
+        )
+        {
+            Respawn();
+            Debug.Log("saferespawn by position");
+        }
 
         if (bonus != null)
             spriteBonus.enabled = true;
@@ -456,7 +475,7 @@ public class PlayerControllerF : MonoBehaviour
         }
 
         directionMove.y -= gravity;
-        if (!isEaten)
+        if (!isEaten && !projectionInGoal)
         {
             controller.Move(directionMove * Time.deltaTime);
         }
@@ -502,32 +521,52 @@ public class PlayerControllerF : MonoBehaviour
 
         if (Input.GetButton(fire))
         {
-            power = Mathf.Lerp(power, powerMax, chargingShoot);
-
-            if (power >= powerMax)
+            if(!loading)
             {
-                sound.PlayEvent("SFX_Niveks_ChargeAttente",gameObject);
-                sound.StopEvent("SFX_Niveks_ChargeCoup", gameObject,0);
-			}
+                sound.PlayEvent("SFX_Niveks_ChargeCoup",gameObject);
+                loading = true;
+                power = powerMin;
+                chargingShoot = 0;
+                if (GetComponentInChildren<Animator>() && GetComponentInChildren<Animator>().GetBool("isCharging") == false){
+
+                    GetComponentInChildren<Animator>().SetBool("isCharging", true);
+				    foreach(Animator animator in GetComponentsInChildren<Animator>())
+                    {
+                        if(animator.name == "arme")
+                            animator.SetTrigger("grow");
+                    }
+			    }   
+
+                //Feedback
+                foreach (ParticleSystem ps in GetComponentsInChildren<ParticleSystem>())
+                {
+                    if (ps.name == "Particles_charge") ps.Play();
+                }
+            }
+
+            power = Mathf.Lerp(power, powerMax, chargingShoot);
 
 			// Feedback
 			if (power >= powerMax)
 			{
+                sound.PlayEvent("SFX_Niveks_ChargeAttente", gameObject);
+                sound.StopEvent("SFX_Niveks_ChargeCoup", gameObject, 0);
+
 				foreach (ParticleSystem ps in GetComponentsInChildren<ParticleSystem>()) {
-					if (ps.name == "Particles_charge")ps.startColor = new Color(1,0,1);
+					if (ps.name == "Particles_charge") ps.startColor = new Color(1,0,1);
 				}
 			}
 
 			if (power < powerMax && team == GameControllerF.Team.Red)
 			{
 				foreach (ParticleSystem ps in GetComponentsInChildren<ParticleSystem>()) {
-					if (ps.name == "Particles_charge")ps.startColor = Color.red;
+					if (ps.name == "Particles_charge") ps.startColor = Color.red;
 				}
 			}
 			if (power < powerMax && team == GameControllerF.Team.Blu)
 			{
 				foreach (ParticleSystem ps in GetComponentsInChildren<ParticleSystem>()) {
-					if (ps.name == "Particles_charge")ps.startColor = Color.blue;
+					if (ps.name == "Particles_charge") ps.startColor = Color.blue;
 				}
 			}
 		}
@@ -536,7 +575,6 @@ public class PlayerControllerF : MonoBehaviour
         if (Input.GetButtonUp(fire))
         {
             //float valueCirclePlayer = GameControllerF.InCircle(gameObject);
-            
 
             if (loading) // && valueCirclePlayer<0.70f
             {
@@ -549,10 +587,6 @@ public class PlayerControllerF : MonoBehaviour
                     sound.StopEvent("SFX_Niveks_ChargeAttente", gameObject, 50);
                     sound.StopEvent("SFX_Niveks_ChargeCoup", gameObject, 50);
 
-					//Feedback
-					foreach (ParticleSystem ps in GetComponentsInChildren<ParticleSystem>()) {
-							if (ps.name == "Particles_charge") ps.Stop();
-					}
                 }
                 loading = false;
                 if (bonus != null)
@@ -574,6 +608,11 @@ public class PlayerControllerF : MonoBehaviour
                         }
 					}
 
+                    //Feedback
+                    foreach (ParticleSystem ps in GetComponentsInChildren<ParticleSystem>())
+                    {
+                        if (ps.name == "Particles_charge") ps.Stop();
+                    }
 
                     List<GameObject> tabProxi = GameControllerF.PlayerView(this, rangeShoot, angleShoot);
 
@@ -884,8 +923,12 @@ public class PlayerControllerF : MonoBehaviour
 
     public void Respawn()
     {
-        //TODO : Rajouter une composante aléatoire en x et z
         projectionInGoal = false;
+        isEaten = false;
+        if (!GetComponent<CharacterController>().enabled)
+        {
+            GetComponent<CharacterController>().enabled = true;
+        }
         transform.position = respawnPosition;
         StartCoroutine(Intouchable());
     }
@@ -895,15 +938,22 @@ public class PlayerControllerF : MonoBehaviour
         return touchable;
     }
 
+    public bool IsEatable()
+    {
+        return eatable;
+    }
+
     IEnumerator Intouchable()
     {
         //clignote et ignore tous le coups
         touchable = false;
         canHit = false;
+        eatable = false;
         StartCoroutine(Blink());
         yield return new WaitForSeconds(durationInvul);
         canHit = true;
         touchable = true;
+        eatable = true;
     }
 
     public void callIntouchable()
@@ -1015,10 +1065,11 @@ public class PlayerControllerF : MonoBehaviour
 
         for(int i = 1; i < 5; i++) {
 
-            GameObject playerTested = GameControllerF.GetPlayer(i);
-            int positionPlayerTested = playerTested.GetComponent<PlayerControllerF>().positionControllerSelection;
+            PlayerControllerF playerTestedScript = GameControllerF.GetPlayer(i).GetComponent<PlayerControllerF>();
+            int positionPlayerTested = playerTestedScript.positionControllerSelection;
+            GameControllerF.Jersey jerseyPlayeTested = playerTestedScript.jersey;
 
-            if (playerTested.tag != this.tag && positionPlayerTested != 0)
+            if (jerseyPlayeTested != this.jersey && positionPlayerTested != 0)
             {
                 if (positionsAvailable.Contains(positionPlayerTested))
                 {

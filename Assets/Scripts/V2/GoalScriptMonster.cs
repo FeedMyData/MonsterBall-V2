@@ -47,7 +47,7 @@ public class GoalScriptMonster : MonoBehaviour {
         }
     }
 
-    void OnTriggerEnter(Collider other)
+    void OnTriggerStay(Collider other)
     {
         PlayerControllerF player = other.GetComponent<PlayerControllerF>();
 
@@ -81,6 +81,7 @@ public class GoalScriptMonster : MonoBehaviour {
 
                 manager.AddScore(tag);
                 StartCoroutine(DezRez(player.gameObject));
+                player.canCount = false;
 
             }
             //else
@@ -111,7 +112,6 @@ public class GoalScriptMonster : MonoBehaviour {
     IEnumerator DezRez(GameObject player)
     {
         PlayerControllerF playerController = player.GetComponent<PlayerControllerF>();
-        playerController.canCount = false;
         TeleportationF telPlayer = player.GetComponentInChildren<TeleportationF>();
         telPlayer.InstantTP(true);
         telPlayer.SetTeleportation(false);

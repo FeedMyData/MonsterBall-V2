@@ -254,7 +254,7 @@ public class MonsterControllerF : MonoBehaviour {
                 if (proxiPlayer != null)
                 {
 
-                    if (proxiPlayer.GetComponent<PlayerControllerF>().IsTouchable() && !eatPlayer)
+                    if (proxiPlayer.GetComponent<PlayerControllerF>().IsEatable() && !eatPlayer)
                     {
                         playerAte = proxiPlayer;
 
@@ -424,7 +424,7 @@ public class MonsterControllerF : MonoBehaviour {
         Vector3 rotationToGoal = Vector3.zero;
         body.velocity = Vector3.zero;
 
-        if(eatPlayer)
+        if (eatPlayer && !monsterModeCharge)
         {
             //Rotation progressive vers le but
             //Debug.Log(Mathf.Abs(((rotateToGoal - Time.time)/ durationEatingPlayer)-1)+ " "+DirectionMonster+" "+goal.position);
@@ -856,53 +856,58 @@ public class MonsterControllerF : MonoBehaviour {
     IEnumerator EatingPlayer(GameObject player)
     {
 
-        eatPlayer = true;
         StartCoroutine(player.GetComponent<PlayerControllerF>().Vibration(player.GetComponent<PlayerControllerF>().numController, player.GetComponent<PlayerControllerF>().powerVibrJoueurMange, player.GetComponent<PlayerControllerF>().durationJoueurMange));
         player.GetComponent<PlayerControllerF>().isEaten = true;
         player.GetComponent<CharacterController>().enabled = false;
         player.GetComponent<Collider>().enabled = false;
         player.GetComponent<PlayerControllerF>().joueurMange++;
-        //faire disparaitre le joueur, jouer l'anim du monstre qui mache et téléporter le joueur dans le monstre et le stun
-        player.transform.position = this.transform.position;
-        //player.GetComponent<Renderer>().enabled = false;
-        //player.GetComponentInChildren<SkinnedMeshRenderer>().enabled = false;
-        foreach (Renderer renderer in player.GetComponentsInChildren<Renderer>()) {
-            if (renderer.name == "arme" || renderer.name == "Nivek" || renderer.name == "Circle") { renderer.enabled = false; }
-        }
-        player.GetComponent<PlayerControllerF>().callStun(durationEatingPlayer);
-
 
         if (player.GetComponent<PlayerControllerF>().team == GameControllerF.Team.Blu)
             goal = GameControllerF.GetPosBluGoal();
         else
             goal = GameControllerF.GetPosRedGoal();
 
-		if (!monsterModeCharge) {
+        eatPlayer = true;
 
-			if (GetComponentInChildren<Animator> ())
-				GetComponentInChildren<Animator> ().SetTrigger ("spit");
+        if (!monsterModeCharge)
+        {
 
-			//feedbacks chewing
+
+            //faire disparaitre le joueur, jouer l'anim du monstre qui mache et téléporter le joueur dans le monstre et le stun
+            player.transform.position = this.transform.position;
+            //player.GetComponent<Renderer>().enabled = false;
+            //player.GetComponentInChildren<SkinnedMeshRenderer>().enabled = false;
+            foreach (Renderer renderer in player.GetComponentsInChildren<Renderer>())
+            {
+                if (renderer.name == "arme" || renderer.name == "Nivek" || renderer.name == "Circle") { renderer.enabled = false; }
+            }
+            player.GetComponent<PlayerControllerF>().callStun(durationEatingPlayer);
+
+            if (GetComponentInChildren<Animator>())
+                GetComponentInChildren<Animator>().SetTrigger("spit");
+
+            //feedbacks chewing
             saliveDroite.gameObject.SetActive(false);
             saliveDroite.gameObject.SetActive(true);
-			saliveDroite.Play ();
+            saliveDroite.Play();
             saliveGauche.gameObject.SetActive(false);
             saliveGauche.gameObject.SetActive(true);
-			saliveGauche.Play ();
+            saliveGauche.Play();
 
-			yield return new WaitForSeconds (durationEatingPlayer);
+            yield return new WaitForSeconds(durationEatingPlayer);
 
-			saliveDroite.Stop ();
-			saliveGauche.Stop ();
+            saliveDroite.Stop();
+            saliveGauche.Stop();
 
-			//Faire réapparaitre le joueur
-			//player.GetComponent<Renderer>().enabled = true;
-			//player.GetComponentInChildren<SkinnedMeshRenderer>().enabled = true;
-		}
-		else currentNumberOfChargeEatenPlayers++;
-        foreach (Renderer renderer in player.GetComponentsInChildren<Renderer>())
+            foreach (Renderer renderer in player.GetComponentsInChildren<Renderer>())
+            {
+                if (renderer.name == "arme" || renderer.name == "Nivek" || renderer.name == "Circle") { renderer.enabled = true; }
+            }
+
+        }
+        else
         {
-            if (renderer.name == "arme" || renderer.name == "Nivek" || renderer.name == "Circle") { renderer.enabled = true; }
+            currentNumberOfChargeEatenPlayers++;
         }
 
         if (player == playerAte)
@@ -912,6 +917,11 @@ public class MonsterControllerF : MonoBehaviour {
             player.GetComponent<PlayerControllerF>().FlyAway();
 
         }
+        else
+        {
+            Debug.Log("mangé mais pas envoyé (player mangé et envoyé pas le même ?)");
+        }
+
 
         yield return new WaitForSeconds(0.1f);
 
@@ -924,9 +934,11 @@ public class MonsterControllerF : MonoBehaviour {
         }*/
 
         eatPlayer = false;
+
         player.GetComponent<PlayerControllerF>().isEaten = false;
         player.GetComponent<CharacterController>().enabled = true;
         player.GetComponent<Collider>().enabled = true;
+
     }
 
     IEnumerator DisableMagnet()

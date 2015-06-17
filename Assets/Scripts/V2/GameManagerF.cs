@@ -47,6 +47,12 @@ public class GameManagerF : MonoBehaviour {
     private TwitterFeed twitterScript;
 	private int screenshot;
 
+    private float timeBeforeEndMenu = 2.0f;
+    //public RawImage blackScreen;
+    private Texture2D whiteScreen;
+    private Color colorGUI;
+    private bool isScreenFading = false;
+
     void Start()
     {
         blueScoreTxt = GameControllerF.GetBlueScoreTxt();
@@ -63,6 +69,11 @@ public class GameManagerF : MonoBehaviour {
         chooseYourplayer.enabled = true;
 
         twitterScript = GameObject.Find("tweets").GetComponent<TwitterFeed>();
+
+        //if (blackScreen)
+        //{
+        //    blackScreen.gameObject.SetActive(false);
+        //}
 
         GameControllerF.GetMonster().GetComponent<MonsterControllerF>().ballSpotlight.SetActive(false);
         GameControllerF.GetMonster().GetComponent<MonsterControllerF>().monsterSpotlight.SetActive(false);
@@ -105,7 +116,8 @@ public class GameManagerF : MonoBehaviour {
 					WhoWin();
 					RewardPlayer();
 
-					Application.LoadLevel(2);
+                    StartCoroutine(LaunchEndMenu());
+                    //Application.LoadLevel(2);
 				}
 				
 			}
@@ -243,6 +255,64 @@ public class GameManagerF : MonoBehaviour {
         
         
 	}
+
+    IEnumerator LaunchEndMenu()
+    {
+        AsyncOperation aop = Application.LoadLevelAsync(2);
+        aop.allowSceneActivation = false;
+        //StartCoroutine(FadeToBlack(timeBeforeEndMenu));
+        StartCoroutine(FadeToWhite(timeBeforeEndMenu - 0.1f));
+        yield return new WaitForSeconds(timeBeforeEndMenu);
+        aop.allowSceneActivation = true;
+    }
+
+    void OnGUI()
+    {
+        if (isScreenFading)
+        {
+            GUI.color = colorGUI;
+            GUI.DrawTexture(new Rect(0, 0, Screen.width, Screen.height), whiteScreen, ScaleMode.StretchToFill);
+        }
+    }
+
+    IEnumerator FadeToWhite(float time)
+    {
+        whiteScreen = new Texture2D(1, 1);
+        Color bColor = new Color(1, 1, 1, 0);
+        Color eColor = new Color(1, 1, 1, 1);
+        whiteScreen.SetPixel(0, 0, eColor);
+        whiteScreen.Apply();
+        float timer = 0.0f;
+        isScreenFading = true;
+        while (timer < time)
+        {
+            colorGUI = Color.Lerp(bColor, eColor, timer / time);
+            timer += Time.deltaTime;
+            yield return null;
+        }
+    }
+
+    //IEnumerator FadeToBlack(float time)
+    //{
+
+    //    float timer = 0.0f;
+
+    //    Color bColor = new Color(1, 1, 1, 0);
+    //    Color eColor = new Color(1, 1, 1, 1);
+
+    //    blackScreen.gameObject.SetActive(true);
+    //    blackScreen.enabled = true;
+    //    blackScreen.color = bColor;
+
+    //    //yield return null;
+    //    while (timer < time)
+    //    {
+    //        blackScreen.color = Color.Lerp(bColor, eColor, timer / time);
+    //        timer += Time.deltaTime;
+    //        yield return null;
+    //    }
+
+    //}
 
     IEnumerator matchDuration()
     {
