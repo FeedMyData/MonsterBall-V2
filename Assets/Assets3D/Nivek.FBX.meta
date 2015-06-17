@@ -2010,6 +2010,14 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
+      - time: .0168774631
+        functionName: EmitCryParticle
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 327f6eb847ff00946bcf98c17e0b67bf,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask:
       - path: 
         weight: 1

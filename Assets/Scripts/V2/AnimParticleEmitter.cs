@@ -19,4 +19,11 @@ public class AnimParticleEmitter : MonoBehaviour {
             if (ps.name == "Course") ps.Play();
         }
 	}
+	public void EmitCryParticle(){
+		
+		foreach (ParticleSystem ps in GetComponentsInChildren<ParticleSystem>())
+		{
+			if (ps.name == "Larme" || ps.name == "LarmeGauche") ps.Play();
+		}
+	}
 }
