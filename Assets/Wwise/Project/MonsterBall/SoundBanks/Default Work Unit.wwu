@@ -21,7 +21,6 @@
 						<ObjectRef Name="Music_Monstre" ID="{F88A1249-59AA-4491-95A9-9E5EA2010529}" WorkUnitID="{D899008C-EE7F-4475-814E-BB3DC86CD141}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="SFX_Buzz_DebutMatch" ID="{46CA944A-F972-4848-BE5B-A9112FBE01BF}" WorkUnitID="{D899008C-EE7F-4475-814E-BB3DC86CD141}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Anim_EndMatch_WinAlt" ID="{1E9D6350-5425-4A35-9D8F-BBA71F59E53D}" WorkUnitID="{D899008C-EE7F-4475-814E-BB3DC86CD141}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="VX_Comment_FinMatch" ID="{76D58B56-EC7E-4963-8951-62A8B4BF9FC7}" WorkUnitID="{D899008C-EE7F-4475-814E-BB3DC86CD141}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="SFX_Niveks_CoupFaible" ID="{A2BB9F56-E31C-4C23-9C9A-5C9364E13726}" WorkUnitID="{D899008C-EE7F-4475-814E-BB3DC86CD141}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Public_Intensification" ID="{A6B73459-D8BB-49B4-9183-797CC5E46245}" WorkUnitID="{D899008C-EE7F-4475-814E-BB3DC86CD141}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Music_Menu" ID="{CF6C4B60-167B-47DE-B567-E8CA62DC3777}" WorkUnitID="{D899008C-EE7F-4475-814E-BB3DC86CD141}" Filter="7" Origin="Manual"/>
@@ -40,14 +39,9 @@
 						<ObjectRef Name="Public_Normal" ID="{51F24495-953D-43F8-B9CE-000C3412ECD4}" WorkUnitID="{D899008C-EE7F-4475-814E-BB3DC86CD141}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Menu_Valid" ID="{9F27E19C-334F-44DD-ACB6-BC14292F93AA}" WorkUnitID="{D899008C-EE7F-4475-814E-BB3DC86CD141}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Transfo_BalleMonstre" ID="{C4E685A6-7FBC-4AF3-A69E-E6FF1F3FD07E}" WorkUnitID="{D899008C-EE7F-4475-814E-BB3DC86CD141}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="VX_Niveks_FinMatchPerdant" ID="{08ABACA6-8E33-42D3-AC3E-029F3685182C}" WorkUnitID="{D899008C-EE7F-4475-814E-BB3DC86CD141}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="SFX_Niveks_CoupFort" ID="{54F550B1-1B00-498E-B5A4-48D17A9D3876}" WorkUnitID="{D899008C-EE7F-4475-814E-BB3DC86CD141}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="SFX_Monstre_Course" ID="{DCB984B7-6D28-4347-BDDB-3960B62DCBDA}" WorkUnitID="{D899008C-EE7F-4475-814E-BB3DC86CD141}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Transfo_MonstreBalle" ID="{442A32BF-1890-48CE-B451-234FCD168687}" WorkUnitID="{D899008C-EE7F-4475-814E-BB3DC86CD141}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="VX_Niveks_Victoire" ID="{6532A9D5-9BB8-4F92-BD33-D545A7D3BC6D}" WorkUnitID="{D899008C-EE7F-4475-814E-BB3DC86CD141}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="VX_Niveks_DebutMatch" ID="{85DA7BDD-41CA-408C-ABB1-D2F706102B52}" WorkUnitID="{D899008C-EE7F-4475-814E-BB3DC86CD141}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="VX_Niveks_FinMatchGagnant" ID="{45D991DF-3AC9-45C2-8889-D8895D97AD70}" WorkUnitID="{D899008C-EE7F-4475-814E-BB3DC86CD141}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="VX_Niveks_Defaite" ID="{C8D7D3E4-9958-487A-BB34-71176ECF6831}" WorkUnitID="{D899008C-EE7F-4475-814E-BB3DC86CD141}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="SFX_But" ID="{60060BE8-4880-46D8-9497-E296E70750F5}" WorkUnitID="{D899008C-EE7F-4475-814E-BB3DC86CD141}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="VX_Balle_But" ID="{142EAEF2-59BF-46D3-996E-4462915EA747}" WorkUnitID="{D899008C-EE7F-4475-814E-BB3DC86CD141}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="VX_Monstre_Course" ID="{BE98E6F5-D868-4FF7-B2CA-FDBF3A1416BF}" WorkUnitID="{D899008C-EE7F-4475-814E-BB3DC86CD141}" Filter="7" Origin="Manual"/>

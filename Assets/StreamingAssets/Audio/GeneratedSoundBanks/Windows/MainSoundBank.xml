@@ -29,7 +29,6 @@
 				<Event Id="3607059188" Name="SFX_Buzz_DebutMatch"/>
 				<Event Id="548336696" Name="SFX_Fin"/>
 				<Event Id="2593163185" Name="SFX_Monstre_Cloison"/>
-				<Event Id="3040534629" Name="SFX_Monstre_Course"/>
 				<Event Id="3767868511" Name="SFX_Monstre_Grow"/>
 				<Event Id="3534940551" Name="SFX_Niveks_ChargeCoup"/>
 				<Event Id="2725983128" Name="SFX_Niveks_CoupFaible"/>
@@ -44,7 +43,6 @@
 				<Event Id="43799444" Name="VX_Balle_Coup"/>
 				<Event Id="2887782118" Name="VX_Balle_Course"/>
 				<Event Id="2676280931" Name="VX_Balle_RemiseEnJeu"/>
-				<Event Id="682388778" Name="VX_Comment_FinMatch"/>
 				<Event Id="3702120541" Name="VX_Comment_MONSTERBALL"/>
 				<Event Id="3644313994" Name="VX_Monstre_Course"/>
 				<Event Id="3004362387" Name="VX_Monstre_Crache"/>
@@ -53,13 +51,9 @@
 				<Event Id="3212082402" Name="VX_Niveks_ButPerdant"/>
 				<Event Id="2143267510" Name="VX_Niveks_Coup"/>
 				<Event Id="2649120174" Name="VX_Niveks_DebutMatch"/>
-				<Event Id="2290392639" Name="VX_Niveks_Defaite"/>
-				<Event Id="1123955361" Name="VX_Niveks_FinMatchGagnant"/>
-				<Event Id="3790591353" Name="VX_Niveks_FinMatchPerdant"/>
 				<Event Id="3955264645" Name="VX_Niveks_Frappe"/>
 				<Event Id="4235626026" Name="VX_Niveks_ImpactBut"/>
 				<Event Id="3251995241" Name="Vx_Niveks_Poursuivi"/>
-				<Event Id="3411820422" Name="VX_Niveks_Victoire"/>
 				<Event Id="3784437905" Name="Vx_Niveks_Wilhem"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
@@ -81,7 +75,7 @@
 				</File>
 				<File Id="22050384" Language="SFX">
 					<ShortName>Monster Ball Music Test.wav</ShortName>
-					<Path>SFX\Monster Ball Music Test_B3FC2AD5.wem</Path>
+					<Path>SFX\Monster Ball Music Test_EDBC9AB1.wem</Path>
 				</File>
 				<File Id="24715378" Language="SFX">
 					<ShortName>CoupRecu\VOIX_Niveks_CoupRecu_06.wav</ShortName>
@@ -90,6 +84,10 @@
 				<File Id="49112111" Language="SFX">
 					<ShortName>SFX_Balle_pop1_02.wav</ShortName>
 					<Path>SFX\SFX_Balle_pop1_02_E8D3B588.wem</Path>
+				</File>
+				<File Id="61057859" Language="SFX">
+					<ShortName>Victoire\VOIX_Niveks_Victoire_02.wav</ShortName>
+					<Path>SFX\Victoire\VOIX_Niveks_Victoire_02_DDC98EF4.wem</Path>
 				</File>
 				<File Id="67887004" Language="SFX">
 					<ShortName>Impact\VOIX_Balle_Impact_05.wav</ShortName>
@@ -126,6 +124,10 @@
 				<File Id="90760917" Language="SFX">
 					<ShortName>Yeah\VOIX_Niveks_Yeah_05.wav</ShortName>
 					<Path>SFX\Yeah\VOIX_Niveks_Yeah_05_DDC98EF4.wem</Path>
+				</File>
+				<File Id="103015833" Language="SFX">
+					<ShortName>Defaite\Nivek1_22-04.wav</ShortName>
+					<Path>SFX\Defaite\Nivek1_22-04_34EA22A6.wem</Path>
 				</File>
 				<File Id="104051743" Language="SFX">
 					<ShortName>SFX_Niveks_CoupBatte_Fort.wav</ShortName>
@@ -211,6 +213,10 @@
 					<ShortName>Remise en jeu\VOIX_Balle_RemiseEnJeu_03.wav</ShortName>
 					<Path>SFX\Remise en jeu\VOIX_Balle_RemiseEnJeu_03_DDC98EF4.wem</Path>
 				</File>
+				<File Id="218626623" Language="SFX">
+					<ShortName>Victoire\VOIX_Niveks_Victoire_01.wav</ShortName>
+					<Path>SFX\Victoire\VOIX_Niveks_Victoire_01_DDC98EF4.wem</Path>
+				</File>
 				<File Id="223544869" Language="SFX">
 					<ShortName>SFX_Niveks_CoupBatte_Fort.wav</ShortName>
 					<Path>SFX\SFX_Niveks_CoupBatte_Fort_4093B652.wem</Path>
@@ -238,6 +244,10 @@
 				<File Id="246759114" Language="SFX">
 					<ShortName>Remise en jeu\VOIX_Balle_RemiseEnJeu_04.wav</ShortName>
 					<Path>SFX\Remise en jeu\VOIX_Balle_RemiseEnJeu_04_DDC98EF4.wem</Path>
+				</File>
+				<File Id="248479084" Language="SFX">
+					<ShortName>Defaite\Nivek1_22-02.wav</ShortName>
+					<Path>SFX\Defaite\Nivek1_22-02_109B14C9.wem</Path>
 				</File>
 				<File Id="249786872" Language="SFX">
 					<ShortName>SFX_Electric_Spark-07.wav</ShortName>
@@ -567,6 +577,10 @@
 					<ShortName>Footsteps\SFX_Niveks_Footsteps_01-15.wav</ShortName>
 					<Path>SFX\Footsteps\SFX_Niveks_Footsteps_01-15_DDC98EF4.wem</Path>
 				</File>
+				<File Id="669153844" Language="SFX">
+					<ShortName>Defaite\Nivek1_21-01.wav</ShortName>
+					<Path>SFX\Defaite\Nivek1_21-01_FC2ADA71.wem</Path>
+				</File>
 				<File Id="675542163" Language="SFX">
 					<ShortName>Footsteps\SFX_Niveks_Footsteps_01-05.wav</ShortName>
 					<Path>SFX\Footsteps\SFX_Niveks_Footsteps_01-05_DDC98EF4.wem</Path>
@@ -622,6 +636,10 @@
 				<File Id="721632200" Language="SFX">
 					<ShortName>RecracheJoueur\VOIX_Monstre_CracheJoueur_03.wav</ShortName>
 					<Path>SFX\RecracheJoueur\VOIX_Monstre_CracheJoueur_03_DDCE2A62.wem</Path>
+				</File>
+				<File Id="722109230" Language="SFX">
+					<ShortName>Victoire\VOIX_Niveks_Victoire_04.wav</ShortName>
+					<Path>SFX\Victoire\VOIX_Niveks_Victoire_04_DDC98EF4.wem</Path>
 				</File>
 				<File Id="732911404" Language="SFX">
 					<ShortName>CoupBalle\VOIX_Niveks_CoupBalle_14.wav</ShortName>
@@ -707,6 +725,10 @@
 					<ShortName>SFX_Balle_pop1_03.wav</ShortName>
 					<Path>SFX\SFX_Balle_pop1_03_D09C55CB.wem</Path>
 				</File>
+				<File Id="819679262" Language="SFX">
+					<ShortName>Victoire\VOIX_Niveks_Victoire_03.wav</ShortName>
+					<Path>SFX\Victoire\VOIX_Niveks_Victoire_03_DDC98EF4.wem</Path>
+				</File>
 				<File Id="824756831" Language="SFX">
 					<ShortName>SFX_Balle_pop1_01.wav</ShortName>
 					<Path>SFX\SFX_Balle_pop1_01_29AC82A9.wem</Path>
@@ -759,6 +781,10 @@
 					<ShortName>Music_Monstre.wav</ShortName>
 					<Path>SFX\Music_Monstre_8BD76F1E.wem</Path>
 				</File>
+				<File Id="883193514" Language="SFX">
+					<ShortName>Defaite\Nivek1_21-02.wav</ShortName>
+					<Path>SFX\Defaite\Nivek1_21-02_92854E1D.wem</Path>
+				</File>
 				<File Id="887027585" Language="SFX">
 					<ShortName>RecracheJoueur\VOIX_Monstre_CracheJoueur_07.wav</ShortName>
 					<Path>SFX\RecracheJoueur\VOIX_Monstre_CracheJoueur_07_364C5C9E.wem</Path>
@@ -774,6 +800,10 @@
 				<File Id="893370565" Language="SFX">
 					<ShortName>MarqueBut\VOIX_Niveks_But_05.wav</ShortName>
 					<Path>SFX\MarqueBut\VOIX_Niveks_But_05_DDC98EF4.wem</Path>
+				</File>
+				<File Id="898269870" Language="SFX">
+					<ShortName>Defaite\Nivek1_21-06.wav</ShortName>
+					<Path>SFX\Defaite\Nivek1_21-06_E5ED6B31.wem</Path>
 				</File>
 				<File Id="901383993" Language="SFX">
 					<ShortName>Impact\VOIX_Balle_Impact_12.wav</ShortName>
