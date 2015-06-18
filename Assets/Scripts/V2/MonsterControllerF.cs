@@ -144,6 +144,8 @@ public class MonsterControllerF : MonoBehaviour {
     //public delegate void OnClickHit();
     //public event OnClickHit OnClickHitEvent;
 
+    private bool respawning = false;
+
 	// Use this for initialization
 	void Start () {
 	    body = GetComponent<Rigidbody>();
@@ -282,7 +284,7 @@ public class MonsterControllerF : MonoBehaviour {
             }
         }
 
-        if (!transforming && !monsterForm && wrath >= wrathMax && GameControllerF.InCircle(this.gameObject)<safeTransform)
+        if (!transforming && !monsterForm && wrath >= wrathMax && GameControllerF.InCircle(this.gameObject)<safeTransform && !respawning)
         {
             StartCoroutine(NotHappy());
         }
@@ -588,6 +590,7 @@ public class MonsterControllerF : MonoBehaviour {
 
     public void RespawnBall()
     {
+        respawning = true;
         if (GetComponentInChildren<TeleportationF>())
         {
             GetComponentInChildren<TeleportationF>().InstantTP(true);
@@ -651,7 +654,7 @@ public class MonsterControllerF : MonoBehaviour {
         }
         GetComponentInChildren<TeleportationF>().SetTeleportation(false);
         StartCoroutine(Intouchable());
-
+        respawning = false;
     }
 
     public void SafeRespawn()

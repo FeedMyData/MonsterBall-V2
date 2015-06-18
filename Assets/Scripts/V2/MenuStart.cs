@@ -31,6 +31,7 @@ public class MenuStart : MonoBehaviour {
 
         if (GameControllerF.IsFirstLaunched())
         {
+            GameControllerF.SetIsFirstLaunched(false);
             ButtonPlay.GetComponent<Button>().interactable = false;
             ButtonBack.GetComponent<Button>().interactable = false;
             ButtonCredits.GetComponent<Button>().interactable = false;
@@ -115,7 +116,6 @@ public class MenuStart : MonoBehaviour {
 
     IEnumerator EnjminScreen()
     {
-        GameControllerF.SetIsFirstLaunched(false);
         yield return new WaitForSeconds(timePanelEnjmin);
         pnlMain.SetActive(true);
         StartCoroutine(FadeTo(0.0f, durationFade));

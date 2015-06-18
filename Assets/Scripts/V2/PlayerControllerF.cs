@@ -583,7 +583,7 @@ public class PlayerControllerF : MonoBehaviour
 		}
         
 
-        if (Input.GetButtonUp(fire))
+        if (Input.GetButtonUp(fire) || (!Input.GetButton(fire) && loading))
         {
             //float valueCirclePlayer = GameControllerF.InCircle(gameObject);
 

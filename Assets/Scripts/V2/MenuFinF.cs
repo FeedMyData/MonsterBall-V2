@@ -23,6 +23,11 @@ public class MenuFinF : MonoBehaviour {
         GamePad.SetVibration((PlayerIndex)2, 0f, 0f);
         GamePad.SetVibration((PlayerIndex)3, 0f, 0f);
 
+        if (GameControllerF.IsFirstLaunched())
+        {
+            GameControllerF.SetIsFirstLaunched(false);
+        }
+
         sound = GetComponent<SoundManager>();
         sound.LoadBank();
 

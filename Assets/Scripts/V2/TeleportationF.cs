@@ -47,7 +47,6 @@ public class TeleportationF : MonoBehaviour {
     public void InstantTP(bool up)
     {
         actualValueShaderTP = ballMaterial[0].GetFloat("_alpha_slider");
-        Debug.Log("tpinstant " + ballMaterial[0].GetFloat("_alpha_slider"));
 
         for (int i = 0; i < ballMaterial.Length; i++)
         {
