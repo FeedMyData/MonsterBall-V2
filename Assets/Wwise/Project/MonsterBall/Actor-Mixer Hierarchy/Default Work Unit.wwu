@@ -5651,97 +5651,6 @@
 										</Sound>
 									</ChildrenList>
 								</RandomSequenceContainer>
-								<RandomSequenceContainer Name="Victoire" ID="{A93D5F3B-FCA0-4FA7-B376-C153E1B5F133}" ShortID="364156290">
-									<PropertyList>
-										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="3"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<Sound Name="VOIX_Niveks_Victoire_01" ID="{B9559EBE-F5AF-49D1-9337-C5DC6C566075}" ShortID="642899083" Type="SoundFX">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="VOIX_Niveks_Victoire_01" ID="{DEE51DDA-0BE9-4FD4-9609-148B02C8A813}" ShortID="218626623">
-													<Language>SFX</Language>
-													<AudioFile>Victoire\VOIX_Niveks_Victoire_01.wav</AudioFile>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="VOIX_Niveks_Victoire_01" ID="{DEE51DDA-0BE9-4FD4-9609-148B02C8A813}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="VOIX_Niveks_Victoire_02" ID="{2092E0CF-207D-4FD4-9F94-67A6ECDD6B12}" ShortID="274267805" Type="SoundFX">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="VOIX_Niveks_Victoire_02" ID="{4474123C-DB74-4322-983C-E0B37295837D}" ShortID="61057859">
-													<Language>SFX</Language>
-													<AudioFile>Victoire\VOIX_Niveks_Victoire_02.wav</AudioFile>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="VOIX_Niveks_Victoire_02" ID="{4474123C-DB74-4322-983C-E0B37295837D}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="VOIX_Niveks_Victoire_03" ID="{1BC5C3A0-0F9C-45FF-820A-585674F98C5E}" ShortID="329068069" Type="SoundFX">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="VOIX_Niveks_Victoire_03" ID="{CC18EC0A-6C93-4F64-9DBF-05B15764F531}" ShortID="819679262">
-													<Language>SFX</Language>
-													<AudioFile>Victoire\VOIX_Niveks_Victoire_03.wav</AudioFile>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="VOIX_Niveks_Victoire_03" ID="{CC18EC0A-6C93-4F64-9DBF-05B15764F531}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="VOIX_Niveks_Victoire_04" ID="{915CD035-A19E-413A-A9D8-00839D8B0156}" ShortID="886788755" Type="SoundFX">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="VOIX_Niveks_Victoire_04" ID="{64E6C179-CF7B-44CF-8CAD-27FB24C6A630}" ShortID="722109230">
-													<Language>SFX</Language>
-													<AudioFile>Victoire\VOIX_Niveks_Victoire_04.wav</AudioFile>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="VOIX_Niveks_Victoire_04" ID="{64E6C179-CF7B-44CF-8CAD-27FB24C6A630}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-									</ChildrenList>
-								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="VictoireChant" ID="{96843A31-5DE9-4F04-A1FD-8D0E2C473FFF}" ShortID="967398781">
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -6063,13 +5972,8 @@
 										</Sound>
 									</ChildrenList>
 								</RandomSequenceContainer>
-								<RandomSequenceContainer Name="Defaite" ID="{11A65BF9-308F-40FA-8281-FDCF156EF8F5}" ShortID="854808763">
+								<ActorMixer Name="Tableau Fin" ID="{5A7E8EEC-8A2C-4DBD-B90F-B9B2F7312092}" ShortID="850883397">
 									<PropertyList>
-										<Property Name="Lowpass" Type="int16">
-											<ValueList>
-												<Value>28</Value>
-											</ValueList>
-										</Property>
 										<Property Name="OverrideEffect" Type="bool" Value="True"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
@@ -6092,7 +5996,430 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="Nivek1_21-01" ID="{B3AD22C6-331F-42E1-AD92-D4B3E9743C50}" ShortID="357407795" Type="SoundFX">
+										<RandomSequenceContainer Name="Defaite" ID="{11A65BF9-308F-40FA-8281-FDCF156EF8F5}" ShortID="854808763">
+											<PropertyList>
+												<Property Name="Lowpass" Type="int16">
+													<ValueList>
+														<Value>28</Value>
+													</ValueList>
+												</Property>
+												<Property Name="PositioningType" Type="int16" Value="1"/>
+												<Property Name="Priority" Type="int16">
+													<ValueList>
+														<Value>100</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+												</Reference>
+												<Reference Name="Effect0" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
+													<ObjectRef Name="Dialog_Too_Quiet" ID="{F9C77BF1-1CCC-415B-B93F-B048979CA620}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+												</Reference>
+												<Reference Name="Effect1" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+													<ObjectRef Name="Room_Small" ID="{577F1466-A63B-47F7-98BD-C56E433F8B5D}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Niveks" ID="{61A147E8-AD36-479A-8A9B-0755B4FE6CC9}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="Nivek1_21-01" ID="{B3AD22C6-331F-42E1-AD92-D4B3E9743C50}" ShortID="357407795" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Nivek1_21-01" ID="{F5BF4E98-D892-4028-85FC-FDD8284D7D04}" ShortID="669153844">
+															<PropertyList>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.248711559334298"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Defaite\Nivek1_21-01.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Nivek1_21-01" ID="{F5BF4E98-D892-4028-85FC-FDD8284D7D04}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Nivek1_21-02" ID="{004AF063-738C-4706-8119-E0A2A8E4B1F6}" ShortID="727442198" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Nivek1_21-02" ID="{2AD308EF-7DE6-4F5C-B104-2EAE51A3A4C6}" ShortID="883193514">
+															<PropertyList>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.757284129281235"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Defaite\Nivek1_21-02.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Nivek1_21-02" ID="{2AD308EF-7DE6-4F5C-B104-2EAE51A3A4C6}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Nivek1_21-06" ID="{2C12BE37-D596-4B50-A2BB-C1BD38110B8A}" ShortID="494975897" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Nivek1_21-06" ID="{8C25FAEB-FF84-4057-B4CB-9F7F61FF64B6}" ShortID="898269870">
+															<PropertyList>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.747681289194404"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.180933550410034"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Defaite\Nivek1_21-06.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Nivek1_21-06" ID="{8C25FAEB-FF84-4057-B4CB-9F7F61FF64B6}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Nivek1_22-02" ID="{D987CF93-3A49-40BE-A410-2C04CACE103F}" ShortID="499364144" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Nivek1_22-02" ID="{4CCE7A8B-56C5-454E-8E29-6D839CFBE17E}" ShortID="248479084">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.612646406174626"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.860742884708152"/>
+																<Property Name="TrimEnd" Type="Real64" Value="5.73659816690786"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Defaite\Nivek1_22-02.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Nivek1_22-02" ID="{4CCE7A8B-56C5-454E-8E29-6D839CFBE17E}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Nivek1_22-04" ID="{A6DAF206-34FC-4D02-9427-5AB1857805B2}" ShortID="358117194" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Nivek1_22-04" ID="{BD1E6513-69EB-41B6-83CA-08914B48E51B}" ShortID="103015833">
+															<PropertyList>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.293588036661842"/>
+																<Property Name="TrimEnd" Type="Real64" Value="4.74316256632899"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Defaite\Nivek1_22-04.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Nivek1_22-04" ID="{BD1E6513-69EB-41B6-83CA-08914B48E51B}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="Victoire" ID="{A93D5F3B-FCA0-4FA7-B376-C153E1B5F133}" ShortID="364156290">
+											<PropertyList>
+												<Property Name="PositioningType" Type="int16" Value="1"/>
+												<Property Name="Priority" Type="int16">
+													<ValueList>
+														<Value>100</Value>
+													</ValueList>
+												</Property>
+												<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="3"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+												</Reference>
+												<Reference Name="Effect0" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
+													<ObjectRef Name="Dialog_Too_Quiet" ID="{F9C77BF1-1CCC-415B-B93F-B048979CA620}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Niveks" ID="{61A147E8-AD36-479A-8A9B-0755B4FE6CC9}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="VOIX_Niveks_Victoire_01" ID="{B9559EBE-F5AF-49D1-9337-C5DC6C566075}" ShortID="642899083" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="VOIX_Niveks_Victoire_01" ID="{DEE51DDA-0BE9-4FD4-9609-148B02C8A813}" ShortID="218626623">
+															<Language>SFX</Language>
+															<AudioFile>Victoire\VOIX_Niveks_Victoire_01.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="VOIX_Niveks_Victoire_01" ID="{DEE51DDA-0BE9-4FD4-9609-148B02C8A813}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="VOIX_Niveks_Victoire_02" ID="{2092E0CF-207D-4FD4-9F94-67A6ECDD6B12}" ShortID="274267805" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="VOIX_Niveks_Victoire_02" ID="{4474123C-DB74-4322-983C-E0B37295837D}" ShortID="61057859">
+															<Language>SFX</Language>
+															<AudioFile>Victoire\VOIX_Niveks_Victoire_02.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="VOIX_Niveks_Victoire_02" ID="{4474123C-DB74-4322-983C-E0B37295837D}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="VOIX_Niveks_Victoire_03" ID="{1BC5C3A0-0F9C-45FF-820A-585674F98C5E}" ShortID="329068069" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="VOIX_Niveks_Victoire_03" ID="{CC18EC0A-6C93-4F64-9DBF-05B15764F531}" ShortID="819679262">
+															<Language>SFX</Language>
+															<AudioFile>Victoire\VOIX_Niveks_Victoire_03.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="VOIX_Niveks_Victoire_03" ID="{CC18EC0A-6C93-4F64-9DBF-05B15764F531}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="VOIX_Niveks_Victoire_04" ID="{915CD035-A19E-413A-A9D8-00839D8B0156}" ShortID="886788755" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="VOIX_Niveks_Victoire_04" ID="{64E6C179-CF7B-44CF-8CAD-27FB24C6A630}" ShortID="722109230">
+															<Language>SFX</Language>
+															<AudioFile>Victoire\VOIX_Niveks_Victoire_04.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="VOIX_Niveks_Victoire_04" ID="{64E6C179-CF7B-44CF-8CAD-27FB24C6A630}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="VictoireALT" ID="{0044F3EB-7F6D-43D3-A5A7-07D7D11FD677}" ShortID="591136157">
+											<PropertyList>
+												<Property Name="PositioningType" Type="int16" Value="1"/>
+												<Property Name="Priority" Type="int16">
+													<ValueList>
+														<Value>100</Value>
+													</ValueList>
+												</Property>
+												<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="6"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+												</Reference>
+												<Reference Name="Effect0" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
+													<ObjectRef Name="Dialog_Too_Quiet" ID="{F9C77BF1-1CCC-415B-B93F-B048979CA620}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Niveks" ID="{61A147E8-AD36-479A-8A9B-0755B4FE6CC9}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="VOIX_Niveks_Yeah_01" ID="{6F661D0E-0062-4A12-BF3D-E22BD65EACFC}" ShortID="803810887" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="VOIX_Niveks_Yeah_01" ID="{1D80667A-18FF-4A2B-9736-EAC4F63806BC}" ShortID="208740055">
+															<Language>SFX</Language>
+															<AudioFile>Yeah\VOIX_Niveks_Yeah_01.wav</AudioFile>
+															<ConvertedFileIDList>
+																<File ID="815561541"/>
+															</ConvertedFileIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="VOIX_Niveks_Yeah_01" ID="{1D80667A-18FF-4A2B-9736-EAC4F63806BC}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="VOIX_Niveks_Yeah_02" ID="{B1433D75-7F48-4D3A-B410-6FFE14256B13}" ShortID="434892576" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="VOIX_Niveks_Yeah_02" ID="{965F2D36-14C3-409D-B846-810DED2F7A51}" ShortID="898206029">
+															<Language>SFX</Language>
+															<AudioFile>Yeah\VOIX_Niveks_Yeah_02.wav</AudioFile>
+															<ConvertedFileIDList>
+																<File ID="443278117"/>
+															</ConvertedFileIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="VOIX_Niveks_Yeah_02" ID="{965F2D36-14C3-409D-B846-810DED2F7A51}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="VOIX_Niveks_Yeah_03" ID="{8729D413-BEC3-4B2D-A3F1-344F40531D42}" ShortID="1036890879" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="VOIX_Niveks_Yeah_03" ID="{7A5D8AA0-F2DA-48CC-9C95-C2BB40D32E1A}" ShortID="106597247">
+															<Language>SFX</Language>
+															<AudioFile>Yeah\VOIX_Niveks_Yeah_03.wav</AudioFile>
+															<ConvertedFileIDList>
+																<File ID="983204867"/>
+															</ConvertedFileIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="VOIX_Niveks_Yeah_03" ID="{7A5D8AA0-F2DA-48CC-9C95-C2BB40D32E1A}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="VOIX_Niveks_Yeah_04" ID="{BB9BC33E-7A04-4616-85A5-6AF5000004D6}" ShortID="38169802" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="VOIX_Niveks_Yeah_04" ID="{062A443D-5549-412F-9D76-E98FDBE43738}" ShortID="713745743">
+															<Language>SFX</Language>
+															<AudioFile>Yeah\VOIX_Niveks_Yeah_04.wav</AudioFile>
+															<ConvertedFileIDList>
+																<File ID="451795428"/>
+															</ConvertedFileIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="VOIX_Niveks_Yeah_04" ID="{062A443D-5549-412F-9D76-E98FDBE43738}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="VOIX_Niveks_Yeah_05" ID="{C07453EB-2F8B-4A36-BD06-7294F604BCDD}" ShortID="369591695" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="VOIX_Niveks_Yeah_05" ID="{D34B934D-C07A-4E36-843F-03DC4813AFA0}" ShortID="269442843">
+															<Language>SFX</Language>
+															<AudioFile>Yeah\VOIX_Niveks_Yeah_05.wav</AudioFile>
+															<ConvertedFileIDList>
+																<File ID="90760917"/>
+															</ConvertedFileIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="VOIX_Niveks_Yeah_05" ID="{D34B934D-C07A-4E36-843F-03DC4813AFA0}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="VOIX_Niveks_Yeah_06" ID="{92FDD983-6D7E-439C-896B-B47315DABC8A}" ShortID="321934457" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="VOIX_Niveks_Yeah_06" ID="{A86B5AED-6B4E-4781-9CC6-080C15B4A93B}" ShortID="201819961">
+															<Language>SFX</Language>
+															<AudioFile>Yeah\VOIX_Niveks_Yeah_06.wav</AudioFile>
+															<ConvertedFileIDList>
+																<File ID="911497748"/>
+															</ConvertedFileIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="VOIX_Niveks_Yeah_06" ID="{A86B5AED-6B4E-4781-9CC6-080C15B4A93B}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="VOIX_Niveks_Yeah_07" ID="{072DB40C-E272-40E2-A554-370ECB0119AD}" ShortID="793728826" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="VOIX_Niveks_Yeah_07" ID="{731B99A4-965C-4926-BFF7-0E3D2D25D43D}" ShortID="572469659">
+															<Language>SFX</Language>
+															<AudioFile>Yeah\VOIX_Niveks_Yeah_07.wav</AudioFile>
+															<ConvertedFileIDList>
+																<File ID="1003624008"/>
+															</ConvertedFileIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="VOIX_Niveks_Yeah_07" ID="{731B99A4-965C-4926-BFF7-0E3D2D25D43D}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="DefaiteALT" ID="{081A12FA-5D67-44FE-AE99-8E895402B928}" ShortID="747264392">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
@@ -6102,112 +6429,257 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="Nivek1_21-01" ID="{F5BF4E98-D892-4028-85FC-FDD8284D7D04}" ShortID="669153844">
-													<PropertyList>
-														<Property Name="FadeOutDuration" Type="Real64" Value="0.248711559334298"/>
-													</PropertyList>
-													<Language>SFX</Language>
-													<AudioFile>Defaite\Nivek1_21-01.wav</AudioFile>
-												</AudioFileSource>
+												<Sound Name="Nivek1_14-02" ID="{57020F08-CDA5-4BAF-9226-70DFA094436E}" ShortID="57948901" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Nivek1_14-02" ID="{92DF36C4-D648-46CF-94BA-CE1220A77188}" ShortID="451830912">
+															<Language>SFX</Language>
+															<AudioFile>DefaiteALT\Nivek1_14-02.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Nivek1_14-02" ID="{92DF36C4-D648-46CF-94BA-CE1220A77188}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Nivek1_14-03" ID="{A7365B49-A616-496A-BDEA-8505CD442338}" ShortID="425269853" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Nivek1_14-03" ID="{B7A593E5-98F4-4CDD-9C25-A53EA05D5F4F}" ShortID="510968601">
+															<Language>SFX</Language>
+															<AudioFile>DefaiteALT\Nivek1_14-03.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Nivek1_14-03" ID="{B7A593E5-98F4-4CDD-9C25-A53EA05D5F4F}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Nivek1_14-04" ID="{DEA22DEF-9445-4A67-997D-CE6B490ACE73}" ShortID="352262499" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Nivek1_14-04" ID="{3DB578BC-AD78-4C60-9A85-72398B9BB2AC}" ShortID="1069554176">
+															<Language>SFX</Language>
+															<AudioFile>DefaiteALT\Nivek1_14-04.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Nivek1_14-04" ID="{3DB578BC-AD78-4C60-9A85-72398B9BB2AC}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Nivek1_14-05" ID="{78B5BD07-446A-4470-AE99-BBF5B79302B6}" ShortID="675113958" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Nivek1_14-05" ID="{6FBEDBA9-0708-4EFB-AD85-6FB6AB6FC1C7}" ShortID="740341984">
+															<Language>SFX</Language>
+															<AudioFile>DefaiteALT\Nivek1_14-05.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Nivek1_14-05" ID="{6FBEDBA9-0708-4EFB-AD85-6FB6AB6FC1C7}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Nivek1_14-06" ID="{1A90A515-C566-4DB1-9F71-90DC0FF8BDCA}" ShortID="10097556" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Nivek1_14-06" ID="{91F3FE43-B59E-4BC0-8486-206087957473}" ShortID="612583214">
+															<Language>SFX</Language>
+															<AudioFile>DefaiteALT\Nivek1_14-06.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Nivek1_14-06" ID="{91F3FE43-B59E-4BC0-8486-206087957473}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Nivek1_14-07" ID="{117C1EFC-4CA5-4995-8644-9274AFB4CB1E}" ShortID="248306870" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Nivek1_14-07" ID="{C057BB44-5D54-4099-83A6-851248B6368B}" ShortID="8442019">
+															<Language>SFX</Language>
+															<AudioFile>DefaiteALT\Nivek1_14-07.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Nivek1_14-07" ID="{C057BB44-5D54-4099-83A6-851248B6368B}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Nivek1_14-08" ID="{C198D519-6F71-4902-8892-08D5DF7873B8}" ShortID="100967433" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Nivek1_14-08" ID="{B83A45E4-6275-4F5A-986C-BC84A3BD5272}" ShortID="167999780">
+															<Language>SFX</Language>
+															<AudioFile>DefaiteALT\Nivek1_14-08.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Nivek1_14-08" ID="{B83A45E4-6275-4F5A-986C-BC84A3BD5272}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Nivek1_14-09" ID="{E5EFB02A-A894-42C4-8D53-6E180E642D8C}" ShortID="419304787" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Nivek1_14-09" ID="{EC7FB849-D683-40E5-916E-7257AE4EB250}" ShortID="618573359">
+															<Language>SFX</Language>
+															<AudioFile>DefaiteALT\Nivek1_14-09.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Nivek1_14-09" ID="{EC7FB849-D683-40E5-916E-7257AE4EB250}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Nivek1_14-10" ID="{341A013B-22C9-40DB-BF51-2EAD5C8DA5C2}" ShortID="808467207" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Nivek1_14-10" ID="{DD12BD76-81C5-4296-9FE0-EAE1B98727A6}" ShortID="368858164">
+															<Language>SFX</Language>
+															<AudioFile>DefaiteALT\Nivek1_14-10.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Nivek1_14-10" ID="{DD12BD76-81C5-4296-9FE0-EAE1B98727A6}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Nivek1_14-12" ID="{796775B4-10CB-47E4-B609-3A32DAC394AC}" ShortID="173973937" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Nivek1_14-12" ID="{76B442F9-8C66-488E-A554-CDE9044C79D3}" ShortID="336821651">
+															<Language>SFX</Language>
+															<AudioFile>DefaiteALT\Nivek1_14-12.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Nivek1_14-12" ID="{76B442F9-8C66-488E-A554-CDE9044C79D3}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Nivek1_14-14" ID="{34E075DB-66AC-4F49-885A-BC6B1EE9B7E3}" ShortID="815140136" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Nivek1_14-14" ID="{B964CE76-EF41-4B0A-9068-5AFDB310B23C}" ShortID="998197031">
+															<Language>SFX</Language>
+															<AudioFile>DefaiteALT\Nivek1_14-14.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Nivek1_14-14" ID="{B964CE76-EF41-4B0A-9068-5AFDB310B23C}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Nivek1_14-15" ID="{BBC90467-1FCF-422C-A671-FBE7BD730CC7}" ShortID="98595586" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Nivek1_14-15" ID="{B98C6181-05B1-40F5-9A62-3CFE2B7FA583}" ShortID="955263217">
+															<Language>SFX</Language>
+															<AudioFile>DefaiteALT\Nivek1_14-15.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Nivek1_14-15" ID="{B98C6181-05B1-40F5-9A62-3CFE2B7FA583}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Nivek1_14-17" ID="{2A190D3B-623B-41DB-B2DC-D33DABCCAF31}" ShortID="803978210" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Nivek1_14-17" ID="{1FFC7F2C-271B-444E-B201-4C87A74527FC}" ShortID="972568043">
+															<Language>SFX</Language>
+															<AudioFile>DefaiteALT\Nivek1_14-17.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Nivek1_14-17" ID="{1FFC7F2C-271B-444E-B201-4C87A74527FC}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
 											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Nivek1_21-01" ID="{F5BF4E98-D892-4028-85FC-FDD8284D7D04}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Nivek1_21-02" ID="{004AF063-738C-4706-8119-E0A2A8E4B1F6}" ShortID="727442198" Type="SoundFX">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Nivek1_21-02" ID="{2AD308EF-7DE6-4F5C-B104-2EAE51A3A4C6}" ShortID="883193514">
-													<PropertyList>
-														<Property Name="FadeOutDuration" Type="Real64" Value="0.757284129281235"/>
-													</PropertyList>
-													<Language>SFX</Language>
-													<AudioFile>Defaite\Nivek1_21-02.wav</AudioFile>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Nivek1_21-02" ID="{2AD308EF-7DE6-4F5C-B104-2EAE51A3A4C6}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Nivek1_21-06" ID="{2C12BE37-D596-4B50-A2BB-C1BD38110B8A}" ShortID="494975897" Type="SoundFX">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Nivek1_21-06" ID="{8C25FAEB-FF84-4057-B4CB-9F7F61FF64B6}" ShortID="898269870">
-													<PropertyList>
-														<Property Name="FadeOutDuration" Type="Real64" Value="0.747681289194404"/>
-														<Property Name="TrimBegin" Type="Real64" Value="0.180933550410034"/>
-													</PropertyList>
-													<Language>SFX</Language>
-													<AudioFile>Defaite\Nivek1_21-06.wav</AudioFile>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Nivek1_21-06" ID="{8C25FAEB-FF84-4057-B4CB-9F7F61FF64B6}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Nivek1_22-02" ID="{D987CF93-3A49-40BE-A410-2C04CACE103F}" ShortID="499364144" Type="SoundFX">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Nivek1_22-02" ID="{4CCE7A8B-56C5-454E-8E29-6D839CFBE17E}" ShortID="248479084">
-													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="0.612646406174626"/>
-														<Property Name="FadeOutDuration" Type="Real64" Value="0.860742884708152"/>
-														<Property Name="TrimEnd" Type="Real64" Value="5.73659816690786"/>
-													</PropertyList>
-													<Language>SFX</Language>
-													<AudioFile>Defaite\Nivek1_22-02.wav</AudioFile>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Nivek1_22-02" ID="{4CCE7A8B-56C5-454E-8E29-6D839CFBE17E}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Nivek1_22-04" ID="{A6DAF206-34FC-4D02-9427-5AB1857805B2}" ShortID="358117194" Type="SoundFX">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Nivek1_22-04" ID="{BD1E6513-69EB-41B6-83CA-08914B48E51B}" ShortID="103015833">
-													<PropertyList>
-														<Property Name="FadeOutDuration" Type="Real64" Value="0.293588036661842"/>
-														<Property Name="TrimEnd" Type="Real64" Value="4.74316256632899"/>
-													</PropertyList>
-													<Language>SFX</Language>
-													<AudioFile>Defaite\Nivek1_22-04.wav</AudioFile>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Nivek1_22-04" ID="{BD1E6513-69EB-41B6-83CA-08914B48E51B}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
+										</RandomSequenceContainer>
 									</ChildrenList>
-								</RandomSequenceContainer>
+								</ActorMixer>
 							</ChildrenList>
 						</ActorMixer>
 						<ActorMixer Name="Monstre" ID="{B7073DED-9E91-4ABA-95BD-C30C41CB5A02}" ShortID="184728386">

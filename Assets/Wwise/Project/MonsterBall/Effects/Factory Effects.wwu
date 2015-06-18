@@ -1300,9 +1300,9 @@
 										<Property Name="Filter3Gain" Type="Real32" Value="-4.5"/>
 										<Property Name="HFDamping" Type="Real32" Value="2.7"/>
 										<Property Name="PreDelay" Type="Real32" Value="12"/>
-										<Property Name="ReverbLevel" Type="Real32" Value="-26"/>
+										<Property Name="ReverbLevel" Type="Real32" Value="-30"/>
 										<Property Name="RoomShape" Type="Real32" Value="28"/>
-										<Property Name="RoomSize" Type="Real32" Value="9"/>
+										<Property Name="RoomSize" Type="Real32" Value="-55"/>
 										<Property Name="StereoWidth" Type="Real32" Value="90"/>
 									</PropertyList>
 								</Effect>
