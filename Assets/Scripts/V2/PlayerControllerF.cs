@@ -1217,7 +1217,7 @@ public class PlayerControllerF : MonoBehaviour
         wantedJersey = wJ;
     }
 
-    public IEnumerator Vibration(int playerNum,float power, float duree)
+    public IEnumerator Vibration(int playerNum, float power, float duree)
     {
         GamePad.SetVibration((PlayerIndex)playerNum, power, power);
         yield return new WaitForSeconds(duree);

@@ -100,13 +100,13 @@ public class GameManagerF : MonoBehaviour {
 		case Step.inGame : 
 			if (durationInSecond <= 0)
 			{
+                //GamePad.SetVibration((PlayerIndex)0, 0f, 0f);
+                //GamePad.SetVibration((PlayerIndex)1, 0f, 0f);
+                //GamePad.SetVibration((PlayerIndex)2, 0f, 0f);
+                //GamePad.SetVibration((PlayerIndex)3, 0f, 0f);
 				//Time.timeScale = 0;
 				if (!displayEnd)
 				{
-                    GamePad.SetVibration((PlayerIndex)0, 0f, 0f);
-                    GamePad.SetVibration((PlayerIndex)1, 0f, 0f);
-                    GamePad.SetVibration((PlayerIndex)2, 0f, 0f);
-                    GamePad.SetVibration((PlayerIndex)3, 0f, 0f);
                     GameControllerF.GetSound().PlayEvent("SFX_Fin", Camera.main.gameObject);
 					/*ecranFin.SetActive(true);
 					ecranFin.GetComponent<MenuFin>().InitMenu();
@@ -263,6 +263,10 @@ public class GameManagerF : MonoBehaviour {
         //StartCoroutine(FadeToBlack(timeBeforeEndMenu));
         StartCoroutine(FadeToWhite(timeBeforeEndMenu - 0.1f));
         yield return new WaitForSeconds(timeBeforeEndMenu);
+        GamePad.SetVibration((PlayerIndex)0, 0f, 0f);
+        GamePad.SetVibration((PlayerIndex)1, 0f, 0f);
+        GamePad.SetVibration((PlayerIndex)2, 0f, 0f);
+        GamePad.SetVibration((PlayerIndex)3, 0f, 0f);
         aop.allowSceneActivation = true;
     }
 

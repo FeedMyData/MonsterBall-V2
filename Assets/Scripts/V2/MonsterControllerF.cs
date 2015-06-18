@@ -708,8 +708,8 @@ public class MonsterControllerF : MonoBehaviour {
         if (eatPlayer)
         {
             Vector3 expulsePos = UnityEngine.Random.insideUnitSphere;
-            expulsePos.y = Mathf.Abs(expulsePos.y);
-            playerAte.GetComponent<PlayerControllerF>().AddImpact(expulsePos * 100);
+            expulsePos.y = 0.01f;
+            playerAte.GetComponent<PlayerControllerF>().AddImpact(expulsePos * 50);
             playerAte = null;
         }
 
@@ -910,7 +910,7 @@ public class MonsterControllerF : MonoBehaviour {
             currentNumberOfChargeEatenPlayers++;
         }
 
-        if (player == playerAte)
+        if (player == playerAte && monsterForm)
         {
             sound.PlayEvent("VX_Monstre_Crache", gameObject);
             sound.PlayEvent("VX_Niveks_Wilhem", player);
@@ -919,7 +919,7 @@ public class MonsterControllerF : MonoBehaviour {
         }
         else
         {
-            Debug.Log("mangé mais pas envoyé (player mangé et envoyé pas le même ?)");
+            Debug.Log("mangé mais pas envoyé (player mangé et envoyé pas le même ?) OU plus en forme monstre");
         }
 
 

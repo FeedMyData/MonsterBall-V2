@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.EventSystems;
+using XInputDotNetPure;
 
 public class MenuFinF : MonoBehaviour {
 
@@ -16,6 +17,11 @@ public class MenuFinF : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+
+        GamePad.SetVibration((PlayerIndex)0, 0f, 0f);
+        GamePad.SetVibration((PlayerIndex)1, 0f, 0f);
+        GamePad.SetVibration((PlayerIndex)2, 0f, 0f);
+        GamePad.SetVibration((PlayerIndex)3, 0f, 0f);
 
         sound = GetComponent<SoundManager>();
         sound.LoadBank();
