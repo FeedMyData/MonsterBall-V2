@@ -1376,7 +1376,7 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0
+      - time: .00892857183
         functionName: PlayLose
         data: 
         objectReferenceParameter: {fileID: 11500000, guid: 327f6eb847ff00946bcf98c17e0b67bf,
@@ -1470,7 +1470,7 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0
+      - time: .00892857183
         functionName: PlayWin
         data: 
         objectReferenceParameter: {fileID: 11500000, guid: 327f6eb847ff00946bcf98c17e0b67bf,
@@ -1908,7 +1908,7 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0
+      - time: .0069444445
         functionName: PlayWinAlternative
         data: 
         objectReferenceParameter: {fileID: 11500000, guid: 327f6eb847ff00946bcf98c17e0b67bf,
@@ -2002,7 +2002,7 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0
+      - time: .00793650839
         functionName: PlayLoseAlternative
         data: 
         objectReferenceParameter: {fileID: 11500000, guid: 327f6eb847ff00946bcf98c17e0b67bf,
