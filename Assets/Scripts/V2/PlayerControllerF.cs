@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using XInputDotNetPure;
+//using XInputDotNetPure;
 
 public class PlayerControllerF : MonoBehaviour
 {
@@ -1219,9 +1219,9 @@ public class PlayerControllerF : MonoBehaviour
 
     public IEnumerator Vibration(int playerNum, float power, float duree)
     {
-        GamePad.SetVibration((PlayerIndex)playerNum, power, power);
+        //GamePad.SetVibration((PlayerIndex)playerNum, power, power);
         yield return new WaitForSeconds(duree);
-        GamePad.SetVibration((PlayerIndex)playerNum, 0f, 0f);
+        //GamePad.SetVibration((PlayerIndex)playerNum, 0f, 0f);
     }
 
 }

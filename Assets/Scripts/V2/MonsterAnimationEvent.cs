@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-using XInputDotNetPure;
+//using XInputDotNetPure;
 
 public class MonsterAnimationEvent : MonoBehaviour {
 
@@ -32,19 +32,18 @@ public class MonsterAnimationEvent : MonoBehaviour {
     {
         MonsterControllerF monsterScript = transform.parent.GetComponent<MonsterControllerF>();
         monsterScript.ShakeWhenAnimationPreCharge();
+
+		//GamePad.SetVibration((PlayerIndex)0, powerVibr, powerVibr);
+		//GamePad.SetVibration((PlayerIndex)1, powerVibr, powerVibr);
+		//GamePad.SetVibration((PlayerIndex)2, powerVibr, powerVibr);
+		//GamePad.SetVibration((PlayerIndex)3, powerVibr, powerVibr);
     }
 
     IEnumerator Vibration()
     {
-        GamePad.SetVibration((PlayerIndex)0, powerVibr, powerVibr);
-        GamePad.SetVibration((PlayerIndex)1, powerVibr, powerVibr);
-        GamePad.SetVibration((PlayerIndex)2, powerVibr, powerVibr);
-        GamePad.SetVibration((PlayerIndex)3, powerVibr, powerVibr);
+
         yield return new WaitForSeconds(durationVibr);
-        GamePad.SetVibration((PlayerIndex)0, powerVibr, powerVibr);
-        GamePad.SetVibration((PlayerIndex)1, powerVibr, powerVibr);
-        GamePad.SetVibration((PlayerIndex)2, powerVibr, powerVibr);
-        GamePad.SetVibration((PlayerIndex)3, powerVibr, powerVibr);
+
     }
 
 }

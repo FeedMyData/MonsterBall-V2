@@ -2,7 +2,7 @@
 using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
-using XInputDotNetPure;
+//using XInputDotNetPure;
 
 public class GameManagerF : MonoBehaviour {
 
@@ -100,10 +100,6 @@ public class GameManagerF : MonoBehaviour {
 		case Step.inGame : 
 			if (durationInSecond <= 0)
 			{
-                //GamePad.SetVibration((PlayerIndex)0, 0f, 0f);
-                //GamePad.SetVibration((PlayerIndex)1, 0f, 0f);
-                //GamePad.SetVibration((PlayerIndex)2, 0f, 0f);
-                //GamePad.SetVibration((PlayerIndex)3, 0f, 0f);
 				//Time.timeScale = 0;
 				if (!displayEnd)
 				{
@@ -263,10 +259,10 @@ public class GameManagerF : MonoBehaviour {
         //StartCoroutine(FadeToBlack(timeBeforeEndMenu));
         StartCoroutine(FadeToWhite(timeBeforeEndMenu - 0.1f));
         yield return new WaitForSeconds(timeBeforeEndMenu);
-        GamePad.SetVibration((PlayerIndex)0, 0f, 0f);
-        GamePad.SetVibration((PlayerIndex)1, 0f, 0f);
-        GamePad.SetVibration((PlayerIndex)2, 0f, 0f);
-        GamePad.SetVibration((PlayerIndex)3, 0f, 0f);
+        //GamePad.SetVibration((PlayerIndex)0, 0f, 0f);
+        //GamePad.SetVibration((PlayerIndex)1, 0f, 0f);
+        //GamePad.SetVibration((PlayerIndex)2, 0f, 0f);
+        //GamePad.SetVibration((PlayerIndex)3, 0f, 0f);
         aop.allowSceneActivation = true;
     }
 
