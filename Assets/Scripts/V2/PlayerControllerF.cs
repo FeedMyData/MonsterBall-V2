@@ -455,6 +455,11 @@ public class PlayerControllerF : MonoBehaviour
         }*/
         else if (projectionInGoal)
         {
+            if (magnet)
+            {
+                GameObject ball = GameControllerF.GetMonster();
+                ball.GetComponent<MonsterControllerF>().callDisableMagnet();
+            }
             transform.position = Vector3.MoveTowards(transform.position, goal.position, Time.deltaTime * 120);
         }
         else if (directionMove.sqrMagnitude > 0.2f && !isStunned /*&& !dash*/)

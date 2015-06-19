@@ -708,12 +708,15 @@ public class MonsterControllerF : MonoBehaviour {
         sound.StopEvent("Music_Monstre", gameObject, 1000);
         wrath = 0;
 
-        if (eatPlayer)
+        if (eatPlayer && playerAte != null)
         {
-            Vector3 expulsePos = UnityEngine.Random.insideUnitSphere;
-            expulsePos.y = 0.01f;
-            playerAte.GetComponent<PlayerControllerF>().AddImpact(expulsePos * 50);
-            playerAte = null;
+            if (playerAte.GetComponent<PlayerControllerF>() && !playerAte.GetComponent<PlayerControllerF>().IsProjectionInGoal())
+            {
+                Vector3 expulsePos = UnityEngine.Random.insideUnitSphere;
+                expulsePos.y = 0.01f;
+                playerAte.GetComponent<PlayerControllerF>().AddImpact(expulsePos * 50);
+                playerAte = null;
+            }
         }
 
         transform.localScale /= monsterScale;
