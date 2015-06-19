@@ -390,7 +390,7 @@ public class PlayerControllerF : MonoBehaviour
                 horizontal = "Horizontal1";
                 vertical = "Vertical1";
                 fire = "Fire1";
-                numController = 0;
+                numController = 3;
                 //if (team == GameControllerF.Team.Blu)
                 //    spriteGround.GetComponent<Renderer>().material.color = new Color32(0, 0, 255, 255);
                 //else
@@ -400,7 +400,7 @@ public class PlayerControllerF : MonoBehaviour
                 horizontal = "Horizontal2";
                 vertical = "Vertical2";
                 fire = "Fire2";
-                numController = 1;
+                numController = 2;
                 //if (team == GameControllerF.Team.Blu)
                 //    spriteGround.GetComponent<Renderer>().material.color = new Color32(0, 128, 255, 255);
                 //else
@@ -410,7 +410,7 @@ public class PlayerControllerF : MonoBehaviour
                 horizontal = "Horizontal3";
                 vertical = "Vertical3";
                 fire = "Fire3";
-                numController = 2;
+                numController = 1;
                 //if (team == GameControllerF.Team.Blu)
                 //    spriteGround.GetComponent<Renderer>().material.color = new Color32(0, 255, 255, 255);
                 //else
@@ -420,7 +420,7 @@ public class PlayerControllerF : MonoBehaviour
                 horizontal = "Horizontal4";
                 vertical = "Vertical4";
                 fire = "Fire4";
-                numController = 3;
+                numController = 0;
                 //if (team == GameControllerF.Team.Blu)
                 //    spriteGround.GetComponent<Renderer>().material.color = new Color32(0, 0, 128, 255);
                 //else
