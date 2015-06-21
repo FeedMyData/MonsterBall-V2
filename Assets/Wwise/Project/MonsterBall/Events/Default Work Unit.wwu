@@ -25,7 +25,7 @@
 								<Action Name="Play" ID="{E0B0BB4C-BE41-4AB3-AF49-01F5089F6CFF}" ShortID="587070971" Type="Play" Scope="One" Global="false">
 									<ElementList>
 										<Element ID="{05B5F35B-E3F8-4F77-9276-2310F15836E3}" Global="false">
-											<ObjectRef Name="Intensification" ID="{3B830137-394A-4A85-B243-F8DA0510D1BB}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+											<ObjectRef Name="Public_Intensification" ID="{3B830137-394A-4A85-B243-F8DA0510D1BB}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
 										</Element>
 									</ElementList>
 								</Action>
@@ -295,13 +295,13 @@
 								</Event>
 								<Event Name="VX_Monstre_DebutCharge" ID="{C3531607-D057-42DB-8B57-17C9CED5E9E9}">
 									<ChildrenList>
-										<Action Name="Play" ID="{60872BE3-9A2A-4D16-9667-4E8483F42507}" ShortID="979988160" Type="Play" Scope="One" Global="false">
+										<Action Name="Play" ID="{6920A027-B79C-434A-A2BD-C611EB38DD76}" ShortID="218981664" Type="Play" Scope="One" Global="false">
 											<PropertyList>
 												<Property Name="Delay" Type="Real64" Value="1.42"/>
 											</PropertyList>
 											<ElementList>
-												<Element ID="{C2862C66-3B70-482B-9877-0EA1D2FBA66C}" Global="false">
-													<ObjectRef Name="DebutCharge" ID="{EA69DC5B-4F6A-470C-83BC-563E4BD757BE}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+												<Element ID="{12A62A74-5A17-4C27-BF82-29EDEFB2195A}" Global="false">
+													<ObjectRef Name="VX_Charge" ID="{8214D82F-2838-4203-B502-EBE5F95B3E5A}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
 												</Element>
 											</ElementList>
 										</Action>
@@ -337,6 +337,23 @@
 												</Element>
 											</ElementList>
 										</Action>
+										<Action Name="Play" ID="{02EDE9A1-5D9B-4FAF-8C7B-8BA052A61813}" ShortID="270825538" Type="Play" Scope="One" Global="false">
+											<ElementList>
+												<Element ID="{A8C7C5A3-9763-4727-9F02-11E9AEEA7768}" Global="false">
+													<ObjectRef Name="GTR_Monstre_DebutChargeOK_" ID="{553C2FA0-55AE-4735-A824-565EA9BA8E81}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+												</Element>
+											</ElementList>
+										</Action>
+										<Action Name="Stop" ID="{A19351F3-20AC-403F-AD29-E64849A47E42}" ShortID="575076963" Type="Stop" Scope="One" Global="true">
+											<PropertyList>
+												<Property Name="FadeTime" Type="Real64" Value="2"/>
+											</PropertyList>
+											<ElementList>
+												<Element ID="{DAC3A84B-4C62-4241-ACA1-718F95F42512}" Global="true">
+													<ObjectRef Name="Music_Monstre" ID="{60DE5FB5-A558-4190-B053-D6D64FCA048E}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+												</Element>
+											</ElementList>
+										</Action>
 									</ChildrenList>
 								</Event>
 							</ChildrenList>
@@ -345,6 +362,13 @@
 							<ChildrenList>
 								<Event Name="Transfo_BalleMonstre" ID="{C4E685A6-7FBC-4AF3-A69E-E6FF1F3FD07E}">
 									<ChildrenList>
+										<Action Name="Play" ID="{9FA60864-9B48-405C-A6D4-CC84B9338B15}" ShortID="230625708" Type="Play" Scope="One" Global="false">
+											<ElementList>
+												<Element ID="{732AD16A-2B5C-4799-80A8-AD7DF6938DD4}" Global="false">
+													<ObjectRef Name="VX_Monstre-Transfo" ID="{F5F2C0FB-DD17-4C05-AC18-A2EA49664DCD}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+												</Element>
+											</ElementList>
+										</Action>
 										<Action Name="Play" ID="{2EDA2D3E-A00E-4A5E-BDCB-4EFE03156617}" ShortID="927401060" Type="Play" Scope="One" Global="false">
 											<ElementList>
 												<Element ID="{8E7EAAC0-A3BA-4DBE-B7CA-489FC92FDFA4}" Global="false">
@@ -352,14 +376,13 @@
 												</Element>
 											</ElementList>
 										</Action>
-										<Action Name="Play" ID="{174CE073-AE84-4CCA-BA18-6D18C1B02B10}" ShortID="69367767" Type="Play" Scope="One" Global="false">
+										<Action Name="Play" ID="{91A41A15-1B31-4395-828A-5D3F3EA2DAA3}" ShortID="449151175" Type="Play" Scope="One" Global="false">
 											<PropertyList>
 												<Property Name="Delay" Type="Real64" Value="1.8"/>
-												<Property Name="FadeCurve" Type="int16" Value="7"/>
 											</PropertyList>
 											<ElementList>
-												<Element ID="{1B868F3B-9501-46E4-8041-C826E7A7E7D7}" Global="false">
-													<ObjectRef Name="VOIX_Balle_TransfoBalleMonstre_03TEMP" ID="{682954ED-8488-4A54-ACDB-B043340A5D15}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+												<Element ID="{E921E400-CECE-4EC8-AEF1-42854CB36DD0}" Global="false">
+													<ObjectRef Name="VOIX_Balle_TransfoBalleMonstre" ID="{86C94134-6169-4F70-92D5-FE69679C0749}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
 												</Element>
 											</ElementList>
 										</Action>
@@ -371,6 +394,17 @@
 											<ElementList>
 												<Element ID="{927494E7-8167-46BD-9BFF-560119D298BA}" Global="false">
 													<ObjectRef Name="FX_Public_Intensification_Transfo" ID="{0836B42F-8583-49D8-9DCE-FE48BD98F31C}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+												</Element>
+											</ElementList>
+										</Action>
+										<Action Name="Pause" ID="{80CC13BF-9C5C-48BB-8674-9C5126B932DE}" ShortID="901124215" Type="Pause" Scope="One" Global="true">
+											<PropertyList>
+												<Property Name="FadeCurve" Type="int16" Value="6"/>
+												<Property Name="FadeTime" Type="Real64" Value="1"/>
+											</PropertyList>
+											<ElementList>
+												<Element ID="{1F4173D2-7BFC-413D-AEB5-17AC0FA31943}" Global="true">
+													<ObjectRef Name="AMB_Public_Normal" ID="{C0D3115C-8B4C-4E28-ABDF-5544C5F971D3}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
 												</Element>
 											</ElementList>
 										</Action>
@@ -417,7 +451,31 @@
 											</PropertyList>
 											<ElementList>
 												<Element ID="{FE9276C5-05F3-44EF-9C5A-AB392BB6BE5A}" Global="false">
-													<ObjectRef Name="Objet" ID="{07CCBF67-B510-499F-8A39-DBAD27D656C5}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+													<ObjectRef Name="VX_Transfo_MonstreBalle" ID="{07CCBF67-B510-499F-8A39-DBAD27D656C5}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+												</Element>
+											</ElementList>
+										</Action>
+										<Action Name="Play" ID="{799BDF84-7B36-4714-9DB0-77D9B3596EBC}" ShortID="1051627512" Type="Play" Scope="One" Global="false">
+											<ElementList>
+												<Element ID="{1C659835-0E60-4815-ADAE-01913BD4F50F}" Global="false">
+													<ObjectRef Name="Public_Intensification" ID="{3B830137-394A-4A85-B243-F8DA0510D1BB}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+												</Element>
+											</ElementList>
+										</Action>
+										<Action Name="Resume" ID="{4024043B-F8BB-405D-A993-D01167985142}" ShortID="983316668" Type="Resume" Scope="One" Global="true">
+											<PropertyList>
+												<Property Name="FadeTime" Type="Real64" Value="1"/>
+											</PropertyList>
+											<ElementList>
+												<Element ID="{1A188F1E-8161-47A1-8FBB-CD4ACE9A5D5D}" Global="true">
+													<ObjectRef Name="AMB_Public_Normal" ID="{C0D3115C-8B4C-4E28-ABDF-5544C5F971D3}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+												</Element>
+											</ElementList>
+										</Action>
+										<Action Name="Stop" ID="{DF0CD8B7-44AD-48CE-8C63-9045D6CEC85E}" ShortID="39871272" Type="Stop" Scope="One" Global="true">
+											<ElementList>
+												<Element ID="{8F7BB8E2-D654-4E74-9354-28C52F0DEFBB}" Global="true">
+													<ObjectRef Name="Music_Monstre2" ID="{58A6EACE-4B95-4465-B9A9-E81E28C4F05A}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
 												</Element>
 											</ElementList>
 										</Action>
@@ -600,7 +658,7 @@
 								<Action Name="Play" ID="{8AC89B3E-45A0-4F7C-9CBD-EC80D6F06B6D}" ShortID="498228087" Type="Play" Scope="One" Global="false">
 									<ElementList>
 										<Element ID="{611DE430-6667-4613-8815-E82BB4E9BB06}" Global="false">
-											<ObjectRef Name="Intensification" ID="{3B830137-394A-4A85-B243-F8DA0510D1BB}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+											<ObjectRef Name="Public_Intensification" ID="{3B830137-394A-4A85-B243-F8DA0510D1BB}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
 										</Element>
 									</ElementList>
 								</Action>
@@ -612,6 +670,13 @@
 									<ElementList>
 										<Element ID="{8FB9DA2F-2B31-41AD-B0B9-5087C42D1EAD}" Global="true">
 											<ObjectRef Name="Music_Main" ID="{814021AA-6BA9-4C22-A014-A745571C77FD}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+										</Element>
+									</ElementList>
+								</Action>
+								<Action Name="Stop" ID="{6F0A1FEF-A5E6-4ED6-9B96-A3A19B5F3C3C}" ShortID="583611525" Type="Stop" Scope="One" Global="true">
+									<ElementList>
+										<Element ID="{CD87AEC3-5EDE-476F-AAB6-3FA97B783FEC}" Global="true">
+											<ObjectRef Name="Music_Fin" ID="{EAE7F11E-5A0F-4B57-984A-C74C4AFD3EA7}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
 										</Element>
 									</ElementList>
 								</Action>
@@ -702,7 +767,7 @@
 								<Action Name="Play" ID="{71543564-B480-4D40-93CE-4017ABE2FC82}" ShortID="956520087" Type="Play" Scope="One" Global="false">
 									<ElementList>
 										<Element ID="{A139E56D-8208-46C8-8758-A9036C5C70AF}" Global="false">
-											<ObjectRef Name="Grognements" ID="{DA313CEB-548A-4DC0-9E3E-F79794B4C644}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+											<ObjectRef Name="Grognements_FIN" ID="{3AE783FC-626E-4650-96F7-E555A913AD93}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
 										</Element>
 									</ElementList>
 								</Action>
@@ -753,8 +818,9 @@
 							<ChildrenList>
 								<Action Name="Play" ID="{9ADAFBF2-FA80-474D-BAC8-EA137883DC4E}" ShortID="349733924" Type="Play" Scope="One" Global="false">
 									<PropertyList>
-										<Property Name="Delay" Type="Real64" Value="1.7"/>
-										<Property Name="FadeTime" Type="Real64" Value="0.4"/>
+										<Property Name="Delay" Type="Real64" Value="1.9"/>
+										<Property Name="FadeCurve" Type="int16" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.01"/>
 									</PropertyList>
 									<ElementList>
 										<Element ID="{F9A2E43C-4745-4690-9C2A-5CA66C5D12E0}" Global="false">
