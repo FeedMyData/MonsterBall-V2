@@ -1,4 +1,5 @@
 Audio Bus	ID	Name			Wwise Object Path	Notes
+	49016843	Music_Monstre			\Default Work Unit\Master Audio Bus\Musiques\Music_Monstre	
 	393239870	SFX			\Default Work Unit\Master Audio Bus\SFX	
 	426462839	Niveks			\Default Work Unit\Master Audio Bus\Voix\Niveks	
 	701539273	Musiques			\Default Work Unit\Master Audio Bus\Musiques	
@@ -6,10 +7,13 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 	1404066300	Ambiances			\Default Work Unit\Master Audio Bus\Ambiances	
 	2594437235	Monstre			\Default Work Unit\Master Audio Bus\Voix\Monstre	
 	2900642665	Music_HDR			\Default Work Unit\Master Audio Bus\Musiques\Music_HDR	
+	2976129395	SFX_Monstre			\Default Work Unit\Master Audio Bus\SFX\SFX_Monstre	
 	3100063744	Amb_Hdr			\Default Work Unit\Master Audio Bus\Ambiances\Amb_Hdr	
 	3370469991	Voix			\Default Work Unit\Master Audio Bus\Voix	
+	3393297703	SFX_Balle			\Default Work Unit\Master Audio Bus\SFX\SFX_Balle	
 	3395410983	Balle			\Default Work Unit\Master Audio Bus\Voix\Balle	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+	3869778295	SFX_Niveks			\Default Work Unit\Master Audio Bus\SFX\SFX_Niveks	
 
 Auxiliary Bus	ID	Name			Wwise Object Path	Notes
 	1802970371	FX			\Default Work Unit\Master Audio Bus\FX	

@@ -79,10 +79,6 @@
 					<ShortName>CoupBalle\VOIX_Niveks_CoupBalle_13.wav</ShortName>
 					<Path>SFX\CoupBalle\VOIX_Niveks_CoupBalle_13_DDC98EF4.wem</Path>
 				</File>
-				<File Id="22050384" Language="SFX">
-					<ShortName>Monster Ball Music Test.wav</ShortName>
-					<Path>SFX\Monster Ball Music Test_EDBC9AB1.wem</Path>
-				</File>
 				<File Id="24715378" Language="SFX">
 					<ShortName>CoupRecu\VOIX_Niveks_CoupRecu_06.wav</ShortName>
 					<Path>SFX\CoupRecu\VOIX_Niveks_CoupRecu_06_DDC98EF4.wem</Path>
@@ -98,6 +94,10 @@
 				<File Id="67887004" Language="SFX">
 					<ShortName>Impact\VOIX_Balle_Impact_05.wav</ShortName>
 					<Path>SFX\Impact\VOIX_Balle_Impact_05_A3369CC9.wem</Path>
+				</File>
+				<File Id="68411703" Language="SFX">
+					<ShortName>53 Low Growls_Groans.wav</ShortName>
+					<Path>SFX\53 Low Growls_Groans_E1C9A874.wem</Path>
 				</File>
 				<File Id="71544008" Language="SFX">
 					<ShortName>CoupRecu\VOIX_Niveks_CoupRecu_03.wav</ShortName>
@@ -157,7 +157,7 @@
 				</File>
 				<File Id="133538925" Language="SFX">
 					<ShortName>RecracheJoueur\VOIX_Monstre_CracheJoueur_02.wav</ShortName>
-					<Path>SFX\RecracheJoueur\VOIX_Monstre_CracheJoueur_02_00A2D0AF.wem</Path>
+					<Path>SFX\RecracheJoueur\VOIX_Monstre_CracheJoueur_02_93A35DF2.wem</Path>
 				</File>
 				<File Id="138982408" Language="SFX">
 					<ShortName>SFX_Electric_Spark-04.wav</ShortName>
@@ -169,7 +169,7 @@
 				</File>
 				<File Id="153690963" Language="SFX">
 					<ShortName>RecracheJoueur\VOIX_Monstre_CracheJoueur_06.wav</ShortName>
-					<Path>SFX\RecracheJoueur\VOIX_Monstre_CracheJoueur_06_67ED32F2.wem</Path>
+					<Path>SFX\RecracheJoueur\VOIX_Monstre_CracheJoueur_06_FCD3C2AF.wem</Path>
 				</File>
 				<File Id="155238317" Language="SFX">
 					<ShortName>CoupRecu\VOIX_Niveks_CoupRecu_05.wav</ShortName>
@@ -198,10 +198,6 @@
 				<File Id="184233157" Language="SFX">
 					<ShortName>Poursuivi\VOIX_Niveks_Poursuivi_07.wav</ShortName>
 					<Path>SFX\Poursuivi\VOIX_Niveks_Poursuivi_07_DDC98EF4.wem</Path>
-				</File>
-				<File Id="187485766" Language="SFX">
-					<ShortName>MonsterBall - Master.wav</ShortName>
-					<Path>SFX\MonsterBall - Master_7B4F6423.wem</Path>
 				</File>
 				<File Id="190620213" Language="SFX">
 					<ShortName>Impact\VOIX_Balle_Impact_07.wav</ShortName>
@@ -307,6 +303,10 @@
 					<ShortName>MarqueBut\VOIX_Niveks_But_07.wav</ShortName>
 					<Path>SFX\MarqueBut\VOIX_Niveks_But_07_DDC98EF4.wem</Path>
 				</File>
+				<File Id="331564348" Language="SFX">
+					<ShortName>Music_Monstre_DebutChargeOK_.wav</ShortName>
+					<Path>SFX\Music_Monstre_DebutChargeOK__958FC539.wem</Path>
+				</File>
 				<File Id="333780913" Language="SFX">
 					<ShortName>EjectBut\VOIX_Niveks_EjectBut_02.wav</ShortName>
 					<Path>SFX\EjectBut\VOIX_Niveks_EjectBut_02_DDC98EF4.wem</Path>
@@ -323,6 +323,10 @@
 					<ShortName>DefaiteALT\Nivek1_14-12.wav</ShortName>
 					<Path>SFX\DefaiteALT\Nivek1_14-12_DDC98EF4.wem</Path>
 				</File>
+				<File Id="337777879" Language="SFX">
+					<ShortName>MonsterBall_MASTER_Final.wav</ShortName>
+					<Path>SFX\MonsterBall_MASTER_Final_D1315C4C.wem</Path>
+				</File>
 				<File Id="339618831" Language="SFX">
 					<ShortName>96 Ice Hockey, arena buzzer - single.wav</ShortName>
 					<Path>SFX\96 Ice Hockey, arena buzzer - single_55F14A13.wem</Path>
@@ -337,7 +341,7 @@
 				</File>
 				<File Id="359829587" Language="SFX">
 					<ShortName>RecracheJoueur\VOIX_Monstre_CracheJoueur_01.wav</ShortName>
-					<Path>SFX\RecracheJoueur\VOIX_Monstre_CracheJoueur_01_B948B739.wem</Path>
+					<Path>SFX\RecracheJoueur\VOIX_Monstre_CracheJoueur_01_0D9E6B10.wem</Path>
 				</File>
 				<File Id="366020153" Language="SFX">
 					<ShortName>3-08 Hit, Body Body Punch Impact, Human.wav</ShortName>
@@ -421,7 +425,7 @@
 				</File>
 				<File Id="477423821" Language="SFX">
 					<ShortName>RecracheJoueur\VOIX_Monstre_CracheJoueur_05.wav</ShortName>
-					<Path>SFX\RecracheJoueur\VOIX_Monstre_CracheJoueur_05_3BE4B339.wem</Path>
+					<Path>SFX\RecracheJoueur\VOIX_Monstre_CracheJoueur_05_068C079C.wem</Path>
 				</File>
 				<File Id="479171199" Language="SFX">
 					<ShortName>But\VOIX_Balle_But_04.wav</ShortName>
@@ -449,7 +453,7 @@
 				</File>
 				<File Id="505005529" Language="SFX">
 					<ShortName>RecracheJoueur\VOIX_Monstre_CracheJoueur_08.wav</ShortName>
-					<Path>SFX\RecracheJoueur\VOIX_Monstre_CracheJoueur_08_CC3EB1F2.wem</Path>
+					<Path>SFX\RecracheJoueur\VOIX_Monstre_CracheJoueur_08_A2D9635B.wem</Path>
 				</File>
 				<File Id="505531461" Language="SFX">
 					<ShortName>4-61 Large explosion, burn _ ...debris _ heavy explosive impact forming crater (3).wav</ShortName>
@@ -611,6 +615,10 @@
 					<ShortName>Grognements\VOIX_Monstre_Grogne_06.wav</ShortName>
 					<Path>SFX\Grognements\VOIX_Monstre_Grogne_06_DDC98EF4.wem</Path>
 				</File>
+				<File Id="653325776" Language="SFX">
+					<ShortName>03 Large Animal Growling (Voice Imit.wav</ShortName>
+					<Path>SFX\03 Large Animal Growling (Voice Imit_E1088582.wem</Path>
+				</File>
 				<File Id="660335167" Language="SFX">
 					<ShortName>Footsteps\SFX_Niveks_Footsteps_01-15.wav</ShortName>
 					<Path>SFX\Footsteps\SFX_Niveks_Footsteps_01-15_DDC98EF4.wem</Path>
@@ -673,7 +681,7 @@
 				</File>
 				<File Id="721632200" Language="SFX">
 					<ShortName>RecracheJoueur\VOIX_Monstre_CracheJoueur_03.wav</ShortName>
-					<Path>SFX\RecracheJoueur\VOIX_Monstre_CracheJoueur_03_DDCE2A62.wem</Path>
+					<Path>SFX\RecracheJoueur\VOIX_Monstre_CracheJoueur_03_CA0C1773.wem</Path>
 				</File>
 				<File Id="722109230" Language="SFX">
 					<ShortName>Victoire\VOIX_Niveks_Victoire_04.wav</ShortName>
@@ -783,6 +791,10 @@
 					<ShortName>Grognements\VOIX_Monstre_Grogne_15.wav</ShortName>
 					<Path>SFX\Grognements\VOIX_Monstre_Grogne_15_DDC98EF4.wem</Path>
 				</File>
+				<File Id="833216960" Language="SFX">
+					<ShortName>MonsterBall_MASTER_Final.wav</ShortName>
+					<Path>SFX\MonsterBall_MASTER_Final_6398A05A.wem</Path>
+				</File>
 				<File Id="833693706" Language="SFX">
 					<ShortName>Footsteps\SFX_Niveks_Footsteps_01-18.wav</ShortName>
 					<Path>SFX\Footsteps\SFX_Niveks_Footsteps_01-18_DDC98EF4.wem</Path>
@@ -821,7 +833,7 @@
 				</File>
 				<File Id="878363899" Language="SFX">
 					<ShortName>Music_Monstre.wav</ShortName>
-					<Path>SFX\Music_Monstre_8BD76F1E.wem</Path>
+					<Path>SFX\Music_Monstre_7AAC93AB.wem</Path>
 				</File>
 				<File Id="883193514" Language="SFX">
 					<ShortName>Defaite\Nivek1_21-02.wav</ShortName>
@@ -829,7 +841,7 @@
 				</File>
 				<File Id="887027585" Language="SFX">
 					<ShortName>RecracheJoueur\VOIX_Monstre_CracheJoueur_07.wav</ShortName>
-					<Path>SFX\RecracheJoueur\VOIX_Monstre_CracheJoueur_07_364C5C9E.wem</Path>
+					<Path>SFX\RecracheJoueur\VOIX_Monstre_CracheJoueur_07_3F73A3FF.wem</Path>
 				</File>
 				<File Id="889132601" Language="SFX">
 					<ShortName>EjectBut\VOIX_Niveks_EjectBut_06.wav</ShortName>
@@ -858,6 +870,10 @@
 				<File Id="905327798" Language="SFX">
 					<ShortName>CoupBalle\VOIX_Niveks_CoupBalle_02.wav</ShortName>
 					<Path>SFX\CoupBalle\VOIX_Niveks_CoupBalle_02_DDC98EF4.wem</Path>
+				</File>
+				<File Id="907249697" Language="SFX">
+					<ShortName>Werewolf Growls, Processed; Two Low.wav</ShortName>
+					<Path>SFX\Werewolf Growls, Processed; Two Low_A1A87D50.wem</Path>
 				</File>
 				<File Id="909555236" Language="SFX">
 					<ShortName>WilhemScream\VOIX_Niveks_Wilhem_02.wav</ShortName>
@@ -894,6 +910,10 @@
 				<File Id="955263217" Language="SFX">
 					<ShortName>DefaiteALT\Nivek1_14-15.wav</ShortName>
 					<Path>SFX\DefaiteALT\Nivek1_14-15_DDC98EF4.wem</Path>
+				</File>
+				<File Id="955428751" Language="SFX">
+					<ShortName>DebutCharge\VX_Monstre_DebutCharge_02.wav</ShortName>
+					<Path>SFX\DebutCharge\VX_Monstre_DebutCharge_02_DDC98EF4.wem</Path>
 				</File>
 				<File Id="957361454" Language="SFX">
 					<ShortName>Footsteps\SFX_Niveks_Footsteps_01-13.wav</ShortName>

@@ -16,7 +16,19 @@
 						<Bus Name="Voix" ID="{6F7CCEB0-4338-419F-A5F7-1BADCFA7CC6B}">
 							<ChildrenList>
 								<Bus Name="Niveks" ID="{61A147E8-AD36-479A-8A9B-0755B4FE6CC9}"/>
-								<Bus Name="Monstre" ID="{C8D2864F-52D6-4B60-8000-ED8571B1E251}"/>
+								<Bus Name="Monstre" ID="{C8D2864F-52D6-4B60-8000-ED8571B1E251}">
+									<DuckingList>
+										<DuckItem>
+											<BusRef Name="Music_Monstre" ID="{B04230D8-DAF3-4EB0-95E2-971DFFE58DCA}"/>
+											<DuckingParam>
+												<Volume>-4</Volume>
+												<FadeInTime>0.300000011920929</FadeInTime>
+												<FadeOutTime>3</FadeOutTime>
+												<FadeCurve>FadeLinear</FadeCurve>
+											</DuckingParam>
+										</DuckItem>
+									</DuckingList>
+								</Bus>
 								<Bus Name="Balle" ID="{77C5DDAF-67F0-4DB5-AD22-3EACEEEFBA84}"/>
 							</ChildrenList>
 						</Bus>
@@ -51,7 +63,7 @@
 							</ChildrenList>
 							<DuckingList>
 								<DuckItem>
-									<BusRef Name="Musiques" ID="{51DA5A6D-5764-451B-9A18-180342A5B0FE}"/>
+									<BusRef Name="Music_HDR" ID="{4A87905F-E3B1-44DA-9DE8-47611B37C7A5}"/>
 									<DuckingParam>
 										<Volume>-4</Volume>
 										<FadeInTime>1</FadeInTime>
@@ -62,17 +74,23 @@
 							</DuckingList>
 						</Bus>
 						<Bus Name="SFX" ID="{98BA6610-4B70-4EFF-A353-4A61C6BE1A24}">
-							<DuckingList>
-								<DuckItem>
-									<BusRef Name="Ambiances" ID="{B9DD8753-6E85-4214-991C-F19471FEBA39}"/>
-									<DuckingParam>
-										<Volume>-3</Volume>
-										<FadeInTime>0.5</FadeInTime>
-										<FadeOutTime>0.5</FadeOutTime>
-										<FadeCurve>FadeExp1</FadeCurve>
-									</DuckingParam>
-								</DuckItem>
-							</DuckingList>
+							<ChildrenList>
+								<Bus Name="SFX_Monstre" ID="{7DA51FE4-C17A-42AE-B6FB-A52DB50DF32E}">
+									<DuckingList>
+										<DuckItem>
+											<BusRef Name="Music_Monstre" ID="{B04230D8-DAF3-4EB0-95E2-971DFFE58DCA}"/>
+											<DuckingParam>
+												<Volume>-3</Volume>
+												<FadeInTime>0</FadeInTime>
+												<FadeOutTime>1</FadeOutTime>
+												<FadeCurve>FadeLinear</FadeCurve>
+											</DuckingParam>
+										</DuckItem>
+									</DuckingList>
+								</Bus>
+								<Bus Name="SFX_Niveks" ID="{5D605323-F659-447C-844B-52F2BC019B29}"/>
+								<Bus Name="SFX_Balle" ID="{31534F2B-B9A5-4DE6-93F9-E3474A64979A}"/>
+							</ChildrenList>
 						</Bus>
 						<Bus Name="Musiques" ID="{51DA5A6D-5764-451B-9A18-180342A5B0FE}">
 							<ChildrenList>
@@ -94,6 +112,19 @@
 											</ValueList>
 										</Property>
 									</PropertyList>
+								</Bus>
+								<Bus Name="Music_Monstre" ID="{B04230D8-DAF3-4EB0-95E2-971DFFE58DCA}">
+									<DuckingList>
+										<DuckItem>
+											<BusRef Name="Amb_Hdr" ID="{C5D4FA84-D93D-47E5-8FB1-59CEBD87CA70}"/>
+											<DuckingParam>
+												<Volume>-4</Volume>
+												<FadeInTime>0.100000001490116</FadeInTime>
+												<FadeOutTime>3</FadeOutTime>
+												<FadeCurve>FadeLinear</FadeCurve>
+											</DuckingParam>
+										</DuckItem>
+									</DuckingList>
 								</Bus>
 							</ChildrenList>
 						</Bus>
