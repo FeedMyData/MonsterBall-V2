@@ -1009,7 +1009,7 @@ MonoBehaviour:
   rangeShoot: 6
   angleHoming: 50
   multiImpact: 1
-  durationBetweenTwoShoot: .100000001
+  durationBetweenTwoShoot: .5
   stunKick: 0
   stunGoal: 0
   jersey: 2
@@ -6408,7 +6408,7 @@ MonoBehaviour:
   rangeShoot: 6
   angleHoming: 50
   multiImpact: 1
-  durationBetweenTwoShoot: .100000001
+  durationBetweenTwoShoot: .5
   stunKick: 0
   stunGoal: 0
   jersey: 3
@@ -9904,9 +9904,9 @@ ParticleSystem:
   startDelay: 0
   speed: 1
   randomSeed: 0
-  looping: 1
+  looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   moveWithTransform: 0
   InitialModule:
     enabled: 1
@@ -17821,7 +17821,7 @@ ParticleSystem:
   randomSeed: 0
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   moveWithTransform: 0
   InitialModule:
     enabled: 1
@@ -19438,9 +19438,9 @@ ParticleSystem:
   startDelay: 0
   speed: 1
   randomSeed: 0
-  looping: 1
+  looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   moveWithTransform: 0
   InitialModule:
     enabled: 1
@@ -24404,9 +24404,9 @@ ParticleSystem:
   startDelay: 0
   speed: 1
   randomSeed: 0
-  looping: 1
+  looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   moveWithTransform: 0
   InitialModule:
     enabled: 1
@@ -32272,7 +32272,7 @@ MonoBehaviour:
   rangeShoot: 6
   angleHoming: 50
   multiImpact: 1
-  durationBetweenTwoShoot: .100000001
+  durationBetweenTwoShoot: .5
   stunKick: 0
   stunGoal: 0
   jersey: 0
@@ -34227,7 +34227,7 @@ MonoBehaviour:
   rangeShoot: 6
   angleHoming: 50
   multiImpact: 1
-  durationBetweenTwoShoot: .100000001
+  durationBetweenTwoShoot: .5
   stunKick: 0
   stunGoal: 0
   jersey: 1
