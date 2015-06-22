@@ -882,7 +882,7 @@
 												</Property>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>-6</Value>
+														<Value>-2</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -4860,6 +4860,11 @@
 										</RandomSequenceContainer>
 										<RandomSequenceContainer Name="VictoireALT" ID="{0044F3EB-7F6D-43D3-A5A7-07D7D11FD677}" ShortID="591136157">
 											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>-150</Value>
+													</ValueList>
+												</Property>
 												<Property Name="PositioningType" Type="int16" Value="1"/>
 												<Property Name="Priority" Type="int16">
 													<ValueList>
@@ -4881,6 +4886,9 @@
 											</ReferenceList>
 											<ChildrenList>
 												<Sound Name="VOIX_Niveks_Yeah_01" ID="{6F661D0E-0062-4A12-BF3D-E22BD65EACFC}" ShortID="803810887" Type="SoundFX">
+													<ExcludedPlatformList>
+														<Platform>Windows</Platform>
+													</ExcludedPlatformList>
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
@@ -4947,6 +4955,16 @@
 													</ActiveSourceList>
 												</Sound>
 												<Sound Name="VOIX_Niveks_Yeah_04" ID="{BB9BC33E-7A04-4616-85A5-6AF5000004D6}" ShortID="38169802" Type="SoundFX">
+													<ExcludedPlatformList>
+														<Platform>Windows</Platform>
+													</ExcludedPlatformList>
+													<PropertyList>
+														<Property Name="Lowpass" Type="int16">
+															<ValueList>
+																<Value>13</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
@@ -7765,7 +7783,7 @@
 								<Property Name="OverrideOutput" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-10</Value>
+										<Value>-12</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -9388,7 +9406,7 @@
 									<PropertyList>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>3</Value>
+												<Value>8</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -9419,6 +9437,97 @@
 								</Sound>
 							</ChildrenList>
 						</ActorMixer>
+						<Sound Name="MB_Woosh_intro_01" ID="{7D78D167-A6F7-4694-BDC5-0A588A303054}" ShortID="522898804" Type="SoundFX">
+							<PropertyList>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>10</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="MB_Woosh_intro" ID="{6389EEC7-07D2-45B6-BAC9-94A955E3A74A}" ShortID="547126298">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="9.97001266051727E-02"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.167238922047387"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.720413818050279"/>
+										<Property Name="TrimEnd" Type="Real64" Value="1.4086663049376"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>MB_Woosh_intro.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="MB_Woosh_intro" ID="{6389EEC7-07D2-45B6-BAC9-94A955E3A74A}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Menu Impact" ID="{565CD522-C16F-40E0-A8EC-B8712AC675A7}" ShortID="572633706" Type="SoundFX">
+							<PropertyList>
+								<Property Name="OverrideUserAuxSends" Type="bool" Value="True"/>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-730</Value>
+									</ValueList>
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{014B6BDF-1B6A-4211-B9CE-8591565E099D}">
+												<PropertyList>
+													<Property Name="Max" Type="Real64" Value="200"/>
+													<Property Name="Min" Type="Real64" Value="-200"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="PositioningType" Type="int16" Value="1"/>
+								<Property Name="UserAuxSendVolume0" Type="Real64">
+									<ValueList>
+										<Value>2</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{98BA6610-4B70-4EFF-A353-4A61C6BE1A24}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+								</Reference>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="FX" ID="{AE17BDD2-F728-4C96-A483-B4560EE81FA8}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_Niveks_ImpactsBut" ID="{E5401BB4-E961-4FD8-A347-CB7C3C6A9E92}" ShortID="1044988596">
+									<Language>SFX</Language>
+									<AudioFile>SFX_Niveks_ImpactsBut.wav</AudioFile>
+									<ConvertedFileIDList>
+										<File ID="357905263"/>
+									</ConvertedFileIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_Niveks_ImpactsBut" ID="{E5401BB4-E961-4FD8-A347-CB7C3C6A9E92}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</ActorMixer>
 			</ChildrenList>

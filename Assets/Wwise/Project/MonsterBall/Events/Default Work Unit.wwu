@@ -674,6 +674,10 @@
 									</ElementList>
 								</Action>
 								<Action Name="Stop" ID="{6F0A1FEF-A5E6-4ED6-9B96-A3A19B5F3C3C}" ShortID="583611525" Type="Stop" Scope="One" Global="true">
+									<PropertyList>
+										<Property Name="FadeCurve" Type="int16" Value="6"/>
+										<Property Name="FadeTime" Type="Real64" Value="3"/>
+									</PropertyList>
 									<ElementList>
 										<Element ID="{CD87AEC3-5EDE-476F-AAB6-3FA97B783FEC}" Global="true">
 											<ObjectRef Name="Music_Fin" ID="{EAE7F11E-5A0F-4B57-984A-C74C4AFD3EA7}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
@@ -773,6 +777,17 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Woosh_intro" ID="{596E3F00-10B4-42FD-BBE0-A018A7F42B8F}">
+							<ChildrenList>
+								<Action Name="Play" ID="{75F12B9D-44D2-48EC-9AB1-C40D89327AC8}" ShortID="887003122" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{17DE196A-0EFC-49E7-B48A-8DBA2128F689}" Global="false">
+											<ObjectRef Name="MB_Woosh_intro" ID="{DEDE2B0B-6C7E-4651-8F64-7C74195184B5}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+										</Element>
+									</ElementList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Menu" ID="{4E501BF3-2765-46A8-8D9E-ACCC86B0F898}" ShortID="1018834299">
@@ -804,11 +819,56 @@
 								</Action>
 								<Action Name="Play" ID="{40A59940-43FD-41F9-A491-3E6BD2FFA932}" ShortID="761668070" Type="Play" Scope="One" Global="false">
 									<PropertyList>
-										<Property Name="Delay" Type="Real64" Value="0.1"/>
+										<Property Name="Delay" Type="Real64" Value="0.7"/>
 									</PropertyList>
 									<ElementList>
 										<Element ID="{2A94019D-512A-417E-9638-1C13B37CEA34}" Global="false">
 											<ObjectRef Name="Music_Main" ID="{814021AA-6BA9-4C22-A014-A745571C77FD}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+										</Element>
+									</ElementList>
+								</Action>
+								<Action Name="Play" ID="{324431CB-62B9-4DD1-BA69-6B04AC6E9EED}" ShortID="376404353" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{26887FF5-26AC-4DEA-9D85-A8AC23095347}" Global="false">
+											<ObjectRef Name="MB_Woosh_intro_01" ID="{7D78D167-A6F7-4694-BDC5-0A588A303054}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+										</Element>
+									</ElementList>
+								</Action>
+								<Action Name="Play" ID="{1C23064B-AF45-4439-AE89-FE712969C5C5}" ShortID="200406519" Type="Play" Scope="One" Global="false">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="0.15"/>
+									</PropertyList>
+									<ElementList>
+										<Element ID="{F2537035-0333-45FD-920A-2ADB7A908F19}" Global="false">
+											<ObjectRef Name="Menu Impact" ID="{565CD522-C16F-40E0-A8EC-B8712AC675A7}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+										</Element>
+									</ElementList>
+								</Action>
+								<Action Name="Stop" ID="{36AB83B8-13F7-41A9-A74A-B012F1EECE2E}" ShortID="850932018" Type="Stop" Scope="One" Global="true">
+									<ElementList>
+										<Element ID="{798EB226-A593-48D2-B6F4-5E050CA554B1}" Global="true">
+											<ObjectRef Name="Defaite" ID="{11A65BF9-308F-40FA-8281-FDCF156EF8F5}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+										</Element>
+									</ElementList>
+								</Action>
+								<Action Name="Stop" ID="{67EB0551-6376-4AF9-A541-42739C5F5F49}" ShortID="523199205" Type="Stop" Scope="One" Global="true">
+									<ElementList>
+										<Element ID="{041E7921-7E71-42F2-9A28-4909F8C5F641}" Global="true">
+											<ObjectRef Name="DefaiteALT" ID="{081A12FA-5D67-44FE-AE99-8E895402B928}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+										</Element>
+									</ElementList>
+								</Action>
+								<Action Name="Stop" ID="{0AC10793-5A01-4488-9B37-ABAD65DF85A3}" ShortID="229194683" Type="Stop" Scope="One" Global="true">
+									<ElementList>
+										<Element ID="{E5DB06AC-A39D-4514-841E-DCA9076146C6}" Global="true">
+											<ObjectRef Name="Victoire" ID="{A93D5F3B-FCA0-4FA7-B376-C153E1B5F133}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+										</Element>
+									</ElementList>
+								</Action>
+								<Action Name="Stop" ID="{55C91AF6-2464-4D99-9E04-6064C4A3BB10}" ShortID="632002925" Type="Stop" Scope="One" Global="true">
+									<ElementList>
+										<Element ID="{D21AACDC-60E9-4866-A4A9-F5A410147766}" Global="true">
+											<ObjectRef Name="VictoireALT" ID="{0044F3EB-7F6D-43D3-A5A7-07D7D11FD677}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
 										</Element>
 									</ElementList>
 								</Action>
@@ -843,6 +903,9 @@
 									</ElementList>
 								</Action>
 								<Action Name="Stop" ID="{8225215C-93D7-4096-838E-8FB356D32A2D}" ShortID="681299028" Type="Stop" Scope="One" Global="true">
+									<ExcludedPlatformList>
+										<Platform>Windows</Platform>
+									</ExcludedPlatformList>
 									<ElementList>
 										<Element ID="{AEF821F2-D7AD-4D29-8DBB-0DB46749521D}" Global="true">
 											<ObjectRef Name="Music_Main" ID="{814021AA-6BA9-4C22-A014-A745571C77FD}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
@@ -850,6 +913,9 @@
 									</ElementList>
 								</Action>
 								<Action Name="Stop" ID="{D38CB907-8FCE-439C-82EA-EFB106E41D7B}" ShortID="195741264" Type="Stop" Scope="One" Global="true">
+									<ExcludedPlatformList>
+										<Platform>Windows</Platform>
+									</ExcludedPlatformList>
 									<ElementList>
 										<Element ID="{ED054D3B-4C69-4288-8B6C-4C700D1D7168}" Global="true">
 											<ObjectRef Name="Music_Monstre" ID="{60DE5FB5-A558-4190-B053-D6D64FCA048E}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
@@ -857,6 +923,9 @@
 									</ElementList>
 								</Action>
 								<Action Name="Stop" ID="{216F8AF8-836D-4886-A807-7FF9D146C413}" ShortID="16440796" Type="Stop" Scope="One" Global="true">
+									<ExcludedPlatformList>
+										<Platform>Windows</Platform>
+									</ExcludedPlatformList>
 									<ElementList>
 										<Element ID="{1AE56F8E-211F-422D-9899-D15EE21A77C5}" Global="true">
 											<ObjectRef Name="SFX_Monstre_Course" ID="{5E59C47D-9153-46D3-9B30-B48F12EC7976}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
@@ -864,9 +933,64 @@
 									</ElementList>
 								</Action>
 								<Action Name="Stop" ID="{04478F33-134F-44F0-BE8F-E8182D672E15}" ShortID="386233369" Type="Stop" Scope="One" Global="true">
+									<ExcludedPlatformList>
+										<Platform>Windows</Platform>
+									</ExcludedPlatformList>
 									<ElementList>
 										<Element ID="{AC97A70E-1F88-42D3-88DA-4DB5C5505D08}" Global="true">
 											<ObjectRef Name="AMB_Public_Normal" ID="{C0D3115C-8B4C-4E28-ABDF-5544C5F971D3}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+										</Element>
+									</ElementList>
+								</Action>
+								<Action Name="Stop" ID="{4EA44503-B213-41EA-85FB-23839FDDDDBA}" ShortID="611967872" Type="Stop" Scope="One" Global="true">
+									<ExcludedPlatformList>
+										<Platform>Windows</Platform>
+									</ExcludedPlatformList>
+									<ElementList>
+										<Element ID="{64E8AF4D-2DE8-4798-B073-75B5EC02324B}" Global="true">
+											<ObjectRef Name="SFX_Monstre_TransfoRumble" ID="{0F15C205-E037-4008-8659-D6F7CFC8B528}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+										</Element>
+									</ElementList>
+								</Action>
+								<Action Name="Stop" ID="{00D36DFE-F747-4451-9F14-84DE9F299CD4}" ShortID="536976277" Type="Stop" Scope="One" Global="true">
+									<ExcludedPlatformList>
+										<Platform>Windows</Platform>
+									</ExcludedPlatformList>
+									<ElementList>
+										<Element ID="{A85DB7E1-D0DF-4154-838D-405845B0ACCC}" Global="true">
+											<ObjectRef Name="GTR_Monstre_DebutChargeOK_" ID="{553C2FA0-55AE-4735-A824-565EA9BA8E81}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+										</Element>
+									</ElementList>
+								</Action>
+								<Action Name="Stop" ID="{94424C5A-B380-40E9-B86D-60146ECFC8CD}" ShortID="1068931976" Type="Stop" Scope="One" Global="false">
+									<ExcludedPlatformList>
+										<Platform>Windows</Platform>
+									</ExcludedPlatformList>
+									<ElementList>
+										<Element ID="{EA717C57-F87F-4C40-890B-911183C7B176}" Global="false">
+											<ObjectRef Name="Grognements" ID="{DA313CEB-548A-4DC0-9E3E-F79794B4C644}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+										</Element>
+									</ElementList>
+								</Action>
+								<Action Name="Stop All Except" ID="{CB46BCBE-EB50-4718-B705-A3FF3208C069}" ShortID="778113436" Type="Stop" Scope="AllExcept" Global="false">
+									<ElementList>
+										<Element ID="{2F8E97EF-381C-46D3-8C69-39F36A686521}" Global="false">
+											<ObjectRef Name="Music_Fin" ID="{EAE7F11E-5A0F-4B57-984A-C74C4AFD3EA7}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+										</Element>
+										<Element ID="{F604DEA4-A62E-497B-9B63-196DB4CF4453}" Global="false">
+											<ObjectRef Name="Defaite" ID="{11A65BF9-308F-40FA-8281-FDCF156EF8F5}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+										</Element>
+										<Element ID="{85A3BDAA-3347-4F2C-B81A-4162D29567BC}" Global="false">
+											<ObjectRef Name="DefaiteALT" ID="{081A12FA-5D67-44FE-AE99-8E895402B928}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+										</Element>
+										<Element ID="{59020E1B-809E-4144-9392-66855C42205F}" Global="false">
+											<ObjectRef Name="Victoire" ID="{A93D5F3B-FCA0-4FA7-B376-C153E1B5F133}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+										</Element>
+										<Element ID="{00528367-0606-4C33-AEC3-A85298E4428F}" Global="false">
+											<ObjectRef Name="VictoireALT" ID="{0044F3EB-7F6D-43D3-A5A7-07D7D11FD677}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+										</Element>
+										<Element ID="{4B0B9D89-E4F0-4FC5-BA71-E5BBF976656B}" Global="false">
+											<ObjectRef Name="Grognements_FIN" ID="{3AE783FC-626E-4650-96F7-E555A913AD93}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
 										</Element>
 									</ElementList>
 								</Action>

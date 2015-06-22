@@ -303,7 +303,7 @@
 				</File>
 				<File Id="331564348" Language="SFX">
 					<ShortName>Music_Monstre_DebutChargeOK_.wav</ShortName>
-					<Path>SFX\Music_Monstre_DebutChargeOK__958FC539.wem</Path>
+					<Path>SFX\Music_Monstre_DebutChargeOK__C1F81DCF.wem</Path>
 				</File>
 				<File Id="333780913" Language="SFX">
 					<ShortName>EjectBut\VOIX_Niveks_EjectBut_02.wav</ShortName>
@@ -492,6 +492,10 @@
 				<File Id="545035411" Language="SFX">
 					<ShortName>MarqueBut\VOIX_Niveks_But_02.wav</ShortName>
 					<Path>SFX\MarqueBut\VOIX_Niveks_But_02_DDC98EF4.wem</Path>
+				</File>
+				<File Id="547126298" Language="SFX">
+					<ShortName>MB_Woosh_intro.wav</ShortName>
+					<Path>SFX\MB_Woosh_intro_506B6741.wem</Path>
 				</File>
 				<File Id="547465474" Language="SFX">
 					<ShortName>SFX_Niveks_Woosh_01.wav</ShortName>
