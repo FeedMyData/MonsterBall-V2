@@ -202,7 +202,7 @@ MonoBehaviour:
   dragOnGround: 2
   areaMagnet: 3
   speedMagnet: 40
-  wrathMax: 15
+  wrathMax: 125
   wrathDribblingValue: 4
   wrathDribblingEachTime: 1
   summon: 2
@@ -34704,11 +34704,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: 0
-  durationInSecond: 30
+  durationInSecond: 180
   ecranFin: {fileID: 1105067374}
   timeBetweenTwoBonus: 0
   whenToBeginEndTimer: 5
-  nextStateValidationRemaining: 1
+  nextStateValidationRemaining: 4
 --- !u!114 &2052379257
 MonoBehaviour:
   m_ObjectHideFlags: 0
