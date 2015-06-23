@@ -4591,6 +4591,12 @@
 								</RandomSequenceContainer>
 								<ActorMixer Name="Tableau Fin" ID="{5A7E8EEC-8A2C-4DBD-B90F-B9B2F7312092}" ShortID="850883397">
 									<PropertyList>
+										<Property Name="HdrActiveRange" Type="Real64">
+											<ValueList>
+												<Value>3</Value>
+											</ValueList>
+										</Property>
+										<Property Name="HdrEnvelopeSensitivity" Type="Real64" Value="10"/>
 										<Property Name="Lowpass" Type="int16">
 											<ValueList>
 												<Value>13</Value>
@@ -4609,17 +4615,12 @@
 											<ObjectRef Name="Room_Small" ID="{577F1466-A63B-47F7-98BD-C56E433F8B5D}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
+											<ObjectRef Name="Music_HDR" ID="{4A87905F-E3B1-44DA-9DE8-47611B37C7A5}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
 										<RandomSequenceContainer Name="Defaite" ID="{11A65BF9-308F-40FA-8281-FDCF156EF8F5}" ShortID="854808763">
 											<PropertyList>
-												<Property Name="Lowpass" Type="int16">
-													<ValueList>
-														<Value>28</Value>
-													</ValueList>
-												</Property>
 												<Property Name="PositioningType" Type="int16" Value="1"/>
 												<Property Name="Priority" Type="int16">
 													<ValueList>
@@ -4767,6 +4768,11 @@
 													</ValueList>
 												</Property>
 												<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="3"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>1</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -4860,6 +4866,11 @@
 										</RandomSequenceContainer>
 										<RandomSequenceContainer Name="VictoireALT" ID="{0044F3EB-7F6D-43D3-A5A7-07D7D11FD677}" ShortID="591136157">
 											<PropertyList>
+												<Property Name="Lowpass" Type="int16">
+													<ValueList>
+														<Value>17</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Pitch" Type="int32">
 													<ValueList>
 														<Value>-150</Value>
@@ -5055,6 +5066,9 @@
 											</ChildrenList>
 										</RandomSequenceContainer>
 										<RandomSequenceContainer Name="DefaiteALT" ID="{081A12FA-5D67-44FE-AE99-8E895402B928}" ShortID="747264392">
+											<ExcludedPlatformList>
+												<Platform>Windows</Platform>
+											</ExcludedPlatformList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
@@ -7793,7 +7807,7 @@
 								<Property Name="OverrideOutput" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-12</Value>
+										<Value>-10</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>

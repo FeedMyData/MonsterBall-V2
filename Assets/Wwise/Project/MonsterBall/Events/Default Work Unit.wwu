@@ -725,6 +725,9 @@
 						<Event Name="Anim_EndMatch_Loose" ID="{21D5FE17-DE1C-4774-A1DD-50B2F17230F7}">
 							<ChildrenList>
 								<Action Name="Play" ID="{559F8134-AD14-485C-BB13-EC9FB2872A7D}" ShortID="535143576" Type="Play" Scope="One" Global="false">
+									<PropertyList>
+										<Property Name="Probability" Type="Real64" Value="33"/>
+									</PropertyList>
 									<ElementList>
 										<Element ID="{0F814E7E-5FBA-4744-9CF7-E996CCB79D18}" Global="false">
 											<ObjectRef Name="Defaite" ID="{11A65BF9-308F-40FA-8281-FDCF156EF8F5}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
@@ -736,6 +739,9 @@
 						<Event Name="Anim_EndMatch_LooseAlt" ID="{76B97163-4A61-47EB-BE85-A2C888EA3E70}">
 							<ChildrenList>
 								<Action Name="Play" ID="{B8DEB887-1695-4CCF-8AC9-A07948674E69}" ShortID="990536309" Type="Play" Scope="One" Global="false">
+									<PropertyList>
+										<Property Name="Probability" Type="Real64" Value="33"/>
+									</PropertyList>
 									<ElementList>
 										<Element ID="{8DC2C37A-087F-4A23-BD54-23EA10432497}" Global="false">
 											<ObjectRef Name="DefaiteALT" ID="{081A12FA-5D67-44FE-AE99-8E895402B928}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
@@ -747,6 +753,9 @@
 						<Event Name="Anim_EndMatch_Win" ID="{7C9B5B1F-5A8C-4A47-89FE-3E6DC3551A6F}">
 							<ChildrenList>
 								<Action Name="Play" ID="{E9ADDAB4-4123-4B24-B2CC-4540D93DBC4F}" ShortID="321230850" Type="Play" Scope="One" Global="false">
+									<PropertyList>
+										<Property Name="Probability" Type="Real64" Value="33"/>
+									</PropertyList>
 									<ElementList>
 										<Element ID="{4D7E8D65-7357-4A37-96AB-2C59DF538555}" Global="false">
 											<ObjectRef Name="Victoire" ID="{A93D5F3B-FCA0-4FA7-B376-C153E1B5F133}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
@@ -758,6 +767,9 @@
 						<Event Name="Anim_EndMatch_WinAlt" ID="{1E9D6350-5425-4A35-9D8F-BBA71F59E53D}">
 							<ChildrenList>
 								<Action Name="Play" ID="{D82062D3-5DB9-4263-B6B3-A73A5B697AA6}" ShortID="766502357" Type="Play" Scope="One" Global="false">
+									<PropertyList>
+										<Property Name="Probability" Type="Real64" Value="30"/>
+									</PropertyList>
 									<ElementList>
 										<Element ID="{F3D86AC0-664B-4771-B593-AFDB8AB91C8D}" Global="false">
 											<ObjectRef Name="VictoireALT" ID="{0044F3EB-7F6D-43D3-A5A7-07D7D11FD677}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>

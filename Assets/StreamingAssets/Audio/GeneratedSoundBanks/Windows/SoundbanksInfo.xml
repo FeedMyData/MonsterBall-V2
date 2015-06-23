@@ -67,10 +67,6 @@
 					<ShortName>2-54 Ice Hockey Arena Buzzer 1.wav</ShortName>
 					<Path>SFX\2-54 Ice Hockey Arena Buzzer 1_7FE3A02A.wem</Path>
 				</File>
-				<File Id="8442019" Language="SFX">
-					<ShortName>DefaiteALT\Nivek1_14-07.wav</ShortName>
-					<Path>SFX\DefaiteALT\Nivek1_14-07_DDC98EF4.wem</Path>
-				</File>
 				<File Id="11049249" Language="SFX">
 					<ShortName>Impact\VOIX_Balle_Impact_08.wav</ShortName>
 					<Path>SFX\Impact\VOIX_Balle_Impact_08_F71B67B5.wem</Path>
@@ -178,10 +174,6 @@
 				<File Id="158470312" Language="SFX">
 					<ShortName>Poursuivi\VOIX_Niveks_Poursuivi_04.wav</ShortName>
 					<Path>SFX\Poursuivi\VOIX_Niveks_Poursuivi_04_DDC98EF4.wem</Path>
-				</File>
-				<File Id="167999780" Language="SFX">
-					<ShortName>DefaiteALT\Nivek1_14-08.wav</ShortName>
-					<Path>SFX\DefaiteALT\Nivek1_14-08_DDC98EF4.wem</Path>
 				</File>
 				<File Id="173624706" Language="SFX">
 					<ShortName>Impact\VOIX_Balle_Impact_01.wav</ShortName>
@@ -319,10 +311,6 @@
 					<ShortName>But\VOIX_Balle_But_13.wav</ShortName>
 					<Path>SFX\But\VOIX_Balle_But_13_DDC98EF4.wem</Path>
 				</File>
-				<File Id="336821651" Language="SFX">
-					<ShortName>DefaiteALT\Nivek1_14-12.wav</ShortName>
-					<Path>SFX\DefaiteALT\Nivek1_14-12_DDC98EF4.wem</Path>
-				</File>
 				<File Id="337777879" Language="SFX">
 					<ShortName>MonsterBall_MASTER_Final.wav</ShortName>
 					<Path>SFX\MonsterBall_MASTER_Final_D1315C4C.wem</Path>
@@ -346,10 +334,6 @@
 				<File Id="366020153" Language="SFX">
 					<ShortName>3-08 Hit, Body Body Punch Impact, Human.wav</ShortName>
 					<Path>SFX\3-08 Hit, Body Body Punch Impact, Human_66A57D50.wem</Path>
-				</File>
-				<File Id="368858164" Language="SFX">
-					<ShortName>DefaiteALT\Nivek1_14-10.wav</ShortName>
-					<Path>SFX\DefaiteALT\Nivek1_14-10_DDC98EF4.wem</Path>
 				</File>
 				<File Id="370122088" Language="SFX">
 					<ShortName>Grognements\VOIX_Monstre_Grogne_02.wav</ShortName>
@@ -398,10 +382,6 @@
 				<File Id="451795428" Language="SFX">
 					<ShortName>Yeah\VOIX_Niveks_Yeah_04.wav</ShortName>
 					<Path>SFX\Yeah\VOIX_Niveks_Yeah_04_DDC98EF4.wem</Path>
-				</File>
-				<File Id="451830912" Language="SFX">
-					<ShortName>DefaiteALT\Nivek1_14-02.wav</ShortName>
-					<Path>SFX\DefaiteALT\Nivek1_14-02_DDC98EF4.wem</Path>
 				</File>
 				<File Id="458354361" Language="SFX">
 					<ShortName>FX_Public_But_02.wav</ShortName>
@@ -466,10 +446,6 @@
 				<File Id="509617402" Language="SFX">
 					<ShortName>Footsteps\SFX_Niveks_Footsteps_01-04.wav</ShortName>
 					<Path>SFX\Footsteps\SFX_Niveks_Footsteps_01-04_DDC98EF4.wem</Path>
-				</File>
-				<File Id="510968601" Language="SFX">
-					<ShortName>DefaiteALT\Nivek1_14-03.wav</ShortName>
-					<Path>SFX\DefaiteALT\Nivek1_14-03_DDC98EF4.wem</Path>
 				</File>
 				<File Id="514639656" Language="SFX">
 					<ShortName>CoupBalle\VOIX_Niveks_CoupBalle_18.wav</ShortName>
@@ -563,17 +539,9 @@
 					<ShortName>CoupBalle\VOIX_Niveks_CoupBalle_01.wav</ShortName>
 					<Path>SFX\CoupBalle\VOIX_Niveks_CoupBalle_01_DDC98EF4.wem</Path>
 				</File>
-				<File Id="612583214" Language="SFX">
-					<ShortName>DefaiteALT\Nivek1_14-06.wav</ShortName>
-					<Path>SFX\DefaiteALT\Nivek1_14-06_DDC98EF4.wem</Path>
-				</File>
 				<File Id="617918766" Language="SFX">
 					<ShortName>Poursuivi\VOIX_Niveks_Poursuivi_06.wav</ShortName>
 					<Path>SFX\Poursuivi\VOIX_Niveks_Poursuivi_06_DDC98EF4.wem</Path>
-				</File>
-				<File Id="618573359" Language="SFX">
-					<ShortName>DefaiteALT\Nivek1_14-09.wav</ShortName>
-					<Path>SFX\DefaiteALT\Nivek1_14-09_DDC98EF4.wem</Path>
 				</File>
 				<File Id="619993377" Language="SFX">
 					<ShortName>Grognements\VOIX_Monstre_Grogne_11.wav</ShortName>
@@ -702,10 +670,6 @@
 				<File Id="736376216" Language="SFX">
 					<ShortName>Cabin Pressure m.wav</ShortName>
 					<Path>SFX\Cabin Pressure m_892A0B64.wem</Path>
-				</File>
-				<File Id="740341984" Language="SFX">
-					<ShortName>DefaiteALT\Nivek1_14-05.wav</ShortName>
-					<Path>SFX\DefaiteALT\Nivek1_14-05_DDC98EF4.wem</Path>
 				</File>
 				<File Id="741232199" Language="SFX">
 					<ShortName>FX_Public_Intensification_03.wav</ShortName>
@@ -911,10 +875,6 @@
 					<ShortName>CoupBalle\VOIX_Niveks_CoupBalle_07.wav</ShortName>
 					<Path>SFX\CoupBalle\VOIX_Niveks_CoupBalle_07_DDC98EF4.wem</Path>
 				</File>
-				<File Id="955263217" Language="SFX">
-					<ShortName>DefaiteALT\Nivek1_14-15.wav</ShortName>
-					<Path>SFX\DefaiteALT\Nivek1_14-15_DDC98EF4.wem</Path>
-				</File>
 				<File Id="955428751" Language="SFX">
 					<ShortName>DebutCharge\VX_Monstre_DebutCharge_02.wav</ShortName>
 					<Path>SFX\DebutCharge\VX_Monstre_DebutCharge_02_DDC98EF4.wem</Path>
@@ -930,10 +890,6 @@
 				<File Id="971967762" Language="SFX">
 					<ShortName>CoupRecu\VOIX_Niveks_CoupRecu_01.wav</ShortName>
 					<Path>SFX\CoupRecu\VOIX_Niveks_CoupRecu_01_DDC98EF4.wem</Path>
-				</File>
-				<File Id="972568043" Language="SFX">
-					<ShortName>DefaiteALT\Nivek1_14-17.wav</ShortName>
-					<Path>SFX\DefaiteALT\Nivek1_14-17_DDC98EF4.wem</Path>
 				</File>
 				<File Id="982670621" Language="SFX">
 					<ShortName>WilhemScream\VOIX_Niveks_Wilhem_06.wav</ShortName>
@@ -954,10 +910,6 @@
 				<File Id="993408895" Language="SFX">
 					<ShortName>Poursuivi\VOIX_Niveks_Poursuivi_13.wav</ShortName>
 					<Path>SFX\Poursuivi\VOIX_Niveks_Poursuivi_13_DDC98EF4.wem</Path>
-				</File>
-				<File Id="998197031" Language="SFX">
-					<ShortName>DefaiteALT\Nivek1_14-14.wav</ShortName>
-					<Path>SFX\DefaiteALT\Nivek1_14-14_DDC98EF4.wem</Path>
 				</File>
 				<File Id="998287860" Language="SFX">
 					<ShortName>CoupBalle\VOIX_Niveks_CoupBalle_05.wav</ShortName>
@@ -1018,10 +970,6 @@
 				<File Id="1062816720" Language="SFX">
 					<ShortName>CoupRecu\VOIX_Niveks_CoupRecu_02.wav</ShortName>
 					<Path>SFX\CoupRecu\VOIX_Niveks_CoupRecu_02_DDC98EF4.wem</Path>
-				</File>
-				<File Id="1069554176" Language="SFX">
-					<ShortName>DefaiteALT\Nivek1_14-04.wav</ShortName>
-					<Path>SFX\DefaiteALT\Nivek1_14-04_DDC98EF4.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
