@@ -98,19 +98,19 @@
 																<Flags>5</Flags>
 															</Point>
 															<Point>
-																<XPos>-27.58685</XPos>
-																<YPos>0.012849999999986</YPos>
+																<XPos>-15</XPos>
+																<YPos>0.01285</YPos>
 																<Flags>0</Flags>
 																<SegmentShape>Log1</SegmentShape>
 															</Point>
 															<Point>
-																<XPos>-9.84927</XPos>
-																<YPos>-200</YPos>
+																<XPos>-9</XPos>
+																<YPos>-4</YPos>
 																<Flags>0</Flags>
 															</Point>
 															<Point>
 																<XPos>0</XPos>
-																<YPos>-200</YPos>
+																<YPos>-6</YPos>
 																<Flags>37</Flags>
 															</Point>
 														</PointList>
@@ -211,7 +211,7 @@
 										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>2</Value>
+												<Value>1</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -303,6 +303,18 @@
 									</ChildrenList>
 								</RandomSequenceContainer>
 								<Sound Name="FX_Public_Intensification_Transfo" ID="{0836B42F-8583-49D8-9DCE-FE48BD98F31C}" ShortID="810501587" Type="SoundFX">
+									<PropertyList>
+										<Property Name="MakeUpGain" Type="Real64">
+											<ValueList>
+												<Value>2</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>4</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
@@ -5355,6 +5367,43 @@
 											<ValueList>
 												<Value>-5</Value>
 											</ValueList>
+											<RTPCList>
+												<RTPC Name="" ID="{7BED2977-3996-476E-8DB7-CEB9D35675F8}" ShortID="436933109">
+													<ReferenceList>
+														<Reference Name="ControlInput">
+															<ObjectRef Name="Stop_Grognement" ID="{F7C3386E-139A-4752-8B83-D9E33F65C4FE}" WorkUnitID="{D102035F-3B94-40DD-8154-2F91360ACE51}"/>
+														</Reference>
+													</ReferenceList>
+													<Curve Name="" ID="{F61765E2-C47E-4D79-963D-4ABBB3CD52C3}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>-48</XPos>
+																<YPos>0</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>-32</XPos>
+																<YPos>0</YPos>
+																<Flags>0</Flags>
+																<SegmentShape>Log2</SegmentShape>
+															</Point>
+															<Point>
+																<XPos>-28</XPos>
+																<YPos>-200</YPos>
+																<Flags>0</Flags>
+															</Point>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-200</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</RTPC>
+											</RTPCList>
 										</Property>
 									</PropertyList>
 									<ReferenceList>
@@ -5675,6 +5724,7 @@
 								<RandomSequenceContainer Name="RecracheJoueur" ID="{29D235F3-0301-428A-8094-A8ECCBA89E0A}" ShortID="712909472">
 									<PropertyList>
 										<Property Name="HdrEnableEnvelope" Type="bool" Value="True"/>
+										<Property Name="OverrideEffect" Type="bool" Value="True"/>
 										<Property Name="OverrideHdrEnvelope" Type="bool" Value="True"/>
 										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="7"/>
 										<Property Name="Volume" Type="Real64">
@@ -5686,6 +5736,9 @@
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+										</Reference>
+										<Reference Name="Effect0" PluginName="Wwise Meter" CompanyID="0" PluginID="129" PluginType="3">
+											<ObjectRef Name="New_Wwise_Meter" ID="{4162E079-F488-4B64-B96D-CB0FF8D83FE5}" WorkUnitID="{D4FB81E1-95C6-40F5-9C6F-EFAA04B0BB60}"/>
 										</Reference>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Music_HDR" ID="{4A87905F-E3B1-44DA-9DE8-47611B37C7A5}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
@@ -5939,6 +5992,14 @@
 										<Reference Name="Effect0" PluginName="Wwise Harmonizer" CompanyID="0" PluginID="138" PluginType="3">
 											<ObjectRef Name="Fear_no_Evil" ID="{A1F17D99-0801-4F32-B74E-ADB2D9ACC556}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
 										</Reference>
+										<Reference Name="Effect1">
+											<Custom>
+												<Effect Name="Wwise Meter (Custom)" ID="{2195D37E-897A-4CB9-B8B3-86D7E88E765C}" ShortID="305665161" PluginName="Wwise Meter" CompanyID="0" PluginID="129" PluginType="3">													<PluginData>
+	<GameParameter Name="Stop_Grognement" ID="{F7C3386E-139A-4752-8B83-D9E33F65C4FE}"/>
+</PluginData>
+												</Effect>
+											</Custom>
+										</Reference>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
 										</Reference>
@@ -6022,6 +6083,7 @@
 								</BlendContainer>
 								<BlendContainer Name="VX_Charge" ID="{8214D82F-2838-4203-B502-EBE5F95B3E5A}" ShortID="1000523501">
 									<PropertyList>
+										<Property Name="OverrideEffect" Type="bool" Value="True"/>
 										<Property Name="PositioningType" Type="int16" Value="1"/>
 										<Property Name="Priority" Type="int16">
 											<ValueList>
@@ -6032,6 +6094,14 @@
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+										</Reference>
+										<Reference Name="Effect0">
+											<Custom>
+												<Effect Name="Wwise Meter (Custom)" ID="{C26387C1-C433-4214-941C-91CDDAAB19A1}" ShortID="685060982" PluginName="Wwise Meter" CompanyID="0" PluginID="129" PluginType="3">													<PluginData>
+	<GameParameter Name="Stop_Grognement" ID="{F7C3386E-139A-4752-8B83-D9E33F65C4FE}"/>
+</PluginData>
+												</Effect>
+											</Custom>
 										</Reference>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Monstre" ID="{C8D2864F-52D6-4B60-8000-ED8571B1E251}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
@@ -6110,6 +6180,14 @@
 										<Reference Name="Effect0" PluginName="Wwise Harmonizer" CompanyID="0" PluginID="138" PluginType="3">
 											<ObjectRef Name="Fear_no_Evil" ID="{A1F17D99-0801-4F32-B74E-ADB2D9ACC556}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
 										</Reference>
+										<Reference Name="Effect1">
+											<Custom>
+												<Effect Name="Wwise Meter (Custom)" ID="{F0A0B836-86CB-475D-986A-12C6DF62AADF}" ShortID="428247261" PluginName="Wwise Meter" CompanyID="0" PluginID="129" PluginType="3">													<PluginData>
+	<GameParameter Name="Stop_Grognement" ID="{F7C3386E-139A-4752-8B83-D9E33F65C4FE}"/>
+</PluginData>
+												</Effect>
+											</Custom>
+										</Reference>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
 										</Reference>
@@ -6187,6 +6265,7 @@
 								</BlendContainer>
 								<BlendContainer Name="VX_Monstre-Transfo" ID="{F5F2C0FB-DD17-4C05-AC18-A2EA49664DCD}" ShortID="107939707">
 									<PropertyList>
+										<Property Name="OverrideEffect" Type="bool" Value="True"/>
 										<Property Name="Pitch" Type="int32">
 											<ValueList>
 												<Value>300</Value>
@@ -6201,6 +6280,14 @@
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
+										</Reference>
+										<Reference Name="Effect0">
+											<Custom>
+												<Effect Name="Wwise Meter (Custom)" ID="{7408F241-355E-423C-A6AE-B96170B64AAB}" ShortID="37510966" PluginName="Wwise Meter" CompanyID="0" PluginID="129" PluginType="3">													<PluginData>
+	<GameParameter Name="Stop_Grognement" ID="{F7C3386E-139A-4752-8B83-D9E33F65C4FE}"/>
+</PluginData>
+												</Effect>
+											</Custom>
 										</Reference>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="SFX_Monstre" ID="{7DA51FE4-C17A-42AE-B6FB-A52DB50DF32E}" WorkUnitID="{F2826676-125A-488D-B5BC-8666D671270D}"/>
@@ -7650,7 +7737,7 @@
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>3</Value>
+												<Value>4</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -8681,9 +8768,14 @@
 						</Sound>
 						<Sound Name="GTR_Monstre_DebutChargeOK_" ID="{553C2FA0-55AE-4735-A824-565EA9BA8E81}" ShortID="447437965" Type="SoundFX">
 							<PropertyList>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>6</Value>
+									</ValueList>
+								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-2</Value>
+										<Value>1</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -9285,6 +9377,11 @@
 										<Value>7</Value>
 									</ValueList>
 								</Property>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>5</Value>
+									</ValueList>
+								</Property>
 								<Property Name="OverrideEffect" Type="bool" Value="True"/>
 								<Property Name="OverrideUserAuxSends" Type="bool" Value="True"/>
 								<Property Name="Pitch" Type="int32">
@@ -9403,7 +9500,14 @@
 										<ActiveSource Name="2-54 Ice Hockey Arena Buzzer 1" ID="{97320C97-F388-4CA9-8210-7E58B0938E4D}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="BuzzerDebutMatch" ID="{A4ABE727-B188-4AC5-8021-A4F6BA4259AB}" ShortID="305639917" Type="SoundFX">
+								<Sound Name="BuzzerFintMatch" ID="{A4ABE727-B188-4AC5-8021-A4F6BA4259AB}" ShortID="305639917" Type="SoundFX">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>6</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6842DF1D-56EB-4B84-AE32-410722E0A817}"/>
@@ -9428,6 +9532,11 @@
 								</Sound>
 								<Sound Name="BuzzerDebutMatc_01" ID="{B9CD5E1C-A7FF-42CD-89B6-9A903A089173}" ShortID="564654557" Type="SoundFX">
 									<PropertyList>
+										<Property Name="MakeUpGain" Type="Real64">
+											<ValueList>
+												<Value>3</Value>
+											</ValueList>
+										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
 												<Value>8</Value>

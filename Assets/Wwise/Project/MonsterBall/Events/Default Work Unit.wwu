@@ -35,7 +35,8 @@
 							<ChildrenList>
 								<Action Name="Play" ID="{274B892C-C523-42D1-B8EC-89E11F601AA1}" ShortID="402816239" Type="Play" Scope="One" Global="false">
 									<PropertyList>
-										<Property Name="Delay" Type="Real64" Value="0.3"/>
+										<Property Name="Delay" Type="Real64" Value="0.1"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.3"/>
 									</PropertyList>
 									<ElementList>
 										<Element ID="{4DCB546A-8810-483D-A3B5-CEB16F065476}" Global="false">
@@ -354,6 +355,13 @@
 												</Element>
 											</ElementList>
 										</Action>
+										<Action Name="Stop" ID="{5CADC2C8-C5D1-4D80-9989-8606DD44B2CC}" ShortID="46235688" Type="Stop" Scope="One" Global="false">
+											<ElementList>
+												<Element ID="{238FE3E5-D542-47F7-B09A-6B75230BE16B}" Global="false">
+													<ObjectRef Name="Grognements" ID="{DA313CEB-548A-4DC0-9E3E-F79794B4C644}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+												</Element>
+											</ElementList>
+										</Action>
 									</ChildrenList>
 								</Event>
 							</ChildrenList>
@@ -388,8 +396,8 @@
 										</Action>
 										<Action Name="Play" ID="{3A6EDA4D-8AA4-4492-AA69-A409C4814B15}" ShortID="166763261" Type="Play" Scope="One" Global="false">
 											<PropertyList>
-												<Property Name="Delay" Type="Real64" Value="2.5"/>
-												<Property Name="FadeTime" Type="Real64" Value="0.8"/>
+												<Property Name="Delay" Type="Real64" Value="2.1"/>
+												<Property Name="FadeTime" Type="Real64" Value="0.3"/>
 											</PropertyList>
 											<ElementList>
 												<Element ID="{927494E7-8167-46BD-9BFF-560119D298BA}" Global="false">
@@ -400,7 +408,7 @@
 										<Action Name="Pause" ID="{80CC13BF-9C5C-48BB-8674-9C5126B932DE}" ShortID="901124215" Type="Pause" Scope="One" Global="true">
 											<PropertyList>
 												<Property Name="FadeCurve" Type="int16" Value="6"/>
-												<Property Name="FadeTime" Type="Real64" Value="1"/>
+												<Property Name="FadeTime" Type="Real64" Value="2"/>
 											</PropertyList>
 											<ElementList>
 												<Element ID="{1F4173D2-7BFC-413D-AEB5-17AC0FA31943}" Global="true">
@@ -445,7 +453,7 @@
 										</Action>
 										<Action Name="Play" ID="{E1930398-E3E4-4166-B25B-22C94AAB9A4E}" ShortID="59461580" Type="Play" Scope="One" Global="false">
 											<PropertyList>
-												<Property Name="Delay" Type="Real64" Value="0.4"/>
+												<Property Name="Delay" Type="Real64" Value="0.5"/>
 												<Property Name="FadeCurve" Type="int16" Value="8"/>
 												<Property Name="FadeTime" Type="Real64" Value="0.1"/>
 											</PropertyList>
@@ -456,6 +464,10 @@
 											</ElementList>
 										</Action>
 										<Action Name="Play" ID="{799BDF84-7B36-4714-9DB0-77D9B3596EBC}" ShortID="1051627512" Type="Play" Scope="One" Global="false">
+											<PropertyList>
+												<Property Name="Delay" Type="Real64" Value="0.8"/>
+												<Property Name="FadeTime" Type="Real64" Value="0.8"/>
+											</PropertyList>
 											<ElementList>
 												<Element ID="{1C659835-0E60-4815-ADAE-01913BD4F50F}" Global="false">
 													<ObjectRef Name="Public_Intensification" ID="{3B830137-394A-4A85-B243-F8DA0510D1BB}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
@@ -479,6 +491,13 @@
 												</Element>
 											</ElementList>
 										</Action>
+										<Action Name="Stop" ID="{1198C715-56CF-42A8-85F7-9EADA7808180}" ShortID="285902430" Type="Stop" Scope="One" Global="true">
+											<ElementList>
+												<Element ID="{35F5FA5F-91B9-42ED-B54E-BC4D02C64D53}" Global="true">
+													<ObjectRef Name="Grognements" ID="{DA313CEB-548A-4DC0-9E3E-F79794B4C644}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+												</Element>
+											</ElementList>
+										</Action>
 									</ChildrenList>
 								</Event>
 							</ChildrenList>
@@ -497,16 +516,47 @@
 												</Element>
 											</ElementList>
 										</Action>
-										<Action Name="Play" ID="{40BF811E-B028-48F8-8653-EA349AF86516}" ShortID="410292581" Type="Play" Scope="One" Global="false">
-											<ExcludedPlatformList>
-												<Platform>Windows</Platform>
-											</ExcludedPlatformList>
+										<Action Name="Stop" ID="{0423B841-86BF-44AD-B475-4CBF2DE61F39}" ShortID="778245599" Type="Stop" Scope="One" Global="true">
 											<PropertyList>
-												<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+												<Property Name="FadeCurve" Type="int16" Value="8"/>
+												<Property Name="FadeTime" Type="Real64" Value="1"/>
 											</PropertyList>
 											<ElementList>
-												<Element ID="{89BEF15D-41DC-4517-BAEA-E5E022AAFD7C}" Global="false">
-													<ObjectRef Name="Music_Main" ID="{814021AA-6BA9-4C22-A014-A745571C77FD}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+												<Element ID="{B2AE7E25-9BED-474D-B83D-05403E34B2F5}" Global="true">
+													<ObjectRef Name="Grognements_FIN" ID="{3AE783FC-626E-4650-96F7-E555A913AD93}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+												</Element>
+											</ElementList>
+										</Action>
+										<Action Name="Stop" ID="{363B858C-ACC8-4490-9E11-1AD4D7807341}" ShortID="27147744" Type="Stop" Scope="One" Global="true">
+											<PropertyList>
+												<Property Name="FadeCurve" Type="int16" Value="8"/>
+												<Property Name="FadeTime" Type="Real64" Value="1"/>
+											</PropertyList>
+											<ElementList>
+												<Element ID="{B8AC11BB-7D0B-4F89-B662-B421CF1DDBBA}" Global="true">
+													<ObjectRef Name="Defaite" ID="{11A65BF9-308F-40FA-8281-FDCF156EF8F5}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+												</Element>
+											</ElementList>
+										</Action>
+										<Action Name="Stop" ID="{3DCB68A6-8E98-4F05-9A46-EA52050861EB}" ShortID="510677058" Type="Stop" Scope="One" Global="true">
+											<PropertyList>
+												<Property Name="FadeCurve" Type="int16" Value="8"/>
+												<Property Name="FadeTime" Type="Real64" Value="1"/>
+											</PropertyList>
+											<ElementList>
+												<Element ID="{6BAEE8BA-A486-4CA8-82F1-B35C1B3C3E89}" Global="true">
+													<ObjectRef Name="Victoire" ID="{A93D5F3B-FCA0-4FA7-B376-C153E1B5F133}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+												</Element>
+											</ElementList>
+										</Action>
+										<Action Name="Stop" ID="{7CD2B15D-F757-4CF5-8302-D60446F8479E}" ShortID="152421554" Type="Stop" Scope="One" Global="true">
+											<PropertyList>
+												<Property Name="FadeCurve" Type="int16" Value="8"/>
+												<Property Name="FadeTime" Type="Real64" Value="1"/>
+											</PropertyList>
+											<ElementList>
+												<Element ID="{FDB70507-31FA-4FB6-83F0-4EE8A69E9442}" Global="true">
+													<ObjectRef Name="VictoireALT" ID="{0044F3EB-7F6D-43D3-A5A7-07D7D11FD677}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
 												</Element>
 											</ElementList>
 										</Action>
@@ -645,6 +695,10 @@
 									</ElementList>
 								</Action>
 								<Action Name="Play" ID="{4856FEFA-E3A3-408F-81FB-D071FA082C3B}" ShortID="849160186" Type="Play" Scope="One" Global="false">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="0.3"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.3"/>
+									</PropertyList>
 									<ElementList>
 										<Element ID="{9F02D4FA-6E7A-4249-83EA-E2208E6DD87D}" Global="false">
 											<ObjectRef Name="Public_Debut" ID="{FC76F290-BD09-4412-8349-C4EAF36EDD3E}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
@@ -695,6 +749,13 @@
 										</Element>
 									</ElementList>
 								</Action>
+								<Action Name="Stop" ID="{0D6BBF91-7D96-4C0D-A6E2-CE800BDAC4EE}" ShortID="799954211" Type="Stop" Scope="One" Global="true">
+									<ElementList>
+										<Element ID="{A8AE06BF-95A7-4DD8-9E08-EB7532CF92FE}" Global="true">
+											<ObjectRef Name="Grognements" ID="{DA313CEB-548A-4DC0-9E3E-F79794B4C644}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+										</Element>
+									</ElementList>
+								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="SFX_Fin" ID="{4615FFFC-2003-4978-9142-D054EAB0D7A9}">
@@ -709,11 +770,14 @@
 								<Action Name="Play" ID="{406C9F91-79AE-4F8E-AE82-F274B1163EE7}" ShortID="853720102" Type="Play" Scope="One" Global="false">
 									<ElementList>
 										<Element ID="{422D73DB-DDE7-4DCB-B8B6-4A10A231CB2B}" Global="false">
-											<ObjectRef Name="BuzzerDebutMatch" ID="{A4ABE727-B188-4AC5-8021-A4F6BA4259AB}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+											<ObjectRef Name="BuzzerFintMatch" ID="{A4ABE727-B188-4AC5-8021-A4F6BA4259AB}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
 										</Element>
 									</ElementList>
 								</Action>
 								<Action Name="Play" ID="{B1DF847B-AF1D-4B73-A849-874ABB163D20}" ShortID="231300653" Type="Play" Scope="One" Global="false">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="0.5"/>
+									</PropertyList>
 									<ElementList>
 										<Element ID="{0EAA1111-3B45-4CC8-9BB8-8877101A582C}" Global="false">
 											<ObjectRef Name="Public_Fin" ID="{A891061D-A25B-4DA2-9B6C-BF929014C3E6}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
@@ -726,7 +790,7 @@
 							<ChildrenList>
 								<Action Name="Play" ID="{559F8134-AD14-485C-BB13-EC9FB2872A7D}" ShortID="535143576" Type="Play" Scope="One" Global="false">
 									<PropertyList>
-										<Property Name="Probability" Type="Real64" Value="33"/>
+										<Property Name="Probability" Type="Real64" Value="40"/>
 									</PropertyList>
 									<ElementList>
 										<Element ID="{0F814E7E-5FBA-4744-9CF7-E996CCB79D18}" Global="false">
@@ -740,7 +804,7 @@
 							<ChildrenList>
 								<Action Name="Play" ID="{B8DEB887-1695-4CCF-8AC9-A07948674E69}" ShortID="990536309" Type="Play" Scope="One" Global="false">
 									<PropertyList>
-										<Property Name="Probability" Type="Real64" Value="33"/>
+										<Property Name="Probability" Type="Real64" Value="40"/>
 									</PropertyList>
 									<ElementList>
 										<Element ID="{8DC2C37A-087F-4A23-BD54-23EA10432497}" Global="false">
@@ -754,7 +818,7 @@
 							<ChildrenList>
 								<Action Name="Play" ID="{E9ADDAB4-4123-4B24-B2CC-4540D93DBC4F}" ShortID="321230850" Type="Play" Scope="One" Global="false">
 									<PropertyList>
-										<Property Name="Probability" Type="Real64" Value="33"/>
+										<Property Name="Probability" Type="Real64" Value="40"/>
 									</PropertyList>
 									<ElementList>
 										<Element ID="{4D7E8D65-7357-4A37-96AB-2C59DF538555}" Global="false">
@@ -768,7 +832,7 @@
 							<ChildrenList>
 								<Action Name="Play" ID="{D82062D3-5DB9-4263-B6B3-A73A5B697AA6}" ShortID="766502357" Type="Play" Scope="One" Global="false">
 									<PropertyList>
-										<Property Name="Probability" Type="Real64" Value="30"/>
+										<Property Name="Probability" Type="Real64" Value="40"/>
 									</PropertyList>
 									<ElementList>
 										<Element ID="{F3D86AC0-664B-4771-B593-AFDB8AB91C8D}" Global="false">
@@ -794,7 +858,18 @@
 								<Action Name="Play" ID="{75F12B9D-44D2-48EC-9AB1-C40D89327AC8}" ShortID="887003122" Type="Play" Scope="One" Global="false">
 									<ElementList>
 										<Element ID="{17DE196A-0EFC-49E7-B48A-8DBA2128F689}" Global="false">
-											<ObjectRef Name="MB_Woosh_intro" ID="{DEDE2B0B-6C7E-4651-8F64-7C74195184B5}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+											<ObjectRef Name="MB_Woosh_intro_01" ID="{7D78D167-A6F7-4694-BDC5-0A588A303054}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+										</Element>
+									</ElementList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="SFX_Monstre_Course" ID="{D936A88C-3A0D-45E1-9897-26CF817A593D}">
+							<ChildrenList>
+								<Action Name="Play" ID="{03269A58-DEBD-44F9-A18D-0F48BE72AED8}" ShortID="528769094" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{C091E623-FB1A-4F75-8F41-3EC6D665CA4F}" Global="false">
+											<ObjectRef Name="Grognements" ID="{DA313CEB-548A-4DC0-9E3E-F79794B4C644}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
 										</Element>
 									</ElementList>
 								</Action>
@@ -822,13 +897,6 @@
 					<ChildrenList>
 						<Event Name="Music_Menu" ID="{CF6C4B60-167B-47DE-B567-E8CA62DC3777}">
 							<ChildrenList>
-								<Action Name="Stop" ID="{118B2B78-CF5E-4BDA-AE53-0B1526484601}" ShortID="121587748" Type="Stop" Scope="One" Global="true">
-									<ElementList>
-										<Element ID="{E250A62D-7095-45AA-A499-9DE26F161CBD}" Global="true">
-											<ObjectRef Name="Music_Fin" ID="{EAE7F11E-5A0F-4B57-984A-C74C4AFD3EA7}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
-										</Element>
-									</ElementList>
-								</Action>
 								<Action Name="Play" ID="{40A59940-43FD-41F9-A491-3E6BD2FFA932}" ShortID="761668070" Type="Play" Scope="One" Global="false">
 									<PropertyList>
 										<Property Name="Delay" Type="Real64" Value="0.7"/>
@@ -856,31 +924,16 @@
 										</Element>
 									</ElementList>
 								</Action>
-								<Action Name="Stop" ID="{36AB83B8-13F7-41A9-A74A-B012F1EECE2E}" ShortID="850932018" Type="Stop" Scope="One" Global="true">
+								<Action Name="Stop All Except" ID="{18EEBB3C-2073-40A5-AA36-0943DD5F4858}" ShortID="808489216" Type="Stop" Scope="AllExcept" Global="true">
 									<ElementList>
-										<Element ID="{798EB226-A593-48D2-B6F4-5E050CA554B1}" Global="true">
-											<ObjectRef Name="Defaite" ID="{11A65BF9-308F-40FA-8281-FDCF156EF8F5}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+										<Element ID="{B6739E15-3569-4C1F-9A9B-2E2A175EA644}" Global="true">
+											<ObjectRef Name="MB_Woosh_intro_01" ID="{7D78D167-A6F7-4694-BDC5-0A588A303054}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
 										</Element>
-									</ElementList>
-								</Action>
-								<Action Name="Stop" ID="{67EB0551-6376-4AF9-A541-42739C5F5F49}" ShortID="523199205" Type="Stop" Scope="One" Global="true">
-									<ElementList>
-										<Element ID="{041E7921-7E71-42F2-9A28-4909F8C5F641}" Global="true">
-											<ObjectRef Name="DefaiteALT" ID="{081A12FA-5D67-44FE-AE99-8E895402B928}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+										<Element ID="{221FBBFF-B92D-432C-82AF-178AA21FC120}" Global="true">
+											<ObjectRef Name="Menu Impact" ID="{565CD522-C16F-40E0-A8EC-B8712AC675A7}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
 										</Element>
-									</ElementList>
-								</Action>
-								<Action Name="Stop" ID="{0AC10793-5A01-4488-9B37-ABAD65DF85A3}" ShortID="229194683" Type="Stop" Scope="One" Global="true">
-									<ElementList>
-										<Element ID="{E5DB06AC-A39D-4514-841E-DCA9076146C6}" Global="true">
-											<ObjectRef Name="Victoire" ID="{A93D5F3B-FCA0-4FA7-B376-C153E1B5F133}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
-										</Element>
-									</ElementList>
-								</Action>
-								<Action Name="Stop" ID="{55C91AF6-2464-4D99-9E04-6064C4A3BB10}" ShortID="632002925" Type="Stop" Scope="One" Global="true">
-									<ElementList>
-										<Element ID="{D21AACDC-60E9-4866-A4A9-F5A410147766}" Global="true">
-											<ObjectRef Name="VictoireALT" ID="{0044F3EB-7F6D-43D3-A5A7-07D7D11FD677}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
+										<Element ID="{695F6B4F-AEC2-4441-983B-FF2DF3CA45EF}" Global="true">
+											<ObjectRef Name="Music_Main" ID="{814021AA-6BA9-4C22-A014-A745571C77FD}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>
 										</Element>
 									</ElementList>
 								</Action>
@@ -906,6 +959,7 @@
 							<ChildrenList>
 								<Action Name="Play" ID="{3A3828B8-7D40-4E20-B285-2BCA773129C0}" ShortID="192028334" Type="Play" Scope="One" Global="false">
 									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="0.5"/>
 										<Property Name="FadeTime" Type="Real64" Value="0.1"/>
 									</PropertyList>
 									<ElementList>
@@ -915,6 +969,10 @@
 									</ElementList>
 								</Action>
 								<Action Name="Stop All Except" ID="{CB46BCBE-EB50-4718-B705-A3FF3208C069}" ShortID="778113436" Type="Stop" Scope="AllExcept" Global="true">
+									<PropertyList>
+										<Property Name="FadeCurve" Type="int16" Value="7"/>
+										<Property Name="FadeTime" Type="Real64" Value="1"/>
+									</PropertyList>
 									<ElementList>
 										<Element ID="{2F8E97EF-381C-46D3-8C69-39F36A686521}" Global="true">
 											<ObjectRef Name="Music_Fin" ID="{EAE7F11E-5A0F-4B57-984A-C74C4AFD3EA7}" WorkUnitID="{89112E87-D709-4DDF-A696-2F7EF0F7D399}"/>

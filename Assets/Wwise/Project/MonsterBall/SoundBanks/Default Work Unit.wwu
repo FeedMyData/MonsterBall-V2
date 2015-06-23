@@ -5,6 +5,7 @@
 			<ChildrenList>
 				<SoundBank Name="MainSoundBank" ID="{DF1C3A93-50B0-44C3-A9B1-BEAE92E6DE56}">
 					<ObjectInclusionList>
+						<ObjectRef Name="Woosh_intro" ID="{596E3F00-10B4-42FD-BBE0-A018A7F42B8F}" WorkUnitID="{D899008C-EE7F-4475-814E-BB3DC86CD141}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Vx_Niveks_Poursuivi" ID="{9DE89C00-5A9F-490B-8609-3D0F5BBAABA1}" WorkUnitID="{D899008C-EE7F-4475-814E-BB3DC86CD141}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="VX_Monstre_DebutCharge" ID="{C3531607-D057-42DB-8B57-17C9CED5E9E9}" WorkUnitID="{D899008C-EE7F-4475-814E-BB3DC86CD141}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Anim_EndMatch_Loose" ID="{21D5FE17-DE1C-4774-A1DD-50B2F17230F7}" WorkUnitID="{D899008C-EE7F-4475-814E-BB3DC86CD141}" Filter="7" Origin="Manual"/>
@@ -36,6 +37,7 @@
 						<ObjectRef Name="VX_Niveks_Frappe" ID="{EB02EC7E-8C6D-4630-BCC6-1FCF78070F34}" WorkUnitID="{D899008C-EE7F-4475-814E-BB3DC86CD141}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="SFX_Monstre_Cloison" ID="{993D3485-82A3-4F4A-8AD3-03895EE282F7}" WorkUnitID="{D899008C-EE7F-4475-814E-BB3DC86CD141}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="VX_Balle_Course" ID="{78E69E8A-6B17-4E01-8E22-CD08CE6BC6FC}" WorkUnitID="{D899008C-EE7F-4475-814E-BB3DC86CD141}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="SFX_Monstre_Course" ID="{D936A88C-3A0D-45E1-9897-26CF817A593D}" WorkUnitID="{D899008C-EE7F-4475-814E-BB3DC86CD141}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Public_Normal" ID="{51F24495-953D-43F8-B9CE-000C3412ECD4}" WorkUnitID="{D899008C-EE7F-4475-814E-BB3DC86CD141}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Menu_Valid" ID="{9F27E19C-334F-44DD-ACB6-BC14292F93AA}" WorkUnitID="{D899008C-EE7F-4475-814E-BB3DC86CD141}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Transfo_BalleMonstre" ID="{C4E685A6-7FBC-4AF3-A69E-E6FF1F3FD07E}" WorkUnitID="{D899008C-EE7F-4475-814E-BB3DC86CD141}" Filter="7" Origin="Manual"/>

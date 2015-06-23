@@ -29,6 +29,7 @@
 				<Event Id="3607059188" Name="SFX_Buzz_DebutMatch"/>
 				<Event Id="548336696" Name="SFX_Fin"/>
 				<Event Id="2593163185" Name="SFX_Monstre_Cloison"/>
+				<Event Id="3040534629" Name="SFX_Monstre_Course"/>
 				<Event Id="3767868511" Name="SFX_Monstre_Grow"/>
 				<Event Id="3534940551" Name="SFX_Niveks_ChargeCoup"/>
 				<Event Id="2725983128" Name="SFX_Niveks_CoupFaible"/>
@@ -55,6 +56,7 @@
 				<Event Id="4235626026" Name="VX_Niveks_ImpactBut"/>
 				<Event Id="3251995241" Name="Vx_Niveks_Poursuivi"/>
 				<Event Id="3784437905" Name="Vx_Niveks_Wilhem"/>
+				<Event Id="2769365568" Name="Woosh_intro"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="3830108" Language="SFX">

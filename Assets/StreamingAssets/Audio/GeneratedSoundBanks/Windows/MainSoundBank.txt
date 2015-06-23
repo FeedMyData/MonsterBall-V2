@@ -20,9 +20,11 @@ Event	ID	Name			Wwise Object Path	Notes
 	2676280931	VX_Balle_RemiseEnJeu			\Default Work Unit\Voix\Balle\VX_Balle_RemiseEnJeu	
 	2725983128	SFX_Niveks_CoupFaible			\Default Work Unit\SFX\SFX_Niveks_CoupFaible	
 	2747378368	Music_Fin			\Default Work Unit\Music\Music_Fin	
+	2769365568	Woosh_intro			\Default Work Unit\SFX\Woosh_intro	
 	2887782118	VX_Balle_Course			\Default Work Unit\Voix\Balle\VX_Balle_Course	
 	3004362387	VX_Monstre_Crache			\Default Work Unit\Voix\Monstre\VX_Monstre_Crache	
 	3019773176	Public_Normal			\Default Work Unit\Public\Public_Normal	
+	3040534629	SFX_Monstre_Course			\Default Work Unit\SFX\SFX_Monstre_Course	
 	3060817186	Public_But			\Default Work Unit\Public\Public_But	
 	3206008515	Transfo_MonstreBalle			\Default Work Unit\Voix\Transformation\Transfo_MonstreBalle	
 	3212082402	VX_Niveks_ButPerdant			\Default Work Unit\Voix\Niveks\VX_Niveks_ButPerdant	
@@ -46,12 +48,17 @@ Event	ID	Name			Wwise Object Path	Notes
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	1757332545	But_Ambiance			\Default Work Unit\But_Ambiance	
 	1789967059	BallePop_Debut			\Default Work Unit\BallePop_Debut	
+	2828728882	Stop_Grognement			\Default Work Unit\Stop_Grognement	
 
 Effect plug-ins	ID	Name	Type				Notes
+	37510966	Wwise Meter (Custom)	Wwise Meter			
 	59662939	Dialog_Too_Quiet	Wwise Compressor			
 	224146021	Wwise Meter (Custom)	Wwise Meter			
+	305665161	Wwise Meter (Custom)	Wwise Meter			
 	378363269	Wwise Meter (Custom)	Wwise Meter			
 	510781901	Wwise Harmonizer (Custom)	Wwise Harmonizer			
+	685060982	Wwise Meter (Custom)	Wwise Meter			
+	780838069	New_Wwise_Meter	Wwise Meter			
 	819943492	Fear_no_Evil	Wwise Harmonizer			
 	868434669	Wwise Meter (Custom)	Wwise Meter			
 	1487150281	Bigger_Boom	iZotope Trash Dynamics Mono			
@@ -123,7 +130,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	334758678	VOIX_Niveks_EjectBut_04	C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\.cache\Windows\SFX\EjectBut\VOIX_Niveks_EjectBut_04_DDC98EF4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Voix\Niveks\EjectBut\VOIX_Niveks_EjectBut_04		72956
 	335949869	VOIX_Balle_But_13	C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\.cache\Windows\SFX\But\VOIX_Balle_But_13_DDC98EF4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Voix\Balle\But\VOIX_Balle_But_13		34830
 	337777879	Music_Fin	C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\.cache\Windows\SFX\MonsterBall_MASTER_Final_D1315C4C.wem		\Actor-Mixer Hierarchy\Default Work Unit\Musiques\Music_Fin		5678328
-	339618831	BuzzerDebutMatch	C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\.cache\Windows\SFX\96 Ice Hockey, arena buzzer - single_55F14A13.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\BuzzHockey\BuzzerDebutMatch		200362
+	339618831	BuzzerFintMatch	C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\.cache\Windows\SFX\96 Ice Hockey, arena buzzer - single_55F14A13.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\BuzzHockey\BuzzerFintMatch		200362
 	348060390	VOIX_Balle_Impact_04	C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\.cache\Windows\SFX\Impact\VOIX_Balle_Impact_04_1FAB01A7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Voix\Balle\Impact\VOIX_Balle_Impact_04		49240
 	357905263	Menu Impact	C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\.cache\Windows\SFX\SFX_Niveks_ImpactsBut_DDC98EF4.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Menu Impact		35210
 	359829587	VOIX_Monstre_CracheJoueur_01	C:\Users\LaMouette\Documents\GitHub\MonsterBall-V2\Assets\Wwise\Project\MonsterBall\.cache\Windows\SFX\RecracheJoueur\VOIX_Monstre_CracheJoueur_01_0D9E6B10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Voix\Monstre\RecracheJoueur\VOIX_Monstre_CracheJoueur_01		33824
